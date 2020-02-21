@@ -1,0 +1,16 @@
+ipython
+notebook
+numpy
+seaborn
+scipy
+scikit-learn
+scikit-image
+matplotlib
+mahotas
+pandas
+tensorflow
+keras
+h5py
+Pillow
+pydot
+graphviz

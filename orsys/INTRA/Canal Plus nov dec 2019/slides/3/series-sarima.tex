@@ -1,0 +1,23 @@
+\documentclass{formation}
+\title{Machine Learning}
+\subtitle{Seasonal Autoregressive Integrated Moving Average Model : SARIMA}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{SARIMA}
+  Peut être vu comme une cascade de deux modèles :
+  \begin{itemize}
+  \item processus de suppression des tendance et saisonnalité : $Y_t=(I-L)^d(I-L^s)^DX_t$
+  \item $Y_t$ traité comme un processus ARMA(p,q)
+  \end{itemize}
+  Les processus SARIMA intègrent naturellement la tendance et la saisonnalité dans le modèle.
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

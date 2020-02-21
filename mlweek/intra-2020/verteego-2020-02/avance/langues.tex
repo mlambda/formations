@@ -1,0 +1,66 @@
+\documentclass{formation}
+\title{Machine Learning}
+\subtitle{Données à dimension variable : Traitement du langage}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Traitement du langage : données}
+  Classification :
+  \begin{itemize}
+  \item thème/genre (gutenberg.org : 57k livres)
+  \item auteur (gutenberg.org : 57k livres)
+  \item sentiment (Kaggle movie review : 222k commentaires rotten tomatoes)
+  \item reconnaissance d'entités nommées (Kaggle Annotated Corpus for NER : 1.3M tags)
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : données}
+  Compréhension :
+  \begin{itemize}
+  \item Question/réponses (SQUAD : 150k questions)
+  \item Traduction (europarl : 450k phrases alignées)
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : word embeddings} 
+  mot = indice dans un dictionnaire (dimension > 30000)
+  \newline
+  mot = vecteur ``sémantique'' (dimension < 1000) 
+  \begin{itemize}
+  \item word2vec
+  \item CBOW/Skip-Gram
+  \item Thought vector (pour des phrases ou même des documents entiers)
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : word embeddings} 
+  \imgtw{word2vec}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : word embeddings} 
+  \imgtw[0.6]{word2vec-analogy}
+  \begin{center}
+    \href{https://projector.tensorflow.org/}{\blue{Visualisation de l'espace word2vec}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : Champs d'application}
+  \imgtw[1]{nlp-tech-resume-2019}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

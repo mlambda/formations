@@ -1,0 +1,75 @@
+J1
+1) Introduction
+2) Introduction aux réseaux de neurones
+artificiels
+3) Entraînement de réseaux de neurones
+profonds
+
+J2
+4) Réseaux de neurones convolutifs
+5) Deep Learning avec Keras
+
+J3
+6) Réseaux de neurones récurrents
+7) Autoencodeurs
+
+========================================================================================
+========================================================================================
+
+1) Introduction
+- Créer un premier graphe et l’exécuter dans une session.
+- Cycle de vie de la valeur d’un nœud.
+- Manipuler des matrices. Régression linéaire. Descente de gradient.
+- Fournir des données à l’algorithme d’entraînement.
+- Enregistrer et restaurer des modèles. Visualiser le graphe et les courbes d’apprentissage.
+- Portées de noms. Partage des variables.
+Démonstration
+Présentation des exemples de Machine Learning en classification et régression.
+
+2) Introduction aux réseaux de neurones artificiels
+- Du biologique à l’artificiel.
+- Entraîner un PMC (perceptron multicouche) avec une API TensorFlow de haut niveau.
+- Entraîner un PMC (perceptron multicouche) avec TensorFlow de base.
+- Régler précisément les hyperparamètres d’un réseau de neurones.
+
+3) Entraînement de réseaux de neurones profonds
+- Problèmes de disparition et d’explosion des gradients.
+- Réutiliser des couches pré-entraînées.
+- Optimiseurs plus rapides.
+- Éviter le sur-ajustement grâce à la régularisation.
+- Recommandations pratiques.
+Travaux pratiques
+Mise en œuvre d'un réseau de neurones à la manière du framework TensorFlow.
+
+4) Réseaux de neurones convolutifs
+- L’architecture du cortex visuel.
+- Couche de convolution.
+- Couche de pooling.
+- Architectures de CNN.
+Travaux pratiques
+Mise en œuvre des CNN en utilisant des jeux de données variés.
+
+5) Deep Learning avec Keras
+- Régression logistique avec Keras.
+- Perceptron avec Keras.
+- Réseaux de neurones convolutifs avec Keras.
+Travaux pratiques
+Mise en œuvre de Keras en utilisant des jeux de données variés.
+
+6) Réseaux de neurones récurrents
+- Neurones récurrents.
+- RNR de base avec TensorFlow.
+- Entraîner des RNR. RNR profonds.
+- Cellule LSTM. Cellule GRU.
+- Traitement automatique du langage naturel.
+Travaux pratiques
+Mise en œuvre des RNN en utilisant des jeux de données variés.
+
+7) Autoencodeurs
+- Représentations efficaces des données.
+- ACP avec un autoencodeur linéaire sous-complet.
+- Autoencodeurs empilés.
+- Pré-entraînement non supervisé avec des autoencodeurs empilés.
+- Autoencodeurs débruiteurs. Autoencodeurs épars. Autoencodeurs variationnels. Autres autoencodeurs.
+Travaux pratiques
+Mise en œuvre d'autoencodeurs en utilisant des jeux de données variés.

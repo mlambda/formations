@@ -1,0 +1,68 @@
+Chatbot, créer et déployer un agent conversationnel en
+JavaScript
+Les chatbots, agents conversationnels capables de dialoguer avec un utilisateur, s’imposent comme une
+nouvelle interface à part entière. Vous apprendrez dans ce stage à en développer en JavaScript sur le
+runtime Node.js. Vous intégrerez vos développements avec différentes API et solutions de création dédiées.
+OBJECTIFS PEDAGOGIQUES
+Implémenter un chatbot avec Node.js.
+Structurer un flux de conversation
+Entraîner un moteur de NLP pour la reconnaissance du langage naturel
+Connecter un chatbot à une messagerie instantanée
+1) Chatbots : conception et usages
+2) Rappels Node.js
+3) Architecture d'un chatbot
+4) Conception du flux conversationnel
+5) Traitement du langage naturel (Natural
+Langage Processing)
+6) Déploiement et intégration au Système
+d’Information
+7) Enrichissement du chatbot
+1) Chatbots : conception et usages
+- Chatbot, quels types pour quels usages ?
+- Natural Language Processing (NLP) et Machine Learning.
+- Les Frameworks de bots versus les plateformes pour bots.
+2) Rappels Node.js
+- Rappels JavaScript ES/2015.
+- L'approche modulaire de Node.js.
+- La gestion événementielle, la gestion des routes, la persistance des données.
+- Packages utiles pour le développement de chatbots.
+Travaux pratiques
+Installation de l'environnement de développement. Installation et configuration d'un serveur Node.js.
+3) Architecture d'un chatbot
+- Les différents composants : connecteurs, adaptateurs, modules NLP, actions...
+- Cible I/O : plateformes de messagerie, API publiques...
+- Architecture logique : Messager, Classifier, Analyser, Responder, Selector.
+- Définir les intentions, réponses et entités.
+- Configurer des connecteurs pour les API externes.
+Travaux pratiques
+Création et test d'un premier chatbot.
+4) Conception du flux conversationnel
+- Identifier les utilisateurs potentiels et analyser leurs besoins.
+- Implémenter un scénario de réponse à un besoin métier.
+- Définition de conversations simples et de conversations complexes.
+- Modéliser l'arborescence de décisions et gérer les impasses.
+- Personnaliser les réponses.
+Travaux pratiques
+Conceptualisation d'un flux de conversation.
+5) Traitement du langage naturel (Natural Langage Processing)
+- La démocratisation de l'Intelligence Artificielle.
+- NLU et NLP, principes des systèmes de compréhension du langage naturel.
+- Intentions, utterances et entités.
+- Définir une personnalité, un caractère pour votre chatbot.
+- Moteurs de langage naturel : Dialogflow, Wit.ai, LUIS.ai, Lex, Recast.ai...
+- Entraîner et faire évoluer son chatbot.
+- Les Frameworks du Machine Learning (TensorFlow.js, ...).
+Travaux pratiques
+Entraîner un moteur de NLP pour la reconnaissance du langage naturel.
+6) Déploiement et intégration au Système d’Information
+- Solutions d'hébergement pour la publication du chatbot.
+- Se connecter à un service de messagerie instantanée (Slack, Facebook Messenger, Teams...).
+- Liaison avec d'autres applications du SI.
+Travaux pratiques
+Connecter son chatbot à une messagerie instantanée.
+7) Enrichissement du chatbot
+- Gestion du contexte et de la mémorisation.
+- Persistance des données, contextes, conversations « logs».
+- Plateformes et outils pour les statistiques, indices clés (KPI).
+Travaux pratiques
+Ajouter de nouvelles fonctionnalités à un chatbot existant.

@@ -1,0 +1,2 @@
+-Inclure dans les TP de la réutilisation de modèle fourni
+-Extraction des encodeurs et décodeur d'un autoencodeur, pour les faire tourner sur des données.

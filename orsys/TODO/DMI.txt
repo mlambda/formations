@@ -1,0 +1,64 @@
+Data Mining, synthèse
+Le Data Mining apporte des solutions pour l'extraction de connaissances à partir de données brutes. Ce
+séminaire, alliant principes théoriques et expériences pratiques, vous propose une synthèse sur le Data
+Mining, ses applications, ses apports pour l'entreprise ainsi que sur les méthodes et outils les plus utilisés.
+OBJECTIFS PEDAGOGIQUES
+Comprendre les principes et la finalité du Data Mining (DM)
+Identifier les principales techniques du DM et leur cas d'utilisation
+Mettre en œuvre sur un cas simple les méthodes de scoring et de géomarketing
+Découvrir les méthodes prédictives et les méthodes descriptives du DM
+Connaître les principales étapes d'un projet Data Mining
+1) Le Système d'Information Décisionnel (SID)
+2) Comprendre le Data Mining (DM)
+3) Les techniques du Data Mining
+4) La méthode descriptive du Clustering
+5) Exemples d'application du DM
+6) Les données de l'entreprise
+7) Méthodologie de projet Data Mining
+8) Panorama des outils
+1) Le Système d'Information Décisionnel (SID)
+- Les enjeux du SID : besoins, domaines d'application.
+- Architecture type d'un SID, état de l'art.
+- Élaboration des informations décisionnelles.
+- Conception d'un SID : étapes, optimisation, organisation des données, dictionnaires.
+2) Comprendre le Data Mining (DM)
+- Définition et finalité du Data Mining (DM).
+- Quel lien entre le DM et les statistiques, quelle dépendance entre le DM et l'informatique ?
+- Différence entre DM et OLAP ?
+- Les attentes des entreprises, les réponses du DM.
+3) Les techniques du Data Mining
+- Les différentes familles du DM.
+- Les méthodes prédictives et les méthodes descriptives.
+- Analyse factorielle, typologique. La classification.
+- Les arbres de décisions, les réseaux de neurones.
+- Classification des techniques de DM.
+4) La méthode descriptive du Clustering
+- Définition et méthodologie.
+- Les critères pour structurer les données à classer.
+- Évaluation et validation des classes obtenues.
+- Les différentes sous-familles du Clustering.
+Exemple
+Présentation d'applications du Clustering.
+5) Exemples d'application du DM
+- Le scoring : définition, finalité, méthodologie.
+- Le géomarketing : définition, finalité, méthodologie.
+Exemple
+Mise en œuvre de la méthode de scoring. Cas pratique d'utilisation de géomarketing.
+6) Les données de l'entreprise
+- Rappel de la problématique des données du SI.
+- Qualité des données et administration des données.
+- Processus de collecte et d'exploration.
+- Création d'agrégats et de nouvelles données.
+- Transformation des données.
+7) Méthodologie de projet Data Mining
+- Définition du problème métier à résoudre et des objectifs à atteindre.
+- Inventorier, décrire et classer les données.
+- Concevoir et alimenter la base Data Mining.
+- Explorer, segmenter des entités analysées.
+- Établir et appliquer les modèles d'analyse.
+- Itérer, déployer auprès des utilisateurs.
+- Maintenir le modèle et le logiciel associé.
+8) Panorama des outils
+- Principaux outils du marché : SAS, R, IBM SPSS...
+- Zoom sur l'outil SAS et sur l'ETL Powercenter.
+- Quels critères de choix pour ce type d'outils ?

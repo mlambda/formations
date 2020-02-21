@@ -1,0 +1,6 @@
+Digit Recognizer
+===
+
+Compétition classique, très utile pour tester des modèles qui devront
+à terme travailler sur des images et plus léger que d'autres datasets
+comme ImageNet : https://www.kaggle.com/c/digit-recognizer

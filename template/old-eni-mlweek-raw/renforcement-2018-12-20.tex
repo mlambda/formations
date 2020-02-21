@@ -1,0 +1,147 @@
+\documentclass{formation}
+\title{Possibilités offertes par le machine learning}
+\subtitle{Apprentissage par renforcement}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  \imgtw[0.5]{rl}
+  où :
+  \newline
+  $S_t$ est l'état de l'environnement,
+  \newline
+  $A_t$ l'action effectué par l'agent et
+  \newline
+  $R_t$ la récompense de l'environnement à l'agent (conséquence de $A_t$)
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  Un agent est généralement composé de :
+  \begin{itemize}
+  \item Une politique \textbf{$\pi$} 
+    \begin{itemize}
+    \item $\pi(s_t) = a_t$ pour une politique déterministe
+    \item $\pi(a | s) = \mathbb{P}[a|s]$ dans le cadre d'une politique stochastique
+    \end{itemize}
+  \item Une modélisation de l'environnement \textbf{$M(s_t,a_t)=s_{t+1},r_{t+1}$}
+  \item Une fonction d'évaluation \textbf{$v_{\pi}(s_t)$}$ = \mathbb{E}[r_{t+1}+r_{t+2}+...|a_t]$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  \underline{Des contraintes techniques} :
+  \begin{itemize}
+  \item L'environnement n'est pas forcément parfaitement modélisable
+  \item La récompense n'est pas forcément calculable immédiatement
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  \imgth[0.6]{bourse-ny}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  \begin{center}
+    \red{Environnement modélisable ? Récompense calculable ?}
+  \end{center}
+  \imgth[0.6]{echec}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  \begin{center}
+    \red{Environnement modélisable ? Récompense calculable ?}
+  \end{center}
+  \imgth[0.6]{echec}
+  \begin{center}
+    $\approx 10^{120}$ parties possibles $\ggg 6 x 10^{85}$
+    \newline
+    (nombre d'atomes dans l'univers observable)
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  \imgth[0.7]{go}
+  \begin{center}
+    \huge{$\approx 10^{600}$}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  \huge Une solution naturelle :
+  \newline
+  \begin{center}
+  \huge LE HASARD !
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  Monte Carlos Tree Search
+  \imgtw[1]{montecarlo}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  Monte Carlos Tree Search
+  \imgth[0.6]{mcts}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  Crazy Stone (Rémi Coulom) et MoGo (Yizao Wang)
+  \newline
+  \begin{description}
+  \item[octobre 2006 :] MoGo est à $\approx 10^6$ parties générées par coup (9x9)
+  \item[mars 2008 :] MoGo bat Catalin Taranu (5 dan) (9×9)
+  \item[août 2008 :] MoGo bat Kim Myungwan (9 dan) à 9 pierres
+  \item[septembre 2008 :] Crazy Stone bat Kaori Aoba (4 dan) à 8 pierres
+  \item[décembre 2008 :] Crazy Stone bat Kaori Aoba (4 dan) à 7 pierres
+  \item[février 2009 :] MoGo bat Li-Chen Chien (1 dan) à 6 pierres
+  \item[mai 2014 :] Crazy Stone bat Norimoto Yoda (9 dan) avec 4 pierres ($\approx 10^{6}$ parties générées pour chaque coup)
+  \end{description}
+  \begin{center}
+    Progrès de + en + lents et difficiles
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  \underline{Des contraintes techniques} :
+  \begin{itemize}
+  \item L'environnement n'est pas forcément parfaitement modélisable
+  \item La récompense n'est pas forcément calculable immédiatement
+  \item \red{\textbf{Plannification}}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  \imgth[0.6]{voyageur-commerce}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  Inverse Reinforcement Learning (Andrew Ng \& Peter Abbeel 2000)
+  \begin{itemize}
+  \item la fonction de récompense est inconnue
+  \item Accès à des séquences d'action d'expert
+  \item $\Rightarrow$ Apprentissage de la fonction de récompense dans une modélisation de l'environnement
+  \end{itemize}
+  \href{https://www.youtube.com/watch?v=VCdxqn0fcnE}{\blue{Hélicpotère de modèlisme}}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

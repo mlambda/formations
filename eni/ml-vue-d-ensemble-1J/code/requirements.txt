@@ -1,0 +1,14 @@
+# PyTorch to install manually on pytorch.org
+pandas
+numpy
+seaborn
+jupyter
+xgboost
+lightgbm
+scikit-learn
+scipy
+keras
+tensorflow
+statsmodels
+kaggle
+graphviz

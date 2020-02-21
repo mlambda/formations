@@ -1,0 +1,104 @@
+\documentclass{formation}
+\title{Machine Learning}
+\subtitle{Autoregressive Moving Average Model : ARMA}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{ARMA}
+  Modèlisation statistique de processus (faiblement) stationnaires \\
+  \newline
+  Processus faiblement stationnaire si :
+  \begin{itemize}
+    \item sa moyenne ne dépend pas de t
+    \item la covariance ne dépend pas de t
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{ARMA}
+  Exemple de processus non-stationnaires :
+  \imgtw[0.9]{processus-non-stationnaires}
+\end{frame}
+
+\begin{frame}
+  \frametitle{ARMA}
+  Une composante \textbf{autoregressive} : \\
+  \[
+  X_{t}=c+\varepsilon _{t}+\sum _{i=1}^{p}\varphi _{i}X_{t-i}
+  \]
+  où \\
+  $c$ est une constante, 
+  $\varphi_i$ sont les paramètres du modèle, \\
+  $\varepsilon_i$ les termes d'erreurs considéré comme un bruit blanc
+\end{frame}
+
+\begin{frame}
+  \frametitle{ARMA}
+  Un composante \textbf{moyenne mobile} : \\
+  \[
+  X_{t}=\mu +\varepsilon _{t}+\sum _{i=1}^{q}\theta _{i}\varepsilon _{t-i}
+  \]
+  $\mu$ est la moyenne attendue, \\
+  $\theta_i$ sont les paramètres du modèle, \\
+  $\varepsilon_i$ les termes d'erreurs considéré comme un bruit blanc
+\end{frame}
+
+\begin{frame}
+  \frametitle{ARMA}
+  Au final pour ARMA : \\
+  \[
+  X_{t}=c +\varepsilon _{t}+\sum _{i=1}^{p}\varphi _{i}X_{t-i}+\sum _{i=1}^{q}\theta _{i}\varepsilon _{t-i}
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{ARMA}
+  Opérateur de ``Lag'' L : \\
+  \begin{itemize}
+  \item $L(X_{t}) = X_{t-1}$
+  \item $L^2(X_{t}) = X_{t-2}$
+  \item $L^{-1}(X_{t}) = X_{t+1}$
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{ARMA}
+  ARMA exprimé avec l'opérateur L: \\
+  \[
+  \left(I-\sum _{i=1}^{p}\varphi _{i}L^{i}\right)X_{t}=\left(I+\sum _{i=1}^{q}\theta _{i}L^{i}\right)\varepsilon _{t}
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{ARMA}
+  Autocorrélation de lag $k\in\mathbb{Z}$ (ACF): \\
+  $\Rightarrow$ Corrélation des deux variables aléatoires $X_t$ et $X_{t-k}$ \\
+  \newline
+  Autocorrélation partielle de lag $k\in\mathbb{Z}$ (PACF): \\
+  $\Rightarrow$ Corrélation des deux variables aléatoires $X_t$ et $X_{t-k}$ où les dépendances linéaires entre $X_t$ et les variables $X_{t-k'}$ on été enlevées (pour $k'\in[1 .. (k-1)]$)  
+\end{frame}
+
+\begin{frame}
+  \frametitle{ARMA}
+  Apprentissage des paramètres : \\
+  \begin{enumerate}
+    \item se rapporter à un processus stationnaire : Transformation de box-cox des données, élimination des tendances et saisonnalité
+    \item on fixe p et q
+      \begin{itemize}
+      \item plot des autocorrélations partielles pour p,
+      \item plot des autocorrélations  pour q,
+      \item la méthode Akaike Information Criterion (AIC) est cependant recommandée
+      \end{itemize}
+    \item estimation des paramètres $\varphi$ et $\theta$ en utilisant par exemple le maximum de vraisemblance ou le critère des moindres carrés
+  \end{enumerate}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

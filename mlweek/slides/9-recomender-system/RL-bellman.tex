@@ -1,0 +1,52 @@
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  Equation de Bellman
+  \begin{itemize}
+  \item Meilleure action, meilleure value :
+  \item $V(S_0) = \max_{{\{a_t\}}_{t=0}^{\infty}}{\sum_{t=0}^{\infty}}\gamma^t.R(s_t,a_t)$
+  \item où $0 < \gamma < 1$ pénalise les récompenses lointaines
+  \item $\;$
+  \item Principe d'optimalité de bellman :
+  \item ``une séquence d'action optimale démarre par l'action optimale''
+  \item (même concept que pour le chemin le plus court)
+  \item $\Rightarrow V(S_0) = \max_{a_t \in A_t}[{R(s_t,a_t)+\gamma V(M(s_t,a_t))}]$
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  K-armed bandits
+  \imgth[0.6]{k-bandits}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  Markov Decision Process
+  \imgth[0.8]{mdp}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  Programmation Dynamique (planification et ordonnancement)
+  \begin{itemize}
+  \item Solution optimale = combinaison de solutions optimale à des sous-problèmes
+  \item programmation récursive suivant les equations de Bellman
+  \end{itemize}
+  \imgth[0.5]{plus-court-chemin}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprentissage par Renforcement}
+  TD-Learning
+  \begin{itemize}
+  \item Pas de modèle, estimation de la value uniquement
+  \item $V(S_t) \leftarrow V(S_t) + \alpha(R_t + \gamma V(S_{t+1})-V(S_t)$
+  \item où :
+  \item $\alpha$ est un pas d'apprentissge
+  \item $\gamma$ est le taux de dévaluation d'une récompense lointaine
+  \end{itemize}
+  \imgth[0.5]{backgammon}
+\end{frame}

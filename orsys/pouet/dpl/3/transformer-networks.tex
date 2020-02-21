@@ -1,0 +1,213 @@
+\documentclass{formation}
+\title{Machine Learning}
+\subtitle{Transformer Network}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Transformer Network}
+  \imgtw[0.9]{transformer-fun}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Vue générale}
+  \imgtw[0.9]{transformer-network-1}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Vue générale}
+  \imgtw[0.9]{transformer-network-2}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Vue générale}
+  Rappelez-vous, les encodeurs-décodeurs :
+  \imgtw[0.9]{rnn-seq2seq}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Vue générale}
+  \textbf{DEEP LEARNING}
+  \imgtw[0.9]{transformer-network-3}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Vue générale}
+  \imgtw[0.9]{transformer-network-5}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Encodeur}
+  \imgtw[0.9]{transformer-network-4}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Encodeur}
+  \imgtw[0.9]{transformer-network-7}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Encodeur}
+  \imgtw[0.9]{transformer-network-8}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Self-Attention}
+  \imgtw[0.9]{transformer-network-9}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Self-Attention}
+  \imgth[0.9]{transformer-network-13}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Self-Attention}
+  \imgtw[0.9]{transformer-network-14}
+  Avec le softmax défini ainsi : $\sigma(z_j)=\frac {\mathrm{e}^{z_j}}{\sum _{k=1}^{K}\mathrm{e}^{z_{k}}}$
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Self-Attention}
+  \imgtw[0.9]{transformer-network-10}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Self-Attention}
+  \imgtw[0.9]{transformer-network-11}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Self-Attention}
+  \imgth[0.9]{transformer-network-12}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Self-Attention}
+  \imgtw[0.9]{transformer-network-14}
+  Avec le softmax défini ainsi : $\sigma(z_j)=\frac {\mathrm{e}^{z_j}}{\sum _{k=1}^{K}\mathrm{e}^{z_{k}}}$
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Self-Attention}
+  \imgth[0.9]{transformer-network-self-attention}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Transformer Network : Multi-Head-Attention}
+  \imgtw[0.9]{transformer-network-15}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Multi-Head-Attention}
+  \imgtw[0.9]{transformer-network-16}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Encodeur (Résumé)}
+  Un modèle sans récurrence, uniquement des sommes pondérées : \\
+  \imgtw[0.9]{transformer-network-17}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Encodeur}
+
+  $\Rightarrow$ encodage de la position (Positional Encoding) \\
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Positional Encoding}
+  \imgtw[0.9]{transformer-network-18}
+  $PE_{pos,2i}=\sin{(pos/10000^{2i/d_{model}})}$ \\
+  $PE_{pos,2i+1}=\cos{(pos/10000^{2i/d_{model}})}$
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Positional Encoding}
+  \imgtw[0.9]{transformer-network-19}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Positional Encoding}
+  \imgtw[0.9]{transformer-network-20}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-init-0}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-init-157}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-0}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-14}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-38}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-91}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-112}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-137}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-188}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-207}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-234}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-306}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network : Decodeur}
+  \imgtw[0.9]{transformer-decoding-333}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformer Network}
+  Merci beaucoup à lui pour les illustrations de ce support
+  \url{http://jalammar.github.io/illustrated-transformer/}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

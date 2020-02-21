@@ -1,0 +1,32 @@
+title = title.pdf
+
+intro := \
+    template.pdf \
+
+pouet := \
+    template.pdf \
+
+questions = questions.pdf
+
+debug.pdf: $(title) $(pouet)
+	pdftk $+ cat output $@
+
+slides.pdf: $(title) $(intro) $(pouet) $(questions)
+	pdftk $+ cat output $@
+
+%.pdf: %.tex formation.cls
+	latexmk $<
+
+clean:
+	rm -rf *.aux *.fdb_latexmk *.fls *.log *.nav *.out *.snm *.toc *.vrb *.vrb~ _minted*
+
+clean-pdfs: clean
+	rm -rf *.pdf
+
+tex:
+	./make-tex.sh
+
+clean-tex:
+	./clean-tex.sh
+
+.PHONY: clean

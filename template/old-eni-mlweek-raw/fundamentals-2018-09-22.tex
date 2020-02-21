@@ -1,0 +1,676 @@
+\documentclass{formation}
+
+\title{Fondamentaux du machine learning}
+\subtitle{Module 3}
+
+\begin{document}
+
+\maketitle
+
+\section{Objectifs}
+
+\begin{frame}
+  \frametitle{Objectifs}
+
+  \begin{itemize}
+  \item adopter un workflow cohérent de data science
+  \item comprendre les écueils à éviter (biais statistiques)
+  \item acquérir les bonnes pratiques
+  \end{itemize}
+\end{frame}
+
+\section{Workflow}
+
+\begin{frame}
+  \frametitle{Workflow}
+
+  Un projet de data science c'est :
+
+  \begin{enumerate}[<+->]
+  \item définir la question à laquelle on veut répondre
+  \item obtenir des données
+  \item préparer les données
+  \item explorer les données
+  \item entraîner un modèle
+  \item communiquer les résultats
+  \item rendre son analyse reproductible
+  \end{enumerate}
+
+  \onslide<+->{3 et 4 se font souvent en même temps. Pas linéaire,
+    retours en arrière fréquents.}
+\end{frame}
+
+\section{Définition du problème}
+
+\begin{frame}
+  \frametitle{Définition du problème}
+
+  \begin{enumerate}
+  \item \red{définir la question à laquelle on veut répondre}
+  \item obtenir des données
+  \item préparer les données
+  \item explorer les données
+  \item entraîner un modèle
+  \item communiquer les résultats
+  \item rendre son analyse reproductible
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Définition du problème}
+
+  En partant d'un problème business ou scientifique réel :
+
+  \begin{itemize}[<+->]
+  \item métrique pour quantifier le problème
+  \item \red{pas de métrique → problème mal posé.} \green{Pourquoi ?}
+  \item métriques intrinsèque et extrinsèque si possible
+  \end{itemize}
+
+\end{frame}
+
+\section{Obtention des données}
+
+\begin{frame}
+  \frametitle{Obtention des données}
+
+  \begin{enumerate}
+  \item \green{définir la question à laquelle on veut répondre}
+  \item \red{obtenir des données}
+  \item préparer les données
+  \item explorer les données
+  \item entraîner un modèle
+  \item évaluer et communiquer les résultats
+  \item rendre son analyse reproductible
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Types d'étude}
+  \begin{itemize}
+  \item observationnelle
+  \item expérimentale
+  \end{itemize}
+
+  \green{Différence ?}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Datascience}
+
+  Datascience → études souvent observationnelles.
+
+  Risques importants de :
+
+  \begin{itemize}[<+->]
+  \item \red{variables confondantes}
+  \item \red{biais statistiques} (sélection,
+    autosélection, mesure, attrition, …)
+  \item trouver de fausses variables explicatives
+  \end{itemize}
+
+  \pause
+
+  → Le garder en tête pendant toute l'étude.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Anecdata}
+
+  \begin{itemize}[<+->]
+  \item anecdote $\neq$ bonne hypothèse. \green{Pourquoi ?}
+  \item anecdote $\neq$ bonne prédiction
+  \item anecdote $=$ motivation à explorer les données
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Qualité}
+
+  Souvent, meilleures données $>$ meilleurs modèles
+
+  → À garder en tête pendant toute l'étude, en particulier durant
+  l'entraînement de modèles
+\end{frame}
+
+\section{Préparation des données}
+
+\begin{frame}
+  \frametitle{Préparation des données}
+  \begin{enumerate}
+  \item \green{définir la question à laquelle on veut répondre}
+  \item \green{obtenir des données}
+  \item \red{préparer les données}
+  \item explorer les données
+  \item entraîner un modèle
+  \item évaluer et communiquer les résultats
+  \item rendre son analyse reproductible
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Préparation des données}
+
+  \begin{itemize}
+  \item valeurs manquantes
+  \item préprocessing (texte, image)
+  \item standardisation
+  \item transformation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Préparation des données — valeurs manquantes}
+
+  Gênant pour certains modèles. Plusieurs options :
+
+  \begin{itemize}[<+->]
+  \item supprimer les enregistrements
+  \item remplacer par une valeur (imputation) :
+    \begin{itemize}[<+->]
+    \item constante
+    \item moyenne de la colonne
+    \item prédiction d'un autre modèle
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Préparation des données — préprocessing}
+
+  \begin{itemize}
+  \item tokenizer, POS-tagger le texte (\url{https://spacy.io/})
+  \item utiliser un réseau de neurones préentraîné sur les images
+    (\url{https://keras.io/applications/})
+  \item appliquer une transformée de fourier sur le son
+  \item …
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Préparation des données — standardisation}
+
+  Beaucoup de modèles travaillent mieux avec des données normales et
+  sont plus efficaces autour de $[-5, 5]$ :
+
+  \begin{itemize}
+  \item centrer sur la moyenne puis diviser par l'écart-type
+  \item transformation de Box-Cox en cas d'asymétrie
+  \item transformations spécifiques en fonction de la distribution
+  \item \red{attention, il faut pouvoir inverser ce préprocessing !}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Préparation des données — transformation}
+
+  Quand un modèle n'accepte pas de données catégorielles :
+
+  \begin{itemize}
+  \item label encoding si ordinal
+  \item one-hot encoding sinon
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Préparation des données — label encoding}
+
+  Si les données sont ordinales :
+  
+  \begin{columns}
+    \begin{column}{.5\tw}
+      \begin{figure}
+        \centering
+        Ordinal :\\[.5cm]
+
+        \begin{tabular}{c}
+          \toprule
+          Température \\
+          \midrule
+          Froid \\
+          Froid \\
+          Tiède \\
+          Chaud \\
+          Tiède \\
+          \bottomrule
+        \end{tabular}
+      \end{figure}
+    \end{column}
+    \begin{column}{.5\tw}
+      \begin{figure}
+        \centering
+        Label encoding :\\[.5cm]
+
+        \begin{tabular}{ccc}
+          \toprule
+          Température \\
+          \midrule
+          1 \\
+          1 \\
+          2 \\
+          3 \\
+          2 \\
+          \bottomrule
+        \end{tabular}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+\begin{frame}
+  \frametitle{Préparation des données — one-hot encoding}
+
+  Remplacer une feature par $n$ features avec $n$ le nombre de
+  catégories.
+  \begin{columns}
+    \begin{column}{.5\tw}
+      \begin{figure}
+        \centering
+        Catégoriel :\\[.5cm]
+
+        \begin{tabular}{c}
+          \toprule
+          Couleur \\
+          \midrule
+          Rouge \\
+          Rouge \\
+          Jaune \\
+          Vert \\
+          Jaune \\
+          \bottomrule
+        \end{tabular}
+      \end{figure}
+    \end{column}
+    \begin{column}{.5\tw}
+      \begin{figure}
+        \centering
+        One-hot :\\[.5cm]
+
+        \begin{tabular}{ccc}
+          \toprule
+          Rouge & Jaune & Vert \\
+          \midrule
+          1 & 0 & 0 \\
+          1 & 0 & 0 \\
+          0 & 1 & 0 \\
+          0 & 0 & 1 \\
+          0 & 1 & 0 \\
+          \bottomrule
+        \end{tabular}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\section{Exploration des données}
+
+\begin{frame}
+  \frametitle{Exploration des données}
+
+  \begin{enumerate}
+  \item \green{définir la question à laquelle on veut répondre}
+  \item \green{obtenir des données}
+  \item \green{nettoyer les données}
+  \item \red{explorer les données}
+  \item entraîner un modèle
+  \item évaluer et communiquer les résultats
+  \item rendre son analyse reproductible
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exploration des données}
+
+  But :
+
+  \begin{itemize}[<+->]
+  \item se rendre compte des prétraitements à effectuer (Box-Cox,
+    imputations, etc)
+  \item comprendre la variable de sortie : distribution, équilibre des
+    classes, features les plus corrélées, …
+  \item détecter les corrélations
+  \item appréhender la complexité nécessaire du modèle
+  \end{itemize}
+
+  \onslide<+->{\red{Attention : garder des données de côté (test set)
+      et ne pas les regarder. \textbf{Sinon biais statistique
+        énorme.}}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils}
+  Plusieurs outils sont disponibles pour explorer des données. On
+  utilise principalement des plots pour :
+
+  \begin{itemize}
+  \item se renseigner sur une distribution
+  \item se renseigner sur la corrélation de deux distributions
+  \item visualiser des corrélations linéaires
+  \end{itemize}
+
+  Les outils suivants sont sauf mention contraire présents dans
+  \href{https://seaborn.pydata.org/}{\texttt{seaborn}}.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils — count plot}
+
+  \imgtw{countplot}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils — dist plot}
+
+  \imgtw{distplot}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils — qq plot}
+
+  \imgtw{qqplot}
+
+  Attention, pas \href{https://seaborn.pydata.org/}{\texttt{seaborn}}
+  mais
+  \href{http://www.statsmodels.org/stable/index.html}{\texttt{statsmodel}}
+  ou
+  \href{https://docs.scipy.org/doc/scipy/reference/stats.html}{\texttt{scipy.stats}}.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils — bar plot}
+
+  \imgtw{barplot}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils — scatter plot}
+
+  \imgtw[.6]{scatter}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils — violin plot}
+
+  \imgtw{violinplot}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils — pair plot}
+
+  \imgtw[.7]{pairplot}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils — correlation matrix}
+
+  \imgtw[.7]{corrmat}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Mode opératoire}
+
+  Bonne baseline pour explorer un dataset :
+
+  \begin{itemize}[<+->]
+  \item analyser la(es) variable(s) de sortie (countplot/distplot)
+  \item trouver les corrélations linéaires les plus fortes
+  \item analyser les variables correspondantes
+  \item regarder s'il y a des outliers évidents dans ces variables
+  \end{itemize}
+\end{frame}
+
+\section{Entrainement d'un modèle}
+
+\begin{frame}
+  \frametitle{Entrainement d'un modèle}
+
+  \begin{enumerate}
+  \item \green{définir la question à laquelle on veut répondre}
+  \item \green{obtenir des données}
+  \item \green{nettoyer les données}
+  \item \green{explorer les données}
+  \item \red{entraîner un modèle}
+  \item évaluer et communiquer les résultats
+  \item rendre son analyse reproductible
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Types d'entrainement}
+  \begin{itemize}[<+->]
+  \item supervisé
+  \item non-supervisé
+  \item par renforcement
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Entrainement supervisé d'un modèle — procédé}
+  Étant donné des exemples d'entrainement $(x_i, y_i)$, trouver un
+  modèle $h$ :
+  \begin{itemize}[<+->]
+  \item but : étant donné $x_i$, output $h(x_i) = \hat{y}_i$ proche de
+    $y_i$
+  \item moyen : définition d'une perte (loss) $L(\hat{y_i}, y_i)$ \\[.2cm]
+    \onslide<+->{\green{quelle fonction pourrait-on prendre en
+        régression ?}}\\[.2cm]
+    \onslide<+->{par exemple, $L(\hat{y}_i, y_i) = (\hat{y}_i - y_i)^2$}\\[.2cm]
+    \onslide<+->{puis minimisation}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Entrainement supervisé d'un modèle — overfit}
+
+  \imgtw{fit}
+
+  \red{Problème : trop minimiser la perte n'est pas bon !}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Entrainement supervisé d'un modèle — learning curve}
+
+  \imgtw[.6]{learning-curve}
+
+  → Minimiser la perte sur un ensemble de validation
+\end{frame}
+
+\begin{frame}
+  \frametitle{Entrainement supervisé d'un modèle — data split}
+
+  Il nous faut donc :
+
+  \begin{itemize}
+  \item ensemble d'entrainement
+  \item ensemble de validation pour mesurer la généralisation
+  \item ensemble de test (pour éviter le biais statistique)
+  \end{itemize}
+
+  → Split 60/20/20 habituel.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Entrainement supervisé d'un modèle — cross-validation}
+
+  Pour \og perdre\fg{} moins de données et mieux tester la
+  généralisation, cross-validation :
+
+  \imgtw[.9]{cv}
+
+  Ici, 4-fold cross-validation.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Entrainement supervisé d'un modèle — régularisation}
+
+  Autre outil : \textbf{pénaliser les modèles complexes}.
+
+  Par exemple :
+
+  \[
+    \alpha\lVert \mathbf{w} \rVert^2
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Entrainement non-supervisé d'un modèle}
+  Étant donné des exemples $x_i$, trouver un modèle $h$ :
+  \begin{itemize}[<+->]
+  \item but moins défini qu'en supervisé :
+    \begin{itemize}[<+->]
+    \item clustering : $h(x_i) = \hat{y}_i = \text{cluster de }x_i$
+    \item détection d'anomalies : $y_i = 1 \text{ si anomalie, }0
+      \text{ sinon}$
+    \item recommandations : $y_i = \text{liste d'items }x_{k\neq i}$
+    \item réduction de dimensionnalité : $y_i = x_i \text{ projeté dans
+      moins de features}$
+    \end{itemize}
+  \item on définit quand même une perte (loss) \\[.2cm]
+    \onslide<+->{par exemple, densité intra- et inter-clusters en clustering}\\[.2cm]
+    \onslide<+->{puis minimisation}
+  \end{itemize}
+\end{frame}
+
+\section{Évaluation des résultats}
+
+\begin{frame}
+  \frametitle{Évaluation des résultats}
+
+  \begin{enumerate}
+  \item \green{définir la question à laquelle on veut répondre}
+  \item \green{obtenir des données}
+  \item \green{nettoyer les données}
+  \item \green{explorer les données}
+  \item \green{entraîner un modèle}
+  \item \red{évaluer et communiquer les résultats}
+  \item rendre son analyse reproductible
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Évaluer les résultats}
+
+  \begin{itemize}
+  \item comparer aux à l'existant pré-datascience
+  \item comparer aux autres approches testées
+  \item privilégier les mesures extrinsèques (souvent A/B testing)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Évaluation — outils — matrice de confusion}
+
+  \imgtw[.6]{confusion-matrix}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Évaluation — outils — précision, rappel}
+
+  En classification :
+
+  \begin{description}
+  \item[Précision]
+    \[
+    \frac{\text{vrais positifs}}{\text{vrais positifs + faux positifs}}
+    \]
+  \item[Rappel]
+    \[
+    \frac{\text{vrais positifs}}{\text{vrais positifs + faux négatifs}}
+  \]
+  \item[F-mesure] moyenne harmonique entre précision et rappel (aussi
+    appelée F1 score)
+  \end{description}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils — courbe ROC}
+
+  \imgtw[.6]{roc}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils — courbe ROC}
+
+  \imgtw[.6]{roc-space}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Significativité statistique}
+
+  Quantifier si les résultats peuvent être dûs à la chance.
+
+  \begin{itemize}
+  \item comparer deux groupes (two sample t-test :
+    \href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html}%
+    {\texttt{scipy.stats.ttest\_ind}})
+  \item comparer un groupe avec intervalle de temps (paired-sample
+    t-test :
+    \href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html}%
+    {\texttt{scipy.stats.ttest\_rel}})
+  \item comparer un groupe à une moyenne (one sample t-test :
+    \href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_1samp.html}%
+    {\texttt{scipy.stats.ttest\_1samp}})
+  \end{itemize}
+\end{frame}
+
+\section{Reproductibilité}
+
+\begin{frame}
+  \frametitle{Reproductibilité}
+
+  \begin{enumerate}
+  \item \green{définir la question à laquelle on veut répondre}
+  \item \green{obtenir des données}
+  \item \green{nettoyer les données}
+  \item \green{explorer les données}
+  \item \green{entraîner un modèle}
+  \item \green{évaluer et communiquer les résultats}
+  \item \red{rendre son analyse reproductible}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Reproductibilité}
+
+  \begin{itemize}
+  \item extrêmement importante pour compléter les analyses après les
+    retours business
+  \item ensemble de bonnes pratiques
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Reproductibilité — bonnes pratiques}
+
+  \begin{itemize}[<+->]
+  \item garder une trace exacte du préprocessing
+  \item de préférence utiliser des notebooks jupyter
+  \item faire attention au random (utiliser des seeds)
+  \item définir les datasets utilisés, dates comprises
+  \item utiliser `pip freeze` ou `conda list` une fois l'environnement
+    fixé
+  \end{itemize}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}
+  \frametitle{Conclusion}
+
+  \begin{itemize}
+  \item \red{attention au biais statistique}
+  \item poser une question sur laquelle on peut \textbf{mesurer} le
+    progrès
+  \item acquérir des données les moins biaisées possible
+  \item explorer et nettoyer les données en tandem
+  \item fit un modèle avec une perte adaptée
+  \item construire des résultats significatifs
+  \item rester reproductible
+  \end{itemize}
+\end{frame}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

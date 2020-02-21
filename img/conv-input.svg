@@ -1,0 +1,14 @@
+<svg version="1.1"
+     baseProfile="full"
+     width="99" height="244"
+     xmlns="http://www.w3.org/2000/svg">
+  <g fill="#ADD8E6" stroke="black" transform="translate(10,10)">
+    <g transform="translate(0,64)">
+      <path d="M0 0 v 160 h 15 v -160 h -15" />
+      <path d="M0 0 l 64 -64 h 15 l -64 64 h -15"/>
+      <path d="M0 0 l 64 -64 h 15 l -64 64 h -15" fill="black" fill-opacity="0.2"/>
+      <path d="M15 0 l 64 -64 v 160 l -64 64 v -160"/>
+      <path d="M15 0 l 64 -64 v 160 l -64 64 v -160" fill="black" fill-opacity="0.1"/>
+    </g>
+  </g>
+</svg>

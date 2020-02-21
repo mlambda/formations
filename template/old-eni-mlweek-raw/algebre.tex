@@ -1,0 +1,187 @@
+\documentclass{formation}
+\title{Machine Learning}
+\subtitle{Algèbre Linéaire}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : les bases}
+  Les vecteurs :
+  \begin{displaymath}
+    v = 
+    \begin{pmatrix}
+      v_1\\
+      v_2\\
+      \vdots\\
+      v_n
+    \end{pmatrix}
+    \in \mathbb{R}^n
+  \end{displaymath}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : les bases}
+    \begin{displaymath}
+        u + v = 
+      \begin{pmatrix}
+        u_1 + v_1\\
+        u_2 + v_2\\
+        \vdots\\
+        u_n + v_n
+      \end{pmatrix}
+    \end{displaymath}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : les bases}
+    \begin{displaymath}
+      \alpha v =
+      \begin{pmatrix}
+        \alpha v_1\\
+        \alpha  v_2\\
+        \vdots\\
+        \alpha v_n
+      \end{pmatrix}
+       \qquad (\alpha\in\mathbb{R})
+    \end{displaymath}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : les bases}
+  La norme d'un vecteur :
+    \begin{displaymath}
+      \parallel v\parallel = \sqrt{v_1^2 + \cdots + v_n^2}
+    \end{displaymath}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : les bases}
+  Le produit scalaire :
+    \begin{align*}
+      u\cdot v & = u_1\cdot v_1 + \dotsb + u_n \cdot v_n \\[4mm]
+      & = \parallel u\parallel \parallel v\parallel \cos\theta
+    \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : les bases}
+  Les matrices :
+    \begin{align*}
+      A & = 
+      \begin{Bmatrix}
+        a_{1,1} & a_{1,2} & a_{1,3} \\
+        a_{2,1} & a_{2,2} & a_{2,3} \\
+        a_{3,1} & a_{3,2} & a_{3,3}
+      \end{Bmatrix}
+    \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : les bases}
+  Addition :
+  \imgtw[0.8]{addition-matrices}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : les bases}
+  Multiplication :
+  \imgtw[0.8]{multiplication-matrices}
+  \begin{center}
+  \red{\textbf{$\boxed{A*B \neq B*A}$}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : les bases}
+  Transposition :
+  \imgtw[0.8]{transposition-matrices}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : les bases}
+  Inverse : \\
+  \[
+  A*A^{-1} = A^{-1}*A =
+  \begin{pmatrix}
+    1 & 0 & \cdots & 0 \\
+    0 & \ddots & \ddots & \vdots \\
+    \vdots & \ddots & \ddots & 0\\
+    0 & \cdots & 0 & 1
+  \end{pmatrix}
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : les bases}
+    $B$ est une base de $V$ ssi (au choix):
+    \begin{itemize}
+    \item $B$ est générateur de $V$ et de taille minimum
+    \item $B$ est composé de vecteurs linéairements indépendants et de taille maximum
+    \item $\forall v\in V \;\; \exists! \{{w_i}\}_{i\in\mathbb{K}}$ tels que $v = \sum_{i\in\mathbb{K}} w_i . b_i$ où K est minimal
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : transformations}
+  Une matrice A est une transformation linéaire de $\mathbb{R}^n \rightarrow \mathbb{R}^n$ telle que : 
+  \begin{center}
+    $\forall x \in \mathbb{R}^n,\;y = A*x$\\
+  \end{center}
+  \begin{minipage}[r]{0.25\linewidth}
+  $n=2$\\
+  \\
+  $n=3$\\
+  \\
+  \\
+  $n=3$\\
+  \\
+  \\
+  $n=4$\\
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.74\linewidth}
+  \imgth[0.7]{linear-algebra-matrices}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : transformations}
+  Définition des valeurs propres et vecteurs propres:\\
+  $Av = \lambda v$ \\
+  $Av = \lambda I_k v \;\iff\; (A-\lambda I_k)v = 0$
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : transformations}
+  Les transformations linéaires en vidéo : \\
+             {\textbf{video time}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algèbre Linéaire : transformations}
+      Certaines matrices sont diagonalisables, ainsi :
+      \begin{align*}
+        A = Q D Q^{-1} \hspace{1cm} \mbox{ avec } D & =
+        \begin{bmatrix}
+          \lambda_1 & \cdots & 0 \\
+          \vdots & \ddots & 0 \\
+          0 & 0 & \lambda_n
+        \end{bmatrix} \\[5mm]
+        %
+        \mbox{et } Q & =
+        \begin{bmatrix}
+          \mid && \mid \\
+          v_1 & \cdots & v_k \\
+          \mid && \mid
+        \end{bmatrix}
+      \end{align*}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

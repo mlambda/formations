@@ -1,0 +1,13 @@
+ipython
+notebook
+numpy
+seaborn
+scipy
+scikit-learn
+scikit-image
+matplotlib
+pandas
+h5py
+Pillow
+pydot
+graphviz

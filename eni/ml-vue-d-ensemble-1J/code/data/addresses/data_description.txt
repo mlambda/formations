@@ -1,0 +1,77 @@
+Adresses postales de Nantes Métropole
+===
+
+Ce dataset provient de Nantes ouverture des données : https://data.nantes.fr/donnees/detail/adresses-postales-de-nantes-metropole/
+
+Description originale :
+
+================================================
+TITRE DU JEU DE DONNEES
+================================================
+
+Adresses postales de Nantes Métropole
+
+================================================
+DESCRIPTION
+================================================
+
+
+Thèmes 							: Urbanisme
+Granularité						: Commune
+
+================================================
+INFORMATIONS TECHNIQUES
+================================================
+
+Date de dernière mise à jour    : 06/03/2018
+Fréquence de mise à jour 		: mensuelle 
+
+Derniere mise à jour technique	:
+
+	Date : 06/03/2018
+	Nature de la modification : Mise à jour - mars 2018
+	Description de la modification : Mise à jour mensuelle
+
+================================================
+ATTRIBUTS
+================================================
+
+
+ADRESSE       : 
+NOMCOM        : 
+MOT_DIRECTEUR : 
+NUMERO        : 
+RIVOLI        : 
+CODE_POSTAL   : 
+IRIS2008      : 
+POLE          : 
+QUARTIER      : 
+LONG_WGS84    : Longitude WGS84
+LAT_WGS84     : Latitude WGS84
+ 
+
+================================================
+CONTACT
+================================================
+
+Pour toute demande d'information ou remarque, 
+merci de passer par le forum du site http://data.nantes.fr
+
+================================================
+INFORMATIONS LEGALES
+================================================
+
+
+Propriétaire : Nantes Métropole
+
+Gestionnaire : Nantes Métropole
+
+Diffuseur	 : Nantes Métropole
+
+Licence      : Open Database License (ODbL)
+
+================================================
+SIGNATURES DES FICHIERS
+================================================
+
+ADRESSES_NM.csv (md5) : 3a13c6a046e04330b48cf8854a7993a3

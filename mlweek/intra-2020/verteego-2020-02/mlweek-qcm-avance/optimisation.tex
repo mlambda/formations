@@ -1,0 +1,41 @@
+\documentclass{formation}
+\title{Machine Learning}
+\subtitle{Optimisation}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Optimisation}
+  Calcul du gradient de l'erreur par rapport aux paramètres:
+  \[
+  \frac{\partial{Err}}{\partial{w_i}}
+  \]
+  Mise à jour :
+  \[
+  w_i' = w_i - \gamma * grad 
+  \]
+  où : $0 < \gamma < 1$ (learning rate)
+  \imgtw[0.6]{gradient}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Optimisation}
+  1 - initialisation aléatoire du modèle
+  \newline
+  2 - Tant que(critère arret == 0)
+  \begin{itemize}
+  \item Selection aléatoire d'un \textbf{batch} de données
+  \item \textbf{Forward} : Passe avant du \textbf{batch} dans le modèle
+  \item Calcul de l'erreur par rapport aux sorties attendues
+  \item \textbf{Backward} : Rétropropagation du gradient de l'erreur en fonction des paramèrtres dans le modèle (mise à jour du modèle)
+  \item Calcul critère arret
+  \end{itemize}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

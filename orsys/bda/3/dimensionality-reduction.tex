@@ -1,0 +1,55 @@
+\documentclass{formation}
+\title{Big Data Analytics}
+\subtitle{Réduction de la dimensionalité}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Réduction de la dimensionalité}
+    \begin{center}
+      Comment appréhender des données en grande dimension ?
+    \end{center}
+    \[
+    X = \begin{bmatrix}
+      X_{1,1} & X_{1,2} & \dots  & X_{1,D} \\
+      X_{2,1} & X_{2,2} & \dots  & X_{2,D} \\
+      \vdots & \vdots & \ddots & \vdots \\
+      X_{N,1} & X_{N,2} & \dots  & X_{N,D}
+    \end{bmatrix}
+    \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Réduction de la dimensionalité}
+    \begin{center}
+      La malédiction des grandes dimensions !\\
+      (Curse of dimensionality)
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Réduction de la dimensionalité}
+    \begin{itemize}
+    \item Séléction de dimensions
+    \item Projections linéaires (ACP, LDA, ...)
+    \item Projections non-linéaires (kernels, neural network embeddings, ...)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Réduction de la dimensionalité}
+  Sélection de dimensions :
+  \begin{itemize}
+  \item Random forest
+  \item SVM
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

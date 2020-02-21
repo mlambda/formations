@@ -1,0 +1,14 @@
+<svg version="1.1"
+     baseProfile="full"
+     width="47" height="62"
+     xmlns="http://www.w3.org/2000/svg">
+  <g fill="orange" stroke="black" transform="translate(10,10)">
+    <g transform="translate(0,12)">
+      <path d="M0 0 v 30 h 15 v -30 h -15" />
+      <path d="M0 0 l 12 -12 h 15 l -12 12 h -15"/>
+      <path d="M0 0 l 12 -12 h 15 l -12 12 h -15" fill="black" fill-opacity="0.2"/>
+      <path d="M15 0 l 12 -12 v 30 l -12 12 v -30"/>
+      <path d="M15 0 l 12 -12 v 30 l -12 12 v -30" fill="black" fill-opacity="0.1"/>
+    </g>
+  </g>
+</svg>

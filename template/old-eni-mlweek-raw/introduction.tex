@@ -1,0 +1,134 @@
+\documentclass{formation}
+\title{Introduction au machine learning}
+\subtitle{Module 1}
+
+\begin{document}
+
+\maketitle
+
+\section{Objectifs}
+
+\begin{frame}
+  \frametitle{Objectifs}
+  \begin{itemize}
+  \item cerner ce qu'est le machine learning
+  \item appréhender les différentes facettes du domaine
+  \end{itemize}
+\end{frame}
+
+\section{Machine Learning}
+
+\begin{frame}
+  \frametitle{Machine learning}
+
+  \green{Qu'est-il pour vous ?}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Machine learning}
+  \begin{itemize}
+  \item pas de définition exacte
+  \item idée transversale: éviter la programmation \textbf{explicite}.
+  \item création de programmes qui utilisent des données ou des
+    algorithmes généraux pour apprendre à réaliser leurs tâches
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Points de vue}
+  Beaucoup de façons de voir le machine learning. Basées sur :
+  \begin{itemize}[<+->]
+  \item les paradigmes (supervisé, non supervisé, renforcement, en
+    ligne, …)
+  \item les modèles (arbres, grammaires, automates, réseaux de
+    neurones …)
+  \item les données (tabulaire, image, texte, vidéo, graphe, …)
+  \item les techniques (statistiques, symboliques, probabilistes, …)
+  \item les contraintes (real time, embarqué, big data, multilingue,
+    …)
+  \end{itemize}
+
+  \onslide<+->{→ Domaine \textbf{extrêmement} vaste.}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Facettes du machine learning — supervised learning}
+  \imgtw[.9]{gnmt}
+  Demande beaucoup de données, parfois couteuses. Modèles performants
+  en sortie.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Facettes du machine learning — unsupervised learning}
+  \imgtw[0.7]{cyclegan}
+  Pas besoin d'annotation → données moins couteuses. Limite les
+  possibilités des modèles.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Facettes du machine learning — reinforcement learning}
+  \imgtw[0.8]{alphazero} Paradigme de d'acquisition des données
+  différent. Modèles potentiellement extrêmement performants.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Facettes du machine learning — bayesian networks}
+  \imgtw[.75]{bayesian}
+  Très interprétable, requêtable.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Facettes du machine learning — decision trees}
+  \imgth[0.6]{dietanic} Assez interprétable, robuste, couteau-suisse
+  du machine learning tabulaire.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Calculabilité vs expressivité}
+
+  Un modèle \green{facilement calculable} est souvent \red{peu
+    expressif}.
+
+  Inversement, un modèle \red{peu calculable} est souvent
+  \green{expressif} (sinon mauvais modèle).
+\end{frame}
+
+\begin{frame}
+  \frametitle{Choisir la bonne facette}
+  Critères pour s'orienter dans les approches de machine learning:
+  \begin{itemize}[<+->]
+  \item quantité de données à disposition
+  \item qualité du signal d'apprentissage dans les données
+  \item difficulté du problème à résoudre
+  \item besoin d'interprétabilité
+  \item contraintes techniques
+  \item contraintes de délai
+  \item … et d'autres en fonction des domaines métiers
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conclusion}
+  \begin{itemize}
+  \item le machine learning est un champ vaste.
+  \item il existe sûrement un modèle/paradigme pour vos besoins
+  \item l'important est de définir les bons critères
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Discussion}
+  \begin{itemize}
+  \item à quelles données allez-vous appliquer le machine learning ? À
+    quels besoins ?
+  \item aurez-vous besoin de modèles interprétables ou simplement très
+    performant en prédiction ?
+  \item quelles sont vos contraintes ?
+  \end{itemize}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

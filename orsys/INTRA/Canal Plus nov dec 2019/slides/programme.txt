@@ -1,0 +1,28 @@
+    Rappels sur les modèles supervisés :
+        régression numérique (linéaire, polynomiales, arbres de régression, réseaux de neurones)
+        régression logistique (arbre de classification, SVM, réseaux de neurones)
+
+    Réduction de dimension :
+        ACP
+        ACM
+        AFDM
+        AFC
+    Clustering :
+        k-means
+        k-means gaussian
+        clustering hiérarchique sur composantes principales
+
+    Systèmes de recommandation :
+        filtrage collaboratif
+
+    Séries temporelles :
+        ARMA
+        ARIMA
+        SARIMA
+	VARMAX
+        Chaînes de Markov
+        HMM
+
+    Bonnes pratiques :
+        choix d'un algorithme
+        recherche des paramètres optimaux

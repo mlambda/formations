@@ -1,0 +1,14 @@
+_minted*
+auto/*
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.pdf
+!img/*.pdf
+*.snm
+*.toc
+*.vrb
+*~

@@ -1,0 +1,80 @@
+\documentclass{formation}
+\title{Deep Learning par la Pratique}
+\subtitle{Les Données Séquentielles}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Les Données Séquentielles}
+  \begin{center}
+    \textbf{Données ancrées dans le temps} \\
+    $\;$ \\
+    Séquences de données à dimension fixe
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Données Séquentielles}
+  Soit $X=(x_i)_{1<i<k}$ un ensemble de k exemples : \\
+  où : \\
+  $x_i = (x_{i}^1 , ... , x_{i}^{n_i})$ avec $x_i$ une séquence de $n_i$ frames \\
+  \newline
+  Pour des séries d'entiers par exemple : \\
+  $x_1 = (1,3,5,2,8)$ \\
+  $x_2 = (7,3)$ \\
+  $x_3 = (4,0,9,1)$ \\
+  $x_4 = (...)$ \\
+  \newline
+  Pour des séries de vecteurs : \\
+  $x_1 = ([2,5],[9,8],[3,6])$ \\
+  $x_2 = ([1,1],[3,4],[5,4],[3,2],[8,1])$ \\
+  $x_3 = (...)$ 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Données Séquentielles}
+  \underline{Texte} \\
+  1: lorem ipsum dolor sit amet, consectetur adipiscing elit, ... \\
+  2: Great minds discuss ideas; average minds discuss events; small minds discuss people. \\
+  3: Hier, mon voisin a mangé une pomme et sa femme une poire. \\
+  4: ...
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Données Séquentielles}
+  \underline{A.D.N} \\
+  1: ATGCGATCTATCGCTAGCCGCGCTATACGCA \\
+  2: GATTATAGCTAGCTCGCGCTATATCGCTAGCTAGCTAGCTAGC \\
+  3: ...
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Données Séquentielles}
+  \underline{Son}
+  \imgth[0.8]{fourier}  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Données Séquentielles}
+  \underline{Video}
+  \imgtw[0.7]{video-frames}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Données Séquentielles}
+  \begin{itemize}
+  \item Météo (time, Lat., Long., T°, P, $X_{vent}$, $Y_{vent}$, $Q_{pluie}$)
+  \item Santé (time, T°, Pouls, ...)
+  \item Economie (time, dollar, euro, livre, yen, BTC, riz ...)
+  \item Comportements Clients (time, action-event, ...)
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

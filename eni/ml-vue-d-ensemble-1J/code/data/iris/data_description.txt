@@ -1,0 +1,6 @@
+Iris dataset
+===
+
+Ce dataset [1] est un des datasets les plus classiques du machine learning.
+
+[1] https://en.wikipedia.org/wiki/Iris_flower_data_set

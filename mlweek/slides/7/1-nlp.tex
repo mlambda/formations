@@ -1,0 +1,147 @@
+\documentclass{formation}
+\title{Machine Learning}
+\subtitle{Natural Language Processing (NLP)}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{frame}
+  \frametitle{Traitement du langage : données}
+  Classification :
+  \begin{itemize}
+  \item thème/genre (gutenberg.org : 57k livres)
+  \item auteur (gutenberg.org : 57k livres)
+  \item sentiment (Kaggle movie review : 222k commentaires rotten tomatoes)
+  \item reconnaissance d'entités nommées (Kaggle Annotated Corpus for NER : 1.3M tags)
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : données}
+  Compréhension :
+  \begin{itemize}
+  \item Question/réponses (SQUAD : 150k questions)
+  \item Traduction (europarl : 450k phrases alignées)
+  \item ...
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Traitement du langage : Champs d'application}
+  \underline{\textbf{Transcription et synthèse de la parole}}
+  \imgtw[0.6]{smart-assistants}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : Champs d'application}
+  \underline{\textbf{Identification du locuteur}}
+  \imgtw[0.6]{id-locuteur}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : Champs d'application}
+  \underline{\textbf{Chatbot}}
+  \imgtw[0.6]{eliza}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : Champs d'application}
+  \underline{\textbf{Chatbot}}
+  \imgtw[0.6]{zo}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : Champs d'application}
+  \underline{\textbf{Moteur de recherche}}
+  \imgtw[0.6]{deep-moteur-recherche}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : Champs d'application}
+  \underline{\textbf{Extraction de données}}
+  \imgtw[0.6]{information-extraction}
+  \begin{center}
+    \href{https://demo.allennlp.org/named-entity-recognition}{\blue{Démo reconnaissance d'entitées nomées}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : Champs d'application}
+  \underline{\textbf{Analyse de sentiments}}
+  \imgtw[0.6]{sentiment-analysis}
+  \begin{center}
+    \href{https://text-processing.com/demo/sentiment/}{\blue{Démo analyse de sentiments}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : Champs d'application}
+  \underline{\textbf{Résumé}}
+  \imgtw[0.8]{auto-summary}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : Champs d'application}
+  \underline{\textbf{Traduction}}
+  \begin{center}
+    \imgtw[1.1]{traduction-fr-en-short}
+  \end{center}
+  \begin{center}
+    \href{https://www.deepl.com/fr/translator}{\blue{Démo traduction de DeepL}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : Champs d'application}
+  \imgtw[1]{nlp-tech-resume}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : WordNet}
+  \imgth[0.7]{wordnet-1}  
+  Projet sur le français : WOLF (Wordnet Libre du Français) 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : DBpedia}
+  \imgth[1]{dbpedia}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : word embeddings} 
+  mot = indice dans un dictionnaire (dimension > 30000)
+  \newline
+  mot = vecteur ``sémantique'' (dimension < 1000) 
+  \begin{itemize}
+  \item word2vec
+  \item CBOW/Skip-Gram
+  \item GloVe
+  \item Thought vector (pour des phrases ou même des documents entiers)
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : word embeddings} 
+  \imgtw{word2vec}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement du langage : word embeddings} 
+  \imgtw[0.6]{word2vec-analogy}
+  \begin{center}
+    \href{https://ml5js.org/docs/word2vec-example}{\blue{Démo dans l'espace word2vec}} \\
+    \href{https://projector.tensorflow.org/}{\blue{Visualisation de l'espace word2vec}} \\
+    \href{http://vectors.nlpl.eu/repository/}{\blue{Word Embeddings à télécharger}}
+  \end{center}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

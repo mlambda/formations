@@ -1,0 +1,58 @@
+\documentclass{formation}
+\title{Machine Learning}
+\subtitle{Données séquentielles - Premières approches }
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Données séquentielles - Premières approches }
+  \begin{itemize}
+  \item Calcul des différences du premier ou second ordre.
+  \item Modèles autoregressifs à moyenne mobile (ARMA, ARIMA, ...)
+  \item Modèles de Markov 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Données séquentielles - Premiers outils}
+  Chronogramme : tracé de t $\rightarrow$ X(t) 
+  \imgtw[0.9]{time-serie-chronogramme}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Données séquentielles - Premiers outils}
+  Lag-plot : tracé des points (X(t-k),X(t)) \\
+  (détection de corrélation temporelles)
+  \begin{minipage}[l]{0.499\linewidth}
+    \imgtw[0.8]{lag-plot-linear}
+    \imgtw[0.8]{lag-plot-sinusoidal}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.499\linewidth}
+    \imgtw[0.7]{lag-plot-white-noise}
+    \imgtw[0.75]{lag-plot-uniform-noise}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}
+  \frametitle{Données séquentielles - Premières approches }
+  $x_t=g(t)+\phi_t$ \\
+  où :
+  \begin{itemize}
+  \item $g(t)$ est déterministe (tendance globale du signal)
+  \item $\phi(t)$ est un bruit stochastique
+  \end{itemize}
+  Les modèles statistiques ``classiques'' vont alors essayer de décomposer $g(t)$ en plusieurs fonctions dépendant de t ou bien de fonction récurrentes (comme dans ARMA)
+\end{frame}
+
+\begin{frame}
+  \frametitle{Données séquentielles - Premières approches }
+  \imgth[0.9]{time-serie-decomposition}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

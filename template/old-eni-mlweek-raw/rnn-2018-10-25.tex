@@ -1,0 +1,223 @@
+\documentclass{formation}
+
+\title{Séries temporelles par réseaux de neurones récurrents}
+
+\subtitle{Module 8}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Objectifs}
+  \begin{itemize}
+  \item savoir appliquer les réseaux de neurones aux séquences
+  \item comprendre les contraintes et avantages des réseaux récurrents
+    dans le cadre des séries temporelles
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Problème à résoudre}
+  Traiter une séquence d'inputs:
+  \begin{itemize}
+  \item séquence d'appels dans le cas GFI
+  \item séquence de mots dans une phrase
+  \item séquence de traces dans un log
+  \item séquence d'actions sur une page web
+  \item séquence de mesures en géologie / océanographie / météorologie
+  \item …
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Première solution: padding}
+  \textbf{Idée}
+  \begin{itemize}
+  \item utilisation d'un réseau standard
+  \item taille d'input fixée à la taille maximale des séquences d'input
+  \item padding des séquences plus petites avec des inputs neutres
+  \end{itemize}
+  \textbf{Problèmes}
+  \begin{itemize}
+  \item très couteux en mémoire et temps de calcul.
+  \item l'entraînement des poids n'est pas optimal. \pause
+    \green{Pourquoi ?}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Deuxième solution: fenêtre glissante}
+  \textbf{Idée}
+  \begin{itemize}
+  \item taille d'input fixe
+  \item parcours de la séquence en décalant une fenêtre de la taille
+    de l'input
+  \end{itemize}
+  
+  \textbf{Problème}\\[.2cm]
+  Modélisation des dépendances longues extrêmement simpliste, parfois
+  non apprise. \pause \green{Comment peut-on les modéliser, même
+    simplement ?}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Troisième solution: réseaux récurrents}
+  \begin{itemize}
+  \item taille d'input variable
+  \item utilisation d'un même réseau pour chaque élément de l'input,
+    séquentiellement
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Réseau récurrent enroulé}
+  \imgth[.5]{rolled-rnn}
+  Pour l'élement $i$ d'une séquence de $n$ inputs:
+  \[
+    h_i = \RNN(x_i, h_{i-1})
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Réseau récurrent déroulé}
+  \imgth[.5]{unrolled-rnn}
+  Réseau déroulé très proche d'un réseau standard mais:
+  \begin{itemize}
+  \item poids partagés par les neurones correspondants des différentes
+    étapes temporelles.
+  \item connections horizontales (calcul pas à pas).
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Adaptation de la rétropropagation des gradients}
+
+  \begin{itemize}
+  \item aucune adaptation nécessaire. Le modèle standard fonctionne.
+  \item seule différence: poids du réseau déroulé modifiés autant de
+    fois qu'il y a d'étapes temporelles.
+  \item de manière équivalente: poids du réseau déroulé modifiés par
+    la somme des modifications des étapes temporelles (règle de
+    chainage).
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Où trouver des RNNs implémentés}
+
+  \begin{itemize}
+  \item keras (de loin le plus facile)
+  \item tensorflow
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Première conclusion}
+
+  Une adaptation simple des réseaux de neurones permet de manipuler
+  des séquences d'input
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Problème principal}
+
+  Modèle simple dysfonctionnel en pratique: les gradients ne
+  permettent pas l'apprentissage de dépendances longues:
+
+  \imgtw[0.7]{gradient-rnn}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Solution: LSTM}
+
+  Ajouter un mécanisme de mémoire et de portes pour protéger le flot
+  d'information (et de gradient) :
+
+  \imgtw[0.7]{gradient-lstm}
+
+  Approche appelée Long Short-Term Memory Networks.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Cellule LSTM}
+  \imgtw{colah-complete} Des portes sont multipliées à l'input et à
+  l'ouput pour limiter leur impact sur le flot d'information au strict
+  nécessaire.
+\end{frame}
+
+\begin{frame}
+  \frametitle{LSTM: étape 1/4}
+  Conserver ou non les informations en mémoire:
+  \imgtw[0.8]{colah-forget}
+  \[
+    f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{LSTM: étape 2/4}
+  Prendre en compte ou non l'input:
+  \imgtw[0.7]{colah-input}
+    \begin{align*}
+    i_t & = \sigma\left(W_i \cdot [h_{t-1}, x_t] + b_i\right) \\
+    \tilde{C}_t & = \tanh\left(W_C \cdot [h{t-1}, x_t] + b_C\right) \\
+    \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{LSTM: étape 3/4}
+  Mettre à jour l'état caché:
+  \imgtw[0.8]{colah-state}
+  \[
+    C_t = f_t * C_{t-1} + i_t * \tilde{C}_t
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{LSTM: étape 4/4}
+  Contrôler si l'on produit ou non une valeur de sortie:
+  \imgtw[0.6]{colah-output}
+  \begin{align*}
+    o_t & = \sigma(W_o\cdot [h_{t-1}, x_t] + b_o) \\
+    h_t & = o_t * \tanh(C_t) \\    
+  \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Extension: judas}
+  
+  \imgtw{colah-peepholes}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Variante: GRU}
+  
+  \imgtw[0.6]{colah-gru}
+  \begin{align*}
+    \text{update gate: } z_t         =           & \sigma(W_z\cdot [h_{t-1}, x_t])         \\
+    \text{reset gate: }  r_t         =           & \sigma(W_r\cdot [h_{t-1}, x_t])         \\
+    \text{input candidat: } \tilde{h}_t =        & \tanh(W \cdot [r_t * h_{t-1}, x_t])     \\
+    \text{mise à jour de l'état: } h_t         = & (1 - z_t) * h_{t-1} + z_t * \tilde{h}_t \\
+  \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Deuxième conclusion}
+  \begin{itemize}
+  \item les modèles modernes permettent avec des mécanismes simples de
+    gérer les dépendances longues
+  \item les séquences sont donc des citoyens de premier ordre dans les
+    modèles de machine learning
+  \end{itemize}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

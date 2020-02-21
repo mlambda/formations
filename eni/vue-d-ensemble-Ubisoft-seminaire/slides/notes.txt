@@ -1,0 +1,32 @@
+
+1-RL-deep.tex 
+\begin{frame}
+Double DQN: Remove upward bias caused by $max_a Q( s , a , w )$
+Current Q-network w is used to select actions
+Older Q-network w − is used to evaluate actions $l = ( r + γ.Q ( s′ , argmax_{a′} Q ( s′ , a′ , w ) , w − ) − Q ( s , a , w ) )^2$
+\end{frame}
+
+\begin{frame}
+Prioritised replay:  Weight experience according to surprise
+Store experience in priority queue according to DQN error
+$\norme{ r + γ max_{a′} Q ( s′ , a′ , w − ) − Q ( s , a , w )}$
+\end{frame}
+
+\begin{frame}
+Duelling network:  Split Q-network into two channels
+Action-independent value function $V ( s , v )$
+Action-dependent advantage function $A ( s , a , w )$
+
+$Q ( s , a ) = V ( s , v ) + A ( s , a , w )$
+
+Combined algorithm:  3 x mean Atari score vs Nature DQN
+\end{frame}
+
+1-problématiques.tex
+{Population pas prête}
+experimentation hopital diagnostique => machine > $\approx$ medecin
+patients pas rassurés par l'effet blouse blanche (les machines n'étant pas reconnues comme capables d'aussi bien) => pas de généralisation
+Pas retrouvé  la trace mais annectode d'étude
+
+https://madalinabuzau.github.io/2016/11/29/gradient-descent-on-a-softmax-cross-entropy-cost-function.html#partial_derivatives
+TUTO cross entropy softmax

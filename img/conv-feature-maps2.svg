@@ -1,0 +1,50 @@
+<svg version="1.1"
+     baseProfile="full"
+     width="113" height="188"
+     xmlns="http://www.w3.org/2000/svg">
+  <g fill="violet" stroke="black" transform="translate(10,10)">
+    <g transform="translate(0,48)">
+      <path d="M0 0 v 120 h 5 v -120 h -5" />
+      <path d="M0 0 l 48 -48 h 5 l -48 48 h -5"/>
+      <path d="M0 0 l 48 -48 h 5 l -48 48 h -5" fill="black" fill-opacity="0.2"/>
+      <path d="M5 0 l 48 -48 v 120 l -48 48 v -120"/>
+      <path d="M5 0 l 48 -48 v 120 l -48 48 v -120" fill="black" fill-opacity="0.1"/>
+    </g>
+  </g>
+  <g fill="blue" stroke="black" transform="translate(20,10)">
+    <g transform="translate(0,48)">
+      <path d="M0 0 v 120 h 5 v -120 h -5" />
+      <path d="M0 0 l 48 -48 h 5 l -48 48 h -5"/>
+      <path d="M0 0 l 48 -48 h 5 l -48 48 h -5" fill="black" fill-opacity="0.2"/>
+      <path d="M5 0 l 48 -48 v 120 l -48 48 v -120"/>
+      <path d="M5 0 l 48 -48 v 120 l -48 48 v -120" fill="black" fill-opacity="0.1"/>
+    </g>
+  </g>
+  <g fill="cyan" stroke="black" transform="translate(30,10)">
+    <g transform="translate(0,48)">
+      <path d="M0 0 v 120 h 5 v -120 h -5" />
+      <path d="M0 0 l 48 -48 h 5 l -48 48 h -5"/>
+      <path d="M0 0 l 48 -48 h 5 l -48 48 h -5" fill="black" fill-opacity="0.2"/>
+      <path d="M5 0 l 48 -48 v 120 l -48 48 v -120"/>
+      <path d="M5 0 l 48 -48 v 120 l -48 48 v -120" fill="black" fill-opacity="0.1"/>
+    </g>
+  </g>
+  <g fill="purple" stroke="black" transform="translate(40,10)">
+    <g transform="translate(0,48)">
+      <path d="M0 0 v 120 h 5 v -120 h -5" />
+      <path d="M0 0 l 48 -48 h 5 l -48 48 h -5"/>
+      <path d="M0 0 l 48 -48 h 5 l -48 48 h -5" fill="black" fill-opacity="0.2"/>
+      <path d="M5 0 l 48 -48 v 120 l -48 48 v -120"/>
+      <path d="M5 0 l 48 -48 v 120 l -48 48 v -120" fill="black" fill-opacity="0.1"/>
+    </g>
+  </g>
+  <g fill="white" stroke="black" transform="translate(50,10)">
+    <g transform="translate(0,48)">
+      <path d="M0 0 v 120 h 5 v -120 h -5" />
+      <path d="M0 0 l 48 -48 h 5 l -48 48 h -5"/>
+      <path d="M0 0 l 48 -48 h 5 l -48 48 h -5" fill="black" fill-opacity="0.2"/>
+      <path d="M5 0 l 48 -48 v 120 l -48 48 v -120"/>
+      <path d="M5 0 l 48 -48 v 120 l -48 48 v -120" fill="black" fill-opacity="0.1"/>
+    </g>
+  </g>
+</svg>

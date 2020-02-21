@@ -1,0 +1,100 @@
+\documentclass{formation}
+\title{Machine Learning}
+\subtitle{Soft-Max}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Gradient et mise à jour}
+  Exemple sur une Sortie Softmax :
+  \[
+  \forall x_i \in C,\; S(x_i) = \frac{e^{x_i}}{\sum_{x_j \in C}e^{x_j}}
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Gradient et mise à jour}
+  \begin{center}
+    \underline{Softmax $\Rightarrow$ loss = cross-entropie + L2(W)}
+  \end{center}
+  loss :
+  \[
+  L(y^*,y) = H(y^*,y) + \frac{1}{2}\lambda\sum_{i \in P}w_i^2
+  \]
+  \[
+  H(y^*,y) = -\sum_{(i \in I)}y_i*ln(y_i)
+  \]
+  gradient :
+  \[
+  \frac{\partial{L(x_i)}}{\partial{w_i}} = ( S(x_i) - \delta_{i=i^*} )X + \lambda Wi
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Gradient et mise à jour}
+  Learning rate evolutif et adapté :
+  \begin{itemize}
+  \item SGD : $grad = \alpha*grad_{t-1}(x)+\beta*grad_t \;\;\;$où $\alpha$ et $\beta$ sont positifs et de somme 1.
+  \item AdaGrad : gradient adaptatif par pondération des mises à jour
+  \item Adam : pondération fine et adaptative des mises à jour de chaque poid
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Gradient et mise à jour}
+  Intégrer des contraintes dans le gradient par la loss. On donne une direction différente à l'objectif et donc une surface des paramètres en fonction de l'erreur différente.
+  \begin{center}
+    $grad = grad_x(x) + grad_{contrainte 1} + grad_{contrainte 2} + ...$
+  \end{center}
+  \begin{itemize}
+  \item ajout de la norme L2 des poids à la loss => contraint les poids à rester faibles
+  \item softmax => cross-entropie => sparsification des poids
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Soft-Max}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Soft-Max}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Soft-Max}
+
+  \imgtw[0.1]{logo_mlweek}
+  
+  \begin{itemize}
+  \item 
+  \item 
+  \item 
+  \item 
+  \end{itemize}
+
+  \begin{minipage}[l]{0.49\linewidth}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+  \end{minipage}\hfill
+
+  \begin{minipage}[l]{0.49\linewidth}
+      \begin{itemize}
+      \item 
+      \item 
+      \item 
+      \item 
+      \end{itemize}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+  \end{minipage}\hfill
+
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

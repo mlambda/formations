@@ -1,0 +1,41 @@
+<svg version="1.1"
+     baseProfile="full"
+     width="109" height="209"
+     xmlns="http://www.w3.org/2000/svg">
+  <g fill="orange" stroke="black" transform="translate(10,10)">
+    <g transform="translate(0,54)">
+      <path d="M0 0 v 135 h 5 v -135 h -5" />
+      <path d="M0 0 l 54 -54 h 5 l -54 54 h -5"/>
+      <path d="M0 0 l 54 -54 h 5 l -54 54 h -5" fill="black" fill-opacity="0.2"/>
+      <path d="M5 0 l 54 -54 v 135 l -54 54 v -135"/>
+      <path d="M5 0 l 54 -54 v 135 l -54 54 v -135" fill="black" fill-opacity="0.1"/>
+    </g>
+  </g>
+  <g fill="yellow" stroke="black" transform="translate(20,10)">
+    <g transform="translate(0,54)">
+      <path d="M0 0 v 135 h 5 v -135 h -5" />
+      <path d="M0 0 l 54 -54 h 5 l -54 54 h -5"/>
+      <path d="M0 0 l 54 -54 h 5 l -54 54 h -5" fill="black" fill-opacity="0.2"/>
+      <path d="M5 0 l 54 -54 v 135 l -54 54 v -135"/>
+      <path d="M5 0 l 54 -54 v 135 l -54 54 v -135" fill="black" fill-opacity="0.1"/>
+    </g>
+  </g>
+  <g fill="green" stroke="black" transform="translate(30,10)">
+    <g transform="translate(0,54)">
+      <path d="M0 0 v 135 h 5 v -135 h -5" />
+      <path d="M0 0 l 54 -54 h 5 l -54 54 h -5"/>
+      <path d="M0 0 l 54 -54 h 5 l -54 54 h -5" fill="black" fill-opacity="0.2"/>
+      <path d="M5 0 l 54 -54 v 135 l -54 54 v -135"/>
+      <path d="M5 0 l 54 -54 v 135 l -54 54 v -135" fill="black" fill-opacity="0.1"/>
+    </g>
+  </g>
+  <g fill="pink" stroke="black" transform="translate(40,10)">
+    <g transform="translate(0,54)">
+      <path d="M0 0 v 135 h 5 v -135 h -5" />
+      <path d="M0 0 l 54 -54 h 5 l -54 54 h -5"/>
+      <path d="M0 0 l 54 -54 h 5 l -54 54 h -5" fill="black" fill-opacity="0.2"/>
+      <path d="M5 0 l 54 -54 v 135 l -54 54 v -135"/>
+      <path d="M5 0 l 54 -54 v 135 l -54 54 v -135" fill="black" fill-opacity="0.1"/>
+    </g>
+  </g>
+</svg>

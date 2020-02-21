@@ -1,0 +1,32 @@
+\documentclass{formation}
+\title{Machine Learning, méthodes et solutions}
+\subtitle{Long-Short Term Memory}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Long-Short Term Memory}
+  \imgtw[0.7]{lstm-schema}
+  \begin{itemize}
+  \item $F_{t}=\sigma (W_{F}*x_{t}+U_{F}*h_{t-1}+b_{F})\;\;\;\;\;\;\,$ (forget gate)
+  \item $I_{t} =\sigma (W_{I}*x_{t}+U_{I}*h_{t-1}+b_{I})\;\;\;\;\;\;\;\;\;\;$ (input gate)
+  \item $O_{t} =\sigma (W_{O}*x_{t}+U_{O}*h_{t-1}+b_{O})\;\;\;\;\;$ (output gate)
+  \item $c_{t} =F_{t}\circ c_{t-1}+I_{t}\circ \tanh(W_{c}*x_{t}+U_{c}*h_{t-1}+b_{c})$
+  \item $h_{t} =O_{t}\circ \tanh(c_{t})$
+  \item $o_{t} =f(W_{o}*h_{t}+b_{o})$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Long-Short Term Memory}
+  vanishing gradient ``résolu'' (ou presque)
+  \imgtw{vanishing-gradient-lstm}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

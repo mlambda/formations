@@ -1,0 +1,24 @@
+\documentclass{formation}
+\title{Machine Learning}
+\subtitle{Autoregressive Integrated Moving Average Model : ARIMA}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{ARIMA}
+  Peut être vu comme une cascade de deux modèles :
+  \begin{itemize}
+  \item processus de suppression de la tendance par différenciation temporelle : $Y_t=(I-L)^dX_t$
+  \item $Y_t$ traité comme un processus ARMA(p,q)
+  \end{itemize}
+  On note alors $X_t$ comme étant un processus ARIMA(p,d,q) \\
+  Les processus ARIMA intègrent naturellement la tendance dans le modèle.
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

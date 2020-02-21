@@ -1,0 +1,42 @@
+\documentclass{formation}
+\title{Machine Learning}
+\subtitle{Optimisation/Régularisation de réseaux profonds}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Optimisation de réseaux profonds}
+  Disparition du gradient (ou son explosion)
+  \imgtw[1.0]{vanishing-gradient3}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Optimisation de réseaux profonds}
+  Exploding Gradient $\Rightarrow$ Gradient clipping
+  \imgtw[0.9]{gradient-clipping}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Optimisation de réseaux profonds}
+  Vanishing Gradient $\Rightarrow$ utilisation de ReLu plutôt que les sigmoïdes
+  \imgtw[0.9]{relu}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Optimisation de réseaux profonds}
+  Optimisateur plus rapide que SGD
+  \begin{itemize}
+  \item Root Mean Square Propagation (RMSProp)
+  \item Adapative Gradient Algorithm (AdaGrad)
+  \item Adaptative Moment Estimation (Adam)    $\Leftarrow$
+  \item ... AdaBound (2019) ?
+ \end{itemize}
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

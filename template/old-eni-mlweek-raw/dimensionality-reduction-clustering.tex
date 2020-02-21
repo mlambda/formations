@@ -1,0 +1,260 @@
+\documentclass{formation}
+\title{Réduction de dimensionnalité et clustering}
+\subtitle{Module 7}
+
+\begin{document}
+
+\maketitle
+
+\section{Objectifs}
+
+\begin{frame}
+  \frametitle{Objectifs}
+  \begin{itemize}
+  \item utiliser les bonnes méthodes de réduction de dimensionnalité
+  \item faire du clustering avec k-means
+  \item projeter des variables catégorielles dans des embeddings
+  \end{itemize}
+\end{frame}
+
+\section{PCA}
+
+\begin{frame}
+  \frametitle{PCA}
+
+  \begin{itemize}
+  \item réduire les dimensions tout en conservant la variance
+  \item trouve une nouvelle base aux données et ordonne les axes par
+    variance
+  \item sélectionner les axes dans l'ordre pour conserver le plus de
+    variance
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Explication visuelle}
+
+  \url{http://setosa.io/ev/principal-component-analysis/}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Utilisation classique}
+
+  Réduire le nombre de dimensions en gardant $x$\% de la variance. $x$
+  souvent égal à $99$.
+\end{frame}
+
+\section{t-SNE}
+
+\begin{frame}
+  \frametitle{t-SNE}
+
+  \begin{itemize}
+  \item approche probabiliste
+  \item map au mieux des distributions de distances dans l'espace
+    haut-dimensionnel et dans l'espace bas-dimensionnel
+  \item très utile pour visualiser des données en très hautes
+    dimensions
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{t-SNE}
+
+  \begin{itemize}
+  \item approche probabiliste
+  \item map au mieux des distributions de distances dans l'espace
+    haut-dimensionnel et dans l'espace bas-dimensionnel
+  \item très utile pour visualiser des données en très hautes
+    dimensions
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{t-SNE}
+
+  \begin{itemize}
+  \item calcul d'une distribution P des similarités des objets en
+    haute dimension
+  \item calcul d'une distribution Q de similarités des objets en basse
+    dimension
+  \item minimisation de la KL divergence de Q par rapport à P
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Sensibilité aux paramètres}
+
+  Attention, t-SNE est très sensible au choix de ses paramètres :
+
+  \url{https://distill.pub/2016/misread-tsne/}
+\end{frame}
+
+\section{k-means}
+
+\begin{frame}
+  \frametitle{k-means}
+
+  \begin{itemize}[<+->]
+  \item algo incoutournable en clustering
+  \item sert aussi de base à d'autres algorithmes
+  \item sert aussi de préprocessing
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{k-means — 1\iere{} étape}
+
+  \imgtw[.4]{k-means-1}
+
+  Décider de l'emplacement de k centroïds.
+\end{frame}
+
+\begin{frame}
+  \frametitle{k-means — 2\ieme{} étape}
+
+  \imgtw[.4]{k-means-2}
+
+  À chaque point, attribuer le cluster le plus proche.
+\end{frame}
+
+\begin{frame}
+  \frametitle{k-means — 3\ieme{} étape}
+
+  \imgtw[.4]{k-means-3}
+
+  Ajuster les centroïdes pour qu'ils soient les barycentres des
+  points.
+\end{frame}
+
+\begin{frame}
+  \frametitle{k-means — 4\ieme{} étape}
+
+  \imgtw[.4]{k-means-4}
+
+  Répéter les étapes 2 et 3 jusqu'à convergence.
+\end{frame}
+
+\begin{frame}
+  \frametitle{k-means — principaux paramètres}
+
+  \begin{itemize}[<+->]
+  \item k: nombre de clusters.
+  \item centroïdes de départ: principalement deux stratégies :
+    \begin{itemize}
+    \item hasard
+    \item points existants
+    \item k-means++ :
+      \begin{enumerate}
+      \item choisir un point dans les données avec une distribution uniforme
+      \item calculer une distance des autres points à ce point
+      \item utiliser une distribution biaisée par la distance
+      \item recommencer 2 et 3 jusqu'à avoir k points
+      \end{enumerate}
+    \end{itemize}
+
+    \onslide<+->{→ Choisir par redémarrages multiples la meilleure
+      option}
+  \item iterations: moins important
+  \end{itemize}
+\end{frame}
+
+\section{Embeddings}
+
+\begin{frame}
+  \frametitle{Idée}
+  Projection des catégories de variables catégorielles dans un espace
+  à $n$ dimensions.
+
+  Pour les mots, $n \in \llbracket 50, 1000 \rrbracket$
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Utilité}
+  \begin{itemize}
+  \item utilisé en surcouche des one-hot encodings dans les réseaux
+  \item initialisés aléatoirement
+  \item entrainés comme le reste du réseau
+  \item converge vers un espace riche
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Problèmes de l'encodage one-hot}
+  \begin{itemize}
+  \item très volumineux
+  \item deux mots proches ne partageront rien de commun dans l'input
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Embeddings}
+  Pour pallier ces problèmes, projection dans un espace
+  restreint.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Embeddings}
+  \imgtw[.8]{embedding-example}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Embeddings}
+
+  \begin{columns}
+    \begin{column}{.5\tw}
+      Espace appris riche et requêtable :
+
+      \begin{itemize}
+      \item trouver les symboles les plus proches dans l'espace
+      \item résoudre des analogies:\\
+        woman - man = aunt - ?
+      \end{itemize}
+    \end{column}
+    \begin{column}{.3\tw}
+      \imgtw{word2vec-analogy}
+    \end{column}
+  \end{columns}
+
+  → Énorme aide pour le réseau
+\end{frame}
+
+\begin{frame}
+  \frametitle{Embeddings}
+
+  Applicable à toutes les variables catégorielles:
+
+  \begin{itemize}[<+->]
+  \item utilisateurs
+  \item pays
+  \item types de carte SIM
+  \item types d'appels
+  \item …
+  \end{itemize}
+
+  \onslide<+->{Pas limité aux mots !}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}
+  \frametitle{Conclusion}
+
+  \begin{itemize}
+  \item méthodes gobale et \og plus locale\fg{} de réduction de
+    dimensionnalité
+  \item clustering avec k-means, initialisé correctement et
+    cross-validé sur son nombre de clusters
+  \item embeddings pour gérer les variables catégorielles
+  \end{itemize}
+\end{frame}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

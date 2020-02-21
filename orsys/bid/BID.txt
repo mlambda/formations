@@ -1,0 +1,66 @@
+Big Data, méthodes et solutions pratiques pour l'analyse
+des données
+Ce stage vous permettra de comprendre les enjeux et les apports du Big Data ainsi que les technologies pour
+le mettre en œuvre. Vous apprendrez à intégrer des volumétries massives de données structurées et non
+structurées via un ETL, puis à les analyser grâce à des modèles statistiques et des dashboards dynamiques.
+OBJECTIFS PEDAGOGIQUES
+Comprendre les concepts et l'apport du Big Data par rapport aux enjeux métiers
+Comprendre l'écosystème technologique nécessaire pour réaliser un projet Big Data
+Acquérir les compétences techniques pour gérer des flux de données complexes, non structurés et massifs
+Implémenter des modèles d'analyses statistiques pour répondre aux besoins métiers
+Appréhender un outil de data visualisation pour restituer des analyses dynamiques
+1) Comprendre les concepts et les enjeux du Big
+Data
+2) Les technologies du Big Data
+3) Gérer les données structurées et non
+structurées
+4) Technique et méthodes Big data analytics
+5) Data visualisation et cas d'usage concrets
+6) Conclusion
+Exercice
+Mettre en place une plateforme Hadoop et ses composants de base, utiliser un ETL pour gérer les données,
+créer des modèles d'analyse et dashboards.
+1) Comprendre les concepts et les enjeux du Big Data
+- Origines et définition du Big Data.
+- Les chiffres clés du marché dans le monde et en France.
+- Les enjeux du Big Data : ROI, organisation, confidentialité des données.
+- Un exemple d'architecture Big Data.
+2) Les technologies du Big Data
+- Description de l'architecture et des composants de la plateforme Hadoop.
+- Les modes de stockage (NoSQL, HDFS).
+- Principes de fonctionnement de MapReduce, Spark, Storm...
+- Principales distributions du marché (Hortonworks, Cloudera, MapR, Elastic Map Reduce, Biginsights).
+- Installer une plateforme Hadoop.
+- Les technologies du datascientist.
+- Présentation des technologies spécifiques pour le Big Data (Tableau, Talend, Qlikview ...).
+Exercice
+Installation d'une plateforme Big Data Hadoop (via Cloudera QuickStart ou autre).
+3) Gérer les données structurées et non structurées
+- Principes de fonctionnement de Hadoop Distributed File System (HDFS).
+- Importer des données externes vers HDFS.
+- Réaliser des requêtes SQL avec HIVE.
+- Utiliser PIG pour traiter la donnée.
+- Le principe des ETL (Talend...).
+- Gestion de streaming de données massive (NIFI, Kafka, Spark, Storm...)
+Exercice
+Implémentation de flux de données massives.
+4) Technique et méthodes Big data analytics
+- Machine Learning, une composante de l'intelligence artificielle.
+- Découvrir les trois familles : Régression, Classification et Clustering.
+- La préparation des données (data preparation, feature engineering).
+- Générer des modèles en R ou Python.
+- Ensemble Learning.
+- Découvrir les outils du marché : Jupyter Notebook, Dataïku, Amazon Machine Learning...
+Exercice
+Mise en place d'analyses avec une des outils étudiés.
+5) Data visualisation et cas d'usage concrets
+- Définir le besoin de la data visualisation.
+- Analyse et visualisation des données.
+- Peut concerner tous les types de données dans la DataViz ?
+- Les outils DataViz du marché.
+Exercice
+Installation et utilisation d'un outil de Data Visualisation pour constituer des analyses dynamiques.
+6) Conclusion
+- Ce qu'il faut retenir.
+- Synthèse des bonnes pratiques.
+- Bibliographie.

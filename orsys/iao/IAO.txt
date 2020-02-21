@@ -1,0 +1,99 @@
+2J
+Intelligence Artificielle, enjeux et outils
+L'Intelligence Artificielle, après avoir bouleversé de nombreux domaines scientifiques, a commencé à
+révolutionner un grand nombre de secteurs économiques (industrie, médecine, communication). Ce
+séminaire vous présentera les principales approches de l'intelligence dans la résolution de problèmes. Un
+grand nombre d'applications seront présentées, du traitement de la donnée brute à la création de contenus
+originaux en passant par le contrôle d'agents, la classification automatisée ou l'approximation d'une donnée
+pour en faciliter sa compréhension et sa manipulation.
+OBJECTIFS PEDAGOGIQUES
+Comprendre réellement ce que sont les outils Machine et Deep Learning, leurs potentiels et leurs limites
+Avoir une vision à date de l'état de l'art de ces domaines
+Connaître et comprendre les applications de ces domaines à différents domaines de l'industrie
+Maîtriser les méthodologies et connaître les outils propres aux projets d'intelligence artificielle
+1) Qu'est-ce que l'Intelligence Artificielle
+(jusqu'aux réseaux de neurones) ?
+2) Réseaux de neurones et Deep Learning
+3) Applications du Deep Learning
+4) Quels problèmes peut-on adresser avec le
+Machine/Deep Learning ?
+5) Génération d'un Dataset
+6) Recherche de la solution optimale
+7) Les outils
+Méthodes pédagogiques
+Présentation, échanges et études de cas.
+1) Qu'est-ce que l'Intelligence Artificielle (jusqu'aux réseaux de neurones) ?
+- Le fantasme de l'Intelligence Artificielle et la réalité d'aujourd'hui.
+- Tâche intellectuelle versus algorithmes.
+- Types d'actions : classification, régression, clustering, estimation de densité, réduction de dimensionnalité.
+- Intelligence collective : agréger une connaissance partagée par de nombreux agents virtuels.
+- Algorithmes génétiques : faire évoluer une population d'agents virtuels par sélection.
+- Machine Learning : présentation et principaux algorithmes (XGBoost, Random Forest).
+2) Réseaux de neurones et Deep Learning
+- Qu'est-ce qu'un réseau de neurones ?
+- Qu'est-ce que l'apprentissage d'un réseau de neurones ? Deep versus shallow network, overfit, underfit,
+convergence.
+- Approximer une fonction par un réseau de neurones : présentation et exemples.
+- Approximer une distribution par un réseau de neurones : présentation et exemples.
+- Génération de représentations internes au sein d'un réseau de neurones.
+- Généralisation des résultats d'un réseau de neurones.
+- Révolution du Deep Learning : généricité des outils et des problématiques.
+Démonstration
+Présentation d'un algorithme de classification et de ses limites.
+3) Applications du Deep Learning
+- Classification de données. Les différents scénarios : donnée brute, image, son, texte, etc.
+- Les enjeux d'une classification de données et les choix impliqués par un modèle de classification.
+- Outils de classification : des réseaux de type Multilayer Perceptron ou Convolutional Neural Network.
+Machine Learning.
+- Prédiction d'information et donnée séquentielle/temporelle. Enjeux et limites d'une prédiction d'information.
+- Règles structurelles au sein de la donnée pouvant permettre une logique de prédiction. Outils usuels de
+prédiction.
+- Transformation/génération de données. Opération de réinterprétation d'une donnée : débruitage,
+segmentation d'image...
+- Opération de transformation sur un même format : traduction de texte d'une langue à une autre...
+- Opération de génération de donnée "originale" : Neural Style, génération d'images à partir de présentations
+textuelles.
+- Reinforcement Learning : contrôle d'un environnement.
+- Experience Replay et apprentissage de jeux vidéo par un réseau de neurones.
+Démonstration
+Classification d'images médicales. Prévision des images suivant une séquence vidéo. Contrôle de
+simulations numériques.
+4) Quels problèmes peut-on adresser avec le Machine/Deep Learning ?
+- Condition sur les données : volumétrie, dimensionnement, équilibre entre les classes, description
+- Donnée brute vs features travaillées : que choisir ?
+- Machine Learning versus Deep Learning : les algorithmes plus anciens du Machine Learning ou les réseaux
+de neurones ?
+- Qualifier le problème : Unsupervised Learning versus Supervised Learning.
+- Qualifier la solution d'un problème : comprendre la distance entre une affirmation et le résultat d'un
+algorithme.
+Etude de cas
+Qualification d'une problématique pouvant être traitée avec l'IA.
+5) Génération d'un Dataset
+- Qu'est-ce qu'un Dataset ?
+- Stocker/contrôler la donnée : surveiller les biais, nettoyer/convertir sans s'interdire des retours en arrière.
+- Comprendre la donnée : représentation des outils statistiques permettant une vision d'une donnée, sa
+distribution...
+- Formater une donnée : décider d'un format d'entrée et de sortie, faire le lien avec la qualification du
+problème.
+- Préparer la donnée : définition des Train Set, Validation Set et Test Set.
+- Mettre en place une structure permettant de garantir que les algorithmes utilisés sont réellement pertinents
+(ou non).
+Echanges
+Définition d'un Dataset et sa différence avec un BDD usuel.
+6) Recherche de la solution optimale
+- Méthodologie pour avancer dans la recherche d'une meilleure solution à un problème ML/DL.
+- Choix d'une direction de recherche, localisation de publications ou de projets similaires existants.
+- Itérations successives depuis les algorithmes les plus simples jusqu'aux architectures les plus complexes.
+- Conservation d'un banc de comparaison transversal.
+- Arriver à une solution optimale.
+Etude de cas
+Grouper et balancer un ensemble de solutions pour obtenir une solution optimale.
+7) Les outils
+- Quels outils existe-t-il aujourd'hui ?
+- Quels outils pour la recherche et quels outils pour l'industrie ?
+- De Keras/Lasagne à Caffe en passant par Torch, Theano, Tensorflow ou Apache Spark ou Hadoop.
+- Industrialiser un réseau de neurones par un encadrement strict de son processus et un monitoring continu.
+- Mise en place de réapprentissages successifs pour conserver un réseau à jour et optimal.
+- Former des utilisateurs à la compréhension du réseau.
+Démonstration
+Mise en place de réapprentissages successifs.

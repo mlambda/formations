@@ -1,0 +1,98 @@
+Big Data, Data Science, Machine Learning, leur impact
+dans l’entreprise
+La révolution numérique est rendue possible par l'explosion du volume des données échangées au sein et
+en dehors des entreprises. Cette révolution a permis l'apparition de nombreux nouveaux usages et nous
+n'en sommes qu'au début. Sans entrer dans le détail de la technique ni des aspects architecturaux ou des
+modèles de données, ce séminaire vous présentera une vision d'ensemble de l'impact que peuvent avoir le
+Big Data, la Data Science et le Machine Learning sur les nouveaux modèles d'entreprise.
+OBJECTIFS PEDAGOGIQUES
+Découvrir les fondamentaux du Big Data, de la Data Science et du Machine Learning
+Evaluer en quoi les données prennent une position prédominante dans les nouveaux business models
+Comprendre le rôle de la Data Science au sein de l'organisation et de la gouvernance de l'information
+Présenter les enjeux des usages que représentent le Machine Learning, le Deep Learning et les impacts
+organisationnels
+Justifier l'ouverture du SI vers l'extérieur, tant en collecte de données qu'en fourniture
+1) Historique et contexte de l'explosion des
+usages autour des données
+2) Le Big Data, la Data Science, le Machine
+Learning, l'IA
+3) La gestion du patrimoine informationnel et le
+pilotage de la valeur
+4) Les acteurs du Big Data et les enjeux
+organisationnels associés
+5) Le Big Data étendu
+6) Les notions pour aller plus loin et quelques
+pistes pour se lancer
+1) Historique et contexte de l'explosion des usages autour des données
+- La révolution numérique est en route ... poussée par un tsunami informationnel !
+- Quelles sont les grandes briques fonctionnelles et techniques de la gestion du patrimoine informationnel ?
+- Qu'est ce que le Big Data ? Définition et périmètre général.
+- Un peu d'histoire sur les origines et l'explosion du Big Data.
+- Le Big Data n'est pas une mode et s'inscrit dans la révolution numérique comme le carburant de
+l'innovation.
+- Le Big Data : les grands usages actuels.
+- Quelques grandes notions technologiques à retenir et comment surnager parmi tous ces acronymes
+techniques.
+- Quelle cohabitation entre les différentes générations de système de gestion des données ?
+- Quel futur pour toutes ces solutions et usages ? Quel est le niveau de maturité à date ?
+Echanges
+Réflexion collective sur la révolution numérique.
+2) Le Big Data, la Data Science, le Machine Learning, l'IA
+- Créer et améliorer les facultés de l'entreprise grâce au Big Data.
+- Les grandes briques applicatives au service du Big Data dans l'entreprise.
+- De l'analyse statistique à la Data Science : quels profils, pour quels bénéfices ?
+- Les principales déclinaisons de l'Intelligence Artificielle.
+- L'Intelligence Artificielle dans l'analyse prédictive.
+- Le Machine Learning ou la capacité d'apprentissage par la machine.
+- Apprendre par le traitement de masse de l'information recueillie : le Deep Learning.
+- L'Intelligence Artificielle, le Machine Learning et le Deep Learning : quels enjeux pour nos sociétés ?
+Echanges
+Réflexion collective sur l'évolution du Big Data, de la Data Science, du Machine Learning et de l'Intelligence
+Artificielle.
+3) La gestion du patrimoine informationnel et le pilotage de la valeur
+- La place des données dans la révolution numérique.
+- La place de la donnée dans les modèles d'entreprise disruptifs.
+- La valeur des données au coeur des enjeux métiers.
+- Peut-on connaître et piloter la valeur de son patrimoine informationnel ?
+- Quel est le risque d'infobésité ? Comment s'en prémunir ?
+- Les opportunités de monétisation de l'information.
+- Comment installer une culture de la donnée dans l'entreprise ?
+- Le poids et le coût de la qualité des données du patrimoine géré par l'entreprise.
+- L'apport de valeur par les données touche tous les métiers de nos clients.
+Etude de cas
+Étude de cas sur l'analyse de la valeur de la donnée.
+4) Les acteurs du Big Data et les enjeux organisationnels associés
+- Organisation, rôles et gouvernance : les nouveaux modèles à l'heure du Big Data.
+- Pourquoi les silos organisationnels sont-ils un frein majeur à l'exploitation des données et comment y
+remédier ?
+- La Data Science : adapter les profils de statisticiens aux nouveaux enjeux.
+- Les spécialistes des nouveaux domaines et leurs méthodes de travail.
+- Les thématiques de mise en œuvre de la gouvernance des données.
+- Les acteurs de la gouvernance de la donnée.
+- Les acteurs en charge de la qualité de la donnée.
+- Quelles sont les grandes tendances règlementaires autour de la gestion des données et comment les
+aborder ?
+Démonstration
+Démonstration de l'importance de la gouvernance des données.
+5) Le Big Data étendu
+- La place de l'entreprise dans son écosystème de données.
+- Les données à la frontière de l'entreprise (DMP).
+- Les données fournies par des partenaires : réseaux sociaux...
+- L'Internet des objets (IoT) ou comment rendre son entreprise sensible aux nouveaux usages.
+- L'Open Data et ses apports dans l'analyse de données : nouvelles données, enrichissement, croisement de
+données.
+- L'émergence des chatbots ou l'automatisation de fonctions d'interface clients : quels impacts dans nos
+organisations ?
+- L'expérience client augmentée, levier de la transformation digitale des entreprises.
+- La fourniture de données comme nouvelle source de revenus.
+- Les données, carburant de l'innovation métier.
+Démonstration
+Démonstrations sur l'innovation basée sur le Big Data, la Data Science et le Machine Learning.
+6) Les notions pour aller plus loin et quelques pistes pour se lancer
+- Quels sont les risques à ne pas prendre en compte dans le cas de la gestion du patrimoine informationnel ?
+- Les grandes tendances autour de la Data pour les trois années à venir.
+- Les solutions technologiques : Big Data et Machine Learning.
+- Mode d'emploi pour lancer une initiative Big Data.
+- Les techniques du Big Data : tour d'horizon.
+- Les métiers, fonctions et rôles autour de la donnée : la synthèse et les différents niveaux de mise en œuvre.
+- Pourquoi les entreprises se lancent-elles dans le Big Data ?
