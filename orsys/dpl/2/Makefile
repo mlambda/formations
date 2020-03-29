@@ -7,7 +7,7 @@ keras := \
     keras-intro.pdf \
 
 cnn := \
-    cnn.pdf \
+    nn-cnn.pdf \
     cnn-keras.pdf \
 
 cnn-keras-tp := \

@@ -1,10 +1,47 @@
 \documentclass{formation}
-\title{Big Data Analytics}
-\subtitle{Apprentissage de modèles}
+\title{Machine Learning, méthodes et solutions}
+\subtitle{Évaluation et Apprentissage de modèles}
 
 \begin{document}
 
 \maketitle
+
+\begin{frame}
+  \frametitle{Évaluation — outils — précision, rappel}
+  En classification :
+  \begin{description}
+  \item[Précision]
+    \[
+    \frac{\text{vrais positifs}}{\text{vrais positifs + faux positifs}}
+    \]
+  \item[Rappel]
+    \[
+    \frac{\text{vrais positifs}}{\text{vrais positifs + faux négatifs}}
+  \]
+  \item[F-mesure] moyenne harmonique entre précision et rappel (aussi
+    appelée F1 score)
+  \end{description}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Évaluation — outils — précision, rappel}
+  \imgth[0.8]{precisionrecall}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils — courbe ROC}
+  \imgtw[.6]{roc}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outils — courbe ROC}
+  \imgtw[.6]{roc-space}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Évaluation — outils — matrice de confusion}
+  \imgtw[.6]{confusion-matrix}
+\end{frame}
 
 \begin{frame}
   \frametitle{Apprentissage de modèles}
@@ -75,43 +112,6 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Évaluation — outils — précision, rappel}
-  En classification :
-  \begin{description}
-  \item[Précision]
-    \[
-    \frac{\text{vrais positifs}}{\text{vrais positifs + faux positifs}}
-    \]
-  \item[Rappel]
-    \[
-    \frac{\text{vrais positifs}}{\text{vrais positifs + faux négatifs}}
-  \]
-  \item[F-mesure] moyenne harmonique entre précision et rappel (aussi
-    appelée F1 score)
-  \end{description}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Évaluation — outils — précision, rappel}
-  \imgth[0.8]{precisionrecall}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Outils — courbe ROC}
-  \imgtw[.6]{roc}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Outils — courbe ROC}
-  \imgtw[.6]{roc-space}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Évaluation — outils — matrice de confusion}
-  \imgtw[.6]{confusion-matrix}
-\end{frame}
-
-\begin{frame}
   \frametitle{Reproductibilité}
   \begin{itemize}
   \item extrêmement importante pour compléter les analyses après les retours business
@@ -128,6 +128,26 @@
   \item définir les datasets utilisés, dates comprises
   \item garder une trace de l'environnement
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Méta-paramètres et Régularisation}
+  Les méta-paramètres forment l'ensemble des prétraitements,la forme et les contraintes appliquées au modèle \textbf{AVANT} son apprentissage.
+  \begin{itemize}
+  \item Forme : Nombre de couches ?, de quelle taille ? ...
+  \item L'algorithme d'optimisation (SGD, adaboost, adam,...)
+  \item Méthodes de régularisation (norme des paramètres dans la loss, bruitage, dropout, ...)
+  \end{itemize}
+  \begin{minipage}[l]{0.49\linewidth}
+    \begin{center}
+      Régularisation \\
+      $\approx$\\
+      empêcher le surapprentissage
+    \end{center}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+    \imgth[.5]{overfitting}
+  \end{minipage}\hfill
 \end{frame}
 
 \end{document}

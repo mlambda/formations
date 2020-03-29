@@ -1,5 +1,5 @@
 \documentclass{formation}
-\title{Big Data Analytics}
+\title{Machine Learning, méthodes et solutions}
 \subtitle{Réduction de la dimensionalité}
 
 \begin{document}
@@ -22,10 +22,17 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réduction de la dimensionalité}
+  \frametitle{La malédiction des grandes dimensions !}
     \begin{center}
-      La malédiction des grandes dimensions !\\
-      (Curse of dimensionality)
+      Nombre d'extrémités dans une espace de dimension : \\
+      $\;$ \\
+      \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        dim & 1 & 2 & 3 & 4 & 5 & ... \\
+        \hline
+        pts & 2 & 4 & 8 & 16 & 32 & ...\\
+        \hline
+      \end{tabular}
     \end{center}
 \end{frame}
 
@@ -36,16 +43,6 @@
     \item Projections linéaires (ACP, LDA, ...)
     \item Projections non-linéaires (kernels, neural network embeddings, ...)
     \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Réduction de la dimensionalité}
-  Sélection de dimensions :
-  \begin{itemize}
-  \item Random forest
-  \item SVM
-  \item ...
-  \end{itemize}
 \end{frame}
 
 \end{document}

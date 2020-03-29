@@ -1,0 +1,45 @@
+\documentclass{formation}
+\title{Big Data Analytics}
+\subtitle{Régression Polynomiale}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{frame}
+  \frametitle{Regression Polynomiale}
+  Limites de la regression linéaire
+  \imgtw[1]{residuals-2}
+  \imgth[0.4]{residuals-1}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Régression Polynomiale}
+  $Y=a_0+a_1*X+a_2*X^2+a_3*X^3+...+a_n*X^n$ \\
+  \newline
+  $Y=\underset{k \in [0..n]}{\sum}{a_k*X^k}$
+  \imgtw[0.8]{regression-polynomiale-exemple}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Gradient et mise à jour}
+  $Y=\underset{k \in [0..n]}{\sum}{a_k*X^k}$ \\
+  $\;$ \\
+  $E_{\Omega} = \frac{1}{2n}\underset{i=[1..n]}{\sum}( \hat{Y_i} - Y_i )^2$ \\
+  $\;$ \\
+  $\frac{\partial{E_{\Omega}}}{\partial{a_k}} = \frac{1}{n}\underset{i=[1..n]}{\sum}(\tilde{Y_i} - \hat{Y_i}).X^k$ \\
+  $\;$ \\
+  $\;$ \\
+  \textbf{M.A.J :} \\
+  $\;$ \\
+  $a_k \leftarrow a_k - \gamma.\frac{\partial{E_{\Omega}}}{\partial{a_k}}$ \\
+  $\;$ \\
+  où $1 > \gamma > 0$ (learning rate)
+\end{frame}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -28,9 +28,6 @@ autoencoder := \
 tp3 := \
     tp-autoencoder.pdf \
 
-debug := \
-    cnn.pdf \
-
 questions = questions.pdf
 
 debug.pdf: $(title) $(debug)
