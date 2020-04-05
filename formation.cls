@@ -4,7 +4,11 @@
 
 \PassOptionsToPackage{dvipsnames,hyperref,usenames,table}{xcolor}
 
-\LoadClass[10pt]{beamer}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
+
+\ProcessOptions\relax
+
+\LoadClass{beamer}
 
 
 \RequirePackage{xcolor}
@@ -33,6 +37,7 @@
 
 \newcommand{\partiald}[2]{\frac{\partial #1}{\partial #2}}
 \DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator{\ReLU}{ReLU}
 \DeclareMathOperator{\softmax}{softmax}
 \DeclareMathOperator{\cov}{cov}
@@ -91,5 +96,3 @@
 \newcommand\gray[1]{\textcolor{gray}{#1}}
 \newcommand\purple[1]{\textcolor{purple}{#1}}
 \newcommand\smallgray[1]{\textcolor{gray}{\footnotesize\it #1}}
-
-\date{}
