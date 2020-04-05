@@ -13,3 +13,5 @@ _minted*
 /usefull-pdfs
 /datasets
 /notebook
+build/
+session-config.yml

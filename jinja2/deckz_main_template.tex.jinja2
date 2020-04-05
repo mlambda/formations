@@ -1,0 +1,34 @@
+%% for k, v in config
+\newcommand{\\VAR{k | camelcase}}{\VAR{v}}
+%% endfor
+
+\documentclass[\PresentationSize\BLOCK{if handout},handout\BLOCK{endif}]{formation}
+
+\author{\vfill\TrainerName}
+\institute{%
+  \vfill%
+  \includegraphics[height=\CompanyLogoHeight]{\CompanyLogo}%
+  \newline%
+  \url{\CompanyWebsite}%
+}
+\date{\vfill\SessionStart--\SessionEnd}
+
+\title{\DeckTitle}
+\subtitle{\VAR{target_title}}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Programme}
+\tableofcontents[subsectionstyle=hide]
+\end{frame}
+
+%% for section in sections:
+\section{\VAR{section.title}}
+%% for include in section.includes:
+\input{\VAR{include}}
+%% endfor
+%% endfor
+
+\end{document}

@@ -1,0 +1,100 @@
+- name: j1
+  title: Jour 1 --- Introduction au Machine Learning
+  sections:
+    - title: Votre formation
+      includes:
+        - 1/about
+    - title: Principaux outils
+      includes:
+        - 1/python-intro
+        - 1/notebook-intro
+        - 1/notebook-jupyter-install
+    - title: Introduction au Machine Learning
+      includes:
+        - 1/ml-intro
+        - 1/ml-data-preparation
+        - 1/ml-learn
+        - 1/tp-data-analysis
+
+- name: j2
+  title: Jour 2 --- Algorithmes 1/2
+  sections:
+    - title: Apprentissage non supervisé
+      includes:
+        - 2/unsupervised
+        - 2/dimensionality-reduction
+        - 2/pca-lda
+        - 2/algorithme-em
+        - 2/kmeans-gaussian
+        - 2/anomaly-detection-light
+        - 2/tp-unsupervised
+    - title: Apprentissage supervisé
+      includes:
+        - 2/naive-bayes
+        - 2/trees
+        - 2/random-forest
+        - 2/regression-lineaire
+        - 2/cost-error-function
+        - 2/optimisation
+        - 2/derivation-gradient
+        - 2/regression-logistique
+        - 2/nn-intro
+        - 2/svm
+        - 2/tp-supervised
+
+- name: j3
+  title: Jour 3 --- Algorithmes 2/2
+  sections:
+    - title: Réseaux de neurones
+      includes:
+        - 3/nn-intro
+        - 3/nn-cnn
+        - 3/tp-nn
+        - 3/tp-cnn
+    - title: Données séquentielles
+      includes:
+        - 3/sequential-data
+        - 3/sequential-models
+        - 3/markov-model
+        - 3/hmm-latest
+        - 3/rnn
+        - 3/lstm
+        - 3/rnn-variants
+        - 3/langues
+        - 3/rnn-keras
+        - 3/tp-rnn
+    - title: Auto-encodeurs
+      includes:
+        - 3/autoencoder
+        - 3/tp-autoencoder
+
+- name: j4
+  title: Jour 4 --- Ingénierie
+  sections:
+    - title: Acteurs
+      includes:
+        - 4/gafa
+    - title: Outils
+      includes:
+        - 4/hadoop-intro
+        - 4/spark-intro
+        - 4/kaggle
+        - 4/arXiv
+        - 4/github
+        - 4/cloud-computing
+    - title: Ingénierie
+      includes:
+        - 4/ml-craftmoncul
+    - title: Problématiques
+      includes:
+        - 4/problematiques
+        - 4/problematiques-juridique
+    - title: Domaines
+      includes:
+        - 4/tendencies-and-new-sectors
+        - 4/sante
+        - 4/coding
+    - title: Démonstration
+      includes:
+        - 4/demo-spark-tf-keras-cnn
+        - shared/questions
