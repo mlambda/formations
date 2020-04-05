@@ -4,17 +4,20 @@
     - title: Votre formation
       includes:
         - 1/about
+        - questions
     - title: Principaux outils
       includes:
         - 1/python-intro
         - 1/notebook-intro
         - 1/notebook-jupyter-install
+        - questions
     - title: Introduction au Machine Learning
       includes:
         - 1/ml-intro
         - 1/ml-data-preparation
         - 1/ml-learn
         - 1/tp-data-analysis
+        - questions
 
 - name: j2
   title: Jour 2 --- Algorithmes 1/2
@@ -28,6 +31,7 @@
         - 2/kmeans-gaussian
         - 2/anomaly-detection-light
         - 2/tp-unsupervised
+        - questions
     - title: Apprentissage supervisé
       includes:
         - 2/naive-bayes
@@ -41,6 +45,7 @@
         - 2/nn-intro
         - 2/svm
         - 2/tp-supervised
+        - questions
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
@@ -51,6 +56,7 @@
         - 3/nn-cnn
         - 3/tp-nn
         - 3/tp-cnn
+        - questions
     - title: Données séquentielles
       includes:
         - 3/sequential-data
@@ -63,10 +69,12 @@
         - 3/langues
         - 3/rnn-keras
         - 3/tp-rnn
+        - questions
     - title: Auto-encodeurs
       includes:
         - 3/autoencoder
         - 3/tp-autoencoder
+        - questions
 
 - name: j4
   title: Jour 4 --- Ingénierie
@@ -74,6 +82,7 @@
     - title: Acteurs
       includes:
         - 4/gafa
+        - questions
     - title: Outils
       includes:
         - 4/hadoop-intro
@@ -82,19 +91,23 @@
         - 4/arXiv
         - 4/github
         - 4/cloud-computing
+        - questions
     - title: Ingénierie
       includes:
         - 4/ml-craftmoncul
+        - questions
     - title: Problématiques
       includes:
         - 4/problematiques
         - 4/problematiques-juridique
+        - questions
     - title: Domaines
       includes:
         - 4/tendencies-and-new-sectors
         - 4/sante
         - 4/coding
+        - questions
     - title: Démonstration
       includes:
         - 4/demo-spark-tf-keras-cnn
-        - shared/questions
+        - questions
