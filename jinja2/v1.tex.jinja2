@@ -1,4 +1,4 @@
-%% for k, v in config
+%% for k, v in config.items()
 \newcommand{\\VAR{k | camelcase}}{\VAR{v}}
 %% endfor
 
@@ -16,7 +16,7 @@
 \date{\vfill\SessionStart--\SessionEnd}
 
 \title{\DeckTitle}
-\subtitle{\VAR{target_title}}
+\subtitle{\VAR{target.title}}
 
 \begin{document}
 
@@ -26,10 +26,10 @@
 \tableofcontents[subsectionstyle=hide]
 \end{frame}
 
-%% for section in sections:
+%% for section in target.sections:
 \section{\VAR{section.title}}
 %% for include in section.includes:
-\input{\VAR{include}}
+\input{\VAR{[target.name, include] | path_join}}
 %% endfor
 %% endfor
 

@@ -3,20 +3,20 @@
   sections:
     - title: Votre formation
       includes:
-        - 1/about
+        - about
         - questions
     - title: Principaux outils
       includes:
-        - 1/python-intro
-        - 1/notebook-intro
-        - 1/notebook-jupyter-install
+        - python-intro
+        - notebook-intro
+        - notebook-jupyter-install
         - questions
     - title: Introduction au Machine Learning
       includes:
-        - 1/ml-intro
-        - 1/ml-data-preparation
-        - 1/ml-learn
-        - 1/tp-data-analysis
+        - ml-intro
+        - ml-data-preparation
+        - ml-learn
+        - tp-data-analysis
         - questions
 
 - name: j2
@@ -24,27 +24,27 @@
   sections:
     - title: Apprentissage non supervisé
       includes:
-        - 2/unsupervised
-        - 2/dimensionality-reduction
-        - 2/pca-lda
-        - 2/algorithme-em
-        - 2/kmeans-gaussian
-        - 2/anomaly-detection-light
-        - 2/tp-unsupervised
+        - unsupervised
+        - dimensionality-reduction
+        - pca-lda
+        - algorithme-em
+        - kmeans-gaussian
+        - anomaly-detection-light
+        - tp-unsupervised
         - questions
     - title: Apprentissage supervisé
       includes:
-        - 2/naive-bayes
-        - 2/trees
-        - 2/random-forest
-        - 2/regression-lineaire
-        - 2/cost-error-function
-        - 2/optimisation
-        - 2/derivation-gradient
-        - 2/regression-logistique
-        - 2/nn-intro
-        - 2/svm
-        - 2/tp-supervised
+        - naive-bayes
+        - trees
+        - random-forest
+        - regression-lineaire
+        - cost-error-function
+        - optimisation
+        - derivation-gradient
+        - regression-logistique
+        - nn-intro
+        - svm
+        - tp-supervised
         - questions
 
 - name: j3
@@ -52,28 +52,28 @@
   sections:
     - title: Réseaux de neurones
       includes:
-        - 3/nn-intro
-        - 3/nn-cnn
-        - 3/tp-nn
-        - 3/tp-cnn
+        - nn-intro
+        - nn-cnn
+        - tp-nn
+        - tp-cnn
         - questions
     - title: Données séquentielles
       includes:
-        - 3/sequential-data
-        - 3/sequential-models
-        - 3/markov-model
-        - 3/hmm-latest
-        - 3/rnn
-        - 3/lstm
-        - 3/rnn-variants
-        - 3/langues
-        - 3/rnn-keras
-        - 3/tp-rnn
+        - sequential-data
+        - sequential-models
+        - markov-model
+        - hmm-latest
+        - rnn
+        - lstm
+        - rnn-variants
+        - langues
+        - rnn-keras
+        - tp-rnn
         - questions
     - title: Auto-encodeurs
       includes:
-        - 3/autoencoder
-        - 3/tp-autoencoder
+        - autoencoder
+        - tp-autoencoder
         - questions
 
 - name: j4
@@ -81,33 +81,33 @@
   sections:
     - title: Acteurs
       includes:
-        - 4/gafa
+        - gafa
         - questions
     - title: Outils
       includes:
-        - 4/hadoop-intro
-        - 4/spark-intro
-        - 4/kaggle
-        - 4/arXiv
-        - 4/github
-        - 4/cloud-computing
+        - hadoop-intro
+        - spark-intro
+        - kaggle
+        - arXiv
+        - github
+        - cloud-computing
         - questions
     - title: Ingénierie
       includes:
-        - 4/ml-craftmoncul
+        - ml-craftmoncul
         - questions
     - title: Problématiques
       includes:
-        - 4/problematiques
-        - 4/problematiques-juridique
+        - problematiques
+        - problematiques-juridique
         - questions
     - title: Domaines
       includes:
-        - 4/tendencies-and-new-sectors
-        - 4/sante
-        - 4/coding
+        - tendencies-and-new-sectors
+        - sante
+        - coding
         - questions
     - title: Démonstration
       includes:
-        - 4/demo-spark-tf-keras-cnn
+        - demo-spark-tf-keras-cnn
         - questions
