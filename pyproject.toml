@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "slides"
+version = "1.0.0"
+description = "Slide decks managed by deckz."
+authors = ["m09 <142691+m09@users.noreply.github.com>", "fmg"]
+license = "Apache-2.0"
+homepage = "https://github.com/m09/formations"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+deckz = {path= "../deckz", develop=true}
+Pygments = "^2.6.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
