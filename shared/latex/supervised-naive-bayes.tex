@@ -1,0 +1,52 @@
+\subsection{Naive Bayes}
+
+\begin{frame}
+  \frametitle{Rappels - Probabilités}
+  \begin{minipage}[c]{0.60\linewidth}
+    \underline{Rappels} :
+    \begin{itemize}
+    \item Une variable aléatoire \\ $A\in\mathbb{R}$
+    \item Probabilité \\ $0 \leq P(A\in[a_1\;a_2]) \leq 1$
+    \item Probabilité conditionnelle \\ $P(\;A>0\;|\;B<-3\;)$
+    \item Évènements indépendants \\ $P(A|B)=P(A)$ et $P(B|A)=P(B)$
+    \item Probabilité jointe \\ $P(A,B)=P(B|A)*P(A)$ \\ $P(A,B)=P(A|B)*P(B)$
+    \item A et B Indépendants \\ $\iff P(A,B) = P(A)*P(B)$ 
+    \end{itemize}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.39\linewidth}
+    \begin{center}
+      \underline{Théorème de Bayes}
+      \[
+      \boxed{P(A|B)=\frac{P(B|A).P(A)}{P(B)}}
+      \]
+    \end{center}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}
+  \frametitle{Naive Bayes}
+  Prenons un exemple : \\
+  Soit une base de donnée de fruits contenant uniquement des bananes ,oranges ,courgettes. \\
+  Chaque élément possède des caractéristiques couleur, taille, sucré. \\
+  Appliquer Naive Bayes, c'est chercher le maximum de vraisemblance d'un élèments dont on ne connait pas la nature mais dont on connait les caractéristiques. \\
+  On cherche donc quelle est la plus grande probabilité :
+  \begin{itemize}
+  \item P(banane | jaune,long,sucré)
+  \item P(orange | jaune,long,sucré)
+  \item P(tomate | jaune,long,sucré)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Naive Bayes}
+  Naive = toutes les variables sont considérée indépendantes, donc : \\
+  \begin{center}
+    $P(banane | jaune,long,sucre) =$\\
+    $\;$\\
+    $ \frac{P(jaune|banane)*P(long|banane)*P(sucre|banane)*P(banane)}{P(jaune)*P(long)*P(sucre)}$
+  \end{center}
+  Pour estimer les différentes probabilités, on 'compte' dans notre base de donnée de fruits :\\
+  \begin{center}
+    $P(sucre|banane) = \frac{card(banane\;ET\;sucre)}{card(banane)}$
+  \end{center}
+\end{frame}

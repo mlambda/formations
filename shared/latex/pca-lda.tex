@@ -1,0 +1,79 @@
+\subsection{Réduction de la dimensionalité : Projections linéaires}
+
+\begin{frame}
+  \frametitle{Réduction de la dimensionalité : Projections linéaires}
+    \begin{itemize}
+    \item Principal Component Analysis (Non-supervisée)
+    \item Linear Discriminant Analysis (Supervisée)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Réduction de la dimensionalité : PCA}
+  \imgth[0.9]{pca-nuage}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Réduction de la dimensionalité : PCA}
+  \imgtw[0.9]{pca-fish}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Réduction de la dimensionalité : PCA}
+  \[
+  X = \begin{bmatrix}
+    X_{1,1} & \dots  & X_{1,D} \\
+    \vdots & \ddots & \vdots \\
+    X_{N,1} & \dots  & X_{N,D}
+  \end{bmatrix}
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Réduction de la dimensionalité : PCA}
+  chaque dimension est centrée (et réduite):
+  \[
+  \bar{X} =
+  \begin{bmatrix}
+    X_{1,1}-\bar{X_1} & \dots  & X_{1,D}-\bar{X_D} \\
+    \vdots & \ddots & \vdots \\
+    X_{N,1}-\bar{X_1} & \dots  & X_{N,D}-\bar{X_D}
+  \end{bmatrix}
+  \]
+  ou
+  \[
+  \tilde{X} =
+  \begin{bmatrix}
+    \frac{X_{1,1}-\bar{X_1}}{\sigma(X_1)} & \dots  & \frac{X_{1,D}-\bar{X_D}}{\sigma(X_D)} \\
+    \vdots & \ddots & \vdots \\
+    \frac{X_{N,1}-\bar{X_1}}{\sigma(X_1)} & \dots  & \frac{X_{N,D}-\bar{X_D}}{\sigma(X_D)}
+  \end{bmatrix}
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Réduction de la dimensionalité : PCA}
+  Matrice de covariance (resp. corrélation) :
+  \[
+  \frac{1}{N} * \bar{X}^T * \bar{X} \;,\;( \frac{1}{N} * \tilde{X}^T * \tilde{X} )
+  \]
+  \underline{ACP} : \\
+  Retrouver les valeurs et vecteurs propres de de la matrice de covariance (resp. corrélation), donc diagonaliser la matrice carrée obtenue. \\
+  \\
+  Vecteur propre : vecteur permettant de projeter les données \\
+  Valeur propre : ``proportion d'information'' conservée par la projection suivant le vecteur propre correspondant \\
+  Réduction de dimension : On ne projette que suivant le nombre de vecteurs propres voulus
+\end{frame}
+
+\begin{frame}
+  \frametitle{Réduction de la dimensionalité : LDA}
+  \begin{center}
+    Linear Discriminant Analysis
+  \end{center}
+  \begin{minipage}[l]{0.49\linewidth}
+    \imgtw[0.8]{pca-nuage}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+    \imgtw[1.0]{lda}
+  \end{minipage}\hfill
+\end{frame}

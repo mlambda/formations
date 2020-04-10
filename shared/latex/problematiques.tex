@@ -1,0 +1,146 @@
+\subsection{Problématiques liées au machine learning}
+\subsection{Dans la vraie vie...}
+
+\begin{frame}
+  \frametitle{Les Problémes théoriques}
+  \begin{itemize}
+  \item Les données (trouées, incomplètes, non-représentatives, biais statistiques,...)
+  \item Une fonction de perte (objectif) pas adaptée au besoin
+  \item La fuite d'information dans le modèle
+  \item La quasi non-interprétation du modèle
+  \item Des modèles qui ne s'adaptent pas au changements
+  \item Le surapprentissage
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes logistiques}
+  Les \textbf{données} coûtent cher (récolte, nettoyage, \#Data>1M). 
+  \imgth[0.5]{amazon-mechanical-turc}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes logistiques}
+  L'apprentissage d'un modèle prend \textbf{beaucoup} de \textbf{temps}
+  \begin{itemize}
+  \item Reconnaissance parole : 4 GPU => plusieurs jours, semaines
+  \item Alphago : 3 semaines sur 5000 TPU ( $\approx$ 30M\$)
+  \item On n'obtient pas de résultats concluant avec le premier run.
+  \item Peu de visibilité sur le temps d'obtention d'une plus value
+  \end{itemize}
+  \imgth[0.6]{sablier-windows}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes logistiques}
+  L'utilisation de \textbf{GPU/TPU} coûte cher
+  \newline
+  ...et ça ne s'arrange pas avec l'explosion du besoin par le minage de cryptomonnaies
+  \imgth[0.6]{nvidia-stock-history}
+  \begin{center}
+    \small Cours de l'action NVIDIA
+  \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Les Problémes de communication}
+\imgth[0.8]{xkcd-easy-impossible}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes logistiques}
+  Les \textbf{ingénieurs en machine learning} (compétents) coûtent cher :
+  \begin{itemize}
+  \item git clone d'un papier + jouer avec data $\neq$ data-scientist
+  \item au croisement de l'ingénérie (traitement de gros volumes de données, standard de développement) et des mathématiques (statistiques, algèbre, optimisation)
+  \item Le nombre de nouveaux diplomés ne suit pas la demande
+  \item Les meilleurs sont/vont dans une poignée d'entreprises ! (ou presque...)
+  \end{itemize}
+  \imgth[0.4]{data-scientist-star}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes de communication}
+  Utilisateurs prêts à accepter un algorithme qui fait des erreurs ?
+  \imgth[0.8]{robotdoc}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes de communication}
+  Utilisateurs prêts à accepter un algorithme qui fait des erreurs ?
+  \imgth[0.8]{google-ceo-congress}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes de communication}
+  Utilisateurs prêts à accepter un algorithme qui n'est pas interprétable ?\\
+  Réseaux de neurones <=> enchainement de multiplications matricielles avec des millions de paramètres.
+  \imgtw[0.9]{deep-auto-encoder}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes Ethiques}
+  Grande-Bretagne : Predpol (abandonné),  National Data Analytics Solution (NDAS) en mars 2019
+  \imgtw[0.8]{minorit-report}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes Ethiques}
+  Détection mensonge à la frontière (iBorderCtrl)
+  \newline
+  Projet pilote en Hongrie, Lettonie et Grèce
+  \imgtw[0.8]{airport-lie-detection}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes Ethiques}
+  Chine 170 Millions de caméras (450 Millions en 2020)
+  \begin{minipage}[c]{0.49\linewidth}
+    \imgtw[1]{chine-orwell}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.49\linewidth}
+    \imgtw[1]{chinese-street-surveillance}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes Ethiques}
+  \imgtw[0.8]{chine-reco-face-fail}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes Ethiques}
+  Automatisation du processus de recrutement
+  \imgtw[0.8]{amazon-ai-favor-men}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes Ethiques}
+  Préférence sexuelles à partir d'une photo ?
+  \imgtw[0.8]{gay-or-not}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes Ethiques}
+  Évaluer une Baby-sitter en fonction de son activité en ligne?
+  \imgtw[0.8]{baby-sitter-reliable}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes Ethiques}
+  La chine traque ses musulmans du Xinjiang :\\
+  Classement automatique en 36 catégories à partir de toutes les données possibles.
+  \imgtw[0.8]{chine-musulmans-traque}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes Ethiques}
+  OpenAI : GPT-2 est 'trop' performant pour la génération de texte
+  \imgtw[0.8]{openai-gpt2-example}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les Problémes Ethiques}
+  Deepfake : 'Zao'
+  \imgtw[0.8]{zao-deepfake}
+\end{frame}
