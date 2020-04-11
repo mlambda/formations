@@ -1,0 +1,124 @@
+Qualiopi - Révision des Objectifs, Public et Prérequis
+------------------------------------------------------------------------------------------------------------------
+une ligne par point sans puce ni tiret
+séparer chaque formation par des ---
+
+Critères de validation des objectifs :
+Les objectifs doivent pouvoir servir à évaluer le niveau des participants avant et après la formation
+Il faut compter environ 2 à 3 objectifs par jours de cours
+Pour chaque objectif, on doit pouvoir poser des questions de type QCM
+En pratique, pour l'instant, l'option retenue chez ENI Service sera une auto-évaluation des stagiaires en début de formation (ex: Organiser la configuration dans les différents fichiers ? Je sais faire / J'ai quelques notions / Je ne sais pas faire )
+L'objectif commence par un verbe à l'infinitif et on peut lire l'objectif en commençant la phrase par " je sais ... Organiser la configuration dans les différents fichers "
+
+------------------------------------------------------------------------------------------------------------------
+
+--- 
+Formation : VE850-002
+Public :
+Développeurs désireux d'acquérir de solides bases en Machine Learning.
+
+Objectifs :
+Identifier un problème résoluble par Machine Learning
+Identifier les outils et librairies nécéssaires
+Prétraiter des données
+Construire des modèles d'apprentissage non-supervisés
+Construire des modèles d'apprentissage supervisés
+Mesurer la performance de vos modèles
+Identifier les barrières techniques du Machine Learning sur un problème donnée
+Identifier les méthodes permettant d'améliorer les performances
+Extraire des résultats actionnables
+Traiter des images
+Traiter du texte
+Traiter un problème de recommandation
+
+
+Prérequis :
+Avoir un bon niveau général en informatique
+Avoir des connaissances de base en Python
+Un niveau de mathématique niveau bac scientifique est nécessaire (analyse, algèbre, statistiques).
+
+---
+Formation : VE850-004
+Public :
+Data Scientists et développeurs désireux d'appliquer les dernières avancées de l'apprentissage automatique (Deep Learning).
+
+Objectifs :
+Identifier les outils et librairies nécéssaires au deep learning
+Prétraiter des données
+Construire des réseaux de convolution traitant des images
+Construire des réseaux récurrents traitant du langage
+Construire des réseaux Transformer traitant du langage
+Comprendre les mécanismes d'attention
+Comprendre les mécanismes de mémoires
+Comprendre les principes de l'apprentissage par renforcement
+Identifier les barrières techniques du Deep Learning
+Identifier les mécanismes de regularisation
+Extraire des résultats actionnables
+
+Prérequis :
+Avoir suivi la formation VE850-002 - Machine Learning - Concepts et mise en œuvre, ou posséder les connaissances et compétences équivalentes.
+
+
+---
+Formation : VE850-005
+Public :
+Data Scientists et développeurs désireux d'appliquer les dernières avancées de l'apprentissage automatique (Deep Learning).
+
+Objectifs :
+Prétraiter des images
+Construire des réseaux de convolution traitant des images
+Identifier les mécanismes de regularisation
+Détecter des objets dans des images
+Classer des images
+Générer des images
+Extraire des résultats actionnables
+
+Prérequis :
+Avoir suivi la formation VE850-002 - Machine Learning - Concepts et mise en œuvre, ou posséder les connaissances et compétences équivalentes.
+
+
+---
+Formation : VE850-006
+Public :
+Data Scientists et développeurs désireux d'appliquer les dernières avancées de l'apprentissage automatique (Deep Learning).
+
+Objectifs :
+Prétraiter des données textuelles
+Construire des réseaux deep traitant du langage
+Identifier les barrières techniques du Deep Learning
+Identifier les mécanismes de regularisation
+Traduire automatiquement des documents
+Détecter la polarité (sentiment) de textes
+Résumer automatiquement des documents
+Générer du texte (Chatbots)
+Extraire des résultats actionnables
+
+Prérequis :
+Avoir suivi la formation VE850-002 - Machine Learning - Concepts et mise en œuvre, ou posséder les connaissances et compétences équivalentes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
