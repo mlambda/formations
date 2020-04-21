@@ -1,0 +1,6 @@
+title: Des Réseaux Particuliers
+includes:
+  - path: intro
+    title: Petit jeu de rapidité
+  - path: models
+    title: Generative Adversarial Network (GAN)

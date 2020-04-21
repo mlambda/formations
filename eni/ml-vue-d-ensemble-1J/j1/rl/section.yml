@@ -1,0 +1,8 @@
+title: L'apprentissage par renforcement
+includes:
+  - path: intro
+    title: Introduction
+  - path: deep
+    title: Deep Learning
+  - path: aphago
+    title: Alphago

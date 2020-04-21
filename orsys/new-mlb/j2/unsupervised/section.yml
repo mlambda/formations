@@ -1,0 +1,16 @@
+title: Apprentissage non-supervisé
+includes:
+  - path: introduction
+    title: Introduction
+  - path: dimensionality-reduction
+    title: Réduction de la dimensionalité
+  - path: pca-lda
+    title: "Réduction de la dimensionalité : Projections linéaires"
+  - path: algorithme-em
+    title: Espérance-Maximisation
+  - path: kmeans-gaussian
+    title: K-Means
+  - path: anomaly-detection-light
+    title: Détection d'anomalies
+  - path: tp
+    title: Travaux Pratiques

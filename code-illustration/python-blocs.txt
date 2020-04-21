@@ -1,1 +1,1 @@
-a= 8 ; b= une chaine de caracteres
+a = 8; b = une chaîne de caractères

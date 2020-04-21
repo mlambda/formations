@@ -1,0 +1,29 @@
+\begin{frame}
+  \frametitle{DQN}
+  \begin{itemize}
+  \item 49 jeux Atari
+  \item 210x160 pixels
+  \item 8 à 16 actions
+  \end{itemize}
+  \imgtw[0.6]{atari}
+\end{frame}
+
+\begin{frame}
+  \frametitle{DQN}
+  \begin{itemize}
+  \item input 84x84x4
+  \item Récompense [-1,0,+1] suivant les variations de score
+  \item Même préprocessing pour tous les jeux. (50M frames $\approx$ 38 jours de jeux)
+  \item 29/46 jeux : DQN $\geq$ Humain
+    \begin{itemize}
+    \item dont 22 où l'IA est strictement supérieure
+    \item les humains ont 2H d'entrainement par jeu
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Appliqué au Jeu de Pong}
+  \bluelink{https://www.youtube.com/watch?v=lcVg9hVya-c}{Démo DQN PONG}
+\end{frame}
+

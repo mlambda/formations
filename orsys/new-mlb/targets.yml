@@ -1,113 +1,45 @@
 - name: j1
   title: Jour 1 --- Introduction au Machine Learning
   sections:
-    - title: Votre formation
-      includes:
-        - about
-        - questions
-    - title: Principaux outils
-      includes:
-        - python-intro
-        - notebook-intro
-        - notebook-jupyter-install
-        - questions
-    - title: Introduction au Machine Learning
-      includes:
-        - ml-intro
-        - ml-data-preparation
-        - ml-learn
-        - tp-data-analysis
-        - questions
+    - about
+    - questions
+    - tools
+    - questions
+    - path: ml
+      excludes:
+        - tp
+    - questions
 
 - name: j2
   title: Jour 2 --- Algorithmes 1/2
   sections:
-    - title: Apprentissage non supervisé
-      includes:
-        - unsupervised
-        - dimensionality-reduction
-        - pca-lda
-        - algorithme-em
-        - kmeans-gaussian
-        - anomaly-detection-light
-        - tp-unsupervised
-        - questions
-    - title: Apprentissage supervisé
-      includes:
-        - naive-bayes
-        - trees
-        - random-forest
-        - regression-lineaire
-        - cost-error-function
-        - optimisation
-        - derivation-gradient
-        - regression-logistique
-        - nn-intro
-        - svm
-        - tp-supervised
-        - questions
+    - unsupervised
+    - questions
+    - supervised
+    - questions
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
   sections:
-    - title: Réseaux de neurones
-      includes:
-        - nn-intro
-        - nn-cnn
-        - tp-nn
-        - tp-cnn
-        - questions
-    - title: Données séquentielles
-      includes:
-        - sequential-data
-        - sequential-models
-        - markov-model
-        - hmm-latest
-        - rnn
-        - lstm
-        - rnn-variants
-        - langues
-        - rnn-keras
-        - tp-rnn
-        - questions
-    - title: Auto-encodeurs
-      includes:
-        - autoencoder
-        - tp-autoencoder
-        - questions
+    - neural-networks
+    - questions
+    - sequential-data
+    - questions
+    - auto-encoders
+    - questions
 
 - name: j4
   title: Jour 4 --- Ingénierie
   sections:
-    - title: Acteurs
-      includes:
-        - gafa
-        - questions
-    - title: Outils
-      includes:
-        - hadoop-intro
-        - spark-intro
-        - kaggle
-        - arXiv
-        - github
-        - cloud-computing
-        - questions
-    - title: Ingénierie
-      includes:
-        - ml-craftmoncul
-        - questions
-    - title: Problématiques
-      includes:
-        - problematiques
-        - problematiques-juridique
-        - questions
-    - title: Domaines
-      includes:
-        - tendencies-and-new-sectors
-        - sante
-        - coding
-        - questions
-    - title: Démonstration
-      includes:
-        - demo-spark-tf-keras-cnn
-        - questions
+    - actors
+    - questions
+    - tools-in-depth
+    - questions
+    - engineering-practices
+    - questions
+    - big-questions
+    - questions
+    - sectors
+    - questions
+    - demo-spark-tf-keras-cnn
+    - questions

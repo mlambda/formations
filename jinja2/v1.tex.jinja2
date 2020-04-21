@@ -29,9 +29,14 @@
 %% endif
 
 %% for section in target.sections:
+%% if section.title != None:
 \section{\VAR{section.title}}
-%% for include in section.includes:
-\input{\VAR{[target.name, include] | path_join}}
+%% endif
+%% for path, subsection in section.inputs:
+%% if subsection != None:
+\subsection{\VAR{subsection}}
+%% endif
+\input{\VAR{path}}
 %% endfor
 %% endfor
 

@@ -1,0 +1,6 @@
+title: Le traitement d'images
+includes:
+  - path: data
+    title: Des problématiques variées
+  - path: models
+    title: Les réseaux de convolutions

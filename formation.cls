@@ -33,7 +33,7 @@
 \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
 \graphicspath{{./img/}}
 
-\usetheme[block=fill,sectionpage=none,subsectionpage=progressbar,progressbar=frametitle]{metropolis}
+\usetheme[block=fill,sectionpage=progressbar,subsectionpage=progressbar,progressbar=frametitle]{metropolis}
 \setlength{\metropolis@progressinheadfoot@linewidth}{1pt}
 \setbeamercolor{normal text}{bg=white}
 \setbeamertemplate{bibliography item}{\insertbiblabel}

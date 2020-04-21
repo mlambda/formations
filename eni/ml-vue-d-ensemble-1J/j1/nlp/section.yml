@@ -1,0 +1,8 @@
+title: Le traitement du texte
+includes:
+  - path: intro
+    title: Natural Language Processing (NLP)
+  - path: preprocessing
+    title: Prétraitements
+  - path: vectors
+    title: Vecteurs textuels

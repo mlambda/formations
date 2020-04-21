@@ -1,0 +1,8 @@
+title: Problèmes liés au Machine Learning
+includes:
+  - path: generic
+    title: Problèmes généraux
+  - path: legal
+    title: Problèmes légaux
+  - path: ethics
+    title: Problèmes éthiques

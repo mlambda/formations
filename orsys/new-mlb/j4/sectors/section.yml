@@ -1,0 +1,8 @@
+title: Secteurs d'activité
+includes:
+  - path: tendencies-and-new-sectors
+    title: Tendances et secteurs émergents
+  - path: sante
+    title: Santé
+  - path: coding
+    title: Code

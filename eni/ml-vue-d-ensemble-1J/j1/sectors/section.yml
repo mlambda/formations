@@ -1,0 +1,10 @@
+title: Les Tendances et les Nouveaux Secteurs
+includes:
+  - path: intro
+    title: Introduction
+  - path: transport
+    title: Transport
+  - path: sante
+    title: Santé
+  - path: coding
+    title: Informatique

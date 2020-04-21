@@ -1,0 +1,10 @@
+title: Principaux outils
+includes:
+  - path: python
+    title: Python
+  - path: notebooks
+    title: Notebooks Jupyter
+  - path: anaconda
+    title: Anaconda
+  - path: tp
+    title: Travaux Pratiques
