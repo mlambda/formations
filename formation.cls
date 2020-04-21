@@ -140,6 +140,11 @@
     \includegraphics{#1}%
   \end{figure}%
 }
+\newcommand{\imgtwl}[2][1]{%
+  \begin{figure}%
+    \includegraphics[width=#1\textwidth,left]{#2}%
+  \end{figure}%
+}
 
 \definecolor{pythonbg}{rgb}{0.63,0.84,0.71}
 \definecolor{returnbg}{rgb}{0.88,0.88,0.88}
