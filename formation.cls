@@ -18,6 +18,7 @@
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{booktabs}
+\RequirePackage{etoolbox}
 \RequirePackage{hyperref}
 \RequirePackage{multicol}
 \RequirePackage{minted}
@@ -42,7 +43,7 @@
 \setlength{\metropolis@frametitle@padding}{1.9ex}% <- default 2.2 ex
 \renewcommand{\metropolis@frametitlestrut@start}{%
   \rule{0pt}{\metropolis@frametitle@padding}%
-}%
+}
 \renewcommand{\metropolis@frametitlestrut@end}{%
   \rule[-\metropolis@frametitle@padding]{0pt}{\metropolis@frametitle@padding}%
 }
@@ -55,8 +56,14 @@
         rightskip=\metropolis@frametitle@padding,%
         ]{frametitle}%
         \metropolis@frametitlestrut@start%
-        {\scriptsize\insertsectionhead{} > \insertsubsectionhead}%
-        \newline%
+        \ifdefempty{\insertsectionhead}{}{%
+          {%
+            \scriptsize%
+            \insertsectionhead%
+            \ifdefempty{\insertsubsectionhead}{}{ > \insertsubsectionhead}%
+            \newline%
+          }%
+        }%
         \insertframetitle%
         \nolinebreak%
         \metropolis@frametitlestrut@end%
