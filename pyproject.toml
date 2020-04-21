@@ -8,7 +8,7 @@ homepage = "https://github.com/m09/formations"
 
 [tool.poetry.dependencies]
 python = "^3.6"
-deckz = {path= "../deckz", develop=true}
+deckz = "^2.6.0"
 Pygments = "^2.6.1"
 
 [build-system]
