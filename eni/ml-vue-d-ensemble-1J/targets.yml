@@ -1,0 +1,61 @@
+- name: j1
+  title: Jour 1 --- Vue d'ensemble des enjeux de l'Intelligence Artificielle
+  sections:
+    - title: Votre Formation
+      includes:
+        - about-eni-ml1j
+        - questions
+    - title: Intelligence Artificielle
+      includes:
+        - ia-intro
+        - ia-historique
+    - title: Les mécanismes du Machine Learning
+      includes:
+        - ml-intro
+        - ml-data-preparation
+        - ml-learn
+    - title: Les Réseaux de neurones
+      includes:
+        - nn-intro
+    - title: Le Traitement d'images
+      includes:
+        - vision
+        - nn-cnn
+    - title: Le Traitement de séquences
+      includes:
+        - sequential-data
+        - nn-rnn
+        - nn-lstm
+        - nn-rnn-variants
+    - title: Le Traitement de texte
+      includes:
+        - text-langues
+    - title: Petit Jeu
+      includes:
+        - nn-gan-intro
+        - nn-gan
+    - title: L'Apprentissage par Renforcement
+      includes:
+        - rl-intro
+        - rl-deep
+        - rl-aphago
+        - questions
+    - title: Les Problématiques du Machine Learning
+      includes:
+        - problematiques
+        - problematiques-juridique
+    - title: Développement d'un projet en Machine Learning
+      includes:
+        - ml-craftmoncul
+        - questions
+    - title: Les Différents Acteurs du Domaine
+      includes:
+        - actors-gafa
+        - actors-startup
+        - actors-chine
+    - title: Les Tendances et les Nouveaux Secteurs
+      includes:
+        - sectors-intro
+        - sectors-transport
+        - sectors-sante
+        - sectors-coding
