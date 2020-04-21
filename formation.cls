@@ -4,6 +4,8 @@
 
 \PassOptionsToPackage{dvipsnames,hyperref,usenames,table}{xcolor}
 
+\PassOptionsToPackage{hidelinks}{hyperref}
+
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
 
 \ProcessOptions\relax
@@ -12,6 +14,7 @@
 
 
 \RequirePackage{xcolor}
+\RequirePackage[export]{adjustbox}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{booktabs}
@@ -22,16 +25,44 @@
 \RequirePackage[numbers]{natbib}
 \RequirePackage{forest}
 \RequirePackage{bm}
+\RequirePackage{soul}
 \RequirePackage{stmaryrd}
 \RequirePackage[french]{babel}
 
 \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
 \graphicspath{{./img/}}
 
-\usetheme[sectionpage=none,subsectionpage=progressbar]{metropolis}
+\usetheme[block=fill,sectionpage=none,subsectionpage=progressbar,progressbar=frametitle]{metropolis}
+\setlength{\metropolis@progressinheadfoot@linewidth}{1pt}
 \setbeamercolor{normal text}{bg=white}
 \setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{blocks}[rounded]
 
+\makeatletter
+\setlength{\metropolis@frametitle@padding}{1.9ex}% <- default 2.2 ex
+\renewcommand{\metropolis@frametitlestrut@start}{%
+  \rule{0pt}{\metropolis@frametitle@padding}%
+}%
+\renewcommand{\metropolis@frametitlestrut@end}{%
+  \rule[-\metropolis@frametitle@padding]{0pt}{\metropolis@frametitle@padding}%
+}
+\setbeamertemplate{frametitle}{%
+    \nointerlineskip%
+    \begin{beamercolorbox}[%
+        wd=\paperwidth,%
+        sep=0pt,%
+        leftskip=\metropolis@frametitle@padding,%
+        rightskip=\metropolis@frametitle@padding,%
+        ]{frametitle}%
+        \metropolis@frametitlestrut@start%
+        {\scriptsize\insertsectionhead{} > \insertsubsectionhead}%
+        \newline%
+        \insertframetitle%
+        \nolinebreak%
+        \metropolis@frametitlestrut@end%
+    \end{beamercolorbox}
+    \usebeamertemplate*{progress bar in head/foot}
+}
 
 \bibliographystyle{abbrv}
 
@@ -51,6 +82,24 @@
 \DeclareMathOperator{\l1}{L1}
 \DeclareMathOperator{\L2}{L2}
 \DeclareMathOperator{\similarity}{sim}
+
+\makeatletter
+\let\UL\ul
+\renewcommand\ul{%
+  \let\set@color\beamerorig@set@color
+  \let\reset@color\beamerorig@reset@color
+  \UL}
+\makeatother
+
+\newcommand{\bluelink}[2]{%
+  \href{%
+    #1%
+  }{%
+    \color{blue}%
+    \setulcolor{blue}%
+    \ul{#2}%
+  }%
+}
 
 \newcommand{\vect}[1]{\bm{\mathbf{#1}}}
 
