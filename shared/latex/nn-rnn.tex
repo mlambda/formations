@@ -1,14 +1,12 @@
 \subsection{Réseaux de Neurones Récurrents}
 
-
-
 \begin{frame}
-  \frametitle{Réseaux de Neurones Récurrents}
+  \frametitle{Schéma}
   \imgtw[0.7]{nn-rnn-comparaison}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseaux de Neurones Récurrents}
+  \frametitle{Formulation}
   \imgtw[0.7]{rnn-unfold}
   $h_{t}=\sigma_{h}(U*x_{t}+V*h_{t-1}+b_{h})$ \\
   $o_{t}=\sigma_{o}(W*h_{t}+b_{o})$ \\
@@ -22,26 +20,26 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseaux de Neurones Récurrents}
+  \frametitle{Cas d'usage}
   Prédiction de la suite d'une séquence (ex: modèle de langage)
   \imgtw[0.7]{rnn-language-model}
   Peut être utilisé pour générer de nouvelles séquences
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseaux de Neurones Récurrents}
+  \frametitle{Cas d'usage}
   Prédiction d'une classe
   \imgth[0.7]{rnn-predict-class-2}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseaux de Neurones Récurrents}
+  \frametitle{Cas d'usage}
   Génération d'une séquence (seq2seq)
   \imgtw[0.7]{rnn-seq2seq}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseaux de Neurones Récurrents}
+  \frametitle{Problème à l'apprentissage}
   Le problème du gradient qui disparaît (vanishing gradient)
   \imgtw{vanishing-gradient-rnn}
 \end{frame}

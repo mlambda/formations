@@ -1,8 +1,7 @@
-\subsection{D'autres variantes...}
+\subsection{Variation autour des RNN}
 
 \begin{frame}
-  \frametitle{D'autres variantes}
-  Gated Recurrent Unit
+  \frametitle{Gated Recurrent Unit - GRU}
   \imgtw[0.8]{gru}
   $Z_{t}=\sigma (W_{Z}*x_{t}+U_{Z}*h_{t-1}+b_{Z})\,\,\,\,$(update gate $\approx$ input et forget gates) \\
   $R_{t}=\sigma (W_{R}*x_{t}+U_{R}*h_{t-1}+b_{R})\;\;$(reset gate $\approx$ output gate) \\
@@ -11,18 +10,17 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{D'autres variantes}
-  RNN bi-directionnels
+  \frametitle{RNN bi-directionnels}
   \imgtw[0.8]{bidirectional-rnn}
   Permet de ``gérer'' des séquences plus longues
 \end{frame}
 
 \begin{frame}
-  \frametitle{D'autres variantes}
+  \frametitle{Encore d'autres variantes...}
   Dans des réseaux récurrents profonds, on peut ajouter des récurrences entre les différentes couches... \\
 \end{frame}
 
 \begin{frame}
-  \frametitle{D'autres variantes}
+  \frametitle{jusqu'à l'indigestion...}
   \imgtw{spaghetti}
 \end{frame}

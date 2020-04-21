@@ -3,7 +3,7 @@
   sections:
     - title: Votre Formation
       includes:
-        - about-eni-ml1j
+        - about-eni-mlve
         - questions
     - title: Intelligence Artificielle
       includes:
@@ -19,7 +19,7 @@
         - nn-intro
     - title: Le Traitement d'images
       includes:
-        - vision
+        - nn-cnn-data
         - nn-cnn
     - title: Le Traitement de séquences
       includes:
@@ -27,19 +27,21 @@
         - nn-rnn
         - nn-lstm
         - nn-rnn-variants
-    - title: Le Traitement de texte
+    - title: Le Traitement du texte
       includes:
-        - text-langues
-    - title: Petit Jeu
-      includes:
-        - nn-gan-intro
-        - nn-gan
+        - text-intro
+        - text-pretraitements
+        - text-vectors
     - title: L'Apprentissage par Renforcement
       includes:
         - rl-intro
         - rl-deep
         - rl-aphago
         - questions
+    - title: Des Réseaux Particuliers
+      includes:
+        - nn-gan-intro
+        - nn-gan
     - title: Les Problématiques du Machine Learning
       includes:
         - problematiques
