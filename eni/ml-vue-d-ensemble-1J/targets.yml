@@ -1,32 +1,44 @@
 - name: j1
-  title: Vue d'ensemble des enjeux de l'Intelligence Artificielle
+  title: "Vue d'ensemble des enjeux de l'Intelligence Artificielle"
   sections:
     - path: about
-      title: Votre formation
-    - questions
-    - ia
+      title: "Machine Learning et Deep Learning"
+
+    - path: questions
+
+    - path: ia
+
     - path: ml
-      title: Les mécanismes du Machine Learning
+      title: "Les mécanismes du Machine Learning"
       excludes:
         - tp
-    - title: Les Réseaux de neurones
-      path: nn-intro
-    - cnn
-    - title: Le traitement de séquences
-      path: sequential-data
+
+    - path: nn-intro
+      title: "Les Réseaux de neurones"
+
+    - path: cnn
+
+    - path: sequential-data
+      title: "Le traitement de séquences"
       excludes:
         - sequential-models
-        - markov-models
+        - markov-model
         - hmm-latest
         - nlp
         - rnn-keras
         - tp
-    - nlp
-    - rl
-    - gan
+
+    - path: nlp
+
+    - path: rl
+
+    - path: gan
+
     - path: big-questions
-      excludes: ethics
-    - title: Développement d'un projet en Machine Learning
+    - title: "Développement d'un projet en Machine Learning"
+
       path: engineering
-    - actors
-    - sectors
+
+    - path: actors
+
+    - path: sectors

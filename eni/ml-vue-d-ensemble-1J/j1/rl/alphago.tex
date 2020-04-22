@@ -1,0 +1,157 @@
+\begin{frame}
+  \frametitle{AlphaGo}
+  AlphaGo un bon exemple de développement industriel en deep learning.
+  \begin{itemize}
+  \item \textbf{deep artificial neural networks}
+  \item \textbf{Monte Carlo tree search}
+  \item \textbf{Reinforcement Learning}
+  \item \textbf{Très gros moyens !}    
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Go}
+  \begin{minipage}[c]{0.6\linewidth}
+    \imgtw[1]{go-regles}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.33\linewidth}
+    \begin{center}
+      \underline{Go Vs Echecs} \\
+      \textbf{Le nombre de coups} \\
+      $\approx$ 200 contre $\approx$ 35 \\
+      \textbf{Le nombre de tours} \\
+      $\approx$ 300 contre $\approx$ 40 \\
+      $\Rightarrow$ $\approx 10^{120}\lll \;\approx 10^{690}$
+    \end{center}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}
+  \frametitle{AlphaGo}
+  \begin{minipage}[c]{0.50\linewidth}
+    \begin{itemize}
+    \item $softmax(convolutions^{13}(19*19*48{bits}))$
+    \item 48bits : input sur la position, la configuration , ...
+    \item Appris sur données supervisées
+    \end{itemize}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.49\linewidth}
+  \imgth[0.8]{alphago-value}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}
+  \frametitle{AlphaGo}
+  \begin{minipage}[c]{0.50\linewidth}
+    \imgth[0.8]{alphago-policy}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.49\linewidth}
+    \begin{itemize}
+    \item Appris sur du self-play
+    \item A l'aide d'un MCTS qui apprend à générer des parties efficace en fonction de la value function (fixée) et policy function (que l'on est en train d'apprendre)
+    \end{itemize}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}
+  \frametitle{AlphaGo}
+  Monte-Carlo tree search
+  \imgtw[0.8]{alphago-mcts}
+  \begin{itemize}
+  \item Selection par maximum de (Q-value + u(P)) où P est une proba à priori pour chaque coup.
+  \item Expansion en fonction de la policy qui produit des probabilités qui sont alors stockés pour chaque action
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{AlphaGo}
+  2 phases pour apprendre :
+  \begin{description}
+  \item[Value network  :]
+  \item 3 semaines x (50 x TPU) 
+  \item[1 million de parties APV-MCTS :]
+  \item 1 journée x (5000 x TPU)
+  \item $\;$
+  \item[50 TPU $\approx$ 2000 TFLOPS]
+  \item core i7 : $\approx$ 0.07 TFLOPS (donc il en faudrait $\approx$ 30 000)
+  \end{description}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Go}
+  \begin{minipage}[c]{0.7\linewidth}
+    \imgtw[1]{go-winrate-dan}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.26\linewidth}
+    \begin{adjustbox}{scale=0.8}
+      \begin{tabular}{| r | l |}
+        \hline
+        EGF & Classement \\ \hline
+        2940 & 9 dan pro \\ \hline
+        2820 & 8 dan amateur \\ \hline
+        2700 & 7 dan amateur \\ \hline
+        2600 & 6 dan amateur \\ \hline
+        2500 & 5 dan \\ \hline
+        2400 & 4 dan \\ \hline
+        2300 & 3 dan \\ \hline
+        2200 & 2 dan \\ \hline
+        2100 & 1 dan \\ \hline
+        2000 & 1 kyu \\ \hline
+        1900 & 2 kyu \\ \hline
+        1800 & 3 kyu \\ \hline
+        1500 & 6 kyu \\ \hline
+        1000 & 11 kyu \\ \hline
+        500 & 16 kyu \\ \hline
+        100 & 20 kyu \\ \hline
+      \end{tabular}
+    \end{adjustbox}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}
+  \frametitle{AlphaGo}
+  Plusieurs versions :
+  \begin{itemize}
+  \item \textbf{AlphaGo Vs Fan Hui 5 à 0} Octobre 2015
+  \item \textbf{AlphaGo vs Lee Sedol 4 à 1} Mars 2016 (Prédiction de Rémi Coulom en 2016 : Résultat pas avant 15 ans)
+  \item \textbf{AlphaGo-zero} considéré comme ayant au moins 500 EGF au dessus de AlphaGo. 2017
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{AlphaGo}
+  \begin{center}
+    AlphaGo vs Lee Sedol (ou Fan Hui)
+  \end{center}
+  \huge
+  1 202 processeurs et 176 TPU
+\end{frame}
+
+\begin{frame}
+  \frametitle{AlphaGo Zero}
+  \begin{itemize}
+  \item \textbf{Plus simple : 4 TPU}
+  \item \textbf{Plus fort : bat alphago 100:0}
+  \item \textbf{Plus général : self-play uniquement}
+  \end{itemize}  
+  \imgtw[1]{alphagozero-lerningcurve}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Alpha Zero}
+  \begin{itemize}
+  \item \textbf{Encore plus général}
+  \item \textbf{Bat tous les bot d'échec, go et shogi}
+  \end{itemize}  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Alpha Zero}
+  Relativisons
+  \begin{itemize}
+  \item Un cerveau humain consomme $\approx$ 20 Watts
+  \item AlphaGo $\approx$ 440 000 Watts (440 grille-pains)
+  \item Un tableur gagnerait n'importe quelle compétition de calcul mental
+  \end{itemize}
+\end{frame}
+

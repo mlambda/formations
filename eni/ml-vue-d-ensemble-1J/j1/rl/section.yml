@@ -4,5 +4,5 @@ includes:
     title: Introduction
   - path: deep
     title: Deep Learning
-  - path: aphago
+  - path: alphago
     title: Alphago
