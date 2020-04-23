@@ -1,25 +1,25 @@
 - name: j1
   title: "Vue d'ensemble des enjeux de l'Intelligence Artificielle"
   sections:
-    - path: about
-      title: "Machine Learning et Deep Learning"
+    - title: "Machine Learning et Deep Learning"
+      path: about
 
     - path: questions
 
     - path: ia
 
-    - path: ml
-      title: "Les mécanismes du Machine Learning"
+    - title: "Les mécanismes du Machine Learning"
+      path: ml
       excludes:
         - tp
 
-    - path: nn-intro
-      title: "Les Réseaux de neurones"
+    - title: "Les Réseaux de neurones"
+      path: nn-intro
 
     - path: cnn
 
-    - path: sequential-data
-      title: "Le traitement de séquences"
+    - title: "Le traitement de séquences"
+      path: sequential-data
       excludes:
         - sequential-models
         - markov-model
@@ -35,8 +35,8 @@
     - path: gan
 
     - path: big-questions
-    - title: "Développement d'un projet en Machine Learning"
 
+    - title: "Développement d'un projet en Machine Learning"
       path: engineering
 
     - path: actors
