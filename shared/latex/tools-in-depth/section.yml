@@ -1,0 +1,14 @@
+title: Outils
+includes:
+  - path: hadoop
+    title: Apache Hadoop
+  - path: spark
+    title: Apache Spark
+  - path: kaggle
+    title: Kaggle
+  - path: arXiv
+    title: ArXiv
+  - path: github
+    title: GitHub
+  - path: cloud-computing
+    title: Cloud computing

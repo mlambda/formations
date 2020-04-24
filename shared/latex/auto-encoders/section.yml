@@ -1,0 +1,6 @@
+title: Auto-encodeurs
+includes:
+  - path: autoencoder
+    title: Présentation
+  - path: tp
+    title: Travaux Pratiques

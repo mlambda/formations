@@ -1,4 +1,8 @@
 title: Le traitement du texte
+tags:
+  normal: intro, preproc, vectos
+  light: intro, preproc
+  tp: tp
 includes:
   - path: intro
     title: Natural Language Processing (NLP)

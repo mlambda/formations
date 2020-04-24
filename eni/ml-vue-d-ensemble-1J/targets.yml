@@ -6,10 +6,10 @@
 
     - path: questions
 
-    - path: ia
+    - path: intelligence-artificielle
 
     - title: "Les mécanismes du Machine Learning"
-      path: ml
+      path: machine-learning
       excludes:
         - tp
 
@@ -28,11 +28,11 @@
         - rnn-keras
         - tp
 
-    - path: nlp
+    - path: natural-language-processing
 
-    - path: rl
+    - path: reinforcement-learning
 
-    - path: gan
+    - path: generative-adversarial-network
 
     - path: big-questions
 

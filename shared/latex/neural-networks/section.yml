@@ -1,0 +1,10 @@
+title: Réseaux de neurones
+includes:
+  - path: intro
+    title: Introduction
+  - path: cnn
+    title: Réseaux à convolutions
+  - path: tp-nn
+    title: "Travaux Pratiques : Tensorflow et Keras"
+  - path: tp-cnn
+    title: "Travaux Pratiques : CNN et Keras"
