@@ -1,67 +1,29 @@
 - name: j1
   title: Jour 1 --- Une approche classique en Text Mining
   sections:
-    - title: Votre formation
-      includes:
-        - about-mmd
-        - questions
-    - title: Natural Langanguage Processing
-      includes:
-        - text-intro
-        - text-pretraitements
-        - text-bow-ngrams-glove-fasttext-pattern
-        - text-vectors
-        - questions
-        - demo-text-features-engineering
-    - title: Similarité et Recommandation de Textes
-      includes:
-        - similarity-intro
-        - similarity-text-okapiBM25-recommandation
-        - questions
-        - tp-text-reco-system
+    - title: Text Mining par la Pratique
+      path: about
+
+    - path: questions
+
+    - title: Traitements Automatique du Langage
+      path: natural-language-processing
 
 - name: j2
   title: Jour 2 --- Classification Supervisée de Texte
   sections:
     - title: Introduction au Machine Learning
-      includes:
-        - ml-intro
-        - ml-data-preparation
-        - ml-learn
+      path: machine-learning
+
     - title: Apprentissage supervisé
-      includes:
-        - supervised-naive-bayes
-        - supervised-trees
-        - supervised-random-forest
-        - supervised-gradient-boosting
-        - supervised-svm
-        - supervised-regression-lineaire
-        - supervised-cost-error-function
-        - supervised-optimisation
-        - supervised-derivation-gradient
-        - supervised-regression-logistique
-        - nn-intro
-        - questions
-        - tp-supervised-text
+      path: supervised
 
 - name: j3
   title: Jour 3 --- NLP et Deep Learning
   sections:
     - title: Données séquentielles
-      includes:
-        - tf-intro
-        - keras-intro
-        - sequential-data
-        - sequential-models
-        - nn-rnn
-        - nn-lstm
-        - nn-rnn-variants
-        - nn-rnn-keras
-        - questions
-        - tp-rnn
-    - title: Transfmorfmer Network
-      includes:
-        - nn-attention-model
-        - nn-transformer-network
-        - questions
-        - tp-transfmormer-network
+      path: sequential-data
+    - title: TensorFlow Keras
+      path: tf-keras-intro
+    - title: Réseaux Réccurents et Transfmorfmer Network
+      path: neural-networks

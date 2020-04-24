@@ -15,6 +15,6 @@ includes:
   - title: Similarités
     path: similarity
   - title: Similarité et Recommandation de Textes
-    path: similarity-text-recommandation
+    path: similarity-text-reco
   - title: Travaux Pratique Recommandation de Texte
     path: tp-text-reco-system
