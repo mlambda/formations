@@ -1,0 +1,34 @@
+title: Apprentissage supervisé
+includes:
+  - title: Naive Bayes
+    path: naive-bayes
+  - title: Arbres de décision
+    path: trees
+  - title: Random Forest
+    path: random-forest
+  - title: Gradient Boosting
+    path: gradient-boosting
+  - title: Regression Linéaire
+    path: regression-lineaire
+  - title: Fonction de Coût/Erreur
+    path: cost-error-function
+  - title: Optimisation
+    path: optimisation
+  - title: Gradient de l'erreur
+    path: derivation-gradient
+  - title: Régression Logistique
+    path: regression-logistique
+  - title: Réseau de Neurones
+    path: nn-intro
+  - title: Support Vector Machine
+    path: svm
+  - title: Démo Sklearn Pratiques
+    path: demo-sklearn
+  - title: "Travaux Pratiques : Régression Linéaire"
+    path: tp-reg-lin
+  - title: "Travaux Pratiques : Random Forest"
+    path: tp-random-forest
+  - title: "Travaux Pratiques : Classification de Texte"
+    path: tp-text
+  - title: Questions
+    path: questions

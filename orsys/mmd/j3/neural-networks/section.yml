@@ -1,0 +1,18 @@
+title: Réseaux de Neurones
+includes:
+  - title: Réseaux de neurones récurrents
+    path: rnn
+  - title: Réseaux à longue mémoire de court terme
+    path: lstm
+  - title: Variantes de réseaux récurrents
+    path: rnn-variants
+  - title: RNN avec Keras
+    path: rnn-keras
+  - title: Travaux Pratiques
+    path: tp-rnn
+  - title: Modèle à Attention
+    path: attention-model
+  - title: Transformer Networks
+    path: transformer
+  - title: "Travaux Pratiques : Transformer"
+    path: tp-transformer

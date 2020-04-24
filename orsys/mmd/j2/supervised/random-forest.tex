@@ -1,0 +1,63 @@
+\begin{frame}
+  \frametitle{Introduction}
+  \begin{itemize}
+  \item les arbres de décision overfit facilement
+  \item ils sont rapides à apprendre
+  \item en combiner beaucoup est faisable et réduit la variance
+  \end{itemize}
+  → création d'une forêt (ensemble d'arbres) aléatoire
+\end{frame}
+
+\begin{frame}
+  \frametitle{But}
+  Produire des arbres décorrélés et moyenner leurs prédictions pour
+  réduire la variance.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outil 1 — bagging (row sampling)}
+  \textbf{B}oostrap \textbf{agg}regat\textbf{ing} (Bagging) :
+  \begin{itemize}
+  \item tirer un échantillon du dataset avec replacement
+  \item entraîner un arbre sur cet échantillon
+  \item répéter $B$ fois
+  \end{itemize}
+  Le bagging s'appelle aussi row sampling.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outil 2 — random subspace method (column sampling)}
+  \begin{itemize}
+  \item à chaque split, considérer seulement un sous-ensemble des
+    features
+  \item valeurs conseillées :
+    \begin{itemize}
+    \item classification : $\lvert\sqrt m\rvert$ features par split
+    \item regréssion: $\lvert\frac{m}{3}\rvert$ features par split, 5
+      exemples par node minimum
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Random Forest}
+  \imgtw[1.05]{random-forest-full}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Random Forest}
+  \begin{itemize}
+  \item Pas de sur-apprentissage en augmentant le nombre d'arbres
+  \item Une fois appris, le modèle est très rapide
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conclusion}
+  \begin{itemize}
+  \item les arbres sont interprétables, rapides à entraîner,
+    combinables.
+  \item random forest combine des arbres faibles en un prédicteur
+    versatile
+  \end{itemize}
+\end{frame}

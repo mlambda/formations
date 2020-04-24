@@ -1,0 +1,319 @@
+\begin{frame}
+  \frametitle{Introduction}
+  Modèle de classification ou regréssion qui classe un input dans une
+  de ses feuilles pour rendre sa prédiction :
+  \imgtw[0.9]{decision-tree-2}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Avantages}
+  Les arbres de décision
+  \begin{itemize}[<+->]
+  \item gèrent les inputs numériques comme catégoriels
+  \item ne nécessitent pas que la variable d'output soit normalement
+    distribuée (regression linéaire)
+  \item sont interprétables
+  \item sont très rapides durant l'inférence
+  \item ne nécessitent pas de normalisation des données
+  \item leur apprentissage est hautement parallèlisable
+  \end{itemize}
+  \onslide<+->{→ Couteau-suisse du machine learning tabulaire.}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Désavantages}
+  \begin{itemize}[<+->]
+  \item peuvent overfit les données, mais l'ensembling résoud ce
+    problème
+  \item sont sensibles aux déséquilibres de classe
+  \end{itemize}
+  \onslide<+->{→ Si les classes ne sont pas équilibrées, peut-être les
+    resampler.}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Arbres de classification}
+  \imgtw[0.9]{decision-tree-2}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Arbres de régression}
+  \imgtw[0.9]{regression-tree}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apprendre un arbre de décision}
+  Approche \og top-down\fg, procédure récursive :
+  \begin{itemize}[<+->]
+  \item créer un nœud de départ qui contient toutes les instances du
+    training set
+  \item tant qu'il reste des nœuds non-traités :
+    \begin{itemize}
+    \item choisir un nœud non traité
+    \item si le nœud remplit des conditions de feuille finale, ne rien
+      faire
+    \item sinon, créer deux branches à partir du nœud non traité
+      pour répartir les instances dans deux nouveaux nœuds
+    \end{itemize}
+  \end{itemize}
+  \onslide<+->{Conditions de feuilles finales : contient $n_{min}$
+    éléments, est déjà à profondeur $p_{max}$, splitterait sans
+    décroître assez l'entropie…}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Décision rendue}
+  En fonction de la tâche, une fois arrivé dans la feuille de fin :
+  \begin{description}
+  \item[Classification] classe majoritaire
+  \item[Régression] moyenne des valeurs cibles
+  \end{description}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Splits possibles}
+  Splits possibles d'une feature donnée :
+  \begin{description}
+  \item[Catégorielle] chaque catégorie vs le reste
+  \item[Ordinale/Continue] milieu de chaque valeur ou
+    quantiles
+  \end{description}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Évaluation de la qualité d'un split}
+  En fonction de la tâche :
+  \begin{description}
+  \item[Régression] coût si on rendait la moyenne des instances
+    comme résultat
+    \[
+      Loss = \sum|\hat{y}-y| \approx variance
+    \]
+  \item[Classification] Entropie de Shannon :
+    \[
+    Loss = -\sum_{x \in X}P_x*\log_2(P_x)
+    \]
+    $= 0 \Rightarrow$ il n'y a pas d'incertitude \\
+    maximale quand on a une distribution uniforme
+  \end{description}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exemple — démarrage}
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      ID, jardinage, jeux vidéos, chapeaux, âge
+      \[
+        \begin{bmatrix}
+          1 & 0 & 1 & 1 & 13  \\
+          2 & 0 & 1 & 0 & 14 \\
+          3 & 0 & 1 & 0 & 15 \\
+          4 & 1 & 1 & 1 & 25 \\
+          5 & 0 & 1 & 1 & 35 \\
+          6 & 1 & 0 & 0 & 49 \\
+          7 & 1 & 1 & 1 & 68 \\
+          8 & 1 & 0 & 0 & 71 \\
+          9 & 1 & 0 & 1 & 73 \\
+        \end{bmatrix}
+      \]
+    \end{column}
+    \begin{column}{.5\textwidth}
+      Première étape : création du nœud de départ
+      \\[1cm]
+      \begin{forest}
+        [{1, 2, 3, 4, 5, 6, 7, 8, 9} [{}]]
+      \end{forest}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exemple — split}
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      ID, jardinage, jeux vidéos, chapeaux, âge
+      \[
+        \begin{bmatrix}
+          1 & 0 & 1 & 1 & 13  \\
+          2 & 0 & 1 & 0 & 14 \\
+          3 & 0 & 1 & 0 & 15 \\
+          4 & 1 & 1 & 1 & 25 \\
+          5 & 0 & 1 & 1 & 35 \\
+          6 & 1 & 0 & 0 & 49 \\
+          7 & 1 & 1 & 1 & 68 \\
+          8 & 1 & 0 & 0 & 71 \\
+          9 & 1 & 0 & 1 & 73 \\
+        \end{bmatrix}
+      \]
+    \end{column}
+    \begin{column}{.5\textwidth}
+      Split du premier nœud. Il faut tester 3 splits. Split sur
+      jardinage :
+      \\[1cm]
+      \begin{forest}
+        [{1, 2, 3, 4, 5, 6, 7, 8, 9}
+          [{4, 6, 7, 8, 9},
+          edge label={node[midway,left,font=\scriptsize]{jardinage}}
+            [{$\hat{y}=57,2$} [{$L=80,8$}]]]
+          [{1, 2, 3, 5},
+          edge label={node[midway,right,font=\scriptsize]{$\neg$ jardinage}}
+            [{$\hat{y}=19,25$} [{$L=31,5$}]]]
+        ]
+      \end{forest}
+      Loss totale : $122,3$
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exemple — split}
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      ID, jardinage, jeux vidéos, chapeaux, âge
+      \[
+        \begin{bmatrix}
+          1 & 0 & 1 & 1 & 13  \\
+          2 & 0 & 1 & 0 & 14 \\
+          3 & 0 & 1 & 0 & 15 \\
+          4 & 1 & 1 & 1 & 25 \\
+          5 & 0 & 1 & 1 & 35 \\
+          6 & 1 & 0 & 0 & 49 \\
+          7 & 1 & 1 & 1 & 68 \\
+          8 & 1 & 0 & 0 & 71 \\
+          9 & 1 & 0 & 1 & 73 \\
+        \end{bmatrix}
+      \]
+    \end{column}
+    \begin{column}{.5\textwidth}
+      Split du premier nœud. Il faut tester 3 splits. Split sur
+      jeux vidéos :
+      \\[1cm]
+      \begin{forest}
+        [{1, 2, 3, 4, 5, 6, 7, 8, 9}
+          [{1, 2, 3, 4, 5, 7},%
+          edge label={node[midway,left,font=\scriptsize]{jeux vidéos}}
+            [{$\hat{y}=28,3$} [{$L=92,6$}]]]
+          [{6, 8, 9},
+          edge label={node[midway,right,font=\scriptsize]{$\neg$ jeux vidéos}}
+            [{$\hat{y}=64,3$} [{$L=30,7$}]]]
+        ]
+      \end{forest}
+      Loss totale : $123,3$
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exemple — split}
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      ID, jardinage, jeux vidéos, chapeaux, âge
+      \[
+        \begin{bmatrix}
+          1 & 0 & 1 & 1 & 13  \\
+          2 & 0 & 1 & 0 & 14 \\
+          3 & 0 & 1 & 0 & 15 \\
+          4 & 1 & 1 & 1 & 25 \\
+          5 & 0 & 1 & 1 & 35 \\
+          6 & 1 & 0 & 0 & 49 \\
+          7 & 1 & 1 & 1 & 68 \\
+          8 & 1 & 0 & 0 & 71 \\
+          9 & 1 & 0 & 1 & 73 \\
+        \end{bmatrix}
+      \]
+    \end{column}
+    \begin{column}{.5\textwidth}
+      Split du premier nœud. Il faut tester 3 splits. Split sur
+      chapeaux :
+      \\[1cm]
+      \begin{forest}
+        [{1, 2, 3, 4, 5, 6, 7, 8, 9}
+          [{1, 4, 5, 7, 9},%
+          edge label={node[midway,left,font=\scriptsize]{chapeaux}}
+            [{$\hat{y}=42,8$} [{$L=110,8$}]]]
+          [{2, 3, 6, 8},
+          edge label={node[midway,right,font=\scriptsize]{$\neg$ chapeaux}}
+            [{$\hat{y}=37,25$} [{$L=91$}]]]
+        ]
+      \end{forest}
+      Loss totale : $201,8$
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exemple — split}
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      ID, jardinage, jeux vidéos, chapeaux, âge
+      \[
+        \begin{bmatrix}
+          1 & 0 & 1 & 1 & 13  \\
+          2 & 0 & 1 & 0 & 14 \\
+          3 & 0 & 1 & 0 & 15 \\
+          4 & 1 & 1 & 1 & 25 \\
+          5 & 0 & 1 & 1 & 35 \\
+          6 & 1 & 0 & 0 & 49 \\
+          7 & 1 & 1 & 1 & 68 \\
+          8 & 1 & 0 & 0 & 71 \\
+          9 & 1 & 0 & 1 & 73 \\
+        \end{bmatrix}
+      \]
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \begin{description}
+      \item[122,3] jardinage
+      \item[123,3] jeux vidéos
+      \item[201,8] chapeaux
+      \end{description}
+      → On split donc sur jardinage
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exemple — split}
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      ID, jardinage, jeux vidéos, chapeaux, âge
+      \[
+        \begin{bmatrix}
+          1 & 0 & 1 & 1 & 13  \\
+          2 & 0 & 1 & 0 & 14 \\
+          3 & 0 & 1 & 0 & 15 \\
+          4 & 1 & 1 & 1 & 25 \\
+          5 & 0 & 1 & 1 & 35 \\
+          6 & 1 & 0 & 0 & 49 \\
+          7 & 1 & 1 & 1 & 68 \\
+          8 & 1 & 0 & 0 & 71 \\
+          9 & 1 & 0 & 1 & 73 \\
+        \end{bmatrix}
+      \]
+    \end{column}
+    \begin{column}{.5\textwidth}
+      Résultat après le premier split :\\[1cm]
+
+      \begin{forest}
+        [{1, 2, 3, 4, 5, 6, 7, 8, 9}
+          [{4, 6, 7, 8, 9},
+          edge label={node[midway,left,font=\scriptsize]{jardinage}}]
+          [{1, 2, 3, 5},
+          edge label={node[midway,right,font=\scriptsize]{$\neg$ jardinage}}]
+        ]
+      \end{forest}
+      \onslide<+->{À vous de jouer !}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Limiter l'overfit}
+  Fait par :
+  \begin{itemize}
+  \item la profondeur maximum
+  \item le nombre minimum d'instances dans chaque feuille
+  \item une baisse d'entropie maximale à chaque split
+  \item le nombre minimum d'instances pour split
+  \item le pruning
+  \end{itemize}
+\end{frame}

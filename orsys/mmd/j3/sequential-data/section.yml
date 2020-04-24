@@ -1,0 +1,6 @@
+title: Données séquentielles
+includes:
+  - title: Introduction
+    path: sequential-data
+  - title: Modèles Séquentiels
+    path: sequential-models
