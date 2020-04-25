@@ -4,6 +4,15 @@
 
 \documentclass[\PresentationSize\BLOCK{if handout},handout\BLOCK{endif}]{formation}
 
+%% if print:
+\renewcommand{\bluelink}[2]{%
+  {%
+    \color{blue}%
+    \url{#1}%
+  }%
+}
+%% endif
+
 \setbeamertemplate{frame footer}{\CompanyName{} --- \DeckTitle}
 
 \author{\vfill\TrainerName}
