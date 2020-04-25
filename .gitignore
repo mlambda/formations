@@ -16,5 +16,3 @@ _minted*
 build/
 pdf/
 session-config.yml
-targets-debug.yml
-poetry.lock
