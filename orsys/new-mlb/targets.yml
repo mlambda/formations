@@ -5,7 +5,7 @@
     - questions
     - tools
     - questions
-    - path: ml
+    - path: machine-learning
       excludes:
         - tp
     - questions
