@@ -8,11 +8,14 @@ includes:
     path: rnn-variants
   - title: RNN avec Keras
     path: rnn-keras
-  - title: Travaux Pratiques
+  - path: questions
+  - title: "Travaux Pratiques : RNN"
     path: tp-rnn
+
   - title: Modèle à Attention
     path: attention-model
   - title: Transformer Networks
     path: transformer
+  - path: questions
   - title: "Travaux Pratiques : Transformer"
     path: tp-transformer

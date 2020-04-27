@@ -1,9 +1,81 @@
 \begin{frame}
-  \frametitle{template}
+  \frametitle{Introduction}
+  Caputre et manipulation de chaînes de caractères par le biais de motifs génériques. \\
+  \newline
+  Exemple : Rajouter un espace après chaque ponctuation (si il n'y en as pas déjà) \\
+  \newline
+  "Le chat mange,délicatement, ses croquettes.Jean est attendri." \\
+  $\rightarrow$ \\
+  "Le chat mange, délicatement, ses croquettes. Jean est attendri. " \\
 \end{frame}
 
 \begin{frame}
-  \frametitle{template}
+  \frametitle{Utilisations}
+  Une fois le motif capturé, on peut :
+  \begin{itemize}
+  \item supprimer
+  \item modifier
+  \item réutiliser
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Regex en Python : Les caractères spéciaux}
+  \begin{itemize}
+  \item \makebox[1cm][c]{\^{}} début de ligne
+  \item \makebox[1cm][c]{\$} fin de ligne
+  \item \makebox[1cm][c]{.} joker (capture n'importe quel caractère) 
+  \item \makebox[1cm][c]{[} ouverture d'un ensemble de caractère
+  \item \makebox[1cm][c]{]} fermeture d'un ensemble de caractère
+  \item \makebox[1cm][c]{(} ouverture de groupe de capture
+  \item \makebox[1cm][c]{)} fermeture de groupe de capture
+  \item \makebox[1cm][c]{?} de 0 à 1 occurence du motif
+  \item \makebox[1cm][c]{*} de 0 à $\infty$ occurences du motif
+  \item \makebox[1cm][c]{+} de 1 à $\infty$ occurences du motif
+  \item \makebox[1cm][c]{\{} ouverture d'intervalle de répétition du motif
+  \item \makebox[1cm][c]{\}} fermeture d'intervalle de répétition du motif
+  \item \makebox[1cm][c]{\textbackslash} caractère spécialement spécial
+  \item \makebox[1cm][c]{\textbar} OU logique dans un groupe de capture
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{re.search}
+  \inputminted[linenos,fontsize=\small,bgcolor=pythonbg,framesep=1mm]{python}
+  {code/regex/demo-intro-search.py}
+  \vspace{-1cm}
+  \inputminted[linenos,fontsize=\small,bgcolor=returnbg,framesep=1mm]{python}
+  {code/regex/demo-intro-search.out}
+\end{frame}
+
+\begin{frame}
+  \frametitle{re.match}
+  \inputminted[linenos,fontsize=\small,bgcolor=pythonbg]{python}
+  {code/regex/demo-intro-match.py}
+  \vspace{-1cm}
+  \inputminted[linenos,fontsize=\small,bgcolor=returnbg]{python}
+  {code/regex/demo-intro-match.out}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Utilisations}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Utilisations}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Utilisations}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Utilisations}
+\end{frame}
+
+\begin{frame}
+  Beaucoup de gros fichiers ? `sed` reste la solution optimale depuis les années 70.
 \end{frame}
 
 \begin{frame}

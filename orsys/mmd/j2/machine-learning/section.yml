@@ -6,5 +6,7 @@ includes:
     title: Modélisation et préparation des données
   - path: learn
     title: Apprentissage et évaluation
+  - path: questions
+
   - path: tp
     title: Travaux Pratiques

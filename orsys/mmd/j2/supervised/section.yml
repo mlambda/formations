@@ -2,12 +2,7 @@ title: Apprentissage supervisé
 includes:
   - title: Naive Bayes
     path: naive-bayes
-  - title: Arbres de décision
-    path: trees
-  - title: Random Forest
-    path: random-forest
-  - title: Gradient Boosting
-    path: gradient-boosting
+
   - title: Regression Linéaire
     path: regression-lineaire
   - title: Fonction de Coût/Erreur
@@ -20,14 +15,33 @@ includes:
     path: regression-logistique
   - title: Réseau de Neurones
     path: nn-intro
-  - title: Support Vector Machine
-    path: svm
-  - title: Démo Sklearn Pratiques
-    path: demo-sklearn
+  - path: questions
   - title: "Travaux Pratiques : Régression Linéaire"
-    path: tp-reg-lin
+    path: tp-reg-lin-poly
+
+  - title: Arbres de décision
+    path: trees
+  - title: Random Forest
+    path: random-forest
+  - path: questions
+  - title: Démo Sklearn
+    path: demo-random-forest
   - title: "Travaux Pratiques : Random Forest"
     path: tp-random-forest
+
+  - title: Gradient Boosting
+    path: gradient-boosting
+  - path: questions
+  - title: Démo Sklearn
+    path: demo-gradient-boosting
+
+  - title: Support Vector Machine
+    path: svm
+  - title: Démo Sklearn
+    path: demo-svm
+  - title: "Travaux Pratiques : SVM"
+    path: tp-svm
+
   - title: "Travaux Pratiques : Classification de Texte"
     path: tp-text
   - title: Questions

@@ -4,8 +4,6 @@
     - title: Text Mining par la Pratique
       path: about
 
-    - path: questions
-
     - title: Traitements Automatique du Langage
       path: natural-language-processing
 
@@ -23,7 +21,9 @@
   sections:
     - title: Données séquentielles
       path: sequential-data
+
     - title: TensorFlow Keras
       path: tf-keras-intro
+
     - title: Réseaux Réccurents et Transfmorfmer Network
       path: neural-networks

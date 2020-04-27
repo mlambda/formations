@@ -2,19 +2,25 @@ title: Le traitement du texte
 includes:
   - title: Natural Language Processing (NLP)
     path: intro
-  - title: Prétraitements
-    path: preprocessing
-  - title: Pattern et Expressions Régulières
+
+  - title: Manipulation d'Expressions Régulières
     path: pattern
-  - title: Vecteurs textuels
-    path: vectors
+  - path: questions
   - title: Travaux pratique Expressions Régulières
     path: tp-text-regex
+
+  - title: Prétraitements
+    path: preprocessing
+  - title: Vecteurs textuels
+    path: vectors
+  - path: questions
   - title: Travaux Pratique Text Mining
     path: tp-text-features-engineering
+
   - title: Similarités
     path: similarity
   - title: Similarité et Recommandation de Textes
     path: similarity-text-reco
+  - path: questions
   - title: Travaux Pratique Recommandation de Texte
     path: tp-text-reco-system
