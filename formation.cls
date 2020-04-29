@@ -98,6 +98,10 @@
   \UL}
 \makeatother
 
+\newcommand{\newlinebar}{%
+  \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}\\%
+}
+
 \newcommand{\bluelink}[2]{%
   \href{%
     #1%
@@ -144,6 +148,15 @@
   \begin{figure}%
     \includegraphics[width=#1\textwidth,left]{#2}%
   \end{figure}%
+}
+\newcommand{\mintedpy}[1]{%
+  \inputminted[fontsize=\footnotesize,bgcolor=pythonbg,framesep=1mm]{python}{code/#1.py}%
+  \vspace{-1cm}%
+  \inputminted[fontsize=\footnotesize,bgcolor=returnbg,framesep=1mm]{python}{code/#1.out}%
+}
+
+\newcommand{\mintedpycode}[1]{%
+  \inputminted[fontsize=\footnotesize,bgcolor=pythonbg,framesep=1mm]{python}{code/#1.py}%
 }
 
 \definecolor{pythonbg}{rgb}{0.63,0.84,0.71}
