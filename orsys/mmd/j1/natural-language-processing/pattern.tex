@@ -23,7 +23,7 @@
 \begin{frame}
   \frametitle{Regex en Python : Les caractères spéciaux}
   \begin{itemize}
-  \item \makebox[1cm][c]{\^{}} début de ligne
+  \item \makebox[1cm][c]{\^{}} début de ligne (ou négation dans un ensemble)
   \item \makebox[1cm][c]{\$} fin de ligne
   \item \makebox[1cm][c]{.} joker (capture n'importe quel caractère) 
   \item \makebox[1cm][c]{[} ouverture d'un ensemble de caractère
@@ -41,69 +41,112 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{re.search}
-  \inputminted[linenos,fontsize=\small,bgcolor=pythonbg,framesep=1mm]{python}
-  {code/regex/demo-intro-search.py}
-  \vspace{-1cm}
-  \inputminted[linenos,fontsize=\small,bgcolor=returnbg,framesep=1mm]{python}
-  {code/regex/demo-intro-search.out}
-\end{frame}
-
-\begin{frame}
   \frametitle{re.match}
-  \inputminted[linenos,fontsize=\small,bgcolor=pythonbg]{python}
-  {code/regex/demo-intro-match.py}
-  \vspace{-1cm}
-  \inputminted[linenos,fontsize=\small,bgcolor=returnbg]{python}
-  {code/regex/demo-intro-match.out}
+  \mintedpy{regex/demo-intro-match}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Utilisations}
+  \frametitle{re.search}
+  \mintedpy{regex/demo-intro-search}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Utilisations}
+  \frametitle{re.search}
+  \mintedpy{regex/demo-search}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Utilisations}
+  \frametitle{re.findall}
+  \mintedpy{regex/demo-findall}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Utilisations}
+  \frametitle{re.finditer}
+  \mintedpy{regex/demo-finditer}
 \end{frame}
 
 \begin{frame}
-  Beaucoup de gros fichiers ? `sed` reste la solution optimale depuis les années 70.
-\end{frame}
-
-\begin{frame}
-  \frametitle{template}
-
-  \imgtw[0.1]{logo_mlweek}
-  
+  \frametitle{Le caractère \textbackslash}
+  '\textbackslash' est un caractère de contôle spécial. \\
+  Permet de définir des groupes de caractères usuels :
   \begin{itemize}
-  \item 
-  \item 
-  \item 
-  \item 
+  \item \textbackslash d : caractère numérique $\iff$ {[0-9]}
+  \item \textbackslash D : caractère non-numérique $\iff$ {[\^{}0-9]}
+  \item \textbackslash s : caractère "blanc" $\iff$ {[ \textbackslash t\textbackslash n\textbackslash r\textbackslash f\textbackslash v]}
+  \item \textbackslash S : caractère non-"blanc" $\iff$ {[\^{} \textbackslash t\textbackslash n\textbackslash r\textbackslash f\textbackslash v]}
+  \item \textbackslash w : caractère alpha-numérique $\iff$ {[a-zA-Z0-9\_]}
+  \item \textbackslash W : caractère non-alpha-numérique $\iff$ {[\^{}a-zA-Z0-9\_]}
   \end{itemize}
+  Plus généralement \textbackslash permet de capturer les caractères spéciaux (ex: \textbackslash . pour capturer le point)
+\end{frame}
 
-  \begin{minipage}[l]{0.49\linewidth}
-  \end{minipage}\hfill
-  \begin{minipage}[l]{0.49\linewidth}
-  \end{minipage}\hfill
+\begin{frame}
+  \frametitle{Chaîne de caractère brute}
+  Python utilise par défaut des chaînes de caractères littérale : \textbackslash est déjà un caractère spécial...
+  \mintedpy{regex/demo-str-lit-brut}
+\end{frame}
 
-  \begin{minipage}[l]{0.49\linewidth}
-      \begin{itemize}
-      \item 
-      \item 
-      \item 
-      \item 
-      \end{itemize}
-  \end{minipage}\hfill
-  \begin{minipage}[l]{0.49\linewidth}
-  \end{minipage}\hfill
+\begin{frame}
+  \frametitle{Chaîne de caractère brute}
+  \mintedpy{regex/demo-pattern-brut}
+\end{frame}
 
+\begin{frame}
+  \frametitle{Compilation de pattern : Flag}
+  Rendre insensible à la casse
+  \mintedpy{regex/demo-pattern-compile-flag-ignorecase}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Compilation de pattern : Flag}
+  Forcer \textbackslash w à fonctionner en mode ASCII
+  \mintedpy{regex/demo-pattern-compile-flag-ascii}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Compilation de pattern : Flag}
+  D'autre Flags :
+  \begin{itemize}
+  \item re.DOTALL le caractère spécial '.' capture aussi les retour chariot
+  \item re.LOCALE utilisation de la variable LOCALE de langage pour les captures
+  \item re.MULTILINE Correspondance multi-lignes, affecte \^{} et \$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Compilation de pattern : Flag}
+  Permet l'écriture d'expression régulière "lisible"
+  \mintedpy{regex/demo-pattern-compile-flag-verbose}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Groupe de capture}
+  \mintedpy{regex/demo-groups}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Répétition de groupe}
+  \mintedpy{regex/demo-groups-repeat}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Remplacements}
+  \mintedpy{regex/demo-replace}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Remplacements avec groupes}
+  Réutilisation des groupes de capture dans la chaîne de remplacement :
+  \mintedpy{regex/demo-replace-groups}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tokenisation : Split}
+  \mintedpy{regex/demo-split}
+\end{frame}
+
+\begin{frame}
+  Il existe encore beaucoup de subtilités et techniques avancées...\\
+  \newline
+  Beaucoup de gros fichiers ? `sed` reste la solution optimale depuis les années 70.
 \end{frame}

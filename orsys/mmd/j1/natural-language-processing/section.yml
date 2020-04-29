@@ -6,6 +6,8 @@ includes:
   - title: Manipulation d'Expressions Régulières
     path: pattern
   - path: questions
+  - title: Quelques liens utiles
+    path: tp-help
   - title: Travaux pratique Expressions Régulières
     path: tp-text-regex
 
@@ -17,10 +19,10 @@ includes:
   - title: Travaux Pratique Text Mining
     path: tp-text-features-engineering
 
-  - title: Similarités
-    path: similarity
-  - title: Similarité et Recommandation de Textes
-    path: similarity-text-reco
+  - title: Similarités de Textes
+    path: similarity-text
+  - title: Recommandation de Textes
+    path: recommandation-text
   - path: questions
   - title: Travaux Pratique Recommandation de Texte
     path: tp-text-reco-system

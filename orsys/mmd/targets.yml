@@ -10,7 +10,7 @@
 - name: j2
   title: Jour 2 --- Classification Supervisée de Texte
   sections:
-    - title: Introduction au Machine Learning
+    - title: Machine Learning
       path: machine-learning
 
     - title: Apprentissage supervisé
@@ -25,5 +25,5 @@
     - title: TensorFlow Keras
       path: tf-keras-intro
 
-    - title: Réseaux Réccurents et Transfmorfmer Network
+    - title: Réseaux Réccurents et Transformer Network
       path: neural-networks

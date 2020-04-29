@@ -9,8 +9,8 @@ includes:
   - title: RNN avec Keras
     path: rnn-keras
   - path: questions
-  - title: "Travaux Pratiques : RNN"
-    path: tp-rnn
+  #- title: "Travaux Pratiques : RNN"
+  #  path: tp-rnn
 
   - title: Modèle à Attention
     path: attention-model

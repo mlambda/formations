@@ -1,38 +1,29 @@
 \begin{frame}
-  \frametitle{Régression Logistique}
-  \imgtw[0.8]{variables}
+  \frametitle{Introduction}
+  Équivalent de la régression linéaire mais quand la sortie est binaire. \\
+  L'approche est bayésienne, basée sur une étude statistique. \\
 \end{frame}
 
 \begin{frame}
-  \frametitle{Régression Logistique}
-  \imgtw[0.65]{mnist}
+  \frametitle{Le cas à 2 classes}
+  On s'intéresse à faire une régression de l'\textit{"évidence"} de la variable aléatoire cible : 
+  \begin{center}
+    $\ln {\frac {P(1\vert X)}{1-P(1\vert X)}}=b_{0}+b_{1}x_{1}+...+b_{d}x_{d}$
+  \end{center}
+  où 
+  \begin{itemize}
+  \item $X = [x_1, ... , x_d]$ un exemple de la base
+  \item $B = [b_1, ... , b_d]$ l'ensemble des paramètres de notre modèle
+  \item $P(1\vert X)$ est la probabilité que X soit de classe 1
+  \end{itemize}
+  Les coéfficients B sont alors estimés par descente de gradient
 \end{frame}
 
 \begin{frame}
-  \frametitle{Régression Logistique}
-  \imgtw[0.8]{caltech256}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Régression Logistique}
-  $\approx$ Distance entre la sortie et la cible ?
-  \newline
-  \newline
-  \newline
-  \underline{\textbf{Sortie :}}
-  \newline
-  \begin{tabular}{|*{10}{c|}}
-    \hline
-    0.0  & 0.1  & 0.4  & 0.0  & 0.0  & 0.2  & 0.1  & 0.0  & 0.2  & 0.0 \\
-    \hline
-  \end{tabular}
-  \newline
-  \newline
-  \underline{\textbf{Cible :}}
-  \newline
-  \begin{tabular}{|*{10}{c|}}
-    \hline
-    0.0  & 0.0  & \textbf{\red{1.0}}  & 0.0  & 0.0  & 0.0  & 0.0  & 0.0  & 0.0  & 0.0  \\
-    \hline
-  \end{tabular}
+  \frametitle{Multinomial logistic Regression}
+  Problème à K classes :
+  \begin{itemize}
+  \item (K-1) prédicteurs binaire en utilisant une classe 'pivot'
+  \item Maximum de vraisemblance pour la prédiction finale
+  \end{itemize}
 \end{frame}

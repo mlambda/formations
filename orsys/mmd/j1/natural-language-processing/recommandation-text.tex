@@ -1,0 +1,24 @@
+\begin{frame}
+  \frametitle{Recommendation}
+  On cherche dans notre base le document le plus similaire à notre requète.
+\end{frame}
+
+\begin{frame}
+  \frametitle{okapi BM25}
+  Amélioration du produit scalaire TF-IDF : \\
+  \begin{center}
+  ${\text{score}}(D,Q)=\sum _{i=1}^{n}{\text{IDF}}(q_{i})\cdot {\frac {f(q_{i},D)\cdot (k_{1}+1)}{f(q_{i},D)+k_{1}\cdot \left(1-b+b\cdot {\frac {|D|}{\bar{|D|}}}\right)}}$\\
+  \end{center}
+  où :
+  \begin{itemize}
+  \item ${\text{IDF}}(q_{i})$ est l'inverse document frequency du terme $q_i$
+  \item $f(q_{i},D)$ la fréquence du terme $q_i$ dans le document $D$
+  \item ${|D|}$ le nombre de documents dans $D$
+  \item $\bar{|D|}$ la longueur moyenne des documents de la base
+  \item $k_1$ et $b$ sont des paramètres du système avec usuellement :
+  \begin{itemize}
+    \item $k_1 \in [1.2;2.0]$
+    \item $b = 0.75$
+  \end{itemize}
+  \end{itemize}
+\end{frame}

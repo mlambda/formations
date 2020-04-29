@@ -11,13 +11,15 @@ includes:
     path: optimisation
   - title: Gradient de l'erreur
     path: derivation-gradient
-  - title: Régression Logistique
-    path: regression-logistique
   - title: Réseau de Neurones
     path: nn-intro
+  - title: Classification
+    path: classification
+  - title: Régression Logistique
+    path: regression-logistique
   - path: questions
-  - title: "Travaux Pratiques : Régression Linéaire"
-    path: tp-reg-lin-poly
+  #- title: "Travaux Pratiques : Régression Linéaire"
+  #  path: tp-reg-lin-poly
 
   - title: Arbres de décision
     path: trees
@@ -26,8 +28,10 @@ includes:
   - path: questions
   - title: Démo Sklearn
     path: demo-random-forest
-  - title: "Travaux Pratiques : Random Forest"
-    path: tp-random-forest
+  #- title: "Travaux Pratiques : Random Forest"
+  #  path: tp-random-forest
+  #- title: "Travaux Pratiques : Random Forest"
+  #  path: tp-random-forest-text
 
   - title: Gradient Boosting
     path: gradient-boosting
@@ -39,10 +43,7 @@ includes:
     path: svm
   - title: Démo Sklearn
     path: demo-svm
+  #  - title: "Travaux Pratiques : SVM"
+  #    path: tp-svm
   - title: "Travaux Pratiques : SVM"
-    path: tp-svm
-
-  - title: "Travaux Pratiques : Classification de Texte"
-    path: tp-text
-  - title: Questions
-    path: questions
+    path: tp-svm-text

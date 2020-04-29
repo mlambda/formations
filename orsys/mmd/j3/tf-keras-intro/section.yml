@@ -2,5 +2,7 @@ title: TensorFlow et Keras
 includes:
   - title: TensorFlow
     path: tf-intro
+  #- title: Régression linéaire en Tensorflow
+  #  path: tf-reg-lin
   - title: Keras
     path: keras-intro

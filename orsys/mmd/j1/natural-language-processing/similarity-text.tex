@@ -1,0 +1,51 @@
+\begin{frame}
+  \frametitle{Pseudo-définition}
+  \begin{center}
+  Similarité $\approx$ Distance\\
+  $\;$\\
+  Mesure de similarité grande $\approx$ Mesure de distance petite
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Quelques similarités intéressantes}
+  \begin{itemize}
+  \item Distance de Hamming
+  \item Longest Common Subsequence (LCS)
+  \item Distance de Damerau-Levenshtein
+  \item Produit Scalaire sur TF-IDF
+  \item ...
+  \end{itemize}
+  Des myriades de mesures de similarités de textes existent.\\
+  Toutes essayant de corriger les défauts des précédentes.\\
+  Aucune n'est satisfaisante dans le cas général. 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Distance de Hamming}
+  Comparaison de chaîne de caractères de même taille. \\
+  Compte le nombre de substitutions :
+  \begin{itemize}
+  \item \blue{A}m\blue{é}lie et \red{É}m\red{i}lie : 2
+  \item 10\blue{1}1\blue{10}1 et 10\red{0}1\red{01}1 : 3
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Distance de Damereau-Levenshtein}
+  Coût minimal pour passer d'une chaîne à l'autre. \\
+  Les opérations possibles sont : 
+  \begin{itemize}
+  \item \makebox[2.5cm][l]{insertion} page $\rightarrow$ p\red{l}age 
+  \item \makebox[2.5cm][l]{suppression} p\blue{l}age $\rightarrow$ page
+  \item \makebox[2.5cm][l]{substition} pla\blue{g}e $\rightarrow$ pla\red{c}e
+  \item \makebox[2.5cm][l]{transpositions} pl\blue{ga}e $\rightarrow$ 
+  pl\red{ag}e
+  \end{itemize}
+  Ex : Quelle distance entre "chien" et "chat" ? 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Produit Scalaire sur TF-IDF}
+  \imgtw[0.9]{cosinus-similarity}
+\end{frame}

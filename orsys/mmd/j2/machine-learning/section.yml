@@ -1,12 +1,15 @@
-title: Introduction au Machine Learning
+title: Machine Learning
 includes:
-  - path: survol
-    title: Survol
-  - path: data-preparation
-    title: Modélisation et préparation des données
-  - path: learn
-    title: Apprentissage et évaluation
+  - path: intro
+    title: Introduction
+  #- path: data-preparation
+  #  title: Modélisation et préparation des données
+  - path: evaluation
+    title: Évaluation
+  - path: apprentissage
+    title: Apprentissage
+  - path: bonnes-pratiques
+    title: Bonnes Pratiques
   - path: questions
-
-  - path: tp
-    title: Travaux Pratiques
+  #- path: tp-data
+  #  title: Travaux Pratiques

@@ -1,0 +1,39 @@
+\begin{frame}
+  \frametitle{Reproductibilité}
+  \begin{itemize}
+  \item extrêmement importante pour compléter les analyses après les retours business
+  \item ensemble de bonnes pratiques d'ingénierie
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Reproductibilité}
+  \begin{itemize}[<+->]
+  \item garder une trace exacte du préprocessing
+  \item de préférence utiliser des notebooks
+  \item faire attention au random (utiliser des seeds)
+  \item définir les datasets utilisés, dates comprises
+  \item garder une trace de l'environnement
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Méta-paramètres et Régularisation}
+  Les méta-paramètres forment l'ensemble des prétraitements,la forme et les contraintes appliquées au modèle \textbf{AVANT} son apprentissage.
+  \begin{itemize}
+  \item Forme : Nombre de couches ?, de quelle taille ? ...
+  \item L'algorithme d'optimisation (SGD, adaboost, adam,...)
+  \item Méthodes de régularisation (norme des paramètres dans la loss, bruitage, dropout, ...)
+  \end{itemize}
+  \begin{minipage}[l]{0.49\linewidth}
+    \begin{center}
+      Régularisation \\
+      $\approx$\\
+      empêcher le surapprentissage
+    \end{center}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+    \imgth[.3]{overfitting}
+  \end{minipage}\hfill
+\end{frame}
+

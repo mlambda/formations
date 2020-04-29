@@ -1,37 +1,39 @@
 \begin{frame}
-  \frametitle{template}
+  \frametitle{Introduction}
+  Arbres qui s'améliorent successivement.
+  \imgth[.4]{tree-training-modes}
 \end{frame}
 
 \begin{frame}
-  \frametitle{template}
-\end{frame}
-
-\begin{frame}
-  \frametitle{template}
-
-  \imgtw[0.1]{logo_mlweek}
-  
+  \frametitle{Idée à retenir}
   \begin{itemize}
-  \item 
-  \item 
-  \item 
-  \item 
+  \item séquence d'arbres qui s'entrainent à corriger les erreurs de
+    l'arbre d'avant
+  \item modélisation de la correction de l'erreur par un pas de
+    descente de gradient pour plus de flexibilité.
   \end{itemize}
+   
+\end{frame}
 
-  \begin{minipage}[l]{0.49\linewidth}
-  \end{minipage}\hfill
-  \begin{minipage}[l]{0.49\linewidth}
-  \end{minipage}\hfill
+\begin{frame}
+  \frametitle{Extensions}
+  \begin{itemize}
+  \item row sampling
+  \item column sampling
+  \item tree structure cost
+  \end{itemize}
+\end{frame}
 
-  \begin{minipage}[l]{0.49\linewidth}
-      \begin{itemize}
-      \item 
-      \item 
-      \item 
-      \item 
-      \end{itemize}
-  \end{minipage}\hfill
-  \begin{minipage}[l]{0.49\linewidth}
-  \end{minipage}\hfill
+\begin{frame}
+  \frametitle{Avantages}
+  \begin{itemize}
+  \item modèle extrêmement performant et versatile
+  \item entrainement parallélisable
+  \end{itemize}
+\end{frame}
 
+\begin{frame}
+  \frametitle{Désavantages}
+  Sujet à l'overfit si pas assez régularisé (tree structure cost) et
+  randomisé (row \& column sampling)
 \end{frame}
