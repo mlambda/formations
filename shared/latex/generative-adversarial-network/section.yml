@@ -1,9 +1,9 @@
 default_titles:
-  intro: "Petit jeu de rapidit\xE9"
+  intro: Petit jeu de rapidité
   models: Generative Adversarial Network (GAN)
 flavors:
   standard:
-  - intro
-  - models
-title: "Des R\xE9seaux Particuliers"
+    - intro
+    - models
+title: Des Réseaux Particuliers
 version: 2

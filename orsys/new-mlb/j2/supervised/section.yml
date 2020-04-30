@@ -1,17 +1,15 @@
-version: 2
-title: Apprentissage supervisé
 default_titles:
+  cost-error-function: Fonction de Coût/Erreur
+  derivation-gradient: Gradient de l'erreur
   naive-bayes: Naive Bayes
-  trees: Arbres de décision
+  nn-intro: Réseau de Neurones
+  optimisation: Optimisation
   random-forest: Random Forest
   regression-lineaire: Regression Linéaire
-  cost-error-function: Fonction de Coût/Erreur
-  optimisation: Optimisation
-  derivation-gradient: Gradient de l'erreur
   regression-logistique: Régression Logistique
-  nn-intro: Réseau de Neurones
   svm: Support Vector Machine
   tp: Travaux Pratiques
+  trees: Arbres de décision
 flavors:
   standard:
     - naive-bayes
@@ -25,3 +23,5 @@ flavors:
     - nn-intro
     - svm
     - tp
+title: Apprentissage supervisé
+version: 2

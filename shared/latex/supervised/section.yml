@@ -1,27 +1,27 @@
 default_titles:
-  cost-error-function: "Fonction de Co\xFBt/Erreur"
+  cost-error-function: Fonction de Coût/Erreur
   derivation-gradient: Gradient de l'erreur
   naive-bayes: Naive Bayes
-  nn-intro: "R\xE9seau de Neurones"
+  nn-intro: Réseau de Neurones
   optimisation: Optimisation
   random-forest: Random Forest
-  regression-lineaire: "Regression Lin\xE9aire"
-  regression-logistique: "R\xE9gression Logistique"
+  regression-lineaire: Regression Linéaire
+  regression-logistique: Régression Logistique
   svm: Support Vector Machine
   tp: Travaux Pratiques
-  trees: "Arbres de d\xE9cision"
+  trees: Arbres de décision
 flavors:
   standard:
-  - naive-bayes
-  - trees
-  - random-forest
-  - regression-lineaire
-  - cost-error-function
-  - optimisation
-  - derivation-gradient
-  - regression-logistique
-  - nn-intro
-  - svm
-  - tp
-title: "Apprentissage supervis\xE9"
+    - naive-bayes
+    - trees
+    - random-forest
+    - regression-lineaire
+    - cost-error-function
+    - optimisation
+    - derivation-gradient
+    - regression-logistique
+    - nn-intro
+    - svm
+    - tp
+title: Apprentissage supervisé
 version: 2

@@ -1,11 +1,11 @@
 default_titles:
   intro: Natural Language Processing (NLP)
-  preprocessing: "Pr\xE9traitements"
+  preprocessing: Prétraitements
   vectors: Vecteurs textuels
 flavors:
   standard:
-  - intro
-  - preprocessing
-  - vectors
+    - intro
+    - preprocessing
+    - vectors
 title: Le traitement du texte
 version: 2

@@ -1,11 +1,11 @@
 default_titles:
-  ethics: "Probl\xE8mes \xE9thiques"
-  generic: "Probl\xE8mes g\xE9n\xE9raux"
-  legal: "Probl\xE8mes l\xE9gaux"
+  ethics: Problèmes éthiques
+  generic: Problèmes généraux
+  legal: Problèmes légaux
 flavors:
   standard:
-  - generic
-  - legal
-  - ethics
-title: "Probl\xE8mes li\xE9s au Machine Learning"
+    - generic
+    - legal
+    - ethics
+title: Problèmes liés au Machine Learning
 version: 2

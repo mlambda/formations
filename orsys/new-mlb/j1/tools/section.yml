@@ -1,9 +1,7 @@
-version: 2
-title: Principaux outils
 default_titles:
-  python: Python
-  notebooks: Notebooks Jupyter
   anaconda: Anaconda
+  notebooks: Notebooks Jupyter
+  python: Python
   tp: Travaux Pratiques
 flavors:
   standard:
@@ -11,3 +9,5 @@ flavors:
     - notebooks
     - anaconda
     - tp
+title: Principaux outils
+version: 2

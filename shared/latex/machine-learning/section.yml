@@ -1,18 +1,18 @@
 default_titles:
   apprentissage: Apprentissage
   bonnes-pratiques: Bonnes Pratiques
-  data-preparation: "Mod\xE9lisation et pr\xE9paration des donn\xE9es"
-  evaluation: "\xC9valuation"
+  data-preparation: Modélisation et préparation des données
+  evaluation: Évaluation
   intro: Introduction
   tp-data: Travaux Pratiques
 flavors:
   standard:
-  - intro
-  - data-preparation
-  - evaluation
-  - apprentissage
-  - bonnes-pratiques
-  - questions
-  - tp-data
+    - intro
+    - data-preparation
+    - evaluation
+    - apprentissage
+    - bonnes-pratiques
+    - questions
+    - tp-data
 title: Machine Learning
 version: 2

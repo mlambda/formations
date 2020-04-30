@@ -4,8 +4,8 @@ default_titles:
   intro: Introduction
 flavors:
   standard:
-  - intro
-  - deep
-  - alphago
+    - intro
+    - deep
+    - alphago
 title: L'apprentissage par renforcement
 version: 2

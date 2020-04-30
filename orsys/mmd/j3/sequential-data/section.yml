@@ -1,9 +1,9 @@
 default_titles:
   sequential-data: Introduction
-  sequential-models: "Mod\xE8les S\xE9quentiels"
+  sequential-models: Modèles Séquentiels
 flavors:
   standard:
-  - sequential-data
-  - sequential-models
-title: "Donn\xE9es s\xE9quentielles"
+    - sequential-data
+    - sequential-models
+title: Données séquentielles
 version: 2

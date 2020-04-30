@@ -1,21 +1,21 @@
 default_titles:
-  attention-model: "Mod\xE8le \xE0 Attention"
-  lstm: "R\xE9seaux \xE0 longue m\xE9moire de court terme"
-  rnn: "R\xE9seaux de neurones r\xE9currents"
+  attention-model: Modèle à Attention
+  lstm: Réseaux à longue mémoire de court terme
+  rnn: Réseaux de neurones récurrents
   rnn-keras: RNN avec Keras
-  rnn-variants: "Variantes de r\xE9seaux r\xE9currents"
-  tp-transformer: 'Travaux Pratiques : Transformer'
+  rnn-variants: Variantes de réseaux récurrents
+  tp-transformer: "Travaux Pratiques : Transformer"
   transformer: Transformer Networks
 flavors:
   standard:
-  - rnn
-  - lstm
-  - rnn-variants
-  - rnn-keras
-  - questions
-  - attention-model
-  - transformer
-  - questions
-  - tp-transformer
-title: "R\xE9seaux de Neurones"
+    - rnn
+    - lstm
+    - rnn-variants
+    - rnn-keras
+    - questions
+    - attention-model
+    - transformer
+    - questions
+    - tp-transformer
+title: Réseaux de Neurones
 version: 2

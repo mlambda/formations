@@ -3,7 +3,7 @@ default_titles:
   tf-intro: TensorFlow
 flavors:
   standard:
-  - tf-intro
-  - keras-intro
+    - tf-intro
+    - keras-intro
 title: TensorFlow et Keras
 version: 2

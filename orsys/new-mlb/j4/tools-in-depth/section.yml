@@ -7,11 +7,11 @@ default_titles:
   spark: Apache Spark
 flavors:
   standard:
-  - hadoop
-  - spark
-  - kaggle
-  - arXiv
-  - github
-  - cloud-computing
+    - hadoop
+    - spark
+    - kaggle
+    - arXiv
+    - github
+    - cloud-computing
 title: Outils
 version: 2

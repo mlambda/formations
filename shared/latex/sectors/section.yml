@@ -1,13 +1,13 @@
 default_titles:
   coding: Informatique
   intro: Introduction
-  sante: "Sant\xE9"
+  sante: Santé
   transport: Transport
 flavors:
   standard:
-  - intro
-  - transport
-  - sante
-  - coding
+    - intro
+    - transport
+    - sante
+    - coding
 title: Les Tendances et les Nouveaux Secteurs
 version: 2

@@ -3,7 +3,7 @@ default_titles:
   intro: Introduction
 flavors:
   standard:
-  - intro
-  - historique
+    - intro
+    - historique
 title: Intelligence Artificielle
 version: 2

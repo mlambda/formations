@@ -1,19 +1,19 @@
 default_titles:
-  algorithme-em: "Esp\xE9rance-Maximisation"
-  anomaly-detection-light: "D\xE9tection d'anomalies"
-  dimensionality-reduction: "R\xE9duction de la dimensionalit\xE9"
+  algorithme-em: Espérance-Maximisation
+  anomaly-detection-light: Détection d'anomalies
+  dimensionality-reduction: Réduction de la dimensionalité
   introduction: Introduction
   kmeans-gaussian: K-Means
-  pca-lda: "R\xE9duction de la dimensionalit\xE9 : Projections lin\xE9aires"
+  pca-lda: "Réduction de la dimensionalité : Projections linéaires"
   tp: Travaux Pratiques
 flavors:
   standard:
-  - introduction
-  - dimensionality-reduction
-  - pca-lda
-  - algorithme-em
-  - kmeans-gaussian
-  - anomaly-detection-light
-  - tp
-title: "Apprentissage non-supervis\xE9"
+    - introduction
+    - dimensionality-reduction
+    - pca-lda
+    - algorithme-em
+    - kmeans-gaussian
+    - anomaly-detection-light
+    - tp
+title: Apprentissage non-supervisé
 version: 2

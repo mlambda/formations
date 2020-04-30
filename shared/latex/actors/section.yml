@@ -4,8 +4,8 @@ default_titles:
   startup: Les startups dans le monde (et un peu en france)
 flavors:
   standard:
-  - gafa
-  - startup
-  - chine
-title: "Les Diff\xE9rents Acteurs du Domaine"
+    - gafa
+    - startup
+    - chine
+title: Les Différents Acteurs du Domaine
 version: 2

@@ -1,5 +1,3 @@
-version: 2
-title: Auto-encodeurs
 default_titles:
   autoencoder: Présentation
   tp: Travaux Pratiques
@@ -7,3 +5,5 @@ flavors:
   standard:
     - autoencoder
     - tp
+title: Auto-encodeurs
+version: 2
