@@ -12,6 +12,9 @@
   sections:
     - title: Machine Learning
       path: machine-learning
+      excludes:
+        - data-preparation
+        - tp-data
 
     - title: Apprentissage supervisé
       path: supervised

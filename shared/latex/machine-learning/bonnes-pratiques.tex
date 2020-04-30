@@ -18,13 +18,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Méta-paramètres et Régularisation}
-  Les méta-paramètres forment l'ensemble des prétraitements,la forme et les contraintes appliquées au modèle \textbf{AVANT} son apprentissage.
-  \begin{itemize}
-  \item Forme : Nombre de couches ?, de quelle taille ? ...
-  \item L'algorithme d'optimisation (SGD, adaboost, adam,...)
-  \item Méthodes de régularisation (norme des paramètres dans la loss, bruitage, dropout, ...)
-  \end{itemize}
+  \frametitle{Régularisation}
   \begin{minipage}[l]{0.49\linewidth}
     \begin{center}
       Régularisation \\
@@ -35,5 +29,25 @@
   \begin{minipage}[l]{0.49\linewidth}
     \imgth[.3]{overfitting}
   \end{minipage}\hfill
+  Techniques variées en fonction du modèle :
+  \begin{itemize}
+  \item Pénalisation de la norme des paramètres
+  \item Bruitage
+  \item Dropout
+  \item …
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Optimisation des méta-paramètres}
+  Méta-paramètres : paramètres \alert{non appris} par le modèle.
+  \begin{exampleblock}{Exemples}
+  \begin{description}
+  \item[Forme] Nombre de couches ? De quelles tailles ? …
+  \item [Optimisation] SGD, AdaBoost, Adam, …
+  \item [Régularisation] Pénalisation de la Norme des paramètres dans la loss, bruitage, dropout, …
+  \end{description}
+  \end{exampleblock}
+  Optimisation par recherche aléatoire ou processus gaussien.
 \end{frame}
 
