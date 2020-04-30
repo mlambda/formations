@@ -152,7 +152,7 @@
 \newcommand{\mintedpy}[1]{%
   \inputminted[fontsize=\footnotesize,bgcolor=pythonbg,framesep=1mm]{python}{code/#1.py}%
   \vspace{-1cm}%
-  \inputminted[fontsize=\footnotesize,bgcolor=returnbg,framesep=1mm]{python}{code/#1.out}%
+  \inputminted[fontsize=\footnotesize,bgcolor=returnbg,framesep=1mm]{python}{code/#1.output}%
 }
 
 \newcommand{\mintedpycode}[1]{%

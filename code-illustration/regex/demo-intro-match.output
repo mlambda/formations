@@ -1,0 +1,6 @@
+manqué  	 a.*s
+capturé 	 ^b
+manqué  	 s$
+manqué  	 a+b
+manqué  	 a{4,5}b
+capturé 	 y*b
