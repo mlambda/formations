@@ -16,3 +16,4 @@ _minted*
 build/
 pdf/
 session-config.yml
+.vscode/
