@@ -1,22 +1,25 @@
-title: Données séquentielles
-includes:
-  - path: sequential-data
-    title: Introduction
-  - path: sequential-models
-    title: Modèles Séquentiels
-  - path: markov-model
-    title: Modèles de Markov
-  - path: hmm-latest
-    title: Modèles de Markov cachés
-  - path: rnn
-    title: Réseaux de neurones récurrents
-  - path: lstm
-    title: Réseaux à longue mémoire de court terme
-  - path: rnn-variants
-    title: Variantes de réseaux récurrents
-  - path: nlp
-    title: Traitement du langage
-  - path: rnn-keras
-    title: RNN avec Keras
-  - path: tp
-    title: Travaux Pratiques
+default_titles:
+  hmm-latest: "Mod\xE8les de Markov cach\xE9s"
+  lstm: "R\xE9seaux \xE0 longue m\xE9moire de court terme"
+  markov-model: "Mod\xE8les de Markov"
+  nlp: Traitement du langage
+  rnn: "R\xE9seaux de neurones r\xE9currents"
+  rnn-keras: RNN avec Keras
+  rnn-variants: "Variantes de r\xE9seaux r\xE9currents"
+  sequential-data: Introduction
+  sequential-models: "Mod\xE8les S\xE9quentiels"
+  tp: Travaux Pratiques
+flavors:
+  standard:
+  - sequential-data
+  - sequential-models
+  - markov-model
+  - hmm-latest
+  - rnn
+  - lstm
+  - rnn-variants
+  - nlp
+  - rnn-keras
+  - tp
+title: "Donn\xE9es s\xE9quentielles"
+version: 2

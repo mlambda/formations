@@ -1,16 +1,19 @@
-title: Apprentissage non-supervisé
-includes:
-  - path: introduction
-    title: Introduction
-  - path: dimensionality-reduction
-    title: Réduction de la dimensionalité
-  - path: pca-lda
-    title: "Réduction de la dimensionalité : Projections linéaires"
-  - path: algorithme-em
-    title: Espérance-Maximisation
-  - path: kmeans-gaussian
-    title: K-Means
-  - path: anomaly-detection-light
-    title: Détection d'anomalies
-  - path: tp
-    title: Travaux Pratiques
+default_titles:
+  algorithme-em: "Esp\xE9rance-Maximisation"
+  anomaly-detection-light: "D\xE9tection d'anomalies"
+  dimensionality-reduction: "R\xE9duction de la dimensionalit\xE9"
+  introduction: Introduction
+  kmeans-gaussian: K-Means
+  pca-lda: "R\xE9duction de la dimensionalit\xE9 : Projections lin\xE9aires"
+  tp: Travaux Pratiques
+flavors:
+  standard:
+  - introduction
+  - dimensionality-reduction
+  - pca-lda
+  - algorithme-em
+  - kmeans-gaussian
+  - anomaly-detection-light
+  - tp
+title: "Apprentissage non-supervis\xE9"
+version: 2

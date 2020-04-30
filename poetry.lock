@@ -12,7 +12,7 @@ description = "Composable command line interface toolkit"
 name = "click"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "7.1.1"
+version = "7.1.2"
 
 [[package]]
 category = "main"
@@ -34,7 +34,7 @@ description = "Tool to handle multiple beamer decks."
 name = "deckz"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "3.6.0"
+version = "4.0.0"
 
 [package.dependencies]
 GitPython = ">=3.1.0,<4.0.0"
@@ -156,7 +156,7 @@ pathtools = ">=0.1.1"
 watchmedo = ["PyYAML (>=3.10)", "argh (>=0.24.1)"]
 
 [metadata]
-content-hash = "6588b904c816e08c5f2aebeed228df231dee8c088776638f92d0dced9bc91bc0"
+content-hash = "a1694642cb35d62bd53001bcb893c13d12ba1726b1344f5192f005d57be757e5"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -165,16 +165,16 @@ appdirs = [
     {file = "appdirs-1.4.3.tar.gz", hash = "sha256:9e5896d1372858f8dd3344faf4e5014d21849c756c8d5701f78f8a103b372d92"},
 ]
 click = [
-    {file = "click-7.1.1-py2.py3-none-any.whl", hash = "sha256:e345d143d80bf5ee7534056164e5e112ea5e22716bbb1ce727941f4c8b471b9a"},
-    {file = "click-7.1.1.tar.gz", hash = "sha256:8a18b4ea89d8820c5d0c7da8a64b2c324b4dabb695804dbfea19b9be9d88c0cc"},
+    {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
+    {file = "click-7.1.2.tar.gz", hash = "sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"},
 ]
 coloredlogs = [
     {file = "coloredlogs-14.0-py2.py3-none-any.whl", hash = "sha256:346f58aad6afd48444c2468618623638dadab76e4e70d5e10822676f2d32226a"},
     {file = "coloredlogs-14.0.tar.gz", hash = "sha256:a1fab193d2053aa6c0a97608c4342d031f1f93a3d1218432c59322441d31a505"},
 ]
 deckz = [
-    {file = "deckz-3.6.0-py3-none-any.whl", hash = "sha256:e0a4028f87d10c4a2a77cb584fb884e99ce603f7fdcfd77c57cd9fd2285c71cb"},
-    {file = "deckz-3.6.0.tar.gz", hash = "sha256:096a9d46b60f8c03ab92e40f0f5e0167073efb407f1aefc875dd87d40c0a5a80"},
+    {file = "deckz-4.0.0-py3-none-any.whl", hash = "sha256:8f82a290f26facba51ded7e42bcfda718edb6c2e6350f9849b4d594a27566458"},
+    {file = "deckz-4.0.0.tar.gz", hash = "sha256:a2875b46e43c27b5506851a5c7543ea916f4776d7272184527a382e9e4b95e48"},
 ]
 gitdb = [
     {file = "gitdb-4.0.4-py3-none-any.whl", hash = "sha256:ba1132c0912e8c917aa8aa990bee26315064c7b7f171ceaaac0afeb1dc656c6a"},

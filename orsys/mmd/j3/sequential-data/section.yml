@@ -1,6 +1,9 @@
-title: Données séquentielles
-includes:
-  - title: Introduction
-    path: sequential-data
-  - title: Modèles Séquentiels
-    path: sequential-models
+default_titles:
+  sequential-data: Introduction
+  sequential-models: "Mod\xE8les S\xE9quentiels"
+flavors:
+  standard:
+  - sequential-data
+  - sequential-models
+title: "Donn\xE9es s\xE9quentielles"
+version: 2

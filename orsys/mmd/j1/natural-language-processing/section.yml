@@ -1,28 +1,28 @@
+default_titles:
+  intro: Natural Language Processing (NLP)
+  pattern: "Manipulation d'Expressions R\xE9guli\xE8res"
+  preprocessing: "Pr\xE9traitements"
+  recommandation-text: Recommandation de Textes
+  similarity-text: "Similarit\xE9s de Textes"
+  tp-help: Quelques liens utiles
+  tp-text-features-engineering: Travaux Pratique Text Mining
+  tp-text-reco-system: Travaux Pratique Recommandation de Texte
+  tp-text-regex: "Travaux pratique Expressions R\xE9guli\xE8res"
+  vectors: Vecteurs textuels
+flavors:
+  standard:
+  - intro
+  - pattern
+  - questions
+  - tp-help
+  - tp-text-regex
+  - preprocessing
+  - vectors
+  - questions
+  - tp-text-features-engineering
+  - similarity-text
+  - recommandation-text
+  - questions
+  - tp-text-reco-system
 title: Le traitement du texte
-includes:
-  - title: Natural Language Processing (NLP)
-    path: intro
-
-  - title: Manipulation d'Expressions Régulières
-    path: pattern
-  - path: questions
-  - title: Quelques liens utiles
-    path: tp-help
-  - title: Travaux pratique Expressions Régulières
-    path: tp-text-regex
-
-  - title: Prétraitements
-    path: preprocessing
-  - title: Vecteurs textuels
-    path: vectors
-  - path: questions
-  - title: Travaux Pratique Text Mining
-    path: tp-text-features-engineering
-
-  - title: Similarités de Textes
-    path: similarity-text
-  - title: Recommandation de Textes
-    path: recommandation-text
-  - path: questions
-  - title: Travaux Pratique Recommandation de Texte
-    path: tp-text-reco-system
+version: 2

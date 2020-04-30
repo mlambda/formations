@@ -3,4 +3,6 @@
   sections:
     - title: Titre
       includes:
+        - path: machine-learning
+          flavor: standard
         - questions

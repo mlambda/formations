@@ -1,12 +1,11 @@
+default_titles:
+  intro: Natural Language Processing (NLP)
+  preprocessing: "Pr\xE9traitements"
+  vectors: Vecteurs textuels
+flavors:
+  standard:
+  - intro
+  - preprocessing
+  - vectors
 title: Le traitement du texte
-tags:
-  normal: intro, preproc, vectos
-  light: intro, preproc
-  tp: tp
-includes:
-  - path: intro
-    title: Natural Language Processing (NLP)
-  - path: preprocessing
-    title: Prétraitements
-  - path: vectors
-    title: Vecteurs textuels
+version: 2

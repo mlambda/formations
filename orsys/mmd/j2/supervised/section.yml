@@ -1,49 +1,40 @@
-title: Apprentissage supervisé
-includes:
-  - title: Naive Bayes
-    path: naive-bayes
-
-  - title: Regression Linéaire
-    path: regression-lineaire
-  - title: Fonction de Coût/Erreur
-    path: cost-error-function
-  - title: Optimisation
-    path: optimisation
-  - title: Gradient de l'erreur
-    path: derivation-gradient
-  - title: Réseau de Neurones
-    path: nn-intro
-  - title: Classification
-    path: classification
-  - title: Régression Logistique
-    path: regression-logistique
-  - path: questions
-  #- title: "Travaux Pratiques : Régression Linéaire"
-  #  path: tp-reg-lin-poly
-
-  - title: Arbres de décision
-    path: trees
-  - title: Random Forest
-    path: random-forest
-  - path: questions
-  - title: Démo Sklearn
-    path: demo-random-forest
-  #- title: "Travaux Pratiques : Random Forest"
-  #  path: tp-random-forest
-  #- title: "Travaux Pratiques : Random Forest"
-  #  path: tp-random-forest-text
-
-  - title: Gradient Boosting
-    path: gradient-boosting
-  - path: questions
-  - title: Démo Sklearn
-    path: demo-gradient-boosting
-
-  - title: Support Vector Machine
-    path: svm
-  - title: Démo Sklearn
-    path: demo-svm
-  #  - title: "Travaux Pratiques : SVM"
-  #    path: tp-svm
-  - title: "Travaux Pratiques : SVM"
-    path: tp-svm-text
+default_titles:
+  classification: Classification
+  cost-error-function: "Fonction de Co\xFBt/Erreur"
+  demo-gradient-boosting: "D\xE9mo Sklearn"
+  demo-random-forest: "D\xE9mo Sklearn"
+  demo-svm: "D\xE9mo Sklearn"
+  derivation-gradient: Gradient de l'erreur
+  gradient-boosting: Gradient Boosting
+  naive-bayes: Naive Bayes
+  nn-intro: "R\xE9seau de Neurones"
+  optimisation: Optimisation
+  random-forest: Random Forest
+  regression-lineaire: "Regression Lin\xE9aire"
+  regression-logistique: "R\xE9gression Logistique"
+  svm: Support Vector Machine
+  tp-svm-text: 'Travaux Pratiques : SVM'
+  trees: "Arbres de d\xE9cision"
+flavors:
+  standard:
+  - naive-bayes
+  - regression-lineaire
+  - cost-error-function
+  - optimisation
+  - derivation-gradient
+  - nn-intro
+  - classification
+  - regression-logistique
+  - questions
+  - trees
+  - random-forest
+  - questions
+  - demo-random-forest
+  - gradient-boosting
+  - questions
+  - demo-gradient-boosting
+  - svm
+  - demo-svm
+  - tp-svm-text
+title: "Apprentissage supervis\xE9"
+version: 2

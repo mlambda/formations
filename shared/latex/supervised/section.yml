@@ -1,24 +1,27 @@
-title: Apprentissage supervisé
-includes:
-  - path: naive-bayes
-    title: Naive Bayes
-  - path: trees
-    title: Arbres de décision
-  - path: random-forest
-    title: Random Forest
-  - path: regression-lineaire
-    title: Regression Linéaire
-  - path: cost-error-function
-    title: Fonction de Coût/Erreur
-  - path: optimisation
-    title: Optimisation
-  - path: derivation-gradient
-    title: Gradient de l'erreur
-  - path: regression-logistique
-    title: Régression Logistique
-  - path: nn-intro
-    title: Réseau de Neurones
-  - path: svm
-    title: Support Vector Machine
-  - path: tp
-    title: Travaux Pratiques
+default_titles:
+  cost-error-function: "Fonction de Co\xFBt/Erreur"
+  derivation-gradient: Gradient de l'erreur
+  naive-bayes: Naive Bayes
+  nn-intro: "R\xE9seau de Neurones"
+  optimisation: Optimisation
+  random-forest: Random Forest
+  regression-lineaire: "Regression Lin\xE9aire"
+  regression-logistique: "R\xE9gression Logistique"
+  svm: Support Vector Machine
+  tp: Travaux Pratiques
+  trees: "Arbres de d\xE9cision"
+flavors:
+  standard:
+  - naive-bayes
+  - trees
+  - random-forest
+  - regression-lineaire
+  - cost-error-function
+  - optimisation
+  - derivation-gradient
+  - regression-logistique
+  - nn-intro
+  - svm
+  - tp
+title: "Apprentissage supervis\xE9"
+version: 2

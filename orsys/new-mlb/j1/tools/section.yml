@@ -1,10 +1,13 @@
+version: 2
 title: Principaux outils
-includes:
-  - path: python
-    title: Python
-  - path: notebooks
-    title: Notebooks Jupyter
-  - path: anaconda
-    title: Anaconda
-  - path: tp
-    title: Travaux Pratiques
+default_titles:
+  python: Python
+  notebooks: Notebooks Jupyter
+  anaconda: Anaconda
+  tp: Travaux Pratiques
+flavors:
+  standard:
+    - python
+    - notebooks
+    - anaconda
+    - tp

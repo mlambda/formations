@@ -1,6 +1,9 @@
+default_titles:
+  historique: Courte histoire de l'IA
+  intro: Introduction
+flavors:
+  standard:
+  - intro
+  - historique
 title: Intelligence Artificielle
-includes:
-  - path: intro
-    title: Introduction
-  - path: historique
-    title: Courte histoire de l'IA
+version: 2

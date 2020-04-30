@@ -1,8 +1,11 @@
-title: Secteurs d'activité
-includes:
-  - path: tendencies-and-new-sectors
-    title: Tendances et secteurs émergents
-  - path: sante
-    title: Santé
-  - path: coding
-    title: Code
+default_titles:
+  coding: Code
+  sante: "Sant\xE9"
+  tendencies-and-new-sectors: "Tendances et secteurs \xE9mergents"
+flavors:
+  standard:
+  - tendencies-and-new-sectors
+  - sante
+  - coding
+title: "Secteurs d'activit\xE9"
+version: 2

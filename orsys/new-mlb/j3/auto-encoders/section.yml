@@ -1,6 +1,9 @@
+version: 2
 title: Auto-encodeurs
-includes:
-  - path: autoencoder
-    title: Présentation
-  - path: tp
-    title: Travaux Pratiques
+default_titles:
+  autoencoder: Présentation
+  tp: Travaux Pratiques
+flavors:
+  standard:
+    - autoencoder
+    - tp

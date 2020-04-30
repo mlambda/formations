@@ -1,6 +1,9 @@
-title: Des Réseaux Particuliers
-includes:
-  - path: intro
-    title: Petit jeu de rapidité
-  - path: models
-    title: Generative Adversarial Network (GAN)
+default_titles:
+  intro: "Petit jeu de rapidit\xE9"
+  models: Generative Adversarial Network (GAN)
+flavors:
+  standard:
+  - intro
+  - models
+title: "Des R\xE9seaux Particuliers"
+version: 2

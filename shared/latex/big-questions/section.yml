@@ -1,8 +1,11 @@
-title: Problèmes liés au Machine Learning
-includes:
-  - path: generic
-    title: Problèmes généraux
-  - path: legal
-    title: Problèmes légaux
-  - path: ethics
-    title: Problèmes éthiques
+default_titles:
+  ethics: "Probl\xE8mes \xE9thiques"
+  generic: "Probl\xE8mes g\xE9n\xE9raux"
+  legal: "Probl\xE8mes l\xE9gaux"
+flavors:
+  standard:
+  - generic
+  - legal
+  - ethics
+title: "Probl\xE8mes li\xE9s au Machine Learning"
+version: 2

@@ -1,10 +1,13 @@
-title: Réseaux de neurones
-includes:
-  - path: intro
-    title: Introduction
-  - path: cnn
-    title: Réseaux à convolutions
-  - path: tp-nn
-    title: "Travaux Pratiques : Tensorflow et Keras"
-  - path: tp-cnn
-    title: "Travaux Pratiques : CNN et Keras"
+default_titles:
+  cnn: "R\xE9seaux \xE0 convolutions"
+  intro: Introduction
+  tp-cnn: 'Travaux Pratiques : CNN et Keras'
+  tp-nn: 'Travaux Pratiques : Tensorflow et Keras'
+flavors:
+  standard:
+  - intro
+  - cnn
+  - tp-nn
+  - tp-cnn
+title: "R\xE9seaux de neurones"
+version: 2

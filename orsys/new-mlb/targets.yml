@@ -3,9 +3,11 @@
   sections:
     - about
     - questions
-    - tools
+    - path: tools
+      flavor: standard
     - questions
     - path: machine-learning
+      flavor: standard
       excludes:
         - tp
     - questions
@@ -13,33 +15,42 @@
 - name: j2
   title: Jour 2 --- Algorithmes 1/2
   sections:
-    - unsupervised
+    - path: unsupervised
+      flavor: standard
     - questions
-    - supervised
+    - path: supervised
+      flavor: standard
     - questions
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
   sections:
-    - neural-networks
+    - path: neural-networks
+      flavor: standard
     - questions
-    - sequential-data
+    - path: sequential-data
+      flavor: standard
     - questions
-    - auto-encoders
+    - path: auto-encoders
+      flavor: standard
     - questions
 
 - name: j4
   title: Jour 4 --- Ingénierie
   sections:
-    - actors
+    - path: actors
+      flavor: standard
     - questions
-    - tools-in-depth
+    - path: tools-in-depth
+      flavor: standard
     - questions
     - engineering-practices
     - questions
-    - big-questions
+    - path: big-questions
+      flavor: standard
     - questions
-    - sectors
+    - path: sectors
+      flavor: standard
     - questions
     - demo-spark-tf-keras-cnn
     - questions

@@ -1,14 +1,17 @@
+default_titles:
+  arXiv: ArXiv
+  cloud-computing: Cloud computing
+  github: GitHub
+  hadoop: Apache Hadoop
+  kaggle: Kaggle
+  spark: Apache Spark
+flavors:
+  standard:
+  - hadoop
+  - spark
+  - kaggle
+  - arXiv
+  - github
+  - cloud-computing
 title: Outils
-includes:
-  - path: hadoop
-    title: Apache Hadoop
-  - path: spark
-    title: Apache Spark
-  - path: kaggle
-    title: Kaggle
-  - path: arXiv
-    title: ArXiv
-  - path: github
-    title: GitHub
-  - path: cloud-computing
-    title: Cloud computing
+version: 2

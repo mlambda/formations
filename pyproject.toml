@@ -9,7 +9,7 @@ homepage = "https://github.com/m09/formations"
 [tool.poetry.dependencies]
 python = "^3.6"
 Pygments = "^2.6.1"
-deckz = "^3.6.0"
+deckz = "^4.0.0"
 
 [build-system]
 requires = ["poetry>=0.12"]

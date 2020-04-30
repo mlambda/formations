@@ -1,6 +1,9 @@
+default_titles:
+  data: "Des probl\xE9matiques vari\xE9es"
+  models: "Les r\xE9seaux de convolutions"
+flavors:
+  standard:
+  - data
+  - models
 title: Le traitement d'images
-includes:
-  - path: data
-    title: Des problématiques variées
-  - path: models
-    title: Les réseaux de convolutions
+version: 2

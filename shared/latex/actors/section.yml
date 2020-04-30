@@ -1,8 +1,11 @@
-title: Les Différents Acteurs du Domaine
-includes:
-  - path: gafa
-    title: La recherche dans le monde
-  - path: startup
-    title: Les startups dans le monde (et un peu en france)
-  - path: chine
-    title: Le cas particulier de la Chine
+default_titles:
+  chine: Le cas particulier de la Chine
+  gafa: La recherche dans le monde
+  startup: Les startups dans le monde (et un peu en france)
+flavors:
+  standard:
+  - gafa
+  - startup
+  - chine
+title: "Les Diff\xE9rents Acteurs du Domaine"
+version: 2

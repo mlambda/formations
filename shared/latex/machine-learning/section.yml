@@ -1,15 +1,18 @@
+default_titles:
+  apprentissage: Apprentissage
+  bonnes-pratiques: Bonnes Pratiques
+  data-preparation: "Mod\xE9lisation et pr\xE9paration des donn\xE9es"
+  evaluation: "\xC9valuation"
+  intro: Introduction
+  tp-data: Travaux Pratiques
+flavors:
+  standard:
+  - intro
+  - data-preparation
+  - evaluation
+  - apprentissage
+  - bonnes-pratiques
+  - questions
+  - tp-data
 title: Machine Learning
-includes:
-  - path: intro
-    title: Introduction
-  - path: data-preparation
-    title: Modélisation et préparation des données
-  - path: evaluation
-    title: Évaluation
-  - path: apprentissage
-    title: Apprentissage
-  - path: bonnes-pratiques
-    title: Bonnes Pratiques
-  - path: questions
-  - path: tp-data
-    title: Travaux Pratiques
+version: 2

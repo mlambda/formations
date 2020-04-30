@@ -1,8 +1,9 @@
+default_titles:
+  keras-intro: Keras
+  tf-intro: TensorFlow
+flavors:
+  standard:
+  - tf-intro
+  - keras-intro
 title: TensorFlow et Keras
-includes:
-  - title: TensorFlow
-    path: tf-intro
-  #- title: Régression linéaire en Tensorflow
-  #  path: tf-reg-lin
-  - title: Keras
-    path: keras-intro
+version: 2
