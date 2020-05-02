@@ -1,25 +1,24 @@
+title: Données séquentielles
 default_titles:
-  hmm-latest: Modèles de Markov cachés
-  lstm: Réseaux à longue mémoire de court terme
-  markov-model: Modèles de Markov
-  nlp: Traitement du langage
-  rnn: Réseaux de neurones récurrents
-  rnn-keras: RNN avec Keras
-  rnn-variants: Variantes de réseaux récurrents
   sequential-data: Introduction
   sequential-models: Modèles Séquentiels
-  tp: Travaux Pratiques
+  markov-model: Modèles de Markov
+  hmm: Modèles de Markov cachés
+
 flavors:
-  standard:
+  all:
     - sequential-data
     - sequential-models
     - markov-model
-    - hmm-latest
-    - rnn
-    - lstm
-    - rnn-variants
-    - nlp
-    - rnn-keras
-    - tp
-title: Données séquentielles
+    - hmm
+  full:
+    - sequential-data
+    - sequential-models
+    - markov-model
+    - hmm
+    - questions
+  intro:
+    - sequential-data
+    - sequential-models
+    - questions
 version: 2

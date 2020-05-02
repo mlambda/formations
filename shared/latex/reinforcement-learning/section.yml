@@ -1,11 +1,15 @@
+title: L'apprentissage par renforcement
 default_titles:
-  alphago: Alphago
-  deep: Deep Learning
   intro: Introduction
+  deep: Deep Learning
+  alphago: Alphago
 flavors:
-  standard:
+  all:
     - intro
     - deep
     - alphago
-title: L'apprentissage par renforcement
+  deepalpha:
+    - intro
+    - deep
+    - alphago
 version: 2

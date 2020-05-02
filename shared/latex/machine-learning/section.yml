@@ -1,12 +1,13 @@
+title: Machine Learning
 default_titles:
-  apprentissage: Apprentissage
-  bonnes-pratiques: Bonnes Pratiques
-  data-preparation: Modélisation et préparation des données
-  evaluation: Évaluation
   intro: Introduction
+  data-preparation: Modélisation et préparation des données
+  apprentissage: Apprentissage
+  evaluation: Évaluation
+  bonnes-pratiques: Bonnes Pratiques
   tp-data: Travaux Pratiques
 flavors:
-  standard:
+  all:
     - intro
     - data-preparation
     - evaluation
@@ -14,5 +15,25 @@ flavors:
     - bonnes-pratiques
     - questions
     - tp-data
-title: Machine Learning
+  full:
+    - intro
+    - data-preparation
+    - evaluation
+    - apprentissage
+    - bonnes-pratiques
+    - questions
+    - tp-data
+  no-tp:
+    - intro
+    - data-preparation
+    - evaluation
+    - apprentissage
+    - bonnes-pratiques
+    - questions
+  intro:
+    - intro
+    - evaluation
+    - apprentissage
+    - bonnes-pratiques
+    - questions
 version: 2

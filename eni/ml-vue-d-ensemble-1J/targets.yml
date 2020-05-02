@@ -7,38 +7,35 @@
     - path: questions
 
     - path: intelligence-artificielle
+      flavor: intro
 
-    - title: "Les mécanismes du Machine Learning"
-      path: machine-learning
-      excludes:
-        - tp
+    - path: machine-learning
+      flavor: intro
 
-    - title: "Les Réseaux de neurones"
-      path: nn-intro
+    - path: neural-networks
+      flavor: intro-cnn
 
-    - path: cnn
-
-    - title: "Le traitement de séquences"
-      path: sequential-data
-      excludes:
-        - sequential-models
-        - markov-model
-        - hmm-latest
-        - nlp
-        - rnn-keras
-        - tp
+    - path: sequential-data
+      flavor: intro
 
     - path: natural-language-processing
+      flavor: intro
 
     - path: reinforcement-learning
+      flavor: deepalpha
 
-    - path: generative-adversarial-network
+    - path: neural-networks
+      title: Des réseaux particuliers
+      flavor: gan-intro
 
     - path: big-questions
+      flavor: full
 
-    - title: "Développement d'un projet en Machine Learning"
-      path: engineering
+    - path: engineering
+      flavor: mlcraftmyass
 
     - path: actors
+      flavor: seminaire
 
     - path: sectors
+      flavor: seminaire

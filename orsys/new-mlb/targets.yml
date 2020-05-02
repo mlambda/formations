@@ -3,54 +3,54 @@
   sections:
     - about
     - questions
+
     - path: tools
-      flavor: standard
-    - questions
+      flavor: init-python
+
     - path: machine-learning
-      flavor: standard
-      excludes:
-        - tp
-    - questions
+      flavor: no-tp
 
 - name: j2
   title: Jour 2 --- Algorithmes 1/2
   sections:
     - path: unsupervised
-      flavor: standard
-    - questions
+      flavor: full
+
     - path: supervised
       flavor: standard
-    - questions
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
   sections:
     - path: neural-networks
-      flavor: standard
-    - questions
+      flavor: cnn
+
     - path: sequential-data
-      flavor: standard
-    - questions
+      flavor: full
+
+    - path: natural-language-processing
+      flavor: intro-nn
+
     - path: auto-encoders
-      flavor: standard
-    - questions
+      flavor: full
 
 - name: j4
   title: Jour 4 --- Ingénierie
   sections:
     - path: actors
-      flavor: standard
-    - questions
-    - path: tools-in-depth
-      flavor: standard
-    - questions
-    - engineering-practices
-    - questions
+      flavor: gafa
+
+    - path: tools
+      flavor: in-depth
+
+    - path: engineering
+      flavor: mlcraftmyass
+
     - path: big-questions
-      flavor: standard
-    - questions
+      flavor: full
+
     - path: sectors
-      flavor: standard
-    - questions
-    - demo-spark-tf-keras-cnn
-    - questions
+      flavor: light
+
+    - path: tools
+      flavor: demo-spark

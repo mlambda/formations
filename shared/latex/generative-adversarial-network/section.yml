@@ -1,9 +1,0 @@
-default_titles:
-  intro: Petit jeu de rapidité
-  models: Generative Adversarial Network (GAN)
-flavors:
-  standard:
-    - intro
-    - models
-title: Des Réseaux Particuliers
-version: 2

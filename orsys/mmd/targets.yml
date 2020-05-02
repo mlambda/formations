@@ -6,27 +6,34 @@
 
     - title: Traitements Automatique du Langage
       path: natural-language-processing
+      flavor: full
 
 - name: j2
   title: Jour 2 --- Classification Supervisée de Texte
   sections:
     - title: Machine Learning
       path: machine-learning
-      excludes:
-        - data-preparation
-        - tp-data
+      flavor: intro
 
     - title: Apprentissage supervisé
       path: supervised
+      flavor: text
 
 - name: j3
   title: Jour 3 --- NLP et Deep Learning
   sections:
     - title: Données séquentielles
       path: sequential-data
+      flavor: intro
 
     - title: TensorFlow Keras
       path: tf-keras-intro
+      flavor: intro
 
-    - title: Réseaux Réccurents et Transformer Network
+    - title: Réseaux Réccurents
       path: neural-networks
+      flavor: recurrent-intro
+
+    - title: Transformer Network
+      path: neural-networks
+      flavor: transformer

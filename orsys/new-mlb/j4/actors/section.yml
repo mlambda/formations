@@ -1,7 +1,0 @@
-default_titles:
-  gafa: Industriels
-flavors:
-  standard:
-    - gafa
-title: Acteurs du Machine Learning
-version: 2

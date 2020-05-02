@@ -1,0 +1,9 @@
+title: Ingénierie du Machine Learning
+default_titles:
+  engineering: Bonnes pratiques
+flavors:
+  all:
+    - engineering
+  mlcraftmyass:
+    - engineering
+version: 2

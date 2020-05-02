@@ -1,0 +1,159 @@
+\begin{frame}
+  \frametitle{Introduction}
+  Caputre et manipulation de chaînes de caractères par le biais de motifs génériques. \\
+  \newline
+  Exemple : Rajouter un espace après chaque ponctuation (si il n'y en as pas déjà) \\
+  \newline
+  "Le chat mange,délicatement, ses croquettes.Jean est attendri." \\
+  $\rightarrow$ \\
+  "Le chat mange, délicatement, ses croquettes. Jean est attendri. " \\
+\end{frame}
+
+\begin{frame}
+  \frametitle{Utilisations}
+  Une fois le motif capturé, on peut :
+  \begin{itemize}
+  \item supprimer
+  \item modifier
+  \item réutiliser
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Regex en Python : Les caractères spéciaux}
+  \begin{itemize}
+  \item \makebox[1cm][c]{\^{}} début de ligne (ou négation dans un ensemble)
+  \item \makebox[1cm][c]{\$} fin de ligne
+  \item \makebox[1cm][c]{.} joker (capture n'importe quel caractère) 
+  \item \makebox[1cm][c]{[} ouverture d'un ensemble de caractère
+  \item \makebox[1cm][c]{]} fermeture d'un ensemble de caractère
+  \item \makebox[1cm][c]{(} ouverture de groupe de capture
+  \item \makebox[1cm][c]{)} fermeture de groupe de capture
+  \item \makebox[1cm][c]{?} de 0 à 1 occurence du motif
+  \item \makebox[1cm][c]{*} de 0 à $\infty$ occurences du motif
+  \item \makebox[1cm][c]{+} de 1 à $\infty$ occurences du motif
+  \item \makebox[1cm][c]{\{} ouverture d'intervalle de répétition du motif
+  \item \makebox[1cm][c]{\}} fermeture d'intervalle de répétition du motif
+  \item \makebox[1cm][c]{\textbackslash} caractère spécialement spécial
+  \item \makebox[1cm][c]{\textbar} OU logique dans un groupe de capture
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{re.match}
+  \mintedpy{regex/demo-intro-match}
+\end{frame}
+
+\begin{frame}
+  \frametitle{re.search}
+  \mintedpy{regex/demo-intro-search}
+\end{frame}
+
+\begin{frame}
+  \frametitle{re.search}
+  \mintedpy{regex/demo-search}
+\end{frame}
+
+\begin{frame}
+  \frametitle{re.findall}
+  \mintedpy{regex/demo-findall}
+\end{frame}
+
+\begin{frame}
+  \frametitle{re.finditer}
+  \mintedpy{regex/demo-finditer}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Le caractère \textbackslash}
+  '\textbackslash' est un caractère de contôle spécial. \\
+  Permet de définir des groupes de caractères usuels :
+  \begin{itemize}
+  \item \textbackslash d : caractère numérique $\iff$ {[0-9]}
+  \item \textbackslash D : caractère non-numérique $\iff$ {[\^{}0-9]}
+  \item \textbackslash s : caractère "blanc" $\iff$ {[ \textbackslash t\textbackslash n\textbackslash r\textbackslash f\textbackslash v]}
+  \item \textbackslash S : caractère non-"blanc" $\iff$ {[\^{} \textbackslash t\textbackslash n\textbackslash r\textbackslash f\textbackslash v]}
+  \item \textbackslash w : caractère alpha-numérique $\iff$ {[a-zA-Z0-9\_]}
+  \item \textbackslash W : caractère non-alpha-numérique $\iff$ {[\^{}a-zA-Z0-9\_]}
+  \end{itemize}
+  Plus généralement \textbackslash permet de capturer les caractères spéciaux (ex: \textbackslash . pour capturer le point)
+\end{frame}
+
+\begin{frame}
+  \frametitle{Chaîne de caractère brute}
+  Python utilise par défaut des chaînes de caractères littérale : \textbackslash est déjà un caractère spécial...
+  \mintedpy{regex/demo-str-lit-brut}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Chaîne de caractère brute}
+  \mintedpy{regex/demo-pattern-brut}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Compilation de pattern : Flag}
+  Rendre insensible à la casse
+  \mintedpy{regex/demo-pattern-compile-flag-ignorecase}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Compilation de pattern : Flag}
+  Forcer \textbackslash w à fonctionner en mode ASCII
+  \mintedpy{regex/demo-pattern-compile-flag-ascii}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Compilation de pattern : Flag}
+  D'autre Flags :
+  \begin{itemize}
+  \item re.DOTALL le caractère spécial '.' capture aussi les retour chariot
+  \item re.LOCALE utilisation de la variable LOCALE de langage pour les captures
+  \item re.MULTILINE Correspondance multi-lignes, affecte \^{} et \$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Compilation de pattern : Flag}
+  Permet l'écriture d'expression régulière "lisible"
+  \mintedpy{regex/demo-pattern-compile-flag-verbose}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Groupe de capture}
+  \mintedpy{regex/demo-groups}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Répétition de groupe}
+  \mintedpy{regex/demo-groups-repeat}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Remplacements}
+  \mintedpy{regex/demo-replace}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Remplacements avec groupes}
+  Réutilisation des groupes de capture dans la chaîne de remplacement :
+  \mintedpy{regex/demo-replace-groups}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tokenisation : Split}
+  \mintedpy{regex/demo-split}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Caractères accentués et spéciaux}
+  \mintedpy{regex/demo-special-character}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pour aller plus loin (ou plus vite)}
+  Il existe encore beaucoup de subtilités et techniques avancées...\\
+  \newline
+  Beaucoup de gros fichiers ? `sed` reste la solution optimale depuis les années 70.
+\end{frame}
+

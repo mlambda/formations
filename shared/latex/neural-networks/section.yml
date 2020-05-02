@@ -1,13 +1,68 @@
+title: Réseaux de Neurones
 default_titles:
-  cnn: Réseaux à convolutions
   intro: Introduction
-  tp-cnn: "Travaux Pratiques : CNN et Keras"
   tp-nn: "Travaux Pratiques : Tensorflow et Keras"
+  cnn-data: Traitement d'image
+  cnn-model: Réseaux de convolutions
+  tp-cnn: "Travaux Pratiques : CNN et Keras"
+  gan-intro: Petit jeu de rapidité
+  gan-models: Generative Adversarial Network (GAN)
+  rnn: Réseaux de neurones récurrents
+  lstm: Réseaux à longue mémoire de court terme
+  rnn-variants: Variantes de réseaux récurrents
+  rnn-keras: RNN avec Keras
+  tp-rnn: "Travaux Pratiques : RNN"
+  transformer: Transformer Networks
+  attention-model: Modèle à Attention
+  tp-transformer: "Travaux Pratiques : Transformer"
 flavors:
-  standard:
+  all:
     - intro
-    - cnn
+    - tp-nn
+    - cnn-data
+    - cnn-model
+    - tp-cnn
+    - gan-intro
+    - gan-model
+    - rnn
+    - lstm
+    - rnn-variants
+    - rnn-keras
+    - questions
+    - tp-rnn
+    - attention-model
+    - transformer
+    - questions
+    - tp-transformer
+  intro:
+    - intro
+    - questions
+  recurrent-intro:
+    - rnn
+    - lstm
+    - rnn-variants
+    - rnn-keras
+    - questions
+  transformer:
+    - attention-model
+    - transformer
+    - questions
+    - tp-transformer
+  cnn:
+    - intro
+    - cnn-data
+    - cnn-model
+    - questions
     - tp-nn
     - tp-cnn
-title: Réseaux de neurones
+  intro-cnn:
+    - intro
+    - cnn-data
+    - cnn-model
+    - questions
+  gan-intro:
+    - gan-intro
+    - gan-model
+    - questions
+
 version: 2

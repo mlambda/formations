@@ -1,9 +1,13 @@
+title: Auto-encodeurs
 default_titles:
   autoencoder: Présentation
   tp: Travaux Pratiques
 flavors:
-  standard:
+  all:
     - autoencoder
     - tp
-title: Auto-encodeurs
+  full:
+    - autoencoder
+    - tp
+    - questions
 version: 2

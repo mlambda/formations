@@ -1,9 +1,12 @@
+title: Intelligence Artificielle
 default_titles:
   historique: Courte histoire de l'IA
   intro: Introduction
 flavors:
-  standard:
+  all:
     - intro
     - historique
-title: Intelligence Artificielle
+  intro:
+    - intro
+    - historique
 version: 2

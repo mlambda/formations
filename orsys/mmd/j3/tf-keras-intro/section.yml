@@ -1,9 +1,0 @@
-default_titles:
-  keras-intro: Keras
-  tf-intro: TensorFlow
-flavors:
-  standard:
-    - tf-intro
-    - keras-intro
-title: TensorFlow et Keras
-version: 2

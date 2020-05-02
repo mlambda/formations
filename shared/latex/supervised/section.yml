@@ -1,27 +1,86 @@
+title: Apprentissage supervisé
 default_titles:
+  naive-bayes: Naive Bayes
+  regression-lineaire: Regression Linéaire
   cost-error-function: Fonction de Coût/Erreur
   derivation-gradient: Gradient de l'erreur
-  naive-bayes: Naive Bayes
-  nn-intro: Réseau de Neurones
   optimisation: Optimisation
-  random-forest: Random Forest
-  regression-lineaire: Regression Linéaire
+  nn-intro: Réseau de Neurones
+  classification: Classification
   regression-logistique: Régression Logistique
-  svm: Support Vector Machine
-  tp: Travaux Pratiques
+  tp-reg-lin-poly: "Travaux Pratiques : Régression Linéaire"
   trees: Arbres de décision
+  random-forest: Random Forest
+  demo-random-forest: Démo Sklearn
+  tp-random-forest: "Travaux Pratiques : Random Forest"
+  tp-random-forest-text: "Travaux Pratiques : Random Forest"
+  gradient-boosting: Gradient Boosting
+  demo-gradient-boosting: Démo Sklearn
+  svm: Support Vector Machine
+  demo-svm: Démo Sklearn
+  tp-svm: "Travaux Pratiques : SVM"
+  tp-svm-text: "Travaux Pratiques : SVM"
 flavors:
-  standard:
+  all:
     - naive-bayes
-    - trees
-    - random-forest
     - regression-lineaire
     - cost-error-function
     - optimisation
     - derivation-gradient
-    - regression-logistique
     - nn-intro
+    - classification
+    - regression-logistique
+    - questions
+    - tp-reg-lin-poly
+    - trees
+    - random-forest
+    - questions
+    - demo-random-forest
+    - tp-random-forest
+    - tp-random-forest-text
+    - gradient-boosting
+    - questions
+    - demo-gradient-boosting
     - svm
-    - tp
-title: Apprentissage supervisé
+    - demo-svm
+    - tp-svm
+    - tp-svm-text
+  standard:
+    - naive-bayes
+    - regression-lineaire
+    - cost-error-function
+    - optimisation
+    - derivation-gradient
+    - nn-intro
+    - classification
+    - regression-logistique
+    - questions
+    - tp-reg-lin-poly
+    - svm
+    - demo-svm
+    - trees
+    - random-forest
+    - questions
+    - demo-random-forest
+    - tp-random-forest
+  text:
+    - naive-bayes
+    - regression-lineaire
+    - cost-error-function
+    - optimisation
+    - derivation-gradient
+    - nn-intro
+    - classification
+    - regression-logistique
+    - questions
+    - trees
+    - random-forest
+    - questions
+    - demo-random-forest
+    - gradient-boosting
+    - questions
+    - demo-gradient-boosting
+    - svm
+    - demo-svm
+    - tp-svm-text
 version: 2

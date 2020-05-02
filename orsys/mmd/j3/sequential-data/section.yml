@@ -1,9 +1,0 @@
-default_titles:
-  sequential-data: Introduction
-  sequential-models: Modèles Séquentiels
-flavors:
-  standard:
-    - sequential-data
-    - sequential-models
-title: Données séquentielles
-version: 2
