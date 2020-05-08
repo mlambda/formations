@@ -15,16 +15,13 @@ flavors:
     - ml-nlp
     - usages-nlp
     - pattern
-    - questions
     - tp-help
     - tp-text-regex
     - preprocessing
     - vectors
-    - questions
     - tp-text-features-engineering
     - similarity-text
     - recommandation-text
-    - questions
     - tp-text-reco-system
   full:
     - ml-nlp
