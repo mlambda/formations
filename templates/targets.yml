@@ -1,8 +1,6 @@
 - name: j1
   title: Jour 1 --- Titre
   sections:
-    - title: Titre
-      includes:
-        - path: machine-learning
-          flavor: standard
-        - questions
+    - path: machine-learning
+      flavor: standard
+    - questions
