@@ -1,12 +1,15 @@
 title: Réseaux de Neurones
 default_titles:
   intro: Introduction
+  optimize: "Optimisation"
+  deep-optimize: "Optimisation de Réseaux Profond"
+  regularisation: "Régularisation"
   tp-nn: "Travaux Pratiques : Tensorflow et Keras"
+  gan-intro: Petit jeu de rapidité
+  gan-models: Generative Adversarial Network (GAN)
   cnn-data: Traitement d'image
   cnn-model: Réseaux de convolutions
   tp-cnn: "Travaux Pratiques : CNN et Keras"
-  gan-intro: Petit jeu de rapidité
-  gan-models: Generative Adversarial Network (GAN)
   rnn: Réseaux de neurones récurrents
   lstm: Réseaux à longue mémoire de court terme
   rnn-variants: Variantes de réseaux récurrents
@@ -18,6 +21,9 @@ default_titles:
 flavors:
   all:
     - intro
+    - optimize
+    - deep-optimize
+    - regularisation
     - tp-nn
     - cnn-data
     - cnn-model
@@ -32,7 +38,6 @@ flavors:
     - tp-rnn
     - attention-model
     - transformer
-    - questions
     - tp-transformer
   intro:
     - intro
@@ -50,6 +55,9 @@ flavors:
     - tp-transformer
   cnn:
     - intro
+    - optimize
+    - deep-optimize
+    - regularisation
     - cnn-data
     - cnn-model
     - questions

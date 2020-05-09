@@ -1,0 +1,142 @@
+
+\begin{frame}
+  \frametitle{Utilité}
+  \begin{itemize}
+  \item description et compréhension des données
+  \item correction pour faciliter les traitements
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Types de variables}
+  \imgtw{variables}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hypothèse}
+
+  Pré-requis pour les mesures statistiques qui suivent (et la plupart
+  du machine learning) :
+  \begin{itemize}
+  \item les données \textbf{doivent être issues d'une même loi}
+  \item chaque échantillon doit être \textbf{indépendant} des autres
+  \item \red{pas évident en pratique !} \pause \green{Pourquoi ?}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Variance}
+  Mesure la dispersion d'une série statistique (ou d'une variable) :
+
+  \[
+    V(X) = \mathbb{E}\left[(X - \mathbb{E}[X])^2\right]
+  \]
+
+  Pour la calculer :
+
+  \[
+    V(X) = \frac{1}{n}\sum_{i = 1}^{n}(x_i - \bar{x})^2
+  \]
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Écart-type}
+  Racine carrée de la variance
+
+  \[
+    \sigma(X) = \sqrt{V(X)}
+  \]
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Écart-type — règle des 68, 95 et 99,7}
+
+  Pour les lois normales :
+
+  \imgth[.7]{68-95-99,7}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Quartile}
+
+  Les quartiles ($Q_1$, $Q_2$ et $Q_3$) divisent les données en 4
+  intervalles contenant le même nombre d'observations.
+
+  Déclinable en quantile de taille arbitraire (décile, percentile).
+
+  \pause \green{Que veut dire être dans le 95\ieme{} percentile ?}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Boxplot}
+
+  \imgth[.9]{boxplot}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Covariance}
+  Mesure la variabilité jointe de deux variables aléatoires :
+
+  \[
+    V(X) = \mathbb{E}\left[(X - \mathbb{E}[X])(X - \mathbb{E}[X])\right]
+  \]
+  \[
+    \cov(X, Y) = \mathbb{E}\left[(X - \mathbb{E}[X])(Y - \mathbb{E}[Y])\right]
+  \]
+
+  Pour la calculer :
+
+  \[
+    \cov(X, Y) = \frac{1}{n}\sum_{i = 1}^{n}(x_i - \bar{x})(y_i - \bar{y})
+  \]
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Corrélation}
+  Covariance divisée par le produit des écart-types :
+
+  \[
+    \corr(X, Y) = \frac{\cov(X, Y)}{\sigma_X\sigma_Y}
+  \]
+
+  \green{Intérêt ?} \pause Pas d'unité.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Test de normalité}
+
+  Pour tester (et corriger) la normalité d'une distribution, on
+  utilise deux mesures :
+
+  \begin{itemize}
+  \item l'asymétrie (\textit{skew})
+  \item le kurtosis
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Asymétrie}
+
+  \imgtw{skew}
+
+  \[
+    \asym(X) = \mathbb{E} \left[\left(\frac{X - \bar{X}}{\sigma}\right)^3\right]
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Kurtosis}
+
+  \imgth[.5]{kurtosis}
+
+  \[
+    \kurt(X) = \mathbb{E} \left[\left(\frac{X - \mu}{\sigma}\right)^4\right]
+  \]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transformation de Box-Cox}
+  Asymétrie et kurtosis peuvent se corriger avec la transformation de
+  Box-Cox ou des transformations log.
+\end{frame}

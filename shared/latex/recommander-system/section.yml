@@ -1,0 +1,28 @@
+title: "Système de Recommendation"
+default_titles:
+  intro: "Systèmes de Recommendation"
+  filtrage-colaboratif: "Filtrage Collaboratif"
+  filtrage-colaboratif-user-based: "Filtrage Collaboratif 'User Based'"
+  filtrage-colaboratif-item-based: "Filtrage Collaboratif 'Item Based'"
+  filtrage-colaboratif-extend: "Filtrage Collaboratif - Aujourd'hui"
+  filtrage-colaboratif-conclusion: "Conclusions"
+  tp-recommander-system: "Travaux Pratiques"
+flavors:
+  all:
+    - intro
+    - filtrage-colaboratif
+    - filtrage-colaboratif-user-based
+    - filtrage-colaboratif-item-based
+    - filtrage-colaboratif-extend
+    - filtrage-colaboratif-conclusion
+    - tp-recommander-system
+  full:
+    - intro
+    - filtrage-colaboratif
+    - filtrage-colaboratif-user-based
+    - filtrage-colaboratif-item-based
+    - filtrage-colaboratif-extend
+    - filtrage-colaboratif-conclusion
+    - questions
+    - tp-recommander-system
+version: 2

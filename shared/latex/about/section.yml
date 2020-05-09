@@ -1,10 +1,10 @@
 title: Titre à adapter à la formation
+default_titles:
 flavors:
-  ml-5j:
+  ml5j:
     - formateur
     - description-ml5j
     - ressources-eni
     - horaires-5j
     - tour2table
-    - objectifs-ml5j
 version: 2

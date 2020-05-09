@@ -3,50 +3,35 @@
   sections:
     - path: about
       title: "A propos de votre formation"
-      flavor: ml-5j
-    - questions
+      flavor: ml5j
+
+    - path: machine-learning
+      flavor: ml5j
 
 - name: j2
   title: Jour 2 --- Algorithmes 1/2
   sections:
-    - path: unsupervised
-      flavor: full
-
     - path: supervised
       flavor: standard
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
   sections:
-    - path: neural-networks
-      flavor: cnn
-
-    - path: sequential-data
-      flavor: full
-
-    - path: natural-language-processing
-      flavor: intro-nn
-
-    - path: auto-encoders
+    - path: unsupervised
       flavor: full
 
 - name: j4
-  title: Jour 4 --- Ingénierie
+  title: Jour 4 --- Réseaux de neurones
   sections:
-    - path: actors
-      flavor: gafa
+    - path: neural-networks
+      flavor: cnn
 
-    - path: tools
-      flavor: in-depth
-
+- name: j5
+  title: Jour 5 --- Bonnes Pratiques. Systèmes de Recommendation
+  sections:
     - path: engineering
       flavor: mlcraftmyass
-
     - path: big-questions
       flavor: full
-
-    - path: sectors
-      flavor: light
-
-    - path: tools
-      flavor: demo-spark
+    - path: recommander-system
+      flavor: full

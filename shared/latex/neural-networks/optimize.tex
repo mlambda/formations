@@ -1,0 +1,50 @@
+\begin{frame}
+  \frametitle{Optimisation des hyperparamètres}
+  \begin{minipage}[l]{0.49\linewidth}
+  \imgtw[0.9]{deep-net}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+  Les hyperparamètres :
+  \begin{itemize}
+  \item Le learning rate
+  \item La taille de batch
+  \item Le nombre de couches
+  \item La taille des couches
+  \end{itemize}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}
+  \frametitle{Optimisation du learning rate}
+  \begin{center}Learning Rate\end{center}
+  \begin{minipage}[l]{0.49\linewidth}
+    \begin{center}trop grand\end{center}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+    \begin{center}trop petit\end{center}
+  \end{minipage}\hfill
+  \imgtw[0.8]{learning-rate-big-small}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Optimisation du learning rate}
+  Utilisation d'une échelle logarithmique (dans un premier temps) :
+  \mintedpycode{gridsearch-template}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Optimisation de la taille du batch}
+  Usuellement, des puissances de 2, pour optimiser les ressources GPU
+  \imgtw[0.8]{batch-size-effect}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Optimisation du nombre de couches}
+  \mintedpycode{addlayer-template}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Optimisation de la taille des couches}
+  Usuellement, des puissances de 2, pour optimiser les ressources GPU. \\
+  Même intuition que pour le nombre de couches.
+\end{frame}
