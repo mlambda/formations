@@ -1,8 +1,52 @@
 - name: j1
-  title: Jour 1 --- Titre
+  title: Jour 1 --- Introduction au Machine Learning
   sections:
-    - title: Titre
-      includes:
-        - path: machine-learning
-          flavor: standard
-        - questions
+    - path: about
+      title: "A propos de votre formation"
+      flavor: ml-5j
+    - questions
+
+- name: j2
+  title: Jour 2 --- Algorithmes 1/2
+  sections:
+    - path: unsupervised
+      flavor: full
+
+    - path: supervised
+      flavor: standard
+
+- name: j3
+  title: Jour 3 --- Algorithmes 2/2
+  sections:
+    - path: neural-networks
+      flavor: cnn
+
+    - path: sequential-data
+      flavor: full
+
+    - path: natural-language-processing
+      flavor: intro-nn
+
+    - path: auto-encoders
+      flavor: full
+
+- name: j4
+  title: Jour 4 --- Ingénierie
+  sections:
+    - path: actors
+      flavor: gafa
+
+    - path: tools
+      flavor: in-depth
+
+    - path: engineering
+      flavor: mlcraftmyass
+
+    - path: big-questions
+      flavor: full
+
+    - path: sectors
+      flavor: light
+
+    - path: tools
+      flavor: demo-spark
