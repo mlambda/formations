@@ -55,6 +55,13 @@ flavors:
     - tp-transformer
   cnn:
     - intro
+    - cnn-data
+    - cnn-model
+    - questions
+    - tp-nn
+    - tp-cnn
+  ml5j:
+    - intro
     - optimize
     - deep-optimize
     - regularisation
@@ -63,6 +70,12 @@ flavors:
     - questions
     - tp-nn
     - tp-cnn
+    - gan-intro
+    - gan-model
+    - rnn
+    - lstm
+    - rnn-variants
+    - questions
   intro-cnn:
     - intro
     - cnn-data
@@ -72,5 +85,4 @@ flavors:
     - gan-intro
     - gan-model
     - questions
-
 version: 2

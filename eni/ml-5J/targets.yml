@@ -24,7 +24,7 @@
   title: Jour 4 --- Réseaux de neurones
   sections:
     - path: neural-networks
-      flavor: cnn
+      flavor: ml5j
 
 - name: j5
   title: Jour 5 --- Bonnes Pratiques. Systèmes de Recommendation
