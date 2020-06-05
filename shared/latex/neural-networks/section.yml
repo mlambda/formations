@@ -15,6 +15,7 @@ default_titles:
   rnn-variants: Variantes de réseaux récurrents
   rnn-keras: RNN avec Keras
   tp-rnn: "Travaux Pratiques : RNN"
+  tp-rnn-text: "Travaux Pratiques : RNN - Classification de texte"
   transformer: Transformer Networks
   attention-model: Modèle à Attention
   tp-transformer: "Travaux Pratiques : Transformer"
@@ -48,6 +49,13 @@ flavors:
     - rnn-variants
     - rnn-keras
     - questions
+  recurrent-text:
+    - rnn
+    - lstm
+    - rnn-variants
+    - rnn-keras
+    - questions
+    - tp-rnn-text
   transformer:
     - attention-model
     - transformer
