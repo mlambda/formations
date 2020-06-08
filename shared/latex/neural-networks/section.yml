@@ -1,10 +1,12 @@
 title: Réseaux de Neurones
 default_titles:
   intro: Introduction
+  gradient-descent: Descente de Gradient
   optimize: "Optimisation"
   deep-optimize: "Optimisation de Réseaux Profond"
   regularisation: "Régularisation"
   tp-nn: "Travaux Pratiques : Tensorflow et Keras"
+  tp-nn-tf: "Travaux Pratiques : Régression linéaire avec Tensorflow"
   gan-intro: Petit jeu de rapidité
   gan-models: Generative Adversarial Network (GAN)
   cnn-data: Traitement d'image
@@ -22,10 +24,12 @@ default_titles:
 flavors:
   all:
     - intro
+    - gradient-descent
     - optimize
     - deep-optimize
     - regularisation
     - tp-nn
+    - tp-nn-tf
     - cnn-data
     - cnn-model
     - tp-cnn
@@ -37,9 +41,18 @@ flavors:
     - rnn-keras
     - questions
     - tp-rnn
+    - tp-rnn-text
     - attention-model
     - transformer
     - tp-transformer
+  tp-tf-pur:
+    - tp-nn-tf
+  deep-intro:
+    - intro
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
   intro:
     - intro
     - questions
@@ -49,6 +62,14 @@ flavors:
     - rnn-variants
     - rnn-keras
     - questions
+  recurrent:
+    - rnn
+    - lstm
+    - rnn-variants
+    - rnn-keras
+    - questions
+    - tp-rnn
+    - tp-rnn-text
   recurrent-text:
     - rnn
     - lstm
@@ -63,6 +84,9 @@ flavors:
     - tp-transformer
   cnn:
     - intro
+    - gan-intro
+    - gan-model
+    - questions
     - cnn-data
     - cnn-model
     - questions
@@ -70,6 +94,7 @@ flavors:
     - tp-cnn
   ml5j:
     - intro
+    - gradient-descent
     - optimize
     - deep-optimize
     - regularisation

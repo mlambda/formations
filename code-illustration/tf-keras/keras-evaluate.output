@@ -1,0 +1,4 @@
+1000/1 [===================] - 0s 70us/sample - loss: 199785.4507
+       			     - categorical_accuracy: 0.0990
+32/32 [====================] - 0s 2ms/step - loss: 200361.9849
+      			     - categorical_accuracy: 0.0990

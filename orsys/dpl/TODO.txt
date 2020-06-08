@@ -1,2 +1,5 @@
--Inclure dans les TP de la réutilisation de modèle fourni
--Extraction des encodeurs et décodeur d'un autoencodeur, pour les faire tourner sur des données.
+-Extraction des encodeurs et décodeur d'un autoencodeur, pour les faire tourner sur des données fictives ou non.
+-Ajouter interprétation de CNN appris
+-Refondre voltaire generator
+-ajouter une partie cours sur gestion des séquences vers tensor
+

@@ -10,4 +10,9 @@ flavors:
   intro:
     - tf-intro
     - keras-intro
+  tf-pur:
+    - tf-intro
+    - tf-reg-lin
+  keras-pur:
+    - keras-intro
 version: 2

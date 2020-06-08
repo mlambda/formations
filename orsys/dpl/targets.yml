@@ -1,0 +1,51 @@
+- name: j1
+  title: Jour 1 --- TensorFlow pour le Deep Learning
+  sections:
+    - title: Deep Learning par la Pratique
+      path: about
+      flavor: dpl
+
+    - title: TensorFlow et Deep Learning
+      path: tf-keras-intro
+      flavor: tf-pur
+
+    - title: Réseaux de Neurones
+      path: neural-networks
+      flavor: deep-intro
+
+    - path: big-questions
+      flavor: full
+
+    - title: Réseaux de Neurones
+      path: neural-networks
+      flavor: tp-tf-pur
+
+- name: j2
+  title: Jour 2 --- Traitement d'image
+  sections:
+    - title: TensorFlow et Deep Learning
+      path: tf-keras-intro
+      flavor: keras-pur
+
+    - title: Réseaux de Convolutions
+      path: neural-networks
+      flavor: cnn
+
+- name: j3
+  title: Jour 3 --- Autoencodeurs et Traitement de séquences
+  sections:
+    - title: Autoencodeurs d'image
+      path: auto-encoders
+      flavor: full
+
+    - title: Données séquentielles
+      path: sequential-data
+      flavor: intro
+
+    - title: Réseaux Récurrents
+      path: neural-networks
+      flavor: recurrent
+
+    - title: Transformer Network
+      path: neural-networks
+      flavor: transformer

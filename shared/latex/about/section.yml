@@ -2,9 +2,17 @@ title: Titre à adapter à la formation
 default_titles:
 flavors:
   ml5j:
-    - formateur
+    - formateur-fmg
     - description-ml5j
     - ressources-eni
-    - horaires-5j
     - tour2table
+    - horaires-5j-eni
+flavors:
+  dpl:
+    - formateur-fmg
+    - description-dpl
+    - ressources-orsys
+    - tour2table
+    - horaires-3j-orsys
 version: 2
+
