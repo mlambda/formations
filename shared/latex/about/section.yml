@@ -14,5 +14,17 @@ flavors:
     - ressources-orsys
     - tour2table
     - horaires-3j-orsys
+  mlb:
+    - formateur-fmg
+    - description-mlb
+    - ressources-orsys
+    - tour2table
+    - horaires-4j-orsys
+  bda:
+    - formateur-fmg
+    - description-bda
+    - ressources-orsys
+    - tour2table
+    - horaires-4j-orsys
 version: 2
 
