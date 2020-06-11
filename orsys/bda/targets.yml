@@ -1,0 +1,38 @@
+- name: j1
+  title: Jour 1 --- Introduction au Machine Learning
+  sections:
+    - path: about
+      title: Big Data Analytics
+      flavor: bda
+    - path: tools
+      flavor: init-python
+    - questions
+    - path: machine-learning
+      flavor: ml5j
+    - questions
+
+- name: j2
+  title: Jour 2 --- Algorithmes 1/2
+  sections:
+    - path: supervised
+      flavor: standard
+    - questions
+
+- name: j3
+  title: Jour 3 --- Algorithmes 2/2
+  sections:
+    - path: unsupervised
+      flavor: full
+    - questions
+
+- name: j4
+  title: Jour 4 --- Ingénierie
+  sections:
+    - path: engineering
+      flavor: mlcraftmyass
+
+    - path: big-questions
+      flavor: full
+
+    - path: natural-language-processing
+      flavor: intro-tp
