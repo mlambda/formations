@@ -4,9 +4,16 @@ default_titles:
   dimensionality-reduction: Réduction de la dimensionalité
   pca-lda: "Réduction de la dimensionalité : Projections linéaires"
   demo-dim-reduce: Démo Sklearn
+  pca-variantes: Variantes Spécifiques
+  unsupervised-metrics: Métriques de clustering
+  hierarchical-clustering: Clustering Hiérarchique
   algorithme-em: Espérance-Maximisation
   kmeans-gaussian: K-Means
+  dbscan: DBSCAN
   demo-clustering: Démo Sklearn
+  clustering-conclusion: Conclusions
+  pca-classification-hierarchique-composantes-principales: Classification Hiérarchique sur Composantes Principales
+  pca-inverse: Clustering par ACP
   anomaly-detection-light: Détection d'anomalies
   demo-anomaly-detect: Démo Sklearn
   tp-dim-reduce: "Travaux Pratiques : Réduction de dimension"
@@ -33,6 +40,28 @@ flavors:
     - algorithme-em
     - kmeans-gaussian
     - demo-clustering
+    - questions
+    - anomaly-detection-light
+    - demo-anomaly-detect
+    - questions
+    - tp-dim-reduce
+    - tp-clustering
+  bda:
+    - introduction
+    - dimensionality-reduction
+    - pca-lda
+    - demo-dim-reduce
+    - pca-variantes
+    - questions
+    - unsupervised-metrics
+    - hierarchical-clustering
+    - algorithme-em
+    - kmeans-gaussian
+    - dbscan
+    - demo-clustering
+    - clustering-conclusion
+    - pca-classification-hierarchique-composantes-principales
+    - pca-inverse
     - questions
     - anomaly-detection-light
     - demo-anomaly-detect

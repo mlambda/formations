@@ -5,6 +5,7 @@ default_titles:
   cost-error-function: Fonction de Coût/Erreur
   derivation-gradient: Gradient de l'erreur
   optimisation: Optimisation
+  regression-polynomiale: Régression Polynomiale
   nn-intro: Réseau de Neurones
   classification: Classification
   regression-logistique: Régression Logistique
@@ -27,6 +28,7 @@ flavors:
     - cost-error-function
     - optimisation
     - derivation-gradient
+    - regression-polynomiale
     - nn-intro
     - classification
     - regression-logistique
@@ -51,6 +53,7 @@ flavors:
     - cost-error-function
     - optimisation
     - derivation-gradient
+    - regression-polynomiale
     - nn-intro
     - classification
     - regression-logistique

@@ -53,6 +53,15 @@ flavors:
     - optimize
     - deep-optimize
     - regularisation
+  deep-discover:
+    - intro
+    - optimize
+    - deep-optimize
+    - regularisation
+    - gan-intro
+    - gan-model
+    - cnn-data
+    - rnn
   intro:
     - intro
     - questions

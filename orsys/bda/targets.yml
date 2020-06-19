@@ -22,7 +22,7 @@
   title: Jour 3 --- Algorithmes 2/2
   sections:
     - path: unsupervised
-      flavor: full
+      flavor: bda
     - questions
 
 - name: j4
@@ -33,6 +33,10 @@
 
     - path: big-questions
       flavor: full
+
+    - title: Réseaux de Neurones
+      path: neural-networks
+      flavor: deep-discover
 
     - path: natural-language-processing
       flavor: intro-tp
