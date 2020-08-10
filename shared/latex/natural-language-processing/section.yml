@@ -51,6 +51,12 @@ flavors:
     - vectors
     - questions
     - tp-text-features-engineering
+  intro-nlp:
+    - ml-nlp
+    - usages-nlp
+    - preprocessing
+    - vectors
+    - questions
   intro-nn:
     - ml-nlp
     - vectors

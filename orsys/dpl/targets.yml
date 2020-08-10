@@ -20,23 +20,33 @@
       path: neural-networks
       flavor: tp-tf-pur
 
+    - path: reinforcement-learning
+      flavor: deepalpha
+
 - name: j2
-  title: Jour 2 --- Traitement d'image
+  title: Jour 2 --- Traitement d'image et Autoencodeurs
   sections:
     - title: TensorFlow et Deep Learning
       path: tf-keras-intro
       flavor: keras-pur
 
+    - title: Réseau de Neurones
+      path: neural-networks
+      flavor: tp-nn-keras
+
     - title: Réseaux de Convolutions
       path: neural-networks
       flavor: cnn
 
-- name: j3
-  title: Jour 3 --- Autoencodeurs et Traitement de séquences
-  sections:
     - title: Autoencodeurs d'image
       path: auto-encoders
       flavor: full
+
+- name: j3
+  title: Jour 3 --- Langage et Traitement de séquences
+  sections:
+    - path: natural-language-processing
+      flavor: intro-nlp
 
     - title: Données séquentielles
       path: sequential-data

@@ -2,23 +2,22 @@
   title: Jour 1 --- Introduction au Machine Learning
   sections:
     - path: about
+      title: Machine Learning, \\Méthodes et Solutions
       flavor: mlb
     - path: tools
       flavor: init-python
     - questions
     - path: machine-learning
-      flavor: no-tp
+      flavor: full
     - questions
 
 - name: j2
   title: Jour 2 --- Algorithmes 1/2
   sections:
     - path: unsupervised
-      flavor: full
-    - questions
+      flavor: dimreduce
     - path: supervised
       flavor: standard
-    - questions
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
@@ -29,11 +28,14 @@
     - path: sequential-data
       flavor: full
 
-    - path: natural-language-processing
-      flavor: intro-nn
+    - path: neural-networks
+      flavor: recurrent
 
     - path: auto-encoders
       flavor: full
+
+    - path: natural-language-processing
+      flavor: intro-nn
 
 - name: j4
   title: Jour 4 --- Ingénierie

@@ -47,6 +47,8 @@ flavors:
     - tp-transformer
   tp-tf-pur:
     - tp-nn-tf
+  tp-nn-keras:
+    - tp-nn
   deep-intro:
     - intro
     - gradient-descent
@@ -98,8 +100,8 @@ flavors:
     - questions
     - cnn-data
     - cnn-model
+    - cnn-keras
     - questions
-    - tp-nn
     - tp-cnn
   ml5j:
     - intro
