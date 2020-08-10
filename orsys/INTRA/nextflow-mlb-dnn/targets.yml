@@ -1,0 +1,54 @@
+- name: j1
+  title: Jour 1 --- Introduction au Machine Learning
+  sections:
+    - path: about
+      title: Machine Learning, \\Méthodes et Solutions
+      flavor: mlbdnn
+    - path: machine-learning
+      flavor: ml5j
+    - questions
+
+- name: j2
+  title: Jour 2 --- Apprentissage Supervisé
+  sections:
+    - path: unsupervised
+      flavor: dimreduce
+  sections:
+    - path: supervised
+      flavor: standard-nobayes
+
+- name: j3
+  title: Jour 3 --- Méthodes Bayésiennes
+  sections:
+    - path: supervised
+      flavor: bayes
+  sections:
+    - path: neural-networks
+      flavor: deep-intro
+  sections:
+    - path: neural-networks
+      flavor: tp-nn-keras
+
+- name: j4
+  title: Jour 4 --- Neurones et Images 2/2
+  sections:
+    - path: neural-networks
+      flavor: cnn
+
+    - path: auto-encoders
+      flavor: full
+
+- name: j5
+  title: Jour 4 --- Neurones et Séquences
+  sections:
+    - path: sequential-data
+      flavor: full
+
+    - path: natural-language-processing
+      flavor: intro-nn
+
+    - path: neural-networks
+      flavor: recurrent
+
+    - path: neural-networks
+      flavor: transformer

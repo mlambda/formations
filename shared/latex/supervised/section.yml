@@ -21,6 +21,10 @@ default_titles:
   demo-svm: Démo Sklearn
   tp-svm: "Travaux Pratiques : SVM"
   tp-svm-text: "Travaux Pratiques : SVM"
+  gaussian-mixture: "Mixture de gaussienne"
+  markov-model: Modèles de Markov
+  hmm: Modèles de Markov cachés
+  modeles-graphiques: "Réseaux Bayésiens"
 flavors:
   all:
     - naive-bayes
@@ -49,6 +53,31 @@ flavors:
     - tp-svm-text
   standard:
     - naive-bayes
+    - regression-lineaire
+    - cost-error-function
+    - optimisation
+    - derivation-gradient
+    - regression-polynomiale
+    - nn-intro
+    - classification
+    - regression-logistique
+    - questions
+    - tp-reg-lin-poly
+    - svm
+    - demo-svm
+    - trees
+    - random-forest
+    - questions
+    - demo-random-forest
+    - tp-random-forest
+  bayes:
+    - naive-bayes
+    - gaussian-mixture
+    - markov-model
+    - hmm
+    - modeles-graphiques
+
+  standard-nobayes:
     - regression-lineaire
     - cost-error-function
     - optimisation

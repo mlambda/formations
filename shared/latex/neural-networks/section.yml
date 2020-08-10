@@ -94,7 +94,6 @@ flavors:
     - questions
     - tp-transformer
   cnn:
-    - intro
     - gan-intro
     - gan-model
     - questions

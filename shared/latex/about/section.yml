@@ -20,6 +20,11 @@ flavors:
     - ressources-orsys
     - tour2table
     - horaires-4j-orsys
+  mlbdnn:
+    - formateur-fmg
+    - description-mlbdnn
+    - ressources-orsys
+    - tour2table
   bda:
     - formateur-fmg
     - description-bda
