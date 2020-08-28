@@ -6,7 +6,7 @@ default_titles:
   deep-optimize: "Optimisation de Réseaux Profond"
   regularisation: "Régularisation"
   tp-nn: "Travaux Pratiques : Tensorflow et Keras"
-  tp-nn-tf: "Travaux Pratiques : Régression linéaire avec Tensorflow"
+  tp-nn-tf: "Travaux Pratiques : Réseau de Neurones avec Tensorflow"
   gan-intro: Petit jeu de rapidité
   gan-models: Generative Adversarial Network (GAN)
   cnn-data: Traitement d'image
@@ -82,11 +82,16 @@ flavors:
     - tp-rnn
     - tp-rnn-text
   recurrent-text:
+    - intro
+    - optimize
+    - deep-optimize
+    - regularisation
     - rnn
     - lstm
     - rnn-variants
     - rnn-keras
     - questions
+    - tp-rnn
     - tp-rnn-text
   transformer:
     - attention-model
