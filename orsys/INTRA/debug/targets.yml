@@ -1,0 +1,14 @@
+- name: debug
+  title: Jour 3 --- Méthodes Bayésiennes
+  sections:
+    - path: supervised
+      flavor: bayes
+  sections:
+    - path: supervised
+      flavor: bayes
+  sections:
+    - path: neural-networks
+      flavor: deep-intro
+  sections:
+    - path: neural-networks
+      flavor: tp-nn-keras

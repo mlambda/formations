@@ -4,6 +4,7 @@
     - path: about
       title: Machine Learning, \\Méthodes et Solutions
       flavor: mlbdnn
+
     - path: machine-learning
       flavor: ml5j
     - questions
@@ -13,21 +14,37 @@
   sections:
     - path: unsupervised
       flavor: dimreduce
-  sections:
+
     - path: supervised
       flavor: standard-nobayes
 
 - name: j3
-  title: Jour 3 --- Méthodes Bayésiennes
+  title: Jour 3 --- Méthodes Bayésiennes, Réseaux de neurones
   sections:
     - path: supervised
       flavor: bayes
-  sections:
-    - path: neural-networks
+
+    - title: Réseaux de Neurones
+      path: neural-networks
       flavor: deep-intro
-  sections:
+
+    - title: TensorFlow et Deep Learning
+      path: tf-keras-intro
+      flavor: tf-pur
+
+    - title: Réseaux de Neurones
+      path: neural-networks
+      flavor: tp-tf-pur
+
+    - title: TensorFlow et Deep Learning
+      path: tf-keras-intro
+      flavor: keras-pur
+
     - path: neural-networks
       flavor: tp-nn-keras
+
+    - path: big-questions
+      flavor: full
 
 - name: j4
   title: Jour 4 --- Neurones et Images 2/2
@@ -39,7 +56,7 @@
       flavor: full
 
 - name: j5
-  title: Jour 4 --- Neurones et Séquences
+  title: Jour 5 --- Neurones et Séquences
   sections:
     - path: sequential-data
       flavor: full
