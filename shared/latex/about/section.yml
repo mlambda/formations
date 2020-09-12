@@ -7,7 +7,6 @@ flavors:
     - ressources-eni
     - tour2table
     - horaires-5j-eni
-flavors:
   dpl:
     - formateur-fmg
     - description-dpl
