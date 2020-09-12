@@ -1,4 +1,3 @@
-title: Ingénierie du Machine Learning
 default_titles:
   engineering-practices: Bonnes pratiques
 flavors:
@@ -6,4 +5,5 @@ flavors:
     - engineering-practices
   mlcraftmyass:
     - engineering-practices
-version: 2
+title: Ingénierie du Machine Learning
+version: 3

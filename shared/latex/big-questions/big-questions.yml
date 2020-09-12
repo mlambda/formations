@@ -1,8 +1,7 @@
-title: Problèmes liés au Machine Learning
 default_titles:
+  ethics: Problèmes éthiques
   generic: Problèmes généraux
   legal: Problèmes légaux
-  ethics: Problèmes éthiques
 flavors:
   all:
     - generic
@@ -13,4 +12,5 @@ flavors:
     - legal
     - ethics
     - questions
-version: 2
+title: Problèmes liés au Machine Learning
+version: 3

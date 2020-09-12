@@ -1,16 +1,10 @@
-title: Les Tendances et les Nouveaux Secteurs
 default_titles:
-  intro: Introduction
-  transport: Transport
-  sante: Santé
   coding: Informatique
+  intro: Introduction
+  sante: Santé
+  transport: Transport
 flavors:
   all:
-    - intro
-    - transport
-    - sante
-    - coding
-  seminaire:
     - intro
     - transport
     - sante
@@ -19,4 +13,10 @@ flavors:
     - intro
     - sante
     - coding
-version: 2
+  seminaire:
+    - intro
+    - transport
+    - sante
+    - coding
+title: Les Tendances et les Nouveaux Secteurs
+version: 3

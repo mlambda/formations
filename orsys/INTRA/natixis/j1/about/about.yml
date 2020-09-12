@@ -1,5 +1,4 @@
-title: Votre formation
-default_titles:
+default_titles: null
 flavors:
   bda:
     - formateur-fmg
@@ -7,5 +6,5 @@ flavors:
     - ressources-orsys
     - tour2table
     - horaires-4j-orsys
-version: 2
-
+title: Votre formation
+version: 3

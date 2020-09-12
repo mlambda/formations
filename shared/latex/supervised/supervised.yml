@@ -1,30 +1,29 @@
-title: Apprentissage supervisé
 default_titles:
-  naive-bayes: Naive Bayes
-  regression-lineaire: Regression Linéaire
-  cost-error-function: Fonction de Coût/Erreur
-  derivation-gradient: Gradient de l'erreur
-  optimisation: Optimisation
-  regression-polynomiale: Régression Polynomiale
-  nn-intro: Réseau de Neurones
   classification: Classification
-  regression-logistique: Régression Logistique
-  tp-reg-lin-poly: "Travaux Pratiques : Régression Linéaire"
-  trees: Arbres de décision
-  random-forest: Random Forest
+  cost-error-function: Fonction de Coût/Erreur
+  demo-gradient-boosting: Démo Sklearn
   demo-random-forest: Démo Sklearn
+  demo-svm: Démo Sklearn
+  derivation-gradient: Gradient de l'erreur
+  gaussian-mixture: Mixture de gaussienne
+  gradient-boosting: Gradient Boosting
+  hmm: Modèles de Markov cachés
+  markov-model: Modèles de Markov
+  modeles-graphiques: Réseaux Bayésiens
+  naive-bayes: Naive Bayes
+  nn-intro: Réseau de Neurones
+  optimisation: Optimisation
+  random-forest: Random Forest
+  regression-lineaire: Regression Linéaire
+  regression-logistique: Régression Logistique
+  regression-polynomiale: Régression Polynomiale
+  svm: Support Vector Machine
   tp-random-forest: "Travaux Pratiques : Random Forest"
   tp-random-forest-text: "Travaux Pratiques : Random Forest"
-  gradient-boosting: Gradient Boosting
-  demo-gradient-boosting: Démo Sklearn
-  svm: Support Vector Machine
-  demo-svm: Démo Sklearn
+  tp-reg-lin-poly: "Travaux Pratiques : Régression Linéaire"
   tp-svm: "Travaux Pratiques : SVM"
   tp-svm-text: "Travaux Pratiques : SVM"
-  gaussian-mixture: "Mixture de gaussienne"
-  markov-model: Modèles de Markov
-  hmm: Modèles de Markov cachés
-  modeles-graphiques: "Réseaux Bayésiens"
+  trees: Arbres de décision
 flavors:
   all:
     - naive-bayes
@@ -51,6 +50,12 @@ flavors:
     - demo-svm
     - tp-svm
     - tp-svm-text
+  bayes:
+    - naive-bayes
+    - gaussian-mixture
+    - markov-model
+    - hmm
+    - modeles-graphiques
   standard:
     - naive-bayes
     - regression-lineaire
@@ -70,13 +75,6 @@ flavors:
     - questions
     - demo-random-forest
     - tp-random-forest
-  bayes:
-    - naive-bayes
-    - gaussian-mixture
-    - markov-model
-    - hmm
-    - modeles-graphiques
-
   standard-nobayes:
     - regression-lineaire
     - cost-error-function
@@ -115,4 +113,5 @@ flavors:
     - svm
     - demo-svm
     - tp-svm-text
-version: 2
+title: Apprentissage supervisé
+version: 3

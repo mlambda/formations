@@ -1,23 +1,24 @@
-title: Apprentissage non-supervisé
 default_titles:
-  introduction: Introduction
-  dimensionality-reduction: Réduction de la dimensionalité
-  pca-lda: "Réduction de la dimensionalité : Projections linéaires"
-  demo-dim-reduce: Démo Sklearn
-  pca-variantes: Variantes Spécifiques
-  unsupervised-metrics: Métriques de clustering
-  hierarchical-clustering: Clustering Hiérarchique
   algorithme-em: Espérance-Maximisation
-  kmeans-gaussian: K-Means
-  dbscan: DBSCAN
-  demo-clustering: Démo Sklearn
-  clustering-conclusion: Conclusions
-  pca-classification-hierarchique-composantes-principales: Classification Hiérarchique sur Composantes Principales
-  pca-inverse: Clustering par ACP
   anomaly-detection-light: Détection d'anomalies
+  clustering-conclusion: Conclusions
+  dbscan: DBSCAN
   demo-anomaly-detect: Démo Sklearn
-  tp-dim-reduce: "Travaux Pratiques : Réduction de dimension"
+  demo-clustering: Démo Sklearn
+  demo-dim-reduce: Démo Sklearn
+  dimensionality-reduction: Réduction de la dimensionalité
+  hierarchical-clustering: Clustering Hiérarchique
+  introduction: Introduction
+  kmeans-gaussian: K-Means
+  pca-classification-hierarchique-composantes-principales:
+    Classification Hiérarchique
+    sur Composantes Principales
+  pca-inverse: Clustering par ACP
+  pca-lda: "Réduction de la dimensionalité : Projections linéaires"
+  pca-variantes: Variantes Spécifiques
   tp-clustering: "Travaux Pratiques : Clustering"
+  tp-dim-reduce: "Travaux Pratiques : Réduction de dimension"
+  unsupervised-metrics: Métriques de clustering
 flavors:
   all:
     - introduction
@@ -31,30 +32,6 @@ flavors:
     - demo-anomaly-detect
     - tp-dim-reduce
     - tp-clustering
-  full:
-    - introduction
-    - dimensionality-reduction
-    - pca-lda
-    - demo-dim-reduce
-    - questions
-    - algorithme-em
-    - kmeans-gaussian
-    - demo-clustering
-    - questions
-    - anomaly-detection-light
-    - demo-anomaly-detect
-    - questions
-    - tp-dim-reduce
-    - tp-clustering
-  dimreduce:
-    - dimensionality-reduction
-    - pca-lda
-    - demo-dim-reduce
-    - questions
-    - anomaly-detection-light
-    - demo-anomaly-detect
-    - questions
-    - tp-dim-reduce
   bda:
     - introduction
     - dimensionality-reduction
@@ -77,4 +54,29 @@ flavors:
     - questions
     - tp-dim-reduce
     - tp-clustering
-version: 2
+  dimreduce:
+    - dimensionality-reduction
+    - pca-lda
+    - demo-dim-reduce
+    - questions
+    - anomaly-detection-light
+    - demo-anomaly-detect
+    - questions
+    - tp-dim-reduce
+  full:
+    - introduction
+    - dimensionality-reduction
+    - pca-lda
+    - demo-dim-reduce
+    - questions
+    - algorithme-em
+    - kmeans-gaussian
+    - demo-clustering
+    - questions
+    - anomaly-detection-light
+    - demo-anomaly-detect
+    - questions
+    - tp-dim-reduce
+    - tp-clustering
+title: Apprentissage non-supervisé
+version: 3

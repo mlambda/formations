@@ -1,17 +1,16 @@
-title: Machine Learning
 default_titles:
-  intro: Introduction
-  math-objectifs: "Quelques Prérequis Mathématiques"
-  math-algebre-lineaire: "Algèbre Linéaire"
-  math-analyse: "Analyse"
-  math-proba: "Probabilités"
-  math-stats: "Statistiques"
-  math-quizz: "Quizz"
-  math-conclusion: "Conclusions"
-  data-preparation: Modélisation et préparation des données
   apprentissage: Apprentissage
-  evaluation: Évaluation
   bonnes-pratiques: Bonnes Pratiques
+  data-preparation: Modélisation et préparation des données
+  evaluation: Évaluation
+  intro: Introduction
+  math-algebre-lineaire: Algèbre Linéaire
+  math-analyse: Analyse
+  math-conclusion: Conclusions
+  math-objectifs: Quelques Prérequis Mathématiques
+  math-proba: Probabilités
+  math-quizz: Quizz
+  math-stats: Statistiques
   tp-data: Travaux Pratiques
 flavors:
   all:
@@ -28,6 +27,21 @@ flavors:
     - apprentissage
     - bonnes-pratiques
     - tp-data
+  full:
+    - intro
+    - data-preparation
+    - evaluation
+    - apprentissage
+    - bonnes-pratiques
+    - questions
+    - tp-help
+    - tp-data
+  intro:
+    - intro
+    - evaluation
+    - apprentissage
+    - bonnes-pratiques
+    - questions
   ml5j:
     - intro
     - math-objectifs
@@ -43,15 +57,6 @@ flavors:
     - questions
     - tp-help
     - tp-data
-  full:
-    - intro
-    - data-preparation
-    - evaluation
-    - apprentissage
-    - bonnes-pratiques
-    - questions
-    - tp-help
-    - tp-data
   no-tp:
     - intro
     - data-preparation
@@ -59,10 +64,5 @@ flavors:
     - apprentissage
     - bonnes-pratiques
     - questions
-  intro:
-    - intro
-    - evaluation
-    - apprentissage
-    - bonnes-pratiques
-    - questions
-version: 2
+title: Machine Learning
+version: 3

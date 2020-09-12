@@ -1,10 +1,8 @@
-title: Données séquentielles
 default_titles:
+  hmm: Modèles de Markov cachés
+  markov-model: Modèles de Markov
   sequential-data: Introduction
   sequential-models: Modèles Séquentiels
-  markov-model: Modèles de Markov
-  hmm: Modèles de Markov cachés
-
 flavors:
   all:
     - sequential-data
@@ -21,4 +19,5 @@ flavors:
     - sequential-data
     - sequential-models
     - questions
-version: 2
+title: Données séquentielles
+version: 3

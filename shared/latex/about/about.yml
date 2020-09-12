@@ -1,18 +1,23 @@
-title: Titre à adapter à la formation
-default_titles:
+default_titles: null
 flavors:
-  ml5j:
+  bda:
     - formateur-fmg
-    - description-ml5j
-    - ressources-eni
+    - description-bda
+    - ressources-orsys
     - tour2table
-    - horaires-5j-eni
+    - horaires-4j-orsys
   dpl:
     - formateur-fmg
     - description-dpl
     - ressources-orsys
     - tour2table
     - horaires-3j-orsys
+  ml5j:
+    - formateur-fmg
+    - description-ml5j
+    - ressources-eni
+    - tour2table
+    - horaires-5j-eni
   mlb:
     - formateur-fmg
     - description-mlb
@@ -24,11 +29,5 @@ flavors:
     - description-mlbdnn
     - ressources-orsys
     - tour2table
-  bda:
-    - formateur-fmg
-    - description-bda
-    - ressources-orsys
-    - tour2table
-    - horaires-4j-orsys
-version: 2
-
+title: Titre à adapter à la formation
+version: 3

@@ -1,4 +1,3 @@
-title: Les Différents Acteurs du Domaine
 default_titles:
   chine: Le cas particulier de la Chine
   gafa: La recherche dans le monde
@@ -8,10 +7,11 @@ flavors:
     - gafa
     - startup
     - chine
+  gafa:
+    - gafa
   seminaire:
     - gafa
     - startup
     - chine
-  gafa:
-    - gafa
-version: 2
+title: Les Différents Acteurs du Domaine
+version: 3

@@ -1,4 +1,3 @@
-title: TensorFlow et Keras
 default_titles:
   keras-intro: Keras
   tf-intro: TensorFlow
@@ -10,9 +9,10 @@ flavors:
   intro:
     - tf-intro
     - keras-intro
+  keras-pur:
+    - keras-intro
   tf-pur:
     - tf-intro
     - tf-reg-lin
-  keras-pur:
-    - keras-intro
-version: 2
+title: TensorFlow et Keras
+version: 3

@@ -1,26 +1,25 @@
-title: Réseaux de Neurones
 default_titles:
-  intro: Introduction
-  gradient-descent: Descente de Gradient
-  optimize: "Optimisation"
-  deep-optimize: "Optimisation de Réseaux Profond"
-  regularisation: "Régularisation"
-  tp-nn: "Travaux Pratiques : Tensorflow et Keras"
-  tp-nn-tf: "Travaux Pratiques : Réseau de Neurones avec Tensorflow"
-  gan-intro: Petit jeu de rapidité
-  gan-models: Generative Adversarial Network (GAN)
+  attention-model: Modèle à Attention
   cnn-data: Traitement d'image
   cnn-model: Réseaux de convolutions
-  tp-cnn: "Travaux Pratiques : CNN et Keras"
-  rnn: Réseaux de neurones récurrents
+  deep-optimize: Optimisation de Réseaux Profond
+  gan-intro: Petit jeu de rapidité
+  gan-models: Generative Adversarial Network (GAN)
+  gradient-descent: Descente de Gradient
+  intro: Introduction
   lstm: Réseaux à longue mémoire de court terme
-  rnn-variants: Variantes de réseaux récurrents
+  optimize: Optimisation
+  regularisation: Régularisation
+  rnn: Réseaux de neurones récurrents
   rnn-keras: RNN avec Keras
+  rnn-variants: Variantes de réseaux récurrents
+  tp-cnn: "Travaux Pratiques : CNN et Keras"
+  tp-nn: "Travaux Pratiques : Tensorflow et Keras"
+  tp-nn-tf: "Travaux Pratiques : Réseau de Neurones avec Tensorflow"
   tp-rnn: "Travaux Pratiques : RNN"
   tp-rnn-text: "Travaux Pratiques : RNN - Classification de texte"
-  transformer: Transformer Networks
-  attention-model: Modèle à Attention
   tp-transformer: "Travaux Pratiques : Transformer"
+  transformer: Transformer Networks
 flavors:
   all:
     - intro
@@ -45,59 +44,6 @@ flavors:
     - attention-model
     - transformer
     - tp-transformer
-  tp-tf-pur:
-    - tp-nn-tf
-  tp-nn-keras:
-    - tp-nn
-  deep-intro:
-    - intro
-    - gradient-descent
-    - optimize
-    - deep-optimize
-    - regularisation
-  deep-discover:
-    - intro
-    - optimize
-    - deep-optimize
-    - regularisation
-    - gan-intro
-    - gan-model
-    - cnn-data
-    - rnn
-  intro:
-    - intro
-    - questions
-  recurrent-intro:
-    - rnn
-    - lstm
-    - rnn-variants
-    - rnn-keras
-    - questions
-  recurrent:
-    - rnn
-    - lstm
-    - rnn-variants
-    - rnn-keras
-    - questions
-    - tp-rnn
-    - tp-rnn-text
-  recurrent-text:
-    - intro
-    - optimize
-    - deep-optimize
-    - regularisation
-    - rnn
-    - lstm
-    - rnn-variants
-    - rnn-keras
-    - questions
-    - tp-rnn
-    - tp-rnn-text
-  transformer:
-    - attention-model
-    - transformer
-    - questions
-    - tp-transformer
   cnn:
     - gan-intro
     - gan-model
@@ -107,6 +53,33 @@ flavors:
     - cnn-keras
     - questions
     - tp-cnn
+  deep-discover:
+    - intro
+    - optimize
+    - deep-optimize
+    - regularisation
+    - gan-intro
+    - gan-model
+    - cnn-data
+    - rnn
+  deep-intro:
+    - intro
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+  gan-intro:
+    - gan-intro
+    - gan-model
+    - questions
+  intro:
+    - intro
+    - questions
+  intro-cnn:
+    - intro
+    - cnn-data
+    - cnn-model
+    - questions
   ml5j:
     - intro
     - gradient-descent
@@ -124,13 +97,40 @@ flavors:
     - lstm
     - rnn-variants
     - questions
-  intro-cnn:
+  recurrent:
+    - rnn
+    - lstm
+    - rnn-variants
+    - rnn-keras
+    - questions
+    - tp-rnn
+    - tp-rnn-text
+  recurrent-intro:
+    - rnn
+    - lstm
+    - rnn-variants
+    - rnn-keras
+    - questions
+  recurrent-text:
     - intro
-    - cnn-data
-    - cnn-model
+    - optimize
+    - deep-optimize
+    - regularisation
+    - rnn
+    - lstm
+    - rnn-variants
+    - rnn-keras
     - questions
-  gan-intro:
-    - gan-intro
-    - gan-model
+    - tp-rnn
+    - tp-rnn-text
+  tp-nn-keras:
+    - tp-nn
+  tp-tf-pur:
+    - tp-nn-tf
+  transformer:
+    - attention-model
+    - transformer
     - questions
-version: 2
+    - tp-transformer
+title: Réseaux de Neurones
+version: 3

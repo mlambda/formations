@@ -1,16 +1,15 @@
-title: Principaux outils
 default_titles:
   anaconda: Anaconda
-  notebooks: Notebooks Jupyter
-  python: Python
-  tp: Travaux Pratiques
   arXiv: ArXiv
   cloud-computing: Cloud computing
+  demo-spark-tf-keras-cnn: Démonstration de Keras sur Spark
   github: GitHub
   hadoop: Apache Hadoop
   kaggle: Kaggle
+  notebooks: Notebooks Jupyter
+  python: Python
   spark: Apache Spark
-  demo-spark-tf-keras-cnn: Démonstration de Keras sur Spark
+  tp: Travaux Pratiques
 flavors:
   all:
     - python
@@ -24,12 +23,8 @@ flavors:
     - github
     - cloud-computing
     - demo-spark-tf-keras-cnn
-  init-python:
-    - python
-    - notebooks
-    - anaconda
-    - questions
-    - tp
+  demo-spark:
+    - demo-spark-tf-keras-cnn
   in-depth:
     - hadoop
     - spark
@@ -37,6 +32,11 @@ flavors:
     - arXiv
     - github
     - cloud-computing
-  demo-spark:
-    - demo-spark-tf-keras-cnn
-version: 2
+  init-python:
+    - python
+    - notebooks
+    - anaconda
+    - questions
+    - tp
+title: Principaux outils
+version: 3
