@@ -61,6 +61,7 @@ flavors:
     - gan-intro
     - gan-model
     - cnn-data
+    - cnn-model
     - rnn
   deep-intro:
     - intro

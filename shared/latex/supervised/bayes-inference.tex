@@ -118,9 +118,9 @@ $$\hat{\theta} = \frac{n}{N} = \frac{x_1+x_2+\cdots+x_N}{N}.$$
   \frametitle{MLE pour une loi Normale}
   Soit $N$ observations $x_1,x_2,\ldots,x_N$ d'une variable aléatoire $X$ suivant une distribution Gaussienne $\mathcal{N}(\mu,\sigma^2)$
 \begin{align*}
-\ell(\mu,\sigma^2) 	&= \sum_{i=1}^n \log p(x_i; \, \mu,\sigma^2) \\
-				&= \sum_{i=1}^n \log\left[ \frac{1}{(2\pi\sigma^2)^{1/2}}\exp\left(-\frac{(x_i-\mu)^2}{2\sigma^2}\right)\right]\\
-				&= -\frac{n}{2}\log(2\pi)-\frac{n}{2}\log(\sigma^2)-\frac{1}{2}\sum_{i=1}^n \frac{(x_i-\mu)^2}{\sigma^2}.				
+\ell(\mu,\sigma^2) 	&= \sum_{i=1}^N \log p(x_i; \, \mu,\sigma^2) \\
+				&= \sum_{i=1}^N \log\left[ \frac{1}{(2\pi\sigma^2)^{1/2}}\exp\left(-\frac{(x_i-\mu)^2}{2\sigma^2}\right)\right]\\
+				&= -\frac{N}{2}\log(2\pi)-\frac{N}{2}\log(\sigma^2)-\frac{1}{2}\sum_{i=1}^N \frac{(x_i-\mu)^2}{\sigma^2}.				
 \end{align*} 
 \end{frame}
 
@@ -128,7 +128,7 @@ $$\hat{\theta} = \frac{n}{N} = \frac{x_1+x_2+\cdots+x_N}{N}.$$
   \frametitle{MLE pour une loi Normale}
   On doit alors chercher le couple $(\mu, \sigma^2)$ pour lequel $l(\mu,\sigma^2)$ soit maximum. L'utilisation des dérivées partielles par rapport à $\mu$ et $\sigma^2$ respectivement nous donne le couple optimal $(\hat{\mu},\hat{\sigma}^2)$ :
 \begin{align*}
-\hat{\mu}&=\frac{1}{n}\sum_{i=1}^n x_i \\
-\hat{\sigma}^2&=\frac{1}{n}\sum_{i=1}^n \left(x_i-\hat{\mu}\right)^2
+\hat{\mu}&=\frac{1}{N}\sum_{i=1}^N x_i \\
+\hat{\sigma}^2&=\frac{1}{N}\sum_{i=1}^N \left(x_i-\hat{\mu}\right)^2
 \end{align*}
 \end{frame}
