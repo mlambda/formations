@@ -1,33 +1,33 @@
 default_titles: null
 flavors:
   bda:
-    - formateur-fmg
+    - formateur
     - description-bda
     - ressources-orsys
     - tour2table
     - horaires-4j-orsys
   dpl:
-    - formateur-fmg
+    - formateur
     - description-dpl
     - ressources-orsys
     - tour2table
     - horaires-3j-orsys
   ml5j:
-    - formateur-fmg
+    - formateur
     - description-ml5j
     - ressources-eni
     - tour2table
     - horaires-5j-eni
   mlb:
-    - formateur-fmg
+    - formateur
     - description-mlb
     - ressources-orsys
     - tour2table
     - horaires-4j-orsys
   mlbdnn:
-    - formateur-fmg
+    - formateur
     - description-mlbdnn
     - ressources-orsys
     - tour2table
-title: Titre à adapter à la formation
+title: Votre formation
 version: 3
