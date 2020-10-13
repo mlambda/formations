@@ -1,0 +1,14 @@
+- name: j1
+  title: Jour 1
+  sections:
+    - path: about
+      title: Intelligence Artificielle, enjeux et outils
+      flavor: iao
+    - questions
+    - path: machine-learning
+      flavor: no-tp
+    - questions
+
+- name: j2
+  title: Jour 2
+  sections: []

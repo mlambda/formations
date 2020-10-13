@@ -12,6 +12,12 @@ flavors:
     - ressources-orsys
     - tour2table
     - horaires-3j-orsys
+  iao:
+    - formateur
+    - description-iao
+    - ressources-orsys
+    - tour2table
+    - horaires-2j-orsys
   ml5j:
     - formateur
     - description-ml5j
