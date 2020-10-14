@@ -1,6 +1,6 @@
 default_titles:
   anaconda: Anaconda
-  arXiv: ArXiv
+  arXiv: arXiv
   cloud-computing: Cloud computing
   demo-spark-tf-keras-cnn: Démonstration de Keras sur Spark
   github: GitHub
