@@ -1,0 +1,16 @@
+((* extends 'latex/report.tex.j2' *))
+
+
+%===============================================================================
+% Latex Book
+%===============================================================================
+
+((* block tableofcontents *))
+    \setcounter{tocdepth}{1}
+    ((( super() )))
+((* endblock tableofcontents *))
+
+((* block packages *))
+    ((( super() )))
+    \usepackage[french]{babel}
+((* endblock packages *))
