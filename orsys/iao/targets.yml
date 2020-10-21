@@ -10,7 +10,6 @@
     - questions
     - path: machine-learning
       flavor: no-tp
-    - questions
     - path: engineering
       flavor: all
     - questions
