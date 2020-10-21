@@ -1,5 +1,3 @@
-default_titles:
-  engineering-practices: Bonnes pratiques
 flavors:
   all:
     - engineering-practices

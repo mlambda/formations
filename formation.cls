@@ -17,6 +17,7 @@
 \RequirePackage[export]{adjustbox}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
+\RequirePackage{tabularx}
 \RequirePackage{booktabs}
 \RequirePackage{etoolbox}
 \RequirePackage{hyperref}
