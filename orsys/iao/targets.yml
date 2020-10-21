@@ -1,5 +1,5 @@
 - name: all
-  title: 
+  title: Support de cours
   sections:
     - path: about
       title: Intelligence Artificielle, enjeux et outils
@@ -9,7 +9,13 @@
       flavor: all
     - questions
     - path: machine-learning
-      flavor: no-tp
+      flavor: intro
+    - path: neural-networks
+      flavor: deep-discover
+    - questions
+    - path: reinforcement-learning
+      flavor: deepalpha
+    - questions
     - path: engineering
       flavor: all
     - questions
