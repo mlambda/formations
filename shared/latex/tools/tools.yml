@@ -1,11 +1,17 @@
 default_titles:
   anaconda: Anaconda
   arXiv: arXiv
+  big-data: Big Data
   cloud-computing: Cloud computing
   demo-spark-tf-keras-cnn: Démonstration de Keras sur Spark
+  engineering: Ingénierie
+  environment: Environnement logiciel
   github: GitHub
   hadoop: Apache Hadoop
+  information: S'informer
+  intro: Introduction
   kaggle: Kaggle
+  ml-dl: Machine Learning \& Deep Learning
   notebooks: Notebooks Jupyter
   python: Python
   spark: Apache Spark
@@ -38,5 +44,12 @@ flavors:
     - anaconda
     - questions
     - tp
+  detailed:
+    - intro
+    - ml-dl
+    - environment
+    - engineering
+    - big-data
+    - information
 title: Principaux outils
 version: 3

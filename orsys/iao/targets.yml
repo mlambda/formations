@@ -1,14 +1,26 @@
-- name: j1
-  title: Jour 1
+- name: all
+  title: 
   sections:
     - path: about
       title: Intelligence Artificielle, enjeux et outils
       flavor: iao
     - questions
+    - path: intelligence-artificielle
+      flavor: all
+    - questions
     - path: machine-learning
       flavor: no-tp
     - questions
-
-- name: j2
-  title: Jour 2
-  sections: []
+    - path: engineering
+      flavor: all
+    - questions
+    - path: sectors
+      flavor: all
+    - questions
+    - path: big-questions
+      flavor: all
+    - questions
+    - path: tools
+      flavor: detailed
+    - questions
+    - contact

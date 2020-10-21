@@ -1,0 +1,38 @@
+\begin{frame}{Introduction}
+  Contrôler son environnement logiciel pour~:
+  \begin{itemize}[<+->]
+    \item Rendre son environnement de développement reproductible
+    \item Contrôler les dépendences pour la prod
+    \item Déployer son environnement facilement sur différents clouds
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\texttt{virtualenv}}
+  \texttt{virtualenv} permet d'isoler un environnement Python~:
+  \begin{itemize}[<+->]
+    \item N'intéragit pas avec l'environnement système
+    \item Permet la cohabitation de plusieurs environnements incompatibles
+    \item Plus rapide et natif que les solutions basées sur les conteneurs
+    \item Copie d'une distribution Python de base + customisation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Solutions basées sur \texttt{virtualenv}}
+  \begin{description}[<+->]
+    \item[pip + setup.py] Définition traditionnelle d'une librarie Python
+    \item[pip + requirements.txt] Liste de dépendences
+    \item[pip + pip-compile] Lister les dépendences puis les geler pour la stabilité
+    \item[Pipenv] Définition moderne d'une \textbf{application} Python (pas librairie)
+    \item[poetry] Définition moderne d'application ou librairie
+  \end{description}
+\end{frame}
+
+\begin{frame}{Solutions basées sur les conteneurs}
+  Docker~: conteneurs qui embarquent un système d'exploitation en plus de l'environnement Python~:
+  \begin{itemize}[<+->]
+    \item Permet de contrôler les librairies natives en plus des librairies Python
+    \item Plus grande robustesse si le logiciel s'exécute sur plusieurs OS
+    \item Plus lourd à mettre en place que \texttt{virtualenv}
+    \item Plus adapté pour la prod (déploiement facile par Kubernetes)
+  \end{itemize}
+\end{frame}
