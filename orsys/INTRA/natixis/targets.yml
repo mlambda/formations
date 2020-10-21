@@ -28,15 +28,15 @@
 - name: j4
   title: Jour 4 --- Ingénierie
   sections:
-    - path: engineering
-      flavor: mlcraftmyass
-
-    - path: big-questions
-      flavor: full
-
     - title: Réseaux de Neurones
       path: neural-networks
       flavor: deep-discover
 
     - path: natural-language-processing
       flavor: intro-tp
+
+    - path: engineering
+      flavor: all
+
+    - path: big-questions
+      flavor: full
