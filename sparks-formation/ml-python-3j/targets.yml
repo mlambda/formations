@@ -1,6 +1,42 @@
 - name: j1
-  title: Jour 1 --- Titre
+  title: Jour 1 --- Introduction au Machine Learning
   sections:
+    - path: about
+      title: Machine Learning orienté Python
+      flavor: ml-python
+    - path: tools
+      flavor: init-python
+    - questions
     - path: machine-learning
       flavor: full
     - questions
+
+- name: j2
+  title: Jour 2 --- Algorithmes 1/2
+  sections:
+    - path: unsupervised
+      flavor: dimreduce
+    - path: supervised
+      flavor: standard
+
+- name: j3
+  title: Jour 3 --- Réseaux de neurones
+  sections:
+    - path: big-questions
+      flavor: full
+
+    - title: Réseaux de Neurones
+      path: neural-networks
+      flavor: deep-intro
+
+    - title: TensorFlow et Deep Learning
+      path: tf-keras-intro
+      flavor: intro
+
+    - title: Réseau de Neurones
+      path: neural-networks
+      flavor: tp-nn-keras
+
+    - title: Réseaux de Convolutions
+      path: neural-networks
+      flavor: cnn

@@ -35,5 +35,11 @@ flavors:
     - description-mlbdnn
     - ressources-orsys
     - tour2table
+  ml-python:
+    - formateur
+    - description-mlb
+    - ressources-eni
+    - tour2table
+    - horaires-3j-orsys
 title: Votre formation
 version: 3
