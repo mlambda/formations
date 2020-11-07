@@ -10,7 +10,8 @@ flavors:
     - tf-intro
     - keras-intro
   keras-pur:
-    - keras-intro
+    - keras-intro: Principes \& API
+    - neural-networks/tp-nn: Travaux Pratiques
   tf-pur:
     - tf-intro
     - tf-reg-lin

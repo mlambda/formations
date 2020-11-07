@@ -16,7 +16,7 @@
     - path: big-questions
       flavor: full
 
-    - title: Réseaux de Neurones
+    - title: "Travaux Pratiques~: Réseau de neurones avec TensorFlow"
       path: neural-networks
       flavor: tp-tf-pur
 
@@ -26,13 +26,9 @@
 - name: j2
   title: Jour 2 --- Traitement d'image et Autoencodeurs
   sections:
-    - title: TensorFlow et Deep Learning
+    - title: Keras
       path: tf-keras-intro
       flavor: keras-pur
-
-    - title: Réseau de Neurones
-      path: neural-networks
-      flavor: tp-nn-keras
 
     - title: Réseaux de Convolutions
       path: neural-networks
@@ -59,3 +55,5 @@
     - title: Transformer Network
       path: neural-networks
       flavor: transformer
+
+    - contact
