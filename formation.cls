@@ -61,7 +61,7 @@
           {%
             \scriptsize%
             \insertsectionhead%
-            \ifdefempty{\insertsubsectionhead}{}{ > \insertsubsectionhead}%
+            \ifdefempty{\insertsubsectionhead}{}{ --- \insertsubsectionhead}%
             \newline%
           }%
         }%
