@@ -125,9 +125,9 @@ flavors:
     - tp-rnn
     - tp-rnn-text
   tp-nn-keras:
-    - tp-nn
+    - tp-nn: null
   tp-tf-pur:
-    - tp-nn-tf
+    - tp-nn-tf: null
   transformer:
     - attention-model
     - transformer
