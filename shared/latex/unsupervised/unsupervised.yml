@@ -1,12 +1,13 @@
 default_titles:
   algorithme-em: Espérance-Maximisation
   anomaly-detection-light: Détection d'anomalies
+  clustering: Clustering
   clustering-conclusion: Conclusions
   dbscan: DBSCAN
   demo-anomaly-detect: Démo Sklearn
   demo-clustering: Démo Sklearn
   demo-dim-reduce: Démo Sklearn
-  dimensionality-reduction: Réduction de la dimensionalité
+  dimensionality-reduction: Réduction de la dimensionnalité
   hierarchical-clustering: Clustering Hiérarchique
   introduction: Introduction
   kmeans-gaussian: K-Means
@@ -14,7 +15,7 @@ default_titles:
     Classification Hiérarchique
     sur Composantes Principales
   pca-inverse: Clustering par ACP
-  pca-lda: "Réduction de la dimensionalité : Projections linéaires"
+  pca-lda: "Réduction de la dimensionnalité : Projections linéaires"
   pca-variantes: Variantes Spécifiques
   tp-clustering: "Travaux Pratiques : Clustering"
   tp-dim-reduce: "Travaux Pratiques : Réduction de dimension"
