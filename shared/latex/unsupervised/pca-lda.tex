@@ -1,23 +1,29 @@
-\begin{frame}
-  \frametitle{Réduction de la dimensionalité : Projections linéaires}
-    \begin{itemize}
+\begin{frame}{Projections linéaires}
+  Deux méthodes principales~:
+  \begin{itemize}
     \item Principal Component Analysis (Non-supervisée)
     \item Linear Discriminant Analysis (Supervisée)
-    \end{itemize}
+  \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Réduction de la dimensionalité : PCA}
+\begin{frame}{PCA --- Caractéristiques}
+  \begin{itemize}[<+->]
+    \item Crée de nouvelles features (combinaisons linéaires des originales)
+    \item Ces features sont décorrélées
+    \item Les premières sont les plus informatives
+    \item Pour réduire la dimensionnalité~: ne conserver que les $k$ premières
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{PCA --- Exemple 1}
   \imgth[0.9]{pca-nuage}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Réduction de la dimensionalité : PCA}
+\begin{frame}{PCA --- Exemple 2}
   \imgtw[0.9]{pca-fish}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Réduction de la dimensionalité : PCA}
+\begin{frame}{PCA --- Point de départ}
   \[
   X = \begin{bmatrix}
     X_{1,1} & \dots  & X_{1,D} \\
@@ -27,47 +33,46 @@
   \]
 \end{frame}
 
-\begin{frame}
-  \frametitle{Réduction de la dimensionalité : PCA}
-  chaque dimension est centrée (et réduite):
+\begin{frame}{PCA --- Procédé}
+  Chaque dimension est centrée:
   \[
-  \bar{X} =
+  \overline{X} =
   \begin{bmatrix}
-    X_{1,1}-\bar{X_1} & \dots  & X_{1,D}-\bar{X_D} \\
+    X_{1,1}-\overline{X_1} & \dots  & X_{1,D}-\overline{X_D} \\
     \vdots & \ddots & \vdots \\
-    X_{N,1}-\bar{X_1} & \dots  & X_{N,D}-\bar{X_D}
+    X_{N,1}-\overline{X_1} & \dots  & X_{N,D}-\overline{X_D}
   \end{bmatrix}
   \]
-  ou
+
+  puis optionnellement réduite~:
+
   \[
-  \tilde{X} =
+  \widetilde{X} =
   \begin{bmatrix}
-    \frac{X_{1,1}-\bar{X_1}}{\sigma(X_1)} & \dots  & \frac{X_{1,D}-\bar{X_D}}{\sigma(X_D)} \\
+    \frac{X_{1,1}-\overline{X_1}}{\sigma(X_1)} & \dots  & \frac{X_{1,D}-\overline{X_D}}{\sigma(X_D)} \\
     \vdots & \ddots & \vdots \\
-    \frac{X_{N,1}-\bar{X_1}}{\sigma(X_1)} & \dots  & \frac{X_{N,D}-\bar{X_D}}{\sigma(X_D)}
+    \frac{X_{N,1}-\overline{X_1}}{\sigma(X_1)} & \dots  & \frac{X_{N,D}-\overline{X_D}}{\sigma(X_D)}
   \end{bmatrix}
   \]
 \end{frame}
 
-\begin{frame}
-  \frametitle{Réduction de la dimensionalité : PCA}
-  Matrice de covariance (resp. corrélation) :
-  \[
-  \frac{1}{N} * \bar{X}^T * \bar{X} \;,\;( \frac{1}{N} * \tilde{X}^T * \tilde{X} )
-  \]
-  \underline{ACP} : \\
-  Retrouver les valeurs et vecteurs propres de de la matrice de covariance (resp. corrélation), donc diagonaliser la matrice carrée obtenue. \\
-  \\
-  Vecteur propre : vecteur permettant de projeter les données \\
-  Valeur propre : ``proportion d'information'' conservée par la projection suivant le vecteur propre correspondant \\
-  Réduction de dimension : On ne projette que suivant le nombre de vecteurs propres voulus
+\begin{frame}{PCA --- Procédé (suite)}
+  \begin{itemize}[<+->]
+    \item Calcul de la matrice de covariance (resp corrélation)~:
+      \[
+      \frac{1}{N} \times \overline{X^T} \times \overline{X}
+      \quad
+      ( \frac{1}{N} \times \widetilde{X^T} \times \widetilde{X} )
+      \]
+    \item Calcul des vecteurs propres de cette matrice~: ce sont les combinaisons linéaires des nouvelles features
+    \item Tri des vecteurs par valeur propre décroissante
+    \item Réduction de dimension : on ne conserve que les $k$ premiers vecteurs propres
+  \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Réduction de la dimensionalité : LDA}
-  \begin{center}
-    Linear Discriminant Analysis
-  \end{center}
+\begin{frame}{PCA --- Linear Discriminant Analysis}
+  Maximisation de la variance inter-classes.
+
   \begin{minipage}[l]{0.49\linewidth}
     \imgtw[0.8]{pca-nuage}
   \end{minipage}\hfill

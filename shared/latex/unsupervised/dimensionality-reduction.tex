@@ -1,5 +1,5 @@
 \begin{frame}
-  \frametitle{Réduction de la dimensionalité}
+  \frametitle{Problématique}
     \begin{center}
       Comment appréhender des données en grande dimension ?
     \end{center}
@@ -13,26 +13,31 @@
     \]
 \end{frame}
 
-\begin{frame}
-  \frametitle{La malédiction des grandes dimensions !}
+\begin{frame}{La malédiction des grandes dimensions}
     \begin{center}
       Nombre d'extrémités dans une espace de dimension : \\
       $\;$ \\
-      \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        dim & 1 & 2 & 3 & 4 & 5 & ... \\
-        \hline
-        pts & 2 & 4 & 8 & 16 & 32 & ...\\
-        \hline
+      \begin{tabular}{cc}
+        Dimensions & Points d'un hypercube \\
+        \midrule
+        1 & 2 \\
+        2 & 4 \\
+        3 & 8 \\
+        4 & 16 \\
+        5 & 32 \\
       \end{tabular}
     \end{center}
+
+  \begin{alertblock}{Besoin en données}
+    Corrélé exponentiellement à la taille des espaces.
+  \end{alertblock}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réduction de la dimensionalité}
+  \frametitle{Approches}
     \begin{itemize}
     \item Séléction de dimensions
-    \item Projections linéaires (ACP, LDA, ...)
-    \item Projections non-linéaires (kernels, neural network embeddings, ...)
+    \item Projections linéaires (ACP, LDA, …)
+    \item Projections non-linéaires (t-SNE, UMAP, kernels, embeddings, …)
     \end{itemize}
 \end{frame}

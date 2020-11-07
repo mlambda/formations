@@ -1,33 +1,38 @@
 
-\begin{frame}
-  \frametitle{Clustering Hiérarchique}
-  Deux approches :
-  \begin{itemize}
-  \item Agglomérantes (bottom-up)
-  \item Divisantes (top-down)
+\begin{frame}{Clustering Hiérarchique}
+  Deux approches~:
+
+  \begin{itemize}[<+->]
+    \item Agglomératives (bottom-up)
+    \item Divisantes (top-down), moins utilisées
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Classification Ascendante Hiérarchique (CAH)}
-  Métode Agglomérante
-  \begin{itemize}
-  \item Chaque élément est dans une classe distincte
-  \item On itère jusqu'à ce qu'on ait le nombre de classes voulues
-  \item On utilise une mesure de dissimilarité inter-classe comme critère d'aggrégation
-  \end{itemize}
-  A chaque itération, on calcule la dissimilarité entre toutes les classes puis on fusionne les plus similaires.
+\begin{frame}{Clustering Hiérarchique --- Procédé}
+  Méthode Agglomérative
+
+  \begin{description}[<+->]
+    \item[Initialisation] Chaque élément est dans une classe distincte
+    \item[Aggrégation] Itérativement, fusion deux par deux les classes les plus similaires
+    \item[Exploitation] On choisit le nombre de clusters à exploiter
+  \end{description}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Classification Ascendante Hiérarchique (CAH)}
+\begin{frame}{Clustering Hiérarchique --- Résultat}
+  \imgth[0.8]{dendogram}
+\end{frame}
+
+\begin{frame}{Clustering Hiérarchique --- Procédé}
+
   Quelques distances de dissimilarités, après avoir défini une distance D dans l'espace :
-  \begin{itemize}
+
+  \begin{itemize}[<+->]
   \item saut minimum : $dissim(C_1,C_2) = \underset{x \in C_1,y \in C_2}{\min}{D(x,y)}$
   \item saut maximum : $dissim(C_1,C_2) = \underset{x \in C_1,y \in C_2}{\max}{D(x,y)}$
   \item saut moyen : $dissim(C_1,C_2) = \underset{x \in C_1,y \in C_2}{moyenne\;}{D(x,y)}$
   \item distance de Ward qui vise à maximiser l'inertie inter-classe
   \item ...
   \end{itemize}
+
   $O(n^2)$ < complexité < $O(n^3)$ !
 \end{frame}
