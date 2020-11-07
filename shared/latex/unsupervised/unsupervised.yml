@@ -55,6 +55,29 @@ flavors:
     - questions
     - tp-dim-reduce
     - tp-clustering
+  natixis:
+    - introduction
+    - dimensionality-reduction
+    - pca-lda: null
+    - tsne-umap: null
+    - demo-dim-reduce: null
+    - questions
+    - clustering
+    - kmeans-gaussian: null
+    - dbscan: null
+    - hierarchical-clustering: null
+    - unsupervised-metrics: null
+    - clustering-conclusion: null
+    - demo-clustering: null
+    - questions
+    - pca-classification-hierarchique-composantes-principales: Méthodes hybrides
+    - pca-inverse: null
+    - questions
+    - anomaly-detection-light
+    - demo-anomaly-detect: null
+    - questions
+    - tp-dim-reduce
+    - tp-clustering
   dimreduce:
     - dimensionality-reduction
     - pca-lda
