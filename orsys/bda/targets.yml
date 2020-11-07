@@ -12,14 +12,14 @@
     - questions
 
 - name: j2
-  title: Jour 2 --- Algorithmes 1/2
+  title: Jour 2 --- Algorithmes supervisés
   sections:
     - path: supervised
       flavor: standard
     - questions
 
 - name: j3
-  title: Jour 3 --- Algorithmes 2/2
+  title: Jour 3 --- Algorithmes non supervisés
   sections:
     - path: unsupervised
       flavor: bda
@@ -37,6 +37,9 @@
     - path: natural-language-processing
       flavor: intro-tp
 
-    - title: Réseaux de Neurones
-      path: neural-networks
+    - path: neural-networks
       flavor: deep-discover
+
+    - questions
+
+    - contact
