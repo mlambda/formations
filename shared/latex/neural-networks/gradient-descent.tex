@@ -1,6 +1,5 @@
 
-\begin{frame}
-  \frametitle{Optimisation}
+\begin{frame}{Principe}
   Calcul du gradient de l'erreur par rapport aux paramètres:
   \[
   \frac{\partial{Err}}{\partial{w_i}}
@@ -13,8 +12,7 @@
   \imgtw[0.6]{gradient}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Optimisation}
+\begin{frame}{Algorithme}
   1 - initialisation aléatoire du modèle
   \newline
   2 - Tant que(critère arret == 0)
@@ -28,8 +26,7 @@
 \end{frame}
 
 
-\begin{frame}
-  \frametitle{Gradient et mise à jour}
+\begin{frame}{Dérivation}
   \begin{minipage}[l]{0.49\linewidth}
     \begin{center}
       $\boxed{y = a.x+b}$ \\
@@ -58,102 +55,91 @@
   \end{center}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Gradient et mise à jour}
-  initialisation au hasard ( $\gamma$ = 0.01 )
+\begin{frame}{Exemple}
+  Initialisation au hasard ($\gamma = 0.01$)
   \begin{itemize}
-  \item a = 0.58 ($\hat{a} = 3.0$)
-  \item b = 0.25 ($\hat{b} = 0.5$)
+    \item a = 0.58 ($\hat{a} = 3.0$)
+    \item b = 0.25 ($\hat{b} = 0.5$)
   \end{itemize}
-  \imgth[0.8]{regression-1}
+  \imgth[0.6]{regression-1}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Gradient et mise à jour}
+\begin{frame}{Exemple}
   \begin{itemize}
-  \item a = 0.58 ($\hat{a} = 3.0$)
-  \item b = 0.25 ($\hat{b} = 0.5$)
+    \item a = 0.58 ($\hat{a} = 3.0$)
+    \item b = 0.25 ($\hat{b} = 0.5$)
   \end{itemize}
-  \imgth[0.8]{regression-error}
+  \imgth[0.6]{regression-error}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Gradient et mise à jour}
+\begin{frame}{Exemple}
   \begin{itemize}
-  \item a = 1.50 ($\hat{a} = 3.0$)
-  \item b = 0.35 ($\hat{b} = 0.5$)
+    \item a = 1.50 ($\hat{a} = 3.0$)
+    \item b = 0.35 ($\hat{b} = 0.5$)
   \end{itemize}
-  \imgth[0.8]{regression-2}
+  \imgth[0.6]{regression-2}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Gradient et mise à jour}
+\begin{frame}{Exemple}
   \begin{itemize}
-  \item a = 2.10 ($\hat{a} = 3.0$)
-  \item b = 0.40 ($\hat{b} = 0.5$)
+    \item a = 2.10 ($\hat{a} = 3.0$)
+    \item b = 0.40 ($\hat{b} = 0.5$)
   \end{itemize}
-  \imgth[0.8]{regression-3}
+  \imgth[0.6]{regression-3}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Gradient et mise à jour}
+\begin{frame}{Exemple}
   \begin{itemize}
-  \item a = 2.48 ($\hat{a} = 3.0$)
-  \item b = 0.43 ($\hat{b} = 0.5$)
+    \item a = 2.48 ($\hat{a} = 3.0$)
+    \item b = 0.43 ($\hat{b} = 0.5$)
   \end{itemize}
-  \imgth[0.8]{regression-4}
+  \imgth[0.6]{regression-4}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Gradient et mise à jour}
+\begin{frame}{Exemple}
   \begin{itemize}
-  \item a = 2.73 ($\hat{a} = 3.0$)
-  \item b = 0.46 ($\hat{b} = 0.5$)
+    \item a = 2.73 ($\hat{a} = 3.0$)
+    \item b = 0.46 ($\hat{b} = 0.5$)
   \end{itemize}
-  \imgth[0.8]{regression-5}
+  \imgth[0.6]{regression-5}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Gradient et mise à jour}
+\begin{frame}{Exemple}
   \begin{itemize}
-  \item a = 2.89 ($\hat{a} = 3.0$)
-  \item b = 0.47 ($\hat{b} = 0.5$)
+    \item a = 2.89 ($\hat{a} = 3.0$)
+    \item b = 0.47 ($\hat{b} = 0.5$)
   \end{itemize}
-  \imgth[0.8]{regression-6}
+  \imgth[0.6]{regression-6}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Gradient et mise à jour}
+\begin{frame}{Exemple}
   \begin{itemize}
-  \item a = 2.99 ($\hat{a} = 3.0$)
-  \item b = 0.48 ($\hat{b} = 0.5$)
+    \item a = 2.99 ($\hat{a} = 3.0$)
+    \item b = 0.48 ($\hat{b} = 0.5$)
   \end{itemize}
-  \imgth[0.8]{regression-7}
+  \imgth[0.6]{regression-7}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Gradient et mise à jour}
+\begin{frame}{Exemple}
   \begin{itemize}
-  \item a = 3.06 ($\hat{a} = 3.0$)
-  \item b = 0.49 ($\hat{b} = 0.5$)
+    \item a = 3.06 ($\hat{a} = 3.0$)
+    \item b = 0.49 ($\hat{b} = 0.5$)
   \end{itemize}
-  \imgth[0.8]{regression-8}
+  \imgth[0.6]{regression-8}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Gradient et mise à jour}
+\begin{frame}{Exemple}
   \begin{itemize}
-  \item a = 3.10 ($\hat{a} = 3.0$)
-  \item b = 0.49 ($\hat{b} = 0.5$)
+    \item a = 3.10 ($\hat{a} = 3.0$)
+    \item b = 0.49 ($\hat{b} = 0.5$)
   \end{itemize}
-  \imgth[0.8]{regression-9}
+  \imgth[0.6]{regression-9}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Gradient et mise à jour}
+\begin{frame}{Exemple}
   \begin{itemize}
-  \item a = 3.13 ($\hat{a} = 3.0$)
-  \item b = 0.50 ($\hat{b} = 0.5$)
+    \item a = 3.13 ($\hat{a} = 3.0$)
+    \item b = 0.50 ($\hat{b} = 0.5$)
   \end{itemize}
-  \imgth[0.8]{regression-10}
+  \imgth[0.6]{regression-10}
 \end{frame}

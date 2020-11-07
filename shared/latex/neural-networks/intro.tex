@@ -14,17 +14,17 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseau de Neurones}
+  \frametitle{Lien (ténu) avec la biologie}
   \imgtw[0.9]{biological-neuron}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseau de Neurones}
+  \frametitle{Modélisation}
   \imgtw[0.9]{neuron-model}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseau de Neurones}
+  \frametitle{Modélisation matricielle}
   \[
   \sigma \left(
   \begin{bmatrix}
@@ -62,7 +62,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseaux de neurones : Fonction d'activation $\sigma$}
+  \frametitle{Fonctions d'activation $\sigma$}
   \begin{itemize}
   \item Sigmoïde
   \item Tanh
@@ -73,14 +73,13 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseaux de neurones : un Potentiel infini}
-  \textbf{1991} : \textbf{Kurt Hornik} : Théorème d'approximation universelle
+  \frametitle{Un potentiel infini}
+  \textbf{Kurt Hornik, 1991~:} Théorème d'approximation universelle
   \imgtw[0.8]{universal-approximation}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseaux de neurones : Fonction d'activation $\sigma$}
-  Sigmoïde
+  \frametitle{Fonction d'activation sigmoïde}
   \imgth[0.6]{sigmoid}
   \[
   \frac{\partial{\phi(x)}}{\partial{x}}=\phi(x)*(1-\phi(x))
@@ -88,7 +87,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseaux de neurones : Fonction d'activation $\sigma$}
+  \frametitle{Fonction d'activation tanh}
   \[
   \tanh(x)=\frac{1-\exp{-2*x}}{1+\exp{-2*x}}
   \]
@@ -99,7 +98,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseaux de neurones : Fonction d'activation $\sigma$}
+  \frametitle{Fonction d'activation softmax}
   \[
   \mathit{Softmax}(x_j)=\frac{\exp{x_j}}{\sum_{i=1}^n{\exp{x_i}}}
   \]
@@ -118,7 +117,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseaux de neurones : Fonction d'activation $\sigma$}
+  \frametitle{Fonction d'activation ReLU}
   \begin{minipage}[c]{0.39\linewidth}
     \imgtw[0.9]{relu}
   \end{minipage}\hfill
@@ -128,16 +127,16 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseau de Neurones}
+  \frametitle{Réseau sans couche cachée}
   \imgtw[0.8]{neural-network-small}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseau de Neurones}
+  \frametitle{Réseau avec une couche cachée}
   \imgtw[0.8]{neural-network}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Réseau de Neurones}
+  \frametitle{Réseau profond}
   \imgtw[0.8]{deep-net}
 \end{frame}

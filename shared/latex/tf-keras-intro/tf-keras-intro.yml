@@ -13,7 +13,7 @@ flavors:
     - keras-intro: Principes \& API
     - neural-networks/tp-nn: Travaux Pratiques
   tf-pur:
-    - tf-intro
-    - tf-reg-lin
+    - tf-intro: null
+    - tf-reg-lin: null
 title: TensorFlow et Keras
 version: 3

@@ -9,7 +9,7 @@
       path: tf-keras-intro
       flavor: tf-pur
 
-    - title: Réseaux de Neurones
+    - title: Réseaux de neurones
       path: neural-networks
       flavor: deep-intro
 
@@ -30,12 +30,11 @@
       path: tf-keras-intro
       flavor: keras-pur
 
-    - title: Réseaux de Convolutions
+    - title: Réseaux de convolutions
       path: neural-networks
       flavor: cnn
 
-    - title: Autoencodeurs d'image
-      path: auto-encoders
+    - path: auto-encoders
       flavor: full
 
 - name: j3
@@ -48,11 +47,11 @@
       path: sequential-data
       flavor: intro
 
-    - title: Réseaux Récurrents
+    - title: Réseaux récurrents
       path: neural-networks
       flavor: recurrent
 
-    - title: Transformer Network
+    - title: Réseaux transformeurs
       path: neural-networks
       flavor: transformer
 

@@ -1,11 +1,11 @@
 default_titles:
-  attention-model: Modèle à Attention
+  attention-model: Modèle à attention
   cnn-data: Traitement d'image
   cnn-model: Réseaux de convolutions
-  deep-optimize: Optimisation de Réseaux Profond
+  deep-optimize: Optimisation de réseaux profonds
   gan-intro: Petit jeu de rapidité
   gan-models: Generative Adversarial Network (GAN)
-  gradient-descent: Descente de Gradient
+  gradient-descent: Descente de gradient
   intro: Introduction
   lstm: Réseaux à longue mémoire de court terme
   optimize: Optimisation
@@ -13,13 +13,13 @@ default_titles:
   rnn: Réseaux de neurones récurrents
   rnn-keras: RNN avec Keras
   rnn-variants: Variantes de réseaux récurrents
-  tp-cnn: "Travaux Pratiques : CNN et Keras"
-  tp-nn: "Travaux Pratiques : Tensorflow et Keras"
-  tp-nn-tf: "Travaux Pratiques : Réseau de Neurones avec Tensorflow"
-  tp-rnn: "Travaux Pratiques : RNN"
-  tp-rnn-text: "Travaux Pratiques : RNN - Classification de texte"
-  tp-transformer: "Travaux Pratiques : Transformer"
-  transformer: Transformer Networks
+  tp-cnn: Travaux Pratiques --- CNN et Keras
+  tp-nn: Travaux Pratiques --- Tensorflow et Keras
+  tp-nn-tf: Travaux Pratiques --- Réseau de neurones avec Tensorflow
+  tp-rnn: Travaux Pratiques --- RNN
+  tp-rnn-text: Travaux Pratiques --- RNN --- Classification de texte
+  tp-transformer: Travaux Pratiques --- Transformeurs
+  transformer: Réseaux transformeurs
 flavors:
   all:
     - intro
