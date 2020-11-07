@@ -3,6 +3,7 @@ default_titles:
   markov-model: Modèles de Markov
   sequential-data: Introduction
   sequential-models: Modèles Séquentiels
+  neural-networks/rnn: Réseaux de neurones récurrents
 flavors:
   all:
     - sequential-data
@@ -19,5 +20,15 @@ flavors:
     - sequential-data
     - sequential-models
     - questions
+  light:
+    - sequential-data
+    - sequential-models
+    - markov-model
+  with_rnn:
+    - sequential-data
+    - sequential-models
+    - markov-model
+    - hmm
+    - neural-networks/rnn
 title: Données séquentielles
 version: 3
