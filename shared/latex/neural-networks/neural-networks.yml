@@ -8,7 +8,7 @@ default_titles:
   gradient-descent: Descente de gradient
   intro: Introduction
   lstm: Réseaux à longue mémoire de court terme
-  optimize: Optimisation
+  optimize: Optimisation des hyper-paramètres
   regularisation: Régularisation
   rnn: Réseaux de neurones récurrents
   rnn-keras: RNN avec Keras
@@ -69,6 +69,7 @@ flavors:
     - optimize
     - deep-optimize
     - regularisation
+    - questions
   gan-intro:
     - gan-intro
     - gan-model

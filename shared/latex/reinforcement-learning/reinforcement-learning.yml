@@ -11,5 +11,6 @@ flavors:
     - intro
     - deep
     - alphago
-title: L'apprentissage par renforcement
+    - questions
+title: Apprentissage par renforcement
 version: 3

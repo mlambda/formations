@@ -100,11 +100,11 @@
 \begin{frame}
   \frametitle{Fonction d'activation softmax}
   \[
-  \mathit{Softmax}(x_j)=\frac{\exp{x_j}}{\sum_{i=1}^n{\exp{x_i}}}
+  \softmax(x_j) = \frac{e^{x_j}}{\sum_{i = 1}^n{e^{x_i}}}
   \]
   donc :
   \[
-  \sum_{j=1}^n{\mathit{Softmax}(x_j)}=1
+  \sum_{j = 1}^n{\softmax(x_j)} = 1
   \]
   dérivée (ou jacobien car le softmax est une fonction de $\mathbb{R}^n\rightarrow\mathbb{R}^n$):
   \[

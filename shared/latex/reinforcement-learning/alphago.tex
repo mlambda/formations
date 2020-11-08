@@ -1,16 +1,14 @@
-\begin{frame}
-  \frametitle{AlphaGo}
+\begin{frame}{Introduction}
   AlphaGo un bon exemple de développement industriel en deep learning.
-  \begin{itemize}
-  \item \textbf{deep artificial neural networks}
-  \item \textbf{Monte Carlo tree search}
-  \item \textbf{Reinforcement Learning}
-  \item \textbf{Très gros moyens !}    
+  \begin{itemize}[<+->]
+  \item Réseaux de neurones profonds
+  \item Monte Carlo Tree Search
+  \item Apprentissage par renforcement
+  \item Très gros entrainements (> 30 M\$)
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Go}
+\begin{frame}{Go}
   \begin{minipage}[c]{0.6\linewidth}
     \imgtw[1]{go-regles}
   \end{minipage}\hfill
@@ -26,59 +24,56 @@
   \end{minipage}\hfill
 \end{frame}
 
-\begin{frame}
-  \frametitle{AlphaGo}
-  \begin{minipage}[c]{0.50\linewidth}
-    \begin{itemize}
-    \item $softmax(convolutions^{13}(19*19*48{bits}))$
-    \item 48bits : input sur la position, la configuration , ...
-    \item Appris sur données supervisées
+\begin{frame}{Réseau de value}
+  \begin{minipage}[c]{0.68\linewidth}
+    \begin{itemize}[<+->]
+      \item $\softmax(\text{convolutions}_{13}(19 \times 19 \times 48\text{bits}))$
+      \item 48bits : input sur la position, la configuration
+      \item Appris sur données supervisées d'abord
+      \item Amélioré par renforcement ensuite
     \end{itemize}
   \end{minipage}\hfill
-  \begin{minipage}[c]{0.49\linewidth}
-  \imgth[0.8]{alphago-value}
+  \begin{minipage}[c]{0.31\linewidth}
+  \imgtw{alphago-value}
   \end{minipage}\hfill
 \end{frame}
 
-\begin{frame}
-  \frametitle{AlphaGo}
+\begin{frame}{Réseau de policy}
   \begin{minipage}[c]{0.50\linewidth}
     \imgth[0.8]{alphago-policy}
   \end{minipage}\hfill
   \begin{minipage}[c]{0.49\linewidth}
-    \begin{itemize}
-    \item Appris sur du self-play
-    \item A l'aide d'un MCTS qui apprend à générer des parties efficace en fonction de la value function (fixée) et policy function (que l'on est en train d'apprendre)
+    \begin{itemize}[<+->]
+      \item Appris sur données supervisées d'abord
+      \item Puis amélioré par self-play
+      \item A l'aide d'une recherche MCTS boostée par les deux réseaux (value \& policy)
     \end{itemize}
   \end{minipage}\hfill
 \end{frame}
 
-\begin{frame}
-  \frametitle{AlphaGo}
-  Monte-Carlo tree search
+\begin{frame}{Monte-Carlo Tree Search + réseaux de value \& policy}
   \imgtw[0.8]{alphago-mcts}
-  \begin{itemize}
-  \item Selection par maximum de (Q-value + u(P)) où P est une proba à priori pour chaque coup.
-  \item Expansion en fonction de la policy qui produit des probabilités qui sont alors stockés pour chaque action
+  \begin{itemize}[<+->]
+    \item Sélection par maximum de Q-value + u(P) où P est une proba à priori pour chaque coup
+    \item Expansion en fonction de la policy qui produit des probabilités stockées pour chaque action
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{AlphaGo}
-  2 phases pour apprendre :
-  \begin{description}
-  \item[Value network  :]
-  \item 3 semaines x (50 x TPU) 
-  \item[1 million de parties APV-MCTS :]
-  \item 1 journée x (5000 x TPU)
-  \item $\;$
-  \item[50 TPU $\approx$ 2000 TFLOPS]
-  \item core i7 : $\approx$ 0.07 TFLOPS (donc il en faudrait $\approx$ 30 000)
+\begin{frame}{Phases d'apprentissage}
+  \begin{description}[<+->]
+    \item[Supervisé] 3 semaines (50 TPU) 
+    \item[Renforcement] 1 journée (5000 TPU)
+  \end{description}
+
+  \onslide<+->{À titre indicatif, comparaison entre TPU et Core i7~:}
+
+  \begin{description}[<+->]
+    \item[50 TPU] $\approx$ 2000 TFLOPS
+    \item[Core i7] $\approx$ 0.07 TFLOPS (donc il en faudrait $\approx$ 30 000)
   \end{description}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Go}
+\begin{frame}{Évaluation de performances au Go}
   \begin{minipage}[c]{0.7\linewidth}
     \imgtw[1]{go-winrate-dan}
   \end{minipage}\hfill
@@ -108,18 +103,19 @@
   \end{minipage}\hfill
 \end{frame}
 
-\begin{frame}
-  \frametitle{AlphaGo}
+\begin{frame}{Performances d'AlphaGo}
   Plusieurs versions :
-  \begin{itemize}
-  \item \textbf{AlphaGo Vs Fan Hui 5 à 0} Octobre 2015
-  \item \textbf{AlphaGo vs Lee Sedol 4 à 1} Mars 2016 (Prédiction de Rémi Coulom en 2016 : Résultat pas avant 15 ans)
-  \item \textbf{AlphaGo-zero} considéré comme ayant au moins 500 EGF au dessus de AlphaGo. 2017
-  \end{itemize}
+  \begin{description}
+  \item[AlphaGo] 5 à 0 en Octobre 2015
+  \item[AlphaGo Lee] Bat Lee Sedol 4 à 1 en mars 2016 (prédiction de Rémi Coulom en 2016 : pas avant 15 ans)
+  \item[AlphaGo Master] Bat les pros sur internet 60 à 0 en décembre 2016
+  \item[AlphaGo Zero] Pas de phase supervisée. $>$ AlphaGo Master
+  \item[Alpha Zero] $\geq$ AlphaGo Zero mais applicable aussi au shogi, échecs, …
+  \item[Mu Zero] $\geq$ Alpha Zero mais pas d'hardcodage des règles
+  \end{description}
 \end{frame}
 
-\begin{frame}
-  \frametitle{AlphaGo}
+\begin{frame}{AlphaGo}
   \begin{center}
     AlphaGo vs Lee Sedol (ou Fan Hui)
   \end{center}
@@ -127,31 +123,34 @@
   1 202 processeurs et 176 TPU
 \end{frame}
 
-\begin{frame}
-  \frametitle{AlphaGo Zero}
-  \begin{itemize}
-  \item \textbf{Plus simple : 4 TPU}
-  \item \textbf{Plus fort : bat alphago 100:0}
-  \item \textbf{Plus général : self-play uniquement}
-  \end{itemize}  
-  \imgtw[1]{alphagozero-lerningcurve}
+\begin{frame}{AlphaGo Zero}
+  \begin{description}[<+->]
+    \item[Plus simple] 4 TPU
+    \item[Plus fort] Bat alphago 100:0
+    \item[Plus général] Pas de supervisé : renforcement par self-play seulement
+  \end{description}
+  \onslide<+->{\imgtw[1]{alphagozero-lerningcurve}}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Alpha Zero}
-  \begin{itemize}
-  \item \textbf{Encore plus général}
-  \item \textbf{Bat tous les bot d'échec, go et shogi}
+\begin{frame}{Alpha Zero}
+  \begin{itemize}[<+->]
+    \item Encore plus général~: généralise les inputs et les outputs
+    \item Bat tous les bot d'échecs, go et shogi
   \end{itemize}  
 \end{frame}
 
-\begin{frame}
-  \frametitle{Alpha Zero}
-  Relativisons
-  \begin{itemize}
-  \item Un cerveau humain consomme $\approx$ 20 Watts
-  \item AlphaGo $\approx$ 440 000 Watts (440 grille-pains)
-  \item Un tableur gagnerait n'importe quelle compétition de calcul mental
+\begin{frame}{Mu Zero}
+  \begin{itemize}[<+->]
+    \item Encore plus général~: infère les règles depuis les inputs et outputs
+    \item Était état de l'art sur les jeux Atari, bat Alpha Zero
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Relativisons}
+  \begin{itemize}[<+->]
+    \item Un cerveau humain consomme $\approx$ 20 Watts
+    \item AlphaGo $\approx$ 440 000 Watts (440 grille-pains)
+    \item Un tableur gagnerait n'importe quelle compétition de calcul mental
   \end{itemize}
 \end{frame}
 

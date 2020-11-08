@@ -16,7 +16,7 @@
     - path: big-questions
       flavor: full
 
-    - title: "Travaux Pratiques~: Réseau de neurones avec TensorFlow"
+    - title: Travaux Pratiques --- Réseau de neurones avec TensorFlow
       path: neural-networks
       flavor: tp-tf-pur
 

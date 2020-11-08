@@ -1,57 +1,49 @@
-\begin{frame}
-  \frametitle{Les Problémes théoriques}
-  \begin{itemize}
-  \item Les données (trouées, incomplètes, non-représentatives, biais statistiques,...)
-  \item Une fonction de perte (objectif) pas adaptée au besoin
-  \item La fuite d'information dans le modèle
-  \item La quasi non-interprétation du modèle
-  \item Des modèles qui ne s'adaptent pas au changements
-  \item Le surapprentissage
+\begin{frame}{Ingénierie \& théorie}
+  \begin{itemize}[<+->]
+    \item Données trouées, incomplètes, non-représentatives, biaisées, …
+    \item Fonction de perte (objectif) pas adaptée au besoin
+    \item Fuite d'information dans le modèle
+    \item Quasi non-interprétabilité du modèle
+    \item Non-adaptationn du modèle au changement
+    \item Le surapprentissage
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Les Problémes logistiques}
-  Les \textbf{données} coûtent cher (récolte, nettoyage, \#Data>1M). 
+\begin{frame}{Données}
+  Les \textbf{données} coûtent cher (récolte, nettoyage, \#Data~>~1M). 
   \imgth[0.5]{amazon-mechanical-turc}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Les Problémes logistiques}
+\begin{frame}{Temps long de l'apprentissage}
   L'apprentissage d'un modèle prend \textbf{beaucoup} de \textbf{temps}
-  \begin{itemize}
-  \item Reconnaissance parole : 4 GPU => plusieurs jours, semaines
-  \item Alphago : 3 semaines sur 5000 TPU ( $\approx$ 30M\$)
-  \item On n'obtient pas de résultats concluant avec le premier run.
-  \item Peu de visibilité sur le temps d'obtention d'une plus value
+  \begin{itemize}[<+->]
+    \item Reconnaissance parole : 4 GPU => plusieurs jours, semaines
+    \item AlphaGo : 3 semaines sur 5000 TPU ( $\approx$ 30M\$)
+    \item Pas de résultats concluants au premier run
   \end{itemize}
-  \imgth[0.6]{sablier-windows}
+  \onslide<+->{$\rightarrow$ Peu de visibilité sur le temps d'obtention d'une plus value
+  \imgth[0.6]{sablier-windows}}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Les Problémes logistiques}
-  L'utilisation de \textbf{GPU/TPU} coûte cher
-  \newline
-  ...et ça ne s'arrange pas avec l'explosion du besoin par le minage de cryptomonnaies
+\begin{frame}{Infrastructure}
+  L'utilisation de GPU/TPU coûte cher… et ça ne s'arrange pas avec l'explosion du besoin par le minage de cryptomonnaies
   \imgth[0.45]{nvidia-stock-history}
   \begin{center}
     \small Cours de l'action NVIDIA
   \end{center}
 \end{frame}
 
-\begin{frame}
-\frametitle{Les Problémes de communication}
-\imgth[0.8]{xkcd-easy-impossible}
+\begin{frame}{Faisabilité}
+  \imgth[0.8]{xkcd-easy-impossible}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Les Problémes logistiques}
+\begin{frame}{Recrutement}
   Les \textbf{ingénieurs en machine learning} (compétents) coûtent cher :
   \begin{itemize}
-  \item git clone d'un papier + jouer avec data $\neq$ data-scientist
-  \item au croisement de l'ingénérie (traitement de gros volumes de données, standard de développement) et des mathématiques (statistiques, algèbre, optimisation)
-  \item Le nombre de nouveaux diplomés ne suit pas la demande
-  \item Les meilleurs sont/vont dans une poignée d'entreprises ! (ou presque...)
+    \item git clone d'un papier + jouer avec data $\neq$ data-scientist
+    \item au croisement de l'ingénérie (traitement de gros volumes de données, standard de développement) et des mathématiques (statistiques, algèbre, optimisation)
+    \item Le nombre de nouveaux diplomés ne suit pas la demande
+    \item Les meilleurs sont/vont dans une poignée d'entreprises ! (ou presque...)
   \end{itemize}
   \begin{minipage}[l]{0.55\linewidth}
     ~
@@ -61,21 +53,20 @@
   \end{minipage}\hfill
 \end{frame}
 
-\begin{frame}
-  \frametitle{Les Problémes de communication}
+\begin{frame}{Acceptation}
   Utilisateurs prêts à accepter un algorithme qui fait des erreurs ?
   \imgth[0.7]{robotdoc}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Les Problémes de communication}
+\begin{frame}{Acceptation}
   Utilisateurs prêts à accepter un algorithme qui fait des erreurs ?
   \imgth[0.65]{google-ceo-congress}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Les Problémes de communication}
-  Utilisateurs prêts à accepter un algorithme qui n'est pas interprétable ?\\
-  Réseaux de neurones <=> enchainement de multiplications matricielles avec des millions de paramètres.
+\begin{frame}{Interprétabilité}
+  Utilisateurs prêts à accepter un algorithme qui n'est pas interprétable ?
+
+  Réseaux de neurones $\iff$ enchaînement de multiplications matricielles avec des millions de paramètres.
+
   \imgtw[0.9]{deep-auto-encoder}
 \end{frame}
