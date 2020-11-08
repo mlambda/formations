@@ -1,26 +1,34 @@
-\begin{frame}
-  \frametitle{D'autres variantes}
-  Gated Recurrent Unit
+\begin{frame}{Gated Recurrent Unit --- Principe}
+  Similaire au LSTM, mais~:
+  \begin{description}[<+->]
+    \item[Update gate] $\approx$ Input et forget gates du LSTM combinées
+    \item[Reset gate] $\approx$ Influence de la mémoire pendant l'update
+  \end{description}
+  \onslide<+->{$\rightarrow$ Moins de paramètres que LSTM, peut être aussi efficace sur certains datasets}
+\end{frame}
+
+\begin{frame}{Gated Recurrent Unit --- Détails théoriques}
   \imgtw[0.8]{gru}
-  $Z_{t}=\sigma (W_{Z}*x_{t}+U_{Z}*h_{t-1}+b_{Z})\,\,\,\,$(update gate $\approx$ input et forget gates) \\
-  $R_{t}=\sigma (W_{R}*x_{t}+U_{R}*h_{t-1}+b_{R})\;\;$(reset gate $\approx$ output gate) \\
-  $h_{t}=Z_{t}\circ h_{t-1}+(1-Z_{t})\circ \tanh(W_{h}*x_{t}+U_{h}(R_{t}\circ h_{t-1})+b_{h})$ \\
-  Moins de paramètres que LSTM, aussi efficace dans beaucoup de tâches
+  \begin{description}[<+->]
+    \item[Update gate] $z_t = \sigma (W_z \times x_t + U_z \times h_{t - 1} + b_z)$
+    \item[Reset gate] $r_t = \sigma (W_r \times x_t + U_r \times h_{t - 1} + b_r)$
+    \item[Sortie] $h_t = (1 - z_t) \circ h_{t - 1} + z_t \circ \tanh(W_h \times x_t + U_h (r_t \circ h_{t - 1}) + b_h)$
+  \end{description}
 \end{frame}
 
-\begin{frame}
-  \frametitle{D'autres variantes}
-  RNN bi-directionnels
+\begin{frame}{Réseaux récurrents bi-directionnels}
   \imgtw[0.8]{bidirectional-rnn}
-  Permet de ``gérer'' des séquences plus longues
+  \begin{itemize}[<+->]
+    \item Permet d'apprendre sur des séquences plus longues
+    \item Permet de modéliser des dépendances droite-gauche
+  \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{D'autres variantes}
-  Dans des réseaux récurrents profonds, on peut ajouter des récurrences entre les différentes couches... \\
-\end{frame}
-
-\begin{frame}
-  \frametitle{D'autres variantes}
-  \imgtw{spaghetti}
+\begin{frame}{D'autres variantes}
+  \begin{itemize}[<+->]
+    \item Récurrence dans la profondeur
+    \item Skip-connexions (qui sautent des couches)
+    \item Résiduels (qui apprennent la différence à l'input)
+    \item …
+  \end{itemize}
 \end{frame}

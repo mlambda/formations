@@ -11,7 +11,7 @@ default_titles:
   optimize: Optimisation des hyper-paramètres
   regularisation: Régularisation
   rnn: Réseaux de neurones récurrents
-  rnn-keras: RNN avec Keras
+  rnn-keras: Utilisation dans Keras
   rnn-variants: Variantes de réseaux récurrents
   tp-cnn: Travaux Pratiques --- CNN et Keras
   tp-nn: Travaux Pratiques --- Tensorflow et Keras
@@ -37,7 +37,7 @@ flavors:
     - rnn
     - lstm
     - rnn-variants
-    - rnn-keras
+    - rnn-keras: RNN dans Keras
     - questions
     - tp-rnn
     - tp-rnn-text
@@ -100,13 +100,13 @@ flavors:
     - rnn-variants
     - questions
   recurrent:
-    - rnn
+    - rnn: Présentation
     - lstm
     - rnn-variants
     - rnn-keras
     - questions
-    - tp-rnn
-    - tp-rnn-text
+    - tp-rnn: Travaux Pratiques
+    - tp-rnn-text: null
   recurrent-intro:
     - rnn
     - lstm
@@ -123,16 +123,16 @@ flavors:
     - rnn-variants
     - rnn-keras
     - questions
-    - tp-rnn
-    - tp-rnn-text
+    - tp-rnn: Travaux Pratiques
+    - tp-rnn-text: null
   tp-nn-keras:
     - tp-nn: null
   tp-tf-pur:
     - tp-nn-tf: null
   transformer:
     - attention-model
-    - transformer
+    - transformer: Méthode
     - questions
-    - tp-transformer
+    - tp-transformer: Travaux Pratiques
 title: Réseaux de Neurones
 version: 3

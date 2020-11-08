@@ -47,7 +47,7 @@
       path: sequential-data
       flavor: intro
 
-    - title: Réseaux récurrents
+    - title: Réseaux de neurones récurrents
       path: neural-networks
       flavor: recurrent
 

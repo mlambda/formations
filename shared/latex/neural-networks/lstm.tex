@@ -1,18 +1,24 @@
-\begin{frame}
-  \frametitle{Long-Short Term Memory}
-  \imgtw[0.7]{lstm-schema}
-  \begin{itemize}
-  \item $F_{t}=\sigma (W_{F}*x_{t}+U_{F}*h_{t-1}+b_{F})\;\;\;\;\;\;\,$ (forget gate)
-  \item $I_{t} =\sigma (W_{I}*x_{t}+U_{I}*h_{t-1}+b_{I})\;\;\;\;\;\;\;\;\;\;$ (input gate)
-  \item $O_{t} =\sigma (W_{O}*x_{t}+U_{O}*h_{t-1}+b_{O})\;\;\;\;\;$ (output gate)
-  \item $c_{t} =F_{t}\circ c_{t-1}+I_{t}\circ \tanh(W_{c}*x_{t}+U_{c}*h_{t-1}+b_{c})$
-  \item $h_{t} =O_{t}\circ \tanh(c_{t})$
-  \item $o_{t} =f(W_{o}*h_{t}+b_{o})$
+\begin{frame}{Principe}
+  Lutter contre les gradients qui disparaissent~:
+  \begin{itemize}[<+->]
+    \item Introduction d'une mémoire
+    \item Update additive de la mémoire (gradient plus facile à conserver)
+    \item «~Protection~» de cette mémoire par des portes
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Long-Short Term Memory}
-  vanishing gradient ``résolu'' (ou presque)
+\begin{frame}{Vanishing gradient résolu (ou presque)}
   \imgtw{vanishing-gradient-lstm}
+\end{frame}
+
+\begin{frame}{Détails théoriques}
+  \imgtw[0.7]{lstm-schema}
+  \begin{description}
+  \item[Forget gate] $F_t = \sigma(W_F \times x_t + U_F \times h_{t - 1} + b_F)$ 
+  \item[Input gate] $I_t = \sigma(W_I \times x_t + U_I \times h_{t - 1} + b_I)$
+  \item[Output gate] $O_t = \sigma(W_O \times x_{t} + U_O \times h_{t - 1} + b_O)$
+  \item[Update mémoire] $c_t = F_t \circ c_{t - 1} + I_t \circ \tanh(W_c \times x_t + U_c \times h_{t-1} + b_c)$
+  \item[Sortie] $h_t = O_t \circ \tanh(c_t)$
+  \item[Sortie transformée] $o_t = f(W_o \times h_t + b_o)$
+  \end{description}
 \end{frame}
