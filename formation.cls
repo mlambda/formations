@@ -39,6 +39,7 @@
 \setbeamercolor{normal text}{bg=white}
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 \setbeamertemplate{blocks}[rounded]
+\setbeamercovered{transparent}
 
 \makeatletter
 \setlength{\metropolis@frametitle@padding}{1.9ex}% <- default 2.2 ex
