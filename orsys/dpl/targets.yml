@@ -24,7 +24,7 @@
       flavor: deepalpha
 
 - name: j2
-  title: Jour 2 --- Traitement d'image et Autoencodeurs
+  title: Jour 2 --- Traitement d'images et auto-encodeurs
   sections:
     - title: Keras
       path: tf-keras-intro
@@ -38,7 +38,7 @@
       flavor: full
 
 - name: j3
-  title: Jour 3 --- Langage et Traitement de séquences
+  title: Jour 3 --- Langage et traitement de séquences
   sections:
     - path: natural-language-processing
       flavor: intro-nlp

@@ -1,41 +1,33 @@
-\begin{frame}
-  \frametitle{Prérequis}
-  L'opérateur de \textbf{convolution}
+\begin{frame}{Prérequis --- Opérateur de convolution}
   \imgtw[0.8]{convolution}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Prérequis}
-  L'opérateur de \textbf{pooling}
+\begin{frame}{Prérequis --- Opérateur de pooling}
   \imgtw[0.8]{pooling}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Prérequis}
-  Convolutional Neural Network (\textbf{CNN})
+\begin{frame}{Schéma général}
+  Réseau de neurones de convolutions (CNN)
   \imgtw{cnn-schema}
-  'Quelques' millions de paramètres dans le modèle
+  «~Quelques~» millions de paramètres dans le modèle
 \end{frame}
 
-\begin{frame}
-  \frametitle{Prérequis}
+\begin{frame}{Entraînement}
   \imgth[0.7]{gpu-fun}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Architecture du cortex visuel}
+\begin{frame}{Architecture du cortex visuel}
   \begin{minipage}[l]{0.55\linewidth}
     \imgtw[1.0]{visual-cortex}
   \end{minipage}\hfill
   \begin{minipage}[l]{0.44\linewidth}
-    Connexion ``en série'' de couches
-    \begin{itemize}
-    \item V1 $\approx$ orientations de lignes
-    \item V2 $\approx$ formes, tailles, couleurs
-    \item V3 $\approx$ aide à la motricité
-    \item V4 $\approx$ reconnaissance d'objets simples
-    \item V5 $\approx$ vitesse des objets
-    \item ...
-    \end{itemize}
+    Connexion «~en série~» de couches
+    \begin{description}[<+->]
+    \item[V1] $\approx$ orientations de lignes
+    \item[V2] $\approx$ formes, tailles, couleurs
+    \item[V3] $\approx$ aide à la motricité
+    \item[V4] $\approx$ reconnaissance d'objets simples
+    \item[V5] $\approx$ vitesse des objets
+    \end{description}
   \end{minipage}\hfill
 \end{frame}

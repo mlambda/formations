@@ -1,6 +1,6 @@
 default_titles:
   attention-model: Modèle à attention
-  cnn-data: Traitement d'image
+  cnn-data: Données en vision par ordinateur
   cnn-model: Réseaux de convolutions
   deep-optimize: Optimisation de réseaux profonds
   gan-intro: Petit jeu de rapidité
@@ -45,14 +45,14 @@ flavors:
     - transformer
     - tp-transformer
   cnn:
-    - gan-intro
-    - gan-model
-    - questions
     - cnn-data
-    - cnn-model
+    - cnn-model: Modèle
     - cnn-keras
     - questions
     - tp-cnn
+    - gan-intro
+    - gan-model
+    - questions
   deep-discover:
     - intro
     - optimize

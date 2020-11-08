@@ -11,6 +11,7 @@ flavors:
     - keras-intro
   keras-pur:
     - keras-intro: Principes \& API
+    - questions
     - neural-networks/tp-nn: Travaux Pratiques
   tf-pur:
     - tf-intro: null
