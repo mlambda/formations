@@ -42,7 +42,7 @@ flavors:
     - python
     - notebooks
     - anaconda
-    - questions
+    - /questions
     - tp
   detailed:
     - intro

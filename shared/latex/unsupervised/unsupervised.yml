@@ -39,7 +39,7 @@ flavors:
     - pca-lda
     - demo-dim-reduce
     - pca-variantes
-    - questions
+    - /questions
     - unsupervised-metrics
     - hierarchical-clustering
     - algorithme-em
@@ -49,10 +49,10 @@ flavors:
     - clustering-conclusion
     - pca-classification-hierarchique-composantes-principales
     - pca-inverse
-    - questions
+    - /questions
     - anomaly-detection-light
     - demo-anomaly-detect
-    - questions
+    - /questions
     - tp-dim-reduce
     - tp-clustering
   natixis:
@@ -61,7 +61,7 @@ flavors:
     - pca-lda: null
     - tsne-umap: null
     - demo-dim-reduce: null
-    - questions
+    - /questions
     - clustering
     - kmeans-gaussian: null
     - dbscan: null
@@ -69,37 +69,37 @@ flavors:
     - unsupervised-metrics: null
     - clustering-conclusion: null
     - demo-clustering: null
-    - questions
+    - /questions
     - pca-classification-hierarchique-composantes-principales: Méthodes hybrides
     - pca-inverse: null
-    - questions
+    - /questions
     - anomaly-detection-light
     - demo-anomaly-detect: null
-    - questions
+    - /questions
     - tp-dim-reduce
     - tp-clustering
   dimreduce:
     - dimensionality-reduction
     - pca-lda
     - demo-dim-reduce
-    - questions
+    - /questions
     - anomaly-detection-light
     - demo-anomaly-detect
-    - questions
+    - /questions
     - tp-dim-reduce
   full:
     - introduction
     - dimensionality-reduction
     - pca-lda
     - demo-dim-reduce
-    - questions
+    - /questions
     - algorithme-em
     - kmeans-gaussian
     - demo-clustering
-    - questions
+    - /questions
     - anomaly-detection-light
     - demo-anomaly-detect
-    - questions
+    - /questions
     - tp-dim-reduce
     - tp-clustering
 title: Apprentissage non-supervisé

@@ -44,16 +44,16 @@ flavors:
     - nn-intro
     - classification
     - regression-logistique
-    - questions
+    - /questions
     - tp-reg-lin-poly
     - trees
     - random-forest
-    - questions
+    - /questions
     - demo-random-forest
     - tp-random-forest
     - tp-random-forest-text
     - gradient-boosting
-    - questions
+    - /questions
     - demo-gradient-boosting
     - svm
     - demo-svm
@@ -76,13 +76,13 @@ flavors:
     - nn-intro
     - classification
     - regression-logistique
-    - questions
+    - /questions
     - tp-reg-lin-poly
     - svm
     - demo-svm
     - trees
     - random-forest
-    - questions
+    - /questions
     - demo-random-forest
     - tp-random-forest
   bayes:
@@ -103,13 +103,13 @@ flavors:
     - nn-intro
     - classification
     - regression-logistique
-    - questions
+    - /questions
     - tp-reg-lin-poly
     - svm
     - demo-svm
     - trees
     - random-forest
-    - questions
+    - /questions
     - demo-random-forest
     - tp-random-forest
   text:
@@ -122,13 +122,13 @@ flavors:
     - nn-intro
     - classification
     - regression-logistique
-    - questions
+    - /questions
     - trees
     - random-forest
-    - questions
+    - /questions
     - demo-random-forest
     - gradient-boosting
-    - questions
+    - /questions
     - demo-gradient-boosting
     - svm
     - demo-svm

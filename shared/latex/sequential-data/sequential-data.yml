@@ -15,11 +15,11 @@ flavors:
     - sequential-models
     - markov-model
     - hmm
-    - questions
+    - /questions
   intro:
     - sequential-data
     - sequential-models
-    - questions
+    - /questions
   light:
     - sequential-data
     - sequential-models
@@ -29,6 +29,6 @@ flavors:
     - sequential-models
     - markov-model
     - hmm
-    - neural-networks/rnn
+    - /neural-networks/rnn
 title: Données séquentielles
 version: 3

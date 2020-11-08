@@ -33,15 +33,15 @@ flavors:
     - evaluation
     - apprentissage
     - bonnes-pratiques
-    - questions
-    - tp-help
+    - /questions
+    - /tp-help
     - tp-data
   intro:
     - intro
     - evaluation
     - apprentissage
     - bonnes-pratiques
-    - questions
+    - /questions
   ml5j:
     - intro
     - math-objectifs
@@ -54,8 +54,8 @@ flavors:
     - evaluation
     - apprentissage
     - bonnes-pratiques
-    - questions
-    - tp-help
+    - /questions
+    - /tp-help
     - tp-data
   no-tp:
     - intro
@@ -63,6 +63,6 @@ flavors:
     - evaluation
     - apprentissage
     - bonnes-pratiques
-    - questions
+    - /questions
 title: Machine Learning
 version: 3

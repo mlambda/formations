@@ -9,7 +9,7 @@ version = "1.0.0"
 [tool.poetry.dependencies]
 Pygments = "^2.6.1"
 python = "^3.6"
-deckz = "^7.2.0"
+deckz = "^8.0.0"
 
 [build-system]
 build-backend = "poetry.masonry.api"

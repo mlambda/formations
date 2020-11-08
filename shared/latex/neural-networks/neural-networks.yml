@@ -38,7 +38,7 @@ flavors:
     - lstm
     - rnn-variants
     - rnn-keras: RNN dans Keras
-    - questions
+    - /questions
     - tp-rnn
     - tp-rnn-text
     - attention-model
@@ -48,11 +48,11 @@ flavors:
     - cnn-data
     - cnn-model: Modèle
     - cnn-keras
-    - questions
+    - /questions
     - tp-cnn
     - gan-intro
     - gan-model
-    - questions
+    - /questions
   deep-discover:
     - intro
     - optimize
@@ -69,19 +69,19 @@ flavors:
     - optimize
     - deep-optimize
     - regularisation
-    - questions
+    - /questions
   gan-intro:
     - gan-intro
     - gan-model
-    - questions
+    - /questions
   intro:
     - intro
-    - questions
+    - /questions
   intro-cnn:
     - intro
     - cnn-data
     - cnn-model
-    - questions
+    - /questions
   ml5j:
     - intro
     - gradient-descent
@@ -90,7 +90,7 @@ flavors:
     - regularisation
     - cnn-data
     - cnn-model
-    - questions
+    - /questions
     - tp-nn
     - tp-cnn
     - gan-intro
@@ -98,13 +98,13 @@ flavors:
     - rnn
     - lstm
     - rnn-variants
-    - questions
+    - /questions
   recurrent:
     - rnn: Présentation
     - lstm
     - rnn-variants
     - rnn-keras
-    - questions
+    - /questions
     - tp-rnn: Travaux Pratiques
     - tp-rnn-text: null
   recurrent-intro:
@@ -112,7 +112,7 @@ flavors:
     - lstm
     - rnn-variants
     - rnn-keras
-    - questions
+    - /questions
   recurrent-text:
     - intro
     - optimize
@@ -122,7 +122,7 @@ flavors:
     - lstm
     - rnn-variants
     - rnn-keras
-    - questions
+    - /questions
     - tp-rnn: Travaux Pratiques
     - tp-rnn-text: null
   tp-nn-keras:
@@ -132,7 +132,7 @@ flavors:
   transformer:
     - attention-model
     - transformer: Méthode
-    - questions
+    - /questions
     - tp-transformer: Travaux Pratiques
 title: Réseaux de Neurones
 version: 3

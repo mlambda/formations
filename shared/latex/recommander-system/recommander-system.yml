@@ -22,7 +22,7 @@ flavors:
     - filtrage-colaboratif-item-based
     - filtrage-colaboratif-extend
     - filtrage-colaboratif-conclusion
-    - questions
+    - /questions
     - tp-recommander-system
 title: Système de Recommendation
 version: 3

@@ -11,6 +11,6 @@ flavors:
     - generic
     - legal
     - ethics
-    - questions
+    - /questions
 title: Problèmes liés au Machine Learning
 version: 3

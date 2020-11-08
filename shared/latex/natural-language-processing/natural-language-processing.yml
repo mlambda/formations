@@ -14,7 +14,7 @@ flavors:
     - ml-nlp
     - usages-nlp
     - pattern
-    - tp-help
+    - /tp-help
     - tp-text-regex
     - preprocessing
     - vectors
@@ -26,40 +26,40 @@ flavors:
     - ml-nlp
     - usages-nlp
     - pattern
-    - questions
-    - tp-help
+    - /questions
+    - /tp-help
     - tp-text-regex
     - preprocessing
     - vectors
-    - questions
+    - /questions
     - tp-text-features-engineering
     - similarity-text
     - recommandation-text
-    - questions
+    - /questions
     - tp-text-reco-system
   intro:
     - ml-nlp
     - usages-nlp
     - preprocessing
     - vectors
-    - questions
+    - /questions
   intro-nlp:
     - ml-nlp
     - usages-nlp
     - preprocessing
     - vectors
-    - questions
+    - /questions
   intro-nn:
     - ml-nlp
     - vectors
     - usages-nlp
-    - questions
+    - /questions
   intro-tp:
     - ml-nlp
     - usages-nlp
     - preprocessing
     - vectors
-    - questions
+    - /questions
     - tp-text-features-engineering
 title: Traitement du texte
 version: 3
