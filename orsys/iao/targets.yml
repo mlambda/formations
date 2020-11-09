@@ -19,7 +19,7 @@
     - questions-discussion
 
     - path: reinforcement-learning
-      flavor: deepalpha
+      flavor: all
     - questions-discussion
 
     - path: engineering

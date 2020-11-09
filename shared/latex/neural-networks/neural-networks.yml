@@ -69,13 +69,13 @@ flavors:
     - optimize
     - deep-optimize
     - regularisation
-    - gan-model
     - cnn-data
     - cnn-model
     - demo-cnn
     - rnn
     - demo-rnn
     - gan-intro: Réseaux adverses
+    - gan-model
     - demo-gan
   deep-intro:
     - intro
