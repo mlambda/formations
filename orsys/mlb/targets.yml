@@ -14,10 +14,10 @@
 - name: j2
   title: Jour 2 --- Algorithmes 1/2
   sections:
-    - path: unsupervised
-      flavor: dimreduce
     - path: supervised
       flavor: standard
+    - path: unsupervised
+      flavor: dimreduce
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
