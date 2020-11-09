@@ -50,6 +50,7 @@ flavors:
     - environment
     - engineering
     - big-data
+    - apis
     - information
 title: Principaux outils
 version: 3

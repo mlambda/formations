@@ -5,27 +5,37 @@
       title: Intelligence Artificielle, enjeux et outils
       flavor: iao
     - questions
+
     - path: intelligence-artificielle
       flavor: all
-    - questions
+    - questions-discussion
+
     - path: machine-learning
-      flavor: intro
+      flavor: intro-sans-questions
+    - questions-discussion
+
     - path: neural-networks
-      flavor: deep-discover
-    - questions
+      flavor: deep-discover-demo
+    - questions-discussion
+
     - path: reinforcement-learning
       flavor: deepalpha
-    - questions
+    - questions-discussion
+
     - path: engineering
       flavor: all
-    - questions
+    - questions-discussion
+
     - path: sectors
       flavor: all
-    - questions
+    - questions-discussion
+
     - path: big-questions
       flavor: all
-    - questions
+    - questions-discussion
+
     - path: tools
       flavor: detailed
-    - questions
+    - questions-discussion
+
     - contact

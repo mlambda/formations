@@ -63,6 +63,20 @@ flavors:
     - cnn-data
     - cnn-model
     - rnn
+  deep-discover-demo:
+    - intro
+    - demo-nn
+    - optimize
+    - deep-optimize
+    - regularisation
+    - gan-model
+    - cnn-data
+    - cnn-model
+    - demo-cnn
+    - rnn
+    - demo-rnn
+    - gan-intro: Réseaux adverses
+    - demo-gan
   deep-intro:
     - intro
     - gradient-descent
@@ -134,5 +148,5 @@ flavors:
     - transformer: Méthode
     - /questions
     - tp-transformer: Travaux Pratiques
-title: Réseaux de Neurones
+title: Réseaux de neurones
 version: 3

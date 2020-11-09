@@ -1,6 +1,10 @@
+default_titles:
+  engineering-practices: Bonnes pratiques
+  data-engineering: Gestion des données
 flavors:
   all:
     - engineering-practices
+    - data-engineering
   mlcraftmyass:
     - engineering-practices
 title: Ingénierie du Machine Learning

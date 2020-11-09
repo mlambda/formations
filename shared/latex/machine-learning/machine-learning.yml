@@ -42,6 +42,11 @@ flavors:
     - apprentissage
     - bonnes-pratiques
     - /questions
+  intro-sans-questions:
+    - intro
+    - evaluation
+    - apprentissage
+    - bonnes-pratiques
   ml5j:
     - intro
     - math-objectifs
