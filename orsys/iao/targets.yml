@@ -1,5 +1,5 @@
-- name: all
-  title: Support de cours
+- name: j1
+  title: Jour 1 --- Techniques du Machine Learning
   sections:
     - path: about
       title: Intelligence Artificielle, enjeux et outils
@@ -22,6 +22,9 @@
       flavor: all
     - questions-discussion
 
+- name: j2
+  title: Jour 2 --- Applications et ingénierie du Machine Learning
+  sections:
     - path: engineering
       flavor: all
     - questions-discussion
