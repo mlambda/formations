@@ -76,8 +76,8 @@ flavors:
     - anomaly-detection-light
     - demo-anomaly-detect: null
     - /questions
-    - tp-dim-reduce
-    - tp-clustering
+    - tp-dim-reduce: Travaux Pratiques
+    - tp-clustering: null
   dimreduce:
     - dimensionality-reduction
     - pca-lda
