@@ -172,3 +172,15 @@
 \newcommand\gray[1]{\textcolor{gray}{#1}}
 \newcommand\purple[1]{\textcolor{purple}{#1}}
 \newcommand\smallgray[1]{\textcolor{gray}{\footnotesize\it #1}}
+
+\newcommand{\mog}[2][]{%
+  \ifthenelse{\equal{\Trainer}{mog}}
+    {#2}
+    {#1}%
+}
+
+\newcommand{\fmg}[2][]{%
+  \ifthenelse{\equal{\Trainer}{fmg}}
+    {#2}
+    {#1}%
+}
