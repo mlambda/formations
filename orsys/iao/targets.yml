@@ -18,6 +18,10 @@
       flavor: deep-discover-demo
     - questions-discussion
 
+    - path: unsupervised
+      flavor: iao
+    - questions-discussion
+
     - path: reinforcement-learning
       flavor: all
     - questions-discussion
