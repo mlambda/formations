@@ -13,6 +13,20 @@
     \item Prendre en compte seulement les $n$ derniers éléments
     \item Taille de la fenêtre $\approx$ ordre d'un modèle de Markov
   \end{itemize}
+
+  \onslide<+->{
+    \begin{exampleblock}{Avantages}
+      \begin{itemize}[<+->]
+        \item Rapide, adapté à du temps réel
+        \item Performant sur de petits jeux de données
+      \end{itemize}
+    \end{exampleblock}
+    \begin{alertblock}{Inconvénients}
+      \begin{itemize}[<+->]
+        \item Ne modélise pas les dépendances longues
+      \end{itemize}
+    \end{alertblock}
+  }
 \end{frame}
 
 \begin{frame}{Aggrégation}
@@ -22,13 +36,41 @@
     \item Créer des valeurs aggrégées à partir des éléments précédents de la séquence
     \item Possibilité de combiner différentes échelles
   \end{itemize}
+
+  \onslide<+->{
+    \begin{exampleblock}{Avantages}
+      \begin{itemize}[<+->]
+        \item Rapide, adapté à du temps réel
+        \item Performant sur de petits jeux de données
+      \end{itemize}
+    \end{exampleblock}
+    \begin{alertblock}{Inconvénients}
+      \begin{itemize}[<+->]
+        \item Modélise les dépendances longues grossièrement
+      \end{itemize}
+    \end{alertblock}
+  }
 \end{frame}
 
 \begin{frame}{Traitement complet}
   Certains modèles (comme les réseaux récurrents \& transformeurs), peuvent traiter des séquences entières~:
 
   \begin{itemize}[<+->]
-    \item Modélisation des dépendances longue distance
-    \item Pas forcément meilleur sur de petits datasets
+    \item Traitent les inputs un par un pour les RNN
+    \item Traitent les inputs avec un mécanisme d'attention pour les transformeurs
   \end{itemize}
+
+  \onslide<+->{
+    \begin{exampleblock}{Avantages}
+      \begin{itemize}[<+->]
+        \item Bonne modélisation des dépendances longue distance
+        \item Exploitation de gros jeux de données
+      \end{itemize}
+    \end{exampleblock}
+    \begin{alertblock}{Inconvénients}
+      \begin{itemize}[<+->]
+        \item Forward long, peu adapté au temps réel
+      \end{itemize}
+    \end{alertblock}
+  }
 \end{frame}

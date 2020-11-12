@@ -27,15 +27,18 @@ flavors:
     - optimize
     - deep-optimize
     - regularisation
-    - /sequential-data/sequence-handling
+    - /sequential-data/sequence-handling: Traitement de séquences
     - cnn-data
     - cnn-model
+    - demo-cnn
     - rnn
     - lstm
     - rnn-variants
+    - demo-rnn
     - rnn-keras: RNN dans Keras
     - attention-model: Transformeurs
     - transformer: null
     - /questions
+    - /sequential-data/tp-tf: Travaux Pratiques
 title: Réseaux de neurones
 version: 3
