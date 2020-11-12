@@ -1,0 +1,160 @@
+\begin{frame}{Données séquentielles - Premières approches }
+  \begin{itemize}[<+->]
+  \item Calcul des différences du premier ou second ordre.
+  \item Modèles autoregressifs à moyenne mobile (ARMA, ARIMA, ...)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Outils --- Chronogramme}
+  Chronogramme : tracé de t $\rightarrow$ X(t) 
+
+  \imgtw[0.9]{time-serie-chronogramme}
+\end{frame}
+
+\begin{frame}{Outils --- Lag plot}
+  Tracé des points $X_{t - k}$ \& $X_t$ pour détecter les corrélations temporelles
+
+  \begin{minipage}[l]{0.499\linewidth}
+    \imgtw[0.7]{lag-plot-linear}
+    \imgtw[0.7]{lag-plot-sinusoidal}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.499\linewidth}
+    \imgtw[0.6]{lag-plot-white-noise}
+    \imgtw[0.6]{lag-plot-uniform-noise}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}{Outils --- Opérateur de lag L}
+  \begin{itemize}
+  \item $L(X_{t}) = X_{t-1}$
+  \item $L^2(X_{t}) = X_{t-2}$
+  \item $L^{-1}(X_{t}) = X_{t+1}$
+  \item …
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Premières approches}
+  $x_t=g(t)+\phi_t$ \\
+  où :
+  \begin{itemize}
+  \item $g(t)$ est déterministe (tendance globale du signal)
+  \item $\phi(t)$ est un bruit stochastique
+  \end{itemize}
+  Les modèles statistiques «~classiques~» vont alors essayer de décomposer $g(t)$ en plusieurs fonctions dépendant de t ou bien de fonction récurrentes (comme dans ARMA)
+\end{frame}
+
+\begin{frame}{Premières approches }
+  \imgth[0.9]{time-serie-decomposition}
+\end{frame}
+
+\begin{frame}{ARMA --- Introduction}
+  Modèlisation statistique de processus (faiblement) stationnaires \\
+  \newline
+  Processus faiblement stationnaire si :
+  \begin{itemize}
+    \item sa moyenne ne dépend pas de t
+    \item la covariance ne dépend pas de t
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{ARMA --- Introduction}
+  Exemple de processus non-stationnaires :
+  \imgtw[0.9]{processus-non-stationnaires}
+\end{frame}
+
+\begin{frame}{ARMA --- Composante autoregressive}
+  \[
+  X_{t}=c+\varepsilon _{t}+\sum _{i=1}^{p}\varphi _{i}X_{t-i}
+  \]
+
+  où
+
+  \begin{itemize}
+    \item $c$ est une constante
+    \item $\varphi_i$ sont les paramètres du modèle
+    \item $\varepsilon_i$ sont les termes d'erreurs considéré comme un bruit blanc
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{ARMA --- Composante moyenne mobile}
+  \[
+  X_{t}=\mu +\varepsilon _{t}+\sum _{i=1}^{q}\theta _{i}\varepsilon _{t-i}
+  \]
+
+  où
+
+  \begin{itemize}
+    \item $\mu$ est la moyenne attendue
+    \item $\theta_i$ sont les paramètres du modèle
+    \item $\varepsilon_i$ sont les termes d'erreurs considéré comme un bruit blanc
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{ARMA --- Formulation finale}
+  \[
+  X_{t}=c +\varepsilon _{t}+\sum _{i=1}^{p}\varphi _{i}X_{t-i}+\sum _{i=1}^{q}\theta _{i}\varepsilon _{t-i}
+  \]
+\end{frame}
+
+% \begin{frame}{ARMA}
+%   ARMA exprimé avec l'opérateur L: \\
+%   \[
+%   \left(I-\sum _{i=1}^{p}\varphi _{i}L^{i}\right)X_{t}=\left(I+\sum _{i=1}^{q}\theta _{i}L^{i}\right)\varepsilon _{t}
+%   \]
+% \end{frame}
+
+% \begin{frame}{ARMA}
+%   Autocorrélation de lag $k\in\mathbb{Z}$ (ACF): \\
+%   $\Rightarrow$ Corrélation des deux variables aléatoires $X_t$ et $X_{t-k}$ \\
+%   \newline
+%   Autocorrélation partielle de lag $k\in\mathbb{Z}$ (PACF): \\
+%   $\Rightarrow$ Corrélation des deux variables aléatoires $X_t$ et $X_{t-k}$ où les dépendances linéaires entre $X_t$ et les variables $X_{t-k'}$ on été enlevées (pour $k'\in[1 .. (k-1)]$)  
+% \end{frame}
+
+% \begin{frame}{ARMA}
+%   Apprentissage des paramètres :
+
+%   \begin{enumerate}[<+->]
+%     \item se rapporter à un processus stationnaire : Transformation de box-cox des données, élimination des tendances et saisonnalité
+%     \item on fixe p et q
+%       \begin{itemize}
+%         \item plot des autocorrélations partielles pour p
+%         \item plot des autocorrélations  pour q
+%         \item la méthode Akaike Information Criterion (AIC) est cependant recommandée
+%       \end{itemize}
+%     \item estimation des paramètres $\varphi$ et $\theta$ en utilisant par exemple le maximum de vraisemblance ou le critère des moindres carrés
+%   \end{enumerate}
+% \end{frame}
+
+\begin{frame}{ARIMA}
+  Peut être vu comme une cascade de deux modèles :
+
+  \begin{itemize}[<+->]
+    \item Processus de suppression de la tendance par différenciation temporelle
+    \item Puis traitement comme un processus ARMA(p, q)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{SARIMA}
+  Peut être vu comme une cascade de deux modèles :
+
+  \begin{itemize}[<+->]
+    \item Processus de suppression des tendance et saisonnalité
+    \item Puis traitement comme un processus ARMA(p, q)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{VARMAX}
+  Modèle encore plus général que les précédents~:
+
+  \begin{itemize}
+  \item Généralisation aux séries de vecteurs
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Implémentations}
+  \begin{itemize}[<+->]
+    \item Module \texttt{tsa} de la librarie \texttt{statsmodels}
+    \item Module \texttt{Prophet} de Facebook, variations sur ces algorithmes
+  \end{itemize}
+\end{frame}

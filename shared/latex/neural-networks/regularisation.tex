@@ -3,36 +3,32 @@
   \imgtw[0.6]{over-underfitting}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Par la loss}
-  L1 et L2 régularisation par la loss : \\
+\begin{frame}{Par la pénalisation de l'utilisation des paramètres}
+  Coût supplémentaire pour l'utilisation des paramètres dans la fonction de perte~:
+
   \[
-  Loss = Loss + \frac{\lambda}{2m}*\sum||w||^2
+  Loss = Loss + \lambda\sum||w||^2
   \]
+
   où $\lambda$ est un hyperparamètre
 \end{frame}
 
-\begin{frame}
-  \frametitle{Early stopping}
+\begin{frame}{Par early stopping}
   \imgtw[0.6]{early-stopping}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Augmentation/bruitage des données}
+\begin{frame}{Par augmentation/bruitage des données}
   \imgtw[0.8]{data-augmentation}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Dropout}
+\begin{frame}{Par dropout}
   \imgtw[0.8]{dropout-2}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Multi-tâche}
+\begin{frame}{En entraînant sur plusieurs tâches}
   \imgtw[0.8]{multi-task-v2}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Réseaux Adverses (GAN)}
+\begin{frame}{En opposant des réseaux de neurones}
   \imgtw[0.8]{gan-schema}
 \end{frame}

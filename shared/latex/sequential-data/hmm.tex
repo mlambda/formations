@@ -3,17 +3,17 @@
 
   Par exemple : diagnostic, capteur bruité, bourse, achats clients
 
-  \imgth[0.7]{hmm-model-weather}
+  \imgth[0.6]{hmm-model-weather}
 \end{frame}
 
 \begin{frame}{Définition}
   Un HMM est défini par 5 éléments~:
   \begin{enumerate}[<+->]
-  \item Ses observations possibles $O_i$
-  \item Ses états $S_j$
-  \item Les probabilités de commencer dans un état $\pi_j$
-  \item Ses transitions (matrice $n\times n$ où $T_{jj'} = P(S_j|S_{j'})$
-  \item Ses émissions (matrice $n\times K$ où $E_{ji} = P(o_i|S_j)$)
+  \item Ses k observations possibles $O$
+  \item Ses n états $S$
+  \item Les probabilités de commencer dans un état $\pi$
+  \item Ses transitions (matrice $n\times n$ où $T_{ij} = P(S_j|S_i)$)
+  \item Ses émissions (matrice $n\times k$ où $E_{ij} = P(O_j|S_i)$)
   \end{enumerate}
 \end{frame}
 
@@ -31,34 +31,56 @@
   \onslide<+->{Exemple de séquence d'états cachés liés~: (H, L, L, H, H)}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Hidden Markov Model}
-  Pour en savoir plus sur l'apprentissage de HMM, quelques algorithmes à regarder~:
+\begin{frame}{Ordre du modèle}
+  Comme pour un modèle de Markov sans états cachés, on peut considérer $o$ éléments passés pour décider de la transition.
+
+  Le modèle sera alors d'ordre $o$.
+
+  L'automate qui le représente aura alors $n^o$ états.
+\end{frame}
+
+\begin{frame}{Principaux algorithmes}
+  L'utilisation de HMMs nécessite principalement 3 algorithmes~:
+
   \begin{description}[<+->]
+  \item[Viterbi] Calcul du chemin d'états cachés le plus probable étant donné des observations
   \item[Forward-Backward] Calcul de la probabilité d'une séquence
   \item[Baum-Welch] Algorithme EM pour apprendre les paramètres d'un HMM
-  \item[Viterbi] Calcul du chemin d'états cachés le plus probable étant donné des observations
   \end{description}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Hidden Markov Model}
-  Utilisations :
+\begin{frame}{Algorithme Viterbi}
+  Calcul de la séquence d'états cachés la plus probable étant donné des observations~:
   \begin{itemize}[<+->]
-  \item Modèle génératif de séquence
-  \item Prédiction de classe : un modèle par classe
-  \item Découverte de patterns
+  \item Algorithme de programmation dynamique
+  \item Calcul timestep par timestep pour chaque $S_i$ de la probabilité maximale d'arriver là $P_{i, t}$~:
+    \begin{itemize}
+      \item À $t_0$, proba d'émission de l'observation $O_0$ par l'état $S_i$
+      \item À $t_{i>0}$, produit de~:
+        \begin{itemize}
+          \item $\argmax_j P_{j, t - 1} \times T(j, i)$
+          \item Proba d'émission de l'observation $O_t$ par l'état $S_i$
+        \end{itemize}
+      \item Renvoi du chemin qui aboutit à la valeur max au dernier timestep
+    \end{itemize}
   \end{itemize}
-  \imgth[0.6]{hmm-model-weather}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Hidden Markov Model}
-  Des imperfections :
+\begin{frame}{Algorithme Forward}
+  Calcul de la probabilité d'une séquence d'observations.
+
+  Viterbi en remplaçant le $\argmax$ par une somme et en sommant les résultats au timestep final.
+\end{frame}
+
+\begin{frame}{Algorithme Backward \& Baum-Welch}
+  Backward: inverse de l'algorithme forward (part des états finaux, dont on calcule la probabilité avec forward).
+
+  Permet d'implémenter l'algorithme d'apprentissage EM Baum-Welch.
+\end{frame}
+
+\begin{frame}{Des imperfections}
   \begin{itemize}[<+->]
-  \item L'observation émise par le modèle ne dépend que de l'état courant
-  \item L'état ne dépend que de l'état précédent
-  \item Algorithme EM donc très sensible à l'initialisation
+  \item Nécessite une quantité de données qui grandit exponentiellement avec l'ordre du modèle
+  \item Doit être smoothé pour éviter les séquences à 0 de proba
   \end{itemize}
-  \imgth[0.6]{hmm-model-weather}
 \end{frame}

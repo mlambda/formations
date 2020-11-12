@@ -1,0 +1,34 @@
+\begin{frame}{Introduction}
+  Plusieurs critères pour décider de comment traiter les séquences~:
+
+  \begin{itemize}[<+->]
+    \item Rapidité de traitement
+    \item Modèle utilisé
+    \item Volume de données
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Fenêtrage}
+  \begin{itemize}[<+->]
+    \item Prendre en compte seulement les $n$ derniers éléments
+    \item Taille de la fenêtre $\approx$ ordre d'un modèle de Markov
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Aggrégation}
+  Aussi appelé bucketing~:
+
+  \begin{itemize}[<+->]
+    \item Créer des valeurs aggrégées à partir des éléments précédents de la séquence
+    \item Possibilité de combiner différentes échelles
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Traitement complet}
+  Certains modèles (comme les réseaux récurrents \& transformeurs), peuvent traiter des séquences entières~:
+
+  \begin{itemize}[<+->]
+    \item Modélisation des dépendances longue distance
+    \item Pas forcément meilleur sur de petits datasets
+  \end{itemize}
+\end{frame}
