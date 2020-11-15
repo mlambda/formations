@@ -76,6 +76,7 @@
 \bibliographystyle{abbrv}
 
 \newcommand{\partiald}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\card}[1]{\lvert #1 \rvert}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator{\ReLU}{ReLU}

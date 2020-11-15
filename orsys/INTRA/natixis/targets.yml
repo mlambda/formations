@@ -8,7 +8,7 @@
       flavor: init-python
     - questions
     - path: machine-learning
-      flavor: ml5j
+      flavor: natixis
     - questions
 
 - name: j2
