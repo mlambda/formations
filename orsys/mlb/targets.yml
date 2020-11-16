@@ -15,27 +15,22 @@
   title: Jour 2 --- Algorithmes 1/2
   sections:
     - path: supervised
-      flavor: standard
+      flavor: standard-nobayes
     - path: unsupervised
       flavor: dimreduce
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
   sections:
+    - path: supervised
+      flavor: bayes
+
     - path: neural-networks
       flavor: cnn
-
-    - path: sequential-data
-      flavor: full
 
     - path: neural-networks
       flavor: recurrent
 
-    - path: auto-encoders
-      flavor: full
-
-    - path: natural-language-processing
-      flavor: intro-nn
 
 - name: j4
   title: Jour 4 --- Ingénierie
