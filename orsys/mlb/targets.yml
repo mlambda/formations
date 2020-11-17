@@ -2,11 +2,13 @@
   title: Jour 1 --- Introduction au Machine Learning
   sections:
     - path: about
-      title: Machine Learning, \\Méthodes et Solutions
-      flavor: mlb
+      title: Machine Learning, Méthodes et Solutions
+      flavor: orsys-4j
+
     - path: tools
       flavor: init-python
     - questions
+
     - path: machine-learning
       flavor: full
     - questions
@@ -16,6 +18,7 @@
   sections:
     - path: supervised
       flavor: standard-nobayes
+
     - path: unsupervised
       flavor: dimreduce
 

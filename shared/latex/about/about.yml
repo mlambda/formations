@@ -1,43 +1,49 @@
 default_titles: null
 flavors:
-  bda:
+  orsys-2j:
     - formateur
-    - description-bda
-    - ressources-orsys
-    - tour2table
-    - horaires-4j-orsys
-  dpl:
-    - formateur
-    - description-dpl
-    - ressources-orsys
-    - tour2table
-    - horaires-3j-orsys
-  iao:
-    - formateur
-    - description-iao
+    - description
     - ressources-orsys
     - tour2table
     - horaires-2j-orsys
-  ml5j:
+  orsys-3j:
     - formateur
-    - description-ml5j
-    - ressources-eni
+    - description
+    - ressources-orsys
     - tour2table
-    - horaires-5j-eni
-  mlb:
+    - horaires-3j-orsys
+  orsys-4j:
     - formateur
-    - description-mlb
+    - description
     - ressources-orsys
     - tour2table
     - horaires-4j-orsys
+  orsys-5j:
+    - formateur
+    - description
+    - ressources-orsys
+    - tour2table
+    - horaires-5j-orsys
+  eni-1j:
+    - formateur
+    - description
+    - ressources-eni
+    - tour2table
+    - horaires-1j-eni
+  eni-5j:
+    - formateur
+    - description
+    - ressources-eni
+    - tour2table
+    - horaires-5j-eni
   mlbdnn:
     - formateur
     - description-mlbdnn
     - ressources-orsys
     - tour2table
-  ml-python:
+  sparks-formation-3j:
     - formateur
-    - description-mlb
+    - description
     - ressources-eni
     - tour2table
     - horaires-3j-orsys

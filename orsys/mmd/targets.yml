@@ -3,6 +3,7 @@
   sections:
     - title: Text Mining par la Pratique
       path: about
+      flavor: orsys-3j
 
     - title: Traitements Automatique du Langage
       path: natural-language-processing

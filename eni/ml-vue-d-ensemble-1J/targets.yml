@@ -3,6 +3,7 @@
   sections:
     - title: "Machine Learning et Deep Learning"
       path: about
+      flavor: eni-1j
 
     - path: questions
 

@@ -3,7 +3,7 @@
   sections:
     - title: Deep Learning par la Pratique
       path: about
-      flavor: dpl
+      flavor: orsys-3j
 
     - title: TensorFlow et Deep Learning
       path: tf-keras-intro

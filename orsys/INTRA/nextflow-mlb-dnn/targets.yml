@@ -2,8 +2,8 @@
   title: Jour 1 --- Introduction au Machine Learning
   sections:
     - path: about
-      title: Machine Learning, \\Méthodes et Solutions
-      flavor: mlbdnn
+      title: Machine Learning, Méthodes et Solutions
+      flavor: orsys-5j
 
     - path: machine-learning
       flavor: ml5j

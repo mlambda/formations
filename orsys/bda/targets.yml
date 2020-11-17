@@ -3,10 +3,12 @@
   sections:
     - path: about
       title: Big Data Analytics
-      flavor: bda
+      flavor: orsys-4j
+
     - path: tools
       flavor: init-python
     - questions
+
     - path: machine-learning
       flavor: ml5j
     - questions

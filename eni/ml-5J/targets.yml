@@ -2,8 +2,7 @@
   title: Jour 1 --- Introduction au Machine Learning
   sections:
     - path: about
-      title: "A propos de votre formation"
-      flavor: ml5j
+      flavor: eni-5j
 
     - path: machine-learning
       flavor: ml5j

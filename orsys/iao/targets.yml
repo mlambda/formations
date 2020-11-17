@@ -3,8 +3,7 @@
   sections:
     - path: about
       title: Intelligence Artificielle, enjeux et outils
-      flavor: iao
-    - questions
+      flavor: orsys-2j
 
     - path: intelligence-artificielle
       flavor: all
