@@ -1,11 +1,9 @@
-\begin{frame}
-  \frametitle{Data Mining}
+\begin{frame}{Introduction}
   \imgtw[0.8]{ml-craftmanship}
 \end{frame}
 
 
-\begin{frame}
-  \frametitle{Data Mining}
+\begin{frame}{Biais statistiques}
   Attention aux différents biais de vos données !
   \begin{itemize}[<+->]
   \item \red{variables confondantes} (Ex : ``obésité'' dans la corrélation entre ``conso. viande'' et ``cancer colon'')
@@ -22,8 +20,7 @@
   → Le garder en tête pendant toute l'étude.
 \end{frame}
 
-\begin{frame}
-  \frametitle{Data Mining}
+\begin{frame}{Qualité des données}
   \begin{center}
     Meilleures données $>$ Meilleurs modèles \\
     (trash-in, trash-out) \\
@@ -32,8 +29,7 @@
   l'entraînement de modèles
 \end{frame}
 
-\begin{frame}
-  \frametitle{Préparation des données}
+\begin{frame}{Pipeline de préparation}
   \begin{itemize}
   \item valeurs manquantes
   \item préprocessing (texte, image)
@@ -42,8 +38,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Préparation des données — valeurs manquantes}
+\begin{frame}{Valeurs manquantes}
   Gênant pour certains modèles. Plusieurs options :
   \begin{itemize}[<+->]
   \item supprimer les enregistrements
@@ -56,8 +51,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Préparation des données — préprocessing}
+\begin{frame}{Prétraitement}
   \begin{itemize}
   \item tokenizer, POS-tagger le texte (\url{https://spacy.io/})
   \item utiliser un réseau de neurones préentraîné sur les images
@@ -67,8 +61,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Préparation des données — standardisation}
+\begin{frame}{Standardisation}
   Beaucoup de modèles travaillent mieux avec des données normales et
   sont plus efficaces autour de $[-5, 5]$ :
   \begin{itemize}
@@ -78,8 +71,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Préparation des données — transformation}
+\begin{frame}{Transformation}
   Quand un modèle n'accepte pas de données catégorielles :
   \begin{itemize}
   \item label encoding si ordinal
@@ -87,8 +79,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Préparation des données — label encoding}
+\begin{frame}{Label encoding}
   Si les données sont ordinales :
   \begin{columns}
     \begin{column}{.5\tw}
@@ -128,8 +119,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Préparation des données — one-hot encoding}
+\begin{frame}{One-hot encoding}
   Remplacer une feature par $n$ features avec $n$ le nombre de
   catégories.
   \begin{columns}
@@ -170,8 +160,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Exploration des données}
+\begin{frame}{Exploration des données}
   But :
   \begin{itemize}[<+->]
   \item se rendre compte des prétraitements à effectuer (Box-Cox,
@@ -185,8 +174,7 @@
       et ne pas les regarder. \textbf{Sinon biais statistique énorme.}}}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Outils}
+\begin{frame}{Outils}
   Plusieurs outils sont disponibles pour explorer des données. On
   utilise principalement des plots pour :
   \begin{itemize}
@@ -198,18 +186,15 @@
   \bluelink{https://seaborn.pydata.org/}{\texttt{seaborn}}.
 \end{frame}
 
-\begin{frame}
-  \frametitle{Outils — count plot}
+\begin{frame}{Outils — count plot}
   \imgtw{countplot}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Outils — dist plot}
+\begin{frame}{Outils — dist plot}
   \imgtw{distplot}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Outils — qq plot}
+\begin{frame}{Outils — qq plot}
   \imgtw{qqplot}
   Attention, pas \bluelink{https://seaborn.pydata.org/}{\texttt{seaborn}}
   mais
@@ -218,33 +203,27 @@
   \bluelink{https://docs.scipy.org/doc/scipy/reference/stats.html}{\texttt{scipy.stats}}.
 \end{frame}
 
-\begin{frame}
-  \frametitle{Outils — bar plot}
+\begin{frame}{Outils — bar plot}
   \imgtw{barplot}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Outils — scatter plot}
+\begin{frame}{Outils — scatter plot}
   \imgtw[.7]{scatter}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Outils — violin plot}
+\begin{frame}{Outils — violin plot}
   \imgtw{violinplot}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Outils — pair plot}
+\begin{frame}{Outils — pair plot}
   \imgtw[.65]{pairplot}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Outils — correlation matrix}
+\begin{frame}{Outils — correlation matrix}
   \imgtw[.8]{corrmat}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Mode opératoire}
+\begin{frame}{Mode opératoire}
   Bonnes pratiques pour explorer un dataset :
   \begin{itemize}[<+->]
   \item analyser la(es) variable(s) de sortie (countplot/distplot)
