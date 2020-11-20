@@ -1,13 +1,13 @@
 default_titles:
   intro: Natural Language Processing (NLP)
-  pattern: Manipulation d'Expressions Régulières
+  pattern: Manipulation d'expressions régulières
   preprocessing: Prétraitements
-  recommandation-text: Recommandation de Textes
-  similarity-text: Similarités de Textes
+  recommandation-text: Recommandation de textes
+  similarity-text: Similarités de textes
   tp-help: Quelques liens utiles
-  tp-text-features-engineering: Travaux Pratique Text Mining
-  tp-text-reco-system: Travaux Pratique Recommandation de Texte
-  tp-text-regex: Travaux pratique Expressions Régulières
+  tp-text-features-engineering: Travaux pratiques text mining
+  tp-text-reco-system: Travaux pratiques recommandation de texte
+  tp-text-regex: Travaux pratiques expressions régulières
   vectors: Vecteurs textuels
 flavors:
   all:

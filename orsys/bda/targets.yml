@@ -33,8 +33,8 @@
     - path: engineering
       flavor: mlcraftmyass
 
-    - path: big-questions
-      flavor: full
+    - path: tools
+      flavor: detailed
 
     - path: natural-language-processing
       flavor: intro-tp

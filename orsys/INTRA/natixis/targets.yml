@@ -22,7 +22,7 @@
   title: Jour 3 --- Apprentissage non supervisé
   sections:
     - path: unsupervised
-      flavor: natixis
+      flavor: bda
     - questions
     - path: sequential-data
       flavor: light

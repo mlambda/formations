@@ -33,28 +33,6 @@ flavors:
     - demo-anomaly-detect
     - tp-dim-reduce
     - tp-clustering
-  bda:
-    - introduction
-    - dimensionality-reduction
-    - pca-lda
-    - demo-dim-reduce
-    - pca-variantes
-    - /questions
-    - unsupervised-metrics
-    - hierarchical-clustering
-    - algorithme-em
-    - kmeans-gaussian
-    - dbscan
-    - demo-clustering
-    - clustering-conclusion
-    - pca-classification-hierarchique-composantes-principales
-    - pca-inverse
-    - /questions
-    - anomaly-detection-light
-    - demo-anomaly-detect
-    - /questions
-    - tp-dim-reduce
-    - tp-clustering
   iao:
     - introduction
     - dimensionality-reduction
@@ -66,10 +44,11 @@ flavors:
     - demo-anomaly-detect
     - tp-dim-reduce: Travaux Pratiques
     - tp-clustering: null
-  natixis:
+  bda:
     - introduction
     - dimensionality-reduction
     - pca-lda: null
+    - pca-variantes: null
     - tsne-umap: null
     - demo-dim-reduce: null
     - /questions

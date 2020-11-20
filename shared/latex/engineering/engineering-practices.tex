@@ -109,9 +109,9 @@
     \item S'assurer d'une base solide pour comparer les modèles
   \end{itemize}
 
-  \begin{alertblock}{Important}
+  \onslide<+->{\begin{alertblock}{Important}
     S'arrêter là si l'heuristique simple suffit à atteindre les objectifs.
-  \end{alertblock}
+  \end{alertblock}}
 \end{frame}
 
 \begin{frame}{Étape 2~: Intégrer du ML simple}
@@ -161,12 +161,12 @@
 
 \begin{frame}{Évolution dans le temps}
   \begin{itemize}[<+->]
-    \item Apprendre un modèle tous les n-jours
+    \item Apprendre un modèle tous les $n$ jours
     \item Évaluer la dégradation des performances en fonction de l'âge du modèle
     \item Vérifier les performances en test avant de déployer en production
-    \item Modèle appris sur des données jusqu'au jour N, tester sur les données après le jour N
+    \item Modèle appris sur des données jusqu'au jour $n$, tester sur les données après le jour $n$
     \item Mesurer la différence entre performance en apprentissage et test
-    \item Plateau de performance $\Rightarrow$ trouver des nouvelles caractéristiques/augmenter la puissance du modèle
+    \item Plateau de performance $\Rightarrow$ trouver de nouvelles caractéristiques/augmenter la puissance du modèle
     \item En fonction du modèle, supprimer des caractéristiques pas déterminantes
   \end{itemize}
 \end{frame}

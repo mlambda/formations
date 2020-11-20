@@ -7,21 +7,30 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{t-SNE}
-  Minimisation de la distance entre deux distributions~:
+\begin{frame}{Méthode}
+  Algorithmes de disposition de graphe.
+
+  Minimisation de la différence topologique entre deux graphes~:
 
   \begin{itemize}[<+->]
-    \item La distribution d'origine
-    \item La distribution de visualisation
+    \item Graphe construit en haute dimension
+    \item Graphe construit dans la dimension de projection
   \end{itemize}
 \end{frame}
 
-\begin{frame}{t-SNE --- Bonnes pratiques}
-  \bluelink{https://distill.pub/2016/misread-tsne/}{Bonne pratiques pour t-SNE}
+\begin{frame}{Paramètres}
+  Dans les deux algorithmes, on peut contrôler le trade-off structure local / structure globale~:
+
+  \begin{itemize}[<+->]
+    \item La perplexité de t-SNE $\approx$ nombre de voisins considérés comme connectés
+    \item UMAP utilise explicitement un argument de nombre de voisins connectés
+  \end{itemize}
 \end{frame}
 
-\begin{frame}{UMAP}
-  Autre option utilisée dans l'industrie et la recherche actuelles.
+\begin{frame}{t-SNE --- Bonnes pratiques \& Analyse}
+  \bluelink{https://distill.pub/2016/misread-tsne/}{Article t-SNE}
+\end{frame}
 
-  Apprentissage d'un manifold particulier qui permet la projection.
+\begin{frame}{UMAP --- Bonnes pratiques \& Analyse}
+  \bluelink{https://pair-code.github.io/understanding-umap/}{Article UMAP}
 \end{frame}

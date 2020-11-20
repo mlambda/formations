@@ -39,7 +39,7 @@
 \setbeamercolor{normal text}{bg=white}
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 \setbeamertemplate{blocks}[rounded]
-\setbeamercovered{transparent}
+%\setbeamercovered{transparent}
 
 \makeatletter
 \setlength{\metropolis@frametitle@padding}{1.9ex}% <- default 2.2 ex
@@ -79,6 +79,7 @@
 \newcommand{\card}[1]{\lvert #1 \rvert}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator{\mean}{mean}
 \DeclareMathOperator{\ReLU}{ReLU}
 \DeclareMathOperator{\softmax}{softmax}
 \DeclareMathOperator{\cov}{cov}

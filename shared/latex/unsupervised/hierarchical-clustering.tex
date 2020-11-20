@@ -24,15 +24,15 @@
 
 \begin{frame}{Clustering Hiérarchique --- Procédé}
 
-  Quelques distances de dissimilarités, après avoir défini une distance D dans l'espace :
+  Pour décider des clusters les plus similaires (à fusionner donc), plusieurs options~:
 
-  \begin{itemize}[<+->]
-  \item saut minimum : $dissim(C_1,C_2) = \underset{x \in C_1,y \in C_2}{\min}{D(x,y)}$
-  \item saut maximum : $dissim(C_1,C_2) = \underset{x \in C_1,y \in C_2}{\max}{D(x,y)}$
-  \item saut moyen : $dissim(C_1,C_2) = \underset{x \in C_1,y \in C_2}{moyenne\;}{D(x,y)}$
-  \item distance de Ward qui vise à maximiser l'inertie inter-classe
+  \begin{description}[<+->]
+  \item[Saut minimum] $\underset{x \in C_1,y \in C_2}{\min}{D(x,y)}$
+  \item[Saut maximum] $\underset{x \in C_1,y \in C_2}{\max}{D(x,y)}$
+  \item[Saut moyen] $\underset{x \in C_1,y \in C_2}{\mean}{D(x,y)}$
+  \item[Méthode de Ward] Maximise l'inertie inter-classe
   \item ...
-  \end{itemize}
+  \end{description}
 
-  $O(n^2)$ < complexité < $O(n^3)$ !
+  \onslide<+->{Méthode exacte~: $O(n^2)$ < complexité < $O(n^3)$ !}
 \end{frame}

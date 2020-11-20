@@ -2,47 +2,50 @@
   \frametitle{TF-IDF}
   Un document = un vecteur de la taille d'un dictionnaire. (donc à dimension fixe) \\
   \begin{center}
-    $\boxed{w_{i,j} = tf_{i,j}*\log{\frac{N}{df_i}}}$
+    $\boxed{w_{ij} = tf_{ij}\log{\frac{N}{df_i}}}$
   \end{center}
-  où : \\
-  $tf_{i,j} = $nombre d'occurence du mot i dans le document j, \\
-  $df_i = $nombre de documents contenant le mot i, \\
-  $N = $nombre total de documents \\
-  \newline
-  $\Rightarrow$ produict scalaire, SVM, arbres, réseaux de neurones, ...
+  où :
+
+  \begin{description}[<+->]
+    \item[$tf_{ij}$] Nombre d'occurrences du mot $i$ dans le document $j$
+    \item[$df_i$] Nombre de documents contenant le mot $i$
+    \item[$N$] Nombre total de documents
+  \end{description}
+  \onslide<+->{$\Rightarrow$ Produit scalaire, SVM, arbres, réseaux de neurones, …}
 \end{frame}
 
-\begin{frame}
-  \frametitle{TF-IDF}
+\begin{frame}{TF-IDF --- Intérêt de $df_i$}
   Loi de Zipf, justifiant l'utilisation du terme $df_i$
   \imgtw[0.9]{zipf-law}
 \end{frame}
 
-\begin{frame}
-  \frametitle{TF-IDF}
-  Utilisation de N-gram de mots ou de caractères.
+\begin{frame}{TF-IDF}
+  Utilisation de $n$-grammes de mots ou de caractères.
   \begin{center}
-  Ex : "Le chien mange de la viande"
+  Exemple~: «~Le chien mange de la viande~»
   \end{center}
-  $ $\\
-  Dictionnaire 2-gram de mots : 
+
+  Bigrammes de mots~:
+
   \begin{itemize}
-  \item {[le-chien,chien-mange,mange-de,de-la,la-viande]}
+  \item le-chien, chien-mange, mange-de, de-la, la-viande
   \end{itemize}
-  Dictionnaire 3-gram de caractères :
+
+  Trigrammes de caractères~:
+
   \begin{itemize}
-  \item {[le\_,e\_c,\_ch,chi,hie,ien,en\_,n\_m,\_ma,man,...]}
+  \item le\_, e\_c, \_ch, chi, hie, ien, en\_, n\_m, \_ma, man, …
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{LSA}
-  Latent Semantic Analysis : \\
-  \newline
-  $\approx$ Analyse en Composante Principale sur la matrice des documents, de telle sorte qu'on obtient des relations entre les mots. \\
-  Les directions principales de projection nous donnent des ``concepts'' génraux liés au langage. \\
-  \newline
-  Par exemple : un axe correspond au ``stop words'', un autre au champ lexical du sport, un autre à l'économie, etc...  
+\begin{frame}{Analyse sémantique latente}
+  Latent Semantic Analysis (LSA). Famille algorithmique des modèles thématiques (topic models).
+
+  $\approx$ PCA sur la matrice des documents, de telle sorte qu'on obtient des relations entre les mots.
+
+  Les directions principales de projection nous donnent des «~concepts~» généraux, ou topics, liés au langage.
+
+  Par exemple~: un axe correspond au champ lexical du sport, un autre à celui de l'économie, etc.
 \end{frame}
 
 \begin{frame}
