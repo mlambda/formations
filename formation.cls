@@ -29,6 +29,7 @@
 \RequirePackage{bm}
 \RequirePackage{soul}
 \RequirePackage{stmaryrd}
+\RequirePackage{tikz}
 \RequirePackage[french]{babel}
 
 \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
@@ -186,3 +187,19 @@
     {#2}
     {#1}%
 }
+
+% Tikz stuff
+
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\tikzset{hencoder/.style={
+  minimum width=1cm,
+  minimum height=0.7cm,
+  rectangle,
+  rounded corners=3pt,
+  fill=red!15,
+  draw}}
+\tikzset{hdecoder/.style={hencoder,fill=green!15}}
+\tikzset{input/.style={hencoder,fill=yellow!15}}
+\tikzset{output/.style={hencoder,fill=blue!15}}

@@ -1,142 +1,290 @@
-\begin{frame}
-  \frametitle{Lien avec la régression linéaire}
+\begin{frame}{Lien avec la régression linéaire}
   \imgtw[0.9]{regression-10}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Lien avec la régression linéaire}
+\begin{frame}{Lien avec la régression linéaire}
   \imgtw[0.9]{separable-problem-linear-solution}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Lien avec la régression linéaire}
+\begin{frame}{Lien avec la régression linéaire}
   \imgtw[0.9]{xor}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Lien (ténu) avec la biologie}
+\begin{frame}{Lien (ténu) avec la biologie}
   \imgtw[0.9]{biological-neuron}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Modélisation}
+\begin{frame}{Modélisation d'un neurone}
   \imgtw[0.9]{neuron-model}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Modélisation matricielle}
-  \[
-  \sigma \left(
-  \begin{bmatrix}
-    x_{1} & x_{2} & \dots & x_{d}
-  \end{bmatrix}
-  *
-  \begin{bmatrix}
-    w_{11} & w_{12} & \dots  & w_{1n} \\
-    w_{21} & w_{22} & \dots  & w_{2n} \\
-    \vdots & \vdots & \ddots & \vdots \\
-    w_{d1} & w_{d2} & \dots  & w_{dn}
-  \end{bmatrix}
-  +
-  \begin{bmatrix}
-    b_{1} & b_{2} & \dots & b_{n}
-  \end{bmatrix}
-  \right )
-  \]
-  \[
-  =
-  \begin{bmatrix}
-    o_{1} & o_{2} & \dots & o_{n}
-  \end{bmatrix}
-  \]
-  \newline
-  où :
-  \newline
-  X est une donnée en entrée de dimension \textbf{d},
-  \newline
-  $w$ et $b$ sont les paramètres à trouver des \textbf{n} neurones de notre modèle.
-  \newline
-  $\sigma$ la fonction d'activation et
-  \newline
-  O la sortie du réseau
+\begin{frame}{Modélisation d'un réseau de neurones}
+  Agencement de beaucoup de neurones~:
+  \begin{description}[<+->]
+    \item[En parallèle] Calculent des résultats indépendamment dans la même couche
+    \item[En série] Prennent en entrée les résultats des neurones de la couche précédente
+  \end{description}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Fonctions d'activation $\sigma$}
+\begin{frame}{Deux types de neurones}
+  On distingue deux types de neurones~:
+  \begin{description}[<+->]
+    \item[Neurones cachés] Neurones des couches intermédiaires. Améliorent l'expressivité du modèle
+    \item[Neurones de sortie] Neurones de la couche finale. Contraints par le type de sortie attendu
+  \end{description}
+\end{frame}
+
+\begin{frame}{Réseau sans couche cachée}
+  \centering
+  \begin{tikzpicture}
+    \foreach \y in {1,2} {
+      \node (BI\y) at (-1.5, 4-\y) {Entrée \y};
+      \node[input] (I\y) at (0, 4 - \y) {};
+    }
+    \foreach \y in {1,...,4} {
+      \node (AO\y) at (3.5, 5 - \y) {Sortie \y};
+      \node[output] (O\y) at (2, 5 - \y) {$\sigma(\sum)$} ;
+    }
+    \foreach \i in {1,2} {
+      \foreach \j in {1,...,4} {
+        \draw[->,>=stealth] (I\i) to (O\j);
+      }
+    }
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Réseau avec une couche cachée}
+  \centering
+  \begin{tikzpicture}
+    \foreach \y in {1,2} {
+      \node (BI\y) at (-1.5, 3.5 - \y) {Entrée \y};
+      \node[input] (I\y) at (0, 3.5 - \y) {};
+    }
+    \foreach \y in {1,...,3} {
+      \node[hencoder] (H\y) at (2, 4 - \y) {$\sigma(\sum)$};
+    }
+    \foreach \y in {1,...,4} {
+      \node (AO\y) at (5.5, 4.5 - \y) {Sortie \y};
+      \node[output] (O\y) at (4, 4.5 - \y) {$\sigma(\sum)$};
+    }
+    \foreach \i in {1,2} {
+      \foreach \j in {1,...,3} {
+        \draw[->,>=stealth] (I\i) to (H\j);
+      }
+    }
+    \foreach \i in {1,...,3} {
+      \foreach \j in {1,...,4} {
+        \draw[->,>=stealth] (H\i) to (O\j);
+      }
+    }
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Réseau profond}
+  \centering
+  \begin{tikzpicture}
+    \foreach \y in {1,2} {
+      \node (BI\y) at (-1.5, 3.5 - \y) {Entrée \y};
+      \node[input] (I\y) at (0, 3.5 - \y) {};
+    }
+    \foreach \y in {1,...,3} {
+      \node[hencoder] (H\y) at (2, 4 - \y) {$\sigma(\sum)$};
+    }
+    \foreach \y in {1,...,3} {
+      \node[hencoder] (G\y) at (4, 4 - \y) {$\sigma(\sum)$};
+    }
+    \foreach \y in {1,...,4} {
+      \node (AO\y) at (7.5, 4.5 - \y) {Sortie \y};
+      \node[output] (O\y) at (6, 4.5 - \y) {$\sigma(\sum)$} ;
+    }
+    \foreach \i in {1,2} {
+      \foreach \j in {1,...,3} {
+        \draw[->,>=stealth] (I\i) to (H\j);
+      }
+    }
+    \foreach \i in {1,...,3} {
+      \foreach \j in {1,...,3} {
+        \draw[->,>=stealth] (H\i) to (G\j);
+      }
+    }
+    \foreach \i in {1,...,3} {
+      \foreach \j in {1,...,4} {
+        \draw[->,>=stealth] (G\i) to (O\j);
+      }
+    }
+    \draw[draw=white, fill=white] (2.8, 0.8) rectangle (3.2, 3.2) node[midway] {…};
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Un potentiel infini}
+  \textbf{Kurt Hornik, 1991~:} Théorème d'approximation universelle
+  \imgtw[0.8]{universal-approximation}
+\end{frame}
+
+\begin{frame}{Modélisation matricielle}
+  \begin{align*}
+    &
+    \sigma \left(
+    \begin{bmatrix}
+      x_1 & x_2 & \dots & x_d
+    \end{bmatrix}
+    \begin{bmatrix}
+      w_{11} & w_{12} & \dots  & w_{1n} \\
+      w_{21} & w_{22} & \dots  & w_{2n} \\
+      \vdots & \vdots & \ddots & \vdots \\
+      w_{d1} & w_{d2} & \dots  & w_{dn}
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+      b_1 & b_2 & \dots & b_n
+    \end{bmatrix}
+    \right) \\
+    = &
+    \begin{bmatrix}
+      o_1 & o_2 & \dots & o_n
+    \end{bmatrix}
+  \end{align*}
+  où :
+  \begin{description}[<+->]
+    \item[X] Données en entrée de dimension $d$
+    \item[W \& b] Paramètres à trouver des $n$ neurones de notre modèle
+    \item[$\bm{\sigma}$] Fonction d'activation
+    \item[O] Sortie du réseau
+  \end{description}
+\end{frame}
+
+\begin{frame}{Fonctions d'activation --- Critères de choix}
+  \begin{itemize}[<+->]
+    \item Propriétés mathématiques (conservation du gradient)
+    \item Propriétés d'apprentissage (éviter la création de poids morts)
+    \item Rapidité de calcul
+    \item Intervalle de sortie pour la dernière couche
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Fonctions d'activation --- Les plus classiques}
   \begin{itemize}
   \item Sigmoïde
   \item Tanh
   \item Softmax
   \item ReLU
-  \item ...
+  \item …
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Un potentiel infini}
-  \textbf{Kurt Hornik, 1991~:} Théorème d'approximation universelle
-  \imgtw[0.8]{universal-approximation}
+\begin{frame}{Fonctions d'activation --- Sigmoïde}
+  \begin{center}
+    \begin{tikzpicture}
+      \datavisualization [scientific axes=clean,
+                          all axes=grid,
+                          x axis={unit length=0.8cm, label=$x$, ticks and grid={step=1}},
+                          y axis={unit length=2cm, min value=0, max value=1, ticks and grid={step=0.25},label=$\phi(x)$},
+                          visualize as line/.list=sigmoid,
+                          sigmoid={style={red, line width=0.5mm}}]
+      data [format=function, set=sigmoid] {
+        var x : interval [-5:5];
+        func y = {1/(1+exp(-\value x))};
+      };
+    \end{tikzpicture}
+  \end{center}
+
+  \begin{description}[<+->]
+    \item[Définition] \[\phi(x) = \frac{1}{1 + e^{-x}}\]
+    \item[Dérivée] \[\phi'(x)=\phi(x)(1-\phi(x))\]
+  \end{description}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Fonction d'activation sigmoïde}
-  \imgth[0.6]{sigmoid}
-  \[
-  \frac{\partial{\phi(x)}}{\partial{x}}=\phi(x)*(1-\phi(x))
-  \]
+\begin{frame}{Fonctions d'activation --- Tangente hyperbolique}
+  \begin{center}
+    \begin{tikzpicture}
+      \datavisualization [scientific axes=clean,
+                          all axes=grid,
+                          x axis={unit length=1cm, label=$x$, ticks and grid={step=1}},
+                          y axis={unit length=1cm, label=$\tanh(x)$, ticks and grid={step=0.5}},
+                          visualize as line/.list=tanh,
+                          tanh={style={red, line width=0.5mm}}]
+      data [format=function, set=tanh] {
+        var x : interval [-4:4] samples 100;
+        func y = {(1-exp(-2 * \value x))/(1+exp(-2*\value x))};
+      };
+    \end{tikzpicture}
+  \end{center}
+
+  \begin{description}[<+->]
+    \item[Définition] \[\tanh(x)=\frac{1-e^{-2x}}{1+e^{-2x}}\]
+    \item[Dérivée] \[\tanh'(x)=1-\tanh^2(x)\]
+  \end{description}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Fonction d'activation tanh}
-  \[
-  \tanh(x)=\frac{1-\exp{-2*x}}{1+\exp{-2*x}}
-  \]
-  \imgth[0.5]{tanh}
-  \[
-  \frac{\partial{\tanh(x)}}{\partial{x}}=1-\tanh^2(x)
-  \]
+\begin{frame}[fragile]{Fonctions d'activation --- ReLU}
+  \begin{center}
+    \begin{tikzpicture}
+      \datavisualization [scientific axes=clean,
+                          all axes=grid,
+                          x axis={unit length=0.8cm, label=$x$, ticks and grid={step=1}},
+                          y axis={unit length=0.3cm, label=$\ReLU(x)$},
+                          visualize as line/.list={relu},
+                          relu={style={red, line width=0.5mm}}]
+      data [set=relu] {
+        x, y
+        -5, 0
+        0, 0
+        5, 5
+      };
+    \end{tikzpicture}
+  \end{center}
+
+  \begin{description}[<+->]
+    \item[Définition] \[\ReLU(x)=\begin{cases} 0 & x \leq 0 \\ x & x > 0\end{cases}\]
+    \item[Dérivée] \[\ReLU'(x)=\begin{cases} 0 & x \leq 0 \\ 1 & x > 0\end{cases}\]
+  \end{description}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Fonction d'activation softmax}
-  \[
-  \softmax(x_j) = \frac{e^{x_j}}{\sum_{i = 1}^n{e^{x_i}}}
-  \]
-  donc :
-  \[
-  \sum_{j = 1}^n{\softmax(x_j)} = 1
-  \]
-  dérivée (ou jacobien car le softmax est une fonction de $\mathbb{R}^n\rightarrow\mathbb{R}^n$):
-  \[
-  D_jS_i = S_i(\delta_{ij}-S_j)
-  \]
-  où
-  $D_jS_i$ est la dérivée partielle de la i-ième sortie par rapport à la j-ième entrée
-  \newline
-  $\delta_{ij}$ est le delta de Kronecker
+\begin{frame}{Fonctions d'activation --- Approximation d'une fonction}
+  \centering
+  \begin{tikzpicture}
+    \datavisualization [scientific axes=clean,
+                        all axes=grid,
+                        x axis={unit length=1cm, ticks and grid={step=1}},
+                        y axis={unit length=1cm, ticks and grid={step=0.5}},
+                        visualize as line/.list={origin, relu},
+                        relu={style={red, line width=0.5mm}, label in legend={text=$-n_1-n_2-n_3+n_4+n_5+n_6$}},
+                        origin={style={blue, line width=0.5mm}, label in legend={text=$x^3+x^2-x-1$}}]
+    data [format=function, set=relu] {
+      var x : interval [-1.8:1.2] samples 100;
+      func y = {-max(-5*\value x - 7.7, 0)
+                -max(-1.2*\value x - 1.3, 0)
+                -max(1.2*\value x + 1, 0)
+                +max(1.2*\value x - 0.2, 0)
+                +max(2*\value x - 1.1, 0)
+                +max(5*\value x - 5, 0)};
+    }
+    data [format=function, set=origin] {
+      var x : interval [-1.8:1.2] samples 100;
+      func y = {\value x * \value x * (\value x + 1) - \value x - 1};
+    };
+  \end{tikzpicture}
+
+  \begin{description}
+    \item[$\mathbf{n_1}$] $\ReLU(-5x - 7.7)$
+    \item[$\mathbf{n_2}$] $\ReLU(-1.2x - 1.3)$
+    \item[$\mathbf{n_3}$] $\ReLU(1.2x - 1)$
+    \item[$\mathbf{n_4}$] $\ReLU(1.2x - 0.2)$
+    \item[$\mathbf{n_5}$] $\ReLU(2x - 1.1)$
+    \item[$\mathbf{n_6}$] $\ReLU(5x - 5)$
+  \end{description}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Fonction d'activation ReLU}
-  \begin{minipage}[c]{0.39\linewidth}
-    \imgtw[0.9]{relu}
-  \end{minipage}\hfill
-  \begin{minipage}[c]{0.59\linewidth}
-    \imgtw[0.9]{relu-approx}
-  \end{minipage}\hfill
-\end{frame}
-
-\begin{frame}
-  \frametitle{Réseau sans couche cachée}
-  \imgtw[0.8]{neural-network-small}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Réseau avec une couche cachée}
-  \imgtw[0.8]{neural-network}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Réseau profond}
-  \imgtw[0.8]{deep-net}
+\begin{frame}{Fonctions d'activation --- softmax}
+  \begin{description}[<+->]
+    \item[Définition] \[\softmax(x_i) = \frac{\exp(x_i)}{\sum_{k = 1}^n{\exp(x_k)}}\]
+    \item[Propriété] \[\sum_{i = 1}^n{\softmax(x_i)} = 1\]
+    \item[Gradient] \[
+      \frac{\partial \softmax(x_i)}{\partial x_j} =
+        \begin{cases}
+          \softmax(x_i)(1 - \softmax(x_j)) & i = j \\
+          -\softmax(x_i)\softmax(x_j) & i \neq j
+        \end{cases}
+      \]
+  \end{description}
 \end{frame}
