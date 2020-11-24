@@ -199,6 +199,7 @@
   rectangle,
   rounded corners=3pt,
   fill=red!15,
+  line width=0.5mm,
   draw}}
 \tikzset{hdecoder/.style={hencoder,fill=green!15}}
 \tikzset{input/.style={hencoder,fill=yellow!15}}

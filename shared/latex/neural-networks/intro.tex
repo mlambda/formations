@@ -121,27 +121,64 @@
   \imgtw[0.8]{universal-approximation}
 \end{frame}
 
-\begin{frame}{Modélisation matricielle}
-  \begin{align*}
-    &
-    \sigma \left(
-    \begin{bmatrix}
+\begin{frame}{Modélisation matricielle --- Échantillon}
+  Représentable sous forme de vecteur à $d$ colonnes correspondant à $d$ caractéristiques~:
+
+  \[
+    \vect{x} = \begin{bmatrix}
       x_1 & x_2 & \dots & x_d
     \end{bmatrix}
-    \begin{bmatrix}
-      w_{11} & w_{12} & \dots  & w_{1n} \\
-      w_{21} & w_{22} & \dots  & w_{2n} \\
+  \]
+
+  Voire même de matrice dans le cas d'un batch (groupe d'échantillons)~:
+
+  \[
+    \vect{X} = \begin{bmatrix}
+      X_{1,1} & X_{1,2} & \dots & X_{1,d} \\
+      X_{2,1} & X_{2,2} & \dots & X_{2,d}
+    \end{bmatrix}
+  \]
+\end{frame}
+
+\begin{frame}{Modélisation matricielle --- Poids}
+  Représentables sous forme de matrice de poids et de vecteur de biais~:
+
+  \begin{align*}
+    \vect{W} & = \begin{bmatrix}
+      W_{1,1} & W_{1,2} & \dots  & W_{1,n} \\
+      W_{2,1} & W_{2,2} & \dots  & W_{2,n} \\
       \vdots & \vdots & \ddots & \vdots \\
-      w_{d1} & w_{d2} & \dots  & w_{dn}
+      W_{d,1} & W_{d,2} & \dots  & W_{d,n}
+    \end{bmatrix} \\
+    \vect{b} & = \begin{bmatrix}
+      b_1 & b_2 & \dots & b_n
+    \end{bmatrix}
+  \end{align*}
+\end{frame}
+
+\begin{frame}{Modélisation matricielle complète}
+  \footnotesize
+  \begin{align*}
+    O & = \sigma (\vect{X}.\vect{W} + \vect{b}) \\
+    & = \sigma \left(
+    \begin{bmatrix}
+      X_{1,1} & X_{1,2} & \dots & X_{1,d} \\
+      X_{2,1} & X_{2,2} & \dots & X_{2,d}
+    \end{bmatrix}
+    \begin{bmatrix}
+      W_{1,1} & W_{1,2} & \dots  & W_{1,n} \\
+      W_{2,1} & W_{2,2} & \dots  & W_{2,n} \\
+      \vdots & \vdots & \ddots & \vdots \\
+      W_{d,1} & W_{d,2} & \dots  & W_{d,n}
     \end{bmatrix}
     +
     \begin{bmatrix}
       b_1 & b_2 & \dots & b_n
     \end{bmatrix}
     \right) \\
-    = &
-    \begin{bmatrix}
-      o_1 & o_2 & \dots & o_n
+    & = \begin{bmatrix}
+      O_{1,1} & O_{1,2} & \dots & O_{1,n} \\
+      O_{2,1} & O_{2,2} & \dots & O_{2,n}
     \end{bmatrix}
   \end{align*}
   où :
@@ -264,18 +301,19 @@
       func y = {\value x * \value x * (\value x + 1) - \value x - 1};
     };
   \end{tikzpicture}
-
-  \begin{description}
-    \item[$\mathbf{n_1}$] $\ReLU(-5x - 7.7)$
-    \item[$\mathbf{n_2}$] $\ReLU(-1.2x - 1.3)$
-    \item[$\mathbf{n_3}$] $\ReLU(1.2x - 1)$
-    \item[$\mathbf{n_4}$] $\ReLU(1.2x - 0.2)$
-    \item[$\mathbf{n_5}$] $\ReLU(2x - 1.1)$
-    \item[$\mathbf{n_6}$] $\ReLU(5x - 5)$
-  \end{description}
+  {\small
+    \begin{align*}
+      n_1 & = \ReLU(-5x - 7.7) \\
+      n_2 & = \ReLU(-1.2x - 1.3) \\
+      n_3 & = \ReLU(1.2x - 1) \\
+      n_4 & = \ReLU(1.2x - 0.2) \\
+      n_5 & = \ReLU(2x - 1.1) \\
+      n_6 & = \ReLU(5x - 5) \\
+    \end{align*}
+  }
 \end{frame}
 
-\begin{frame}{Fonctions d'activation --- softmax}
+\begin{frame}{Fonctions d'activation --- Softmax}
   \begin{description}[<+->]
     \item[Définition] \[\softmax(x_i) = \frac{\exp(x_i)}{\sum_{k = 1}^n{\exp(x_k)}}\]
     \item[Propriété] \[\sum_{i = 1}^n{\softmax(x_i)} = 1\]
