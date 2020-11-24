@@ -28,7 +28,7 @@
     - questions
 
 - name: j4
-  title: Jour 4 --- Ingénierie
+  title: Jour 4 --- Ingénierie \& Traitement de texte
   sections:
     - path: engineering
       flavor: mlcraftmyass
