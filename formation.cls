@@ -12,7 +12,8 @@
 
 \LoadClass{beamer}
 
-
+\RequirePackage{xparse}
+\RequirePackage{ifthen}
 \RequirePackage{xcolor}
 \RequirePackage[export]{adjustbox}
 \RequirePackage{amsmath}
@@ -40,7 +41,7 @@
 \setbeamercolor{normal text}{bg=white}
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 \setbeamertemplate{blocks}[rounded]
-%\setbeamercovered{transparent}
+\setbeamercovered{transparent}
 
 \makeatletter
 \setlength{\metropolis@frametitle@padding}{1.9ex}% <- default 2.2 ex
@@ -175,6 +176,15 @@
 \newcommand\gray[1]{\textcolor{gray}{#1}}
 \newcommand\purple[1]{\textcolor{purple}{#1}}
 \newcommand\smallgray[1]{\textcolor{gray}{\footnotesize\it #1}}
+
+\DeclareDocumentCommand\question{ m g }{%
+  {\alert{#1}%
+    \ifnum\value{beamerpauses}=1
+      \setcounter{beamerpauses}{2}
+    \fi
+    \IfNoValueF{#2}{ \visible<+->{#2}}%
+  }%
+}
 
 \newcommand{\mog}[2][]{%
   \ifthenelse{\equal{\Trainer}{mog}}
