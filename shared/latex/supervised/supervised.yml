@@ -62,9 +62,11 @@ flavors:
   bayes:
     - naive-bayes
     - gaussian-mixture
+    - modeles-graphiques
+    - sequential-data
+    - sequential-models
     - markov-model
     - hmm
-    - modeles-graphiques
   standard:
     - proba-rappel
     - naive-bayes
