@@ -1,0 +1,41 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \foreach \word [count=\i] in {What,do,you,do} {%
+      \node[hencoder] (HE\i) at (\i*1.5, 1) {$h_\i$};
+      \node[input] (WEI\i) at (\i*1.5, 0) {$x_\i$} ;
+      \node[anchor=mid] (T\i) at (\i*1.5,-1) {\word};
+      \draw[->] (WEI\i) -> (HE\i);
+      \draw[densely dotted] (T\i) -- (WEI\i);
+      \draw[color=gray] (\i* 1.5 - 0.5, -1.4)
+        -- (\i * 1.5 - 0.5, -1.5)
+        -- (\i * 1.5 + 0.5, -1.5) node [below, midway] {$t_\i$}
+        -- (\i * 1.5 + 0.5, -1.4);
+    }
+    \foreach \word/\to [count=\i,evaluate=\i as \t using int(\i+4),remember=\word as \lastword (initially <GO>)] in {Que,fais,tu,<STOP>} {%
+      \node[hdecoder] (HD\i) at (\i*1.5+7, 1) {$h_\t$};
+      \node[output] (O\i) at (\i*1.5+7, 2) {$y_\t$};
+      \node[input] (WEO\i) at (\i*1.5+7, 0) {$x_\t$};
+      \node[anchor=mid] (TI\i) at (\i*1.5+7, -1) {\lastword};
+      \node[anchor=mid] (TO\i) at (\i*1.5+7, 3) {\word};
+      \draw[->] (WEO\i) -- (HD\i);
+      \draw[->] (HD\i) -- (O\i);
+      \draw[densely dotted] (TI\i) -- (WEO\i);
+      \draw[densely dotted] (O\i) -- (TO\i);
+      \draw[color=gray] (\i* 1.5 + 6.5, -1.4)
+        -- (\i * 1.5 + 6.5, -1.5)
+        -- (\i* 1.5 + 7.5, -1.5) node [below, midway] {$t_\t$}
+        -- (\i* 1.5 + 7.5, -1.4);
+    }
+    \foreach \i [evaluate=\i as \j using int(\i+1)] in {1,2,3} {%
+      \draw[->] (HE\i) -- (HE\j);
+    }
+    \foreach \x [evaluate=\x as \y using int(\x + 1)] in {1,2,3} {%
+      \draw[->] (HD\x) -- (HD\y);
+    }
+    \draw[->] (HE4) -- (HD1);
+  \end{tikzpicture}
+\end{document}

@@ -1,0 +1,28 @@
+\documentclass[class=beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \datavisualization [scientific axes=clean,
+                        all axes=grid,
+                        x axis={unit length=1cm, ticks and grid={step=1}},
+                        y axis={unit length=1cm, ticks and grid={step=0.5}},
+                        visualize as line/.list={relu,origin},
+                        relu={style={red, line width=0.5mm}, label in legend={text=$-n_1-n_2-n_3+n_4+n_5+n_6$}},
+                        origin={style={blue, line width=0.5mm}, label in legend={text=$x^3+x^2-x-1$}}]
+    data [format=function, set=origin] {
+      var x : interval [-1.8:1.2] samples 100 ;
+      func y = {\value x * \value x * (\value x + 1) - \value x - 1} ;
+    }
+    data [format=function, set=relu] {
+      var x : interval [-1.8:1.2] samples 100 ;
+      func y = {-max(-5*\value x - 7.7, 0)%
+                -max(-1.2*\value x - 1.3, 0)%
+                -max(1.2*\value x + 1, 0)%
+                +max(1.2*\value x - 0.2, 0)%
+                +max(2*\value x - 1.1, 0)%
+                +max(5*\value x - 5, 0)} ;
+    };
+  \end{tikzpicture}
+\end{document}

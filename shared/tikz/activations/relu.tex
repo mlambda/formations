@@ -1,0 +1,20 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \datavisualization [scientific axes=clean,
+                        all axes=grid,
+                        x axis={unit length=0.8cm, label=$x$, ticks and grid={step=1}},
+                        y axis={unit length=0.3cm, label=$\ReLU(x)$},
+                        visualize as line/.list={relu},
+                        relu={style={red, line width=0.5mm}}]
+    data [set=relu] {
+      x, y
+      -5, 0
+      0, 0
+      5, 5
+    };
+  \end{tikzpicture}
+\end{document}

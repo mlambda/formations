@@ -1,0 +1,18 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \datavisualization [scientific axes=clean,
+                        all axes=grid,
+                        x axis={unit length=1cm, label=$x$, ticks and grid={step=1}},
+                        y axis={unit length=1cm, label=$\tanh(x)$, ticks and grid={step=0.5}},
+                        visualize as line/.list=tanh,
+                        tanh={style={red, line width=0.5mm}}]
+    data [format=function, set=tanh] {
+      var x : interval [-4:4] samples 100;
+      func y = {(1-exp(-2 * \value x))/(1+exp(-2*\value x))};
+    };
+  \end{tikzpicture}
+\end{document}

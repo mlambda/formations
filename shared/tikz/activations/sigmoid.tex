@@ -1,0 +1,18 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \datavisualization [scientific axes=clean,
+                        all axes=grid,
+                        x axis={unit length=0.8cm, label=$x$, ticks and grid={step=1}},
+                        y axis={unit length=2cm, min value=0, max value=1, ticks and grid={step=0.25},label=$\phi(x)$},
+                        visualize as line/.list=sigmoid,
+                        sigmoid={style={red, line width=0.5mm}}]
+    data [format=function, set=sigmoid] {
+      var x : interval [-5:5];
+      func y = {1/(1+exp(-\value x))};
+    };
+  \end{tikzpicture}
+\end{document}

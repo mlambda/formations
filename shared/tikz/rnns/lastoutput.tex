@@ -1,0 +1,27 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \foreach \word [count=\i] in {J,ai,adoré} {%
+      \node[hencoder] (H\i) at (\i*1.5, 1) {$h_\i$};
+      \node[input] (WE\i) at (\i*1.5, 0) {$x_\i$};
+      \node[anchor=mid] (TI\i) at (\i*1.5, -1) {\word};
+      \draw[->] (WE\i) -- (H\i);
+      \draw[densely dotted] (TI\i) -- (WE\i);
+      \draw[color=gray] (\i* 1.5 - 0.5, -1.4)
+        -- (\i * 1.5 - 0.5, -1.5)
+        -- (\i* 1.5 + 0.5, -1.5) node [below, midway] {$t_\i$}
+        -- (\i* 1.5 + 0.5, -1.4);
+    }
+    \foreach \i [evaluate=\i as \j using int(\i + 1)] in {1,2} {%
+      \draw[->] (H\i) -- (H\j);
+    }
+
+    \node[output] (O) at (4.5, 2) {$y$};
+    \node[anchor=mid] (TO) at (4.5, 3) {Positif};
+    \draw[->] (H3) -- (O);
+    \draw[densely dotted] (O) -- (TO);
+  \end{tikzpicture}
+\end{document}

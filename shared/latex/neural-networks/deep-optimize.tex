@@ -1,25 +1,22 @@
-\begin{frame}
-  \frametitle{Disparition du gradient (ou son explosion)}
+\begin{frame}{Disparition du gradient (ou son explosion)}
   \imgtw[1.0]{vanishing-gradient3}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Disparition des gradients}
+\begin{frame}{Disparition des gradients}
   Vanishing Gradient $\Rightarrow$ utilisation de ReLu plutôt que les sigmoïdes
-  \imgtw[0.8]{relu}
+  \vfill
+  \imgtw{activations/relu}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Explosion des gradients}
+\begin{frame}{Explosion des gradients}
   Exploding Gradient $\Rightarrow$ Gradient clipping
   \imgtw[0.9]{gradient-clipping}
   Dans le cadre des réseaux réccurents $\Rightarrow$ initialisation avec des matrices orthogonales
 \end{frame}
 
-\begin{frame}
-  \frametitle{Algorithme d'optimisation}
+\begin{frame}{Algorithme d'optimisation}
   Optimisateur plus rapide que SGD
-  \begin{itemize}
+  \begin{itemize}[<+(1)->]
   \item Root Mean Square Propagation (RMSProp)
   \item Adaptative Gradient Algorithm (AdaGrad)
   \item Adaptative Moment Estimation (Adam)    $\Leftarrow$

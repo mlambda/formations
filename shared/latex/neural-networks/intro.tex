@@ -36,89 +36,26 @@
 
 \begin{frame}{Réseau sans couche cachée}
   \centering
-  \begin{tikzpicture}
-    \foreach \y in {1,2} {
-      \node (BI\y) at (-1.5, 4-\y) {Entrée \y};
-      \node[input] (I\y) at (0, 4 - \y) {};
-    }
-    \foreach \y in {1,...,4} {
-      \node (AO\y) at (3.5, 5 - \y) {Sortie \y};
-      \node[output] (O\y) at (2, 5 - \y) {$\sigma(\sum)$} ;
-    }
-    \foreach \i in {1,2} {
-      \foreach \j in {1,...,4} {
-        \draw[->,>=stealth] (I\i) to (O\j);
-      }
-    }
-  \end{tikzpicture}
+  \imgtw{neural-networks/shallow-ff}
 \end{frame}
 
 \begin{frame}{Réseau avec une couche cachée}
   \centering
-  \begin{tikzpicture}
-    \foreach \y in {1,2} {
-      \node (BI\y) at (-1.5, 3.5 - \y) {Entrée \y};
-      \node[input] (I\y) at (0, 3.5 - \y) {};
-    }
-    \foreach \y in {1,...,3} {
-      \node[hencoder] (H\y) at (2, 4 - \y) {$\sigma(\sum)$};
-    }
-    \foreach \y in {1,...,4} {
-      \node (AO\y) at (5.5, 4.5 - \y) {Sortie \y};
-      \node[output] (O\y) at (4, 4.5 - \y) {$\sigma(\sum)$};
-    }
-    \foreach \i in {1,2} {
-      \foreach \j in {1,...,3} {
-        \draw[->,>=stealth] (I\i) to (H\j);
-      }
-    }
-    \foreach \i in {1,...,3} {
-      \foreach \j in {1,...,4} {
-        \draw[->,>=stealth] (H\i) to (O\j);
-      }
-    }
-  \end{tikzpicture}
+  \imgtw{neural-networks/one-hidden-layer-ff}
 \end{frame}
 
 \begin{frame}{Réseau profond}
   \centering
-  \begin{tikzpicture}
-    \foreach \y in {1,2} {
-      \node (BI\y) at (-1.5, 3.5 - \y) {Entrée \y};
-      \node[input] (I\y) at (0, 3.5 - \y) {};
-    }
-    \foreach \y in {1,...,3} {
-      \node[hencoder] (H\y) at (2, 4 - \y) {$\sigma(\sum)$};
-    }
-    \foreach \y in {1,...,3} {
-      \node[hencoder] (G\y) at (4, 4 - \y) {$\sigma(\sum)$};
-    }
-    \foreach \y in {1,...,4} {
-      \node (AO\y) at (7.5, 4.5 - \y) {Sortie \y};
-      \node[output] (O\y) at (6, 4.5 - \y) {$\sigma(\sum)$} ;
-    }
-    \foreach \i in {1,2} {
-      \foreach \j in {1,...,3} {
-        \draw[->,>=stealth] (I\i) to (H\j);
-      }
-    }
-    \foreach \i in {1,...,3} {
-      \foreach \j in {1,...,3} {
-        \draw[->,>=stealth] (H\i) to (G\j);
-      }
-    }
-    \foreach \i in {1,...,3} {
-      \foreach \j in {1,...,4} {
-        \draw[->,>=stealth] (G\i) to (O\j);
-      }
-    }
-    \draw[draw=white, fill=white] (2.8, 0.8) rectangle (3.2, 3.2) node[midway] {…};
-  \end{tikzpicture}
+  \imgtw{neural-networks/deep-ff}
 \end{frame}
 
 \begin{frame}{Un potentiel infini}
   \textbf{Kurt Hornik, 1991~:} Théorème d'approximation universelle
   \imgtw[0.8]{universal-approximation}
+\end{frame}
+
+\begin{frame}{Démonstration}
+  \bluelink{https://playground.tensorflow.org/}{Visualisation d'un réseau simple}
 \end{frame}
 
 \begin{frame}{Modélisation matricielle --- Échantillon}
@@ -211,18 +148,7 @@
 
 \begin{frame}{Fonctions d'activation --- Sigmoïde}
   \begin{center}
-    \begin{tikzpicture}
-      \datavisualization [scientific axes=clean,
-                          all axes=grid,
-                          x axis={unit length=0.8cm, label=$x$, ticks and grid={step=1}},
-                          y axis={unit length=2cm, min value=0, max value=1, ticks and grid={step=0.25},label=$\phi(x)$},
-                          visualize as line/.list=sigmoid,
-                          sigmoid={style={red, line width=0.5mm}}]
-      data [format=function, set=sigmoid] {
-        var x : interval [-5:5];
-        func y = {1/(1+exp(-\value x))};
-      };
-    \end{tikzpicture}
+    \imgtw{activations/sigmoid}
   \end{center}
 
   \begin{description}[<+->]
@@ -233,18 +159,7 @@
 
 \begin{frame}{Fonctions d'activation --- Tangente hyperbolique}
   \begin{center}
-    \begin{tikzpicture}
-      \datavisualization [scientific axes=clean,
-                          all axes=grid,
-                          x axis={unit length=1cm, label=$x$, ticks and grid={step=1}},
-                          y axis={unit length=1cm, label=$\tanh(x)$, ticks and grid={step=0.5}},
-                          visualize as line/.list=tanh,
-                          tanh={style={red, line width=0.5mm}}]
-      data [format=function, set=tanh] {
-        var x : interval [-4:4] samples 100;
-        func y = {(1-exp(-2 * \value x))/(1+exp(-2*\value x))};
-      };
-    \end{tikzpicture}
+    \imgtw{activations/tanh}
   \end{center}
 
   \begin{description}[<+->]
@@ -253,22 +168,9 @@
   \end{description}
 \end{frame}
 
-\begin{frame}[fragile]{Fonctions d'activation --- ReLU}
+\begin{frame}{Fonctions d'activation --- ReLU}
   \begin{center}
-    \begin{tikzpicture}
-      \datavisualization [scientific axes=clean,
-                          all axes=grid,
-                          x axis={unit length=0.8cm, label=$x$, ticks and grid={step=1}},
-                          y axis={unit length=0.3cm, label=$\ReLU(x)$},
-                          visualize as line/.list={relu},
-                          relu={style={red, line width=0.5mm}}]
-      data [set=relu] {
-        x, y
-        -5, 0
-        0, 0
-        5, 5
-      };
-    \end{tikzpicture}
+    \imgtw{activations/relu}
   \end{center}
 
   \begin{description}[<+->]
@@ -279,36 +181,12 @@
 
 \begin{frame}{Fonctions d'activation --- Approximation d'une fonction}
   \centering
-  \begin{tikzpicture}
-    \datavisualization [scientific axes=clean,
-                        all axes=grid,
-                        x axis={unit length=1cm, ticks and grid={step=1}},
-                        y axis={unit length=1cm, ticks and grid={step=0.5}},
-                        visualize as line/.list={origin, relu},
-                        relu={style={red, line width=0.5mm}, label in legend={text=$-n_1-n_2-n_3+n_4+n_5+n_6$}},
-                        origin={style={blue, line width=0.5mm}, label in legend={text=$x^3+x^2-x-1$}}]
-    data [format=function, set=relu] {
-      var x : interval [-1.8:1.2] samples 100;
-      func y = {-max(-5*\value x - 7.7, 0)
-                -max(-1.2*\value x - 1.3, 0)
-                -max(1.2*\value x + 1, 0)
-                +max(1.2*\value x - 0.2, 0)
-                +max(2*\value x - 1.1, 0)
-                +max(5*\value x - 5, 0)};
-    }
-    data [format=function, set=origin] {
-      var x : interval [-1.8:1.2] samples 100;
-      func y = {\value x * \value x * (\value x + 1) - \value x - 1};
-    };
-  \end{tikzpicture}
+    \imgtw{activations/approximation}
   {\small
     \begin{align*}
-      n_1 & = \ReLU(-5x - 7.7) \\
-      n_2 & = \ReLU(-1.2x - 1.3) \\
-      n_3 & = \ReLU(1.2x - 1) \\
-      n_4 & = \ReLU(1.2x - 0.2) \\
-      n_5 & = \ReLU(2x - 1.1) \\
-      n_6 & = \ReLU(5x - 5) \\
+      n_1 & = \ReLU(-5x - 7.7) & n_4 & = \ReLU(1.2x - 0.2) \\
+      n_2 & = \ReLU(-1.2x - 1.3) & n_5 & = \ReLU(2x - 1.1) \\
+      n_3 & = \ReLU(1.2x - 1) & n_6 & = \ReLU(5x - 5) \\
     \end{align*}
   }
 \end{frame}

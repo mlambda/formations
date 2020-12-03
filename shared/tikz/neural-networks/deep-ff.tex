@@ -1,0 +1,38 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \foreach \y in {1,2} {
+        \node (BI\y) at (-1.5, 3.5 - \y) {Entrée \y};
+        \node[input] (I\y) at (0, 3.5 - \y) {$x_\y$};
+    }
+    \foreach \y in {1,...,3} {
+        \node[hencoder] (H\y) at (2, 4 - \y) {$\sigma(\sum)$};
+    }
+    \foreach \y in {1,...,3} {
+        \node[hencoder] (G\y) at (4, 4 - \y) {$\sigma(\sum)$};
+    }
+    \foreach \y in {1,...,4} {
+        \node (AO\y) at (7.5, 4.5 - \y) {Sortie \y};
+        \node[output] (O\y) at (6, 4.5 - \y) {$\sigma(\sum)$} ;
+    }
+    \foreach \i in {1,2} {
+        \foreach \j in {1,...,3} {
+        \draw[->,>=stealth] (I\i) to (H\j);
+        }
+    }
+    \foreach \i in {1,...,3} {
+        \foreach \j in {1,...,3} {
+        \draw[->,>=stealth] (H\i) to (G\j);
+        }
+    }
+    \foreach \i in {1,...,3} {
+        \foreach \j in {1,...,4} {
+        \draw[->,>=stealth] (G\i) to (O\j);
+        }
+    }
+    \draw[draw=white, fill=white] (2.8, 0.8) rectangle (3.2, 3.2) node[midway] {…};
+  \end{tikzpicture}
+\end{document}

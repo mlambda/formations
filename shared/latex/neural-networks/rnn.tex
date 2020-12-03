@@ -1,6 +1,16 @@
-\begin{frame}{Différence avec un réseau feedforward}
-  \imgtw[0.7]{nn-rnn-comparaison}
+\begin{frame}{Introduction}
+  Caractéristiques des réseaux récurrents~:
+
+  \begin{itemize}[<+->]
+    \item Gestion des séquences
+    \item Traitement séquentiel des entrées
+    \item Réplication d'un réseau autant de fois qu'il y a d'entrées
+  \end{itemize}
 \end{frame}
+
+\fmg{\begin{frame}{Différence avec un réseau feedforward}
+  \imgtw[0.7]{nn-rnn-comparaison}
+\end{frame}}
 
 \begin{frame}{Modèle}
   \imgtw[0.7]{rnn-unfold}
@@ -15,20 +25,21 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Prédiction de la suite d'une séquence}
-  Exemple~: modèle de langage
+\begin{frame}{Prédiction d'une sortie}
+  Exemple~: détection de polarité.
 
-  \imgtw[0.7]{rnn-language-model}
-
-  Peut être utilisé pour générer de nouvelles séquences
+  \begin{figure}
+    \centering
+    \imgth[0.7]{rnns/lastoutput}
+  \end{figure}
 \end{frame}
 
-\begin{frame}{Prédiction d'une classe}
-  \imgth[0.7]{rnn-predict-class-2}
+\begin{frame}{Prédiction d'autants de sorties qu'il y a d'entrées}
+  \imgtw[0.5]{rnns/alloutputs}
 \end{frame}
 
-\begin{frame}{Génération d'une séquence (seq2seq)}
-  \imgtw{rnn-seq2seq}
+\begin{frame}{Prédiction d'un nombre arbitraire de sorties}
+  \imgtw{rnns/seq2seq}
 \end{frame}
 
 \begin{frame}{Problème du gradient qui disparaît (vanishing gradient)}
