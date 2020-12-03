@@ -1,0 +1,8 @@
+build_command:
+  - latexmk
+  - -pdflatex=xelatex -shell-escape -interaction=nonstopmode %O %S
+  - -dvi-
+  - -ps-
+  - -pdf
+compile_standalones:
+  - shared/tikz

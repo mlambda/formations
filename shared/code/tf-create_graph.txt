@@ -1,1 +1,0 @@
-Tensor("a.b:0", shape=(), dtype=int32)

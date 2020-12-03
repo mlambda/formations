@@ -1,0 +1,17 @@
+default_titles:
+  keras: Keras
+  tf: TensorFlow 2
+flavors:
+  all:
+    - tf
+    - keras
+    - /questions
+  keras:
+    - keras: Principes \& API
+    - /questions
+    - /neural-networks/tp-nn: Travaux Pratiques
+  tf:
+    - tf: null
+    - /questions
+title: TensorFlow et Keras
+version: 3

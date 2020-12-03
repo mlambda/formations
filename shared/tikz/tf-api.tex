@@ -1,0 +1,27 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \node [output] (HL) at (0, 4.5) {APIs haut niveau : Keras, Sonnet, …};
+    
+    \node [hencoder] (PythonAPI) at (0, 3) {API Python : \texttt{tf.Module}, \texttt{tf.Variable}, \texttt{tf.GradientTape}, …};
+    
+    \node [hdecoder] (Core) at (0, 1.5) {Cœur de la librairie en C++ et CUDA};
+    
+    \node [input] (TPU) at (-5, 0) {TPU};
+    \node [input] (GPU) at (-2.5, 0) {GPU};
+    \node [input] (CPU) at (0, 0) {CPU};
+    \node [input] (Android) at (2.5, 0) {Android};
+    \node [input] (iOS) at (5, 0) {iOS};
+    
+    \foreach \device in {TPU,GPU,CPU,Android,iOS} {
+        \draw [densely dotted] (Core) -- (\device);
+    }
+    
+    \draw (Core) -- (PythonAPI);
+    
+    \draw (PythonAPI) -- (HL);
+  \end{tikzpicture}
+\end{document}

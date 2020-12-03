@@ -28,8 +28,8 @@
       flavor: intro
 
     - title: TensorFlow Keras
-      path: tf-keras-intro
-      flavor: intro
+      path: tf-keras
+      flavor: all
 
     - title: Réseaux Réccurents
       path: neural-networks

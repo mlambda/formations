@@ -5,30 +5,28 @@
       path: about
       flavor: orsys-3j
 
-    - title: TensorFlow et Deep Learning
-      path: tf-keras-intro
-      flavor: tf-pur
-
     - title: Réseaux de neurones
       path: neural-networks
       flavor: deep-intro
 
-    - path: big-questions
-      flavor: full
+    - path: tools
+      flavor: detailed
+    - questions
+
+    - title: TensorFlow 2
+      path: tf-keras
+      flavor: tf
 
     - title: Travaux Pratiques --- Réseau de neurones avec TensorFlow
       path: neural-networks
       flavor: tp-tf-pur
 
-    - path: reinforcement-learning
-      flavor: deepalpha
-
 - name: j2
   title: Jour 2 --- Traitement d'images et auto-encodeurs
   sections:
     - title: Keras
-      path: tf-keras-intro
-      flavor: keras-pur
+      path: tf-keras
+      flavor: keras
 
     - title: Réseaux de convolutions
       path: neural-networks

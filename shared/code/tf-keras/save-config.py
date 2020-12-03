@@ -1,7 +1,5 @@
-import json
-import pprint
-# Serialize a model to JSON format
+# Sérialisation d'un modèle vers JSON
 json_string = model.to_json()
-pprint.pprint(json.loads(json_string))
-# Load a model configuration
+
+# Chargement d'un modèle depuis JSON
 fresh_model = tf.keras.models.model_from_json(json_string)

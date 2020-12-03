@@ -1,16 +1,20 @@
-# Utiliser une fonction d'activation :
-layers.Dense(64, activation='sigmoid')
-# Ou:
-layers.Dense(64, activation=tf.keras.activations.sigmoid)
+# Utiliser une fonction d'activation
+tf.keras.layers.Dense(64, activation="sigmoid")
+# Ou
+tf.keras.layers.Dense(64, activation=tf.keras.activations.sigmoid)
 
-# L1 regularization des poids de la matrice :
-layers.Dense(64, kernel_regularizer=tf.keras.regularizers.l1(0.01))
+# Régularisation L1 des poids de la matrice
+tf.keras.layers.Dense(64,
+                      kernel_regularizer=tf.keras.regularizers.l1(0.01))
 
-# L2 regularization des biais:
-layers.Dense(64, bias_regularizer=tf.keras.regularizers.l2(0.01))
+# Régularisation L2 des biais
+tf.keras.layers.Dense(64,
+                      bias_regularizer=tf.keras.regularizers.l2(0.01))
 
-# Initialisation des poids avec une matrice orthogonale :
-layers.Dense(64, kernel_initializer='orthogonal')
+# Initialisation des poids avec une matrice orthogonale
+tf.keras.layers.Dense(64,
+                      kernel_initializer="orthogonal")
 
 # Initialisation des biais avec une constante :
-layers.Dense(64, bias_initializer=tf.keras.initializers.Constant(2.0))
+tf.keras.layers.Dense(
+    64, bias_initializer=tf.keras.initializers.Constant(2.0))

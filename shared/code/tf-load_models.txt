@@ -1,3 +1,0 @@
-INFO:tensorflow:Restoring parameters from graphs/mygraph
-y_pred( [5, 10, 50, 100] ) =
-	[[ 10.996005  21.000517 101.03661  201.08173 ]]

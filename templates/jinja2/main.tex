@@ -2,7 +2,13 @@
 \newcommand{\\VAR{k | camelcase}}{\VAR{v}}
 %% endfor
 
-\documentclass[\PresentationSize\BLOCK{if handout},handout\BLOCK{endif}]{formation}
+\documentclass[
+  xcolor={dvipsnames,hyperref,usenames,table},
+  hyperref={hidelinks},
+  \PresentationSize\BLOCK{if handout},handout\BLOCK{endif}
+  ]{beamer}
+
+\usepackage{formation}
 
 %% if print:
 \renewcommand{\bluelink}[2]{%

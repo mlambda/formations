@@ -29,16 +29,16 @@
       flavor: deep-intro
 
     - title: TensorFlow et Deep Learning
-      path: tf-keras-intro
-      flavor: tf-pur
+      path: tf-keras
+      flavor: tf
 
     - title: Réseaux de Neurones
       path: neural-networks
       flavor: tp-tf-pur
 
     - title: TensorFlow et Deep Learning
-      path: tf-keras-intro
-      flavor: keras-pur
+      path: tf-keras
+      flavor: keras
 
     - path: neural-networks
       flavor: tp-nn-keras

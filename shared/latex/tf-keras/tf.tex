@@ -1,0 +1,109 @@
+\begin{frame}{Introduction}
+  \imgth[0.7]{tensorflow_logo}
+\end{frame}
+
+\begin{frame}{Structure de l'API}
+  \centering
+  \imgtw{tf-api}
+\end{frame}
+
+\begin{frame}{Deux styles}
+  Mode graphe~: on définit un graphe de calcul qu'on exécute ensuite.
+
+  Mode «~eager~»: on définit des fonctions python qui opèrent directement sur des valeurs.
+\end{frame}
+
+\begin{frame}{TensorFlow 1 vs TensorFlow 2}
+  \centering
+  Principales différences
+
+  \begin{minipage}[l]{0.5\linewidth}
+    \centering
+    \textbf{TF1}
+    \begin{itemize}[<+->]
+      \item Graphes de calcul explicites par défaut
+      \item API de haut niveau Keras indépendante
+    \end{itemize}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+    \setcounter{beamerpauses}{1}
+    \centering
+    \textbf{TF2}
+    \begin{itemize}[<+->]
+      \item Graphes de calcul implicites par défaut
+      \item API de haut niveau Keras intégrée à TF
+    \end{itemize}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}{Tenseurs --- Objets au cœur de TensorFlow}
+  Tableaux multidimensionnels, utilisés pour~:
+
+  \begin{itemize}[<+->]
+    \item Poids des réseaux
+    \item Données
+  \end{itemize}
+
+  \onslide<+->{\texttt{tf.Tensor} $\approx$ \texttt{numpy.ndarray} dans l'univers TensorFlow.}
+\end{frame}
+
+\begin{frame}{Tenseurs --- Création}
+  \begin{itemize}[<+->]
+    \item Directement à partir de tableaux NumPy ou de listes
+    \item Échantillonnés aléatoirement
+    \item Appel à une fonction tensorflow avec un tableau NumPy
+    \item Pipeline \texttt{tf.data}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\texttt{tf.Variable}}
+  Surcouche mutable de \texttt{tf.Tensor} pour les poids des modèles.
+\end{frame}
+
+\begin{frame}{Graphe de calcul}
+  \begin{minipage}[l]{0.15\linewidth}
+      $\;$
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.35\linewidth}
+    \huge
+    \begin{center}
+      $\pi*r^2\;\;\;\rightarrow$
+    \end{center}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+    \imgth[0.9]{tensorflow}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}{Graphe de calcul}
+  Conversion du mode «~eager~» au mode graphe par \texttt{tf.function}. Permet :
+
+  \begin{itemize}[<+->]
+    \item L'optimisation du graphe des opérations
+    \item Le déploiement vers Android, iOS, TPU, GPU, …
+    \item De faire tourner le réseau sans interpréteur Python !
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Différenciation automatique}
+  Calcul automatique des gradients pour faciliter la rétropropagation des gradients pendant la descente de gradient.
+
+  \texttt{tf.GradientTape} enregistre les opérations effectuées sur une variable~: permet l'autodiff.
+\end{frame}
+
+\begin{frame}{Organisation du code}
+  \texttt{tf.Module} regroupe du code d'une même couche ou unité logique.
+
+  Un modèle = une combinaison de \texttt{tf.Module}s.
+
+  API principale~:
+
+  \begin{itemize}[<+->]
+    \item Accès aux variables du modèle par \texttt{model.variables}
+    \item Accès aux variables entraînables du modèle par \texttt{model.trainable\_variables}
+    \item Sauvegarde des poids par \texttt{tf.train.Checkpoint}
+    \item Chargement des poids par \texttt{tf.train.Checkpoint.restore}
+    \item Sauvegarde du modèle complet par \texttt{tf.saved\_model.save}
+    \item Chargement du modèle complet par \texttt{tf.saved\_model.load}
+  \end{itemize}
+\end{frame}
