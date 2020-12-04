@@ -7,11 +7,9 @@
 
     - path: tools
       flavor: init-python
-    - questions
 
     - path: machine-learning
       flavor: full
-    - questions
 
 - name: j2
   title: Jour 2 --- Algorithmes 1/2

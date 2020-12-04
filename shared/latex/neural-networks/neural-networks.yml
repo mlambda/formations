@@ -21,29 +21,6 @@ default_titles:
   tp-transformer: Travaux Pratiques --- Transformeurs
   transformer: Réseaux transformeurs
 flavors:
-  all:
-    - intro
-    - gradient-descent
-    - optimize
-    - deep-optimize
-    - regularisation
-    - tp-nn
-    - tp-nn-tf
-    - cnn-data
-    - cnn-model
-    - tp-cnn
-    - gan-intro
-    - gan-model
-    - rnn
-    - lstm
-    - rnn-variants
-    - rnn-keras: RNN dans Keras
-    - /questions
-    - tp-rnn
-    - tp-rnn-text
-    - attention-model
-    - transformer
-    - tp-transformer
   cnn:
     - cnn-data
     - cnn-model: Modèle
@@ -63,6 +40,7 @@ flavors:
     - cnn-data
     - cnn-model
     - rnn
+    - /questions
   deep-discover-demo:
     - intro
     - demo-nn
@@ -77,6 +55,7 @@ flavors:
     - gan-intro: Réseaux adverses
     - gan-model
     - demo-gan
+    - /questions
   deep-intro:
     - intro
     - gradient-descent
@@ -87,9 +66,6 @@ flavors:
   gan-intro:
     - gan-intro
     - gan-model
-    - /questions
-  intro:
-    - intro
     - /questions
   intro-cnn:
     - intro
@@ -121,12 +97,6 @@ flavors:
     - /questions
     - tp-rnn: Travaux Pratiques
     - tp-rnn-text: null
-  recurrent-intro:
-    - rnn
-    - lstm
-    - rnn-variants
-    - rnn-keras
-    - /questions
   recurrent-text:
     - intro
     - optimize

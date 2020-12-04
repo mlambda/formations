@@ -2,7 +2,7 @@ default_titles:
   keras: Keras
   tf: TensorFlow 2
 flavors:
-  all:
+  full:
     - tf
     - keras
     - /questions

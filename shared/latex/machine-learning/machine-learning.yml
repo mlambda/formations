@@ -13,20 +13,6 @@ default_titles:
   math-stats: Statistiques
   tp-data: Travaux Pratiques
 flavors:
-  all:
-    - intro
-    - math-objectifs
-    - math-algebre-lineaire
-    - math-analyse
-    - math-proba
-    - math-stats
-    - math-quizz
-    - math-conclusion
-    - data-preparation
-    - evaluation
-    - apprentissage
-    - bonnes-pratiques
-    - tp-data
   full:
     - intro
     - data-preparation
@@ -42,11 +28,6 @@ flavors:
     - apprentissage
     - bonnes-pratiques
     - /questions
-  intro-sans-questions:
-    - intro
-    - evaluation
-    - apprentissage
-    - bonnes-pratiques
   ml5j:
     - intro
     - math-objectifs
@@ -62,12 +43,5 @@ flavors:
     - /questions
     - /tp-help
     - tp-data
-  no-tp:
-    - intro
-    - data-preparation
-    - evaluation
-    - apprentissage
-    - bonnes-pratiques
-    - /questions
 title: Machine Learning
 version: 3

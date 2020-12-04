@@ -4,48 +4,43 @@ flavors:
     - formateur
     - description
     - ressources-orsys
-    - tour2table
     - horaires-2j-orsys
+    - tour2table
   orsys-3j:
     - formateur
     - description
     - ressources-orsys
-    - tour2table
     - horaires-3j-orsys
+    - tour2table
   orsys-4j:
     - formateur
     - description
     - ressources-orsys
-    - tour2table
     - horaires-4j-orsys
+    - tour2table
   orsys-5j:
     - formateur
     - description
     - ressources-orsys
-    - tour2table
     - horaires-5j-orsys
+    - tour2table
   eni-1j:
     - formateur
     - description
     - ressources-eni
-    - tour2table
     - horaires-1j-eni
+    - tour2table
   eni-5j:
     - formateur
     - description
     - ressources-eni
-    - tour2table
     - horaires-5j-eni
-  mlbdnn:
-    - formateur
-    - description-mlbdnn
-    - ressources-orsys
     - tour2table
   sparks-formation-3j:
     - formateur
     - description
     - ressources-eni
-    - tour2table
     - horaires-3j-orsys
+    - tour2table
 title: Votre formation
 version: 3

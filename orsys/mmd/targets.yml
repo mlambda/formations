@@ -29,7 +29,7 @@
 
     - title: TensorFlow Keras
       path: tf-keras
-      flavor: all
+      flavor: full
 
     - title: Réseaux Réccurents
       path: neural-networks

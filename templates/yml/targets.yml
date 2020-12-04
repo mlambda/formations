@@ -3,4 +3,3 @@
   sections:
     - path: machine-learning
       flavor: full
-    - questions

@@ -33,40 +33,6 @@ default_titles:
   tp-svm: "Travaux Pratiques : SVM (TODO)"
   tp-svm-text: "Travaux Pratiques : SVM"
 flavors:
-  all:
-    - proba-rappel
-    - naive-bayes
-    - regression-lineaire
-    - cost-error-function
-    - optimisation
-    - derivation-gradient
-    - regression-polynomiale
-    - nn-intro
-    - classification
-    - regression-logistique
-    - /questions
-    - tp-reg-lin-poly
-    - trees
-    - random-forest
-    - /questions
-    - demo-random-forest
-    - tp-random-forest
-    - tp-random-forest-text
-    - gradient-boosting
-    - /questions
-    - demo-gradient-boosting
-    - svm
-    - demo-svm
-    - tp-svm
-    - tp-svm-text
-  bayes:
-    - naive-bayes
-    - gaussian-mixture
-    - modeles-graphiques
-    - sequential-data
-    - sequential-models
-    - markov-model
-    - hmm
   standard:
     - proba-rappel
     - naive-bayes
@@ -96,6 +62,7 @@ flavors:
     - bayes-networks
     - markov-model
     - hmm
+    - /questions
   standard-nobayes:
     - regression-lineaire
     - cost-error-function

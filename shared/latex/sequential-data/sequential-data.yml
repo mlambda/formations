@@ -5,11 +5,6 @@ default_titles:
   sequential-models: Modèles Séquentiels
   statistical-approaches: Approches statistiques
 flavors:
-  all:
-    - sequential-data
-    - sequential-models
-    - markov-model
-    - hmm
   full:
     - sequential-data
     - sequential-models
@@ -27,9 +22,5 @@ flavors:
     - sequential-data
     - sequential-models
     - /questions
-  light:
-    - sequential-data
-    - sequential-models
-    - markov-model
 title: Données séquentielles
 version: 3

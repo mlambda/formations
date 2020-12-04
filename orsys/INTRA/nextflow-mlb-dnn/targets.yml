@@ -7,7 +7,6 @@
 
     - path: machine-learning
       flavor: ml5j
-    - questions
 
 - name: j2
   title: Jour 2 --- Apprentissage Supervisé

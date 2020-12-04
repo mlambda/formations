@@ -4,19 +4,16 @@ default_titles:
   sante: Santé
   transport: Transport
 flavors:
-  all:
-    - intro
-    - transport
-    - sante
-    - coding
   light:
     - intro
     - sante
     - coding
-  seminaire:
+    - /questions
+  full:
     - intro
     - transport
     - sante
     - coding
+    - /questions
 title: Les Tendances et les Nouveaux Secteurs
 version: 3

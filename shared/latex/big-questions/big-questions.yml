@@ -3,10 +3,6 @@ default_titles:
   generic: Problèmes généraux
   legal: Problèmes légaux
 flavors:
-  all:
-    - generic
-    - legal
-    - ethics
   full:
     - generic
     - legal

@@ -21,19 +21,7 @@ default_titles:
   tp-dim-reduce: "Travaux Pratiques : Réduction de dimension"
   unsupervised-metrics: Métriques de clustering
 flavors:
-  all:
-    - introduction
-    - dimensionality-reduction
-    - pca-lda
-    - demo-dim-reduce
-    - algorithme-em
-    - kmeans-gaussian
-    - demo-clustering
-    - anomaly-detection-light
-    - demo-anomaly-detect
-    - tp-dim-reduce
-    - tp-clustering
-  iao:
+  light:
     - introduction
     - dimensionality-reduction
     - pca-lda
@@ -42,6 +30,7 @@ flavors:
     - demo-clustering
     - anomaly-detection-light
     - demo-anomaly-detect
+    - /questions
     - tp-dim-reduce: Travaux Pratiques
     - tp-clustering: null
   bda:

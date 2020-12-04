@@ -7,25 +7,21 @@
 
     - path: tools
       flavor: init-python
-    - questions
 
     - path: machine-learning
       flavor: ml5j
-    - questions
 
 - name: j2
   title: Jour 2 --- Algorithmes supervisés
   sections:
     - path: supervised
       flavor: standard
-    - questions
 
 - name: j3
   title: Jour 3 --- Algorithmes non supervisés
   sections:
     - path: unsupervised
       flavor: bda
-    - questions
 
 - name: j4
   title: Jour 4 --- Ingénierie \& Traitement de texte
@@ -41,7 +37,5 @@
 
     - path: neural-networks
       flavor: deep-discover
-
-    - questions
 
     - contact

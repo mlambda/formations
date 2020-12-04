@@ -30,7 +30,9 @@
   sections:
     - path: engineering
       flavor: mlcraftmyass
+
     - path: big-questions
       flavor: full
+
     - path: recommander-system
       flavor: full

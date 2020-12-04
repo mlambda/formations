@@ -3,11 +3,7 @@ default_titles:
   deep: Deep Learning
   intro: Introduction
 flavors:
-  all:
-    - intro
-    - deep
-    - alphago
-  deepalpha:
+  full:
     - intro
     - deep
     - alphago

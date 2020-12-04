@@ -3,30 +3,25 @@
   sections:
     - path: about
       title: Big Data Analytics
-      flavor: bda
+      flavor: orsys-4j
+
     - path: tools
       flavor: init-python
-    - questions
+
     - path: machine-learning
       flavor: natixis
-    - questions
 
 - name: j2
   title: Jour 2 --- Apprentissage supervisé
   sections:
     - path: supervised
       flavor: standard
-    - questions
 
 - name: j3
   title: Jour 3 --- Apprentissage non supervisé
   sections:
     - path: unsupervised
       flavor: bda
-    - questions
-    - path: sequential-data
-      flavor: light
-    - questions
 
 - name: j4
   title: Jour 4 --- Réseaux de neurones \& séries temporelles

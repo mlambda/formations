@@ -5,10 +5,8 @@
       path: about
       flavor: eni-1j
 
-    - path: questions
-
     - path: intelligence-artificielle
-      flavor: intro
+      flavor: full
 
     - path: machine-learning
       flavor: intro
@@ -23,7 +21,7 @@
       flavor: intro
 
     - path: reinforcement-learning
-      flavor: deepalpha
+      flavor: full
 
     - path: neural-networks
       title: Des réseaux particuliers
@@ -36,7 +34,7 @@
       flavor: mlcraftmyass
 
     - path: actors
-      flavor: seminaire
+      flavor: full
 
     - path: sectors
-      flavor: seminaire
+      flavor: full

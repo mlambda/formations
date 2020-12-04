@@ -6,42 +6,33 @@
       flavor: orsys-2j
 
     - path: intelligence-artificielle
-      flavor: all
-    - questions-discussion
+      flavor: full
 
     - path: machine-learning
-      flavor: intro-sans-questions
-    - questions-discussion
+      flavor: intro
 
     - path: neural-networks
       flavor: deep-discover-demo
-    - questions-discussion
 
     - path: unsupervised
-      flavor: iao
-    - questions-discussion
+      flavor: light
 
     - path: reinforcement-learning
-      flavor: all
-    - questions-discussion
+      flavor: full
 
 - name: j2
   title: Jour 2 --- Applications et ingénierie du Machine Learning
   sections:
     - path: engineering
-      flavor: all
-    - questions-discussion
+      flavor: full
 
     - path: sectors
-      flavor: all
-    - questions-discussion
+      flavor: full
 
     - path: big-questions
-      flavor: all
-    - questions-discussion
+      flavor: full
 
     - path: tools
       flavor: detailed
-    - questions-discussion
 
     - contact

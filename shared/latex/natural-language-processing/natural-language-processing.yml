@@ -10,18 +10,6 @@ default_titles:
   tp-text-regex: Travaux pratiques expressions régulières
   vectors: Vecteurs textuels
 flavors:
-  all:
-    - ml-nlp
-    - usages-nlp
-    - pattern
-    - /tp-help
-    - tp-text-regex
-    - preprocessing
-    - vectors
-    - tp-text-features-engineering
-    - similarity-text
-    - recommandation-text
-    - tp-text-reco-system
   full:
     - ml-nlp
     - usages-nlp

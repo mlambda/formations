@@ -18,18 +18,6 @@ default_titles:
   spark: Apache Spark
   tp: Travaux Pratiques
 flavors:
-  all:
-    - python
-    - notebooks
-    - anaconda
-    - tp
-    - hadoop
-    - spark
-    - kaggle
-    - arXiv
-    - github
-    - cloud-computing
-    - demo-spark-tf-keras-cnn
   demo-spark:
     - demo-spark-tf-keras-cnn
   in-depth:
@@ -39,6 +27,7 @@ flavors:
     - arXiv
     - github
     - cloud-computing
+    - /questions
   init-python:
     - python
     - notebooks
@@ -53,5 +42,6 @@ flavors:
     - big-data
     - apis
     - information
+    - /questions
 title: Principaux outils
 version: 3

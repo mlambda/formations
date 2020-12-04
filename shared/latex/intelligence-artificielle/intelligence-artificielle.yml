@@ -2,11 +2,9 @@ default_titles:
   historique: Courte histoire de l'IA
   intro: Introduction
 flavors:
-  all:
+  full:
     - intro
     - historique
-  intro:
-    - intro
-    - historique
+    - /questions
 title: Intelligence Artificielle
 version: 3

@@ -7,14 +7,6 @@ default_titles:
   intro: Systèmes de Recommendation
   tp-recommander-system: Travaux Pratiques
 flavors:
-  all:
-    - intro
-    - filtrage-colaboratif
-    - filtrage-colaboratif-user-based
-    - filtrage-colaboratif-item-based
-    - filtrage-colaboratif-extend
-    - filtrage-colaboratif-conclusion
-    - tp-recommander-system
   full:
     - intro
     - filtrage-colaboratif

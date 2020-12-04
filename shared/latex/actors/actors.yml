@@ -1,17 +1,15 @@
 default_titles:
-  chine: Le cas particulier de la Chine
-  gafa: La recherche dans le monde
-  startup: Les startups dans le monde (et un peu en france)
+  chine: Cas particulier de la Chine
+  gafa: Recherche dans le monde
+  startup: Startups dans le monde (et un peu en france)
 flavors:
-  all:
-    - gafa
-    - startup
-    - chine
   gafa:
     - gafa
-  seminaire:
+    - /questions
+  full:
     - gafa
     - startup
     - chine
-title: Les Différents Acteurs du Domaine
+    - /questions
+title: Acteurs du domaine
 version: 3
