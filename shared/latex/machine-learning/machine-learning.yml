@@ -43,5 +43,29 @@ flavors:
     - /questions
     - /tp-help
     - tp-data
+  bda:
+    - intro
+    - math-objectifs
+    - math-algebre-lineaire
+    - math-analyse
+    - math-proba
+    - math-stats
+    - math-conclusion
+    - data-preparation
+    - evaluation
+    - /questions
+    - /tp-help
+    - tp-data
+  app:
+    - apprentissage
+    - bonnes-pratiques
+
+  no-tp:
+    - intro
+    - data-preparation
+    - evaluation
+    - apprentissage
+    - bonnes-pratiques
+    - /questions
 title: Machine Learning
 version: 3

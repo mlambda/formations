@@ -9,11 +9,14 @@
       flavor: init-python
 
     - path: machine-learning
-      flavor: ml5j
+      flavor: bda
 
 - name: j2
   title: Jour 2 --- Algorithmes supervisés
   sections:
+    - path: machine-learning
+      flavor: app
+    
     - path: supervised
       flavor: standard
 
@@ -26,14 +29,15 @@
 - name: j4
   title: Jour 4 --- Ingénierie \& Traitement de texte
   sections:
+    - path: natural-language-processing
+      flavor: intro-tp
+    
     - path: engineering
       flavor: mlcraftmyass
 
     - path: tools
       flavor: detailed
 
-    - path: natural-language-processing
-      flavor: intro-tp
 
     - path: neural-networks
       flavor: deep-discover

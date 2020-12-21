@@ -15,7 +15,6 @@ default_titles:
   markov-model: Modèles de Markov
   modeles-graphiques: Réseaux Bayésiens
   naive-bayes: Naive Bayes
-  nn-intro: Réseau de Neurones
   optimisation: Optimisation
   random-forest: Random Forest
   regression-lineaire: Regression Linéaire
@@ -41,8 +40,8 @@ flavors:
     - optimisation
     - derivation-gradient
     - regression-polynomiale
-    - nn-intro
     - classification
+    - /neural-networks/intro
     - regression-logistique
     - /questions
     - tp-reg-lin-poly
@@ -54,8 +53,9 @@ flavors:
     - demo-random-forest
     - tp-random-forest
   bayes:
-    - naive-bayes
     - proba-rappel
+    - naive-bayes
+    - regression-logistique
     - bayes-inference
     - gaussian-mixture
     - modeles-graphiques
@@ -69,9 +69,8 @@ flavors:
     - optimisation
     - derivation-gradient
     - regression-polynomiale
-    - nn-intro
     - classification
-    - regression-logistique
+    - /neural-networks/intro
     - /questions
     - tp-reg-lin-poly
     - svm
@@ -88,9 +87,8 @@ flavors:
     - cost-error-function
     - optimisation
     - derivation-gradient
-    - nn-intro
     - classification
-    - regression-logistique
+    - /neural-networks/intro
     - /questions
     - trees
     - random-forest

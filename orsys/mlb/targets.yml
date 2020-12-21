@@ -18,13 +18,16 @@
       flavor: standard-nobayes
 
     - path: unsupervised
-      flavor: dimreduce
+      flavor: mlb
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
   sections:
     - path: supervised
       flavor: bayes
+
+    - path: neural-networks
+      flavor: deep-intro
 
     - path: neural-networks
       flavor: cnn

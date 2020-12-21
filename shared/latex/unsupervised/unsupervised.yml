@@ -66,6 +66,12 @@ flavors:
     - demo-anomaly-detect
     - /questions
     - tp-dim-reduce
+  mlb:
+    - dimensionality-reduction
+    - pca-lda
+    - /questions
+    - demo-dim-reduce
+    - tp-dim-reduce
   full:
     - introduction
     - dimensionality-reduction

@@ -1,0 +1,22 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    
+    \node [output,circle,minimum width=2cm] (S) at (-2.1, 2) {Soleil};
+    \node [output,circle,minimum width=2cm] (P) at (2.1, 2 ) {Pluie};
+    \node [output,circle,minimum width=2cm] (N) at (0, -1.4) {Nuage};
+    \path[->,>=stealth] (S) edge [in=90,out=150,loop] node [below, pos=0.6] {0.6} (S);
+    \path[->,>=stealth] (P) edge [in=30,out=90,loop] node [below, pos=0.4] {0.3} (P);
+    \path[->,>=stealth] (N) edge [in=240,out=300,loop] node [above] {0.4} (N);
+    \path[->,>=stealth] (S) edge [bend left=25] node [midway,above] {0.1} (P);
+    \path[->,>=stealth] (S) edge [bend left=25] node [midway,left] {0.3} (N);
+    \path[->,>=stealth] (P.west) edge [bend left=25] node [midway,above] {0.2} (S.east);
+    \path[->,>=stealth] (N.west) edge [bend left=25] node [midway,left] {0.1} (S.south);
+    \path[->,>=stealth] (P.south) edge [bend left=25] node [midway,right] {0.5} (N.east);
+    \path[->,>=stealth] (N) edge [bend left=25] node [midway,right] {0.5} (P);
+    
+  \end{tikzpicture}
+\end{document}
