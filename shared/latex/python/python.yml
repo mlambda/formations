@@ -1,0 +1,8 @@
+default_titles:
+  intro: Introduction
+flavors:
+  intro:
+    - intro
+    - /questions
+title: Langage Python
+version: 3
