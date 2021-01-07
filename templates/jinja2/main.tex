@@ -46,13 +46,12 @@
 %% if section.title != None:
 \section{\VAR{section.title}}
 %% endif
-%% for path, subsection in section.inputs:
-%% if subsection != None:
-\subsection{\VAR{subsection}}
+%% for section_input in section.inputs:
+%% if section_input.title != None:
+\subsection{\VAR{section_input.title}}
 %% endif
-\input{\VAR{path}}
+\input{\VAR{section_input.path}}
 %% endfor
 %% endfor
 
 \end{document}
-
