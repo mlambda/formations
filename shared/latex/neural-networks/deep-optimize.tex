@@ -17,9 +17,20 @@
 \begin{frame}{Algorithme d'optimisation}
   Optimisateur plus rapide que SGD
   \begin{itemize}[<+(1)->]
-  \item Root Mean Square Propagation (RMSProp)
-  \item Adaptative Gradient Algorithm (AdaGrad)
-  \item Adaptative Moment Estimation (Adam)    $\Leftarrow$
-  \item ... AdaBound (2019) ?
- \end{itemize}
+    \item Adaptative Gradient Algorithm (AdaGrad)
+    \item Root Mean Square Propagation (RMSProp)
+    \item Adaptative Moment Estimation (Adam)    $\Leftarrow$
+    \item ... AdaBound (2019) ?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Adaptative Gradient Algorithm (AdaGrad)}
+  Calcul d'un learning rate adapté à chaque itération, pour chaque paramètre du modèle.
+\end{frame}
+
+\begin{frame}{Root Mean Square Propagation (RMSProp)}
+  Utilisation d'inertie dans le gradient appliqué :
+  $$
+    Grad_t = Grad_t + Grad_{t-1}
+  $$
 \end{frame}

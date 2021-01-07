@@ -38,6 +38,8 @@
     - path: tools
       flavor: detailed
 
+    - path: big-questions
+      flavor: full
 
     - path: neural-networks
       flavor: deep-discover

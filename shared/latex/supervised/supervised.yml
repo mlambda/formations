@@ -8,7 +8,6 @@ default_titles:
   demo-gradient-boosting: Démo Sklearn
   demo-random-forest: Démo Sklearn
   demo-svm: Démo Sklearn
-  derivation-gradient: Gradient de l'erreur
   gaussian-mixture: Mixture de gaussienne
   gradient-boosting: Gradient Boosting
   hmm: Modèles de Markov cachés
@@ -38,7 +37,7 @@ flavors:
     - regression-lineaire
     - cost-error-function
     - optimisation
-    - derivation-gradient
+    - /neural-networks/gradient-descent
     - regression-polynomiale
     - classification
     - /neural-networks/intro
@@ -67,7 +66,7 @@ flavors:
     - regression-lineaire
     - cost-error-function
     - optimisation
-    - derivation-gradient
+    - /neural-networks/gradient-descent
     - regression-polynomiale
     - classification
     - /neural-networks/intro
@@ -86,7 +85,7 @@ flavors:
     - regression-lineaire
     - cost-error-function
     - optimisation
-    - derivation-gradient
+    - /neural-networks/gradient-descent
     - classification
     - /neural-networks/intro
     - /questions
