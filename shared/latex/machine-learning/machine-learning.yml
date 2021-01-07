@@ -59,13 +59,5 @@ flavors:
   app:
     - apprentissage
     - bonnes-pratiques
-
-  no-tp:
-    - intro
-    - data-preparation
-    - evaluation
-    - apprentissage
-    - bonnes-pratiques
-    - /questions
 title: Machine Learning
 version: 3
