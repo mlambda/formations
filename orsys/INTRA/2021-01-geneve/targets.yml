@@ -1,0 +1,31 @@
+- name: j1
+  title: Jour 1 --- Réduction de dimensionnalité \& Deep Learning
+  sections:
+    - path: about
+      title: Machine Learning, Méthodes et Solutions
+      flavor: orsys-2j
+
+    - title: Réseaux de Neurones
+      path: neural-networks
+      flavor: deep-intro
+
+    - title: TensorFlow et Deep Learning
+      path: tf-keras
+      flavor: full
+
+    - title: Réseau de Neurones
+      path: neural-networks
+      flavor: tp-nn-keras
+
+    - title: Réseaux de Convolutions
+      path: neural-networks
+      flavor: cnn
+
+- name: j2
+  title: Jour 2 --- Ingénierie
+  sections:
+    - path: tools
+      flavor: in-depth
+
+    - path: engineering
+      flavor: mlcraftmyass
