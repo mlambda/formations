@@ -1,11 +1,19 @@
 default_titles:
-  engineering-practices: Bonnes pratiques
+  engineering-practices: Gestion d'un projet de Machine Learning
   data-engineering: Gestion des données
+  deploying: Déploiement
+  tp-deploying: Travaux Pratiques
 flavors:
   full:
     - engineering-practices
     - data-engineering
     - /questions
+  deploying:
+    - engineering-practices
+    - data-engineering
+    - deploying
+    - /questions
+    - tp-deploying
   mlcraftmyass:
     - engineering-practices
     - /questions

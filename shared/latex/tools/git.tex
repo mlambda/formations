@@ -1,0 +1,140 @@
+\begin{frame}{Introduction}
+  Buts de \texttt{git}~:
+  \begin{itemize}[<+->]
+    \item Collaborer sur une base de code
+    \item Contrôler le source code
+    \item Ne pas perdre d'information
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Principales caractéristiques}
+  \begin{itemize}[<+->]
+    \item Décentralisé
+    \item Branchage facile
+    \item Adapté même aux gros dépôts de code (rapide)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Principales caractéristiques --- Décentralisation}
+  \begin{itemize}[<+->]
+    \item Un utilisateur = une copie personnelle du dépôt
+    \item Opérations explicites de synchronisation entre les dépôts
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Principales caractéristiques --- Branchage facile}
+  \begin{itemize}[<+->]
+    \item Une idée ou une feature = une branche
+    \item Merge de branches très facilité par rapport aux outils précédents (svn)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Principales caractéristiques --- Performant}
+  \begin{itemize}[<+->]
+    \item Compression de tous les objets de l'historique
+    \item Gère sans problème des dépôts de plusieurs Go
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Récupérer un dépôt}
+  Utilisation de la commande \texttt{git clone}
+
+  \begin{exampleblock}{Exemple}
+    \texttt{git clone git@github.com:m09/langage-python.git}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Enregistrer les changements}
+  Utilisation de \texttt{git add} et \texttt{git commit}
+
+  \begin{exampleblock}{Exemple}
+    \texttt{git add README.md}\\
+    \texttt{git commit -m "Improve the README file with external links"}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Créer des branches}
+  Créer des branches est très facile avec git en utilisant \texttt{git branch} ou \texttt{git checkout -b}.
+
+  \begin{exampleblock}{Exemple}
+    \texttt{git checkout -b authentification}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Combiner deux branches}
+  Trois options principales~:
+
+  \begin{itemize}[<+->]
+    \item \texttt{git merge} pour combiner deux branches en conservant l'historique
+    \item \texttt{git rebase} pour combiner deux branches sans conserver l'historique
+    \item \texttt{git cherry-pick} pour récupérer des commits particuliers
+  \end{itemize}
+
+  \begin{exampleblock}{Exemple}
+    \texttt{git checkout main \&\& git merge feature}\\
+    \texttt{git rebase main}\\
+    \texttt{git cherry-pick 6ffb416}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Excellent tutoriel}
+  Recommandé pour approfondir le concept des branches (et pas que)~: cet excellent \bluelink{https://learngitbranching.js.org/}{tutoriel en ligne}.
+\end{frame}
+
+\begin{frame}{Récupérer des changements}
+  Pour mettre à jour le dépôt avec les changements introduits par des collègues, deux options~:
+
+  \begin{itemize}[<+->]
+    \item \texttt{git pull} récupère les changements et fait un merge
+    \item \texttt{git fetch} se contente de récupérer les changements
+  \end{itemize}
+
+  \begin{exampleblock}{Exemple}
+    \texttt{git pull}\\
+    \texttt{git fetch origin feature}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Publier des changements}
+  Pour mettre à jour un dépôt distant (remote) avec vos changements, utilisation de \texttt{git push}.
+
+  \begin{exampleblock}{Exemple}
+    \texttt{git push}\\
+    \texttt{git push origin feature}\\
+    \texttt{git push origin feature:remotefeaturebranch}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Annuler des changements}
+  Pour revenir en arrière avec git, deux options~:
+
+  \begin{itemize}[<+->]
+    \item \texttt{git revert} si les changements ont été publiés (\texttt{git push})
+    \item \texttt{git reset} sinon
+  \end{itemize}
+
+  \begin{exampleblock}{Exemple}
+    \texttt{git revert}\\
+    \texttt{git reset 67f0670}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Spécifier des révisions}
+  Pour parler d'un commit en particulier dans git, on peut utiliser~:
+
+  \begin{itemize}[<+->]
+    \item son hash (\texttt{2209291045201b303a087c0387317b17607fc66e})
+    \item son hash écourté (\texttt{2209291})
+    \item une référence (\texttt{main}, \texttt{HEAD})
+    \item des modificateurs (\texttt{main\^{}}, \texttt{main\~{}5\^{}2})
+  \end{itemize}
+
+  \begin{exampleblock}{Exemple}
+    \texttt{git cherry-pick feature\~{}5}\\
+    \texttt{git reset HEAD\^{}}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Aller plus loin}
+  Référence très didactique~: \url{https://git-scm.com/book/en/v2}
+\end{frame}

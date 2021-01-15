@@ -17,6 +17,7 @@ default_titles:
   python: Python
   spark: Apache Spark
   tp: Travaux Pratiques
+  tp-git: Travaux Pratiques
 flavors:
   demo-spark:
     - demo-spark-tf-keras-cnn
@@ -43,5 +44,9 @@ flavors:
     - apis
     - information
     - /questions
+  git:
+    - git
+    - /questions
+    - tp-git
 title: Principaux outils
 version: 3

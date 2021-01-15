@@ -30,6 +30,12 @@ flavors:
     - gan-intro
     - gan-model
     - /questions
+  cnn-no-gan:
+    - cnn-data
+    - cnn-model: Modèle
+    - cnn-keras
+    - /questions
+    - tp-cnn
   deep-discover:
     - intro
     - optimize
