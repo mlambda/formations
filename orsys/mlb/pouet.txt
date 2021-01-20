@@ -1,0 +1,126 @@
+- [ ] logo python
+- [ ] logo jupyter
+- [ ] logo anaconda
+- [ ] ml intro word map
+- [ ] inclusion ai ml dl
+- [ ] pipeline ml
+- [ ] variables
+- [ ] chess
+- [ ] darpa urban challenge
+- [ ] regression linéaire
+- [ ] regression linéaire hyperplan
+- [ ] lecun cnn
+- [ ] caltech ak47 billard
+- [ ] go fan hui
+- [ ] ml landscape
+- [ ] miltiple count plot titanic
+- [ ] courbe ROC 1
+- [ ] courbe ROC 2
+- [ ] confusion matrix
+- [ ] overfit polyfit
+- [ ] courbe underfit overfit train-valid error
+- [ ] cross-validation
+- [ ] overfit boules rouges/bleu
+- [ ] surface erreur parametres
+- [ ] limite regression linéaire
+- [ ] polyfit
+- [ ] grosses boules rouge/bleu SVM (toutes)
+- [ ] XOR classif
+- [ ] neuron bio
+- [ ] neuron pas bio
+- [ ] theoreme approx universelle
+- [ ] SVM
+- [ ] kernel svm
+- [ ] arbres de décision
+- [ ] arbres de regression
+- [ ] random forest
+- [ ] pca
+- [ ] pca poisson wiki
+- [ ] lda
+- [ ] gaussienne multimodale
+- [ ] modèles graphiques
+- [ ] réseau bayésien sprinkler
+- [ ] learning rate
+- [ ] taille du batch
+- [ ] disparition du gradient
+- [ ] gradient cliping
+- [ ] sur-sous apprentissage
+- [ ] courbe error training steps early stopping
+- [ ] mnist shift-scale-rotate
+- [ ] dropout
+- [ ] multi tache
+- [ ] GAN
+- [ ] mnist
+- [ ] street view
+- [ ] imagenet
+- [ ] ms-coco
+- [ ] visual-QA
+- [ ] open images
+- [ ] ms-celeb
+- [ ] convolution
+- [ ] max pool
+- [ ] photo gforce
+- [ ] cortex visuel
+- [ ] gan zebre
+- [ ] gan ms celeb
+- [ ] feed forward / reccurent nul a chier
+- [ ] rnn unfold
+- [ ] rnn vanish
+- [ ] rnn lstm gate vanish
+- [ ] lstm
+- [ ] gru
+- [ ] rnn bidirectionnal
+- [ ] spaghettis
+- [ ] top 20 nips
+- [ ] logo google baidu apple facebook
+- [ ] race to acquire startups
+- [ ] ibm watson
+- [ ] api watson
+- [ ] api azure
+- [ ] amazon ai
+- [ ] hadoop
+- [ ] apache spark
+- [ ] kaggle
+- [ ] arxiv
+- [ ] github
+- [ ] logo aws azure google cloud ovh ibm citrix
+- [ ] common sense baseline
+- [ ] amazon mechanical turk
+- [ ] sablier
+- [ ] cours action Nvidia
+- [ ] xkcd
+- [ ] yves saint laurent
+- [ ] robo medecin chinois
+- [ ] sundar pinshar
+- [ ] CNN du cul
+- [ ] CNIL
+- [ ] RGPD
+- [ ] minority report
+- [ ] iBordelCtrl
+- [ ] skynet chine
+- [ ] skynet fail
+- [ ] amazon recruit
+- [ ] pref sex photo
+- [ ] predictim baby sitter
+- [ ] ouigour 36 cat
+- [ ] exemple gpt2
+- [ ] deepfake zao
+- [ ] anchor news chine
+- [ ] med map startup france
+- [ ] med diagnostic auto
+- [ ] med oeil
+- [ ] image genes visage
+- [ ] genes bit 
+- [ ] med aides recherche documentaire
+- [ ] med Release diagram
+- [ ] foldit
+- [ ] image medoc graph
+- [ ] premiere appendicectomie smart tissue autonomous robot
+- [ ] prothese bionique
+- [ ] orcam lunette pour aveugle
+- [ ] robot tape au clavier
+- [ ] courbe reduction conso datacenter google
+- [ ] cyber securité
+- [ ] logo cylance deep instinct
+- [ ] logo windows deender vs badrabbit
+- [ ] image visual studio intellicode
