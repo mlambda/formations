@@ -113,35 +113,35 @@
 
 \newcommand{\figurecaption}[1]{{\scriptsize\textcolor{gray}{#1}}}
 
-\NewDocumentCommand\imgtw{ O{1} o m }{%
+\NewDocumentCommand\imgtw{ o m m }{%
   \begin{figure}%
     \centering%
-    \includegraphics[width=#1\textwidth]{#3}%
-    \IfNoValueF{#2}{\caption{\figurecaption{#2}}}%
+    \includegraphics[width=#3\textwidth]{#2}%
+    \IfNoValueF{#1}{\caption{\figurecaption{#1}}}%
   \end{figure}%
 }
 
-\NewDocumentCommand\imgth{ O{1} o m }{%
+\NewDocumentCommand\imgth{ o m m }{%
   \begin{figure}%
     \centering%
-    \includegraphics[height=#1\textheight]{#3}%
-    \IfNoValueF{#2}{\caption{\figurecaption{#2}}}%
+    \includegraphics[height=#3\textheight]{#2}%
+    \IfNoValueF{#1}{\caption{\figurecaption{#1}}}%
   \end{figure}%
 }
 
-\NewDocumentCommand\imgcmw{ O{1} o m }{%
+\NewDocumentCommand\imgcmw{ o m m }{%
   \begin{figure}%
     \centering%
-    \includegraphics[width=#1cm]{#3}%
-    \IfNoValueF{#2}{\caption{\figurecaption{#2}}}%
+    \includegraphics[width=#3cm]{#2}%
+    \IfNoValueF{#1}{\caption{\figurecaption{#1}}}%
   \end{figure}%
 }
 
-\NewDocumentCommand\imgcmh{ O{1} o m }{%
+\NewDocumentCommand\imgcmh{ o m m }{%
   \begin{figure}%
     \centering%
-    \includegraphics[height=#1cm]{#3}%
-    \IfNoValueF{#2}{\caption{\figurecaption{#2}}}%
+    \includegraphics[height=#3cm]{#2}%
+    \IfNoValueF{#1}{\caption{\figurecaption{#1}}}%
   \end{figure}%
 }
 
@@ -153,11 +153,11 @@
   \end{figure}%
 }
 
-\NewDocumentCommand\imgtwl{ O{1} o m }{%
+\NewDocumentCommand\imgtwl{ o m m }{%
   \begin{figure}%
     \centering%
-    \includegraphics[width=#1\textwidth,left]{#3}%
-    \IfNoValueF{#2}{\caption{\figurecaption{#2}}}%
+    \includegraphics[width=#3\textwidth,left]{#2}%
+    \IfNoValueF{#1}{\caption{\figurecaption{#1}}}%
   \end{figure}%
 }
 

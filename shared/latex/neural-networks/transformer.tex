@@ -1,82 +1,82 @@
 \fmg{\begin{frame}{Réseaux transformeurs}
-  \imgtw[0.9]{transformer-fun}
+  \imgtw{transformer-fun}{0.9}
 \end{frame}}
 
 \begin{frame}{Vue générale}
-  \imgtw[0.9]{transformer-network-1}
+  \imgtw{transformer-network-1}{0.9}
 \end{frame}
 
 \begin{frame}{Architecture encodeur-décodeur}
-  \imgtw[0.9]{transformer-network-2}
+  \imgtw{transformer-network-2}{0.9}
 \end{frame}
 
 \begin{frame}{Architecture encodeur-décodeur --- Rappel}
   Rappelez-vous, les encodeurs-décodeurs :
-  \imgtw[0.9]{rnn-seq2seq}
+  \imgtw{rnn-seq2seq}{0.9}
 \end{frame}
 
 \begin{frame}{Architecture profonde}
   Couches «~simples~» empilées~:
-  \imgtw[0.9]{transformer-network-3}
+  \imgtw{transformer-network-3}{0.9}
 \end{frame}
 
 \begin{frame}{Architecture globale de l'encodeur et du décodeur}
-  \imgtw[0.9]{transformer-network-5}
+  \imgtw{transformer-network-5}{0.9}
 \end{frame}
 
 \begin{frame}{Architecture globale de l'encodeur}
-  \imgtw[0.9]{transformer-network-4}
+  \imgtw{transformer-network-4}{0.9}
 \end{frame}
 
 \begin{frame}{Forme des données en jeu dans l'encodeur}
-  \imgtw[0.9]{transformer-network-7}
+  \imgtw{transformer-network-7}{0.9}
 \end{frame}
 
 \begin{frame}{Forme des données en jeu dans l'encodeur}
-  \imgtw[0.9]{transformer-network-8}
+  \imgtw{transformer-network-8}{0.9}
 \end{frame}
 
 \begin{frame}{Self-Attention --- Éléments utilisés}
-  \imgtw[0.9]{transformer-network-9}
+  \imgtw{transformer-network-9}{0.9}
 \end{frame}
 
 \begin{frame}{Self-Attention --- Combinaison des éléments}
-  \imgth[0.9]{transformer-network-13}
+  \imgth{transformer-network-13}{0.9}
 \end{frame}
 
 \begin{frame}{Self-Attention --- Obtention du résultat}
-  \imgtw[0.9]{transformer-network-14}
+  \imgtw{transformer-network-14}{0.9}
   Avec le softmax défini ainsi : $\sigma(z_j)=\frac {\mathrm{e}^{z_j}}{\sum _{k=1}^{K}\mathrm{e}^{z_{k}}}$
 \end{frame}
 
 \begin{frame}{Self-Attention --- Run sur 2 mots}
-  \imgtw[0.9]{transformer-network-10}
+  \imgtw{transformer-network-10}{0.9}
 \end{frame}
 
 \begin{frame}{Self-Attention --- Run sur 2 mots}
-  \imgtw[0.9]{transformer-network-11}
+  \imgtw{transformer-network-11}{0.9}
 \end{frame}
 
 \begin{frame}{Self-Attention --- Run sur 2 mots}
-  \imgth[0.9]{transformer-network-12}
+  \imgth{transformer-network-12}{0.9}
 \end{frame}
 
 \begin{frame}{Self-Attention --- Visualisation}
-  \imgth[0.9]{transformer-network-self-attention}
+  \imgth{transformer-network-self-attention}{0.9}
 \end{frame}
 
 \begin{frame}{Attention multi-têtes --- Têtes d'attention}
-  \imgtw[0.9]{transformer-network-15}
+  \imgtw{transformer-network-15}{0.9}
 \end{frame}
 
 \begin{frame}{Attention multi-têtes --- Combinaison}
-  \imgtw[0.9]{transformer-network-16}
+  \imgtw{transformer-network-16}{0.9}
 \end{frame}
 
 \begin{frame}{Encodeur --- Résumé}
   Un modèle sans récurrence, uniquement des sommes pondérées.
 
-  \imgtw[0.9]{transformer-network-17}
+  \imgtw{transformer-network-17}{0.9}
 \end{frame}
 
 \begin{frame}{Encodeur --- Gestion de la position}
@@ -86,7 +86,7 @@
 \end{frame}
 
 \begin{frame}{Encodeur --- Encodage positionnel --- Fonction hardcodée}
-  \imgtw[0.9]{transformer-network-18}
+  \imgtw{transformer-network-18}{0.9}
   $\text{PE}_{\text{pos}, 2i} = \sin{(\text{pos} / 10000^{2i / d_{\text{model}}})}$ \\
   $\text{PE}_{\text{pos}, 2i + 1}= \cos{(\text{pos} / 10000^{2i / d_{\text{model}}})}$
 \end{frame}
@@ -96,63 +96,63 @@
 \end{frame}
 
 \begin{frame}{Encodeur --- Encodage positionnel --- Exemple}
-  \imgtw[0.9]{transformer-network-19}
+  \imgtw{transformer-network-19}{0.9}
 \end{frame}
 
 \begin{frame}{Encodeur --- Encodage positionnel --- Visualisation}
-  \imgtw[0.9]{positional-encoding}
+  \imgtw{positional-encoding}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-init-0}
+  \imgtw{transformer-decoding-init-0}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-init-157}
+  \imgtw{transformer-decoding-init-157}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-0}
+  \imgtw{transformer-decoding-0}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-14}
+  \imgtw{transformer-decoding-14}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-38}
+  \imgtw{transformer-decoding-38}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-91}
+  \imgtw{transformer-decoding-91}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-112}
+  \imgtw{transformer-decoding-112}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-137}
+  \imgtw{transformer-decoding-137}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-188}
+  \imgtw{transformer-decoding-188}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-207}
+  \imgtw{transformer-decoding-207}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-234}
+  \imgtw{transformer-decoding-234}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-306}
+  \imgtw{transformer-decoding-306}{0.9}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \imgtw[0.9]{transformer-decoding-333}
+  \imgtw{transformer-decoding-333}{0.9}
 \end{frame}
 
 \begin{frame}{Transformer Network}
