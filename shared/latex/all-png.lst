@@ -1,8 +1,4 @@
 acquisition-gafa
-activations/approximation
-activations/relu
-activations/sigmoid
-activations/tanh
 adn-big-data
 adn-data
 airport-lie-detection
@@ -87,8 +83,6 @@ learning-rate-big-small
 lstm-schema
 lunettes-pour-aveugle
 Machine-Learning-Cybersécurité
-markov/hmm
-markov/simple
 minorit-report
 ml-craftmanship
 ml-effort-vs-value
@@ -100,10 +94,6 @@ ms-azure2
 ms-celeb
 ms-coco
 multi-task-v2
-neural-networks/deep-ff
-neural-networks/deep-ff-notext
-neural-networks/one-hidden-layer-ff
-neural-networks/shallow-ff
 neuron-model
 nn-rnn-comparaison
 nvidia-stock-history
@@ -139,10 +129,6 @@ regression-tree
 residuals-1
 residuals-2
 rgpd
-rnns/alloutputs
-rnns/lastoutput
-rnns/seq2seq
-rnn-unfold
 robot-chirurgien
 robotdoc
 roc
