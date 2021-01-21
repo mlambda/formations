@@ -9,11 +9,11 @@
 \end{frame}
 
 \fmg{\begin{frame}{Différence avec un réseau feedforward}
-  \imgtw{nn-rnn-comparaison}{0.7}
+  \V{["nn-rnn-comparaison", "tw", 0.7] | image}
 \end{frame}}
 
 \begin{frame}{Modèle}
-  \imgtw{rnn-unfold}{0.7}
+  \V{["rnn-unfold", "tw", 0.7] | image}
   $h_{t}=\sigma_{h}(Ux_{t}+Vh_{t-1}+b_{h})$ \\
   $o_{t}=\sigma_{o}(Wh_{t}+b_{o})$ \\
   \begin{itemize}
@@ -30,18 +30,18 @@
 
   \begin{figure}
     \centering
-    \imgth{rnns/lastoutput}{0.7}
+    \V{["rnns/lastoutput", "th", 0.7] | image}
   \end{figure}
 \end{frame}
 
 \begin{frame}{Prédiction d'autants de sorties qu'il y a d'entrées}
-  \imgtw{rnns/alloutputs}{0.5}
+  \V{["rnns/alloutputs", "tw", 0.5] | image}
 \end{frame}
 
 \begin{frame}{Prédiction d'un nombre arbitraire de sorties}
-  \imgtw{rnns/seq2seq}{1}
+  \V{["rnns/seq2seq", "tw", 1] | image}
 \end{frame}
 
 \begin{frame}{Problème du gradient qui disparaît (vanishing gradient)}
-  \imgtw{vanishing-gradient-rnn}{1}
+  \V{["vanishing-gradient-rnn", "tw", 1] | image}
 \end{frame}
