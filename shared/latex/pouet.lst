@@ -1,67 +1,153 @@
-actors/gafa.tex
-big-questions/ethics.tex
-big-questions/generic.tex
-big-questions/legal.tex
-engineering/engineering-practices.tex
-machine-learning/apprentissage.tex
-machine-learning/bonnes-pratiques.tex
-machine-learning/data-preparation.tex
-machine-learning/evaluation.tex
-machine-learning/intro.tex
-machine-learning/tp-data.tex
-neural-networks/cnn-data.tex
-neural-networks/cnn-keras.tex
-neural-networks/cnn-model.tex
-neural-networks/deep-optimize.tex
-neural-networks/gan-intro.tex
-neural-networks/gan-model.tex
-neural-networks/gradient-descent.tex
-neural-networks/intro.tex
-neural-networks/lstm.tex
-neural-networks/optimize.tex
-neural-networks/regularisation.tex
-neural-networks/rnn-keras.tex
-neural-networks/rnn.tex
-neural-networks/rnn-variants.tex
-neural-networks/tp-cnn.tex
-neural-networks/tp-rnn.tex
-neural-networks/tp-rnn-text.tex
-sectors/coding.tex
-sectors/intro.tex
-sectors/sante.tex
-supervised/bayes-inference.tex
-supervised/bayes-networks.tex
-supervised/classification.tex
-supervised/cost-error-function.tex
-supervised/demo-random-forest.tex
-supervised/demo-svm.tex
-supervised/gaussian-mixture.tex
-supervised/hmm.tex
-supervised/markov-model.tex
-supervised/modeles-graphiques.tex
-supervised/naive-bayes.tex
-supervised/optimisation.tex
-supervised/proba-rappel.tex
-supervised/random-forest.tex
-supervised/regression-lineaire.tex
-supervised/regression-logistique.tex
-supervised/regression-polynomiale.tex
-supervised/svm.tex
-supervised/tp-random-forest.tex
-supervised/tp-reg-lin-poly.tex
-supervised/trees.tex
-tools/anaconda.tex
-tools/arXiv.tex
-tools/cloud-computing.tex
-tools/demo-spark-tf-keras-cnn.tex
-tools/github.tex
-tools/hadoop.tex
-tools/kaggle.tex
-tools/notebooks.tex
-tools/python.tex
-tools/spark.tex
-tools/tp.tex
-unsupervised/demo-dim-reduce.tex
-unsupervised/dimensionality-reduction.tex
-unsupervised/pca-lda.tex
-unsupervised/tp-dim-reduce.tex
+Remplacer l'image par un texte (dans une bulle?) devrait suffire. 
+    - uniquement le champ nom de rempli, texte court
+    - les deux champs, texte long (ou un morceau d'ontologie simplifié avec tikz si on veut vraiment faire des illustrations...)
+==> DELETE <==
+- ["IMAGENET", "", "", "DELETE", "imagenet"]
+- ["IBM WATSON", "(date) 2010, (gagne) Jeopardy", "", "DELETE", "jeopardy-watson"]
+- ["Présentateur JT", "(n'est pas) humain", "", "DELETE", "jt-chine"]
+- ["Sundar Pichai", "(est) CEO Google, (répond à la question) "Quand je demande des images d'abruti à mon téléphone, pourquoi est-ce que j'obtiens des images de Donald Trump ?", "", "DELETE", "google-ceo-congress"]
+- ["AMAZON", "(favorise) l'embauche des hommes", "", "DELETE", "amazon-ai-favor-men"]
+- ["AMAZON MECHANICAL TURK", "", "", "DELETE", "amazon-mechanical-turc"]
+- ["ANACONDA", "", "", "DELETE", "anaconda_logo"]
+- ["AWS", "", "", "DELETE", "aws-logo"]
+- ["BAD RABBIT", "", "", "DELETE", "bad-rabbit"]
+- ["La chine", "(traque) ses musulmans", "", "DELETE", "chine-musulmans-traque"]
+- ["CNIL", "", "", "DELETE", "cnil-logo"]
+- ["CYLANCE", "(est) antivirus, (est) Deep Learning", "DELETE", "cylance"]
+- ["Alexandre Robicquet", "(est) chercheur en intelligence artificielle, (est) l'égérie d'un parfum d'Yves Saint Laurent.", "", "DELETE", "data-scientist-star"]
+- ["DEEPINSTINCT", "(est) antivirus, (est) Deep Learning", "", "DELETE", "deepinstinct-2"]
+- ["Lunettes", "(pour aider) aveugle", "", "DELETE", "lunettes-pour-aveugle"]
+- ["Minority Report", "", "", "DELETE", "minorit-report"]
+- ["OVH", "", "", "DELETE", "ovh-logo"]
+- ["PYTHON", "", "", "DELETE", "python_logo"]
+- ["RGPD", "", "", "DELETE", "rgpd"]
+- ["BAIDU", "", "", "DELETE", "Baidu"]
+- ["Deep Learning", "(besoin) GPU", "", "DELETE", "gpu-fun"]
+
+==> OK <==
+- [""MS-Celeb-1M: A Dataset and Benchmark for Large-Scale Face Recognition". (2016)", "Y, et al.", "ArXiv", "", "ms-celeb"]
+- ["Microsoft COCO: Common Objects in Context", "TY Lin et al.", "ArXiv", "ms-coco-2", "ms-coco"]
+- ["Probabilistic topic models", "Blei, D. M. (2012)", "ArXiv", "", "big-data-documents"]
+- ["Neuron and myelinated axon, with signal flow", "Prof. Loc Vu-Quoc", "CC-BY-SA-4.0", "biological-neuron-arrow", "biological-neuron"]
+- [" The Caltech 256", "Griffin, G. Holub, AD. Perona, P.", "", "", "caltech256"]
+- ["typical CNN architecture", "Aphex34", "CC-BY-SA-4.0", "", "cnn-schema"]
+- ["Unpaired Image-to-Image Translationusing Cycle-Consistent Adversarial Networks", "un-Yan Zhu∗Taesung et al., UC Berkeley", "ArXiv", "", "cyclegan"]
+- ["Logo DARPA Launch Challenge", "DARPA", "Domaine public", "darpa-launch-challenge", "darpa-urban-challenge"]
+- ["https://deepmind.com/blog/article/deepmind-ai-reduces-google-data-centre-cooling-bill-40", "Google", "", "", "deepmind-energy-consumption"]
+- ["Screenshot du jeu Foldit", "Animation Research Labs", "CC-BY-SA-3.0-DE", "foldit_screenshot", "foldit"]
+- ["Conditional generative adversarial nets for convolutional face generation", "Jon Gauthier", "foldl.me", "gan-faux-visages-2", "gan-faux-visages"]
+- ["Unpaired Image-to-Image Translationusing Cycle-Consistent Adversarial Networks", "Jun-Yan Zhu et al.", "ArXiv", "", "gan-horse-zebra"]
+- ["Unpaired Image-to-Image Translationusing Cycle-Consistent Adversarial Networks", "Jun-Yan Zhu et al.", "ArXiv", "", "gan-schema"]
+- ["Unpaired Image-to-Image Translationusing Cycle-Consistent Adversarial Networks", "Jun-Yan Zhu et al.", "ArXiv", "", "gan-zebra-horse"]
+- ["Deep neural networks are more accurate than humans at detecting sexual orientation from facial images", "", "psyarxiv.com", "Y. Wang, M. Kosinski", "gay-or-not"]
+- ["GOOGLE Cloud", "", "", "Google", "gcloud-logo"]
+- ["THE MNIST DATABASE", "LeCun, Yann", "yann.lecun.com", "", "mnist"]
+- ["Annotated images from the Open Images dataset.", "Left: FAMILY MAKING A SNOWMAN by mwvchamber. Right: STANZA STUDENTI.S.S. ANNUNZIATA by ersupalermo", "CC-BY-2.0", "", "openimage"]
+- ["Principle Component Analysis on an image of a fish.", "https://fr.wikipedia.org/wiki/Utilisateur:Lehalle", "CC-BY-SA-2.5", "", "pca-fish"]
+- ["A scatter plot of samples that are distributed according a multivariate (bivariate) Gaussian distribution centered at (1,3) with a standard deviation of 3 in the (0.866, 0.5) direction and of 1 in the orthogonal direction. The directions represent the Principal Components (PC) associated with the distribution.", "https://commons.wikimedia.org/wiki/User:Nicoguaro", "CC BY 4.0", "", "pca-nuage"]
+- ["Precision and recall", "https://commons.wikimedia.org/wiki/User:Walber", "CC-BY-SA-4.0", "", "precisionrecall"]
+- ["Random forest model", "Gustavo Machado et al., North Carolina State University", "CC-BY-SA-4.0", "", "random-forest-full"]
+- ["The Street View House Numbers (SVHN) Dataset", "Stanford", "http://ufldl.stanford.edu", "", "streetviewdataset"]
+- ["Le dataset VQA", "visualqa.org", "CC-BY-SA-4.0", "", "visual-qa"]
+- ["", "", "", "TEX", "acquisition-gafa"]
+
+CHERCHER RESSOURCE LIBRE (ou autre solution)
+- ["", "", "pixabay license", "", "Machine-Learning-Cybersécurité"]
+- ["IKTOS.ai", "", "", "DELETE", "iktos-drug-design"]
+- ["", "", "pixabay license", "informatique-ai", "it-ai"]
+- ["", "", "pixabay license", "chess-pixabay", "echec"]
+- ["", "", "", "spaghetti-pixabay", "spaghetti"]
+- ["", "", "https://iconmonstr.com/license/", "sablier", "sablier-windows"]
+- ["Les aires visuelles V1, V2 et V3 situées sur la scissure calcarine, schéma inspiré de Wichmann et al Anatomy of the visual system, Eur Jour Radiol 49, 2004", "https://commons.wikimedia.org/wiki/User:Pancrat", "GNU Free Documentation License", "visual-cortex-wiki", "visual-cortex"]
+- ["", "", "", "TODO", "gradient"]
+- ["", "", "", "TODO", "gradient-clipping"]
+- ["", "", "", "TODO", "robot-chirurgien"]
+- ["", "", "", "TODO", "robotdoc"]
+- ["", "", "", "TODO", "vs-intellicode-2"]
+- ["", "", "", "TODO", "watson-personality-insight"]
+- ["", "", "", "TODO", "xkcd-easy-impossible"]
+- ["", "", "", "TODO", "zao-deepfake"]
+- ["", "", "", "TODO", "oeil-coupe"]
+- ["", "", "", "TODO", "bras-bioniques"]
+- ["", "", "", "TODO", "adn-big-data"]
+- ["", "", "", "TODO", "adn-data"]
+- ["", "", "", "TODO", "airport-lie-detection"]
+- ["", "", "", "TODO", "alphazero"]
+- ["", "", "", "TODO", "amazon-ai"]
+- ["", "", "", "TODO", "baby-sitter-reliable"]
+- ["", "", "", "TODO", "chine-orwell"]
+- ["", "", "", "TODO", "chine-reco-face-fail"]
+- ["", "", "", "TODO", "chinese-street-surveillance"]
+- ["", "", "", "TODO", "data-science"]
+- ["", "", "", "TODO", "esante-landscape"]
+- ["", "", "", "TODO", "esante-solutions"]
+
+TABLES
+- ["", "", "table latex?", "TODO", "ibm-watson-struct"]
+- ["", "", "table latex?", "TODO", "ms-azure"]
+- ["", "", "table latex?", "TODO", "ms-azure2"]
+
+MATPLOTLIB/TP
+- ["", "", "notebook", "TODO", "barplot"]
+- ["", "", "notebook", "TODO", "batch-size-effect"]
+- ["", "", "notebook", "TODO", "confusion-matrix"]
+- ["", "", "notebook", "TODO", "convolution"]
+- ["", "", "notebook", "TODO", "bidirectional-rnn"]
+- ["", "", "notebook", "TODO", "corrmat"]
+- ["", "", "notebook", "TODO", "countplot"]
+- ["", "", "notebook", "TODO", "data-augmentation"]
+- ["", "", "notebook", "TODO", "distplot"]
+- ["", "", "notebook", "TODO", "early-stopping"]
+- ["", "", "notebook", "TODO", "fit"]
+- ["", "", "notebook", "TODO", "gaussian-mixture-univariate"]
+- ["", "", "notebook", "TODO", "nvidia-stock-history"]
+- ["", "", "notebook", "TODO", "openai-gpt2-example"]
+- ["", "", "notebook", "TODO", "overfitting"]
+- ["", "", "notebook", "TODO", "over-underfitting"]
+- ["", "", "notebook", "TODO", "pairplot"]
+- ["", "", "notebook", "TODO", "pooling"]
+- ["", "", "notebook", "TODO", "qqplot"]
+- ["", "", "notebook", "TODO", "regression-hyperplan"]
+- ["", "", "notebook", "TODO", "regression-line-1"]
+- ["", "", "notebook", "TODO", "regression-polynomiale-exemple"]
+- ["", "", "notebook", "TODO", "regression-tree"]
+- ["", "", "notebook", "TODO", "residuals-1"]
+- ["", "", "notebook", "TODO", "residuals-2"]
+- ["", "", "notebook", "TODO", "roc"]
+- ["", "", "notebook", "TODO", "roc-space"]
+- ["", "", "notebook", "TODO", "scatter"]
+- ["", "", "notebook", "TODO", "separable-problem-linear"]
+- ["", "", "notebook", "TODO", "separable-problem-linear-solution"]
+- ["", "", "notebook", "TODO", "separable-problem-linear-solution-bad"]
+- ["", "", "notebook", "TODO", "separable-problem-linear-svm"]
+- ["", "", "notebook", "TODO", "separable-problem-nonlinear"]
+- ["", "", "notebook", "TODO", "separable-problem-nonlinear-kernelsvm"]
+- ["", "", "notebook", "TODO", "separable-problem-nonlinear-solution"]
+- ["", "", "notebook", "TODO", "svm-schema"]
+- ["", "", "notebook", "TODO", "universal-approximation"]
+- ["", "", "notebook", "TODO", "violinplot"]
+- ["", "", "notebook", "TODO", "xor"]
+- ["", "", "notebook", "TODO", "lda"]
+- ["", "", "notebook", "TODO", "learning-curve"]
+- ["", "", "notebook", "TODO", "learning-rate-big-small"]
+- ["", "", "notebook", "TODO", "ml-effort-vs-value"]
+
+TIKZ
+- ["", "", "tikz", "TODO", "vanishing-gradient3"]
+- ["", "", "tikz", "TODO", "vanishing-gradient-lstm"]
+- ["", "", "tikz", "TODO", "vanishing-gradient-rnn"]
+- ["", "", "tikz", "TODO", "variables"]
+- ["", "", "tikz", "TODO", "neuron-model"]
+- ["", "", "tikz", "TODO", "nn-rnn-comparaison"]
+- ["", "", "tikz", "TODO", "ia-ml-deep"]
+- ["", "", "tikz", "TODO", "bayesian-net"]
+- ["", "", "tikz", "TODO", "decision-tree-2"]
+- ["", "", "tikz", "TODO", "deep-auto-encoder"]
+- ["", "", "tikz", "TODO", "dropout-2"]
+- ["", "", "tikz", "TODO", "graph-oriented"]
+- ["", "", "tikz", "TODO", "gru"]
+- ["", "", "tikz", "TODO", "multi-task-v2"]
+- ["", "", "tikz", "TODO", "lstm-schema"]
+- ["", "", "tikz", "TODO", "ml-craftmanship"]
+- ["", "", "tikz", "TODO", "ml-illustration"]
+- ["", "", "tikz", "TODO", "molecule-release"]
