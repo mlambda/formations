@@ -81,7 +81,7 @@ python-versions = ">=3.6, <3.7"
 
 [[package]]
 name = "deckz"
-version = "10.1.0"
+version = "10.2.0"
 description = "Tool to handle multiple beamer decks."
 category = "main"
 optional = false
@@ -509,7 +509,7 @@ watchmedo = ["PyYAML (>=3.10)", "argh (>=0.24.1)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "ce9c4ab422012d90f2999793ed0b26aa5a4139ab5e73078d6c9ed99f5bbedb23"
+content-hash = "9071e1759dbb71b85df4781e0c1a50d3819297f0a161b41a4fec0d20536480e5"
 
 [metadata.files]
 appdirs = [
@@ -549,8 +549,8 @@ dataclasses = [
     {file = "dataclasses-0.8.tar.gz", hash = "sha256:8479067f342acf957dc82ec415d355ab5edb7e7646b90dc6e2fd1d96ad084c97"},
 ]
 deckz = [
-    {file = "deckz-10.1.0-py3-none-any.whl", hash = "sha256:7fef62f2ab592786e28322f67955799c41e9c01c1217d03e7f58cbccd09e330e"},
-    {file = "deckz-10.1.0.tar.gz", hash = "sha256:ffdd78fef071a5ddb64cb2d43539293a6b5721b0f794d375eb62e812336dbf47"},
+    {file = "deckz-10.2.0-py3-none-any.whl", hash = "sha256:960bdd27d6549d902657ca08277e400114e3eff6a530c55fff8a0909bf690b8a"},
+    {file = "deckz-10.2.0.tar.gz", hash = "sha256:994223a74b981124db2bbef41703ce033f43069e9e4665a64403c0347854eeef"},
 ]
 dulwich = [
     {file = "dulwich-0.20.15-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:e0c5c863eaed3825473646ae9ec7d5847dacbb06bb11abcfadb488ac93a15b4c"},
