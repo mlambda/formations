@@ -1,36 +1,40 @@
 print(
-    """\\documentclass[beamer,crop,tikz]{standalone}
-
-\\usepackage{formation}
-
-\\begin{document}
-  \\begin{tikzpicture}[transparent/.style={text opacity=1, text=black}]"""
+    r"""\documentclass[beamer,crop,tikz]{standalone}
+\usepackage{formation}
+\begin{document}
+  \begin{tikzpicture}[transparent/.style={text opacity=1, text=black}]"""
 )
-words = ["<GO>", "Que", "fais", "tu", "<STOP>"]
-for i, (previous_word, word) in enumerate(zip(words, words[1:])):
-    opacity = i / (len(words) - 2)
+
+words = ["J", "ai", "vraiment", "adoré", "ce", "film", "il", "est", "super"]
+
+for i, word in enumerate(words):
+    i_o = i / (len(words) + 1)
+    h_o = (i + 1) / (len(words) + 1)
     print(
         f"""
-    \\node[hencoder, transparent, fill opacity={opacity}] (H{i}) at ({i * 1.5}, 1) {{$h_{i}$}};
-    \\node[output, transparent, fill opacity={opacity}] (O{i}) at ({i * 1.5}, 2) {{$y_{i}$}};
-    \\node[input, transparent, fill opacity={opacity}] (WE{i}) at ({i * 1.5}, 0) {{$x_{i}$}};
-    \\node[anchor=mid] (TI{i}) at ({i * 1.5}, -1) {{{previous_word}}};
-    \\node[anchor=mid] (TO{i}) at ({i * 1.5}, 3) {{{word}}};
+    \\node[hencoder, transparent, fill opacity={h_o}] (H{i}) at ({i * 1.5}, 1) {{$h_{i}$}};
+    \\node[input, transparent, fill opacity={i_o}] (WE{i}) at ({i * 1.5}, 0) {{$x_{i}$}};
+    \\node[anchor=mid] (TI{i}) at ({i * 1.5}, -1) {{{word}}};
     \\draw[->] (WE{i}) -- (H{i});
-    \\draw[->] (H{i}) -- (O{i});
     \\draw[densely dotted] (TI{i}) -- (WE{i});
-    \\draw[densely dotted] (O{i}) -- (TO{i});
-    \\draw[color=gray] ({i * 1.5 - 0.5}, -1.4)
+    \\draw[color=gray] ({i* 1.5 - 0.5}, -1.4)
       -- ({i * 1.5 - 0.5}, -1.5)
       -- ({i* 1.5 + 0.5}, -1.5) node [below, midway] {{$t_{i}$}}
-      -- ({i* 1.5 + 0.5}, -1.4);
-"""
+      -- ({i* 1.5 + 0.5}, -1.4);"""
     )
-for i in range(len(words) - 2):
-    print(f"    \\draw[->] (H{i}) -- (H{i + 1});")
+for i in range(len(words) - 1):
+    print(
+        f"""
+    \\draw[->] (H{i}) -- (H{i + 1});"""
+    )
+
 print(
-    """
-  \end{tikzpicture}
-\end{document}
+    f"""
+    \\node[output] (O) at ({(len(words) - 1) * 1.5}, 2) {{$y$}};
+    \\node[anchor=mid] (TO) at ({(len(words) - 1) * 1.5}, 3) {{Positif}};
+    \\draw[->] (H{len(words) - 1}) -- (O);
+    \\draw[densely dotted] (O) -- (TO);
+  \\end{{tikzpicture}}
+\\end{{document}}
 """
 )
