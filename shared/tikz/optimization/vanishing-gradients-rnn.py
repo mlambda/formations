@@ -8,12 +8,14 @@ print(
 )
 words = ["<GO>", "Que", "fais", "tu", "<STOP>"]
 for i, (previous_word, word) in enumerate(zip(words, words[1:])):
-    opacity = i / (len(words) - 2)
+    i_opacity = 1 if not i else 0
+    h_opacity = 0.5 - i * 0.4 / (len(words) - 2)
+    o_opacity = 0.45 - i * 0.4 / (len(words) - 2)
     print(
         f"""
-    \\node[hencoder, transparent, fill opacity={opacity}] (H{i}) at ({i * 1.5}, 1) {{$h_{i}$}};
-    \\node[output, transparent, fill opacity={opacity}] (O{i}) at ({i * 1.5}, 2) {{$y_{i}$}};
-    \\node[input, transparent, fill opacity={opacity}] (WE{i}) at ({i * 1.5}, 0) {{$x_{i}$}};
+    \\node[hencoder, transparent, fill opacity={h_opacity}] (H{i}) at ({i * 1.5}, 1) {{$h_{i}$}};
+    \\node[output, transparent, fill opacity={o_opacity}] (O{i}) at ({i * 1.5}, 2) {{$y_{i}$}};
+    \\node[input, transparent, fill opacity={i_opacity}] (WE{i}) at ({i * 1.5}, 0) {{$x_{i}$}};
     \\node[anchor=mid] (TI{i}) at ({i * 1.5}, -1) {{{previous_word}}};
     \\node[anchor=mid] (TO{i}) at ({i * 1.5}, 3) {{{word}}};
     \\draw[->] (WE{i}) -- (H{i});
