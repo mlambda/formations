@@ -1,0 +1,70 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+\usetikzlibrary{mindmap}
+\usepackage{varwidth}
+
+\begin{document}
+  \begin{tikzpicture}[
+      mindmap,
+      text=white,
+      concept color=DeepSpaceSparkle!50!black,
+      every annotation/.style={text=black},
+      level 1 concept/.append style={sibling angle=120, minimum size=4cm, scale=1.3},
+      level 2 concept/.append style={sibling angle=90, minimum size=3cm, scale=1.4}
+  ]
+    [concept color=IndianYellow!50!black]
+    \node [concept] {Machine Learning}
+      [clockwise from=30]
+      child [concept color=Auburn!50!black] {node [concept] {Apprentissage supervisé}
+        [counterclockwise from=0]
+        child {node [concept] (regression) {Régression}}
+        child {node [concept] (classification) {Classification}}
+      }
+      child [concept color=MediumChampagne!50!black] {node [concept] (reinforcement) {Apprentissage par renforcement}}
+      child [concept color=IndianYellow!50!black] {node [concept]  {Apprentissage non-supervisé}
+        [counterclockwise from=90]
+        child {node [concept] (dimensionality) {Réduction de dimensionnalité}}
+        child {node [concept] (clustering) {Clustering}}
+        child {node [concept] (anomaly) {Détection d'anomalies}}
+      };
+    \node [annotation, right, fill=Auburn!15, draw=Auburn!50!black] at (classification.east) {
+      \normalsize
+      --- Analyse de \phantom{--- }sentiments\\
+      --- Classification \phantom{--- }d'images\\
+      --- Diagnostic \phantom{--- }médical\\
+    };
+    \node [annotation, below, fill=Auburn!15, draw=Auburn!50!black] at (regression.south) {
+      \normalsize
+      --- Efficacité de \phantom{--- }publicités\\
+      --- Météorologie\\
+      --- Finance\\
+      --- Diagnostic de \phantom{--- }durée de vie\\
+    };
+    \node [annotation, right, fill=MediumChampagne!15, draw=MediumChampagne!50!black] at (reinforcement.east) {
+      \normalsize
+      --- IA de jeux\\
+      --- Acquisition de \phantom{--- }compétences\\
+      --- Navigation \phantom{--- }robotique\\
+      --- Décisions temps \phantom{--- }réel\\
+    };
+    \node [annotation, left, fill=IndianYellow!15, draw=IndianYellow!50!black] at (anomaly.west) {
+      \normalsize
+      --- Pré-traitement\\
+      --- Détection de \phantom{--- }fraude\\
+    };
+    \node [annotation, above, fill=IndianYellow!15, draw=IndianYellow!50!black] at (clustering.north) {
+      \normalsize
+      --- Système de \phantom{--- }recommandation\\
+      --- Segmentation de \phantom{--- }clientèle\\
+      --- Marketing ciblé\\
+    };
+    \node [annotation, right, fill=IndianYellow!15, draw=IndianYellow!50!black] at (dimensionality.east) {
+      \normalsize
+      --- Visualisation\\
+      --- Sélection de \phantom{--- }caractéristiques\\
+      --- Compression\\
+    };
+  \end{tikzpicture}
+\end{document}
+
