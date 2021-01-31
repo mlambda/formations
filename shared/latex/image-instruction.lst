@@ -111,15 +111,11 @@ MATPLOTLIB/TP
 - [ ] ["", "", "notebook", "TODO", "barplot"]
 - [ ] ["", "", "notebook", "TODO", "confusion-matrix"]
 - [ ] ["", "", "notebook", "TODO", "countplot"]
-- [ ] ["", "", "notebook", "TODO", "early-stopping"]
-- [ ] ["", "", "notebook", "TODO", "fit"]
-- [ ] ["", "", "notebook", "TODO", "gaussian-mixture-univariate"]
 - [ ] ["", "", "notebook", "TODO", "nvidia-stock-history"]
 - [ ] ["", "", "notebook", "TODO", "openai-gpt2-example"]
 - [ ] ["", "", "notebook", "TODO", "overfitting"]
 - [ ] ["", "", "notebook", "TODO", "over-underfitting"]
 - [ ] ["", "", "notebook", "TODO", "pairplot"]
-- [ ] ["", "", "notebook", "TODO", "regression-polynomiale-exemple"]
 - [ ] ["", "", "notebook", "TODO", "residuals-1"]
 - [ ] ["", "", "notebook", "TODO", "residuals-2"]
 - [ ] ["", "", "notebook", "TODO", "roc"]
@@ -132,13 +128,17 @@ MATPLOTLIB/TP
 - [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear-solution"]
 - [ ] ["", "", "notebook", "TODO", "svm-schema"]
 - [ ] ["", "", "notebook", "TODO", "xor"]
-- [ ] ["", "", "notebook", "TODO", "learning-curve"]
 - [ ] ["", "", "notebook", "TODO", "learning-rate-big-small"]
-- [ ] ["", "", "notebook", "TODO", "ml-effort-vs-value"]
 - [ ] ["", "", "word map", "TODO", "data-science"]
 - [ ] ["", "", "notebook", "TODO", "gradient-clipping"]
 - [ ] ["", "", "notebook", "TODO", "batch-size-effect"]
 - [ ] ["", "", "notebook", "TODO", "data-augmentation"]
+- [x] ["Effet du nombre d'itération sur le surraprentissage des réseaux de neurones", "", "", "early-stopping-nzmog", "early-stopping"]
+- [x] ["Mise en évidence du surraprentissage", "", "", "fit-nzmog", "fit"]
+- [x] ["Mixture de Gaussiennes univariée", "", "", "gaussian-mixture-univariate-nzmog", "gaussian-mixture-univariate"]
+- [x] ["Régression polynomiale sur des données brutes", "", "", "regression-polynomiale-exemple-nzmog", "regression-polynomiale-exemple"]
+- [x] ["Mise en évidence du surraprentissage sur les performances", "", "", "learning-curve-nzmog", "learning-curve"]
+- [x] ["Trouver un bon compromis entre plus-value et effort d'investissement en ML", "", "", "ml-effort-vs-value-nzmog", "ml-effort-vs-value"]
 - [x] ["pandas.Dataframe.corr("Caractéristiques")", "", "", "corrmat-nzmog", "corrmat"]
 - [x] ["seaborn.distplot("Prix de vente")", "", "", "distplot-nzmog", "distplot"]
 - [x] ["scipy.stats.probplot(X, dist='norm', plot=plt)", "", "", "qqplot-nzmog", "qqplot"]
@@ -152,3 +152,7 @@ MATPLOTLIB/TP
 chercher-nom
 - [ ] ["", "", "notebook", "TODO", "universal-approximation"]
 - [ ] ["", "", "notebook", "TODO", "lda"]
+
+-4 20
+-3 11
+
