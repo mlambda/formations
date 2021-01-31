@@ -108,6 +108,9 @@ TIKZ
 - [ ] ["", "", "notebook", "TODO", "regression-tree"]
 
 MATPLOTLIB/TP
+- [ ] ["", "", "rajouter un peu d'explications", "TODO", "lda"]
+- [ ] ["", "", "nuage de mots en libre office du cul", "TODO", "data-science"]
+- [ ] ["", "", "notebook", "TODO", "xor"]
 - [ ] ["", "", "notebook", "TODO", "barplot"]
 - [ ] ["", "", "notebook", "TODO", "confusion-matrix"]
 - [ ] ["", "", "notebook", "TODO", "countplot"]
@@ -134,24 +137,21 @@ MATPLOTLIB/TP
 - [x] ["Régression linaire du prix en fonction de la surface", "", "", "regression-nzmog", "regression-line-1"]
 - [x] ["seaborn.jointplot(x='Surface', y='Prix')", "", "", "scatter-nzmog", "scatter"]
 - [x] ["seaborn.violinplot(x=Qualité, y=Prix)", "", "", "violinplot-nzmog", "violinplot"]
-- [ ] ["", "", "word map", "TODO", "data-science"]
-- [ ] ["", "", "notebook", "TODO", "xor"]
 - [ ] ["", "", "notebook", "TODO", "data-augmentation"]
-- [ ] ["", "", "notebook", "TODO", "residuals-1"]
-- [ ] ["", "", "notebook", "TODO", "residuals-2"]
 - [ ] ["", "", "notebook", "TODO", "roc"]
 - [ ] ["", "", "notebook", "TODO", "roc-space"]
 - [ ] ["", "", "notebook", "TODO", "learning-rate-big-small"]
-- [ ] ["", "", "notebook", "TODO", "gradient-clipping"]
-- [ ] ["", "", "notebook", "TODO", "batch-size-effect"]
-- [ ] ["", "", "notebook", "TODO", "nvidia-stock-history"]
+- [x] ["Résiduels", "", "", "residuals-1-nzmog", "residuals-1"]
+- [x] ["Résiduels", "", "", "residuals-2-nzmog", "residuals-2"]
+- [x] ["Cours des actions NVIDIA et BTC (divisé par 100)", "", "", "nvidia-stock-history-nzmog", "nvidia-stock-history"]
 3D
+- [ ] ["", "", "notebook", "TODO", "batch-size-effect"]
+- [ ] ["", "", "notebook", "TODO", "gradient-clipping"]
 - [ ] ["", "", "notebook", "TODO", "regression-hyperplan"]
 - [ ] ["", "", "notebook", "TODO", "gradient"]
 - [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear-kernelsvm"]
-chercher-nom
+chercher-nom-tikz
 - [ ] ["", "", "notebook", "TODO", "universal-approximation"]
-- [ ] ["", "", "notebook", "TODO", "lda"]
 
 -4 20
 -3 11
