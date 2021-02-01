@@ -71,12 +71,19 @@
 \end{frame}
 
 \begin{frame}{PCA --- Linear Discriminant Analysis}
-  Maximisation de la variance inter-classes.
+  Procédé : \\
+  \begin{itemize}
+    \item Estimation de la matrice de covariance de chaque classe
+    \item ACP sur chacune de ces matrices
+    \item Projection en maximisant la variance inter-classes
+  \end{itemize}
+\end{frame}
 
-  \begin{minipage}[l]{0.49\linewidth}
-    \V{["pca-nuage", "tw", 0.8] | image}
-  \end{minipage}\hfill
-  \begin{minipage}[l]{0.49\linewidth}
-    \V{["lda", "tw", 1.0] | image}
-  \end{minipage}\hfill
+\begin{frame}{PCA --- Linear Discriminant Analysis}
+  Attention, technique délicate qui est sensible à : \\
+  \begin{itemize}
+    \item Forte dimensionnalité
+    \item Distribution multimodale
+    \item Homoscédasticité
+  \end{itemize}
 \end{frame}

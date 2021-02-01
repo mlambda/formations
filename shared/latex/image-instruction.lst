@@ -59,6 +59,7 @@
 - [x] ["", "", "pixabay license", "chess-pixabay", "echec"]
 - [x] ["", "", "pixabay license", "spaghetti-pixabay", "spaghetti"]
 - [x] ["Passage pour piétons", "https://commons.wikimedia.org/wiki/User:Kingroyos", "CC BY-SA 3.0", "panneau-pieton", "chine-reco-face-fail"]
+- [x] ["", "nzmog", "", "approximation", "universal-approximation"]
 
 ==> changé dans le latex, normalement rien a faire. Certaines ont tout simplement disparues <==
 - [x] ["créer illustration chine orweillien ?", "", "", "TEX", "chine-orwell"]
@@ -82,6 +83,9 @@
 - [x] ["", "", "", "TEX", "ms-azure"]
 - [x] ["", "", "", "TEX", "ms-azure2"]
 - [x] ["", "", "", "TEX", "amazon-ai"]
+- [x] ["", "", "", "TEX", "lda"]
+- [x] ["", "", "", "TEX", "roc"]
+
 
 TIKZ
 - [ ] ["", "", "tikz", "TODO", "vanishing-gradient3"]
@@ -106,25 +110,26 @@ TIKZ
 - [ ] ["", "", "notebook", "TODO", "bidirectional-rnn"]
 - [ ] ["", "", "notebook", "TODO", "pooling"]
 - [ ] ["", "", "notebook", "TODO", "regression-tree"]
+- [ ] ["", "", "notebook", "TODO", "learning-rate-big-small"]
 
 MATPLOTLIB/TP
-- [ ] ["", "", "rajouter un peu d'explications", "TODO", "lda"]
 - [ ] ["", "", "nuage de mots en libre office du cul", "TODO", "data-science"]
-- [ ] ["", "", "notebook", "TODO", "xor"]
-- [ ] ["", "", "notebook", "TODO", "barplot"]
-- [ ] ["", "", "notebook", "TODO", "confusion-matrix"]
-- [ ] ["", "", "notebook", "TODO", "countplot"]
+- [ ] ["", "", "notebook", "TODO", "data-augmentation"]
 - [ ] ["", "", "notebook", "TODO", "openai-gpt2-example"]
-- [ ] ["", "", "notebook", "TODO", "pairplot"]
 - [ ] ["", "", "notebook", "TODO", "overfitting"]
 - [ ] ["", "", "notebook", "TODO", "over-underfitting"]
-- [ ] ["", "", "notebook", "TODO", "separable-problem-linear"]
-- [ ] ["", "", "notebook", "TODO", "separable-problem-linear-solution"]
-- [ ] ["", "", "notebook", "TODO", "separable-problem-linear-solution-bad"]
-- [ ] ["", "", "notebook", "TODO", "separable-problem-linear-svm"]
 - [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear"]
 - [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear-solution"]
-- [ ] ["", "", "notebook", "TODO", "svm-schema"]
+- [x] ["Matrice de confusion", "", "", "confusion-matrix-nzmog", "confusion-matrix"]
+- [x] ["seaborn.barplot(x = 'OverallQual', y = 'SalePrice', data = ames)", "", "", "barplot-nzmog", "barplot"]
+- [x] ["seaborn.countplot(df['quality'])", "", "", "countplot-nzmog", "countplot"]
+- [x] ["Pairplot("Iris Data")", "", "", "pairplot-nzmog", "pairplot"]
+- [x] ["Classification de données obtenues grâce à XOR", "", "", "xor-nzmog", "xor"]
+- [x] ["Données linéairement séparables", "", "", "separable-problem-linear-nzmog", "separable-problem-linear"]
+- [x] ["Séparateur linéaire", "", "", "separable-problem-linear-solution-nzmog", "separable-problem-linear-solution"]
+- [x] ["Séparateur linéaire sous-optimal", "", "", "separable-problem-linear-solution-bad-nzmog", "separable-problem-linear-solution-bad"]
+- [x] ["Schéma d'un SVM", "", "", "svm-schema-nzmog", "separable-problem-linear-svm"]
+- [x] ["Schéma d'un SVM", "", "", "svm-schema-nzmog", "svm-schema"]
 - [x] ["Effet du nombre d'itération sur le surraprentissage des réseaux de neurones", "", "", "early-stopping-nzmog", "early-stopping"]
 - [x] ["Mise en évidence du surraprentissage", "", "", "fit-nzmog", "fit"]
 - [x] ["Mixture de Gaussiennes univariée", "", "", "gaussian-mixture-univariate-nzmog", "gaussian-mixture-univariate"]
@@ -137,22 +142,14 @@ MATPLOTLIB/TP
 - [x] ["Régression linaire du prix en fonction de la surface", "", "", "regression-nzmog", "regression-line-1"]
 - [x] ["seaborn.jointplot(x='Surface', y='Prix')", "", "", "scatter-nzmog", "scatter"]
 - [x] ["seaborn.violinplot(x=Qualité, y=Prix)", "", "", "violinplot-nzmog", "violinplot"]
-- [ ] ["", "", "notebook", "TODO", "data-augmentation"]
-- [ ] ["", "", "notebook", "TODO", "roc"]
-- [ ] ["", "", "notebook", "TODO", "roc-space"]
-- [ ] ["", "", "notebook", "TODO", "learning-rate-big-small"]
 - [x] ["Résiduels", "", "", "residuals-1-nzmog", "residuals-1"]
 - [x] ["Résiduels", "", "", "residuals-2-nzmog", "residuals-2"]
 - [x] ["Cours des actions NVIDIA et BTC (divisé par 100)", "", "", "nvidia-stock-history-nzmog", "nvidia-stock-history"]
+- [x] ["ROC space", "https://en.wikipedia.org/wiki/User:Indon", "GFDL", "", "roc-space"]
 3D
 - [ ] ["", "", "notebook", "TODO", "batch-size-effect"]
 - [ ] ["", "", "notebook", "TODO", "gradient-clipping"]
 - [ ] ["", "", "notebook", "TODO", "regression-hyperplan"]
 - [ ] ["", "", "notebook", "TODO", "gradient"]
 - [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear-kernelsvm"]
-chercher-nom-tikz
-- [ ] ["", "", "notebook", "TODO", "universal-approximation"]
-
--4 20
--3 11
 
