@@ -52,12 +52,12 @@
 - [x] ["Schéma d'une coupe longitudinale d’œil humain.", "https://de.wikipedia.org/wiki/Benutzer:Talos, ", "CC BY-SA 3.0", "oeil-humain", "oeil-coupe"]
 - [x] ["Les aires visuelles V1, V2 et V3 situées sur la scissure calcarine, schéma inspiré de Wichmann et al Anatomy of the visual system, Eur Jour Radiol 49, 2004", "https://commons.wikimedia.org/wiki/User:Pancrat", "GNU Free Documentation License", "visual-cortex-wiki", "visual-cortex"]
 - [x] ["", "", "https://iconmonstr.com/license/", "sablier", "sablier-windows"]
-- [x] ["", "", "pixabay license", "adn-exchange", "adn-data"]
-- [x] ["", "", "pixabay license", "adn-exchange", "adn-big-data"]
-- [x] ["", "", "pixabay license", "", "Machine-Learning-Cybersécurité"]
-- [x] ["", "", "pixabay license", "informatique-ai", "it-ai"]
-- [x] ["", "", "pixabay license", "chess-pixabay", "echec"]
-- [x] ["", "", "pixabay license", "spaghetti-pixabay", "spaghetti"]
+- [x] ["", "", "licence Pixabay", "adn-exchange", "adn-data"]
+- [x] ["", "", "licence Pixabay", "adn-exchange", "adn-big-data"]
+- [x] ["", "", "licence Pixabay", "", "Machine-Learning-Cybersécurité"]
+- [x] ["", "", "licence Pixabay", "informatique-ai", "it-ai"]
+- [x] ["", "", "licence Pixabay", "chess-pixabay", "echec"]
+- [x] ["", "", "licence Pixabay", "spaghetti-pixabay", "spaghetti"]
 - [x] ["Passage pour piétons", "https://commons.wikimedia.org/wiki/User:Kingroyos", "CC BY-SA 3.0", "panneau-pieton", "chine-reco-face-fail"]
 - [x] ["", "nzmog", "", "approximation", "universal-approximation"]
 
@@ -89,9 +89,6 @@
 
 
 TIKZ
-- [ ] ["", "", "tikz", "TODO", "vanishing-gradient3"]
-- [ ] ["", "", "tikz", "TODO", "vanishing-gradient-lstm"]
-- [ ] ["", "", "tikz", "TODO", "vanishing-gradient-rnn"]
 - [ ] ["", "refaire slides et aborder dimensionalité", "tikz", "TODO", "variables"]
 - [ ] ["", "", "tikz", "TODO", "neuron-model"]
 - [ ] ["", "", "tikz", "TODO", "nn-rnn-comparaison"]
