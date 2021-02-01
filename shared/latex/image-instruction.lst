@@ -112,11 +112,11 @@ TIKZ
 
 MATPLOTLIB/TP
 - [ ] ["", "", "nuage de mots en libre office du cul", "TODO", "data-science"]
-- [ ] ["", "", "notebook", "TODO", "data-augmentation"]
 - [ ] ["", "", "notebook", "TODO", "overfitting"]
 - [ ] ["", "", "notebook", "TODO", "over-underfitting"]
 - [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear"]
 - [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear-solution"]
+- [x] ["Exemples d'augmentation de données", "", "", "data-augmentation-nzmog", "data-augmentation"]
 - [x] ["Matrice de confusion", "", "", "confusion-matrix-nzmog", "confusion-matrix"]
 - [x] ["seaborn.barplot(x = 'OverallQual', y = 'SalePrice', data = ames)", "", "", "barplot-nzmog", "barplot"]
 - [x] ["seaborn.countplot(df['quality'])", "", "", "countplot-nzmog", "countplot"]
