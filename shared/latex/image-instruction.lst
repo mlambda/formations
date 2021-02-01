@@ -85,6 +85,7 @@
 - [x] ["", "", "", "TEX", "amazon-ai"]
 - [x] ["", "", "", "TEX", "lda"]
 - [x] ["", "", "", "TEX", "roc"]
+- [ ] ["", "", "", "TEX", "openai-gpt2-example"]
 
 
 TIKZ
@@ -115,7 +116,6 @@ TIKZ
 MATPLOTLIB/TP
 - [ ] ["", "", "nuage de mots en libre office du cul", "TODO", "data-science"]
 - [ ] ["", "", "notebook", "TODO", "data-augmentation"]
-- [ ] ["", "", "notebook", "TODO", "openai-gpt2-example"]
 - [ ] ["", "", "notebook", "TODO", "overfitting"]
 - [ ] ["", "", "notebook", "TODO", "over-underfitting"]
 - [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear"]
