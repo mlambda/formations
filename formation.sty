@@ -2,11 +2,11 @@
 
 \ProvidesPackage{formation}[2017/12/01 LaTeX class for my formations]
 
+\usepackage{setspace}
 \usepackage[export]{adjustbox}
 \usepackage{xparse}
 \usepackage{ifthen}
 \usepackage{amsmath}
-\usepackage[style=french]{csquotes}
 \usepackage{amssymb}
 \usepackage{tabularx}
 \usepackage{booktabs}
@@ -22,6 +22,8 @@
 \usepackage{caption}
 \usepackage{tikz}
 \usepackage[french]{babel}
+
+\AtBeginEnvironment{quote}{\singlespacing\small}
 
 \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
 \graphicspath{{./img/}{./tikz/pdf/}}
