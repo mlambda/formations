@@ -1,0 +1,24 @@
+\documentclass[class=beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \datavisualization [scientific axes={end labels},
+                        all axes={ticks=none},
+                        x axis={unit length=1cm, label=Complexité},
+                        y axis={unit length=1cm, include value=0, label={Perte}},
+                        visualize as line/.list={train,test},
+                        test={style={red, line width=0.3mm}, label in legend={text=Test}},
+                        train={style={blue, line width=0.3mm}, label in legend={text=Train}}]
+    data [format=function, set=test] {
+      var x : interval [0:5] samples 100 ;
+      func y = {3 / ((\value x + 1) * (\value x + 1)) + \value x / 4} ;
+    }
+    data [format=function, set=train] {
+      var x : interval [0:5] samples 100 ;
+      func y = {3 / ((\value x + 1) * (\value x + 1))} ;
+    };
+    \draw[densely dotted, thick] (1.884499, 0) -- (1.884499, 0.831687178) node [pos=0.65, right] {\scriptsize Complexité optimale};
+  \end{tikzpicture}
+\end{document}
