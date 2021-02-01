@@ -1,6 +1,6 @@
 build_command:
   - latexmk
-  - -pdflatex=xelatex -shell-escape -interaction=nonstopmode %O %S
+  - -pdflatex=xelatex -shell-escape -halt-on-error %O %S
   - -dvi-
   - -ps-
   - -pdf
