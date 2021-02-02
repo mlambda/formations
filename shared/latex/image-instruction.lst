@@ -93,12 +93,12 @@ MATPLOTLIB/TP
 - [ ] ["", "", "nuage de mots en libre office du cul", "TODO", "data-science"]
 - [ ] ["", "", "notebook", "TODO", "overfitting"]
 - [ ] ["", "", "notebook", "TODO", "over-underfitting"]
-- [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear"]
-- [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear-solution"]
 3D
 - [ ] ["", "", "notebook", "TODO", "batch-size-effect"]
 - [ ] ["", "", "notebook", "TODO", "gradient-clipping"]
 - [ ] ["", "", "notebook", "TODO", "regression-hyperplan"]
 - [ ] ["", "", "notebook", "TODO", "gradient"]
+- [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear"]
+- [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear-solution"]
 - [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear-kernelsvm"]
 
