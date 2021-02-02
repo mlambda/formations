@@ -38,33 +38,6 @@
 - [x] ["", "", "licence Pixabay", "chess-pixabay", "echec"]
 - [x] ["", "", "licence Pixabay", "spaghetti-pixabay", "spaghetti"]
 - [x] ["Passage pour piétons", "https://commons.wikimedia.org/wiki/User:Kingroyos", "CC BY-SA 3.0", "panneau-pieton", "chine-reco-face-fail"]
-- [x] ["", "nzmog", "", "approximation", "universal-approximation"]
-
-==> changé dans le latex, normalement rien a faire. Certaines ont tout simplement disparues <==
-- [x] ["créer illustration chine orweillien ?", "", "", "TEX", "chine-orwell"]
-- [x] ["", "", "", "TEX", "acquisition-gafa"]
-- [x] ["", "", "", "TEX", "esante-landscape"]
-- [x] ["", "", "", "TEX", "esante-solutions"]
-- [x] ["", "", "", "TEX", "watson-personality-insight"]
-- [x] ["", "", "", "TEX", "robot-chirurgien"]
-- [x] ["", "", "", "TEX", "robotdoc"]
-- [x] ["", "", "", "TEX", "airport-lie-detection"]
-- [x] ["", "", "", "TEX", "baby-sitter-reliable"]
-- [x] ["", "", "", "TEX", "cylance"]
-- [x] ["", "", "", "TEX", "deepinstinct-2"]
-- [x] ["", "", "", "TEX", "bras-bioniques"]
-- [x] ["", "", "", "TEX", "alphazero"]
-- [x] ["", "", "", "TEX", "zao-deepfake"]
-- [x] ["", "", "", "TEX", "vs-intellicode-2"]
-- [x] ["", "", "", "TEX", "xkcd-easy-impossible"]
-- [x] ["", "", "", "TEX", "chinese-street-surveillance"]
-- [x] ["", "", "", "TEX", "ibm-watson-struct"]
-- [x] ["", "", "", "TEX", "ms-azure"]
-- [x] ["", "", "", "TEX", "ms-azure2"]
-- [x] ["", "", "", "TEX", "amazon-ai"]
-- [x] ["", "", "", "TEX", "lda"]
-- [x] ["", "", "", "TEX", "roc"]
-- [ ] ["", "", "", "TEX", "openai-gpt2-example"]
 
 
 TIKZ
