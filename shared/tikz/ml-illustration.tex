@@ -8,10 +8,12 @@
   \begin{tikzpicture}[
       mindmap,
       text=white,
+      minimum size=5cm,
+      every concept/.style={font=\fontsize{12pt}{14pt}\selectfont\bf},
       concept color=DeepSpaceSparkle!50!black,
       every annotation/.style={text=black},
-      level 1 concept/.append style={sibling angle=120, minimum size=4cm, scale=1.3},
-      level 2 concept/.append style={sibling angle=90, minimum size=3cm, scale=1.4}
+      level 1 concept/.append style={sibling angle=120, minimum size=4cm, scale=1.3, text width=3.5cm},
+      level 2 concept/.append style={sibling angle=90, minimum size=3cm, scale=1.4, text width=2.5cm}
   ]
     [concept color=IndianYellow!50!black]
     \node [concept] {Machine Learning}
