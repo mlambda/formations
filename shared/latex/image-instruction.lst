@@ -54,7 +54,6 @@ TIKZ
 - [ ] ["", "", "tikz", "TODO", "multi-task-v2"]
 - [ ] ["", "", "tikz", "TODO", "lstm-schema"]
 - [ ] ["", "", "tikz", "TODO", "ml-craftmanship"]
-- [ ] ["", "", "tikz", "TODO", "ml-illustration"]
 - [ ] ["", "", "tikz", "TODO", "molecule-release"]
 - [ ] ["", "", "notebook", "TODO", "convolution"]
 - [ ] ["", "", "notebook", "TODO", "bidirectional-rnn"]
