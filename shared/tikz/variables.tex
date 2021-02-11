@@ -1,0 +1,21 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+\usetikzlibrary{trees}
+
+\begin{document}
+  \begin{tikzpicture}[
+    level 1/.style={sibling distance=16em},
+    level 2/.style={sibling distance=8em}]
+    \node [input] {Variable}
+    [edge from parent fork down]
+    child { node [hencoder] {Numérique}
+      child { node [hencoder] {Continue} }
+      child { node [hencoder] {Discrète} }
+    }
+    child { node [output] {Catégorielle}
+      child { node [output] {Ordinale} }
+      child { node [output] {Nominale} }
+    };
+  \end{tikzpicture}
+\end{document}
