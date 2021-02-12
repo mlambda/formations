@@ -63,8 +63,9 @@ TIKZ
 
 MATPLOTLIB/TP
 - [ ] ["", "", "nuage de mots en libre office du cul", "TODO", "data-science"]
-- [ ] ["", "", "notebook", "TODO", "overfitting"]
-- [ ] ["", "", "notebook", "TODO", "over-underfitting"]
+- [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-nzmog", "overfitting"]
+- [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-nzmog", "over-underfitting"]
+
 3D
 - [ ] ["", "", "notebook", "TODO", "batch-size-effect"]
 - [ ] ["", "", "notebook", "TODO", "gradient-clipping"]
