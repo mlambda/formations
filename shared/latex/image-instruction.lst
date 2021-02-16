@@ -63,15 +63,16 @@ TIKZ
 
 MATPLOTLIB/TP
 - [ ] ["", "", "nuage de mots en libre office du cul", "TODO", "data-science"]
-- [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-nzmog", "overfitting"]
-- [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-nzmog", "over-underfitting"]
+- [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-test-nzmog", "pouet trouver une place pouet"]
+- [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-train-nzmog", "overfitting"]
+- [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-train-nzmog", "over-underfitting"]
 
 3D
-- [ ] ["", "", "notebook", "TODO", "batch-size-effect"]
+- [x] ["Effet de la taille du Batch", "", "", "batch-size-effect-nzmog", "batch-size-effect"]
 - [ ] ["", "", "notebook", "TODO", "gradient-clipping"]
 - [ ] ["", "", "notebook", "TODO", "regression-hyperplan"]
-- [ ] ["", "", "notebook", "TODO", "gradient"]
+- [x] ["Surface de l'erreur en fonction des paramètres a et b", "", "", "gradient-nzmog", "gradient"]
 - [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear"]
 - [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear-solution"]
-- [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear-kernelsvm"]
+- [x] ["Illustration des SVM à noyaux", "", "", "separable-problem-nonlinear-kernelsvm-nzmog", "separable-problem-nonlinear-kernelsvm"]
 
