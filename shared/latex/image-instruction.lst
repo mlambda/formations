@@ -20,7 +20,7 @@
 - [x] ["La chine", "traque ses musulmans", "", "DELETE", "chine-musulmans-traque"]
 - [x] ["Alexandre Robicquet", ", chercheur en intelligence artificielle, est l'égérie d'un parfum d'Yves Saint Laurent.", "", "DELETE", "data-scientist-star"]
 - [x] ["OrCam", " : Lunettes pour aveugles", "", "DELETE", "lunettes-pour-aveugle"]
-- [x] ["Le Deep Learning", "à besoin de GPU puissants en quantité", "", "DELETE", "gpu-fun"]
+- [x] ["Le Deep Learning", "à besoin de GPU puissants, en quantité", "", "DELETE", "gpu-fun"]
 
 ==> change image <==
 - [x] ["Microsoft COCO: Common Objects in Context", "TY Lin et al.", "ArXiv", "ms-coco-2", "ms-coco"]
@@ -69,10 +69,9 @@ MATPLOTLIB/TP
 
 3D
 - [x] ["Effet de la taille du Batch", "", "", "batch-size-effect-nzmog", "batch-size-effect"]
-- [ ] ["", "", "notebook", "TODO", "gradient-clipping"]
-- [ ] ["", "", "notebook", "TODO", "regression-hyperplan"]
+- [x] ["Effet du gradient clipping", "", "", "gradient-clipping-nzmog", "gradient-clipping"]
+- [x] ["Extension de la régression linéaire quand X est de dimension 2", "", "", "regression-hyperplan-nzmog", "regression-hyperplan"]
 - [x] ["Surface de l'erreur en fonction des paramètres a et b", "", "", "gradient-nzmog", "gradient"]
-- [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear"]
-- [ ] ["", "", "notebook", "TODO", "separable-problem-nonlinear-solution"]
+- [x] ["Illustration des SVM à noyaux", "", "", "separable-problem-nonlinear-solution-nzmog", "separable-problem-nonlinear"]
+- [x] ["Illustration des SVM à noyaux", "", "", "separable-problem-nonlinear-solution-nzmog", "separable-problem-nonlinear-solution"]
 - [x] ["Illustration des SVM à noyaux", "", "", "separable-problem-nonlinear-kernelsvm-nzmog", "separable-problem-nonlinear-kernelsvm"]
-
