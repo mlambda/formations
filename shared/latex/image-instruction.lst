@@ -63,16 +63,3 @@ TIKZ
 
 MATPLOTLIB/TP
 - [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-test-nzmog", "pouet trouver une place pouet"]
-- [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-train-nzmog", "overfitting"]
-- [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-train-nzmog", "over-underfitting"]
-- [x] ["Word map de L'IA", "", "", "data-science-nzmog", "data-science"]
-
-3D
-- [x] ["Effet de la taille du Batch", "", "", "batch-size-effect-nzmog", "batch-size-effect"]
-- [x] ["Effet du gradient clipping", "", "", "gradient-clipping-nzmog", "gradient-clipping"]
-- [x] ["Extension de la régression linéaire quand X est de dimension 2", "", "", "regression-hyperplan-nzmog", "regression-hyperplan"]
-- [x] ["Surface de l'erreur en fonction des paramètres a et b", "", "", "gradient-nzmog", "gradient"]
-- [x] ["Illustration des SVM à noyaux", "", "", "separable-problem-nonlinear-solution-nzmog", "separable-problem-nonlinear"]
-- [x] ["Illustration des SVM à noyaux", "", "", "separable-problem-nonlinear-solution-nzmog", "separable-problem-nonlinear-solution"]
-- [x] ["Illustration des SVM à noyaux", "", "", "separable-problem-nonlinear-kernelsvm-nzmog", "separable-problem-nonlinear-kernelsvm"]
-
