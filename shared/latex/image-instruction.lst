@@ -62,10 +62,10 @@ TIKZ
 - [ ] ["", "", "notebook", "TODO", "learning-rate-big-small"]
 
 MATPLOTLIB/TP
-- [ ] ["", "", "nuage de mots en libre office du cul", "TODO", "data-science"]
 - [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-test-nzmog", "pouet trouver une place pouet"]
 - [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-train-nzmog", "overfitting"]
 - [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-train-nzmog", "over-underfitting"]
+- [x] ["Word map de L'IA", "", "", "data-science-nzmog", "data-science"]
 
 3D
 - [x] ["Effet de la taille du Batch", "", "", "batch-size-effect-nzmog", "batch-size-effect"]
@@ -75,3 +75,7 @@ MATPLOTLIB/TP
 - [x] ["Illustration des SVM à noyaux", "", "", "separable-problem-nonlinear-solution-nzmog", "separable-problem-nonlinear"]
 - [x] ["Illustration des SVM à noyaux", "", "", "separable-problem-nonlinear-solution-nzmog", "separable-problem-nonlinear-solution"]
 - [x] ["Illustration des SVM à noyaux", "", "", "separable-problem-nonlinear-kernelsvm-nzmog", "separable-problem-nonlinear-kernelsvm"]
+
+
+pomper ça :
+- [ ] ["", "", "iao p.161", "TODO", "https://deepmind.com/blog/article/Agent57-Outperforming-the-human-Atari-benchmark"]
