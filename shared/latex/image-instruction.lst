@@ -76,6 +76,3 @@ MATPLOTLIB/TP
 - [x] ["Illustration des SVM à noyaux", "", "", "separable-problem-nonlinear-solution-nzmog", "separable-problem-nonlinear-solution"]
 - [x] ["Illustration des SVM à noyaux", "", "", "separable-problem-nonlinear-kernelsvm-nzmog", "separable-problem-nonlinear-kernelsvm"]
 
-
-pomper ça :
-- [ ] ["", "", "iao p.161", "TODO", "https://deepmind.com/blog/article/Agent57-Outperforming-the-human-Atari-benchmark"]

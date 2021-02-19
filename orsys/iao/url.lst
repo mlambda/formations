@@ -2,5 +2,10 @@ cnn demo ryerson
 playground tensorflow
 mloncode/workshop + apache phone book
 m09/scopitone (stegosaure style transfert)
-m09/
 
+- [ ] ["", "", "iao p.161", "TODO", "https://deepmind.com/blog/article/Agent57-Outperforming-the-human-Atari-benchmark"]
+- [ ] ["", "", "iao p.145", "TODO", "https://demo.allennlp.org/reading-comprehension/bidaf-elmo"]
+- [ ] ["", "", "iao ingénerié/bonne pratiques", "TODO","flavor light sans le détail du processus"]
+- [ ] ["", "", "iao ingénerié/gestion des données", "TODO","DSI banque devoir légal de gestion des données de a à z (DVC cf. image https://dvc.org/doc/use-cases/sharing-data-and-model-files)"]
+- [ ] ["Data is stored in storage you control, separate from code.", "DVC.org", "Apache-2.0", "dvc-model-sharing-digram",""]
+- [ ] ["", "", "iao outils/kubernet du cul", "se renseigner",]
