@@ -55,11 +55,11 @@ TIKZ
 - [ ] ["", "", "tikz", "TODO", "lstm-schema"]
 - [ ] ["", "", "tikz", "TODO", "ml-craftmanship"]
 - [ ] ["", "", "tikz", "TODO", "molecule-release"]
-- [ ] ["", "", "notebook", "TODO", "convolution"]
-- [ ] ["", "", "notebook", "TODO", "bidirectional-rnn"]
-- [ ] ["", "", "notebook", "TODO", "pooling"]
-- [ ] ["", "", "notebook", "TODO", "regression-tree"]
-- [ ] ["", "", "notebook", "TODO", "learning-rate-big-small"]
+- [ ] ["", "", "tikz", "TODO", "convolution"]
+- [ ] ["", "", "tikz", "TODO", "bidirectional-rnn"]
+- [ ] ["", "", "tikz", "TODO", "pooling"]
+- [ ] ["", "", "tikz", "TODO", "regression-tree"]
+- [ ] ["", "", "tikz", "TODO", "learning-rate-big-small"]
 
 MATPLOTLIB/TP
 - [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-test-nzmog", "pouet trouver une place pouet"]
