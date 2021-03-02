@@ -1,0 +1,36 @@
+- name: j1
+  title: Jour 1
+  sections:
+    - path: about
+      flavor: sparks-formation-3j
+
+    - path: python
+      flavor: warmup
+      title: Rappels \& échauffement
+
+    - path: python
+      flavor: advanced
+      title: Éléments avancés de Python
+
+    - path: python
+      flavor: collections
+      title: Collections avancées en Python
+
+- name: j2
+  title: Jour 2
+  sections:
+
+    - path: python
+      title: Tests
+      flavor: testing
+
+    - path: python
+      flavor: linting
+      title: Respecter des conventions en Python
+
+- name: j3
+  title: Jour 3
+  sections:
+    - path: python
+      flavor: production
+      title: Passage en production

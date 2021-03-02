@@ -1,0 +1,3 @@
+@command
+def my_command(iterations, verbose):
+    ...

@@ -1,0 +1,58 @@
+\begin{frame}{Introduction}
+  Buts~:
+
+  \begin{itemize}[<+->]
+    \item Disposer d'un cadre logiciel de test similaire à JUnit en Java dans la bibliothèque standard
+    \item Gérer le cycle de vie en 4 phases d'un test
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Principes}
+  \begin{itemize}[<+->]
+    \item Définition de scénarios de tests en créant des classes héritant de \texttt{unittest.TestCase}
+    \item Chaque scénario comporte plusieurs tests
+    \item Chaque test est défini avec des méthodes \texttt{assert…} spécifiques
+    \item Préparation et nettoyage au niveau de la fonction avec les méthodes \texttt{setUp} et \texttt{tearDown}
+    \item Préparation et nettoyage au niveau de la classe avec les méthodes \texttt{setUpClass} et \texttt{tearDownClass}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Méthodes de test}
+  \bluelink{https://docs.python.org/fr/3/library/unittest.html\#test-cases}{Un grand nombre de méthodes de test sont disponibles.}
+\end{frame}
+
+\begin{frame}{Ordre d'exécution}
+
+  \begin{enumerate}[<+->]
+    \item \texttt{setUpClass}
+    \item \texttt{setUp}
+    \item La fonction de test
+    \item \texttt{tearDown}
+    \item \texttt{tearDownClass}
+  \end{enumerate}
+
+  \onslide<+->{Avec 2--4 répétés autant de fois qu'il y a de tests avant l'exécution de 5.}
+\end{frame}
+
+\begin{frame}{Exemple d'utilisation}
+  \mintedpycode{python/unittest/simple_usage}
+\end{frame}
+
+\begin{frame}{Appel de la suite de test}
+  Pour faire tourner la suite de tests, on utilise le plus souvent~:
+
+  \mintedcustomcode{python/unittest/run}{console}
+
+  Il est aussi possible de spécifier un fichier, une classe ou une fonction à exécuter.
+\end{frame}
+
+\begin{frame}{Module de mocking}
+  \texttt{unittest} dispose d'un module de mocking très intéressant~: \texttt{unittest.mock}.
+
+  Deux points importants~:
+  \begin{itemize}[<+->]
+    \item Le décorateur / gestionnaire de contexte \texttt{patch}, qui permet de remplacer temporairement un objet
+    \item La classe \texttt{Mock}, qui permet de remplacer des objets intestables
+  \end{itemize}
+  \onslide<+->{Il est possible de tester quelles méthodes ont été appelées, et comment, sur un objet \texttt{Mock}.}
+\end{frame}

@@ -1,0 +1,48 @@
+\begin{frame}{Introduction}
+  Buts~:
+  \begin{itemize}[<+->]
+    \item Mettre à disposition le logiciel au reste de l'entreprise / au public
+    \item Rendre le processus automatique
+    \item Déployer souvent, pour éviter l'effet tunnel
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Niveaux de déploiement}
+  On déploie habituellement sur plusieurs niveaux~:
+
+  \begin{description}[<+->]
+    \item[Local] Machine de la personne qui développe
+    \item[Développement] Machine ou cluster pour des premiers tests de déploiement
+    \item[Intégration] Environnement de l'intégration continue
+    \item[Staging] Réplique à l'identique de la production
+    \item[Production] Système utilisé par les utilisateurs finaux
+  \end{description}
+\end{frame}
+
+\begin{frame}{Livraison continue et déploiement continu}
+  En anglais, les deux se disent CD (\emph{Continous Delivery} et \emph{Continous Deployment}).
+
+  \begin{block}{Livraison continue}
+    \begin{itemize}[<+->]
+      \item Cycles courts de production du logiciel
+      \item Production régulière de livrables
+      \item Déploiement à la main
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Déploiement continu}
+    Comme la livraison continue, mais déploiement régulier et automatique.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Bonnes pratiques}
+  \begin{itemize}[<+->]
+    \item Utiliser un environnement contrôlé
+    \item Déployer automatiquement sur tag git d'une certaine forme
+    \item Utiliser pour cela Github Actions, Travis, Jenkins, CircleCI, …
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple de configuration}
+  \mintedcustomcode{python/deployment/example}{yaml}
+\end{frame}

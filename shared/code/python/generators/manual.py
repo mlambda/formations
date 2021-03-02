@@ -1,0 +1,1 @@
+item = next(generator)

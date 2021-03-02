@@ -1,0 +1,62 @@
+\begin{frame}{Introduction}
+  Buts~:
+  \begin{itemize}[<+->]
+    \item Introduire un mécanisme sûr de contexte pour un bloc d'instructions
+    \item Éviter les erreurs courantes de gestion de ressources
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Syntaxe}
+  Instructions placées dans un bloc \texttt{with}. Celui-ci introduit un ou plusieurs contextes actifs.  
+\end{frame}
+
+\begin{frame}{Exemple --- Gestion de fichiers}
+  \mintedpycode{python/context-managers/file}
+\end{frame}
+
+\begin{frame}{Exemple --- Contextes multiples}
+  \mintedpycode{python/context-managers/multiple}
+\end{frame}
+
+\begin{frame}{Création d'un gestionnaire de contexte}
+  Implémentation d'une classe avec des méthodes \texttt{\_\_enter\_\_} et \texttt{\_\_exit\_\_}.
+
+  \mintedpycode{python/context-managers/creation-manual}
+\end{frame}
+
+\begin{frame}{Recommandé~: utilisation de contextlib}
+  Façon beaucoup plus naturelle de définir un contexte~:
+
+  \mintedpycode{python/context-managers/creation-contextlib}
+\end{frame}
+
+\begin{frame}{Contexte qui retourne une valeur}
+  Pour retourner une valeur~:
+
+  \mintedpycode{python/context-managers/value}
+\end{frame}
+
+\begin{frame}{Contextes déjà implémentés}
+  Beaucoup d'objets possèdent habituellement les méthodes être utilisés en tant que contextes~:
+  \begin{itemize}[<+->]
+    \item Les fichiers
+    \item Les sessions HTTP
+    \item Les connexions aux bases de données
+    \item …
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Contextes apportés par \texttt{contextlib}}
+  \texttt{contextlib} propose aussi quelques contextes très intéressants~:
+  \begin{description}[<+->]
+    \item[\texttt{closing}] Ferme ce qu'on lui donne en argument à la fin du bloc
+    \item[\texttt{suppress}] Supprime les exceptions du bloc
+    \item[\texttt{redirect\_stdout}] Redirige la sortie standard
+  \end{description}
+\end{frame}
+
+\begin{frame}{Utilisation d'un contexte en tant que décorateur}
+  En héritant de \texttt{contextlib.ContextDecorator} quand on définit un contexte, il peut aussi être utilisé comme décorateur.
+
+  Les contextes définis avec \texttt{contextlib.contextmanager} ont aussi cette propriété.
+\end{frame}

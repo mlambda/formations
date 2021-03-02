@@ -1,0 +1,113 @@
+\begin{frame}{Introduction}
+  Buts~:
+  \begin{itemize}[<+->]
+    \item S'assurer de la qualité du logiciel
+    \item Mesurer les régressions à chaque évolution
+    \item Pouvoir refactorer avec assurance
+    \item Documenter le code avec des exemples d'utilisation de chaque partie de la base de code
+    \item Documenter des hypothèses faites sur le code
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Développements pilotés par les tests}
+  \emph{Test Driven Development (TDD)} en anglais.
+  
+  Approche intéressante de développement basée sur un cycle~:
+
+  \begin{enumerate}[<+->]
+    \item Ajout d'un test unitaire qui tend vers l'assurance que les besoins fonctionnels seront respectés
+    \item Vérification que le test échoue
+    \item Création du code minimal qui résout le test
+    \item Vérification que tous les tests passent
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Différents types de tests}
+  Fonctionnels~:
+
+  \begin{description}[<+->]
+    \item[Unitaire] Vérifie une petite unité de code (fonction ou classe)
+    \item[Intégration] Teste la combinaison d'unités moyennes de code
+    \item[Régression] S'assure que le niveau de qualité ne baisse pas
+    \item[Smoke] Vérifie des fonctionnalités critiques (et basiques)
+  \end{description}
+
+  \onslide<+->{Non-fonctionnels~:}
+
+  \begin{description}[<+->]
+    \item[Stress] Mesure la résistance à une haute charge du système
+    \item[Récupération] Mesure la capacité du système à se restaurer
+    \item[Sécurité] Contrôle l'absence de failles
+    \item[…]
+  \end{description}
+\end{frame}
+
+\begin{frame}{Tests unitaires}
+
+  Le cœur des tests~: ils permettent de vérifier que les briques de base fonctionnent.
+
+  \begin{itemize}[<+->]
+    \item Habituellement plusieurs tests par fonction \alert{de l'API publique}
+    \item Chaque test s'assure que les pré et post conditions et invariants sont respectés
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tests d'intégration}
+  \begin{itemize}[<+->]
+    \item Vérifient que plusieurs sous-parties du système fonctionnent correctement
+    \item Très importants pour pouvoir modifier le système avec assurance
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tests de régression}
+  \begin{itemize}[<+->]
+    \item Combinaison des tests unitaires et d'intégration
+    \item Contiennent aussi des tests pour les bugs connus (1 bug résolu = 1 test)
+    \item Permet de vérifier que la qualité logicielle est maintenue après une modification
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Quelques techniques de test}
+  \begin{description}[<+->]
+    \item[Mocking] Remplacer un module ou une fonction par une version testable
+    \item[Fuzzing] Proposer de nombreuses entrées aléatoires à un test pour détecter des bugs
+    \item[Mutation] Faire muter le programme. La suite de test devrait échouer après mutation
+  \end{description}
+\end{frame}
+
+\begin{frame}{Bonnes pratiques}
+  \begin{itemize}[<+->]
+    \item Structure en 4 temps~: préparation, exécution, validation, nettoyage
+    \item Créer des tests indépendants
+    \item Ne tester que l'API publique, jamais un détail d'implémentation
+    \item Garder les tests rapides
+    \item Utiliser les tests par mutation ou le fuzzing
+    \item Pratiquer l'inversion de contrôle
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Inversion de contrôle --- Couplage}
+  \mintedpycode{python/testing/coupling}
+\end{frame}
+
+\begin{frame}{Inversion de contrôle --- Cohésion}
+  Bonne pratique~: chaque partie est testable, et remplaçable facilement.
+
+  La logique d'instanciation est différente en fonction du contexte d'utilisation.
+
+  Permet l'injection de dépendances.
+
+  \mintedpycode{python/testing/cohesion}
+\end{frame}
+
+\begin{frame}{Mise en place en Python}
+  \begin{description}[<+->]
+    \item[\texttt{unittest}] Cadre logiciel de tests de la librairie standard
+    \item[\texttt{pytest}] Cadre logiciel de tests le plus populaire
+    \item[\texttt{hypothesis}] Fuzzing, stratégies de génération
+    \item[\texttt{mutmut}] Tests par mutations
+    \item[\texttt{deal}] Contrats
+  \end{description}
+
+  \onslide<+->{Les trois premières bibliothèques ont de nombreuses extensions.}
+\end{frame}

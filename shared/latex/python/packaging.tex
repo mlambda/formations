@@ -1,0 +1,79 @@
+\begin{frame}{Introduction}
+  Buts~:
+  \begin{itemize}[<+->]
+    \item Pouvoir publier un logiciel Python sous forme de paquet sur PyPI
+    \item Bien définir ses dépendances et méta-données
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paquet Python}
+  Pour transformer un dossier contenant des sources Python en paquet~:
+
+  \begin{itemize}[<+->]
+    \item Rajouter des fichier \texttt{\_\_init\_\_.py} dans chaque dossier de source
+    \item Ajouter des méta-données (dépendantes de l'outil de build)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Outils}
+
+  \begin{itemize}[<+->]
+    \item \texttt{setup.py}, \& \texttt{setuptools}
+    \item \texttt{poetry}
+  \end{itemize}
+
+  \onslide<+->{\texttt{poetry} est recommandé actuellement. Outil simple, moderne et complet.}
+\end{frame}
+
+\begin{frame}{Structure d'un paquet géré par \texttt{poetry}}
+  \mintedcustomcode{python/packaging/structure}{console}
+\end{frame}
+
+\begin{frame}{Fichier \texttt{pyproject.toml}}
+  Standard depuis la PEP 518~:
+
+  \begin{itemize}[<+->]
+    \item Définit l'outil de build du paquet à utiliser
+    \item Contient les méta-données
+    \item Spécifie les dépendances, y compris de développement et extras
+    \item En cours d'adoption par toute la chaîne d'outillage
+    \item Déjà utilisable car supporté par \texttt{pip}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple de fichier \texttt{pyproject.toml}}
+  \mintedcustomcode{python/packaging/example}{toml}
+\end{frame}
+
+\begin{frame}{Utilisation de \texttt{poetry}}
+  Quelques \bluelink{https://python-poetry.org/docs/cli/}{commandes} utiles~:
+  \begin{description}[<+->]
+    \item[\texttt{poetry init}] Crée interactivement un fichier \texttt{pyproject.toml}
+    \item[\texttt{poetry add}] Ajoute une dépendance
+    \item[\texttt{poetry remove}] Enlève une dépendance
+    \item[\texttt{poetry update}] Met à jour les dépendances
+    \item[\texttt{poetry install}] Installe toutes les dépendances
+    \item[\texttt{poetry version}] Affiche ou modifie la version du paquet
+    \item[\texttt{poetry build}] Construit la distribution du paquet
+    \item[\texttt{poetry publish}] Publie le paquet sur PyPI
+  \end{description}
+\end{frame}
+
+\begin{frame}{Dépôt PyPI}
+  Dépôt des projets Python~:
+
+  \begin{description}[<+->]
+    \item[Projets] ~300k
+    \item[Versions] ~2M5
+    \item[Fichiers] ~4M
+    \item[Utilisateurs] ~500k
+  \end{description}
+\end{frame}
+
+\begin{frame}{Intérêt}
+  \begin{itemize}[<+->]
+    \item Utilisation depuis \texttt{pip}, \texttt{poetry}, \texttt{Pipenv}, …
+    \item Immuable
+    \item Possibilité d'utilisation depuis la CI
+  \end{itemize}
+\end{frame}

@@ -1,0 +1,96 @@
+\begin{frame}{Introduction}
+  Buts~:
+
+  \begin{itemize}[<+->]
+    \item Transformer des données sans stocker le résultat en mémoire
+    \item Donc traiter de grands volumes de données facilement
+    \item Remplacer avantageusement les listes pour certaines utilisations
+    \item Plus simples à créer qu'un itérateur classique (supertype de générateur)
+    \item Offre des possibilités avancées de communication
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Intuition}
+  Les générateurs \alert{stockent un algorithme} pour fabriquer des données.
+
+  Cet algorithme n'est utilisé \alert{que lorsque la valeur est demandée}, pas avant (\emph{lazy evaluation}).
+\end{frame}
+
+\begin{frame}{Hiérarchie de l'itération en Python}
+
+  Du plus général au plus spécifique~:
+
+  \begin{description}[<+->]
+    \item[Iterable] Méthode \texttt{\_\_iter\_\_}
+    \item[Iterator] Méthodes \texttt{\_\_iter\_\_} et \texttt{\_\_next\_\_}
+    \item[Generator] Méthodes \texttt{send}, \texttt{throw}, \texttt{close}, \texttt{\_\_iter\_\_} et \texttt{\_\_next\_\_}
+  \end{description}  
+
+  \onslide<+->{Ces méthodes doivent implémenter les contrats suivants~:}
+
+  \begin{description}[<+->]
+    \item[\texttt{\_\_iter\_\_}] Renvoie un itérateur
+    \item[\texttt{\_\_next\_\_}] Demande l'objet suivant à un itérateur
+  \end{description}
+
+  \onslide<+->{Nous verrons plus loin ce que font \texttt{send}, \texttt{throw} \& \texttt{close}.}
+\end{frame}
+
+\begin{frame}{Création d'un générateur}
+  Deux options~:
+
+  \begin{itemize}[<+->]
+    \item Par compréhension
+    \item Avec une fonction et les mots clefs \texttt{yield} et \texttt{yield from}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple --- Par compréhension}
+  \mintedpycode{python/generators/comprehension}
+\end{frame}
+
+\begin{frame}{Exemple --- Par une fonction utilisant yield}
+  \mintedpycode{python/generators/function}
+\end{frame}
+
+\begin{frame}{Fonctions qui acceptent des générateurs}
+  Beaucoup de fonctions acceptent des générateurs. Quand c'est le seul argument, pas besoin de parenthèses~:
+
+  \mintedpycode{python/generators/builtins}
+\end{frame}
+
+\begin{frame}{Utilisation d'un générateur}
+
+  Comme pour un itérateur~:
+
+  \begin{itemize}[<+->]
+    \item Itération à l'aide d'une boucle \texttt{for} \mintedpycode{python/generators/for}
+    \item Manuellement avec la méthode \texttt{next} \mintedpycode{python/generators/manual}
+    \item \alert{Utilisation unique}, une fois épuisé, il faut recréer l'itérateur pour ré-itérer
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Chaînage de générateurs}
+  \mintedpycode{python/generators/chain}
+
+  Ou avec une compréhension~:
+
+  \mintedpycode{python/generators/chain-short}
+\end{frame}
+
+\begin{frame}{Fonctions avancées}
+
+  \texttt{yield} retourne les valeurs qu'on lui envoie avec \texttt{send}~:
+
+  \mintedpycode{python/generators/send}
+
+  \texttt{next(generator)} est équivalent à \texttt{generator.send(None)}
+
+  De la même manière, les méthodes \texttt{throw} et \texttt{close} envoient des exceptions au point de pause.
+\end{frame}
+
+\begin{frame}{Mot clef \texttt{yield from}}
+  Le mot clef \texttt{yield from} permet de \texttt{yield} depuis un autre générateur~:
+
+  \mintedpycode{python/generators/yieldfrom}
+\end{frame}

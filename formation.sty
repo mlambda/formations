@@ -164,6 +164,17 @@
   \end{figure}%
 }
 
+\newcommand{\mintedcustom}[3]{%
+  \inputminted[fontsize=\scriptsize,bgcolor=pythonbg,framesep=1mm]{#2}{code/#1.#2}%
+  \vspace{-1cm}%
+  \inputminted[fontsize=\scriptsize,bgcolor=returnbg,framesep=1mm]{#3}{code/#1.#3}%
+}
+
+\newcommand{\mintedcustomcode}[2]{%
+  \inputminted[fontsize=\scriptsize,bgcolor=pythonbg,framesep=1mm]{#2}{code/#1.#2}%
+  \vspace{-1cm}%
+}
+
 \newcommand{\mintedpy}[1]{%
   \inputminted[fontsize=\scriptsize,bgcolor=pythonbg,framesep=1mm]{python}{code/#1.py}%
   \vspace{-1cm}%
@@ -172,9 +183,10 @@
 
 \newcommand{\mintedpycode}[1]{%
   \inputminted[fontsize=\scriptsize,bgcolor=pythonbg,framesep=1mm]{python}{code/#1.py}%
+  \vspace{-1cm}%
 }
 
-\definecolor{pythonbg}{rgb}{0.63,0.84,0.71}
+\definecolor{pythonbg}{rgb}{0.9,1,0.95}
 \definecolor{returnbg}{rgb}{0.88,0.88,0.88}
 
 \newcommand{\tw}{\textwidth}
