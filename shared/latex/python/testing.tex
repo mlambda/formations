@@ -53,9 +53,17 @@
 \end{frame}
 
 \begin{frame}{Tests d'intégration}
+
   \begin{itemize}[<+->]
     \item Vérifient que plusieurs sous-parties du système fonctionnent correctement
     \item Très importants pour pouvoir modifier le système avec assurance
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tests bout à bout}
+  \begin{itemize}[<+->]
+    \item Tests de la chaîne complète
+    \item Répliquent au plus près les cas d'utilisations réels
   \end{itemize}
 \end{frame}
 
@@ -69,10 +77,47 @@
 
 \begin{frame}{Quelques techniques de test}
   \begin{description}[<+->]
-    \item[Mocking] Remplacer un module ou une fonction par une version testable
-    \item[Fuzzing] Proposer de nombreuses entrées aléatoires à un test pour détecter des bugs
-    \item[Mutation] Faire muter le programme. La suite de test devrait échouer après mutation
+    \item[Simulacres] Remplacer des modules ou fonctions par des simulacres
+    \item[Génération] Proposer de nombreuses entrées aléatoires à un test pour détecter des bugs
+    \item[Mutations] Faire muter le programme. La suite de test devrait échouer après mutation
+    \item[Contrats] Souvent basés sur la génération, ils explicitent des invariants et pré/post conditions
   \end{description}
+\end{frame}
+
+\begin{frame}{Techniques de test --- Simulacres}
+  \begin{itemize}[<+->]
+    \item Remplacent une classe, une méthode, un attribut de module par un objet factice
+    \item Permettent de tester des systèmes non accessibles pendant les tests
+    \item Implémentés par \texttt{unittest.mock} ou \texttt{pytest.monkeypatching}.
+  \end{itemize}
+
+  \onslide<+->{\mintedpycode{python/testing/mocking}}
+\end{frame}
+
+\begin{frame}{Techniques de test --- Génération}
+  \begin{itemize}[<+->]
+    \item Souvent couplée aux vérifications de propriétés
+    \item Met l'emphase sur la découverte des pré/post conditions et des invariants
+    \item La création de cas est automatique
+    \item Réduction des cas d'erreurs à des cas simples
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Techniques de test --- Mutations}
+  \begin{itemize}[<+->]
+    \item Hypothèse qu'une bonne suite de tests échoue sur un code différent
+    \item Effectue les mutations les plus subtiles possibles
+    \item Compte les tests échoués et non terminés
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Techniques de test --- Contrats}
+  \begin{itemize}[<+->]
+    \item Extension du principe de vérification de propriétés
+    \item Rend explicite beaucoup d'attentes sur les fonctions et classes
+  \end{itemize}
+
+  \mintedpycode{python/testing/contracts}
 \end{frame}
 
 \begin{frame}{Bonnes pratiques}
