@@ -1,4 +1,5 @@
 default_titles:
+  cli: Interfaces en ligne de commande
   context-managers: Gestionnaires de contexte
   decorators: Décorateurs
   deployment: Déploiement
@@ -61,6 +62,8 @@ flavors:
     - tp-packaging
     - deployment
     - /questions
-    - tp-deployment
+    - cli
+    - /questions
+    - tp-cli
 title: Langage Python
 version: 3
