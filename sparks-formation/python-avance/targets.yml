@@ -32,5 +32,11 @@
   title: Jour 3
   sections:
     - path: python
+      flavor: performance
+      title: Performances
+
+    - path: python
       flavor: production
       title: Passage en production
+
+    - contact
