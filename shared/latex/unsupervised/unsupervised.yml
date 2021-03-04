@@ -40,6 +40,7 @@ flavors:
     - pca-variantes: null
     - tsne-umap: null
     - demo-dim-reduce: null
+    - tp-dim-reduce: Travaux Pratiques
     - /questions
     - clustering
     - kmeans-gaussian: null
@@ -51,12 +52,11 @@ flavors:
     - /questions
     - pca-classification-hierarchique-composantes-principales: Méthodes hybrides
     - pca-inverse: null
+    - tp-clustering: null
     - /questions
     - anomaly-detection-light
     - demo-anomaly-detect: null
     - /questions
-    - tp-dim-reduce: Travaux Pratiques
-    - tp-clustering: null
   dimreduce:
     - dimensionality-reduction
     - pca-lda
