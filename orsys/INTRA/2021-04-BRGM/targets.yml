@@ -1,0 +1,68 @@
+- name: j1
+  title: Jour 1 --- Introduction au Machine Learning
+  sections:
+    - path: about
+      title: Machine Learning
+      flavor: orsys-4j
+
+    - path: tools
+      flavor: init-python
+
+    - path: machine-learning
+      flavor: bda
+
+- name: j2
+  title: Jour 2 --- TensorFlow pour le Deep Learning
+  sections:
+    - title: Réseaux de neurones
+      path: neural-networks
+      flavor: deep-intro
+
+    - path: tools
+      flavor: detailed
+
+    - title: TensorFlow 2
+      path: tf-keras
+      flavor: tf
+
+    - title: Travaux Pratiques --- Réseau de neurones avec TensorFlow
+      path: neural-networks
+      flavor: tp-tf-pur
+
+- name: j3
+  title: Jour 3 --- Traitement d'images et auto-encodeurs
+  sections:
+    - title: Keras
+      path: tf-keras
+      flavor: keras
+
+    - title: Réseaux de convolutions
+      path: neural-networks
+      flavor: cnn
+
+    - path: auto-encoders
+      flavor: full
+
+    - path: reinforcement-learning
+      flavor: full
+
+
+- name: j4
+  title: Jour 4 --- Langage et traitement de séquences
+  sections:
+    - path: natural-language-processing
+      flavor: intro-nlp
+
+    - title: Données séquentielles
+      path: sequential-data
+      flavor: intro
+
+    - title: Réseaux de neurones récurrents
+      path: neural-networks
+      flavor: recurrent
+
+    - title: Réseaux transformeurs
+      path: neural-networks
+      flavor: transformer
+
+    - contact

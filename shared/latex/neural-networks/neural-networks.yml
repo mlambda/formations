@@ -41,6 +41,7 @@ flavors:
     - optimize
     - deep-optimize
     - regularisation
+    - online-demo 
     - gan-intro
     - gan-model
     - cnn-data
@@ -53,6 +54,7 @@ flavors:
     - optimize
     - deep-optimize
     - regularisation
+    - online-demo
     - cnn-data
     - cnn-model
     - demo-cnn
@@ -68,6 +70,7 @@ flavors:
     - optimize
     - deep-optimize
     - regularisation
+    - online-demo
     - /questions
   gan-intro:
     - gan-intro
@@ -75,6 +78,7 @@ flavors:
     - /questions
   intro-cnn:
     - intro
+    - online-demo
     - cnn-data
     - cnn-model
     - /questions
@@ -84,6 +88,7 @@ flavors:
     - optimize
     - deep-optimize
     - regularisation
+    - online-demo
     - cnn-data
     - cnn-model
     - /questions
