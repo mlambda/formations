@@ -1,5 +1,0 @@
-- name: j1
-  title: Jour 1 --- Titre
-  sections:
-    - path: machine-learning
-      flavor: full
