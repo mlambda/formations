@@ -7,3 +7,16 @@
 
     - path: python
       flavor: intro
+
+- name: j2
+  title: Jour 2
+  sections:
+    - path: python
+      flavor: linting
+      title: Vérifications en Python
+
+    - path: python
+      flavor: production-light
+      title: Structure d'un projet Python
+
+    - contact

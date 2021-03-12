@@ -65,5 +65,14 @@ flavors:
     - cli
     - /questions
     - tp-cli
+  production-light:
+    - environment
+    - /questions
+    - tp-environment
+    - packaging
+    - /questions
+    - cli
+    - /questions
+    - tp-cli-light
 title: Langage Python
 version: 3
