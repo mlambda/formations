@@ -1,0 +1,17 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \node [output,circle] (D) at (0, 0) {D};
+    \node [output,circle] (A) at (0, 2) {A};
+    \node [output,circle] (B) at (2, 2) {B};
+    \node [output,circle] (C) at (2, 0) {C};
+    \path[->,>=stealth] (A.south) edge node [left] {} (D);
+    \path[->,>=stealth] (B.south) edge node [left] {} (C);
+    \path[->,>=stealth] (B.south west) edge node [left] {} (D);
+    \path[->,>=stealth] (D.south east) edge [bend right=25] node [left] {} (C.south west);
+    \path[->,>=stealth] (C.north west) edge [bend right=25] node [left] {} (D.north east);
+  \end{tikzpicture}
+\end{document}

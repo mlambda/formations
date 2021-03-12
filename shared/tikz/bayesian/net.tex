@@ -1,0 +1,18 @@
+\documentclass[beamer,crop,tikz]{standalone}
+\usepackage{formation}
+\usetickzlibrary{matrix}
+
+\begin{document}
+  \begin{tikzpicture}
+    \matrix[array](TA){
+        
+    }
+    \node [output,circle] (A) at (0, 1.5) {A};
+    \node [output,circle] (P) at (2, 1.5) {P};
+    \node [output,circle] (H) at (1, 0) {H};
+    \path[->,>=stealth] (A.south east) edge node [left] {} (H.north west);
+    \path[->,>=stealth] (P.south west) edge node [left] {} (H.north east);
+    \path[->,>=stealth] (P.west) edge node [left] {} (A.east);
+    
+  \end{tikzpicture}
+\end{document}

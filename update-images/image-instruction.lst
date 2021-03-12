@@ -41,8 +41,8 @@
 
 
 TIKZ
-- [ ] ["", "", "tikz", "TODO", "graph-oriented"]
-- [ ] ["", "", "tikz", "TODO", "bayesian-net"]
+- [x] ["", "", "tikz", "graph/oriented", "graph-oriented"]
+- [ ] ["", "", "tikz", "bayesian/net", "bayesian-net"]
 - [ ] ["", "", "tikz", "TODO", "regression-tree"]
 - [ ] ["", "", "tikz", "TODO", "decision-tree-2"]
 - [ ] ["", "", "tikz", "TODO", "neuron-model"]
@@ -69,6 +69,7 @@ MATPLOTLIB/TP
 - [x] ["Logo Amazon", "Amazon", "Public Domain", "logos/amazon", "amazon-ai-favor-men"]
 - [x] ["Logo Amazon", "Amazon", "Public Domain", "logos/amazon", "amazon-mechanical-turc"]
 - [x] ["Logo Atari", "Atari", "Public Domain", "logos/atari", "atari"]
+- [x] ["Usine à anti-matière au CERN", "SimonWaldherr https://commons.wikimedia.org/w/index.php?curid=82438776", "CC BY-SA 4.0", "CERN-Antimatter-Factory", "usine-a-gaz"]
 - [ ] ["", "", "", "", "alphago-mcts"]
 - [ ] ["", "", "", "", "alphago-policy"]
 - [ ] ["", "", "", "", "alphago-sedol"]
@@ -274,7 +275,6 @@ MATPLOTLIB/TP
 - [ ] ["", "", "", "", "trends-ia-tektonik"]
 - [ ] ["", "", "", "", "uber-crash-velo"]
 - [ ] ["", "", "", "", "universal-approximation"]
-- [x] ["Usine à anti-matière au CERN", "SimonWaldherr https://commons.wikimedia.org/w/index.php?curid=82438776", "CC BY-SA 4.0", "CERN-Antimatter-Factory", "usine-a-gaz"]
 - [ ] ["", "", "", "", "video-frames"]
 - [ ] ["", "", "", "", "visual-cortex"]
 - [ ] ["", "", "", "", "voiture-autonome"]
