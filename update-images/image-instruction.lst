@@ -42,7 +42,7 @@
 
 TIKZ
 - [x] ["", "", "tikz", "graph/oriented", "graph-oriented"]
-- [ ] ["", "", "tikz", "bayesian/net", "bayesian-net"]
+- [x] ["", "", "tikz", "bayesian/net", "bayesian-net"]
 - [ ] ["", "", "tikz", "TODO", "regression-tree"]
 - [ ] ["", "", "tikz", "TODO", "decision-tree-2"]
 - [ ] ["", "", "tikz", "TODO", "neuron-model"]
