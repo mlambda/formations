@@ -181,7 +181,7 @@ test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 
 [[package]]
 name = "deckz"
-version = "11.1.1"
+version = "11.1.2"
 description = "Tool to handle multiple beamer decks."
 category = "main"
 optional = false
@@ -972,7 +972,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d8463042623db598dd6bc94a46592dad3e84b4499cba101727153dec906b153b"
+content-hash = "a4d339021c430c66713b5e5f5da8708c56a05ae4464953ada518da23d7b2bef7"
 
 [metadata.files]
 aiohttp = [
@@ -1075,8 +1075,8 @@ commonmark = [
     {file = "commonmark-0.9.1.tar.gz", hash = "sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"},
 ]
 deckz = [
-    {file = "deckz-11.1.1-py3-none-any.whl", hash = "sha256:3dd31d40d315e3bb87369161c2f723cab74f9db7243661f6729644eb1fda2066"},
-    {file = "deckz-11.1.1.tar.gz", hash = "sha256:1203a57c5f20803aa262e5f1954af3fc7f1ea0b6fcdedc6f5592d0cd2027d2b7"},
+    {file = "deckz-11.1.2-py3-none-any.whl", hash = "sha256:134d724e25470618ef895dd583cd8bb4904c62069e087c174b75c34bfe7e66b7"},
+    {file = "deckz-11.1.2.tar.gz", hash = "sha256:4e5ebc5d9a01efb3f7bf4dda7236bfa8527651cc47e7cd3a2ed7ae1e9a92ba5a"},
 ]
 dulwich = [
     {file = "dulwich-0.20.20-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:da920a0d2ff736b89a403f8d5413c78fbac015fbc37775cd862820c868b31cad"},

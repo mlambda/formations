@@ -7,8 +7,8 @@ name = "slides"
 version = "1.0.0"
 
 [tool.poetry.dependencies]
+deckz = "^11.1.2"
 Pygments = "^2.6.1"
-deckz = "^11.1.1"
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
