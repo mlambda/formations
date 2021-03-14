@@ -1,18 +1,44 @@
 \documentclass[beamer,crop,tikz]{standalone}
 \usepackage{formation}
-\usetickzlibrary{matrix}
-
+\usetikzlibrary{positioning}
 \begin{document}
   \begin{tikzpicture}
-    \matrix[array](TA){
-        
-    }
-    \node [output,circle] (A) at (0, 1.5) {A};
-    \node [output,circle] (P) at (2, 1.5) {P};
-    \node [output,circle] (H) at (1, 0) {H};
-    \path[->,>=stealth] (A.south east) edge node [left] {} (H.north west);
-    \path[->,>=stealth] (P.south west) edge node [left] {} (H.north east);
-    \path[->,>=stealth] (P.west) edge node [left] {} (A.east);
-    
+    \node [output,circle] (A) at (-1, 1.5) {A};
+    \node [output,circle] (P) at (1, 1.5) {P};
+    \node [output,circle] (H) at (0, 0) {H};
+    \node [left=of A] (TA) {
+      \begin{tabular}{c S[table-format=2.2] S[table-format=2.2]}
+        & \multicolumn{2}{c}{\textbf{Arroseur}} \\
+        \cmidrule{2-3}
+        \textbf{Pluie} & \textbf{Vrai} & \textbf{Faux} \\
+        \midrule
+        \textbf{Faux} & 0.4 & 0.6 \\
+        \textbf{Vrai} & 0.01 & 0.99 \\
+      \end{tabular}
+    };
+    \node [right=of P] (TP) {
+      \begin{tabular}{c c}
+        \multicolumn{2}{c}{\textbf{Pluie}} \\
+        \midrule
+        \textbf{Vrai} & \textbf{Faux} \\
+        \midrule
+        0.2 & 0.8 \\
+      \end{tabular}
+    };
+    \node [below=of H] (TH) {
+      \begin{tabular}{c c S[table-format=3.2] S[table-format=3.2]}
+        & & \multicolumn{2}{c}{\textbf{Herbe mouillée}} \\
+        \cmidrule{3-4}
+        \textbf{Arroseur} & \textbf{Pluie} & \textbf{Vrai} & \textbf{Faux} \\
+        \midrule
+        \textbf{Faux} & \textbf{Faux} & 0 & 1 \\
+        \textbf{Vrai} & \textbf{Vrai} & 0.9 & 0.2 \\
+        \textbf{Vrai} & \textbf{Faux} & 0.9 & 0.1 \\
+        \textbf{Vrai} & \textbf{Vrai} & 0.99 & 0.01 \\
+      \end{tabular}
+    };
+    \draw[->,>=stealth] (A) -- (H);
+    \draw[->,>=stealth] (P) -- (H);
+    \draw[->,>=stealth] (P) -- (A);
   \end{tikzpicture}
 \end{document}
