@@ -9,15 +9,12 @@ default_titles:
   metaclasses: Méta-classes
   packaging: Création de paquets Python
   pytest: \texttt{pytest}
-  quizz: Notions de base de Python
   testing: Tests
   unittest: \texttt{unittest}
 flavors:
   intro:
     - intro
     - /questions
-  quizz:
-    - quizz
   warmup:
     - warmup
   advanced:
