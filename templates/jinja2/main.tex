@@ -17,6 +17,8 @@
     \url{#1}%
   }%
 }
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[a4paper]
 %% endif
 
 \setbeamertemplate{frame footer}{\CompanyName{} --- \DeckTitle}
@@ -30,7 +32,6 @@
 }
 \date{}
 \title{\DeckTitle}
-\subtitle{\V{target.title}}
 
 \begin{document}
 
@@ -38,13 +39,19 @@
 
 \maketitle
 
-%% if "programme" not in config or config["programme"]:
+%% if toc is defined and toc:
 \begin{frame}{Programme}
 \tableofcontents[subsectionstyle=hide]
 \end{frame}
 %% endif
 
-%% for section in target.sections:
+%% for part in target.parts:
+%% if part.title != None:
+\begin{frame}[standout]
+  \V{part.title}
+\end{frame}
+%% endif
+%% for section in part.sections:
 %% if section.title != None:
 \section{\V{section.title}}
 %% endif
@@ -53,6 +60,7 @@
 \subsection{\V{section_input.title}}
 %% endif
 \input{\V{section_input.path}}
+%% endfor
 %% endfor
 %% endfor
 
