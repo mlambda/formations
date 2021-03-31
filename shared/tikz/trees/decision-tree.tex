@@ -1,0 +1,20 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+\usetikzlibrary{trees}
+
+\begin{document}
+  \begin{tikzpicture}[
+    level 1/.style={sibling distance=16em},
+    level 2/.style={sibling distance=8em}]
+    \node [input] {Couleur = jaune}
+    child { node [hencoder] {Numérique}
+      child { node [output] {Continue} }
+      child { node [output] {Discrète} }
+    }
+    child { node [hencoder] {Catégorielle}
+      child { node [output] {Ordinale} }
+      child { node [output] {Nominale} }
+    };
+  \end{tikzpicture}
+\end{document}

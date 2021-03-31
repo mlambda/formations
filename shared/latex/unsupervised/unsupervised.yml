@@ -25,14 +25,14 @@ flavors:
     - introduction
     - dimensionality-reduction
     - pca-lda
-    - demo-dim-reduce
+    - demo-dim-reduce: null
     - kmeans-gaussian
-    - demo-clustering
+    - dbscan
+    - clustering-conclusion
+    - demo-clustering: null
     - anomaly-detection-light
-    - demo-anomaly-detect
+    - demo-anomaly-detect: null
     - /questions
-    - tp-dim-reduce: Travaux Pratiques
-    - tp-clustering: null
   bda:
     - introduction
     - dimensionality-reduction
