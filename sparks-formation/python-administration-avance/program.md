@@ -79,7 +79,7 @@ Il est très intéressant en administration système de créer des outils en lig
 
 ### Éléments complémentaires d'administration système
 
-Cette partie présente des éléments souvent requis en administration système, pour pour programmer des sauvegardes par exemple.
+Cette partie présente des éléments souvent requis en administration système, pour programmer des sauvegardes par exemple.
 
 - Création d'archives
 - Écriture dans une base de données
