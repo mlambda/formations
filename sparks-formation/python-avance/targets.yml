@@ -4,39 +4,32 @@
     - path: about
       flavor: sparks-formation-3j
 
-    - path: python
-      flavor: warmup
-      title: Rappels \& échauffement
+    - path: python/warmup
+      flavor: full
 
-    - path: python
-      flavor: advanced
-      title: Éléments avancés de Python
+    - path: python/advanced
+      flavor: full
 
-    - path: python
-      flavor: collections
-      title: Collections avancées en Python
+    - path: python/collections
+      flavor: full
 
 - name: j2
   title: Jour 2
   sections:
 
-    - path: python
-      title: Tests
-      flavor: testing
+    - path: python/testing
+      flavor: full
 
-    - path: python
-      flavor: linting
-      title: Respecter des conventions en Python
+    - path: python/linting
+      flavor: full
 
 - name: j3
   title: Jour 3
   sections:
-    - path: python
-      flavor: performance
-      title: Performances
+    - path: python/performance
+      flavor: full
 
-    - path: python
-      flavor: production
-      title: Passage en production
+    - path: python/production
+      flavor: full
 
     - contact

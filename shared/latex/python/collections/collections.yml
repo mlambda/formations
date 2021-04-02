@@ -1,0 +1,7 @@
+flavors:
+  full:
+    - collections
+    - /questions
+    - tp-collections
+title: Collections avancées en Python
+version: 3

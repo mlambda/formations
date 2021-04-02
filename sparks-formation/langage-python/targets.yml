@@ -2,21 +2,18 @@
   title: Jour 1 --- Introduction à Python
   sections:
     - path: about
-      title: Langage Python
       flavor: sparks-formation-3j
 
-    - path: python
-      flavor: intro
+    - path: python/intro
+      flavor: full
 
 - name: j2
-  title: Jour 2
+  title: Jour 2 --- Ingénierie
   sections:
-    - path: python
-      flavor: linting
-      title: Vérifications en Python
+    - path: python/linting
+      flavor: full
 
-    - path: python
-      flavor: production-light
-      title: Structure d'un projet Python
+    - path: python/production
+      flavor: light
 
     - contact

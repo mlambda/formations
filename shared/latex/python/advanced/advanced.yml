@@ -1,0 +1,21 @@
+default_titles:
+  context-managers: Gestionnaires de contexte
+  decorators: Décorateurs
+  generators: Générateurs
+  metaclasses: Méta-classes
+flavors:
+  full:
+    - generators
+    - /questions
+    - tp-generators
+    - decorators
+    - /questions
+    - tp-decorators
+    - metaclasses
+    - /questions
+    - tp-metaclasses
+    - context-managers
+    - /questions
+    - tp-context-managers
+title: Éléments avancés de Python
+version: 3

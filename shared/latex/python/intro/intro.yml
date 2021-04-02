@@ -1,0 +1,6 @@
+flavors:
+  full:
+    - intro
+    - /questions
+title: Introduction au langage Python
+version: 3

@@ -1,0 +1,7 @@
+flavors:
+  full:
+    - linting
+    - /questions
+    - tp-linting
+title: Vérifications en Python
+version: 3

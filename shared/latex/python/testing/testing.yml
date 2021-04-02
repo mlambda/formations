@@ -1,0 +1,15 @@
+default_titles:
+  pytest: \texttt{pytest}
+  testing: Principes généraux
+  unittest: \texttt{unittest}
+flavors:
+  full:
+    - testing
+    - /questions
+    - unittest
+    - /questions
+    - pytest
+    - /questions
+    - tp-testing
+title: Tests
+version: 3
