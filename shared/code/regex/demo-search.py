@@ -1,7 +1,8 @@
 import re
+
+
 pattern = "a.y"
-test_string = 'baaabyys'
+test_string = "baaabyys"
 result = re.search(pattern, test_string)
-print("Capturé depuis le caractère",result.start(),
-      "à",result.end())
-print("Groupe capturé : ",result.group())
+print(f"Capture du caractère {result.start()} à {result.end()}")
+print(f"Groupe capturé : {result.group()!r}")

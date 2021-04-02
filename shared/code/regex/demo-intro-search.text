@@ -1,0 +1,6 @@
+a.*s       a matché
+^b         a matché
+s$         a matché
+a+b        a matché
+a{4,5}b    n'a pas matché
+y*b        a matché

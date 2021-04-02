@@ -1,18 +1,16 @@
 - name: j1
   title: Jour 1 --- Une approche classique en Text Mining
   sections:
-    - title: Text Mining par la Pratique
-      path: about
+    - path: about
       flavor: orsys-3j
 
-    - title: Traitements Automatique du Langage
-      path: natural-language-processing
+    - path: natural-language-processing
       flavor: full
 
 - name: j2
   title: Jour 2 --- Classification Supervisée de Texte
   sections:
-    - title: Machine Learning
+    - title: Fondamentaux du machine learning
       path: machine-learning
       flavor: intro
 
@@ -27,14 +25,16 @@
       path: sequential-data
       flavor: intro
 
-    - title: TensorFlow Keras
+    - title: TensorFlow \& Keras
       path: tf-keras
       flavor: full
 
-    - title: Réseaux Réccurents
+    - title: Réseaux de neurones récurrents
       path: neural-networks
       flavor: recurrent-text
 
-    - title: Transformer Network
+    - title: Transformeurs
       path: neural-networks
       flavor: transformer
+
+    - path: contact

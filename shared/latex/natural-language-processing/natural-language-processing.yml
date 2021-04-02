@@ -49,5 +49,5 @@ flavors:
     - vectors
     - /questions
     - tp-text-features-engineering
-title: Traitement du texte
+title: Traitement automatique des langues
 version: 3

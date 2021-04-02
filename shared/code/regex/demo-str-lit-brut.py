@@ -1,6 +1,4 @@
-string_lit  =  "hello\nworld"
-string_brut = r"hello\nworld"
-print("Chaine littérale : ")
-print(string_lit)
-print("Chaine brute : ")
-print(string_brut)
+string = "hello\nworld"
+raw_string = r"hello\nworld"
+print(f"Chaîne littérale : {string}")
+print(f"Chaîne brute : {raw_string}")
