@@ -1,0 +1,37 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \node [output,circle] (Q) at (7, 7) {Qualité};
+    \node [output,circle] (S) at (3, 4) {Surface};
+    \node [output,circle] (G) at (11, 4) {Garage};
+    \node [output,circle] (GG) at (1, 2) {Garage};
+    \node [output,circle] (GGG) at (5, 2) {Garage};
+    \node [output,circle] (SS) at (9, 2) {Surface};
+    \node [output,circle] (SSS) at (13, 2) {Surface};
+    \node [output,circle] (P1) at (0, 0) {780};
+    \node [output,circle] (P2) at (2, 0) {700};
+    \node [output,circle] (P3) at (4, 0) {350};
+    \node [output,circle] (P4) at (6, 0) {300};
+    \node [output,circle] (P5) at (8, 0) {220};
+    \node [output,circle] (P6) at (10, 0) {120};
+    \node [output,circle] (P7) at (12, 0) {200};
+    \node [output,circle] (P8) at (14, 0) {100};
+    \path[->,>=stealth] (Q) edge node [left] {bonne} (S);
+    \path[->,>=stealth] (Q) edge node [right] {mauvaise} (G);
+    \path[->,>=stealth] (S) edge node [left] {grande} (GG);
+    \path[->,>=stealth] (S) edge node [right] {petite} (GGG);
+    \path[->,>=stealth] (G) edge node [left] {vrai} (SS);
+    \path[->,>=stealth] (G) edge node [right] {faux} (SSS);
+    \path[->,>=stealth] (GG) edge node [left] {vrai} (P1);
+    \path[->,>=stealth] (GG) edge node [right] {faux} (P2);
+    \path[->,>=stealth] (GGG) edge node [left] {vrai} (P3);
+    \path[->,>=stealth] (GGG) edge node [right] {faux} (P4);
+    \path[->,>=stealth] (SS) edge node [left] {grande} (P5);
+    \path[->,>=stealth] (SS) edge node [right] {petite} (P6);
+    \path[->,>=stealth] (SSS) edge node [left] {grande} (P7);
+    \path[->,>=stealth] (SSS) edge node [right] {petite} (P8);
+  \end{tikzpicture}
+\end{document}

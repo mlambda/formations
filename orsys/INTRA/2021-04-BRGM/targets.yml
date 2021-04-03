@@ -14,6 +14,10 @@
 - name: j2
   title: Jour 2 --- TensorFlow pour le Deep Learning
   sections:
+    - path : supervised
+      title: Classification
+      flavor: classification
+
     - title: Réseaux de neurones
       path: neural-networks
       flavor: deep-intro

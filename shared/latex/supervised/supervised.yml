@@ -76,6 +76,10 @@ flavors:
     - /questions
     - demo-random-forest
     - tp-random-forest
+
+  classification:
+    - classification
+      
   text:
     - proba-rappel
     - naive-bayes

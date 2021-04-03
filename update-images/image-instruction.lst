@@ -41,9 +41,9 @@
 
 
 TIKZ
-- [x] ["", "", "tikz", "graph/oriented", "graph-oriented"]
-- [x] ["", "", "tikz", "bayesian/net", "bayesian-net"]
-- [ ] ["", "", "tikz", "TODO", "regression-tree"]
+- [x] ["Graphe sans cycle", "", "tikz", "graph/oriented", "graph-oriented"]
+- [x] ["Réseau Bayésien", "", "tikz", "bayesian/net", "bayesian-net"]
+- [x] ["Arbre de régression", "", "tikz", "TODO", "regression-tree"]
 - [ ] ["", "", "tikz", "TODO", "decision-tree-2"]
 - [ ] ["", "", "tikz", "TODO", "neuron-model"]
 - [ ] ["", "", "tikz", "TODO", "nn-rnn-comparaison"]
