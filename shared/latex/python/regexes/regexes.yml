@@ -1,0 +1,6 @@
+flavors:
+  full:
+    - regexes
+    - /questions
+title: Expressions régulières
+version: 3

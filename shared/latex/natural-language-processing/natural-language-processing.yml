@@ -1,6 +1,5 @@
 default_titles:
   intro: Natural Language Processing (NLP)
-  pattern: Manipulation d'expressions régulières
   preprocessing: Prétraitements
   recommandation-text: Recommandation de textes
   similarity-text: Similarités de textes
@@ -9,11 +8,12 @@ default_titles:
   tp-text-reco-system: Travaux pratiques recommandation de texte
   tp-text-regex: Travaux pratiques expressions régulières
   vectors: Vecteurs textuels
+  /python/regexes/regexes: Expressions régulières
 flavors:
   full:
     - ml-nlp
     - usages-nlp
-    - pattern
+    - /python/regexes/regexes
     - /questions
     - /tp-help
     - tp-text-regex

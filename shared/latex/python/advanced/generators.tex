@@ -46,17 +46,17 @@
 \end{frame}
 
 \begin{frame}{Exemple --- Par compréhension}
-  \mintedpycode{python/generators/comprehension}
+  \mintedpycode{python/advanced/generators/comprehension}
 \end{frame}
 
 \begin{frame}{Exemple --- Par une fonction utilisant yield}
-  \mintedpycode{python/generators/function}
+  \mintedpycode{python/advanced/generators/function}
 \end{frame}
 
 \begin{frame}{Fonctions qui acceptent des générateurs}
   Beaucoup de fonctions acceptent des générateurs. Quand c'est le seul argument, pas besoin de parenthèses~:
 
-  \mintedpycode{python/generators/builtins}
+  \mintedpycode{python/advanced/generators/builtins}
 \end{frame}
 
 \begin{frame}{Utilisation d'un générateur}
@@ -64,25 +64,25 @@
   Comme pour un itérateur~:
 
   \begin{itemize}[<+->]
-    \item Itération à l'aide d'une boucle \texttt{for} \mintedpycode{python/generators/for}
-    \item Manuellement avec la méthode \texttt{next} \mintedpycode{python/generators/manual}
+    \item Itération à l'aide d'une boucle \texttt{for} \mintedpycode{python/advanced/generators/for}
+    \item Manuellement avec la méthode \texttt{next} \mintedpycode{python/advanced/generators/manual}
     \item \alert{Utilisation unique}, une fois épuisé, il faut recréer l'itérateur pour ré-itérer
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Chaînage de générateurs}
-  \mintedpycode{python/generators/chain}
+  \mintedpycode{python/advanced/generators/chain}
 
   Ou avec une compréhension~:
 
-  \mintedpycode{python/generators/chain-short}
+  \mintedpycode{python/advanced/generators/chain-short}
 \end{frame}
 
 \begin{frame}{Fonctions avancées}
 
   \texttt{yield} retourne les valeurs qu'on lui envoie avec \texttt{send}~:
 
-  \mintedpycode{python/generators/send}
+  \mintedpycode{python/advanced/generators/send}
 
   \texttt{next(generator)} est équivalent à \texttt{generator.send(None)}
 
@@ -92,5 +92,5 @@
 \begin{frame}{Mot clef \texttt{yield from}}
   Le mot clef \texttt{yield from} permet de \texttt{yield} depuis un autre générateur~:
 
-  \mintedpycode{python/generators/yieldfrom}
+  \mintedpycode{python/advanced/generators/yieldfrom}
 \end{frame}
