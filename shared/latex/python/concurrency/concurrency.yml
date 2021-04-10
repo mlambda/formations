@@ -1,0 +1,5 @@
+flavors:
+  full:
+    - concurrency
+title: Programmation concurrente
+version: 3

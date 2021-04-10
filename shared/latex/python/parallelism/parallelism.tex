@@ -1,0 +1,127 @@
+\begin{frame}{Introduction}
+  Buts~:
+  \begin{itemize}[<+(1)->]
+    \item Réaliser plusieurs calculs en même temps
+    \item Raccourcir grandement le traitement de gros volumes de données
+    \item Profiter au mieux des caractéristiques des machines (multiples cœurs)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\texttt{multiprocessing}}
+  Module principal pour le calcul parallèle en Python~:
+
+  \begin{itemize}[<+(1)->]
+    \item Chaque «~unité de calcul~» est un processus système
+    \item Utilisation facile par la classe \texttt{Pool}
+    \item Utilisation customisée par la classe \texttt{Process}
+    \item Communication par des queues synchronisées
+  \end{itemize}
+
+  \onslide<+(1)->{
+    \begin{alertblock}{Attention}
+      \texttt{threading} et plus généralement les threads ne sont pas utilisables pour le calcul parallèle à cause du GIL (verrou global).
+    \end{alertblock}
+  }
+\end{frame}
+
+\begin{frame}{Utilisation directe de la classe \texttt{Process}}
+
+  \mintedpycode{python/parallelism/process}
+
+\end{frame}
+
+\begin{frame}{Problèmes de l'utilisation directe de la classe \texttt{Process}}
+
+  \begin{itemize}[<+->]
+    \item Pas de résultat récupéré de base
+    \item Nécessité d'utiliser les structures de données synchronisées
+    \item Nécessité de démarrer à attendre les processsus manuellement
+  \end{itemize}
+
+  \onslide<+->{
+    \begin{exampleblock}{Recommandation}
+      Toujours préférer l'utilisation d'une réserve de processus quand cela est possible.
+    \end{exampleblock}
+  }
+\end{frame}
+
+\begin{frame}{Création d'une réserve de processus}
+
+  \mintedpycode{python/parallelism/pool-creation}
+
+\end{frame}
+
+\begin{frame}{Utilisation d'une réserve de processus avec \texttt{map}}
+
+  \mintedcustom{python/parallelism/pool-map}{py}{text}
+
+\end{frame}
+
+\begin{frame}{Fonctions avec plusieurs arguments en utilisant \texttt{starmap}}
+
+  \mintedcustom{python/parallelism/pool-starmap}{py}{text}
+
+\end{frame}
+
+\begin{frame}{API de \texttt{Pool}}
+
+  L'API de \texttt{Pool} ne se limite pas à ces deux fonctions. N'hésitez pas à consulter la \bluelink{https://docs.python.org/fr/3/library/multiprocessing.html\#module-multiprocessing.pool}{documentation officielle}.
+
+\end{frame}
+
+\begin{frame}{Communication inter processus --- \texttt{multiprocessing.Queue}}
+  Architecture producteurs / consommateurs~:
+
+  \begin{itemize}[<+(1)->]
+    \item Création de la queue dans le processus principal
+    \item Chaque processus récupère la queue en argument
+    \item Un ou plusieurs processus producteurs utilisent \texttt{put} pour alimenter la queue
+    \item Un ou plusieurs processus consommateurs utilisent \texttt{get} pour consommer les éléments de la queue
+  \end{itemize}
+
+  \onslide<+(1)->{Plusieurs queues peuvent être utilisées pour coordonner un traitement.
+
+  Chaque processus peut alors être producteur vis à vis d'une queue et consommateur vis à vis d'une autre.}
+\end{frame}
+
+\begin{frame}{Synchronisation entre processus}
+  \begin{itemize}[<+->]
+    \item \texttt{multiprocessing.Lock} pour un verrou classique
+    \item \texttt{multiprocessing.BoundedSemaphore} pour limiter le nombre de processus qui accèdent à une ressource
+    \item \texttt{Barrier}, \texttt{Condition}, \texttt{Event} pour des mécanismes de contrôle plus fins
+  \end{itemize}
+
+  \onslide<+->{\begin{alertblock}{Attention}
+    Si votre programme parallèle devient trop complexe, le passage à une librairie dédiée est recommandé. Ray ou PySpark par exemple.
+  \end{alertblock}}
+\end{frame}
+
+\begin{frame}{Limitations des gains du parallélisme}
+  \V{["loi-amdahl", "th", 0.7] | image}
+\end{frame}
+
+\begin{frame}{Différences entre les systèmes d'exploitation}
+  La création de processus peut être faite différemment
+
+  \begin{description}[<+->]
+    \item[\texttt{spawn}] Un nouveau processus est créé et les données nécessaires y sont copiées. Défaut sur Windows.
+    \item[\texttt{fork}] Processus créé en forkant le processus parent, pas de copie nécessaire dans la majorité des cas. Défaut sur Unix. Pas disponible sur Windows.
+    \item[\texttt{forkserver}] Similaire à \texttt{fork} mais utilise un processus dédié à la création de nouveaux processus.
+  \end{description}
+\end{frame}
+
+\begin{frame}{Alternatives --- \texttt{concurrent.futures}}
+  Module de programmation asynchrone de la bibliothèque standard. Fonctionne avec des processus quand un \texttt{ProcessPoolExecutor} est utilisé.
+\end{frame}
+
+\begin{frame}{Alternatives --- \texttt{ray}}
+  Très bonne librairie de calcul parallèle et concurrent.
+\end{frame}
+
+\begin{frame}{Alternatives --- \texttt{dask}}
+  Permet de traiter des données sur un cluster très efficacement, à la manière de NumPy et pandas.
+\end{frame}
+
+\begin{frame}{Alternatives --- \texttt{pyspark}}
+  Accès à Spark depuis Python.
+\end{frame}

@@ -1,0 +1,5 @@
+flavors:
+  full:
+    - parallelism
+title: Programmation parallèle
+version: 3

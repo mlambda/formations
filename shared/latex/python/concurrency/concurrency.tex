@@ -1,0 +1,73 @@
+\begin{frame}{Programmation concurrente}
+  Buts~:
+  \begin{itemize}[<+->]
+    \item Entrelacer des calculs pour améliorer les performances
+    \item Rentabiliser les capacités de calcul pendant les entrées/sorties
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\texttt{threading}}
+  Module principal pour programmer de manière concurrente en Python~:
+
+  \begin{itemize}[<+->]
+    \item Définition de fils d'exécution (threads)
+    \item Outils pour synchroniser des threads
+    \item Possibilité de définir des données locales à un thread
+  \end{itemize}
+
+  \onslide<+->{
+    \begin{alertblock}{Attention}
+      Pas d'utilisation de \texttt{threading} pour du calcul parallèle~: le \emph{Global Interpreter Lock} (GIL, verrou global) rend cela impossible.
+    \end{alertblock}
+  }
+
+  \onslide<+->{
+    \begin{exampleblock}{Recommandation}
+      Utilisation des threads Python pour l'entrée sortie principalement.
+    \end{exampleblock}
+  }
+\end{frame}
+
+\begin{frame}{Définition d'un thread}
+  \mintedpycode{python/concurrency/thread}
+\end{frame}
+
+\begin{frame}{Récupérer les résultats d'un thread}
+  \begin{itemize}[<+->]
+    \item Par effet de bord (écriture dans un fichier)
+    \item Par une queue synchronisée (module \texttt{queue} de la bibliothèque standard)
+    \item Dans une structure de donnée classique en utilisation les outils de synchronisation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Synchronisation entre threads}
+  \begin{itemize}[<+->]
+    \item \texttt{threading.Lock} pour un verrou classique
+    \item \texttt{threading.BoundedSemaphore} pour limiter le nombre de threads qui accèdent à une ressource
+    \item \texttt{Barrier}, \texttt{Condition}, \texttt{Event} pour des mécanismes de contrôle plus fins
+  \end{itemize}
+
+  \onslide<+->{\begin{alertblock}{Attention}
+    Si votre programme concurrent devient trop complexe, le passage à une librairie dédiée est recommandé. Ray par exemple.
+  \end{alertblock}}
+\end{frame}
+
+\begin{frame}{Alternatives --- \texttt{concurrent.futures}}
+  Module de programmation asynchrone de la bibliothèque standard. Fonctionne avec des threads quand un \texttt{ThreadPoolExecutor} est utilisé.
+\end{frame}
+
+\begin{frame}{Alternatives --- \texttt{multiprocessing}}
+  API des réserves des processus de \texttt{multiprocessing} mais sur des threads en utilisant \texttt{multiprocessing.pool.ThreadPool}.
+\end{frame}
+
+\begin{frame}{Alternatives --- \texttt{ray}}
+  \texttt{ray} permet de définir des coroutines et des acteurs, selon le modèle très puissant d'Erlang.
+
+  Passe à l'échelle sur des clusters. Très adapté à l'apprentissage automatique.
+\end{frame}
+
+\begin{frame}{Alternatives --- \texttt{asyncio}}
+  Paradigme différent où l'on rend la main explicitement~:
+
+  \mintedcustom{python/concurrency/asyncio}{py}{text}
+\end{frame}
