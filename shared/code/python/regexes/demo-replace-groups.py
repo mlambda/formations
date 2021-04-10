@@ -1,6 +1,6 @@
 import re
 
 
-test = "id1234 : 'toto'  ; 23 "
-p = re.compile(r"^.* :\s*(\S+)\s*;\s*(\S+)\s*.*$")
-print(p.sub("myNewObject(\\1,\\2);", test))
+test = '{"first_name":"James","last_name":"Bond"}'
+p = re.compile(r'^\{"(\S+)":"(\S+)","(\S+)":"(\S+)"\}$')
+print(p.sub(r"Person(\1='\2', \3='\4')", test))
