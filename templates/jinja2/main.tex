@@ -46,7 +46,7 @@
 %% endif
 
 %% for part in target.parts:
-%% if part.title != None:
+%% if part.title != None and parts | length > 1:
 \begin{frame}[standout]
   \V{part.title}
 \end{frame}
