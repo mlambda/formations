@@ -1,5 +1,6 @@
 flavors:
   full:
     - concurrency
+    - /questions
 title: Programmation concurrente
 version: 3

@@ -1,5 +1,6 @@
 flavors:
   full:
     - parallelism
+    - /questions
 title: Programmation parallèle
 version: 3
