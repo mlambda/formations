@@ -1,0 +1,6 @@
+$ python example.py &
+16701
+$ kill -USR1 16701
+Reloading config…
+$ kill -TERM 16701
+[1]  + 16701 terminated  python example.py
