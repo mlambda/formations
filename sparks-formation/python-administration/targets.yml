@@ -16,6 +16,9 @@
     - path: python/signals
       flavor: full
 
+    - path: python/linting
+      flavor: no-tp
+
     - path: python/cli
       flavor: no-prod
 

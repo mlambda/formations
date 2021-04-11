@@ -3,5 +3,8 @@ flavors:
     - linting
     - /questions
     - tp-linting
+  no-tp:
+    - linting
+    - /questions
 title: Vérifications en Python
 version: 3
