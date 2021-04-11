@@ -2,5 +2,6 @@ flavors:
   full:
     - concurrency
     - /questions
+    - tp-concurrency
 title: Programmation concurrente
 version: 3
