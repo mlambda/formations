@@ -10,6 +10,9 @@
     - path: python/basics
       flavor: full
 
+    - path: python/linux
+      flavor: full
+
     - path: python/files
       flavor: full
 
