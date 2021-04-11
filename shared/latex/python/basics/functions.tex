@@ -1,0 +1,37 @@
+\begin{frame}{Introduction}
+  Les fonctions sont un des deux mécanismes (avec les classes) pour regrouper du code.
+
+  Elles sont définies avec \texttt{def} suivi de leur nom, une liste d'arguments entre parenthèses, \texttt{:} puis le corps de la fonction.
+
+  On utilise le mot-clef \texttt{return} pour renvoyer une valeur.
+\end{frame}
+
+\begin{frame}{Exemple}
+  \mintedcustom{python/basics/functions/simple-function}{py}{text}
+\end{frame}
+
+\begin{frame}{Valeurs par défaut}
+  On peut spécifier des valeurs par défaut aux arguments~:
+
+  \mintedcustom{python/basics/functions/defaults}{py}{text}
+\end{frame}
+
+\begin{frame}{Valeurs par défaut mutables}
+  \begin{alertblock}{Attention}
+    Ne jamais donner de valeur par défaut mutable à une fonction.
+  \end{alertblock}
+
+  \mintedcustom{python/basics/functions/mutable-defaults}{py}{text}
+\end{frame}
+
+\begin{frame}{Appel par mot-clef}
+  On peut spécifier le nom de la variable de l'argument qu'on passe~:
+
+  \mintedcustom{python/basics/functions/keyword}{py}{text}
+\end{frame}
+
+\begin{frame}{Portée des variables}
+  En Python, les variables sont locales aux fonctions.
+
+  \mintedcustom{python/basics/functions/scope}{py}{text}
+\end{frame}

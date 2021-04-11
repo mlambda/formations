@@ -7,6 +7,9 @@
     - path: python/intro
       flavor: full
 
+    - path: python/basics
+      flavor: full
+
     - path: python/parallelism
       flavor: full
 

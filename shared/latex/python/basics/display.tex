@@ -1,0 +1,32 @@
+\begin{frame}{Fonction d'affichage}
+  \texttt{print} est la principale fonction pour afficher du texte en Python~:
+
+  \mintedcustom{python/basics/display/basic}{py}{text}
+\end{frame}
+
+\begin{frame}{Arguments de \texttt{print}}
+  \begin{description}[<+->]
+    \item[\texttt{sep}] Affiché entre chaque chaîne argument. Défaut~: un espace
+    \item[\texttt{end}] Affiché en fin d'affichage. Défaut~: un retour chariot
+    \item[\texttt{file}] Fichier de sortie. Défaut~: \texttt{sys.stdout}
+    \item[\texttt{flush}] Faut-il flush le buffer ? Défaut~: \texttt{False}
+  \end{description}
+
+  \onslide<+->{
+    \mintedcustom{python/basics/display/args}{py}{text}
+  }
+\end{frame}
+
+\begin{frame}{Chaînes formatées}
+  Il est possible de construire des chaînes complexes avec la méthode \texttt{format}~:
+
+  \mintedcustom{python/basics/display/format}{py}{text}
+
+  Le site \bluelink{https://pyformat.info/}{PyFormat} donne des précisions sur toutes les options disponibles.  
+\end{frame}
+
+\begin{frame}{\texttt{f-strings}}
+  On peut aussi utiliser un raccourci syntaxique pour appeler \texttt{format}~:
+
+  \mintedcustom{python/basics/display/f-strings}{py}{text}
+\end{frame}
