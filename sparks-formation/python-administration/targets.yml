@@ -16,4 +16,7 @@
     - path: python/signals
       flavor: full
 
+    - path: python/cli
+      flavor: no-prod
+
     - contact
