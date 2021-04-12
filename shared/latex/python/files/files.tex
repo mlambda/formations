@@ -36,6 +36,10 @@
   \end{description}
 \end{frame}
 
+\begin{frame}{Exemple d'utilisation de \texttt{shutil}}
+  \mintedpycode{python/files/backup}
+\end{frame}
+
 \begin{frame}{Fichiers et dossiers temporaires}
   \begin{description}[<+->]
     \item[\texttt{tempfile.TemporaryFile}] Crée un fichier temporaire
@@ -44,6 +48,8 @@
   \end{description}
 
   \onslide<+->{Toutes ces méthodes s'utilisent dans un bloc \texttt{with} pour s'assurer de l'effacement des fichiers/dossiers.}
+
+  \onslide<+->{\mintedpycode{python/files/tmp}}
 \end{frame}
 
 \begin{frame}{Création d'archives}
