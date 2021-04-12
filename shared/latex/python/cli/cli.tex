@@ -24,7 +24,7 @@
 
 \begin{frame}{Création d'un parser}
   Création d'un \texttt{argparse.ArgumentParser} puis ajout d'arguments avec la méthode \texttt{add\_argument}~:
-  \mintedpycode{python/production/cli/creation}
+  \mintedpycode{python/cli/creation}
 \end{frame}
 
 \begin{frame}{Ajouter un argument}
@@ -44,13 +44,23 @@
 \begin{frame}{Commandes multiples}
   Possibilité de définir plusieurs commandes : création des sous-parsers que l'on traite ensuite comme le parser principal~:
 
-  \mintedpycode{python/production/cli/subparsers}
+  \mintedpycode{python/cli/subparsers}
 \end{frame}
 
 \begin{frame}{Utilisation}
   Appel de la méthode \texttt{parse\_args} puis traitement des arguments recupérés.
 
-  \mintedpycode{python/production/cli/usage}
+  \mintedpycode{python/cli/usage}
+\end{frame}
+
+\begin{frame}{Utilisation avancée qui couple la CLI à la fonction appelée}
+  \mintedpycode{python/cli/usage-coupled}
+
+  \begin{itemize}
+    \item \texttt{vars} transforme l'objet \texttt{args} en dictionnaire
+    \item \texttt{**} «~éclate~» le dictionnaire en mots-clefs et valeurs
+    \item suppression préalable des arguments non-utilisés avec \texttt{delattr}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Quelques bonus apportés par \texttt{argparse}}
