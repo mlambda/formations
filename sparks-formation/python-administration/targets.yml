@@ -26,9 +26,9 @@
       flavor: full
 
     - path: python/linting
-      flavor: no-tp
+      flavor: full
 
-    - path: python/cli
-      flavor: no-prod
+    - path: python/production
+      flavor: light
 
     - contact

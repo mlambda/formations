@@ -24,6 +24,6 @@ flavors:
     - /questions
     - /python/cli/cli
     - /questions
-    - /python/cli/tp-cli-light
+    - /python/cli/tp-cli
 title: Ingénierie de projets en Python
 version: 3

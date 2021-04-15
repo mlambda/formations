@@ -2,6 +2,5 @@ flavors:
   full:
     - parallelism
     - /questions
-    - tp-parallelism
 title: Programmation parallèle
 version: 3
