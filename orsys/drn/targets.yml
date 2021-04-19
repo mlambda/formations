@@ -1,0 +1,5 @@
+- name: j1
+  title: Jour 1 --- Techniques du Machine Learning
+  sections:
+    - path: about
+      flavor: orsys-3j
