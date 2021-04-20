@@ -1,16 +1,60 @@
 \begin{frame}{Introduction}
+  La classification bayésienne naïve (Naive Bayes) est~:
+  \begin{itemize}[<+(1)->]
+    \item simple à calculer
+    \item simple dans sa formulation
+    \item une bonne première baseline
+    \item limitée par ses hypothèses fortes
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Raisonnement bayésien}
+  \begin{itemize}
+    \item Formulation d'une hypothèse sans regarder les annotations (probabilité antiérieure)
+    \item Prise en compte des données pour mettre à jour l'hypothèse (probabilité postérieure)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Notation}
+  Pour la suite, nous utiliserons la notation suivante~:
+
+  \begin{description}[<+->]
+    \item[$C$] Variable aléatoire représentant la classe d'un exemple
+    \item[$C_k$] Une valeur possible de $C$
+    \item[$F$] Variable aléatoire représentant les caractéristiques des exemples
+    \item[$F_i$] Valeur des caractéristiques de l'exemple $i$
+  \end{description}
+\end{frame}
+
+\begin{frame}{Méthode de calcul}
+  Utilisation du théorème de Bayes~:
+  \[
+    P(C = C_k \mid F_i) = \frac{P(C = C_k) \times P(F_i \mid C = C_k)}{P(F_i)}
+  \]
+
+  Où~:
+
+  \begin{description}
+    \item[$P(C = C_k \mid F_i)$] Probabilité postérieure
+    \item[$P(C = C_k)$] Probabilité antérieure
+    \item[$P(F_i \mid C = C_k)$] Vraisemblance
+    \item[$P(F_i)$] Évidence
+  \end{description}
+\end{frame}
+
+\begin{frame}{Exemple --- But}
   \def\banane{\text{banane}}%
   \def\orange{\text{orange}}%
   \def\tomate{\text{tomate}}%
   \def\jaune{\text{jaune}}%
   \def\longg{\text{long}}%
   \def\sucre{\text{sucré}}%
-  Prenons un exemple :
 
-  Soit une base de donnée de fruits contenant uniquement des bananes, oranges et courgettes. \\
-  Chaque élément possède des caractéristiques couleur, taille, sucré. \\
-  Appliquer Naive Bayes, c'est chercher le maximum de vraisemblance d'un élèments dont on ne connait pas la nature mais dont on connait les caractéristiques. \\
-  On cherche donc quelle est la plus grande probabilité :
+  Base de données de fruits (bananes, oranges et tomates).
+
+  Caractéristiques~: \text{couleur}, \text{taille}, \text{sucré}.
+
+  Pour un élément \jaune{}, \longg{} et \sucre{} on cherche le maximum parmi~:
   \begin{itemize}
   \item $P(\banane \mid \jaune, \longg, \sucre)$
   \item $P(\orange \mid \jaune, \longg, \sucre)$
@@ -18,14 +62,15 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Calcul}
+\begin{frame}{Exemple --- Calcul}
   \def\banane{\text{banane}}%
   \def\orange{\text{orange}}%
   \def\tomate{\text{tomate}}%
   \def\jaune{\text{jaune}}%
   \def\longg{\text{long}}%
   \def\sucre{\text{sucré}}%
-  Naive = toutes les variables sont considérée indépendantes, donc : \\
+  Classification naïve~: variables considérées indépendantes, donc~:
+
   \begin{center}
     $P(\banane \mid \jaune, \longg, \sucre) =$\\
     $\;$\\
