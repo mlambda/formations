@@ -59,7 +59,7 @@
           {%
             \scriptsize%
             \insertsectionhead%
-            \ifdefempty{\insertsubsectionhead}{}{ --- \insertsubsectionhead}%
+            \ifdefempty{\insertsubsectionhead}{}{ ⋅ \insertsubsectionhead\ifdefempty{\insertsubsubsectionhead}{}{ ⋅ \insertsubsubsectionhead}}%
             \newline%
           }%
         }%
@@ -143,7 +143,7 @@
 
 % Start of the code to have a more compact table of contents
 \makeatletter
-\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.5em}{}{}
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.3em}{}{}
 \makeatother
 % End of the code to have a more compact table of contents
 

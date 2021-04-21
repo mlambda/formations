@@ -99,20 +99,25 @@ version = "12.3.0"
 description = "Tool to handle multiple beamer decks."
 category = "main"
 optional = false
-python-versions = ">=3.8,<4.0"
+python-versions = "^3.8"
+develop = true
 
 [package.dependencies]
-appdirs = ">=1.4.4,<2.0.0"
-attrs = ">=20.3.0,<21.0.0"
-GitPython = ">=3.1.14,<4.0.0"
-google-api-python-client = ">=1.12.5,<2.0.0"
-google-auth-oauthlib = ">=0.4.1,<0.5.0"
-Jinja2 = ">=2.11.3,<3.0.0"
-PyYAML = ">=5.4.1,<6.0.0"
-rich = ">=9.13.0,<10.0.0"
-sendgrid = ">=6.6.0,<7.0.0"
-typer = {version = ">=0.3.2,<0.4.0", extras = ["all"]}
-watchdog = ">=0.10.2,<0.11.0"
+appdirs = "^1.4.4"
+attrs = "^20.3.0"
+GitPython = "^3.1.14"
+google-api-python-client = "^1.12.5"
+google-auth-oauthlib = "^0.4.1"
+Jinja2 = "^2.11.3"
+PyYAML = "^5.4.1"
+rich = "^9.13.0"
+sendgrid = "^6.6.0"
+typer = {version = "^0.3.2", extras = ["all"]}
+watchdog = "^0.10.2"
+
+[package.source]
+type = "directory"
+url = "../deckz"
 
 [[package]]
 name = "flake8"
@@ -140,14 +145,15 @@ smmap = ">=3.0.1,<5"
 
 [[package]]
 name = "gitpython"
-version = "3.1.14"
+version = "3.1.15"
 description = "Python Git Library"
 category = "main"
 optional = false
-python-versions = ">=3.4"
+python-versions = ">=3.5"
 
 [package.dependencies]
 gitdb = ">=4.0.1,<5"
+typing-extensions = ">=3.7.4.0"
 
 [[package]]
 name = "google-api-core"
@@ -625,7 +631,7 @@ watchmedo = ["PyYAML (>=3.10)", "argh (>=0.24.1)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "4fa13fda431e9c3d7ee4e0ead6557846315cbbc998b58e445ae12c12985a12c8"
+content-hash = "dc43c52f8c084a62aff8d393d7cc677b85fd66e8ec3b78a0c122f29c996828f4"
 
 [metadata.files]
 appdirs = [
@@ -663,10 +669,7 @@ commonmark = [
     {file = "commonmark-0.9.1-py2.py3-none-any.whl", hash = "sha256:da2f38c92590f83de410ba1a3cbceafbc74fee9def35f9251ba9a971d6d66fd9"},
     {file = "commonmark-0.9.1.tar.gz", hash = "sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"},
 ]
-deckz = [
-    {file = "deckz-12.3.0-py3-none-any.whl", hash = "sha256:2857471cb30d59eb0b7e18972abe0eb74e7852c69a8a4129ed91da8a9040e146"},
-    {file = "deckz-12.3.0.tar.gz", hash = "sha256:f308e88197e93f9e4206b5fbedad0249b203444729961b6f7c29a91f07eb4a05"},
-]
+deckz = []
 flake8 = [
     {file = "flake8-3.9.1-py2.py3-none-any.whl", hash = "sha256:3b9f848952dddccf635be78098ca75010f073bfe14d2c6bda867154bea728d2a"},
     {file = "flake8-3.9.1.tar.gz", hash = "sha256:1aa8990be1e689d96c745c5682b687ea49f2e05a443aff1f8251092b0014e378"},
@@ -676,8 +679,8 @@ gitdb = [
     {file = "gitdb-4.0.7.tar.gz", hash = "sha256:96bf5c08b157a666fec41129e6d327235284cca4c81e92109260f353ba138005"},
 ]
 gitpython = [
-    {file = "GitPython-3.1.14-py3-none-any.whl", hash = "sha256:3283ae2fba31c913d857e12e5ba5f9a7772bbc064ae2bb09efafa71b0dd4939b"},
-    {file = "GitPython-3.1.14.tar.gz", hash = "sha256:be27633e7509e58391f10207cd32b2a6cf5b908f92d9cd30da2e514e1137af61"},
+    {file = "GitPython-3.1.15-py3-none-any.whl", hash = "sha256:a77824e516d3298b04fb36ec7845e92747df8fcfee9cacc32dd6239f9652f867"},
+    {file = "GitPython-3.1.15.tar.gz", hash = "sha256:05af150f47a5cca3f4b0af289b73aef8cf3c4fe2385015b06220cbcdee48bb6e"},
 ]
 google-api-core = [
     {file = "google-api-core-1.26.3.tar.gz", hash = "sha256:b914345c7ea23861162693a27703bab804a55504f7e6e9abcaff174d80df32ac"},
