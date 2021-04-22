@@ -1,7 +1,5 @@
 default_titles:
   attention-model: Modèle à attention
-  cnn-data: Données en vision par ordinateur
-  cnn-model: Réseaux de convolutions
   deep-optimize: Optimisation de réseaux profonds
   gan-intro: Petit jeu de rapidité
   gan-models: Generative Adversarial Network (GAN)
@@ -13,7 +11,6 @@ default_titles:
   rnn: Réseaux de neurones récurrents
   rnn-keras: Utilisation dans Keras
   rnn-variants: Variantes de réseaux récurrents
-  tp-cnn: Travaux Pratiques --- CNN et Keras
   tp-nn: Travaux Pratiques --- Tensorflow et Keras
   tp-nn-tf: Travaux Pratiques --- Réseau de neurones avec Tensorflow
   tp-rnn: Travaux Pratiques --- RNN
@@ -21,12 +18,8 @@ default_titles:
   tp-transformer: Travaux Pratiques --- Transformeurs
   transformer: Réseaux transformeurs
 flavors:
-  cnn:
-    - cnn-data
-    - cnn-model: Modèle
-    - cnn-keras
-    - /questions
-    - tp-cnn
+  cnn-and-gan:
+    - $cnn: full
     - gan-intro
     - gan-model
     - /questions
@@ -44,8 +37,7 @@ flavors:
     - online-demo 
     - gan-intro
     - gan-model
-    - cnn-data
-    - cnn-model
+    - $cnn: light
     - rnn
     - /questions
   deep-discover-demo:
@@ -55,9 +47,7 @@ flavors:
     - deep-optimize
     - regularisation
     - online-demo
-    - cnn-data
-    - cnn-model
-    - demo-cnn
+    - $cnn: demo
     - rnn
     - demo-rnn
     - gan-intro: Réseaux adverses
@@ -79,9 +69,7 @@ flavors:
   intro-cnn:
     - intro
     - online-demo
-    - cnn-data
-    - cnn-model
-    - /questions
+    - $cnn: light
   ml5j:
     - intro
     - gradient-descent
@@ -89,11 +77,9 @@ flavors:
     - deep-optimize
     - regularisation
     - online-demo
-    - cnn-data
-    - cnn-model
     - /questions
     - tp-nn
-    - tp-cnn
+    - $cnn: full
     - gan-intro
     - gan-model
     - rnn

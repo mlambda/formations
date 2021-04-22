@@ -27,7 +27,7 @@
       flavor: full
 
     - title: Réseaux de Neurones
-      path: neural-networks
+      path: nn
       flavor: deep-intro
 
     - title: TensorFlow et Deep Learning
@@ -35,9 +35,8 @@
       flavor: full
 
     - title: Réseau de Neurones
-      path: neural-networks
+      path: nn
       flavor: tp-nn-keras
 
-    - title: Réseaux de Convolutions
-      path: neural-networks
-      flavor: cnn
+    - path: nn/cnn
+      flavor: full

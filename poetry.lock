@@ -95,29 +95,24 @@ test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 
 [[package]]
 name = "deckz"
-version = "12.3.0"
+version = "13.0.0"
 description = "Tool to handle multiple beamer decks."
 category = "main"
 optional = false
-python-versions = "^3.8"
-develop = true
+python-versions = ">=3.8,<4.0"
 
 [package.dependencies]
-appdirs = "^1.4.4"
-attrs = "^20.3.0"
-GitPython = "^3.1.14"
-google-api-python-client = "^1.12.5"
-google-auth-oauthlib = "^0.4.1"
-Jinja2 = "^2.11.3"
-PyYAML = "^5.4.1"
-rich = "^9.13.0"
-sendgrid = "^6.6.0"
-typer = {version = "^0.3.2", extras = ["all"]}
-watchdog = "^0.10.2"
-
-[package.source]
-type = "directory"
-url = "../deckz"
+appdirs = ">=1.4.4,<2.0.0"
+attrs = ">=20.3.0,<21.0.0"
+GitPython = ">=3.1.14,<4.0.0"
+google-api-python-client = ">=1.12.5,<2.0.0"
+google-auth-oauthlib = ">=0.4.1,<0.5.0"
+Jinja2 = ">=2.11.3,<3.0.0"
+PyYAML = ">=5.4.1,<6.0.0"
+rich = ">=9.13.0,<10.0.0"
+sendgrid = ">=6.6.0,<7.0.0"
+typer = {version = ">=0.3.2,<0.4.0", extras = ["all"]}
+watchdog = ">=0.10.2,<0.11.0"
 
 [[package]]
 name = "flake8"
@@ -508,7 +503,7 @@ pyasn1 = ">=0.1.3"
 
 [[package]]
 name = "sendgrid"
-version = "6.6.0"
+version = "6.7.0"
 description = "Twilio SendGrid library for Python"
 category = "main"
 optional = false
@@ -631,7 +626,7 @@ watchmedo = ["PyYAML (>=3.10)", "argh (>=0.24.1)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "dc43c52f8c084a62aff8d393d7cc677b85fd66e8ec3b78a0c122f29c996828f4"
+content-hash = "4d708375c87c2bfc439819c54741958b317cd883a4b85de5678264a774922ce2"
 
 [metadata.files]
 appdirs = [
@@ -669,7 +664,10 @@ commonmark = [
     {file = "commonmark-0.9.1-py2.py3-none-any.whl", hash = "sha256:da2f38c92590f83de410ba1a3cbceafbc74fee9def35f9251ba9a971d6d66fd9"},
     {file = "commonmark-0.9.1.tar.gz", hash = "sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"},
 ]
-deckz = []
+deckz = [
+    {file = "deckz-13.0.0-py3-none-any.whl", hash = "sha256:b08693b627da29a922eceb4845874138841386151ec2dc1841f9ae3d8a06b7e8"},
+    {file = "deckz-13.0.0.tar.gz", hash = "sha256:a097d36744b47e32246ccc02f0bc633c36c684bcca5a989773878590fbfbfedc"},
+]
 flake8 = [
     {file = "flake8-3.9.1-py2.py3-none-any.whl", hash = "sha256:3b9f848952dddccf635be78098ca75010f073bfe14d2c6bda867154bea728d2a"},
     {file = "flake8-3.9.1.tar.gz", hash = "sha256:1aa8990be1e689d96c745c5682b687ea49f2e05a443aff1f8251092b0014e378"},
@@ -962,8 +960,8 @@ rsa = [
     {file = "rsa-4.7.2.tar.gz", hash = "sha256:9d689e6ca1b3038bc82bf8d23e944b6b6037bc02301a574935b2dd946e0353b9"},
 ]
 sendgrid = [
-    {file = "sendgrid-6.6.0-py3-none-any.whl", hash = "sha256:e422c8263563ac7d664066d2f87b90bcb005b067eb7c33a9b1396442b2ed285b"},
-    {file = "sendgrid-6.6.0.tar.gz", hash = "sha256:2eb1dcb1f7d8656eed4db586e428c2c86f347590b8511d7f92993882d0e4fab9"},
+    {file = "sendgrid-6.7.0-py3-none-any.whl", hash = "sha256:273bdc0abec649bf6319df7b6267980f79e53ab64e92906d65eea6d4330d00b4"},
+    {file = "sendgrid-6.7.0.tar.gz", hash = "sha256:74b0dcf9a79188948f61f456bd1bf67ffa676a5d388aba1c76bff516566d7084"},
 ]
 shellingham = [
     {file = "shellingham-1.4.0-py2.py3-none-any.whl", hash = "sha256:536b67a0697f2e4af32ab176c00a50ac2899c5a05e0d8e2dadac8e58888283f9"},

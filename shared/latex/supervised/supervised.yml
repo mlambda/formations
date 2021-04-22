@@ -35,10 +35,10 @@ flavors:
     - naive-bayes
     - regression-lineaire
     - cost-error-function
-    - /neural-networks/gradient-descent
+    - /nn/gradient-descent
     - regression-polynomiale
     - classification
-    - /neural-networks/intro
+    - /nn/intro
     - regression-logistique
     - /questions
     - tp-reg-lin-poly
@@ -63,10 +63,10 @@ flavors:
   standard-nobayes:
     - regression-lineaire
     - cost-error-function
-    - /neural-networks/gradient-descent
+    - /nn/gradient-descent
     - regression-polynomiale
     - classification
-    - /neural-networks/intro
+    - /nn/intro
     - /questions
     - tp-reg-lin-poly
     - svm
@@ -85,9 +85,9 @@ flavors:
     - naive-bayes
     - regression-lineaire
     - cost-error-function
-    - /neural-networks/gradient-descent
+    - /nn/gradient-descent
     - classification
-    - /neural-networks/intro
+    - /nn/intro
     - /questions
     - trees
     - random-forest

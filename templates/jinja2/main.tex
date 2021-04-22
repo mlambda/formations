@@ -52,15 +52,11 @@
 \end{frame}
 %% endif
 %% for section in part.sections:
-%% if section.title != None:
-\section{\V{section.title}}
+%% if section.title is string:
+\\V{"sub" * section.level}section{\V{section.title}}
+%% else:
+\input{\V{section}}
 %% endif
-%% for section_input in section.inputs:
-%% if section_input.title != None:
-\subsection{\V{section_input.title}}
-%% endif
-\input{\V{section_input.path}}
-%% endfor
 %% endfor
 %% endfor
 

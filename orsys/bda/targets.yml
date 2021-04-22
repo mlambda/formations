@@ -41,7 +41,7 @@
     - path: big-questions
       flavor: full
 
-    - path: neural-networks
+    - path: nn
       flavor: deep-discover
 
     - contact

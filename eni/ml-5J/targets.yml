@@ -22,7 +22,7 @@
 - name: j4
   title: Jour 4 --- Réseaux de neurones
   sections:
-    - path: neural-networks
+    - path: nn
       flavor: ml5j
 
 - name: j5

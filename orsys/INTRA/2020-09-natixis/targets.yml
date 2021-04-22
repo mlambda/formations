@@ -29,5 +29,5 @@
     - path: sequential-data
       flavor: full-with-stats
 
-    - path: neural-networks
+    - path: nn
       flavor: full

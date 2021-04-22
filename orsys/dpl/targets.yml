@@ -6,7 +6,7 @@
       flavor: orsys-3j
 
     - title: Réseaux de neurones
-      path: neural-networks
+      path: nn
       flavor: deep-intro
 
     - path: tools
@@ -17,7 +17,7 @@
       flavor: tf
 
     - title: Travaux Pratiques --- Réseau de neurones avec TensorFlow
-      path: neural-networks
+      path: nn
       flavor: tp-tf-pur
 
 - name: j2
@@ -28,8 +28,8 @@
       flavor: keras
 
     - title: Réseaux de convolutions
-      path: neural-networks
-      flavor: cnn
+      path: nn/cnn
+      flavor: full
 
     - path: auto-encoders
       flavor: full
@@ -45,11 +45,11 @@
       flavor: intro
 
     - title: Réseaux de neurones récurrents
-      path: neural-networks
+      path: nn
       flavor: recurrent
 
     - title: Réseaux transformeurs
-      path: neural-networks
+      path: nn
       flavor: transformer
 
     - contact

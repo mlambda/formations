@@ -26,13 +26,13 @@
     - path: supervised
       flavor: bayes
 
-    - path: neural-networks
+    - path: nn
       flavor: deep-intro
 
-    - path: neural-networks
-      flavor: cnn
+    - path: nn/cnn
+      flavor: full
 
-    - path: neural-networks
+    - path: nn
       flavor: recurrent
 
 

@@ -30,11 +30,11 @@
       flavor: full
 
     - title: Réseaux de neurones récurrents
-      path: neural-networks
+      path: nn
       flavor: recurrent-text
 
     - title: Transformeurs
-      path: neural-networks
+      path: nn
       flavor: transformer
 
     - path: contact

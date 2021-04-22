@@ -9,7 +9,7 @@ flavors:
   keras:
     - keras: Principes \& API
     - /questions
-    - /neural-networks/tp-nn: Travaux Pratiques
+    - /nn/tp-nn: Travaux Pratiques
   tf:
     - tf: null
     - /questions

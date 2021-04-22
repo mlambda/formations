@@ -24,7 +24,7 @@
       flavor: bayes
 
     - title: Réseaux de Neurones
-      path: neural-networks
+      path: nn
       flavor: deep-intro
 
     - title: TensorFlow et Deep Learning
@@ -32,14 +32,14 @@
       flavor: tf
 
     - title: Réseaux de Neurones
-      path: neural-networks
+      path: nn
       flavor: tp-tf-pur
 
     - title: TensorFlow et Deep Learning
       path: tf-keras
       flavor: keras
 
-    - path: neural-networks
+    - path: nn
       flavor: tp-nn-keras
 
     - path: big-questions
@@ -48,8 +48,8 @@
 - name: j4
   title: Jour 4 --- Neurones et Images 2/2
   sections:
-    - path: neural-networks
-      flavor: cnn
+    - path: nn/cnn
+      flavor: full
 
     - path: auto-encoders
       flavor: full
@@ -63,8 +63,8 @@
     - path: natural-language-processing
       flavor: intro-nn
 
-    - path: neural-networks
+    - path: nn
       flavor: recurrent
 
-    - path: neural-networks
+    - path: nn
       flavor: transformer

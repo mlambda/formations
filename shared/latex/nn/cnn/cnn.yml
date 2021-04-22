@@ -1,0 +1,21 @@
+default_titles:
+  cnn-data: Données en vision par ordinateur
+  cnn-keras: Implémentation en Keras
+  cnn-model: Modèle
+flavors:
+  full:
+    - cnn-data
+    - cnn-model
+    - cnn-keras
+    - /questions
+    - tp-cnn
+  light:
+    - cnn-data
+    - cnn-model
+    - /questions
+  demo:
+    - cnn-data
+    - cnn-model
+    - /questions
+    - demo-cnn
+title: Réseaux de neurones à convolutions

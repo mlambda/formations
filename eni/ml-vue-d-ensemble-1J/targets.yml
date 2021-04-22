@@ -11,7 +11,7 @@
     - path: machine-learning
       flavor: intro
 
-    - path: neural-networks
+    - path: nn
       flavor: intro-cnn
 
     - path: sequential-data
@@ -23,7 +23,7 @@
     - path: reinforcement-learning
       flavor: full
 
-    - path: neural-networks
+    - path: nn
       title: Des réseaux particuliers
       flavor: gan-intro
 

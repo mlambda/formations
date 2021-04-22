@@ -28,9 +28,7 @@ flavors:
     - deep-optimize
     - regularisation
     - /sequential-data/sequence-handling: Traitement de séquences
-    - cnn-data
-    - cnn-model
-    - demo-cnn
+    - $cnn: demo
     - rnn
     - lstm
     - rnn-variants

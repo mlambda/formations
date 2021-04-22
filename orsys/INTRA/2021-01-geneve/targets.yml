@@ -6,16 +6,15 @@
       flavor: orsys-2j
 
     - title: Réseaux de Neurones
-      path: neural-networks
+      path: nn
       flavor: deep-intro
 
     - title: TensorFlow et Deep Learning
       path: tf-keras
       flavor: full
 
-    - title: Réseaux de Convolutions
-      path: neural-networks
-      flavor: cnn-no-gan
+    - path: nn/cnn
+      flavor: full
 
     - title: Git
       path: tools

@@ -11,7 +11,7 @@
     - path: machine-learning
       flavor: intro
 
-    - path: neural-networks
+    - path: nn
       flavor: deep-discover-demo
 
     - path: unsupervised
