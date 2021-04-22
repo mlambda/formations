@@ -13,10 +13,7 @@ flavors:
   full:
     - ml-nlp
     - usages-nlp
-    - /python/regexes/regexes
-    - /questions
-    - /tp-help
-    - tp-text-regex
+    - $/python/regexes: full
     - preprocessing
     - vectors
     - /questions

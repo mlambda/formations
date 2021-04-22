@@ -95,7 +95,7 @@ test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 
 [[package]]
 name = "deckz"
-version = "13.0.0"
+version = "13.1.0"
 description = "Tool to handle multiple beamer decks."
 category = "main"
 optional = false
@@ -626,7 +626,7 @@ watchmedo = ["PyYAML (>=3.10)", "argh (>=0.24.1)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "4d708375c87c2bfc439819c54741958b317cd883a4b85de5678264a774922ce2"
+content-hash = "70b4c14bfa40c15e88a8a6b8f927d30b63dccc5701e01256282b53bc2677d481"
 
 [metadata.files]
 appdirs = [
@@ -665,8 +665,8 @@ commonmark = [
     {file = "commonmark-0.9.1.tar.gz", hash = "sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"},
 ]
 deckz = [
-    {file = "deckz-13.0.0-py3-none-any.whl", hash = "sha256:b08693b627da29a922eceb4845874138841386151ec2dc1841f9ae3d8a06b7e8"},
-    {file = "deckz-13.0.0.tar.gz", hash = "sha256:a097d36744b47e32246ccc02f0bc633c36c684bcca5a989773878590fbfbfedc"},
+    {file = "deckz-13.1.0-py3-none-any.whl", hash = "sha256:6e032093ac7c853ca33fde4e6f67227ae479479439c3cfe05449a1811492851e"},
+    {file = "deckz-13.1.0.tar.gz", hash = "sha256:4aa7d41c5247f3865d709807d5e4d51e53f60e0073c2b1276b2f3e9771677d10"},
 ]
 flake8 = [
     {file = "flake8-3.9.1-py2.py3-none-any.whl", hash = "sha256:3b9f848952dddccf635be78098ca75010f073bfe14d2c6bda867154bea728d2a"},
