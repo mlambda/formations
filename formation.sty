@@ -29,7 +29,7 @@
 \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
 \graphicspath{{./img/}{./tikz/pdf/}}
 
-\usetheme[block=fill,sectionpage=progressbar,subsectionpage=progressbar,progressbar=frametitle]{metropolis}
+\usetheme[block=fill,sectionpage=simple,subsectionpage=simple,progressbar=frametitle]{metropolis}
 \setlength{\metropolis@progressinheadfoot@linewidth}{1pt}
 \setbeamercolor{normal text}{bg=white}
 \setbeamertemplate{bibliography item}{\insertbiblabel}
@@ -69,6 +69,30 @@
     \end{beamercolorbox}
     \usebeamertemplate*{progress bar in head/foot}
 }
+
+% Start of the code to define subsubsection pages
+\makeatletter
+\AtBeginSubsubsection[]{%
+\begin{frame}[plain,c,noframenumbering]
+  \begin{center}
+    \usebeamercolor[fg]{section title}
+    \usebeamerfont{section title}
+    \insertsectionhead\par
+    \ifx\insertsubsectionhead\@empty\else%
+      \usebeamercolor[fg]{subsection title}%
+      \usebeamerfont{subsection title}%
+      \insertsubsectionhead\par
+      \ifx\insertsubsubsectionhead\@empty\else%
+        \usebeamercolor[fg]{subsection title}%
+        \small%
+        \insertsubsubsectionhead\par
+      \fi
+    \fi
+  \end{center}
+\end{frame}
+}
+\makeatother
+% End of the code to define subsubsection pages
 
 % Start of the code to have frame numbers in the table of contents
 \newcounter{sectionpage}
