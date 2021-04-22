@@ -5,7 +5,7 @@
       path: about
       flavor: eni-1j
 
-    - path: intelligence-artificielle
+    - path: artificial-intelligence
       flavor: full
 
     - path: machine-learning
