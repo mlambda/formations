@@ -18,17 +18,6 @@ default_titles:
   tp-transformer: Travaux Pratiques --- Transformeurs
   transformer: Réseaux transformeurs
 flavors:
-  cnn-and-gan:
-    - $cnn: full
-    - gan-intro
-    - gan-model
-    - /questions
-  cnn-no-gan:
-    - cnn-data
-    - cnn-model: Modèle
-    - cnn-keras
-    - /questions
-    - tp-cnn
   deep-discover:
     - intro
     - optimize

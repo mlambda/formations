@@ -2,7 +2,7 @@ default_titles:
   deployment: Déploiement
   environment: Gestion de l'environment logiciel
   packaging: Création de paquets Python
-  /python/cli/cli: Interfaces en ligne de commande
+  cli: Interfaces en ligne de commande
 flavors:
   full:
     - environment
@@ -13,17 +13,17 @@ flavors:
     - tp-packaging
     - deployment
     - /questions
-    - /python/cli/cli
+    - cli
     - /questions
-    - /python/cli/tp-cli
+    - tp-cli
   light:
     - environment
     - /questions
     - tp-environment
     - packaging
     - /questions
-    - /python/cli/cli
+    - cli
     - /questions
-    - /python/cli/tp-cli
+    - tp-cli
 title: Ingénierie de projets en Python
 version: 3
