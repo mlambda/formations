@@ -3,3 +3,15 @@
   sections:
     - path: about
       flavor: orsys-3j
+
+    - path: artificial-intelligence
+      flavor: full
+
+    - path: machine-learning
+      flavor: intro
+
+    - path: nn
+      flavor: deep-discover-demo
+
+    - path: reinforcement-learning
+      flavor: full
