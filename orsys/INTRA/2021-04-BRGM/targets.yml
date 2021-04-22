@@ -62,8 +62,8 @@
       flavor: intro
 
     - title: Réseaux de neurones récurrents
-      path: nn
-      flavor: recurrent
+      path: nn/rnn
+      flavor: full
 
     - title: Réseaux transformeurs
       path: nn

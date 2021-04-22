@@ -63,8 +63,8 @@
     - path: natural-language-processing
       flavor: intro-nn
 
-    - path: nn
-      flavor: recurrent
+    - path: nn/rnn
+      flavor: full
 
     - path: nn
       flavor: transformer

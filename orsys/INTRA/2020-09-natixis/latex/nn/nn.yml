@@ -29,11 +29,7 @@ flavors:
     - regularisation
     - /sequential-data/sequence-handling: Traitement de séquences
     - $cnn: demo
-    - rnn
-    - lstm
-    - rnn-variants
-    - demo-rnn
-    - rnn-keras: RNN dans Keras
+    - $rnn: demo
     - attention-model: Transformeurs
     - transformer: null
     - /questions

@@ -26,9 +26,8 @@ flavors:
     - online-demo 
     - gan-intro
     - gan-model
-    - $cnn: light
-    - rnn
-    - /questions
+    - $cnn: model-light
+    - $rnn: model-light
   deep-discover-demo:
     - intro
     - demo-nn
@@ -37,8 +36,7 @@ flavors:
     - regularisation
     - online-demo
     - $cnn: demo
-    - rnn
-    - demo-rnn
+    - $rnn: demo
     - gan-intro: Réseaux adverses
     - gan-model
     - demo-gan
@@ -58,7 +56,7 @@ flavors:
   intro-cnn:
     - intro
     - online-demo
-    - $cnn: light
+    - $cnn: model-light
   ml5j:
     - intro
     - gradient-descent
@@ -71,30 +69,13 @@ flavors:
     - $cnn: full
     - gan-intro
     - gan-model
-    - rnn
-    - lstm
-    - rnn-variants
-    - /questions
-  recurrent:
-    - rnn: Présentation
-    - lstm
-    - rnn-variants
-    - rnn-keras
-    - /questions
-    - tp-rnn: Travaux Pratiques
-    - tp-rnn-text: null
+    - $rnn: model
   recurrent-text:
     - intro
     - optimize
     - deep-optimize
     - regularisation
-    - rnn
-    - lstm
-    - rnn-variants
-    - rnn-keras
-    - /questions
-    - tp-rnn: Travaux Pratiques
-    - tp-rnn-text: null
+    - $rnn: full
   tp-nn-keras:
     - tp-nn: null
   tp-tf-pur:

@@ -32,8 +32,8 @@
     - path: nn/cnn
       flavor: full
 
-    - path: nn
-      flavor: recurrent
+    - path: nn/rnn
+      flavor: full
 
 
 - name: j4

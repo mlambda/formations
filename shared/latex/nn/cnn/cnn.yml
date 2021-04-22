@@ -9,7 +9,7 @@ flavors:
     - cnn-keras
     - /questions
     - tp-cnn
-  light:
+  model-light:
     - cnn-data
     - cnn-model
     - /questions
