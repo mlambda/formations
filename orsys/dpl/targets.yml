@@ -9,6 +9,8 @@
       path: nn
       flavor: deep-intro
 
+    - path: supervised/classification
+
     - path: tools
       flavor: detailed
 

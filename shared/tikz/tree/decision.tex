@@ -4,34 +4,27 @@
 
 \begin{document}
   \begin{tikzpicture}
-    \node [output,circle] (Q) at (7, 7) {Couleur};
-    \node [output,circle] (S) at (3, 4) {Surface};
-    \node [output,circle] (G) at (11, 4) {Garage};
-    \node [output,circle] (GG) at (1, 2) {Garage};
-    \node [output,circle] (GGG) at (5, 2) {Garage};
-    \node [output,circle] (SS) at (9, 2) {Surface};
-    \node [output,circle] (SSS) at (13, 2) {Surface};
-    \node [output,circle] (P1) at (0, 0) {banane};
-    \node [output,circle] (P2) at (2, 0) {700};
-    \node [output,circle] (P3) at (4, 0) {350};
-    \node [output,circle] (P4) at (6, 0) {300};
-    \node [output,circle] (P5) at (8, 0) {220};
-    \node [output,circle] (P6) at (10, 0) {120};
-    \node [output,circle] (P7) at (12, 0) {200};
-    \node [output,circle] (P8) at (14, 0) {100};
-    \path[->,>=stealth] (Q) edge node [left] {jaune} (S);
-    \path[->,>=stealth] (Q) edge node [right] {$\neg$ jaune} (G);
-    \path[->,>=stealth] (S) edge node [left] {grande} (GG);
-    \path[->,>=stealth] (S) edge node [right] {petite} (GGG);
-    \path[->,>=stealth] (G) edge node [left] {vrai} (SS);
-    \path[->,>=stealth] (G) edge node [right] {faux} (SSS);
-    \path[->,>=stealth] (GG) edge node [left] {vrai} (P1);
-    \path[->,>=stealth] (GG) edge node [right] {faux} (P2);
-    \path[->,>=stealth] (GGG) edge node [left] {vrai} (P3);
-    \path[->,>=stealth] (GGG) edge node [right] {faux} (P4);
-    \path[->,>=stealth] (SS) edge node [left] {grande} (P5);
-    \path[->,>=stealth] (SS) edge node [right] {petite} (P6);
-    \path[->,>=stealth] (SSS) edge node [left] {grande} (P7);
-    \path[->,>=stealth] (SSS) edge node [right] {petite} (P8);
+    \node [output,circle] (C) at (7, 7) {Couleur};
+    \node [output,circle] (T) at (3, 4) {Taille};
+    \node [output,circle] (F) at (11, 4) {Forme};
+    \node [output,circle] (PA) at (1, 2) {Pastèque};
+    \node [output,circle] (TT) at (5, 2) {Taille};
+    \node [output,circle] (TTT) at (9, 2) {Taille};
+    \node [output,circle] (B) at (13, 2) {Banane};
+    \node [output,circle] (PO1) at (4, 0) {Pomme};
+    \node [output,circle] (R) at (6, 0) {Raisin};
+    \node [output,circle] (PO2) at (8, 0) {Pomelo};
+    \node [output,circle] (CI) at (10, 0) {Citron};
+    \path[->,>=stealth] (C) edge node [left] {vert} (T);
+    \path[->,>=stealth] (C) edge node [right] {¬vert} (F);
+    \path[->,>=stealth] (T) edge node [left] {gros} (PA);
+    \path[->,>=stealth] (T) edge node [right] {¬gros} (TT);
+    \path[->,>=stealth] (TT) edge node [left] {moyen} (PO1);
+    \path[->,>=stealth] (TT) edge node [right] {¬moyen} (R);
+    \path[->,>=stealth] (F) edge node [left] {rond} (TTT);
+    \path[->,>=stealth] (F) edge node [right] {¬rond} (B);
+    \path[->,>=stealth] (TTT) edge node [left] {gros} (PO2);
+    \path[->,>=stealth] (TTT) edge node [right] {¬gros} (CI);
+    
   \end{tikzpicture}
 \end{document}
