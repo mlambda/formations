@@ -60,6 +60,7 @@ TIKZ
 - [ ] ["", "", "tikz", "TODO", "learning-rate-big-small"]
 - [ ] ["", "", "tikz", "TODO", "ia-ml-deep"]
 
+
 MATPLOTLIB/TP
 - [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-test-nzmog", "pouet trouver une place pouet"]
 - [x] ["Loi normale et écart type", "Jhguch https://commons.wikimedia.org/w/index.php?curid=14524285", "CC BY-SA 2.5", "gaussian-std", "68-95-99,7"]
