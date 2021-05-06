@@ -46,7 +46,6 @@ TIKZ
 - [x] ["Arbre de régression", "", "tikz", "tree/regression", "regression-tree"]
 - [x] ["Arbre de décision", "", "tikz", "tree/decision", "decision-tree-2"]
 - [x] ["Shéma d'un neurone artificiel", "", "tikz", "neural-networks/model", "neuron-model"]
-- [ ] ["", "", "tikz", "TODO", "nn-rnn-comparaison"]
 - [ ] ["", "", "tikz", "TODO", "gru"]
 - [ ] ["", "", "tikz", "TODO", "convolution"]
 - [ ] ["", "", "tikz", "TODO", "lstm-schema"]
