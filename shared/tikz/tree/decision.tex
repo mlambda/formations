@@ -4,17 +4,17 @@
 
 \begin{document}
   \begin{tikzpicture}
-    \node [output,circle] (C) at (7, 7) {Couleur};
-    \node [output,circle] (T) at (3, 4) {Taille};
-    \node [output,circle] (F) at (11, 4) {Forme};
-    \node [output,circle] (PA) at (1, 2) {Pastèque};
-    \node [output,circle] (TT) at (5, 2) {Taille};
-    \node [output,circle] (TTT) at (9, 2) {Taille};
-    \node [output,circle] (B) at (13, 2) {Banane};
-    \node [output,circle] (PO1) at (4, 0) {Pomme};
-    \node [output,circle] (R) at (6, 0) {Raisin};
-    \node [output,circle] (PO2) at (8, 0) {Pomelo};
-    \node [output,circle] (CI) at (10, 0) {Citron};
+    \node [input,circle,minimum size=1.5cm] (C) at (7, 7) {Couleur};
+    \node [input,circle,minimum size=1.5cm] (T) at (3, 5) {Taille};
+    \node [input,circle,minimum size=1.5cm] (F) at (11, 5) {Forme};
+    \node [output,circle,minimum size=1.8cm] (PA) at (1,   2.5) {Pastèque};
+    \node [input,circle,minimum size=1.5cm] (TT) at (4, 2.5) {Taille};
+    \node [input,circle,minimum size=1.5cm] (TTT) at (10, 2.5) {Taille};
+    \node [output,circle,minimum size=1.8cm] (B) at (13, 2.5) {Banane};
+    \node [output,circle,minimum size=1.8cm] (PO1) at (3, 0) {Pomme};
+    \node [output,circle,minimum size=1.8cm] (R) at (5.5, 0) {Raisin};
+    \node [output,circle,minimum size=1.8cm] (PO2) at (8.5, 0) {Pomélo};
+    \node [output,circle,minimum size=1.8cm] (CI) at (11, 0) {Citron};
     \path[->,>=stealth] (C) edge node [left] {vert} (T);
     \path[->,>=stealth] (C) edge node [right] {¬vert} (F);
     \path[->,>=stealth] (T) edge node [left] {gros} (PA);
@@ -25,6 +25,5 @@
     \path[->,>=stealth] (F) edge node [right] {¬rond} (B);
     \path[->,>=stealth] (TTT) edge node [left] {gros} (PO2);
     \path[->,>=stealth] (TTT) edge node [right] {¬gros} (CI);
-    
   \end{tikzpicture}
 \end{document}
