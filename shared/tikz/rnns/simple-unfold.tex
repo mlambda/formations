@@ -1,0 +1,45 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+\usepackage{tikz}
+
+\usetikzlibrary{positioning}
+
+\begin{document}
+\begin{tikzpicture}
+	\node[rectangle] (Y0) at (0, 0) {$\dots$};
+	\node[hencoder,rectangle, right=2em of Y0,   draw, minimum height=1cm, minimum width=1cm] (RNN)  {$\vec{h}_2$};
+	\node[hencoder,rectangle, right=4em of RNN,  draw, minimum height=1cm, minimum width=1cm] (RNN2) {$\vec{h}_3$};
+	\node[hencoder,rectangle, right=4em of RNN2, draw, minimum height=1cm, minimum width=1cm] (RNN3) {$\vec{h}_4$};
+	\node[hencoder,rectangle, right=4em of RNN3, draw, minimum height=1cm, minimum width=1cm] (RNN4) {$\vec{h}_5$};
+	\node[rectangle, right=2em of RNN4] (RNN5) {$\dots$};
+			
+			
+	\node[input,below=of RNN]  (X1) {$\vec{x}_2$};
+	\node[input,below=of RNN2] (X2) {$\vec{x}_3$};
+	\node[input,below=of RNN3] (X3) {$\vec{x}_4$};
+	\node[input,below=of RNN4] (X4) {$\vec{x}_5$};
+	\node[output,above=of RNN]  (Y2) {$\vec{o}_2$};
+	\node[output,above=of RNN2] (Y3) {$\vec{o}_3$};
+	\node[output,above=of RNN3] (Y4) {$\vec{o}_4$};
+	\node[output,above=of RNN4] (Y5) {$\vec{o}_5$};
+			
+	\draw[-stealth, thick] (X1) -- node[right, pos=0.5] {U} (RNN);
+	\draw[-stealth, thick] (X2) -- node[right, pos=0.5] {U} (RNN2);
+	\draw[-stealth, thick] (X3) -- node[right, pos=0.5] {U} (RNN3);
+	\draw[-stealth, thick] (X4) -- node[right, pos=0.5] {U} (RNN4);
+	\draw[-stealth, thick, densely dotted] (Y0)   -- node[above, pos=0.5] {V} (RNN);
+	\draw[-stealth, thick] (RNN)                  -- node[above, pos=0.5] {V} (RNN2);
+	\draw[-stealth, thick] (RNN2)                 -- node[above, pos=0.5] {V} (RNN3);
+	\draw[-stealth, thick] (RNN3)                 -- node[above, pos=0.5] {V} (RNN4);
+	\draw[-stealth, densely dotted, thick] (RNN4) -- node[above, pos=0.5] {V} (RNN5);
+	\node[below=4em of Y0] (d) {\dots};
+	\node[below=4em of RNN5] (d) {\dots};
+			 
+    \draw[-stealth, thick] (RNN)  -- node[right, pos=0.5] {W} (Y2);
+    \draw[-stealth, thick] (RNN2) -- node[right, pos=0.5] {W} (Y3);
+    \draw[-stealth, thick] (RNN3) -- node[right, pos=0.5] {W} (Y4);
+    \draw[-stealth, thick] (RNN4) -- node[right, pos=0.5] {W} (Y5);
+		
+\end{tikzpicture}
+\end{document}
