@@ -2,7 +2,7 @@
 
 \usepackage{formation}
 \usepackage{tikz}
-\usetikzlibrary{positioning, fit, arrows.meta, shapes}
+\usetikzlibrary{positioning, fit, arrows.meta, shapes, decorations.pathreplacing,decorations.markings}
 
 % used to avoid putting the same thing several times...
 % Command \empt{var1}{var2}
@@ -33,21 +33,9 @@
         ellipse,
         draw,
         inner sep=1pt,
+        minimum width=0.8cm,
+        minimum height=0.5cm,
         fill=orange,
-        },
-    ct/.style={% For external inputs and outputs
-        circle,
-        draw,
-        line width = .75pt,
-        minimum width=1cm,
-        inner sep=1pt,
-        },
-    gt/.style={% For internal inputs
-        rectangle,
-        draw,
-        minimum width=4mm,
-        minimum height=3mm,
-        inner sep=1pt,
         },
     mylabel/.style={% something new that I have learned
         font=\scriptsize\sffamily
@@ -67,13 +55,13 @@
     \node [cell, minimum height =4cm, minimum width=6cm] at (0,0){} ;
 
     % Draw inputs named ibox#
-    \node [function] (ibox1) at (-2,-0.75) {$\sigma$};
+    \node [function] (ibox1) at (-2.5,-0.75) {$\sigma$};
     \node [function] (ibox2) at (-1.5,-0.75) {$\sigma$};
     \node [function, minimum width=1cm] (ibox3) at (-0.5,-0.75) {Tanh};
     \node [function] (ibox4) at (0.5,-0.75) {$\sigma$};
 
    % Draw opérators   named mux# , add# and func#
-    \node [operator] (mux1) at (-2,1.5) {$\times$};
+    \node [operator] (mux1) at (-2.5,1.5) {$\times$};
     \node [operator] (add1) at (-0.5,1.5) {$+$};
     \node [operator] (mux2) at (-0.5,0) {$\times$};
     \node [operator] (mux3) at (1.5,0) {$\times$};
@@ -82,17 +70,17 @@
     % Draw External inputs? named as basis c,h,x
     \node[hencoder, label={[mylabel]Accumulateur}] (c) at (-4,1.5){$\vec{c}_{t-1}$};
     \node[hencoder, label={[mylabel]Hidden}] (h) at (-4,-1.5)     {$\vec{h}_{t-1}$};
-    \node[input,    label={[mylabel]left:Input}] (x) at (-2.5,-3) {$\vec{x}_{t  }$};
+    \node[input] (x) at (-3.2,-3) {$\vec{x}_{t  }$};
 
     % Draw External outputs? named as basis c2,h2,x2
     \node[hencoder, label={[mylabel]Accumulateur}] (c2) at (4,1.5)      {$\vec{c}_{t}$};
     \node[hencoder, label={[mylabel]Hidden}] (h2) at (4,-1.5)     {$\vec{h}_{t}$};
-    \node[output,   label={[mylabel]left:Output}] (x2) at (2.5,3) {$\vec{o}_{t}$};
+    \node[output] (x2) at (2.5,3) {$\vec{y}_{t}$};
 
 % Start connecting all.
     %Intersections and displacements are used. 
     % Drawing arrows    
-    \draw [ArrowC1] (c) -- (mux1) -- (add1) -- (c2);
+    \draw [->, ArrowC1] (c) -- (mux1) -- (add1) -- (c2);
 
     % Inputs
     \draw [ArrowC2] (h) -| (ibox4);
@@ -102,19 +90,19 @@
     \draw [ArrowC1] (x) -- (x |- h)-| (ibox3);
 
     % Internal
-    \draw [->, ArrowC2] (ibox1) -- (mux1);
-    \draw [->, ArrowC2] (ibox2) |- (mux2);
+    \draw [->, ArrowC2] (ibox1) -- node[right, pos=0.8] {Forget} (mux1);
+    \draw [->, ArrowC2] (ibox2) |- node[left, pos=1] {Input    } (mux2);
     \draw [->, ArrowC2] (ibox3) -- (mux2);
-    \draw [->, ArrowC2] (ibox4) |- (mux3);
+    \draw [->, ArrowC2] (ibox4) |-  node[left, pos=1] {Output    } (mux3);
     \draw [->, ArrowC2] (mux2) -- (add1);
     \draw [->, ArrowC1] (add1 -| func1)++(-0.5,0) -| (func1);
     \draw [->, ArrowC2] (func1) -- (mux3);
 
     %Outputs
-    \draw [-, ArrowC2] (mux3) |- (h2);
+    \draw [->, ArrowC2] (mux3) |- (h2);
     \draw (c2 -| x2) ++(0,-0.1) coordinate (i1);
     \draw [-, ArrowC2] (h2 -| x2)++(-0.5,0) -| (i1);
-    \draw [-, ArrowC2] (i1)++(0,0.2) -- (x2);
+    \draw [->, ArrowC2] (i1)++(0,0.2) -- (x2);
 
 \end{tikzpicture}
 \end{document}

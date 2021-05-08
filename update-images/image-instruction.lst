@@ -51,7 +51,7 @@ TIKZ
 - [x] ["Shéma d'un réseau récurrent simple en vue éclatée", "", "tikz", "rnns/simple-unfold", "rnn-unfold"]
 - [x] ["Shéma d'un réseau récurrent bidirectionnel en vue éclatée", "", "tikz", "rnns/bidirectional", "bidirectional-rnn"]
 - [x] ["Schéma d'une cellule Long Short Term Memory", "", "tikz", "rnns/lstm", "lstm-schema"]
-- [ ] ["TODO enhance", "", "tikz", "rnns/gru", "gru"]
+- [x] ["Schéma d'une Gated Recurrent Unit", "", "tikz", "rnns/gru", "gru"]
 - [ ] ["", "", "tikz", "TODO", "deep-auto-encoder"]
 - [ ] ["", "", "tikz", "TODO", "dropout-2"]
 - [ ] ["", "", "tikz", "TODO", "multi-task-v2"]
