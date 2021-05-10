@@ -1,8 +1,12 @@
 \documentclass[border=15pt, multi, tikz]{standalone}
-%\usepackage{import}
-%\subimport{../layers/}{init}
-\usepackage{formation}
+
+\usepackage{tikz}
+\usetikzlibrary{quotes,arrows.meta}
 \usetikzlibrary{positioning}
+\def\edgecolor{rgb:blue,4;red,1;green,4;black,3}
+\newcommand{\midarrow}{\tikz \draw[-Stealth,line width =0.8mm,draw=\edgecolor] (-0.3,0) -- ++(0.3,0);}
+\usepackage{Box}
+\usepackage{RightBandedBox}
 
 \def\ConvColor{rgb:yellow,5;red,2.5;white,5}
 \def\ConvReluColor{rgb:yellow,5;red,5;white,5}
