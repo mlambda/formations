@@ -9,7 +9,7 @@ version = "1.0.0"
 [tool.poetry.dependencies]
 Pygments = "^2.6.1"
 python = "^3.8"
-deckz = "^13.3.0"
+deckz = "^13.4.0"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^20.8b1", allow-prereleases = true}
