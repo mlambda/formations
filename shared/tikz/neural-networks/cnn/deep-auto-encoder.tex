@@ -72,13 +72,63 @@
 
 %Connections
 \draw [connection]  (c1-east)   -- node {\midarrow} (p1-west);
+\draw[->, densely dashed]
+(c1-nearnortheast) -- (p1-nearnorthwest)
+(c1-nearsoutheast) -- (p1-nearsouthwest)
+(c1-farsoutheast)  -- (p1-farsouthwest)
+(c1-farnortheast)  -- (p1-farnorthwest)
+;
 \draw [connection]  (p1-east)   -- node {\midarrow} (c2-west);
+\draw[densely dashed]
+(p1-nearnortheast) -- (c2-nearnorthwest)
+(p1-nearsoutheast) -- (c2-nearsouthwest)
+(p1-farsoutheast)  -- (c2-farsouthwest)
+(p1-farnortheast)  -- (c2-farnorthwest)
+;
 \draw [connection]  (p2-east)   -- node {\midarrow} (c3-west);
+\draw[densely dashed]
+(p2-nearnortheast) -- (c3-nearnorthwest)
+(p2-nearsoutheast) -- (c3-nearsouthwest)
+(p2-farsoutheast)  -- (c3-farsouthwest)
+(p2-farnortheast)  -- (c3-farnorthwest)
+;
+
 \draw [connection]  (c2-east)   -- node {\midarrow} (p2-west);
+\draw[densely dashed]
+(c2-nearnortheast) -- (p2-nearnorthwest)
+(c2-nearsoutheast) -- (p2-nearsouthwest)
+(c2-farsoutheast)  -- (p2-farsouthwest)
+(c2-farnortheast)  -- (p2-farnorthwest)
+;
 \draw [connection]  (c3-east)   -- node {\midarrow} (up1-west);
+\draw[densely dashed]
+(c3-nearnortheast) -- (up1-nearnorthwest)
+(c3-nearsoutheast) -- (up1-nearsouthwest)
+(c3-farsoutheast)  -- (up1-farsouthwest)
+(c3-farnortheast)  -- (up1-farnorthwest)
+;
 \draw [connection]  (c4-east)   -- node {\midarrow} (up2-west);
+\draw[densely dashed]
+(c4-nearnortheast) -- (up2-nearnorthwest)
+(c4-nearsoutheast) -- (up2-nearsouthwest)
+(c4-farsoutheast)  -- (up2-farsouthwest)
+(c4-farnortheast)  -- (up2-farnorthwest)
+;
 \draw [connection]  (up1-east)   -- node {\midarrow} (c4-west);
+\draw[densely dashed]
+(up1-nearnortheast) -- (c4-nearnorthwest)
+(up1-nearsoutheast) -- (c4-nearsouthwest)
+(up1-farsoutheast)  -- (c4-farsouthwest)
+(up1-farnortheast)  -- (c4-farnorthwest)
+;
 \draw [connection]  (up2-east)   -- node {\midarrow} (c5-west);
+\draw[densely dashed]
+(up2-nearnortheast) -- (c5-nearnorthwest)
+(up2-nearsoutheast) -- (c5-nearsouthwest)
+(up2-farsoutheast)  -- (c5-farsouthwest)
+(up2-farnortheast)  -- (c5-farnorthwest)
+;
+
 
 \end{tikzpicture}
 \end{document}\grid
