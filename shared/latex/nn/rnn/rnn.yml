@@ -15,6 +15,12 @@ flavors:
     - rnn
     - /questions
     - demo-rnn
+  demo-detailed:
+    - rnn
+    - lstm
+    - rnn-variants
+    - /questions
+    - demo-rnn
   model:
     - rnn
     - lstm

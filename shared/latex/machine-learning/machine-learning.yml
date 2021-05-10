@@ -28,6 +28,19 @@ flavors:
     - apprentissage
     - bonnes-pratiques
     - /questions
+  detailed-no-tp:
+    - intro
+    - math-objectifs
+    - math-algebre-lineaire
+    - math-analyse
+    - math-proba
+    - math-stats
+    - math-conclusion
+    - data-preparation
+    - evaluation
+    - apprentissage
+    - bonnes-pratiques
+    - /questions
   ml5j:
     - intro
     - math-objectifs

@@ -8,10 +8,13 @@
       flavor: full
 
     - path: machine-learning
-      flavor: intro
+      flavor: detailed-no-tp
 
     - path: nn
-      flavor: deep-discover-demo
+      flavor: deep-detailed-demo
 
     - path: reinforcement-learning
       flavor: full
+
+    - path: tools
+      flavor: detailed

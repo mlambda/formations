@@ -41,6 +41,19 @@ flavors:
     - gan-model
     - demo-gan
     - /questions
+  deep-detailed-demo:
+    - intro
+    - demo-nn
+    - optimize
+    - deep-optimize
+    - regularisation
+    - online-demo
+    - $cnn: demo
+    - $rnn: demo-detailed
+    - gan-intro: Réseaux adverses
+    - gan-model
+    - demo-gan
+    - /questions
   deep-intro:
     - intro
     - gradient-descent
