@@ -52,7 +52,7 @@ TIKZ
 - [x] ["Shéma d'un réseau récurrent bidirectionnel en vue éclatée", "", "tikz", "neural-networks/rnn/bidirectional", "bidirectional-rnn"]
 - [x] ["Schéma d'une cellule Long Short Term Memory", "", "tikz", "neural-networks/rnn/lstm", "lstm-schema"]
 - [x] ["Schéma d'une Gated Recurrent Unit", "", "tikz", "neural-networks/rnn/gru", "gru"]
-- [ ] ["", "", "tikz", "TODO", "deep-auto-encoder"]
+- [x] ["Schéma d'un autoencodeur profond", "", "tikz", "neural-networks/cnn/deep-auto-encoder", "deep-auto-encoder"]
 - [ ] ["", "", "tikz", "TODO", "dropout-2"]
 - [ ] ["", "", "tikz", "TODO", "multi-task-v2"]
 - [ ] ["", "", "tikz", "TODO", "ml-craftmanship"]
