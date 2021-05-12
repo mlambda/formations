@@ -1,0 +1,40 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+\tikzset{
+    cross/.pic = {
+    \draw[line width=0.7mm, rotate = 45] (-#1,0) -- (#1,0);
+    \draw[line width=0.7mm, rotate = 45] (0,-#1) -- (0, #1);
+    }
+}
+
+\begin{document}
+  \begin{tikzpicture}
+    \foreach \y in {1,...,4} {
+        \node[input] (I\y) at (0, 4.5 - \y) {$x_\y$};
+    }
+    \foreach \i in {1,...,5} {
+        \node[hencoder] (H\i) at (4, 5 - \i) {$\sigma(\sum)$};
+        \foreach \y in {1,...,4} {    
+            \draw[->,>=stealth] (I\y) to (H\i);
+        }
+    }
+    \foreach \i in {1,...,5} {
+        \node[hencoder] (G\i) at (8, 5 - \i) {$\sigma(\sum)$};
+        \foreach \y in {1,...,5} {    
+            \draw[->,>=stealth] (H\y) to (G\i);
+        }
+    }
+    \foreach \y in {1,...,3} {
+        \node[output] (O\y) at (12, 4 - \y) {$\sigma(\sum)$} ;
+    }
+    \foreach \i in {1,4,5} {
+        \foreach \j in {1,...,3} {
+        \draw[->,>=stealth] (G\i) to (O\j);
+        }
+    }
+    \path (8,3) pic[red] {cross=18pt};  
+    \path (8,2) pic[red] {cross=18pt};
+
+  \end{tikzpicture}
+\end{document}
