@@ -1,3 +1,4 @@
 author: F.-M. Giraud \& H. Mougard
 license: CC-BY-SA-4.0
 title: seaborn.barplot(x = 'OverallQual', y = 'SalePrice', data = ames)
+title_en: Bar plot on AMES data

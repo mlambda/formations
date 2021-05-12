@@ -4,21 +4,10 @@ default_titles:
   data-preparation: Data preparation
   evaluation: Evaluation
   intro: Introduction
-  math-algebre-lineaire: Linear algebra
-  math-analyse: Calculus
-  math-conclusion: Conclusion
-  math-objectifs: A few prerequisites
-  math-proba: Probability
-  math-stats: Statistics
 flavors:
   detailed-no-tp:
     - intro
-    - math-objectifs
-    - math-algebre-lineaire
-    - math-analyse
-    - math-proba
-    - math-stats
-    - math-conclusion
+    - $prerequisites: full
     - data-preparation
     - evaluation
     - apprentissage

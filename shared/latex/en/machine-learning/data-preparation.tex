@@ -1,0 +1,232 @@
+\begin{frame}{Introduction}
+  \V{["ml-craftmanship", "tw", 0.8] | image}
+\end{frame}
+
+
+\begin{frame}{Statistical biases}
+  Be careful about the biases of your data!
+  \begin{itemize}[<+->]
+  \item Confounding variables (\emph{e.g.} \emph{obesity} in the correlation between \emph{eating meat} and \emph{colon cancer})
+  \item Statistical biases
+    \begin{itemize}
+    \item selection, autoselection
+    \item measure
+    \item attrition
+    \item …
+    \end{itemize}
+  \item Spuriously correlated variables 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Data quality}
+  \begin{center}
+    Trash in $\Rightarrow$ Trash out
+  \end{center}
+
+  Crucial since a ML program is defined \textbf{in large parts} by data.
+\end{frame}
+
+\begin{frame}{Data processing pipeline}
+  \begin{itemize}
+  \item Missing values handling
+  \item Preprocessing (text, image)
+  \item Standardization
+  \item Transformation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Missing values}
+  Detrimental to lots of models. Several options:
+  \begin{itemize}[<+(1)->]
+  \item Delete samples with missing values
+  \item Delete features with missing values
+  \item Replace values (imputation):
+    \begin{itemize}
+    \item by a constant
+    \item by the mean of the feature
+    \item by the prediction of a model based on the other features
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Preprocessing}
+  \begin{itemize}[<+->]
+  \item Tokenize, POS-tag text (\url{https://spacy.io/})
+  \item Use a pretrained network to classify images
+    (\url{https://keras.io/applications/})
+  \item Apply a Fourier transform on sound data
+  \item …
+  \end{itemize}
+
+  \onslide<+->{Very dependent on the application domain.}
+\end{frame}
+
+\begin{frame}{Standardization}
+  Many models are more efficient with normally distributed variables and values around $[-5, 5]$ :
+  \begin{itemize}
+  \item Center on zero and divide by standard deviation
+  \item Handle non-normality with a Box-Cox transformation or other corrections
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Categorical variables}
+  When you have categorical data and the model you want to use do not handle them, you can use:
+  \begin{itemize}
+  \item Label encoding if ordinal
+  \item One-hot encoding if nominal
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Label encoding}
+  For ordinal variables:
+  \begin{columns}
+    \begin{column}{.5\tw}
+      \begin{figure}
+        \centering
+        Ordinal\\[.5cm]
+        \begin{tabular}{c}
+          \toprule
+          Temperature \\
+          \midrule
+          Cold \\
+          Cold \\
+          Lukewarm \\
+          Warm \\
+          Lukewarm \\
+          \bottomrule
+        \end{tabular}
+      \end{figure}
+    \end{column}
+    \begin{column}{.5\tw}
+      \begin{figure}
+        \centering
+        Label encoded\\[.5cm]
+        \begin{tabular}{ccc}
+          \toprule
+          Temperature \\
+          \midrule
+          1 \\
+          1 \\
+          2 \\
+          3 \\
+          2 \\
+          \bottomrule
+        \end{tabular}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{One-hot encoding}
+  Replace a feature by $n$ features, $n$ being the number of categories.
+  \begin{columns}
+    \begin{column}{.5\tw}
+      \begin{figure}
+        \centering
+        Nominal\\[.5cm]
+        \begin{tabular}{c}
+          \toprule
+          Color \\
+          \midrule
+          Red \\
+          Red \\
+          Yellow \\
+          Green \\
+          Yellow \\
+          \bottomrule
+        \end{tabular}
+      \end{figure}
+    \end{column}
+    \begin{column}{.5\tw}
+      \begin{figure}
+        \centering
+        One-hot encoded\\[.5cm]
+        \begin{tabular}{ccc}
+          \toprule
+          Red & Yellow & Green \\
+          \midrule
+          1 & 0 & 0 \\
+          1 & 0 & 0 \\
+          0 & 1 & 0 \\
+          0 & 0 & 1 \\
+          0 & 1 & 0 \\
+          \bottomrule
+        \end{tabular}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Data exploration}
+  Goals:
+  \begin{itemize}[<+(1)->]
+  \item Notice missing preprocessing
+  \item Understand the output variable: distribution, class balance, correlated features, …
+  \item Detect correlations between input variables
+  \item Estimate the necessary model complexity
+  \end{itemize}
+
+  \onslide<+(1)->{
+    \begin{alertblock}{Warning}
+      It is important not to explore the test data. It should be kept secret at all times.
+    \end{alertblock}
+  }
+\end{frame}
+
+\begin{frame}{Plotting}
+  Several plots can be created to explore data depending on the features visualized. Main possibilities:
+
+  \begin{itemize}
+  \item Describe a distribution
+  \item Describe the correlation of two distributions
+  \item Visualize summaries for several variables at once
+  \end{itemize}
+  The plots shown in the coming slides are created with
+  \bluelink{https://seaborn.pydata.org/}{\texttt{seaborn}}.
+\end{frame}
+
+\begin{frame}{Plotting — Count plot}
+  \V{["countplot-nzmog", "th", 0.7, "en"] | image}
+\end{frame}
+
+\begin{frame}{Plotting — Dist plot}
+  \V{["distplot-nzmog", "th", 0.7, "en"] | image}
+\end{frame}
+
+\begin{frame}{Plotting — Q-Q plot}
+  \V{["qqplot-nzmog", "th", 0.5, "en"] | image}
+  Not available in \bluelink{https://seaborn.pydata.org/}{\texttt{seaborn}}
+  but in
+  \bluelink{http://www.statsmodels.org/stable/index.html}{\texttt{statsmodel}}
+  or
+  \bluelink{https://docs.scipy.org/doc/scipy/reference/stats.html}{\texttt{scipy.stats}}.
+\end{frame}
+
+\begin{frame}{Plotting — Bar plot}
+  \V{["barplot-nzmog", "th", 0.7, "en"] | image}
+\end{frame}
+
+\begin{frame}{Plotting — Scatter plot}
+  \V{["scatter-nzmog", "th", 0.7, "en"] | image}
+\end{frame}
+
+\begin{frame}{Plotting — Violin plot}
+  \V{["violinplot-nzmog", "th", 0.7, "en"] | image}
+\end{frame}
+
+\begin{frame}{Plotting — Pair plot}
+  \V{["pairplot-nzmog", "th", 0.7, "en"] | image}
+\end{frame}
+
+\begin{frame}{Plotting — Correlation matrix}
+  \V{["corrmat-nzmog", "th", 0.7, "en"] | image}
+\end{frame}
+
+\begin{frame}{Guidelines to explore a dataset}
+  \begin{itemize}[<+->]
+  \item Analyze the output variable(s) (countplot/distplot)
+  \item Find the input variables with the highest correlation to the output variable(s)
+  \item Analyze those variables
+  \item Look for outliers to filter/investigate
+  \end{itemize}
+\end{frame}
