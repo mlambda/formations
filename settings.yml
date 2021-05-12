@@ -5,5 +5,3 @@ build_command:
   - -dvi-
   - -ps-
   - -pdf
-compile_standalones:
-  - shared/tikz
