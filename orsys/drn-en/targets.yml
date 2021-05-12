@@ -1,0 +1,35 @@
+- name: j1
+  title: Part 1
+  sections:
+    - path: en/about
+      flavor: orsys-3j
+
+- name: j2
+  title: Part 2
+  sections:
+    - path: en/artificial-intelligence
+      flavor: full
+
+- name: j3
+  title: Part 3
+  sections:
+    - path: en/machine-learning
+      flavor: detailed-no-tp
+
+- name: j4
+  title: Part 4
+  sections:
+    - path: nn
+      flavor: deep-detailed-demo
+
+- name: j5
+  title: Part 5
+  sections:
+    - path: reinforcement-learning
+      flavor: full
+
+- name: j6
+  title: Part 6
+  sections:
+    - path: tools
+      flavor: detailed
