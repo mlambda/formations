@@ -1,0 +1,10 @@
+default_titles:
+  history: Short history of AI
+  intro: Introduction
+flavors:
+  full:
+    - intro
+    - history
+    - /questions
+title: Artificial Intelligence
+version: 3
