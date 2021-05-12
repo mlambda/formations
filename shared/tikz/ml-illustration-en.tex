@@ -1,0 +1,71 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+\usetikzlibrary{mindmap}
+\usepackage{varwidth}
+
+\begin{document}
+  \begin{tikzpicture}[
+      mindmap,
+      text=white,
+      minimum size=5cm,
+      every concept/.style={font=\fontsize{12pt}{14pt}\selectfont\bf},
+      concept color=DeepSpaceSparkle!50!black,
+      every annotation/.style={text=black},
+      level 1 concept/.append style={sibling angle=120, minimum size=4cm, scale=1.3, text width=3.5cm},
+      level 2 concept/.append style={sibling angle=90, minimum size=3cm, scale=1.4, text width=2.5cm}
+  ]
+    [concept color=IndianYellow!50!black]
+    \node [concept] {Machine Learning}
+      [clockwise from=30]
+      child [concept color=Auburn!50!black] {node [concept] {Supervised learning}
+        [counterclockwise from=0]
+        child {node [concept] (regression) {Regression}}
+        child {node [concept] (classification) {Classification}}
+      }
+      child [concept color=MediumChampagne!50!black] {node [concept] (reinforcement) {Reinforcement learning}}
+      child [concept color=IndianYellow!50!black] {node [concept]  {Unsupervised learning}
+        [counterclockwise from=90]
+        child {node [concept] (dimensionality) {Dimensionality reduction}}
+        child {node [concept] (clustering) {Clustering}}
+        child {node [concept] (anomaly) {Anomaly detection}}
+      };
+    \node [annotation, text width=4cm, minimum width=4.5cm, right, fill=Auburn!15, draw=Auburn!50!black] at (classification.east) {
+      \normalsize
+      --- Sentiment analysis\\
+      --- Image classification\\
+      --- Medical diagnosis\\
+    };
+    \node [annotation, below, fill=Auburn!15, draw=Auburn!50!black] at (regression.south) {
+      \normalsize
+      --- Advertisment\\\phantom{--- }effectiveness\\
+      --- Meteorology\\
+      --- Finance\\
+      --- Maintenance\\
+    };
+    \node [annotation, text width=4cm, minimum width=4.5cm, right, fill=MediumChampagne!15, draw=MediumChampagne!50!black] at (reinforcement.east) {
+      \normalsize
+      --- Game AI\\
+      --- Skill acquisition\\
+      --- Robot navigation\\
+      --- Realtime decisions\\
+    };
+    \node [annotation, minimum width=3.5cm, left, fill=IndianYellow!15, draw=IndianYellow!50!black] at (anomaly.west) {
+      \normalsize
+      --- Preprocessing\\
+      --- Fraud detection\\
+    };
+    \node [annotation, text width=4.5cm, minimum width=5cm, above, fill=IndianYellow!15, draw=IndianYellow!50!black] at (clustering.north) {
+      \normalsize
+      --- Recommender system\\
+      --- Customer segmentation\\
+    };
+    \node [annotation, right, fill=IndianYellow!15, draw=IndianYellow!50!black] at (dimensionality.east) {
+      \normalsize
+      --- Visualization\\
+      --- Feature selection\\
+      --- Compression\\
+    };
+  \end{tikzpicture}
+\end{document}
+

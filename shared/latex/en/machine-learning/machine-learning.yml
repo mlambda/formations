@@ -1,0 +1,27 @@
+default_titles:
+  apprentissage: Learning
+  bonnes-pratiques: Good practices
+  data-preparation: Data preparation
+  evaluation: Evaluation
+  intro: Introduction
+  math-algebre-lineaire: Linear algebra
+  math-analyse: Calculus
+  math-conclusion: Conclusion
+  math-objectifs: A few prerequisites
+  math-proba: Probability
+  math-stats: Statistics
+flavors:
+  detailed-no-tp:
+    - intro
+    - math-objectifs
+    - math-algebre-lineaire
+    - math-analyse
+    - math-proba
+    - math-stats
+    - math-conclusion
+    - data-preparation
+    - evaluation
+    - apprentissage
+    - bonnes-pratiques
+    - /questions
+title: Machine Learning
