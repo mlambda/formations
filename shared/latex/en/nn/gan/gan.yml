@@ -1,0 +1,8 @@
+default_titles:
+  intro: Introduction
+flavors:
+  demo-detailed:
+    - intro
+    - /questions
+    - demo
+title: Generative Adversarial Networks

@@ -1,0 +1,24 @@
+\begin{frame}{Principe}
+  Lutter contre les gradients qui disparaissent~:
+  \begin{itemize}[<+->]
+    \item Introduction d'une mémoire
+    \item Update additive de la mémoire (gradient plus facile à conserver)
+    \item «~Protection~» de cette mémoire par des portes
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Vanishing gradient résolu (ou presque)}
+  \V{["optimization/vanishing-gradients-lstm", "tw", 0.7] | image}
+\end{frame}
+
+\begin{frame}{Détails théoriques}
+  \V{["lstm-schema", "tw", 0.7] | image}
+  \begin{description}
+  \item[Forget gate] $F_t = \sigma(W_F \times x_t + U_F \times h_{t - 1} + b_F)$ 
+  \item[Input gate] $I_t = \sigma(W_I \times x_t + U_I \times h_{t - 1} + b_I)$
+  \item[Output gate] $O_t = \sigma(W_O \times x_{t} + U_O \times h_{t - 1} + b_O)$
+  \item[Update mémoire] $c_t = F_t \circ c_{t - 1} + I_t \circ \tanh(W_c \times x_t + U_c \times h_{t-1} + b_c)$
+  \item[Sortie] $h_t = O_t \circ \tanh(c_t)$
+  \item[Sortie transformée] $o_t = f(W_o \times h_t + b_o)$
+  \end{description}
+\end{frame}

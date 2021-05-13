@@ -1,0 +1,10 @@
+default_titles:
+  cnn-data: Data \& tasks
+  cnn-model: Model
+flavors:
+  demo:
+    - cnn-data
+    - cnn-model
+    - /questions
+    - demo
+title: Convolutional Neural Networks

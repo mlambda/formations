@@ -1,0 +1,19 @@
+default_titles:
+  deep-optimize: Deep neural networks optimization
+  gradient-descent: Gradient descent
+  intro: Introduction
+  optimize: Hyperparameters optimization
+  regularization: Regularization
+flavors:
+  deep-detailed-demo:
+    - intro
+    - demo
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularization
+    - demo
+    - $cnn: demo
+    - $rnn: demo-detailed
+    - $gan: demo-detailed
+title: Neural networks

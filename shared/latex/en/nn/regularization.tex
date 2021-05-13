@@ -1,0 +1,34 @@
+\begin{frame}
+  \frametitle{Sur-apprentissage (et sous-apprentissage)}
+  \V{["overfitting-train-nzmog", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{Par la pénalisation de l'utilisation des paramètres}
+  Coût supplémentaire pour l'utilisation des paramètres dans la fonction de perte~:
+
+  \[
+  \text{perte} = \text{perte} + \lambda\sum||w||^2
+  \]
+
+  où $\lambda$ est un hyperparamètre
+\end{frame}
+
+\begin{frame}{Par early stopping}
+  \V{["early-stopping-nzmog", "th", 0.7] | image}
+\end{frame}
+
+\begin{frame}{Par augmentation/bruitage des données}
+  \V{["data-augmentation-nzmog", "tw", 1.0] | image}
+\end{frame}
+
+\begin{frame}{Par dropout}
+  \V{["dropout-2", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{En entraînant sur plusieurs tâches}
+  \V{["multi-task-v2", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{En opposant des réseaux de neurones}
+  \V{["gan-schema", "tw", 0.8] | image}
+\end{frame}

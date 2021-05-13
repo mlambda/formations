@@ -1,0 +1,36 @@
+\begin{frame}{Disparition du gradient (ou son explosion)}
+  \V{["optimization/vanishing-gradients", "tw", 1.0] | image}
+\end{frame}
+
+\begin{frame}{Disparition des gradients}
+  Vanishing Gradient $\Rightarrow$ utilisation de ReLu plutôt que les sigmoïdes
+  \vfill
+  \V{["activations/relu", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Explosion des gradients}
+  Exploding Gradient $\Rightarrow$ Gradient clipping
+  \V{["gradient-clipping-nzmog", "th", 0.5] | image}
+  Dans le cadre des réseaux réccurents $\Rightarrow$ initialisation avec des matrices orthogonales
+\end{frame}
+
+\begin{frame}{Algorithme d'optimisation}
+  Optimisateur plus rapide que SGD
+  \begin{itemize}[<+(1)->]
+    \item Adaptative Gradient Algorithm (AdaGrad)
+    \item Root Mean Square Propagation (RMSProp)
+    \item Adaptative Moment Estimation (Adam)    $\Leftarrow$
+    \item ... AdaBound (2019) ?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Adaptative Gradient Algorithm (AdaGrad)}
+  Calcul d'un learning rate adapté à chaque itération, pour chaque paramètre du modèle.
+\end{frame}
+
+\begin{frame}{Root Mean Square Propagation (RMSProp)}
+  Utilisation d'inertie dans le gradient appliqué :
+  $$
+    Grad_t = Grad_t + Grad_{t-1}
+  $$
+\end{frame}

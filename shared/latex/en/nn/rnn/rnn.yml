@@ -1,0 +1,12 @@
+default_titles:
+  lstm: Long Short-Term Memory Networks
+  rnn: Model
+  rnn-variants: Other architectures
+flavors:
+  demo-detailed:
+    - rnn
+    - lstm
+    - rnn-variants
+    - /questions
+    - demo
+title: Recurrent Neural Networks

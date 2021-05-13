@@ -1,0 +1,33 @@
+\begin{frame}{Prérequis --- Opérateur de convolution}
+  \V{["convolution", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{Prérequis --- Opérateur de pooling}
+  \V{["pooling", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{Schéma général}
+  Réseau de neurones de convolutions (CNN)
+  \V{["cnn-schema", "tw", 1] | image}
+  «~Quelques~» millions de paramètres dans le modèle
+\end{frame}
+
+\begin{frame}{Entraînement}
+  \V{["gpu-fun", "th", 0.7] | image}
+\end{frame}
+
+\begin{frame}{Architecture du cortex visuel}
+  \begin{minipage}[l]{0.50\linewidth}
+    \V{["visual-cortex", "tw", 1.0] | image}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+    Connexion «~en série~» de couches
+    \begin{description}[<+->]
+    \item[V1] $\approx$ orientations de lignes
+    \item[V2] $\approx$ formes, tailles, couleurs
+    \item[V3] $\approx$ aide à la motricité
+    \item[V4] $\approx$ reconnaissance d'objets simples
+    \item[V5] $\approx$ vitesse des objets
+    \end{description}
+  \end{minipage}\hfill
+\end{frame}

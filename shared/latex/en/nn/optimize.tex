@@ -1,0 +1,47 @@
+\begin{frame}{Qu'est-ce qu'un hyper-paramètre~?}
+  \begin{columns}
+    \begin{column}[c]{0.5\textwidth}
+      \V{["neural-networks/deep-ff-notext", "tw", 1] | image}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item Learning rate
+        \item Taille de batch
+        \item Nombre de couches
+        \item Taille des couches
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Learning rate}
+  \begin{minipage}{0.49\textwidth}
+    \centering
+    trop grand
+  \end{minipage}\hfill
+  \begin{minipage}{0.49\linewidth}
+    \centering
+    trop petit
+  \end{minipage}\hfill
+
+  \V{["learning-rate-big-small", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Learning rate}
+  Utilisation d'une échelle logarithmique (dans un premier temps) :
+  \mintedpycode{gridsearch-template}
+\end{frame}
+
+\begin{frame}{Taille du batch}
+  Usuellement, des puissances de 2, pour optimiser les ressources GPU
+  \V{["batch-size-effect-nzmog", "th", 0.7] | image}
+\end{frame}
+
+\begin{frame}{Taille des couches}
+  Usuellement, des puissances de 2, pour optimiser les ressources GPU. \\
+  Même intuition que pour le nombre de couches.
+\end{frame}
+
+\begin{frame}{Nombre de couches}
+  \mintedpycode{addlayer-template}
+\end{frame}

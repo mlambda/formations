@@ -19,7 +19,7 @@
 - name: j4
   title: Part 4
   sections:
-    - path: nn
+    - path: en/nn
       flavor: deep-detailed-demo
 
 - name: j5
