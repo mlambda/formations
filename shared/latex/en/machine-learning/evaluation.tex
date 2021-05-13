@@ -1,5 +1,13 @@
-\begin{frame}{Precision and recall}
-  For classification:
+\begin{frame}{Goals}
+  \begin{itemize}[<+->]
+    \item Quantify the quality of the model predictions
+    \item Assert whether a business objective is met or not
+    \item Test regressions
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Evaluation of classification models}
+  The first two metrics are by far the most used:
   \begin{description}
   \item[Precision]
     \[
@@ -18,9 +26,25 @@
 \end{frame}
 
 \begin{frame}{ROC curve}
-  \V{["roc-space", "th", 0.7, "en"] | image}
+  Measure model performance (TPR vs FPR) at various decision thresholds.
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+    \begin{itemize}
+      \item True Positive Rate:\\recall ($\frac{\text{TP}}{\text{TP} + \text{FN}}$)
+      \item False Positive Rate:\\\emph{False alarm} probability ($\frac{\text{FP}}{\text{TN} + \text{FP}}$)
+    \end{itemize}
+    \end{column}
+    \begin{column}{.52\textwidth}
+      \V{["roc-space", "tw", 0.8, "en"] | image}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Confusion matrix}
-  \V{["confusion-matrix-nzmog", "th", 0.7, "en"] | image}
+  Show clearly which confusions are made by the model
+  \V{["confusion-matrix-nzmog", "th", 0.6, "en"] | image}
+\end{frame}
+
+\begin{frame}{Evaluation of regression models}
+  Usually closer to the learning criterion than classification: mean absolute error, or mean squared error.
 \end{frame}

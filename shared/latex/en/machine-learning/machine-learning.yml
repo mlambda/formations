@@ -1,6 +1,5 @@
 default_titles:
-  apprentissage: Learning
-  bonnes-pratiques: Good practices
+  learning: Learning
   data-preparation: Data preparation
   evaluation: Evaluation
   intro: Introduction
@@ -9,8 +8,7 @@ flavors:
     - intro
     - $prerequisites: full
     - data-preparation
+    - learning
     - evaluation
-    - apprentissage
-    - bonnes-pratiques
     - /questions
 title: Machine Learning
