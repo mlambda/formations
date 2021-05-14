@@ -1,33 +1,33 @@
-\begin{frame}{Prérequis --- Opérateur de convolution}
-  \V{["convolution", "tw", 0.8] | image}
+\begin{frame}{Building block --- Convolution}
+  \V{["neural-networks/cnn/convolution", "tw", 0.8] | image}
 \end{frame}
 
-\begin{frame}{Prérequis --- Opérateur de pooling}
-  \V{["pooling", "tw", 0.8] | image}
+\begin{frame}{Building block --- Pooling}
+  \V{["neural-networks/cnn/maxpool", "tw", 0.8] | image}
 \end{frame}
 
-\begin{frame}{Schéma général}
-  Réseau de neurones de convolutions (CNN)
-  \V{["cnn-schema", "tw", 1] | image}
-  «~Quelques~» millions de paramètres dans le modèle
+\begin{frame}{Combination into a convolutional neural network}
+  \V{["cnn-schema", "tw", 1, "en"] | image}
+  Usually several millions of parameters
 \end{frame}
 
-\begin{frame}{Entraînement}
+\begin{frame}{Training}
   \V{["gpu-fun", "th", 0.7] | image}
 \end{frame}
 
-\begin{frame}{Architecture du cortex visuel}
+\begin{frame}{Visual cortex architecture}
+  %TODO img
   \begin{minipage}[l]{0.50\linewidth}
     \V{["visual-cortex", "tw", 1.0] | image}
   \end{minipage}\hfill
   \begin{minipage}[l]{0.49\linewidth}
-    Connexion «~en série~» de couches
-    \begin{description}[<+->]
-    \item[V1] $\approx$ orientations de lignes
-    \item[V2] $\approx$ formes, tailles, couleurs
-    \item[V3] $\approx$ aide à la motricité
-    \item[V4] $\approx$ reconnaissance d'objets simples
-    \item[V5] $\approx$ vitesse des objets
+    Layered connections:
+    \begin{description}[<+(1)->]
+    \item[V1] lines orientation
+    \item[V2] shapes, sizes, colors
+    \item[V3] motricity
+    \item[V4] object recognition
+    \item[V5] object tracking
     \end{description}
   \end{minipage}\hfill
 \end{frame}
