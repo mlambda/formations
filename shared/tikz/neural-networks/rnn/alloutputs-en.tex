@@ -1,0 +1,26 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \foreach \word/\to [count=\i,remember=\word as \lastword (initially <GO>)] in {How,are,you,<STOP>} {%
+      \node[hencoder] (H\i) at (\i*1.5, 1) {$h_\i$};
+      \node[output] (O\i) at (\i*1.5, 2) {$y_\i$};
+      \node[input] (WE\i) at (\i*1.5, 0) {$x_\i$};
+      \node[anchor=mid] (TI\i) at (\i*1.5, -1) {\lastword};
+      \node[anchor=mid] (TO\i) at (\i*1.5, 3) {\word};
+      \draw[->] (WE\i) -- (H\i);
+      \draw[->] (H\i) -- (O\i);
+      \draw[densely dotted] (TI\i) -- (WE\i);
+      \draw[densely dotted] (O\i) -- (TO\i);
+      \draw[color=gray] (\i* 1.5 - 0.5, -1.4)
+        -- (\i * 1.5 - 0.5, -1.5)
+        -- (\i* 1.5 + 0.5, -1.5) node [below, midway] {$t_\i$}
+        -- (\i* 1.5 + 0.5, -1.4);
+    }
+    \foreach \i [evaluate=\i as \j using int(\i + 1)] in {1,2,3} {%
+      \draw[->] (H\i) -- (H\j);
+    }
+  \end{tikzpicture}
+\end{document}

@@ -1,43 +1,54 @@
 \begin{frame}{Introduction}
-  Caractéristiques des réseaux récurrents~:
+  Recurrent neural networks:
 
-  \begin{itemize}[<+->]
-    \item Gestion des séquences
-    \item Traitement séquentiel des entrées
-    \item Réplication d'un réseau autant de fois qu'il y a d'entrées
+  \begin{itemize}[<+(1)->]
+    \item Handle sequences
+    \item Process their input sequentially
+    \item Replicate a neural network for each element in the input sequence
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Modèle}
+\begin{frame}{Model}
   \V{["rnn-unfold", "tw", 0.7] | image}
-  $h_{t}=\sigma_{h}(Ux_{t}+Vh_{t-1}+b_{h})$ \\
-  $o_{t}=\sigma_{o}(Wh_{t}+b_{o})$ \\
-  \begin{itemize}
-  \item $x_{t}$ : vecteur d'entrée
-  \item $h_t$ : vecteur de la couche cachée
-  \item $o_{t}$ : vecteur de sortie
-  \item $U$, $V$, $W$, $b_h$ et $b_o$ : matrices et vecteurs (paramètres)
-  \item $\sigma_{h}$ et $\sigma_o$ : fonctions d'activation (tanh)
-  \end{itemize}
+  \begin{align*}
+    \vect{h_t} &= \sigma_h(\vect{U} \vect{x_t} + \vect{V} \vect{h_{t-1}} + \vect{b_h}) \\
+    \vect{o_t} &= \sigma_o(\vect{W} \vect{h_t} + \vect{b_o})
+  \end{align*}
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      \begin{description}
+        \item[$\vect{x_t}$] Input vector
+        \item[$\vect{h_t}$] Hidden vector
+        \item[$\vect{o_t}$] Output vector
+        \end{description}
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \begin{description}
+        \item[$\vect{U}$, $\vect{V}$, $\vect{W}$] Weight matrices
+        \item[$\vect{b_h}$, $\vect{b_o}$] Bias vectors
+        \item[$\sigma_h$, $\sigma_o$] Activation functions
+        \end{description}
+    \end{column}
+  \end{columns}
 \end{frame}
 
-\begin{frame}{Prédiction d'une sortie}
-  Exemple~: détection de polarité.
+\begin{frame}{Prediction of a single output}
+  Example: polarity detection.
 
   \begin{figure}
     \centering
-    \V{["neural-networks/rnn/lastoutput", "th", 0.7] | image}
+    \V{["neural-networks/rnn/lastoutput-en", "th", 0.7] | image}
   \end{figure}
 \end{frame}
 
-\begin{frame}{Prédiction d'autants de sorties qu'il y a d'entrées}
-  \V{["neural-networks/rnn/alloutputs", "tw", 0.5] | image}
+\begin{frame}{Prediction of one output per input}
+  \V{["neural-networks/rnn/alloutputs-en", "tw", 0.5] | image}
 \end{frame}
 
-\begin{frame}{Prédiction d'un nombre arbitraire de sorties}
+\begin{frame}{Prediction of an arbitrary number of outputs}
   \V{["neural-networks/rnn/seq2seq", "tw", 1] | image}
 \end{frame}
 
-\begin{frame}{Problème du gradient qui disparaît (vanishing gradient)}
-  \V{["optimization/vanishing-gradients-rnn", "tw", 0.7] | image}
+\begin{frame}{Vanishing gradient problem: recurrence edition}
+  \V{["optimization/vanishing-gradients-rnn-en", "tw", 0.7] | image}
 \end{frame}
