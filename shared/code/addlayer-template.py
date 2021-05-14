@@ -1,5 +1,5 @@
-while (perf > perf_precedente):
-    perf_precedente = perf
-    ajouter_une_couche(model)
-    apprendre(model,data_train)
-    perf = calcul_perf(model, data_validation)
+while perf > previous_perf:
+    previous_perf = perf
+    model = add_layer(model)
+    model.fit(data_train)
+    perf = model.eval(data_eval)
