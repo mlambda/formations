@@ -25,7 +25,7 @@
 - name: j5
   title: Part 5
   sections:
-    - path: reinforcement-learning
+    - path: en/reinforcement-learning
       flavor: full
 
 - name: j6
