@@ -1,4 +1,4 @@
-\begin{frame}{Qu'est-ce qu'un hyper-paramètre~?}
+\begin{frame}{What are hyperparameters?}
   \begin{columns}
     \begin{column}[c]{0.5\textwidth}
       \V{["neural-networks/deep-ff-notext", "tw", 1] | image}
@@ -6,9 +6,10 @@
     \begin{column}[c]{0.5\textwidth}
       \begin{itemize}
         \item Learning rate
-        \item Taille de batch
-        \item Nombre de couches
-        \item Taille des couches
+        \item Batch size
+        \item Number of layers
+        \item Size of layers
+        \item …
       \end{itemize}
     \end{column}
   \end{columns}
@@ -17,31 +18,38 @@
 \begin{frame}{Learning rate}
   \begin{minipage}{0.49\textwidth}
     \centering
-    trop grand
+    Too big
   \end{minipage}\hfill
   \begin{minipage}{0.49\linewidth}
     \centering
-    trop petit
+    Ok
   \end{minipage}\hfill
 
   \V{["learning-rate-big-small", "tw", 1] | image}
 \end{frame}
 
-\begin{frame}{Learning rate}
-  Utilisation d'une échelle logarithmique (dans un premier temps) :
+\begin{frame}{First approach --- Learning rate}
+  Use a logarithmic scale at first:
   \mintedpycode{gridsearch-template}
+  Then tune with a linear scale.
 \end{frame}
 
-\begin{frame}{Taille du batch}
-  Usuellement, des puissances de 2, pour optimiser les ressources GPU
-  \V{["batch-size-effect-nzmog", "th", 0.7] | image}
+\begin{frame}{First approach --- Batch size}
+  Usually powers of 2, to optimize GPU resources
+  \V{["batch-size-effect-nzmog", "th", 0.7, "en"] | image}
 \end{frame}
 
-\begin{frame}{Taille des couches}
-  Usuellement, des puissances de 2, pour optimiser les ressources GPU. \\
-  Même intuition que pour le nombre de couches.
+\begin{frame}{First approach --- Size of layers}
+  As for batch size: usually powers of 2
 \end{frame}
 
-\begin{frame}{Nombre de couches}
+\begin{frame}{First approach --- Number of layers}
   \mintedpycode{addlayer-template}
+\end{frame}
+
+\begin{frame}{Beyond manual tuning}
+  Training models is extremely costly.
+  A good navigation in the hyperparameters space is important.
+
+  $\Rightarrow$ Use a dedicated library like Keras Tuner or hyperopt to leverage Gaussian Processes.
 \end{frame}

@@ -1,61 +1,61 @@
-\begin{frame}{Lien avec la régression linéaire}
+\begin{frame}{Relation with linear regression}
   \V{["regression-10", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}{Lien avec la régression linéaire}
+\begin{frame}{Relation with linear regression}
   \V{["separable-problem-linear-solution-nzmog", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}{Lien avec la régression linéaire}
+\begin{frame}{Need to go beyond linear regression}
   \V{["xor-nzmog", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}{Lien (ténu) avec la biologie}
+\begin{frame}{(Weak) relation with biology}
   \V{["biological-neuron", "tw", 1] | image}
 \end{frame}
 
-\begin{frame}{Modélisation d'un neurone}
+\begin{frame}{Artificial neuron model}
   \V{["neuron-model", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}{Modélisation d'un réseau de neurones}
-  Agencement de beaucoup de neurones~:
-  \begin{description}[<+->]
-    \item[En parallèle] Calculent des résultats indépendamment dans la même couche
-    \item[En série] Prennent en entrée les résultats des neurones de la couche précédente
+\begin{frame}{Combination to form a neural network}
+  Combination of many neurons to form a neural network:
+  \begin{description}[<+(1)->]
+    \item[In parallel] Compute results independently in a same layer
+    \item[In series] Take as inputs the output of the previous layer
   \end{description}
 \end{frame}
 
-\begin{frame}{Deux types de neurones}
-  On distingue deux types de neurones~:
-  \begin{description}[<+->]
-    \item[Neurones cachés] Neurones des couches intermédiaires. Améliorent l'expressivité du modèle
-    \item[Neurones de sortie] Neurones de la couche finale. Contraints par le type de sortie attendu
+\begin{frame}{Two types of neurons}
+  Important distinction between two types of neurons:
+  \begin{description}[<+(1)->]
+    \item[Hidden neurons] Neurons of intermediate layers. Increase the network capacity
+    \item[Output neurons] Neurons of the final layer. Depend \textbf{only} on the kind of output
   \end{description}
 \end{frame}
 
-\begin{frame}{Réseau sans couche cachée}
+\begin{frame}{Shallow network}
   \centering
-  \V{["neural-networks/shallow-ff", "tw", 1] | image}
+  \V{["neural-networks/shallow-ff-en", "tw", 1] | image}
 \end{frame}
 
-\begin{frame}{Réseau avec une couche cachée}
+\begin{frame}{One hidden layer network}
   \centering
-  \V{["neural-networks/one-hidden-layer-ff", "tw", 1] | image}
+  \V{["neural-networks/one-hidden-layer-ff-en", "tw", 1] | image}
 \end{frame}
 
-\begin{frame}{Réseau profond}
+\begin{frame}{Deep network}
   \centering
-  \V{["neural-networks/deep-ff", "tw", 1] | image}
+  \V{["neural-networks/deep-ff-en", "tw", 1] | image}
 \end{frame}
 
-\begin{frame}{Un potentiel infini}
-  \textbf{Kurt Hornik, 1991~:} Théorème d'approximation universelle
+\begin{frame}{A theoretically interesting model}
+  \textbf{Kurt Hornik, 1991:} Universal approximation theorem
   \V{["activations/approximation", "tw", 1] | image}
 \end{frame}
 
-\begin{frame}{Modélisation matricielle --- Échantillon}
-  Représentable sous forme de vecteur à $d$ colonnes correspondant à $d$ caractéristiques~:
+\begin{frame}{Matrix formulation --- Sample}
+  Represent a sample as a $d$ dimensional vector. Each dimension corresponds to a feature:
 
   \[
     \vect{x} = \begin{bmatrix}
@@ -63,7 +63,11 @@
     \end{bmatrix}
   \]
 
-  Voire même de matrice dans le cas d'un batch (groupe d'échantillons)~:
+  \begin{alertblock}{Warning}
+    The orientation of the \vect{x} vector differs from the mathematical convention (column vector).
+  \end{alertblock}
+
+  Represent a dataset as a matrix:
 
   \[
     \vect{X} = \begin{bmatrix}
@@ -71,10 +75,14 @@
       X_{2,1} & X_{2,2} & \dots & X_{2,d}
     \end{bmatrix}
   \]
+
 \end{frame}
 
-\begin{frame}{Modélisation matricielle --- Poids}
-  Représentables sous forme de matrice de poids et de vecteur de biais~:
+\begin{frame}{Matrix formulation --- Weights}
+  Represent weights as a matrix: each column contains the weights of a neuron.
+  The matrix contains the weights of a full layer.
+
+  Biases can be separated into a vector.
 
   \begin{align*}
     \vect{W} & = \begin{bmatrix}
@@ -89,7 +97,7 @@
   \end{align*}
 \end{frame}
 
-\begin{frame}{Modélisation matricielle complète}
+\begin{frame}{Full matrix formulation}
   \footnotesize
   \begin{align*}
     O & = \sigma (\vect{X}.\vect{W} + \vect{b}) \\
@@ -114,27 +122,27 @@
       O_{2,1} & O_{2,2} & \dots & O_{2,n}
     \end{bmatrix}
   \end{align*}
-  où :
+  Where:
   \begin{description}[<+->]
-    \item[X] Données en entrée de dimension $d$
-    \item[W \& b] Paramètres à trouver des $n$ neurones de notre modèle
-    \item[$\bm{\sigma}$] Fonction d'activation
-    \item[O] Sortie du réseau
+    \item[$\vect{X}$] $d$ dimensional input data
+    \item[$\vect{W}$ \& $\vect{b}$] Weights of the $n$ neurons of the layer
+    \item[$\bm{\sigma}$] Activation function
+    \item[$\vect{O}$] Output of the network
   \end{description}
 \end{frame}
 
-\begin{frame}{Fonctions d'activation --- Critères de choix}
+\begin{frame}{Activation functions --- How to pick one}
   \begin{itemize}[<+->]
-    \item Propriétés mathématiques (conservation du gradient)
-    \item Propriétés d'apprentissage (éviter la création de poids morts)
-    \item Rapidité de calcul
-    \item Intervalle de sortie pour la dernière couche
+    \item Mathematical properties (\emph{e.g.} gradient conservation, …)
+    \item Learning properties (\emph{e.g.} dead weights, …)
+    \item Ease of computation
+    \item Output interval and specific constraints for the last layer
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Fonctions d'activation --- Les plus classiques}
+\begin{frame}{Activation functions --- Most used}
   \begin{itemize}
-  \item Sigmoïde
+  \item Sigmoid
   \item Tanh
   \item Softmax
   \item ReLU
@@ -142,40 +150,40 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Fonctions d'activation --- Sigmoïde}
+\begin{frame}{Activation functions --- Sigmoid}
   \begin{center}
     \V{["activations/sigmoid", "tw", 1] | image}
   \end{center}
 
   \begin{description}[<+->]
-    \item[Définition] \[\phi(x) = \frac{1}{1 + e^{-x}}\]
-    \item[Dérivée] \[\phi'(x)=\phi(x)(1-\phi(x))\]
+    \item[Definition] \[\phi(x) = \frac{1}{1 + e^{-x}}\]
+    \item[Derivative] \[\phi'(x)=\phi(x)(1-\phi(x))\]
   \end{description}
 \end{frame}
 
-\begin{frame}{Fonctions d'activation --- Tangente hyperbolique}
+\begin{frame}{Activation functions --- Tanh}
   \begin{center}
     \V{["activations/tanh", "tw", 1] | image}
   \end{center}
 
   \begin{description}[<+->]
-    \item[Définition] \[\tanh(x)=\frac{1-e^{-2x}}{1+e^{-2x}}\]
-    \item[Dérivée] \[\tanh'(x)=1-\tanh^2(x)\]
+    \item[Definition] \[\tanh(x)=\frac{1-e^{-2x}}{1+e^{-2x}}\]
+    \item[Derivative] \[\tanh'(x)=1-\tanh^2(x)\]
   \end{description}
 \end{frame}
 
-\begin{frame}{Fonctions d'activation --- ReLU}
+\begin{frame}{Activation functions--- ReLU}
   \begin{center}
     \V{["activations/relu", "tw", 0.6] | image}
   \end{center}
 
   \begin{description}[<+->]
-    \item[Définition] \[\ReLU(x)=\begin{cases} 0 & x \leq 0 \\ x & x > 0\end{cases}\]
-    \item[Dérivée] \[\ReLU'(x)=\begin{cases} 0 & x \leq 0 \\ 1 & x > 0\end{cases}\]
+    \item[Definition] \[\ReLU(x)=\begin{cases} 0 & x \leq 0 \\ x & x > 0\end{cases}\]
+    \item[Derivative] \[\ReLU'(x)=\begin{cases} 0 & x \leq 0 \\ 1 & x > 0\end{cases}\]
   \end{description}
 \end{frame}
 
-\begin{frame}{Fonctions d'activation --- Approximation d'une fonction}
+\begin{frame}{Activation functions --- Function approximation}
   \centering
     \V{["activations/approximation", "tw", 1] | image}
   {\small
@@ -187,10 +195,10 @@
   }
 \end{frame}
 
-\begin{frame}{Fonctions d'activation --- Softmax}
+\begin{frame}{Activation functions --- Softmax}
   \begin{description}[<+->]
-    \item[Définition] \[\softmax(x_i) = \frac{\exp(x_i)}{\sum_{k = 1}^n{\exp(x_k)}}\]
-    \item[Propriété] \[\sum_{i = 1}^n{\softmax(x_i)} = 1\]
+    \item[Definition] \[\softmax(x_i) = \frac{\exp(x_i)}{\sum_{k = 1}^n{\exp(x_k)}}\]
+    \item[Key property] \[\sum_{i = 1}^n{\softmax(x_i)} = 1\]
     \item[Gradient] \[
       \frac{\partial \softmax(x_i)}{\partial x_j} =
         \begin{cases}

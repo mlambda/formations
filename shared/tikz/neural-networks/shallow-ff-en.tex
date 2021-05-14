@@ -1,0 +1,21 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \foreach \y in {1,2} {
+        \node (BI\y) at (-1.5, 4-\y) {Input \y};
+        \node[input] (I\y) at (0, 4 - \y) {$x_\y$};
+    }
+    \foreach \y in {1,...,4} {
+        \node (AO\y) at (3.5, 5 - \y) {Output \y};
+        \node[output] (O\y) at (2, 5 - \y) {$\sigma(\sum)$} ;
+    }
+    \foreach \i in {1,2} {
+        \foreach \j in {1,...,4} {
+        \draw[->,>=stealth] (I\i) to (O\j);
+        }
+    }
+  \end{tikzpicture}
+\end{document}
