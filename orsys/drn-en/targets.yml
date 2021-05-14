@@ -31,5 +31,5 @@
 - name: j6
   title: Part 6
   sections:
-    - path: tools
+    - path: en/tools
       flavor: detailed

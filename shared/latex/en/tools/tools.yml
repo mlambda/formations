@@ -1,0 +1,19 @@
+default_titles:
+  apis: APIs
+  big-data: Big Data
+  engineering: Engineering
+  environment: Software environment
+  information: Information
+  intro: Introduction
+  ml-dl: Machine learning \& deep learning
+flavors:
+  detailed:
+    - intro
+    - ml-dl
+    - environment
+    - engineering
+    - big-data
+    - apis
+    - information
+    - /questions
+title: Tools
