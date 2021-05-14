@@ -54,11 +54,9 @@ TIKZ
 - [x] ["Schéma d'une Gated Recurrent Unit", "", "tikz", "neural-networks/rnn/gru", "gru"]
 - [x] ["Schéma d'un autoencodeur profond", "", "tikz", "neural-networks/cnn/deep-auto-encoder", "deep-auto-encoder"]
 - [x] ["Schéma de dropout", "", "tikz", "neural-networks/cnn/dropout", "dropout-2"]
-- [ ] ["", "", "tikz", "TODO", "multi-task-v2"]
-- [ ] ["", "", "tikz", "TODO", "ml-craftmanship"]
-- [ ] ["", "", "tikz", "TODO", "molecule-release"]
-- [ ] ["", "", "tikz", "TODO", "learning-rate-big-small"]
-- [ ] ["", "", "tikz", "TODO", "ia-ml-deep"]
+- [x] ["Schéma d'un réseau multi-tâches", "", "tikz", "neural-networks/multi-task", "multi-task-v2"]
+- [x] ["Flux opérationnel en Machine Learning", "", "tikz", "ml/craftmanship", "ml-craftmanship"]
+- [x] ["Intelligence Artificielle, Machine Learning et Deep Learning", "", "tikz", "ml/ia-ml-deep", "ia-ml-deep"]
 - [ ] ["", "", "", "", "autoencoder-lstm"]
 - [ ] ["", "", "", "", "autoencoder-schema"]
 - [ ] ["", "", "", "", "autoencoder-sparse"]
@@ -180,6 +178,8 @@ TIKZ
 
 
 MATPLOTLIB/TP
+- [ ] ["", "", "tikz", "TODO", "learning-rate-big-small"]
+- [ ] ["", "", "tikz", "TODO", "molecule-release"]
 - [x] ["Mise en évidence du surraprentissage", "", "", "overfitting-test-nzmog", "pouet trouver une place pouet"]
 - [x] ["Loi normale et écart type", "Jhguch https://commons.wikimedia.org/w/index.php?curid=14524285", "CC BY-SA 2.5", "gaussian-std", "68-95-99,7"]
 - [x] ["De l'ADN à la data", "National Human Genome Research Institute (NHGRI) from Bethesda, MD, USA https://commons.wikimedia.org/w/index.php?curid=52360110", "CC BY 2.0", "adn-2-data", "adn-data"]
