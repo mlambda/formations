@@ -1,0 +1,17 @@
+default_titles:
+  calculus: Analyse
+  conclusion: Conclusion
+  goals: Quelques prérequis
+  linear-algebra: Algèbre linéaire
+  probabilities: Probabilités
+  statistics: Statistique
+flavors:
+  full:
+    - goals
+    - linear-algebra
+    - calculus
+    - probabilities
+    - statistics
+    - conclusion
+    - /questions
+title: Prérequis

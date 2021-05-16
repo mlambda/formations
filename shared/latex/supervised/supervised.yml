@@ -49,6 +49,18 @@ flavors:
     - /questions
     - demo-random-forest
     - tp-random-forest
+  regressions-and-naive-bayes:
+    - regression-lineaire
+    - cost-error-function
+    - /nn/gradient-descent
+    - regression-polynomiale
+    - classification
+    - regression-logistique
+    - /questions
+    - tp-reg-lin-poly
+    - proba-rappel
+    - naive-bayes
+    - /questions
   bayes:
     - proba-rappel
     - naive-bayes

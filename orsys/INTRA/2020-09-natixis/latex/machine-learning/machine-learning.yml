@@ -1,9 +1,8 @@
 default_titles:
-  apprentissage: Apprentissage
-  bonnes-pratiques: Bonnes Pratiques
   data-preparation: Modélisation et préparation des données
   evaluation: Évaluation
   intro: Introduction
+  learning: Apprentissage
   math-algebre-lineaire: Algèbre Linéaire
   math-analyse: Analyse
   math-conclusion: Conclusions
@@ -15,16 +14,10 @@ default_titles:
 flavors:
   natixis:
     - intro
-    - math-objectifs
-    - math-algebre-lineaire
-    - math-analyse
-    - math-proba
-    - math-stats
-    - math-conclusion
+    - $prerequisites: full
     - data-preparation
     - evaluation
-    - apprentissage
-    - bonnes-pratiques
+    - learning
     - /questions
     - tp-data
 title: Machine Learning

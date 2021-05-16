@@ -1,24 +1,35 @@
-\begin{frame}
-  \frametitle{Reproductibilité}
+\begin{frame}{Qualité de l'apprentissage}
+  Entrainement supervisé d'un modèle — overfit
+
+  \V{["fit-nzmog", "tw", 1] | image}
+
+  \red{Problème : trop minimiser la perte n'est pas bon !}
+\end{frame}
+
+\begin{frame}{Qualité de l'apprentissage}
+
+  \V{["learning-curve-nzmog", "th", 0.6] | image}
+
+  → Minimiser la perte sur un ensemble de validation
+\end{frame}
+
+\begin{frame}{Séparation des données}
   \begin{itemize}
-  \item extrêmement importante pour compléter les analyses après les retours business
-  \item ensemble de bonnes pratiques d'ingénierie
+  \item ensemble d'entrainement
+  \item ensemble de validation pour mesurer la généralisation
+  \item ensemble de test (pour éviter le biais statistique)
   \end{itemize}
+  → Split 60/20/20 habituel.
 \end{frame}
 
-\begin{frame}
-  \frametitle{Reproductibilité}
-  \begin{itemize}[<+->]
-  \item garder une trace exacte du préprocessing
-  \item de préférence utiliser des notebooks
-  \item faire attention au random (utiliser des seeds)
-  \item définir les datasets utilisés, dates comprises
-  \item garder une trace de l'environnement
-  \end{itemize}
+\begin{frame}{Cross-validation}
+  Pour \og perdre\fg{} moins de données et mieux tester la
+  généralisation :
+  \V{["k-fold-cross-validation", "tw", 0.9] | image}
+  Ici, 4-fold cross-validation.
 \end{frame}
 
-\begin{frame}
-  \frametitle{Régularisation}
+\begin{frame}{Régularisation}
   \begin{minipage}[l]{0.49\linewidth}
     \begin{center}
       Régularisation \\
@@ -38,8 +49,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Optimisation des méta-paramètres}
+\begin{frame}{Optimisation des méta-paramètres}
   Méta-paramètres : paramètres \alert{non appris} par le modèle.
   \begin{exampleblock}{Exemples}
   \begin{description}
@@ -50,4 +60,3 @@
   \end{exampleblock}
   Optimisation par recherche aléatoire ou processus gaussien.
 \end{frame}
-

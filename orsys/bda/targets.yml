@@ -1,47 +1,31 @@
 - name: j1
-  title: Jour 1 --- Introduction au Machine Learning
+  title: Jour 1 --- Introduction à Python
   sections:
     - path: about
-      title: Big Data Analytics
       flavor: orsys-4j
 
-    - path: tools
-      flavor: init-python
+    - path: python/basics
+      flavor: full
 
+- name: j2
+  title: Jour 2 --- Apprentissage supervisé
+  sections:
     - path: machine-learning
       flavor: bda
 
-- name: j2
-  title: Jour 2 --- Algorithmes supervisés
-  sections:
-    - path: machine-learning
-      flavor: app
-    
     - path: supervised
-      flavor: standard
+      flavor: regressions-and-naive-bayes
 
 - name: j3
-  title: Jour 3 --- Algorithmes non supervisés
+  title: Jour 3 --- Apprentissage non-supervisé
   sections:
     - path: unsupervised
       flavor: bda
 
 - name: j4
-  title: Jour 4 --- Ingénierie \& Traitement de texte
+  title: Jour 4 --- Traitement du langage naturel
   sections:
     - path: natural-language-processing
       flavor: intro-tp
-    
-    - path: engineering
-      flavor: mlcraftmyass
-
-    - path: tools
-      flavor: detailed
-
-    - path: big-questions
-      flavor: full
-
-    - path: nn
-      flavor: deep-discover
 
     - contact

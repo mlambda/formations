@@ -1,31 +1,54 @@
-\begin{frame}
-  \frametitle{Précision, rappel}
-  En classification :
+\begin{frame}{Buts}
+  \begin{itemize}[<+->]
+    \item Mesurer la qualité des prédictions du modèle
+    \item Évaluer si un modèle peut remplir un objectif métier
+    \item Se protéger des régressions après mise à jour
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Évaluation de modèles de classification}
+  Les deux premières métriques sont les plus utilisées:
   \begin{description}
   \item[Précision]
     \[
-    \frac{\text{vrais positifs}}{\text{vrais positifs + faux positifs}}
+    \frac{\text{vrais positifs}}{\text{vrais positifis + faux positifs}}
     \]
   \item[Rappel]
     \[
     \frac{\text{vrais positifs}}{\text{vrais positifs + faux négatifs}}
   \]
-  \item[F-mesure] moyenne harmonique entre précision et rappel (aussi
-    appelée F1 score)
+  \item[F-mesure] Moyenne harmonique entre précision et rappel (aussi appelée score F1)
   \end{description}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Précision, rappel}
+\begin{frame}{Illustration de la précision et du rappel}
   \V{["precisionrecall", "th", 0.7] | image}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Analyse d'une courbe ROC}
-  \V{["roc-space", "th", 0.7] | image}
+\begin{frame}{Espace ROC}
+  Mesure la performance du modèle à plusieurs seuils de décision.
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      \textbf{Abscisse}
+
+      1 - spécificité, taux de faux positifs, ou probabilité de \emph{fausse alerte} ($\frac{\text{FP}}{\text{VN} + \text{FP}}$)
+ 
+      \vspace{1cm}
+      \textbf{Ordonnée}
+  
+      Sensibilité, taux de vrais positifs ou rappel ($\frac{\text{VP}}{\text{VP} + \text{FN}}$)
+    \end{column}
+    \begin{column}{.52\textwidth}
+      \V{["roc-space", "tw", 0.8] | image}
+    \end{column}
+  \end{columns}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Matrice de confusion}
-  \V{["confusion-matrix-nzmog", "th", 0.7] | image}
+\begin{frame}{Matrice de confusion}
+  Montrer clairement quelles sont les erreurs faites par le modèle
+  \V{["confusion-matrix-nzmog", "th", 0.6] | image}
+\end{frame}
+
+\begin{frame}{Évaluation de modèles de régression}
+  Plus proche du critère d'apprentissage~: erreur absolue moyenne ou erreur au carré moyenne.
 \end{frame}
