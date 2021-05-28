@@ -1,0 +1,108 @@
+\begin{frame}{Introduction}
+  \begin{itemize}[<+->]
+    \item Q-learning is a value-based method
+    \item It builds a table of values for actions in each state
+    \item It learns the values by updating them with observed rewards
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Example --- Problem}
+  Go from start to finish. Each move costs $1$ (reward of $-1$).
+
+  \begin{tabular}{c|c|c|c|c|c|c}
+    \cline{2-6}
+     & & \cellcolor{black} & & & & \\
+    \cline{2-6}
+     & & \cellcolor{black} & & \cellcolor{black} & \cellcolor{black} & \\
+    \cline{2-6}
+    Entrée $\rightarrow$ & \phantom{-5} & \phantom{-5} & \phantom{-5} & \phantom{-5} & \phantom{-5} & $\leftarrow$ Sortie \\
+    \cline{2-6}
+     & & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
+    \cline{2-6}
+     & & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
+    \cline{2-6}
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Q-table}
+  The corresponding Q-table, initialized to 0s, would be:
+
+  \begin{tabular}{ccccc}
+    \toprule
+    \diagbox{State}{Action} & $\uparrow$ & $\rightarrow$ & $\downarrow$ & $\leftarrow$ \\
+    \midrule
+    $(1, 1)$ & 0 & 0 & 0 & 0 \\
+    $(1, 2)$ & 0 & 0 & 0 & 0 \\
+    $(1, 3)$ & 0 & 0 & 0 & 0 \\
+    $(1, 4)$ & 0 & 0 & 0 & 0 \\
+    $(1, 5)$ & 0 & 0 & 0 & 0 \\
+    $(2, 1)$ & 0 & 0 & 0 & 0 \\
+    \multicolumn{5}{c}{…} \\
+    $(5, 5)$ & 0 & 0 & 0 & 0 \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Learning the values of the Q-table}
+  Use Bellman equation to update a single value in the table:
+  \[
+    Q_{\text{new}}(s_t, a_t)
+    \leftarrow
+    \underbrace{Q(s_t, a_t)}_{\mathclap{\text{Old value}}}
+    +
+    \alpha
+    \underbrace{\left[
+      \overbrace{
+        r_t
+        +
+        \gamma \max_a Q\left(s_{t+1}, a\right)
+      }^{\mathclap{\text{New value}}}
+      - \overbrace{Q(s_t, a_t)}^{\mathclap{\text{Old value}}}
+    \right]}_{\mathclap{\text{Temporal difference}}}
+  \]
+  where
+  \begin{description}
+    \item[$\alpha$] Learning rate ($0 \leq \alpha \leq 1$)
+    \item[$r_t$] Reward for picking $a_t$ in state $s_t$
+    \item[$\gamma$] Discount factor
+    \item[$\max_a Q\left(s_{t+1}, a\right)$] Maximum reward in state of arrival
+  \end{description}
+\end{frame}
+
+\begin{frame}{Q-table update example}
+  We started in $(3, 1)$ and picked action $\uparrow$.
+  \begin{alignat*}{9}
+    Q_{\text{new}}(s_t, a_t) & =
+    Q(s_t, a_t)
+    && +
+    \alpha
+    &&[
+        r_t
+        && +
+        \gamma \max_a Q\left(s_{t+1}, a\right)
+      && - Q(s_t, a_t)
+    ] \\
+    Q_{\text{new}}((3, 1), \uparrow) & =
+    Q((3, 1), \uparrow)
+    && +
+    0.1
+    &&[
+        -1
+        && +
+        \gamma \max_a Q\left((2, 1), a\right)
+      && - Q((3, 1), \uparrow)
+    ] \\
+    Q_{\text{new}}((3, 1), \uparrow) & =
+    && -0.1 && && && \\
+  \end{alignat*}
+
+  \begin{tabular}{ccccc}
+    \toprule
+    \diagbox{State}{Action} & $\uparrow$ & $\rightarrow$ & $\downarrow$ & $\leftarrow$ \\
+    \midrule
+    \multicolumn{5}{c}{…} \\
+    $(3, 1)$ & $-0.1$ & 0 & 0 & 0 \\
+    \multicolumn{5}{c}{…} \\
+    \bottomrule
+  \end{tabular}
+\end{frame}

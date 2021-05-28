@@ -1,10 +1,12 @@
 default_titles:
-  cnn-data: Data \& tasks
-  cnn-model: Model
+  data: Data \& tasks
+  model: Model
+  generation: Generative models
 flavors:
   demo:
-    - cnn-data
-    - cnn-model
+    - data
+    - model
+    - generation
     - /questions
     - demo
 title: Convolutional Neural Networks

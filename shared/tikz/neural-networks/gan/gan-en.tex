@@ -1,0 +1,19 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \node[input, minimum width=3cm] (IG) at (0, 2.5) {Noise};
+    \node[hdecoder, minimum width=3cm] (G) at (0, 1.5) {Generator};
+    \node[hencoder, minimum width=3cm] (IDF) at (0, 0.5) {Fake sample};
+    \node[input, minimum width=3cm] (IDR) at (0, -0.5) {Real sample};
+    \node[hdecoder, minimum width=3cm] (D) at (3.5, 0) {Discriminator};
+    \node[output, minimum width=3cm] (O) at (7, 0) {Is real or fake};
+    \draw[->,>=stealth] (IG) to (G);
+    \draw[->,>=stealth] (G) to (IDF);
+    \draw[->,>=stealth] (IDF) to (D);
+    \draw[->,>=stealth] (IDR) to (D);
+    \draw[->,>=stealth] (D) to (O);
+  \end{tikzpicture}
+\end{document}

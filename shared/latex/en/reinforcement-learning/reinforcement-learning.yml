@@ -1,7 +1,11 @@
 default_titles:
+  a2c: Actor-critic methods
   intro: Introduction
+  q-learning: Q-learning
 flavors:
   full:
     - intro
+    - q-learning
+    - a2c
     - /questions
 title: Reinforcement Learning
