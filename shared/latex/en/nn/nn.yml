@@ -13,7 +13,4 @@ flavors:
     - deep-optimize
     - regularization
     - demo
-    - $cnn: demo
-    - $rnn: demo-detailed
-    - $gan: demo-detailed
 title: Neural networks

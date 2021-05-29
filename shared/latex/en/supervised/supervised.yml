@@ -1,0 +1,13 @@
+default_titles:
+  linear-regression: Linear regression
+  naive-bayes: Naive Bayes
+  random-forest: Random Forest
+flavors:
+  drn:
+    - linear-regression
+    - cost-error-function
+    - /en/nn/gradient-descent
+    - demo-linear-regression
+    - naive-bayes
+    - random-forest
+title: Overview of classical machine learning

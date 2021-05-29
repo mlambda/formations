@@ -1,35 +1,59 @@
-- name: j1
-  title: Part 1
+- name: about
+  title: about
   sections:
     - path: en/about
       flavor: orsys-3j
 
-- name: j2
-  title: Part 2
+- name: ai
+  title: ai
   sections:
     - path: en/artificial-intelligence
       flavor: full
 
-- name: j3
-  title: Part 3
+- name: ml
+  title: ml
   sections:
     - path: en/machine-learning
       flavor: detailed-no-tp
 
-- name: j4
-  title: Part 4
+- name: supervised
+  title: supervised
+  sections:
+    - path: en/supervised
+      flavor: drn
+
+- name: nn
+  title: nn
   sections:
     - path: en/nn
       flavor: deep-detailed-demo
 
-- name: j5
-  title: Part 5
+- name: cnn
+  title: cnn
+  sections:
+    - path: en/nn/cnn
+      flavor: demo
+
+- name: rnn
+  title: rnn
+  sections:
+    - path: en/nn/rnn
+      flavor: demo-detailed
+
+- name: gan
+  title: gan
+  sections:
+    - path: en/nn/gan
+      flavor: demo-detailed
+
+- name: rl
+  title: rl
   sections:
     - path: en/reinforcement-learning
       flavor: full
 
-- name: j6
-  title: Part 6
+- name: tools
+  title: tools
   sections:
     - path: en/tools
       flavor: detailed

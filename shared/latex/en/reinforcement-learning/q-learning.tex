@@ -15,7 +15,7 @@
     \cline{2-6}
      & & \cellcolor{black} & & \cellcolor{black} & \cellcolor{black} & \\
     \cline{2-6}
-    Entrée $\rightarrow$ & \phantom{-5} & \phantom{-5} & \phantom{-5} & \phantom{-5} & \phantom{-5} & $\leftarrow$ Sortie \\
+    Entrance $\rightarrow$ & \phantom{-5} & \phantom{-5} & \phantom{-5} & \phantom{-5} & \phantom{-5} & $\leftarrow$ Exit \\
     \cline{2-6}
      & & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
     \cline{2-6}
@@ -64,7 +64,7 @@
   \begin{description}
     \item[$\alpha$] Learning rate ($0 \leq \alpha \leq 1$)
     \item[$r_t$] Reward for picking $a_t$ in state $s_t$
-    \item[$\gamma$] Discount factor
+    \item[$\gamma$] Discount factor ($0 \leq \gamma \leq 1$)
     \item[$\max_a Q\left(s_{t+1}, a\right)$] Maximum reward in state of arrival
   \end{description}
 \end{frame}
@@ -105,4 +105,72 @@
     \multicolumn{5}{c}{…} \\
     \bottomrule
   \end{tabular}
+\end{frame}
+
+\begin{frame}{Limitations}
+  \begin{itemize}[<+->]
+    \item Not a fit for big state spaces
+    \item Although it converges to optimal values, it might not be data efficient
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Improvements --- Deep Q-learning}
+  \begin{itemize}[<+->]
+    \item Use a network to predict $Q(s, a)$
+    \item Use Bellman equation as a loss to train the network
+    \item Ok for big state spaces!
+    \item Not easy to train, classical RL stability practices are needed
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Improvements --- Experience replay}
+  Instead of going through a full episode each time, select random transitions from random episodes.
+
+  $\rightarrow$ Uncorrelated training samples. Big improvement in data efficiency and stability.
+\end{frame}
+
+\begin{frame}{Improvements --- Double Q-learning}
+  Train two Q-learners jointly to avoid stability problems in Q-learning.
+
+  Learner A provides the value estimation for learner B, while learner B provides value estimation for learner A.
+
+  They are trained on different episodes.
+\end{frame}
+
+\begin{frame}{Introduction by DeepMind on Atari games}
+  \begin{itemize}
+  \item 49 Atari games
+  \item $210 \times 160$ pixels
+  \item 8 to 16 actions
+  \end{itemize}
+  \V{["atari", "tw", 0.6] | image}
+\end{frame}
+
+\begin{frame}{Technical details}
+  \begin{itemize}
+  \item $84 \times 84 \times 4$ input
+  \item $\{-1, 0, 1\}$ reward depending on score variations
+  \item Same preprocessing for all games. (50M frames $\approx$ 38 days in-game)
+  \item 29/49 games: DQN $\geq$ Human
+    \begin{itemize}
+    \item 22 where DQN $>$ Human
+    \item Humans have 2H of training time
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{DQN --- Pong}
+  \bluelink{https://www.youtube.com/watch?v=lcVg9hVya-c}{DQN applied to Pong}
+\end{frame}
+
+\begin{frame}{DQN successors}
+  \begin{description}[<+->]
+    \item[R2D2] Uses recurrent neural networks
+    \item[Never Give Up] Uses memory networks and exploration mechanisms
+    \item[Agent57] Shares exploration mechanisms and learnings between games
+  \end{description}
+
+  \onslide<+->{Agent57 beats humans on the 57 games of the dataset}
+
+  \onslide<+->{\bluelink{https://youtu.be/M9Yn1kYZb6E}{Including exploration games}}
 \end{frame}

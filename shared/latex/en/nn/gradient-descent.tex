@@ -1,15 +1,14 @@
 
 \begin{frame}{Principle}
   Compute the error gradient \emph{w.r.t.} the parameters:
-  %TODO: check wrt
   \[
-  \frac{\partial{Err}}{\partial{w_i}}
+  \frac{\partial{E}}{\partial{w_i}}
   \]
   Update:
   \[
-  w_i' = w_i - \gamma * grad 
+  w_i \leftarrow w_i - \gamma\frac{\partial{E}}{\partial{w_i}}
   \]
-  où : $0 < \gamma < 1$ (learning rate)
+  where $0 < \gamma < 1$ (learning rate)
   \V{["gradient-nzmog", "tw", 0.25, "en"] | image}
 \end{frame}
 
@@ -31,16 +30,16 @@
 \begin{frame}{Derivation example --- Linear regression}
   \begin{minipage}[l]{0.49\linewidth}
     \begin{align*}
-      E_\Omega & = \frac{1}{2n} \sum_{i=1}^n( \hat{y_i} - y_i )^2 \\
-      E_\Omega & = \frac{1}{2n}\sum_{i=1}^n( \hat{y_i} - (ax_i + b) )^2 \\
+      E & = \frac{1}{2n} \sum_{i=1}^n( \hat{y_i} - y_i )^2 \\
+      E & = \frac{1}{2n}\sum_{i=1}^n( ax_i + b - y_i )^2 \\
       & ... \\
-      \frac{\partial E_\Omega}{\partial a} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - \hat{y_i})x_i \\
-      \frac{\partial E_\Omega}{\partial b} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - \hat{y_i}) \\
+      \frac{\partial E}{\partial a} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - y_i)x_i \\
+      \frac{\partial E}{\partial b} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - y_i) \\
     \end{align*}
   \end{minipage}\hfill
   \begin{minipage}[c]{0.49\linewidth}
     \begin{center}
-      $\boxed{y = ax+b}$
+      $\boxed{\hat{y_i} = ax_i+b}$
     \end{center}
 
     \begin{center}
@@ -50,8 +49,8 @@
     \begin{center}
       \textbf{Update}
 
-      $a \leftarrow a - \gamma\frac{\partial{E_{\Omega}}}{\partial{a}}$ \\
-      $b \leftarrow b - \gamma\frac{\partial{E_{\Omega}}}{\partial{b}}$ \\
+      $a \leftarrow a - \gamma\frac{\partial{E}}{\partial{a}}$ \\
+      $b \leftarrow b - \gamma\frac{\partial{E}}{\partial{b}}$ \\
       $\;$ \\
       where $0 < \gamma < 1$ (learning rate)
     \end{center}
@@ -61,88 +60,88 @@
 \begin{frame}{Example}
   Random initialization ($\gamma = 0.01$)
   \begin{itemize}
-    \item a = 0.58 ($\hat{a} = 3.0$)
-    \item b = 0.25 ($\hat{b} = 0.5$)
+    \item a = 0.58 ($\text{true}\, a = 3.0$)
+    \item b = 0.25 ($\text{true}\, b = 0.5$)
   \end{itemize}
   \V{["regression-1", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Example}
   \begin{itemize}
-    \item a = 0.58 ($\hat{a} = 3.0$)
-    \item b = 0.25 ($\hat{b} = 0.5$)
+    \item a = 0.58 ($\text{true}\, a = 3.0$)
+    \item b = 0.25 ($\text{true}\, b = 0.5$)
   \end{itemize}
   \V{["regression-error", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Example}
   \begin{itemize}
-    \item a = 1.50 ($\hat{a} = 3.0$)
-    \item b = 0.35 ($\hat{b} = 0.5$)
+    \item a = 1.50 ($\text{true}\, a = 3.0$)
+    \item b = 0.35 ($\text{true}\, b = 0.5$)
   \end{itemize}
   \V{["regression-2", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Example}
   \begin{itemize}
-    \item a = 2.10 ($\hat{a} = 3.0$)
-    \item b = 0.40 ($\hat{b} = 0.5$)
+    \item a = 2.10 ($\text{true}\, a = 3.0$)
+    \item b = 0.40 ($\text{true}\, b = 0.5$)
   \end{itemize}
   \V{["regression-3", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Example}
   \begin{itemize}
-    \item a = 2.48 ($\hat{a} = 3.0$)
-    \item b = 0.43 ($\hat{b} = 0.5$)
+    \item a = 2.48 ($\text{true}\, a = 3.0$)
+    \item b = 0.43 ($\text{true}\, b = 0.5$)
   \end{itemize}
   \V{["regression-4", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Example}
   \begin{itemize}
-    \item a = 2.73 ($\hat{a} = 3.0$)
-    \item b = 0.46 ($\hat{b} = 0.5$)
+    \item a = 2.73 ($\text{true}\, a = 3.0$)
+    \item b = 0.46 ($\text{true}\, b = 0.5$)
   \end{itemize}
   \V{["regression-5", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Example}
   \begin{itemize}
-    \item a = 2.89 ($\hat{a} = 3.0$)
-    \item b = 0.47 ($\hat{b} = 0.5$)
+    \item a = 2.89 ($\text{true}\, a = 3.0$)
+    \item b = 0.47 ($\text{true}\, b = 0.5$)
   \end{itemize}
   \V{["regression-6", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Example}
   \begin{itemize}
-    \item a = 2.99 ($\hat{a} = 3.0$)
-    \item b = 0.48 ($\hat{b} = 0.5$)
+    \item a = 2.99 ($\text{true}\, a = 3.0$)
+    \item b = 0.48 ($\text{true}\, b = 0.5$)
   \end{itemize}
   \V{["regression-7", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Example}
   \begin{itemize}
-    \item a = 3.06 ($\hat{a} = 3.0$)
-    \item b = 0.49 ($\hat{b} = 0.5$)
+    \item a = 3.06 ($\text{true}\, a = 3.0$)
+    \item b = 0.49 ($\text{true}\, b = 0.5$)
   \end{itemize}
   \V{["regression-8", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Example}
   \begin{itemize}
-    \item a = 3.10 ($\hat{a} = 3.0$)
-    \item b = 0.49 ($\hat{b} = 0.5$)
+    \item a = 3.10 ($\text{true}\, a = 3.0$)
+    \item b = 0.49 ($\text{true}\, b = 0.5$)
   \end{itemize}
   \V{["regression-9", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Example}
   \begin{itemize}
-    \item a = 3.13 ($\hat{a} = 3.0$)
-    \item b = 0.50 ($\hat{b} = 0.5$)
+    \item a = 3.13 ($\text{true}\, a = 3.0$)
+    \item b = 0.50 ($\text{true}\, b = 0.5$)
   \end{itemize}
   \V{["regression-10", "th", 0.6] | image}
 \end{frame}

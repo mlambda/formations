@@ -1,0 +1,51 @@
+\begin{frame}{Introduction}
+  \begin{itemize}
+  \item Simple decision trees overfit easily
+  \item They are fast to learn
+  \item Learning a lot of them is easy and prevents overfitting
+  \end{itemize}
+  → Creation of a random forest (set of slightly random decision trees)
+\end{frame}
+
+\begin{frame}{Goal}
+  Produce uncorrelated trees and average their prediction to prevent overfitting.
+\end{frame}
+
+\begin{frame}{Tool 1 — Bagging (row sampling)}
+  \textbf{B}oostrap \textbf{agg}regat\textbf{ing} (Bagging) :
+  \begin{itemize}
+  \item Sample from the dataset with replacement
+  \item Train a tree on this new dataset
+  \item Repeat $N$ times
+  \end{itemize}
+  Bagging is also called row sampling.
+\end{frame}
+
+\begin{frame}{Tool 2 — Random subspace method (column sampling)}
+  For each split in the decision tree, consider only a subset of features
+
+  Common values:
+    \begin{itemize}
+    \item classification : $\lvert\sqrt m\rvert$ features per split
+    \item regression: $\lvert\frac{m}{3}\rvert$ features per split, 5
+      examples per node minimum
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Random forest visualization}
+  \V{["random-forest-full", "tw", 1.05] | image}
+\end{frame}
+
+\begin{frame}{Random forest advantages}
+  \begin{itemize}
+  \item No overfitting when increasing the number of trees
+  \item Fast to run on new examples
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion}
+  \begin{itemize}
+  \item Easy to learn, somewhat interpretable model
+  \item Very versatile, one of the most used models in machine learning
+  \end{itemize}
+\end{frame}

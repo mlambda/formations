@@ -1,5 +1,6 @@
 default_titles:
   a2c: Actor-critic methods
+  alphago: AlphaGo
   intro: Introduction
   q-learning: Q-learning
 flavors:
@@ -7,5 +8,6 @@ flavors:
     - intro
     - q-learning
     - a2c
+    - alphago
     - /questions
 title: Reinforcement Learning
