@@ -1,15 +1,21 @@
 
 \begin{frame}{Principle}
-  Compute the error gradient \emph{w.r.t.} the parameters:
-  \[
-  \frac{\partial{E}}{\partial{w_i}}
-  \]
-  Update:
-  \[
-  w_i \leftarrow w_i - \gamma\frac{\partial{E}}{\partial{w_i}}
-  \]
-  where $0 < \gamma < 1$ (learning rate)
-  \V{["gradient-nzmog", "tw", 0.25, "en"] | image}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      Compute the error gradient \emph{w.r.t.} the parameters:
+      \[
+      \frac{\partial{E}}{\partial{w_i}}
+      \]
+      Update:
+      \[
+      w_i \leftarrow w_i - \gamma\frac{\partial{E}}{\partial{w_i}}
+      \]
+      where $0 < \gamma < 1$ (learning rate)
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \V{["gradient-nzmog", "tw", 1, "en"] | image}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Algorithm}

@@ -1,11 +1,13 @@
 default_titles:
   data: Data \& tasks
   model: Model
-  generation: Generative models
+  modern-architectures: Modern CNN architectures
+  generation: Generative models building block
 flavors:
   demo:
     - data
     - model
+    - modern-architectures
     - generation
     - /questions
     - demo

@@ -1,24 +1,78 @@
-\begin{frame}{Building block --- Convolution}
-  \V{["neural-networks/cnn/convolution", "tw", 0.8] | image}
+\begin{frame}{Problem with MLPs for images}
+  Say you want to detect objects in an image. A good model should:
+  \begin{itemize}[<+(1)->]
+    \item Find the object regardless of its location
+    \item Use local data around the object to produce a decision, not the opposite side of the image
+  \end{itemize}
+
+  \onslide<+(1)->{Standard MLPs don't meet those criteria.}
+
+  \onslide<+(1)->{$\Rightarrow$ Convolutional neural networks do.}
 \end{frame}
 
-\begin{frame}{Building block --- Pooling}
-  \V{["neural-networks/cnn/maxpool", "tw", 0.8] | image}
+\begin{frame}{Convolution}
+  Key building block: the cross-correlation operation (misnamed convolution).
+
+  It embodies both \textbf{locality} and \textbf{translation invariance}.
+
+  \V{["d2l/correlation", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{Convolution on multiple channels}
+  Previous slide was simplified: input and intermediate layers often have several channels (think RGB for an image).
+
+  The convolution also has a channels and is applied to all channels:
+
+  \V{["d2l/conv-multi-in", "th", 0.3] | image}
+
+  Usually the channel dimension is omitted when describing the convolution ($2 \times 2$ convolution instead of $2 \times 2 \times 2$).
+\end{frame}
+
+\begin{frame}{Convolution stride}
+  Convolution strides allow to reduce dimensionality in a convolutional network:
+
+  \V{["d2l/conv-stride", "th", 0.4] | image}
+
+  Here the input went from $5 \times 5$ to $2 \times 2$ thanks to the $(3, 2)$ strides
+\end{frame}
+
+\begin{frame}{Pooling}
+  Pooling is the other standard mechanism to reduce dimension:
+
+  \V{["d2l/pooling", "tw", 0.8] | image}
+
+  $n \times m$ pooling is often used with strides $(n, m)$.
+\end{frame}
+
+\begin{frame}{Convolution padding}
+  Padding controls the change in size due to the convolution operation by adding $0$s:
+
+  \V{["d2l/conv-pad", "th", 0.4] | image}
+
+  If we want a $3 \times 3$ output that matches our input, what can we do?
 \end{frame}
 
 \begin{frame}{Combination into a convolutional neural network}
-  \V{["cnn-schema", "tw", 1, "en"] | image}
-  Usually several millions of parameters
+  Yann LeCun ---~now Turing Award recipient~--- first combined those blocks into a successful network with LeNet:
+
+  \V{["d2l/lenet", "tw", 1, "en"] | image}
+\end{frame}
+
+\begin{frame}{Schematic view of LeNet}
+  \V{["d2l/lenet-vert", "th", 0.7, "en"] | image}
 \end{frame}
 
 \begin{frame}{Training}
-  \V{["gpu-fun", "th", 0.7] | image}
+  Done by gradient descent, just like MLPs.
+
+  Less parameters but more operations: greatly benefits from GPUs.
+
+  \V{["gpus", "th", 0.4] | image}
 \end{frame}
 
 \begin{frame}{Visual cortex architecture}
-  %TODO img
   \begin{minipage}[l]{0.50\linewidth}
-    \V{["visual-cortex", "tw", 1.0] | image}
+    \V{["visual-cortex-en", "tw", 1.0] | image}
   \end{minipage}\hfill
   \begin{minipage}[l]{0.49\linewidth}
     Layered connections:

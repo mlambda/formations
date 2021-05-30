@@ -1,0 +1,11 @@
+\begin{frame}{Introduction}
+  We have seen so far how to reduce dimensionality in a CNN.
+
+  To generate images from some input, the opposite is required: to enlarge the dimensionality.
+\end{frame}
+
+\begin{frame}{Transposed convolution}
+  \V{["d2l/trans-conv", "tw", 1, "en"] | image}
+
+  To avoid checkerboard artifacts\footnote[frame]{\url{https://distill.pub/2016/deconv-checkerboard/}}: use a stride that divides the size of the kernel.
+\end{frame}

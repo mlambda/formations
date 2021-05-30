@@ -1,15 +1,27 @@
 \begin{frame}{Overfit (and underfit)}
-  \V{["overfitting-train-nzmog", "tw", 0.8, "en"] | image}
+
+  \V{["overfitting-nzmog-en", "tw", 1, "en"] | image}
 \end{frame}
 
 \begin{frame}{Weight penalty}
   Penalize neurons with big weights with a term in the loss function:
 
-  \[
-  \text{Loss} = \text{Loss} + \lambda\sum||w||^2
-  \]
+  \begin{description}[<+(1)->]
+    \item[L2 or ridge]
+    \[
+      \text{Loss} = \text{Loss} + \lambda\norm{w}_2^2
+    \]
+    \item[L1 or lasso]
+    \[
+      \text{Loss} = \text{Loss} + \lambda\norm{w}_1
+    \]
+    \item[L1 \& L2 or elastic net]
+    \[
+      \text{Loss} = \text{Loss} + \lambda_{L1}\norm{w}_1 + \lambda_{L2}\norm{w}_2^2
+    \]
+  \end{description}
 
-  Where $\lambda$ is a hyperparameter.
+  \onslide<+(1)->{Where the $\lambda$s are parameters controlling the regularization strength.}
 \end{frame}
 
 \begin{frame}{Early stopping}
@@ -21,7 +33,7 @@
 \end{frame}
 
 \begin{frame}{Dropout}
-  \V{["dropout-2", "tw", 0.8] | image}
+  \V{["neural-networks/dropout", "tw", 1] | image}
 \end{frame}
 
 \begin{frame}{Multi-task learning}
@@ -29,5 +41,7 @@
 \end{frame}
 
 \begin{frame}{Complex regularizations}
-  \V{["gan-schema", "tw", 0.8] | image}
+  Recently (since 2018), several research papers mentioned using GANs purely as a regularization mechanism
+
+  \V{["neural-networks/gan/gan-en", "tw", 0.8] | image}
 \end{frame}
