@@ -40,6 +40,12 @@
     - path: en/nn/rnn
       flavor: demo-detailed
 
+- name: ae
+  title: auto-encoders
+  sections:
+    - path: en/nn/ae
+      flavor: demo
+
 - name: gan
   title: gan
   sections:
