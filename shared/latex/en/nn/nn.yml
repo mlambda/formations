@@ -7,11 +7,12 @@ default_titles:
 flavors:
   deep-detailed-demo:
     - intro
-    - demo
+    - playground
     - gradient-descent
     - optimize
     - deep-optimize
     - regularization
+    - playground
     - /questions
     - demo
 title: Neural networks

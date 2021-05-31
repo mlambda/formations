@@ -6,11 +6,11 @@ default_titles:
 flavors:
   full:
     - intro
-    - \questions
+    - /questions
     - q-learning
-    - \questions
+    - /questions
     - actor-critic
-    - \questions
+    - /questions
     - alphago
     - /questions
     - demo
