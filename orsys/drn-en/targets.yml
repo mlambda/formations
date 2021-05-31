@@ -28,6 +28,12 @@
     - path: en/nn
       flavor: deep-detailed-demo
 
+- name: tf-keras
+  title: tf-keras
+  sections:
+    - path: en/tf-keras
+      flavor: full
+
 - name: cnn
   title: cnn
   sections:

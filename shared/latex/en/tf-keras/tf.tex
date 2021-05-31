@@ -1,0 +1,110 @@
+\begin{frame}{Introduction}
+  \V{["logos/tensorflow", "th", 0.7] | image}
+\end{frame}
+
+\begin{frame}{API structure}
+  \centering
+  \V{["tf-api-en", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Two styles}
+  \begin{description}
+    \item[Graph mode] Definition of a computation graph for later execution
+    \item[Eager mode] Definition of Python functions that directly operate on values
+  \end{description}
+\end{frame}
+
+\begin{frame}{TensorFlow 1 vs TensorFlow 2}
+  \centering
+  Main differences
+
+  \begin{minipage}[l]{0.5\linewidth}
+    \centering
+    \textbf{TF1}
+    \begin{itemize}[<+->]
+      \item Graph mode by default
+      \item Independent High level API Keras
+    \end{itemize}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+    \setcounter{beamerpauses}{1}
+    \centering
+    \textbf{TF2}
+    \begin{itemize}[<+->]
+      \item Eager mode by default
+      \item High level API Keras merged in TensorFlow 2
+    \end{itemize}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}{Tensors --- Core objects in TensorFlow 2}
+  Multidimensional arrays, used for:
+
+  \begin{itemize}[<+->]
+    \item Model weights
+    \item Data
+  \end{itemize}
+
+  \onslide<+->{\texttt{tf.Tensor} $\approx$ \texttt{numpy.ndarray} in the universe of TensorFlow 2.}
+\end{frame}
+
+\begin{frame}{Tensors --- Creation}
+  \begin{itemize}[<+->]
+    \item Directly from \texttt{numpy.ndarray} or lists
+    \item Randomly sampled
+    \item Result of a call to a TensorFlow 2 function with \texttt{numpy.ndarray}
+    \item \texttt{tf.data} pipeline
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\texttt{tf.Variable}}
+  Mutable wrapper over \texttt{tf.Tensor} for model weights.
+\end{frame}
+
+\begin{frame}{Computation graph}
+  \begin{minipage}[l]{0.15\linewidth}
+      $\;$
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.35\linewidth}
+    \huge
+    \begin{center}
+      $\pi*r^2\;\;\;\rightarrow$
+    \end{center}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+    \V{["tensorflow", "th", 0.9] | image}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}{Computation graph}
+  Conversion from eager mode to graph mode by \texttt{tf.function}. Allows:
+
+  \begin{itemize}[<+->]
+    \item Computation graph optimization
+    \item Easy deployment to Android, iOS, TPU, GPU, …
+    \item Running the model without a Python interpreter!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Automatic differentiation}
+  Gradients automatic computation to ease the backpropagation implementation during gradient descent.
+
+  \texttt{tf.GradientTape} records operations on variables: allows autodiff.
+\end{frame}
+
+\begin{frame}{Code organization}
+  \texttt{tf.Module} groups code of a layer or logical unit.
+
+  A model = a combination of \texttt{tf.Module}s.
+
+  Main API:
+
+  \begin{itemize}[<+->]
+    \item Access model variables with \texttt{model.variables}
+    \item Access trainable model variables with \texttt{model.trainable\_variables}
+    \item Save weights with \texttt{tf.train.Checkpoint}
+    \item Load weights with \texttt{tf.train.Checkpoint.restore}
+    \item Save full model with \texttt{tf.saved\_model.save}
+    \item Load full model with \texttt{tf.saved\_model.load}
+  \end{itemize}
+\end{frame}
