@@ -1,5 +1,5 @@
-Forme du corpus de documents : (62405, 150)
-Premier exemple : 
+Input shape: (62405, 150)
+First example:
 [    0     0     0     0     0     0     0     0     0     0     0     0
      0     0     0     0     0     0     0     0     0     0     0     0
      0     0     0     0     0     0     0     0     0     0     0     0

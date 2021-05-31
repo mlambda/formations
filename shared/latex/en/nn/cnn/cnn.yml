@@ -1,5 +1,6 @@
 default_titles:
   data: Data \& tasks
+  keras: Implementation in Keras
   model: Model
   modern-architectures: Modern CNN architectures
   generation: Generative models building block
@@ -9,6 +10,7 @@ flavors:
     - model
     - modern-architectures
     - generation
+    - keras
     - /questions
     - demo
 title: Convolutional Neural Networks

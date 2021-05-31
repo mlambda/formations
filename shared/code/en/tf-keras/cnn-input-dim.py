@@ -1,1 +1,1 @@
-print(f"Forme des images : {images.shape}")
+print("Input shape:", images.shape)

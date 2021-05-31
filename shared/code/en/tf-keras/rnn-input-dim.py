@@ -1,2 +1,2 @@
-print(f"Forme du corpus de documents : {X_train.shape}")
-print(f"Premier exemple : {X_train[0]}")
+print("Input shape:", X_train.shape)
+print("First example:", X_train[0])

@@ -1,5 +1,5 @@
 model = tf.keras.Sequential()
-model.add(layers.Embedding(input_dim=1000, output_dim=64))
-model.add(layers.SimpleRNN(128))
-model.add(layers.Dense(10, activation='softmax'))
+model.add(tf.keras.layers.Embedding(input_dim=1000, output_dim=64))
+model.add(tf.keras.layers.SimpleRNN(128))
+model.add(tf.keras.layers.Dense(10, activation="softmax"))
 model.summary()

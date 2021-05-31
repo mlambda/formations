@@ -1,4 +1,5 @@
 default_titles:
+  keras: Implementation in Keras
   lstm: Long Short-Term Memory Networks
   rnn: Model
   rnn-variants: Other architectures
@@ -7,6 +8,7 @@ flavors:
     - rnn
     - lstm
     - rnn-variants
+    - keras
     - /questions
     - demo
 title: Recurrent Neural Networks
