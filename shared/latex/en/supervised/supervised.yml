@@ -7,7 +7,10 @@ flavors:
     - linear-regression
     - cost-error-function
     - /en/nn/gradient-descent
+    - /questions
     - demo-linear-regression
     - naive-bayes
+    - /questions
     - random-forest
+    - /questions
 title: Overview of classical machine learning

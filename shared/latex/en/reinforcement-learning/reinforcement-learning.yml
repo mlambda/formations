@@ -1,13 +1,17 @@
 default_titles:
-  a2c: Actor-critic methods
+  actor-critic: Actor-critic methods
   alphago: AlphaGo
   intro: Introduction
   q-learning: Q-learning
 flavors:
   full:
     - intro
+    - \questions
     - q-learning
-    - a2c
+    - \questions
+    - actor-critic
+    - \questions
     - alphago
     - /questions
+    - demo
 title: Reinforcement Learning

@@ -12,5 +12,6 @@ flavors:
     - optimize
     - deep-optimize
     - regularization
+    - /questions
     - demo
 title: Neural networks

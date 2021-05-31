@@ -24,6 +24,13 @@
   \end{description}
 \end{frame}
 
+\begin{frame}{Types of task}
+  \begin{description}[<+->]
+    \item[Episodic] Clear start and end (\textit{e.g.} until Game Over in a video game)
+    \item[Continuous] Unclear start, no end (\textit{e.g.} stock market
+  \end{description}
+\end{frame}
+
 \begin{frame}{Main families}
   \begin{itemize}
     \item Value based
@@ -146,6 +153,10 @@
   Allow the agent to build a representation of its environment.
 
   To be compared with model-free approaches where only state-action dynamics are learned.
+\end{frame}
+
+\begin{frame}{On/off policy}
+  Some approaches do not use the same policy to pick actions (simulate) and learn (target function). They are called off-policy.
 \end{frame}
 
 \begin{frame}{Technical \& theoretical constraints}
