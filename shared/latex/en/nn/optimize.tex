@@ -15,6 +15,13 @@
   \end{columns}
 \end{frame}
 
+\begin{frame}{Approach to optimize hyperparameters}
+  \begin{itemize}[<+->]
+    \item Start with good baselines and a simple “manual” search
+    \item When you are done with the basic pipeline, implement a proper search using a dedicated library
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Learning rate}
   \begin{minipage}{0.49\textwidth}
     \centering
@@ -51,5 +58,5 @@
   Training models is extremely costly.
   A good navigation in the hyperparameters space is important.
 
-  $\Rightarrow$ Use a dedicated library like Keras Tuner or hyperopt to leverage Gaussian Processes.
+  $\Rightarrow$ Use a dedicated library like Keras Tuner, Hyperopt, Nevergrad, Optuna or Ray to leverage Gaussian Processes and similar state of the art methods.
 \end{frame}
