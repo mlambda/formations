@@ -15,7 +15,7 @@
   title: Jour 2 --- Algorithmes 1/2
   sections:
     - path: unsupervised
-      flavor: dimreduce
+      flavor: dimreduce-anodetect
 
     - path: supervised
       flavor: standard

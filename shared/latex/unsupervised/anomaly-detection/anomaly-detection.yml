@@ -1,0 +1,13 @@
+default_titles:
+  demo: Démonstration \texttt{scikit-learn}
+  intro: Introduction
+  isolation-forest: Forêt d'isolement
+  lof: Local Outlier Factor
+flavors:
+  light:
+    - intro
+    - lof
+    - isolation-forest
+    - demo
+    - /questions
+title: Détection d'anomalies

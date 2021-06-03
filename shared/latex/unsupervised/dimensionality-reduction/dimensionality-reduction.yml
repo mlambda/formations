@@ -1,0 +1,30 @@
+default_titles:
+  demo: Démonstration \texttt{scikit-learn}
+  intro: Introduction
+  pca-lda: Projections linéaires
+  pca-variantes: Variantes spécifiques
+  tp: Travaux pratiques
+  tsne-umap: Projections non-linéaires
+  tuto: Exemples \texttt{scikit-learn}
+flavors:
+  full:
+    - intro
+    - pca-lda
+    - pca-variantes: null
+    - tsne-umap
+    - /questions
+    - tuto
+    - tp
+  light:
+    - intro
+    - pca-lda
+    - demo
+    - /questions
+  light-tp:
+    - intro
+    - pca-lda
+    - /questions
+    - tuto
+    - tp
+
+title: Réduction de la dimensionnalité

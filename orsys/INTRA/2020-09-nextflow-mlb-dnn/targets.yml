@@ -12,7 +12,7 @@
   title: Jour 2 --- Apprentissage Supervisé
   sections:
     - path: unsupervised
-      flavor: dimreduce
+      flavor: dimreduce-anodetect
 
     - path: supervised
       flavor: standard-nobayes

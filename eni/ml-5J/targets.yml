@@ -17,7 +17,7 @@
   title: Jour 3 --- Algorithmes 2/2
   sections:
     - path: unsupervised
-      flavor: full
+      flavor: medium
 
 - name: j4
   title: Jour 4 --- Réseaux de neurones

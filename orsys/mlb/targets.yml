@@ -18,7 +18,7 @@
       flavor: standard-nobayes
 
     - path: unsupervised
-      flavor: mlb
+      flavor: dimreduce
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2

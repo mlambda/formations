@@ -21,7 +21,7 @@
   title: Jour 3 --- Apprentissage non supervisé
   sections:
     - path: unsupervised
-      flavor: bda
+      flavor: full
 
 - name: j4
   title: Jour 4 --- Réseaux de neurones \& séries temporelles

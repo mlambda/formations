@@ -1,0 +1,37 @@
+default_titles:
+  conclusion: Conclusions
+  dbscan: DBSCAN
+  demo: Démonstration
+  hierarchical-clustering: Clustering Hiérarchique
+  intro: Introduction
+  kmeans-gaussian: K-Means
+  metrics: Métriques de clustering
+  pca-classification-hierarchique-composantes-principales: Méthodes hybrides
+  pca-inverse: Clustering par ACP
+  tp: Travaux pratiques
+  tuto: Exemples \texttt{scikit-learn}
+flavors:
+  full:
+    - intro
+    - kmeans-gaussian
+    - dbscan
+    - hierarchical-clustering
+    - pca-classification-hierarchique-composantes-principales
+    - pca-inverse
+    - metrics
+    - conclusion
+    - tuto
+    - /questions
+    - tp
+  light:
+    - intro
+    - kmeans-gaussian
+    - dbscan
+    - conclusion
+    - demo
+  kmeans:
+    - intro
+    - kmeans-gaussian
+    - demo
+    - /questions
+title: Clustering
