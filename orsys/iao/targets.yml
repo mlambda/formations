@@ -5,10 +5,10 @@
       title: Intelligence Artificielle, enjeux et outils
       flavor: orsys-2j
 
-    - path: artificial-intelligence
+    - path: ai
       flavor: full
 
-    - path: machine-learning
+    - path: ml
       flavor: intro
 
     - path: nn
@@ -17,7 +17,7 @@
     - path: unsupervised
       flavor: light
 
-    - path: reinforcement-learning
+    - path: rl
       flavor: full
 
 - name: j2

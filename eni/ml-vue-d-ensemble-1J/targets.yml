@@ -5,10 +5,10 @@
       path: about
       flavor: eni-1j
 
-    - path: artificial-intelligence
+    - path: ai
       flavor: full
 
-    - path: machine-learning
+    - path: ml
       flavor: intro
 
     - path: nn
@@ -17,10 +17,10 @@
     - path: sequential-data
       flavor: intro
 
-    - path: natural-language-processing
+    - path: nlp
       flavor: intro
 
-    - path: reinforcement-learning
+    - path: rl
       flavor: full
 
     - path: nn

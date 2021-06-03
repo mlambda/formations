@@ -4,7 +4,7 @@
     - path: about
       flavor: eni-5j
 
-    - path: machine-learning
+    - path: ml
       flavor: ml5j
 
 - name: j2

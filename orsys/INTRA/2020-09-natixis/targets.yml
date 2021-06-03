@@ -8,7 +8,7 @@
     - path: tools
       flavor: init-python
 
-    - path: machine-learning
+    - path: ml
       flavor: natixis
 
 - name: j2

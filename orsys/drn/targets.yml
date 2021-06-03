@@ -4,16 +4,16 @@
     - path: about
       flavor: orsys-3j
 
-    - path: artificial-intelligence
+    - path: ai
       flavor: full
 
-    - path: machine-learning
+    - path: ml
       flavor: detailed-no-tp
 
     - path: nn
       flavor: deep-detailed-demo
 
-    - path: reinforcement-learning
+    - path: rl
       flavor: full
 
     - path: tools

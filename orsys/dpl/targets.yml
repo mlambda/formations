@@ -33,13 +33,13 @@
       path: nn/cnn
       flavor: full
 
-    - path: auto-encoders
+    - path: nn/ae
       flavor: full
 
 - name: j3
   title: Jour 3 --- Langage et traitement de séquences
   sections:
-    - path: natural-language-processing
+    - path: nlp
       flavor: intro-nlp
 
     - title: Données séquentielles

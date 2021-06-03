@@ -4,14 +4,14 @@
     - path: about
       flavor: orsys-3j
 
-    - path: natural-language-processing
+    - path: nlp
       flavor: full
 
 - name: j2
   title: Jour 2 --- Classification Supervisée de Texte
   sections:
     - title: Fondamentaux du machine learning
-      path: machine-learning
+      path: ml
       flavor: intro
 
     - title: Apprentissage supervisé

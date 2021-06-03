@@ -5,7 +5,7 @@
       title: Machine Learning, Méthodes et Solutions
       flavor: orsys-5j
 
-    - path: machine-learning
+    - path: ml
       flavor: ml5j
 
 - name: j2
@@ -51,7 +51,7 @@
     - path: nn/cnn
       flavor: full
 
-    - path: auto-encoders
+    - path: nn/ae
       flavor: full
 
 - name: j5
@@ -60,7 +60,7 @@
     - path: sequential-data
       flavor: full
 
-    - path: natural-language-processing
+    - path: nlp
       flavor: intro-nn
 
     - path: nn/rnn

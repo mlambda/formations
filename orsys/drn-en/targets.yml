@@ -7,13 +7,13 @@
 - name: ai
   title: ai
   sections:
-    - path: en/artificial-intelligence
+    - path: en/ai
       flavor: full
 
 - name: ml
   title: ml
   sections:
-    - path: en/machine-learning
+    - path: en/ml
       flavor: detailed-no-tp
 
 - name: supervised
@@ -61,7 +61,7 @@
 - name: rl
   title: rl
   sections:
-    - path: en/reinforcement-learning
+    - path: en/rl
       flavor: full
 
 - name: tools

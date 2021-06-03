@@ -8,7 +8,7 @@
     - path: tools
       flavor: init-python
 
-    - path: machine-learning
+    - path: ml
       flavor: bda
 
 - name: j2
@@ -44,17 +44,17 @@
       path: nn/cnn
       flavor: full
 
-    - path: auto-encoders
+    - path: nn/ae
       flavor: full
 
-    - path: reinforcement-learning
+    - path: rl
       flavor: full
 
 
 - name: j4
   title: Jour 4 --- Langage et traitement de séquences
   sections:
-    - path: natural-language-processing
+    - path: nlp
       flavor: intro-nlp
 
     - title: Données séquentielles

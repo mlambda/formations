@@ -10,7 +10,7 @@
 - name: j2
   title: Jour 2 --- Apprentissage supervisé
   sections:
-    - path: machine-learning
+    - path: ml
       flavor: bda
 
     - path: supervised
@@ -25,7 +25,7 @@
 - name: j4
   title: Jour 4 --- Traitement du langage naturel
   sections:
-    - path: natural-language-processing
+    - path: nlp
       flavor: intro-tp
 
     - contact
