@@ -1,82 +1,82 @@
 \fmg{\begin{frame}{Réseaux transformeurs}
-  \V{["transformer-fun", "tw", 0.9] | image}
+  \V{["img/transformer-fun", "tw", 0.9] | image}
 \end{frame}}
 
 \begin{frame}{Vue générale}
-  \V{["transformer-network-1", "tw", 0.9] | image}
+  \V{["img/transformer-network-1", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Architecture encodeur-décodeur}
-  \V{["transformer-network-2", "tw", 0.9] | image}
+  \V{["img/transformer-network-2", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Architecture encodeur-décodeur --- Rappel}
   Rappelez-vous, les encodeurs-décodeurs :
-  \V{["rnn-seq2seq", "tw", 0.9] | image}
+  \V{["img/rnn-seq2seq", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Architecture profonde}
   Couches «~simples~» empilées~:
-  \V{["transformer-network-3", "tw", 0.9] | image}
+  \V{["img/transformer-network-3", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Architecture globale de l'encodeur et du décodeur}
-  \V{["transformer-network-5", "tw", 0.9] | image}
+  \V{["img/transformer-network-5", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Architecture globale de l'encodeur}
-  \V{["transformer-network-4", "tw", 0.9] | image}
+  \V{["img/transformer-network-4", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Forme des données en jeu dans l'encodeur}
-  \V{["transformer-network-7", "tw", 0.9] | image}
+  \V{["img/transformer-network-7", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Forme des données en jeu dans l'encodeur}
-  \V{["transformer-network-8", "tw", 0.9] | image}
+  \V{["img/transformer-network-8", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Self-Attention --- Éléments utilisés}
-  \V{["transformer-network-9", "tw", 0.9] | image}
+  \V{["img/transformer-network-9", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Self-Attention --- Combinaison des éléments}
-  \V{["transformer-network-13", "th", 0.9] | image}
+  \V{["img/transformer-network-13", "th", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Self-Attention --- Obtention du résultat}
-  \V{["transformer-network-14", "tw", 0.9] | image}
+  \V{["img/transformer-network-14", "tw", 0.9] | image}
   Avec le softmax défini ainsi : $\sigma(z_j)=\frac {\mathrm{e}^{z_j}}{\sum _{k=1}^{K}\mathrm{e}^{z_{k}}}$
 \end{frame}
 
 \begin{frame}{Self-Attention --- Run sur 2 mots}
-  \V{["transformer-network-10", "tw", 0.9] | image}
+  \V{["img/transformer-network-10", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Self-Attention --- Run sur 2 mots}
-  \V{["transformer-network-11", "tw", 0.9] | image}
+  \V{["img/transformer-network-11", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Self-Attention --- Run sur 2 mots}
-  \V{["transformer-network-12", "th", 0.9] | image}
+  \V{["img/transformer-network-12", "th", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Self-Attention --- Visualisation}
-  \V{["transformer-network-self-attention", "th", 0.9] | image}
+  \V{["img/transformer-network-self-attention", "th", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Attention multi-têtes --- Têtes d'attention}
-  \V{["transformer-network-15", "tw", 0.9] | image}
+  \V{["img/transformer-network-15", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Attention multi-têtes --- Combinaison}
-  \V{["transformer-network-16", "tw", 0.9] | image}
+  \V{["img/transformer-network-16", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Encodeur --- Résumé}
   Un modèle sans récurrence, uniquement des sommes pondérées.
 
-  \V{["transformer-network-17", "tw", 0.9] | image}
+  \V{["img/transformer-network-17", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Encodeur --- Gestion de la position}
@@ -86,7 +86,7 @@
 \end{frame}
 
 \begin{frame}{Encodeur --- Encodage positionnel --- Fonction hardcodée}
-  \V{["transformer-network-18", "tw", 0.9] | image}
+  \V{["img/transformer-network-18", "tw", 0.9] | image}
   $\text{PE}_{\text{pos}, 2i} = \sin{(\text{pos} / 10000^{2i / d_{\text{model}}})}$ \\
   $\text{PE}_{\text{pos}, 2i + 1}= \cos{(\text{pos} / 10000^{2i / d_{\text{model}}})}$
 \end{frame}
@@ -96,63 +96,63 @@
 \end{frame}
 
 \begin{frame}{Encodeur --- Encodage positionnel --- Exemple}
-  \V{["transformer-network-19", "tw", 0.9] | image}
+  \V{["img/transformer-network-19", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Encodeur --- Encodage positionnel --- Visualisation}
-  \V{["positional-encoding", "tw", 0.9] | image}
+  \V{["img/positional-encoding", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-init-0", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-init-0", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-init-157", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-init-157", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-0", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-0", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-14", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-14", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-38", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-38", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-91", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-91", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-112", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-112", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-137", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-137", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-188", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-188", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-207", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-207", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-234", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-234", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-306", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-306", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Décodeur --- Exemple de décodage}
-  \V{["transformer-decoding-333", "tw", 0.9] | image}
+  \V{["img/transformer-decoding-333", "tw", 0.9] | image}
 \end{frame}
 
 \begin{frame}{Transformer Network}

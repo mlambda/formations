@@ -9,7 +9,7 @@
 \end{frame}
 
 \begin{frame}{Modèle}
-  \V{["rnn-unfold", "tw", 0.7] | image}
+  \V{["img/rnn-unfold", "tw", 0.7] | image}
   $h_{t}=\sigma_{h}(Ux_{t}+Vh_{t-1}+b_{h})$ \\
   $o_{t}=\sigma_{o}(Wh_{t}+b_{o})$ \\
   \begin{itemize}
@@ -26,18 +26,18 @@
 
   \begin{figure}
     \centering
-    \V{["neural-networks/rnn/lastoutput", "th", 0.7] | image}
+    \V{["tikz/neural-networks/rnn/lastoutput", "th", 0.7] | image}
   \end{figure}
 \end{frame}
 
 \begin{frame}{Prédiction d'autants de sorties qu'il y a d'entrées}
-  \V{["neural-networks/rnn/alloutputs", "tw", 0.5] | image}
+  \V{["tikz/neural-networks/rnn/alloutputs", "tw", 0.5] | image}
 \end{frame}
 
 \begin{frame}{Prédiction d'un nombre arbitraire de sorties}
-  \V{["neural-networks/rnn/seq2seq", "tw", 1] | image}
+  \V{["tikz/neural-networks/rnn/seq2seq", "tw", 1] | image}
 \end{frame}
 
 \begin{frame}{Problème du gradient qui disparaît (vanishing gradient)}
-  \V{["optimization/vanishing-gradients-rnn", "tw", 0.7] | image}
+  \V{["tikz/optimization/vanishing-gradients-rnn", "tw", 0.7] | image}
 \end{frame}

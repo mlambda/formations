@@ -8,8 +8,8 @@ version = "1.0.0"
 
 [tool.poetry.dependencies]
 Pygments = "^2.9.0"
-deckz = "^13.6.0"
 python = "^3.8"
+deckz = "^14.0.0"
 
 [tool.poetry.dev-dependencies]
 black = "^21.5b1"

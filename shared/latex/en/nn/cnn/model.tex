@@ -15,7 +15,7 @@
 
   It embodies both \textbf{locality} and \textbf{translation invariance}.
 
-  \V{["d2l/correlation", "tw", 0.8] | image}
+  \V{["img/d2l/correlation", "tw", 0.8] | image}
 \end{frame}
 
 \begin{frame}{Convolution on multiple channels}
@@ -23,7 +23,7 @@
 
   The convolution also has a channels and is applied to all channels:
 
-  \V{["d2l/conv-multi-in", "th", 0.3] | image}
+  \V{["img/d2l/conv-multi-in", "th", 0.3] | image}
 
   Usually the channel dimension is omitted when describing the convolution ($2 \times 2$ convolution instead of $2 \times 2 \times 2$).
 \end{frame}
@@ -31,7 +31,7 @@
 \begin{frame}{Convolution stride}
   Convolution strides allow to reduce dimensionality in a convolutional network:
 
-  \V{["d2l/conv-stride", "th", 0.4] | image}
+  \V{["img/d2l/conv-stride", "th", 0.4] | image}
 
   Here the input went from $5 \times 5$ to $2 \times 2$ thanks to the $(3, 2)$ strides
 \end{frame}
@@ -39,7 +39,7 @@
 \begin{frame}{Pooling}
   Pooling is the other standard mechanism to reduce dimension:
 
-  \V{["d2l/pooling", "tw", 0.8] | image}
+  \V{["img/d2l/pooling", "tw", 0.8] | image}
 
   $n \times m$ pooling is often used with strides $(n, m)$.
 \end{frame}
@@ -47,7 +47,7 @@
 \begin{frame}{Convolution padding}
   Padding controls the change in size due to the convolution operation by adding $0$s:
 
-  \V{["d2l/conv-pad", "th", 0.4] | image}
+  \V{["img/d2l/conv-pad", "th", 0.4] | image}
 
   If we want a $3 \times 3$ output that matches our input, what can we do?
 \end{frame}
@@ -55,11 +55,11 @@
 \begin{frame}{Combination into a convolutional neural network}
   Yann LeCun ---~now Turing Award recipient~--- first combined those blocks into a successful network with LeNet:
 
-  \V{["d2l/lenet", "tw", 1, "en"] | image}
+  \V{["img/d2l/lenet", "tw", 1, "en"] | image}
 \end{frame}
 
 \begin{frame}{Schematic view of LeNet}
-  \V{["d2l/lenet-vert", "th", 0.7, "en"] | image}
+  \V{["img/d2l/lenet-vert", "th", 0.7, "en"] | image}
 \end{frame}
 
 \begin{frame}{Training}
@@ -67,12 +67,12 @@
 
   Less parameters but more operations: greatly benefits from GPUs.
 
-  \V{["gpus", "th", 0.4] | image}
+  \V{["img/gpus", "th", 0.4] | image}
 \end{frame}
 
 \begin{frame}{Visual cortex architecture}
   \begin{minipage}[l]{0.50\linewidth}
-    \V{["visual-cortex-en", "tw", 1.0] | image}
+    \V{["img/visual-cortex-en", "tw", 1.0] | image}
   \end{minipage}\hfill
   \begin{minipage}[l]{0.49\linewidth}
     Layered connections:

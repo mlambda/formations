@@ -8,7 +8,7 @@
 \end{frame}
 
 \begin{frame}{Gated Recurrent Unit --- Theoretical details}
-  \V{["neural-networks/rnn/gru", "tw", 0.55] | image}
+  \V{["tikz/neural-networks/rnn/gru", "tw", 0.55] | image}
   \begin{description}[<+->]
     \item[Update gate] $z_t = \sigma (W_z \times x_t + U_z \times h_{t - 1} + b_z)$
     \item[Reset gate] $r_t = \sigma (W_r \times x_t + U_r \times h_{t - 1} + b_r)$
@@ -17,7 +17,7 @@
 \end{frame}
 
 \begin{frame}{Bidirectional recurrent neural networks}
-  \V{["neural-networks/rnn/bidirectional-en", "tw", 0.8] | image}
+  \V{["tikz/neural-networks/rnn/bidirectional-en", "tw", 0.8] | image}
   \begin{itemize}[<+(1)->]
     \item Can learn longer dependencies
     \item Model both left-right and right-left dependencies
@@ -34,5 +34,5 @@
 \end{frame}
 
 \fmg{\begin{frame}{Other variants}
-  \V{["spaghetti", "tw", 1] | image}
+  \V{["img/spaghetti", "tw", 1] | image}
 \end{frame}}
