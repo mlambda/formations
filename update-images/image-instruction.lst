@@ -41,19 +41,6 @@
 
 
 TIKZ
-- [x] ["Graphe sans cycle", "", "tikz", "graph/oriented", "graph-oriented"]
-- [x] ["Réseau Bayésien", "", "tikz", "bayesian/net", "bayesian-net"]
-- [x] ["Arbre de régression", "", "tikz", "tree/regression", "regression-tree"]
-- [x] ["Arbre de décision", "", "tikz", "tree/decision", "decision-tree-2"]
-- [x] ["Schéma d'un neurone artificiel", "", "tikz", "neural-networks/model", "neuron-model"]
-- [x] ["Convolution de noyau K sur une image I", "", "tikz", "neural-networks/cnn/convolution", "convolution"]
-- [x] ["Opérateur de Max-pooling 2x2", "", "tikz", "neural-networks/cnn/maxpool", "pooling"]
-- [x] ["Schéma d'un réseau récurrent simple en vue éclatée", "", "tikz", "neural-networks/rnn/simple-unfold", "rnn-unfold"]
-- [x] ["Schéma d'un réseau récurrent bidirectionnel en vue éclatée", "", "tikz", "neural-networks/rnn/bidirectional", "bidirectional-rnn"]
-- [x] ["Schéma d'une cellule Long Short Term Memory", "", "tikz", "neural-networks/rnn/lstm", "lstm-schema"]
-- [x] ["Schéma d'une Gated Recurrent Unit", "", "tikz", "neural-networks/rnn/gru", "gru"]
-- [x] ["Schéma d'un autoencodeur profond", "", "tikz", "neural-networks/cnn/deep-auto-encoder", "deep-auto-encoder"]
-- [x] ["Schéma de dropout", "", "tikz", "neural-networks/cnn/dropout", "dropout-2"]
 - [x] ["Schéma d'un réseau multi-tâches", "", "tikz", "neural-networks/multi-task", "multi-task-v2"]
 - [x] ["Flux opérationnel en Machine Learning", "", "tikz", "ml/craftmanship", "ml-craftmanship"]
 - [x] ["Intelligence Artificielle, Machine Learning et Deep Learning", "", "tikz", "ml/ia-ml-deep", "ia-ml-deep"]
