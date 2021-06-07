@@ -1,0 +1,119 @@
+\begin{frame}{Introduction}
+  En 2012, AlexNet a remporté haut la main la compétition ImageNet.
+
+  Depuis, de nombreuses architectures ont été proposées.
+
+  Top 5 en erreur de classification depuis 2012~: $\sim15\% \rightarrow \sim2\%$.
+
+  La plupart des modèles sont disponibles \emph{directement} dans les libraries d'apprentissage profond.
+\end{frame}
+
+\begin{frame}{AlexNet}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}[<+->]
+        \item Premier CNN profond entraîné sur des GPUs
+        \item A introduit ReLU comme excellente non-linéarité pour entraîner des modèles profonds
+        \item Sinon très similaire à LeNet --- en plus profond
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \V{["img/d2l/alexnet", "th", 0.7] | image}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{VGG}
+  \begin{columns}
+    \begin{column}{0.45\textwidth}
+      \begin{itemize}[<+->]
+        \item A introduit la notion de bloc dans les CNNs
+        \item Sinon similaire à AlexNet --- en plus gros \& plus profond
+        \item A longtemps été très populaire comme modèle de base pour le transfert d'apprentissage
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.55\textwidth}
+      \V{["img/d2l/vgg", "tw", 1] | image}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Network in Network}
+  \begin{columns}
+    \begin{column}{0.4\textwidth}
+      \begin{itemize}[<+->]
+        \item Utilise des noyaux $1 \times 1$ pour appliquer un «~réseau dans un réseau~»
+        \item Un noyau $1 \times 1$ ne change pas la structure spatiale. Seulement le nombre de canaux
+        \item Il revient à appliquer un MLP à chaque position spatiale
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      \V{["img/d2l/nin", "tw", 1] | image}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Inception/GoogLeNet --- Bloc}
+  Utilise un bloc qui combine des noyaux de tailles différentes.
+
+  \V{["img/d2l/inception", "tw", 0.7] | image}
+\end{frame}
+
+\begin{frame}{Inception/GoogLeNet --- Modèle}
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      Mis à part l'architecture du bloc, le reste est standard.
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \V{["img/d2l/inception-full", "th", 0.7] | image}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{ResNet --- Blocs résiduels}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}[<+->]
+        \item Contribution architecturale majeure: le bloc résiduel
+        \item Fait évoluer le problème d'apprentissage de \emph{apprendre $y$ depuis $x$} à \emph{apprendre $y - x$ depuis $x$}
+        \item Par exemple, l'identité devient triviale à apprendre
+        \item Très bonnes propriétés de circulation du gradient
+        \item Utilise la normalisation de batch (centrage et division par l'écart-type des batchs)
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \V{["img/d2l/residual-block", "tw", 1] | image}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{ResNet --- Blocs ResNet}
+  ResNet ---~comme GoogLeNet~--- utilise des noyaux $1 \times 1$ pour réduire la dimensionnalité.
+
+  \V{["img/d2l/resnet-block", "th", 0.5] | image}
+\end{frame}
+
+\begin{frame}{ResNet --- Modèle}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      Le reste du modèle est standard.
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \V{["img/d2l/resnet18", "th", 0.7] | image}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{DenseNet --- Bloc}
+  Variation sur ResNet: utilise la concaténation des sorties plutôt que l'addition.
+
+  \V{["img/d2l/densenet-block", "th", 0.5] | image}
+\end{frame}
+
+\begin{frame}{DenseNet --- Modèle}
+  \V{["img/d2l/densenet", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Comparaison des différents modèles}
+  \V{["img/cnn-comparison", "tw", 1] | image}
+\end{frame}
