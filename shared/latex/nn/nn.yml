@@ -20,51 +20,44 @@ default_titles:
 flavors:
   deep-discover:
     - intro
+    - playground
     - optimize
     - deep-optimize
     - regularisation
-    - online-demo 
-    - gan-intro
-    - gan-model
+    - playground
+    - $gan: light
     - $cnn: model-light
     - $rnn: model-light
   deep-discover-demo:
     - intro
-    - demo-nn
+    - playground
     - optimize
     - deep-optimize
     - regularisation
-    - online-demo
+    - playground
     - $cnn: demo
     - $rnn: demo
-    - gan-intro: Réseaux adverses
-    - gan-model
-    - demo-gan
+    - $gan: demo
     - /questions
   deep-detailed-demo:
     - intro
-    - demo-nn
+    - playground
     - optimize
     - deep-optimize
     - regularisation
-    - online-demo
+    - playground
     - $cnn: demo
     - $rnn: demo-detailed
-    - gan-intro: Réseaux adverses
-    - gan-model
-    - demo-gan
+    - $gan: demo
     - /questions
   deep-intro:
     - intro
+    - playground
     - gradient-descent
     - optimize
     - deep-optimize
     - regularisation
-    - online-demo
-    - /questions
-  gan-intro:
-    - gan-intro
-    - gan-model
+    - playground
     - /questions
   intro-cnn:
     - intro
@@ -72,22 +65,24 @@ flavors:
     - $cnn: model-light
   ml5j:
     - intro
+    - playground
     - gradient-descent
     - optimize
     - deep-optimize
     - regularisation
-    - online-demo
+    - playground
     - /questions
     - tp-nn
     - $cnn: full
-    - gan-intro
-    - gan-model
+    - $gan: light
     - $rnn: model
   recurrent-text:
     - intro
+    - playground
     - optimize
     - deep-optimize
     - regularisation
+    - playground
     - $rnn: full
   tp-nn-keras:
     - tp-nn: null

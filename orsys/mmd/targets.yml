@@ -34,7 +34,7 @@
       flavor: recurrent-text
 
     - title: Transformeurs
-      path: nn
-      flavor: transformer
+      path: nn/transformer
+      flavor: full
 
     - path: contact

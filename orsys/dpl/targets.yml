@@ -51,7 +51,7 @@
       flavor: full
 
     - title: Réseaux transformeurs
-      path: nn
-      flavor: transformer
+      path: nn/transformer
+      flavor: full
 
     - contact

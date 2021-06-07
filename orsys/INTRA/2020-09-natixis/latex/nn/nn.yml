@@ -30,8 +30,7 @@ flavors:
     - /sequential-data/sequence-handling: Traitement de séquences
     - $cnn: demo
     - $rnn: demo
-    - attention-model: Transformeurs
-    - transformer: null
+    - $transformer: light
     - /questions
     - /sequential-data/tp-tf: Travaux Pratiques
 title: Réseaux de neurones

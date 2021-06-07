@@ -66,5 +66,5 @@
     - path: nn/rnn
       flavor: full
 
-    - path: nn
-      flavor: transformer
+    - path: nn/transformer
+      flavor: full

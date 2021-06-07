@@ -1,0 +1,15 @@
+default_titles:
+  intro: Introduction
+  model: Modèle
+  demo: Démonstration
+flavors:
+  light:
+    - intro
+    - model
+    - /questions
+  demo:
+    - intro
+    - model
+    - /questions
+    - demo
+title: Réseaux génératifs antagonistes
