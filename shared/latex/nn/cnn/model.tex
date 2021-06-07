@@ -1,33 +1,89 @@
-\begin{frame}{Prérequis --- Opérateur de convolution}
-  \V{["tikz/neural-networks/cnn/convolution", "tw", 0.8] | image}
+\begin{frame}{Problème des MLPs pour les images}
+  Supposons que nous voulons détecter un objet dans une image. Un bon modèle devrait~:
+  \begin{itemize}[<+(1)->]
+    \item Trouver l'objet où qu'il soit dans l'image
+    \item Utiliser les pixels locaux autour de l'objet pour prendre sa décision
+  \end{itemize}
+
+  \onslide<+(1)->{Les MLPs standards ne satisfont pas ces critères.}
+
+  \onslide<+(1)->{$\Rightarrow$ Les réseaux convolutifs, si.}
 \end{frame}
 
-\begin{frame}{Prérequis --- Opérateur de pooling}
-  \V{["tikz/neural-networks/cnn/maxpool", "tw", 0.8] | image}
+\begin{frame}{Convolution}
+  Bloc clef~: l'opération de corrélation croisée (appelée par erreur convolution).
+
+  Elle incorpore la \textbf{localité} et l'\textbf{invariance à la translation}.
+
+  \V{["img/d2l/correlation", "tw", 0.8] | image}
 \end{frame}
 
-\begin{frame}{Schéma général}
-  Réseau de neurones de convolutions (CNN)
-  \V{["img/cnn-schema", "tw", 1] | image}
-  «~Quelques~» millions de paramètres dans le modèle
+\begin{frame}{Convolution sur plusieurs canaux}
+  La slide précédente est incomplète~: une image a souvent plusieurs canaux (RGB) --- les représentations intermédiaires d'un CNN aussi.
+
+  Un noyau de convolution a plusieurs canaux. Un par canal d'entrée:
+
+  \V{["img/d2l/conv-multi-in", "th", 0.3] | image}
+
+  Habituellement la dimension de profondeur est omise quand on décrit une convolution (convolution $2 \times 2$ au lieu de $2 \times 2 \times 2$).
+\end{frame}
+
+\begin{frame}{Pas de convolution}
+  Les pas de convolution (\textit{strides} en anglais) permettent de réduire les dimensions spatiales dans un CNN~:
+
+  \V{["img/d2l/conv-stride", "th", 0.4] | image}
+
+  Ici, on est passé de $5 \times 5$ à $2 \times 2$ grâce aux pas de convolution $(3, 2)$.
+\end{frame}
+
+\begin{frame}{Aggrégation}
+  \textit{Pooling} en anglais. L'autre mécanisme pour réduire les dimensions spatiales~:
+
+  \V{["img/d2l/pooling", "tw", 0.8] | image}
+
+  Une aggrégation $n \times m$ est souvent utilisée avec des pas $(n, m)$.
+\end{frame}
+
+\begin{frame}{Remplissage}
+  Le remplissage (\textit{padding} en anglais) contrôle le changement de taille dû à l'opérateur de corrélation croisée en ajoutant des $0$s:
+
+  \V{["img/d2l/conv-pad", "th", 0.4] | image}
+\end{frame}
+
+\begin{frame}{Combinaison des blocs de base en un réseau convolutif}
+  Yann LeCun ---~maintenant lauréat du prix Turing~--- a proposé la première combinaison de ces blocs simples en un réseau complet, LeNet~:
+
+  \V{["img/d2l/lenet", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Schéma de LeNet}
+  \V{["img/d2l/lenet-vert", "th", 0.7] | image}
 \end{frame}
 
 \begin{frame}{Entraînement}
-  \V{["img/gpu-fun", "th", 0.7] | image}
+  Par descente de gradient, comme les MLPs.
+
+  Moins de paramètres, plus d'opérations~: cible parfaite pour les GPUs.
+
+  \V{["img/gpus", "th", 0.4] | image}
 \end{frame}
 
-\begin{frame}{Architecture du cortex visuel}
+\begin{frame}{Lien avec le cortex visuel}
   \begin{minipage}[l]{0.50\linewidth}
     \V{["img/visual-cortex", "tw", 1.0] | image}
   \end{minipage}\hfill
   \begin{minipage}[l]{0.49\linewidth}
-    Connexion «~en série~» de couches
-    \begin{description}[<+->]
-    \item[V1] $\approx$ orientations de lignes
-    \item[V2] $\approx$ formes, tailles, couleurs
-    \item[V3] $\approx$ aide à la motricité
-    \item[V4] $\approx$ reconnaissance d'objets simples
-    \item[V5] $\approx$ vitesse des objets
+    Couches successives:
+    \begin{description}[<+(1)->]
+    \item[V1] Orientation, lignes
+    \item[V2] Formes, tailles, couleurs
+    \item[V3] Motricité
+    \item[V4] Reconnaissance d'objets
+    \item[V5] Suivi d'objets
     \end{description}
   \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}{Démonstration}
+  \bluelink{https://www.cs.ryerson.ca/~aharley/vis/conv/}{Convolutional neural networks}
 \end{frame}
