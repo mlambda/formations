@@ -43,5 +43,29 @@ flavors:
     - /python/regexes/tp-regexes
     - exceptions
     - /questions
+  no-tp:
+    - support
+    - variables
+    - /questions
+    - display
+    - /questions
+    - intro-collections: Collections
+    - lists: null
+    - dictionaries: null
+    - tuples: null
+    - sets: null
+    - /questions
+    - control-structures
+    - /questions
+    - files
+    - /questions
+    - functions
+    - /questions
+    - native-functions
+    - /questions
+    - /python/regexes/regexes
+    - /questions
+    - exceptions
+    - /questions
 title: Bases du langage Python
 version: 3

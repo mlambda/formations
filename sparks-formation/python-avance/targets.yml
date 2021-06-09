@@ -4,6 +4,10 @@
     - path: about
       flavor: sparks-formation-3j
 
+    - path: python/basics
+      title: Rappels
+      flavor: no-tp
+
     - path: python/warmup
       flavor: full
 
@@ -16,7 +20,6 @@
 - name: j2
   title: Jour 2
   sections:
-
     - path: python/testing
       flavor: full
 
@@ -27,6 +30,12 @@
   title: Jour 3
   sections:
     - path: python/performance
+      flavor: full
+
+    - path: python/parallelism
+      flavor: full
+
+    - path: python/concurrency
       flavor: full
 
     - path: python/production
