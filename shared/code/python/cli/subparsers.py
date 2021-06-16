@@ -1,6 +1,6 @@
 import argparse
 
-parser = argparse.ArgumentParser("Create datasets.")
+parser = argparse.ArgumentParser(description="Create datasets.")
 subparsers = parser.add_subparsers(help="Commands", dest="command")
 
 download_parser = subparsers.add_parser("download")

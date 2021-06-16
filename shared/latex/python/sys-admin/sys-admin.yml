@@ -1,0 +1,15 @@
+default_titles:
+  db: Base de donnnées
+  env: Variables d'environnement
+  files: Manipulation de fichiers
+  std: Flux standards
+  tp: Travaux pratiques
+flavors:
+  full:
+    - files
+    - env
+    - std
+    - db
+    - /questions
+    - tp
+title: Fonctionnalités d'administration système

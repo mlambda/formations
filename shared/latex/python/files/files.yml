@@ -1,7 +1,0 @@
-flavors:
-  full:
-    - files
-    - /questions
-    - tp-files
-title: Manipulation de fichiers
-version: 3

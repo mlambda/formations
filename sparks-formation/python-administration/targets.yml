@@ -13,7 +13,7 @@
     - path: python/linux
       flavor: full
 
-    - path: python/files
+    - path: python/sys-admin
       flavor: full
 
     - path: python/parallelism

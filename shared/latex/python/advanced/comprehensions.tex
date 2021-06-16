@@ -1,0 +1,33 @@
+\begin{frame}{Introduction}
+  \begin{itemize}[<+->]
+    \item Mécanisme simple pour créer une nouvelle collection à partir d'une collection existante
+    \item Lisible et flexible
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Syntaxe}
+  La syntaxe est \texttt{<resultat for element in collection\_originale if condition>}
+
+  Reprend les symboles usuels des différentes structures de données~:
+
+  \begin{center}
+    \begin{tabular}{ccc}
+      \textbf{Délimiteurs} & \textbf{Exemple} & \textbf{Type résultat} \\
+      \toprule
+      \texttt{[]} & \texttt{[n * 2 for n in l]} & Liste \\
+      \texttt{\{\}} & \texttt{\{n * 2 for n in l\}} & Ensemble \\
+      \texttt{\{\}} & \texttt{\{n: n * 2 for n in l\}} & Dictionnaire \\
+      \texttt{()} & \texttt{(n * 2 for n in l)} & Générateur \\
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Équivalence}
+  Une compréhension correspond à une boucle \texttt{for}~:
+
+  \mintedpycode{python/advanced/comprehensions/correspondence}
+\end{frame}
+
+\begin{frame}{Compréhensions imbriquées}
+  \mintedpycode{python/advanced/comprehensions/nested}
+\end{frame}

@@ -1,0 +1,35 @@
+\begin{frame}{Introduction}
+  Pour intéragir avec des bases de données, une librairie~: SQLAlchemy.
+
+  Polyvalente, simple pour les cas simples, configurable pour les cas complexes.
+\end{frame}
+
+\begin{frame}{Connexion à une base de données}
+  Avec l'URL de la base de données (ici par exemple pour une BDD de débug)~:
+
+  \mintedpycode{python/sys-admin/db-connect}
+\end{frame}
+
+\begin{frame}{Lecture de données}
+  \mintedpycode{python/sys-admin/db-read}
+\end{frame}
+
+\begin{frame}{Écriture de données}
+  \mintedpycode{python/sys-admin/db-write}
+\end{frame}
+
+\begin{frame}{Pour aller plus loin}
+  Pour les scripts complexes, SQLAlchemy propose aussi un ORM~:
+
+  \begin{itemize}[<+->]
+    \item Correspondance entre les objets Pythons et les objets en base
+    \item Construction facilitée de requêtes
+    \item Typage fort
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Compatibilité}
+  SQLAlchemy est compatible avec toutes les grandes BDDs.
+
+  Seulement un sous-ensemble de fonctionnalités est exposé pour certaines BDDs.
+\end{frame}

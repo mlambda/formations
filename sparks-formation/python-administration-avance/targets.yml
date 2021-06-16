@@ -1,0 +1,67 @@
+- name: full
+  title: Administration avancée en Python
+  sections:
+    - path: about
+      flavor: sparks-formation-3j
+
+- name: intro
+  title: intro
+  sections:
+    - path: python/intro
+      flavor: full
+
+- name: basics
+  title: basics
+  sections:
+    - path: python/basics
+      flavor: full
+
+- name: linux
+  title: linux
+  sections:
+    - path: python/linux
+      flavor: full
+
+- name: sys-admin
+  title: sys-admin
+  sections:
+    - path: python/sys-admin
+      flavor: full
+
+- name: parallelism
+  title: parallelism
+  sections:
+    - path: python/parallelism
+      flavor: full
+
+- name: concurrency
+  title: concurrency
+  sections:
+    - path: python/concurrency
+      flavor: full
+
+- name: signals
+  title: signals
+  sections:
+    - path: python/signals
+      flavor: full
+
+- name: linting
+  title: linting
+  sections:
+    - path: python/linting
+      flavor: full
+
+- name: production
+  title: production
+  sections:
+    - path: python/production
+      flavor: light
+
+- name: advanced
+  title: advanced
+  sections:
+    - path: python/advanced
+      flavor: medium
+
+    - contact

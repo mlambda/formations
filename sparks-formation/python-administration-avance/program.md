@@ -9,7 +9,7 @@
 
 ## Prérequis
 
-Connaissance des bases de Python.
+Connaissance des bases du langage Python.
 
 ## Durée
 
