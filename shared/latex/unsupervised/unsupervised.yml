@@ -13,6 +13,7 @@ flavors:
     - $anomaly-detection: light
   full:
     - introduction
+<<<<<<< HEAD
     - $dimensionality-reduction: full
     - $clustering: full
     - $anomaly-detection: light
@@ -21,4 +22,17 @@ flavors:
     - $anomaly-detection: light
   dimreduce:
     - $dimensionality-reduction: light-tp
+=======
+    - dimensionality-reduction
+    - pca-lda
+    - demo-dim-reduce
+    - /questions
+    - algorithme-em
+    - kmeans-gaussian
+    - demo-clustering
+    - /questions
+    - anomaly-detection-light
+    - demo-anomaly-detect
+    - /questions
+>>>>>>> 12ac754... update eni/ml-5j
 title: Apprentissage non-supervisé
