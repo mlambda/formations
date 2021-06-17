@@ -72,6 +72,7 @@ flavors:
     - regularisation
     - playground
     - /questions
+    - /tf-keras/keras 
     - tp-nn
     - $cnn: full
     - $gan: light

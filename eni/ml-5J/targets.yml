@@ -33,6 +33,9 @@
 
     - path: big-questions
       flavor: full
+  
+    - path: nn/ae
+      flavor: full
 
     - path: recommander-system
       flavor: full
