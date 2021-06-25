@@ -14,9 +14,6 @@
     - path: nn
       flavor: intro-cnn
 
-    - path: sequential-data
-      flavor: intro
-
     - path: nlp
       flavor: intro
 
@@ -38,3 +35,5 @@
 
     - path: sectors
       flavor: full
+
+    - contact
