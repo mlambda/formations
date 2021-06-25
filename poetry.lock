@@ -106,7 +106,7 @@ test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 
 [[package]]
 name = "deckz"
-version = "14.0.1"
+version = "14.1.0"
 description = "Tool to handle multiple beamer decks."
 category = "main"
 optional = false
@@ -115,6 +115,7 @@ python-versions = ">=3.8,<4.0"
 [package.dependencies]
 appdirs = ">=1.4.4,<2.0.0"
 attrs = ">=21.2.0,<22.0.0"
+email-validator = ">=1.1.3,<2.0.0"
 google-api-python-client = ">=2.3.0,<3.0.0"
 google-auth-oauthlib = ">=0.4.4,<0.5.0"
 Jinja2 = ">=2.11.3,<3.0.0"
@@ -125,6 +126,33 @@ rich = ">=10.1.0,<11.0.0"
 sendgrid = ">=6.7.0,<7.0.0"
 typer = {version = ">=0.3.2,<0.4.0", extras = ["all"]}
 watchdog = ">=2.1.1,<3.0.0"
+
+[[package]]
+name = "dnspython"
+version = "2.1.0"
+description = "DNS toolkit"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+dnssec = ["cryptography (>=2.6)"]
+doh = ["requests", "requests-toolbelt"]
+idna = ["idna (>=2.1)"]
+curio = ["curio (>=1.2)", "sniffio (>=1.1)"]
+trio = ["trio (>=0.14.0)", "sniffio (>=1.1)"]
+
+[[package]]
+name = "email-validator"
+version = "1.1.3"
+description = "A robust email syntax and deliverability validation library for Python 2.x/3.x."
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
+
+[package.dependencies]
+dnspython = ">=1.15.0"
+idna = ">=2.0.0"
 
 [[package]]
 name = "flake8"
@@ -163,7 +191,7 @@ grpcio-gcp = ["grpcio-gcp (>=0.2.2)"]
 
 [[package]]
 name = "google-api-python-client"
-version = "2.9.0"
+version = "2.10.0"
 description = "Google API Client Library for Python"
 category = "main"
 optional = false
@@ -179,7 +207,7 @@ uritemplate = ">=3.0.0,<4dev"
 
 [[package]]
 name = "google-auth"
-version = "1.31.0"
+version = "1.32.0"
 description = "Google Authentication Library"
 category = "main"
 optional = false
@@ -398,7 +426,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "pygit2"
-version = "1.6.0"
+version = "1.6.1"
 description = "Python bindings for libgit2."
 category = "main"
 optional = false
@@ -490,7 +518,7 @@ rsa = ["oauthlib[signedtoken] (>=3.0.0)"]
 
 [[package]]
 name = "rich"
-version = "10.3.0"
+version = "10.4.0"
 description = "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
 category = "main"
 optional = false
@@ -517,7 +545,7 @@ pyasn1 = ">=0.1.3"
 
 [[package]]
 name = "sendgrid"
-version = "6.7.0"
+version = "6.7.1"
 description = "Twilio SendGrid library for Python"
 category = "main"
 optional = false
@@ -621,7 +649,7 @@ watchmedo = ["PyYAML (>=3.10)", "argh (>=0.24.1)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "cc5211e43b2ca89cd32d693b9193d82aa8fe6bf77e320118bf3d1a86e758f944"
+content-hash = "6f1c739c78455b0fb7020c320c08cc7fc12a5ab4bcf4564192f81b52d4af8168"
 
 [metadata.files]
 appdirs = [
@@ -712,8 +740,16 @@ commonmark = [
     {file = "commonmark-0.9.1.tar.gz", hash = "sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"},
 ]
 deckz = [
-    {file = "deckz-14.0.1-py3-none-any.whl", hash = "sha256:ad6585cb40fc30473a24f33c0ee4008e895299a7ca933e4df8af4cec47aa897c"},
-    {file = "deckz-14.0.1.tar.gz", hash = "sha256:bf94cfc66ebb5b6507253ce8406fd491a68cea89ceb24c21d438b45c6816d5ee"},
+    {file = "deckz-14.1.0-py3-none-any.whl", hash = "sha256:7297a56345707e5583a1c78333b8c64000911eb59469c036d6daa49d9879df02"},
+    {file = "deckz-14.1.0.tar.gz", hash = "sha256:4f3c14e97dcb495b90cdefc41c51b33b97be818079ed49174fd8fc2eb3823a57"},
+]
+dnspython = [
+    {file = "dnspython-2.1.0-py3-none-any.whl", hash = "sha256:95d12f6ef0317118d2a1a6fc49aac65ffec7eb8087474158f42f26a639135216"},
+    {file = "dnspython-2.1.0.zip", hash = "sha256:e4a87f0b573201a0f3727fa18a516b055fd1107e0e5477cded4a2de497df1dd4"},
+]
+email-validator = [
+    {file = "email_validator-1.1.3-py2.py3-none-any.whl", hash = "sha256:5675c8ceb7106a37e40e2698a57c056756bf3f272cfa8682a4f87ebd95d8440b"},
+    {file = "email_validator-1.1.3.tar.gz", hash = "sha256:aa237a65f6f4da067119b7df3f13e89c25c051327b2b5b66dc075f33d62480d7"},
 ]
 flake8 = [
     {file = "flake8-3.9.2-py2.py3-none-any.whl", hash = "sha256:bf8fd333346d844f616e8d47905ef3a3384edae6b4e9beb0c5101e25e3110907"},
@@ -724,12 +760,12 @@ google-api-core = [
     {file = "google_api_core-1.30.0-py2.py3-none-any.whl", hash = "sha256:92cd9e9f366e84bfcf2524e34d2dc244906c645e731962617ba620da1620a1e0"},
 ]
 google-api-python-client = [
-    {file = "google-api-python-client-2.9.0.tar.gz", hash = "sha256:2b5274f06799d80222fd3f20fd4ebcd19f57c009703bd4cf7b00492e7e05e15a"},
-    {file = "google_api_python_client-2.9.0-py2.py3-none-any.whl", hash = "sha256:fb5c28b61327392891bf79ccd0a4edc54c76f6d1f3c10e3821dbdf8a7287f691"},
+    {file = "google-api-python-client-2.10.0.tar.gz", hash = "sha256:58424d263344625dcf4dc08e7639a6714737102ab4ae83e5f043e3db08d9965f"},
+    {file = "google_api_python_client-2.10.0-py2.py3-none-any.whl", hash = "sha256:6da20ca5f56be8c104c31de49153c5c97af57470a4ab19322534d7483dcfa727"},
 ]
 google-auth = [
-    {file = "google-auth-1.31.0.tar.gz", hash = "sha256:154f7889c5d679a6f626f36adb12afbd4dbb0a9a04ec575d989d6ba79c4fd65e"},
-    {file = "google_auth-1.31.0-py2.py3-none-any.whl", hash = "sha256:6d47c79b5d09fbc7e8355fd9594cc4cf65fdde5d401c63951eaac4baa1ba2ae1"},
+    {file = "google-auth-1.32.0.tar.gz", hash = "sha256:e34e5f5de5610b202f9b40ebd9f8b27571d5c5537db9afed3a72b2db5a345039"},
+    {file = "google_auth-1.32.0-py2.py3-none-any.whl", hash = "sha256:b3a67fa9ba5b768861dacf374c2135eb09fa14a0e40c851c3b8ea7abe6fc8fef"},
 ]
 google-auth-httplib2 = [
     {file = "google-auth-httplib2-0.1.0.tar.gz", hash = "sha256:a07c39fd632becacd3f07718dfd6021bf396978f03ad3ce4321d060015cc30ac"},
@@ -903,27 +939,27 @@ pyflakes = [
     {file = "pyflakes-2.3.1.tar.gz", hash = "sha256:f5bc8ecabc05bb9d291eb5203d6810b49040f6ff446a756326104746cc00c1db"},
 ]
 pygit2 = [
-    {file = "pygit2-1.6.0-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:2b7eff2d27c91938ac999c9b06e759f7c35d3918198bfe775822eb8f3b6f50f7"},
-    {file = "pygit2-1.6.0-cp36-cp36m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b73e94987d85e26f699d4fd1a2898ec66f9cdd8018f24049b996b38e9f1fa96a"},
-    {file = "pygit2-1.6.0-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:687c5d92068cfdd36bc63dec71435fb14f7c3d8beb416252fba0eeb4d8674800"},
-    {file = "pygit2-1.6.0-cp36-cp36m-win32.whl", hash = "sha256:cc6eb0cc5ed07b516881bd9c0de7d01c560b32826385d3920d7b5405b95584ae"},
-    {file = "pygit2-1.6.0-cp36-cp36m-win_amd64.whl", hash = "sha256:f663f16e2f468fc9d4f9ed38a4d035f6b30da823a722f5a182d016a5449681e9"},
-    {file = "pygit2-1.6.0-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:57dfb5b828c75f736e37dfa5601b7a1364346300ad26ea5d11b82541401a1420"},
-    {file = "pygit2-1.6.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ec20b0072428bd5d8813231ecce82b88703bda8fb8614178be2325bca1abf1ae"},
-    {file = "pygit2-1.6.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a027cabbb5f4d73336e324a7da947c3246db1076f2d06dd14a02b2f004b535eb"},
-    {file = "pygit2-1.6.0-cp37-cp37m-win32.whl", hash = "sha256:566ef4f7464d5c4413465923bd78ae4b0fbd8ce47a3e0ca641c7cc91c40b614d"},
-    {file = "pygit2-1.6.0-cp37-cp37m-win_amd64.whl", hash = "sha256:889315ffbc10a0065ce9c17830fbc29bcc6c8dae5aeffab69c305e8c06547a21"},
-    {file = "pygit2-1.6.0-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:40ab039b3b1b1fa6ec5234819b908714e7f2b8aca13776f5e219f6e01e38f195"},
-    {file = "pygit2-1.6.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:36b9d31a67f66f5ce06c13bb458ed93bc0e512cde646b2b507df087ca28edc28"},
-    {file = "pygit2-1.6.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3a39c9026d636dd9f3ff8e1046de462ce39776d2c1d9b526e1c9c7c5d0607768"},
-    {file = "pygit2-1.6.0-cp38-cp38-win32.whl", hash = "sha256:90ca218487d3b019c2dddb1bbf79b0ad51711c583cc85277353e4a82cd850103"},
-    {file = "pygit2-1.6.0-cp38-cp38-win_amd64.whl", hash = "sha256:99bcce079085ff81cc06043543bc81e4e798931e2f481a20323ae952768d41f7"},
-    {file = "pygit2-1.6.0-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:a8d201e5439ad50add17071255ea21b07aa047ce8de1df93bcf77fd440cb8aa0"},
-    {file = "pygit2-1.6.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:fc9e4136c5c010e34f14c1cafcdada7c92b260c19c7ce929894216ff2a999d6e"},
-    {file = "pygit2-1.6.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:27603ea2e5a440dd3b5b6cf8427e13cfb80636672157c6c652a7f0a85412a5ce"},
-    {file = "pygit2-1.6.0-cp39-cp39-win32.whl", hash = "sha256:8abaf2180bfbfb03b79aa95fd12a9ece043e449cb20c8545e91dcfa9ad584852"},
-    {file = "pygit2-1.6.0-cp39-cp39-win_amd64.whl", hash = "sha256:67a7a405bf0510823b6ac3aefe22152cace8d8c1a603cf6ede883618b05d6ba3"},
-    {file = "pygit2-1.6.0.tar.gz", hash = "sha256:7aacea4e57011777f4774421228e5d0ddb9a6ddb87ac4b542346d17ab12a4d62"},
+    {file = "pygit2-1.6.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:547429774c11f5bc9d20a49aa86e4bd13c90a55140504ef05f55cf424470ee34"},
+    {file = "pygit2-1.6.1-cp36-cp36m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4e75865d7b6fc161d93b16f10365eaad353cd546e302a98f2de2097ddea1066b"},
+    {file = "pygit2-1.6.1-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:be4a64b6090308ffd1c82e2dd4316cb79483715387b13818156d516134a5b17c"},
+    {file = "pygit2-1.6.1-cp36-cp36m-win32.whl", hash = "sha256:2666a3970b2ea1222a9f0463b466f98c8d564f29ec84cf0a58d9b0d3865dbaaf"},
+    {file = "pygit2-1.6.1-cp36-cp36m-win_amd64.whl", hash = "sha256:b2de12ca2d3b7eb86106223b40b2edc0c61103c71e7962e53092c6ddef71a194"},
+    {file = "pygit2-1.6.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:9c1d96c66fb6e69ec710078a73c19edff420bc1db430caa9e03a825eede3f25c"},
+    {file = "pygit2-1.6.1-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:454d42550fa6a6cd0e6a6ad9ab3f3262135fd157f57bad245ce156c36ee93370"},
+    {file = "pygit2-1.6.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ce0827b77dd2f8a3465bdc181c4e65f27dd12dbd92635c038e58030cc90c2de0"},
+    {file = "pygit2-1.6.1-cp37-cp37m-win32.whl", hash = "sha256:b0161a141888d450eb821472fdcdadd14a072ddeda841fee9984956d34d3e19d"},
+    {file = "pygit2-1.6.1-cp37-cp37m-win_amd64.whl", hash = "sha256:af2fa259b6f7899227611ab978c600695724e85965836cb607d8b1e70cfea9b3"},
+    {file = "pygit2-1.6.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:0e1e02c28983ddc004c0f54063f3e46fca388225d468e32e16689cfb750e0bd6"},
+    {file = "pygit2-1.6.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e5dadc4844feb76cde5cc9a37656326a361dd8b5c8e8f8674dcd4a5ecf395db3"},
+    {file = "pygit2-1.6.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ef07458e4172a31318663295083b43f957d611145738ff56aa76db593542a6e8"},
+    {file = "pygit2-1.6.1-cp38-cp38-win32.whl", hash = "sha256:7a0c0a1f11fd41f57e8c6c64d903cc7fa4ec95d15592270be3217ed7f78eb023"},
+    {file = "pygit2-1.6.1-cp38-cp38-win_amd64.whl", hash = "sha256:2fd5c1b2d84dc6084f1bda836607afe37e95186a53a5a827a69083415e57fe4f"},
+    {file = "pygit2-1.6.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:b9b88b7e9a5286a71be0b6c307f0523c9606aeedff6b61eb9c440e18817fa641"},
+    {file = "pygit2-1.6.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ac12d32b714c3383ebccffee5eb6aff0b69a2542a40a664fd5ad370afcb28ee7"},
+    {file = "pygit2-1.6.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fe682ed6afd2ab31127f6a502cf3e002dc1cc8d26c36a5d49dfd180250351eb6"},
+    {file = "pygit2-1.6.1-cp39-cp39-win32.whl", hash = "sha256:dbbf66a23860aa899949068ac9b503b4bc21e6063e8f53870440adbdc909405e"},
+    {file = "pygit2-1.6.1-cp39-cp39-win_amd64.whl", hash = "sha256:f90775afb11f69376e2af21ab56fcfbb52f6bc84117059ddf0355f81e5e36352"},
+    {file = "pygit2-1.6.1.tar.gz", hash = "sha256:c3303776f774d3e0115c1c4f6e1fc35470d15f113a7ae9401a0b90acfa1661ac"},
 ]
 pygments = [
     {file = "Pygments-2.9.0-py3-none-any.whl", hash = "sha256:d66e804411278594d764fc69ec36ec13d9ae9147193a1740cd34d272ca383b8e"},
@@ -1024,16 +1060,16 @@ requests-oauthlib = [
     {file = "requests_oauthlib-1.3.0-py3.7.egg", hash = "sha256:fa6c47b933f01060936d87ae9327fead68768b69c6c9ea2109c48be30f2d4dbc"},
 ]
 rich = [
-    {file = "rich-10.3.0-py3-none-any.whl", hash = "sha256:b3b5e6c47bf6ea7a2479f5d9245d5ed32f542931912e14203292dfaa0c6c1437"},
-    {file = "rich-10.3.0.tar.gz", hash = "sha256:a83bff83309687e1859c75b499879738b135d700738dd2721c22965497af05bd"},
+    {file = "rich-10.4.0-py3-none-any.whl", hash = "sha256:9fb2404c4e870d4de3837c11d0cd1f26c44725865535caba1379c2343a49f6a1"},
+    {file = "rich-10.4.0.tar.gz", hash = "sha256:6e8a3e2c61e6cf6193bfcffbb89865a0973af7779d3ead913fdbbbc33f457c2c"},
 ]
 rsa = [
     {file = "rsa-4.7.2-py3-none-any.whl", hash = "sha256:78f9a9bf4e7be0c5ded4583326e7461e3a3c5aae24073648b4bdfa797d78c9d2"},
     {file = "rsa-4.7.2.tar.gz", hash = "sha256:9d689e6ca1b3038bc82bf8d23e944b6b6037bc02301a574935b2dd946e0353b9"},
 ]
 sendgrid = [
-    {file = "sendgrid-6.7.0-py3-none-any.whl", hash = "sha256:273bdc0abec649bf6319df7b6267980f79e53ab64e92906d65eea6d4330d00b4"},
-    {file = "sendgrid-6.7.0.tar.gz", hash = "sha256:74b0dcf9a79188948f61f456bd1bf67ffa676a5d388aba1c76bff516566d7084"},
+    {file = "sendgrid-6.7.1-py3-none-any.whl", hash = "sha256:2558a8b2cf12677ceb99f8b611d914af5b9a2fd7ff3c0578e8299b4224e10071"},
+    {file = "sendgrid-6.7.1.tar.gz", hash = "sha256:1c1cca97ab968f81af43ddbbe44aade5a689da27e3e4975dc366042499620abe"},
 ]
 shellingham = [
     {file = "shellingham-1.4.0-py2.py3-none-any.whl", hash = "sha256:536b67a0697f2e4af32ab176c00a50ac2899c5a05e0d8e2dadac8e58888283f9"},
