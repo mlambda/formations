@@ -1,32 +1,30 @@
 default_titles:
   lstm: Réseaux à longue mémoire de court terme
-  rnn: Réseaux de neurones récurrents
-  rnn-keras: Modèle
-  rnn-variants: Variantes de réseaux récurrents
+  model: Modèle
+  keras: Implémentation avec Keras
+  variants: Variantes
 flavors:
   full:
-    - rnn
+    - model
     - lstm
-    - rnn-variants
-    - rnn-keras
+    - variants
+    - keras
     - /questions
-    - tp-rnn
+    - tp
   demo:
-    - rnn
+    - model
     - /questions
-    - demo-rnn
-  demo-detailed:
-    - rnn
+    - demo
+  demo-detailed-keras:
+    - model
     - lstm
-    - rnn-variants
+    - variants
+    - keras
     - /questions
-    - demo-rnn
+    - demo
   model:
-    - rnn
+    - model
     - lstm
-    - rnn-variants
-    - /questions
-  model-light:
-    - rnn
+    - variants
     - /questions
 title: Réseaux de neurones récurrents

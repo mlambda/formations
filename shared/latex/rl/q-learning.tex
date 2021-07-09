@@ -1,0 +1,138 @@
+\begin{frame}{Introduction}
+  \begin{itemize}[<+->]
+    \item Le Q-apprentissage est une approche orientée valeur
+    \item Elle utilise un tableau de valeurs pour chaque couple état / action
+    \item Elle met à jour ce tableau à chaque récompense observée pendant l'apprentissage
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple --- Problème}
+  Aller du départ à l'arrivée. Chaque mouvement coûte $1$ (récompense de $-1$).
+
+  \begin{tabular}{c|c|c|c|c|c|c}
+    \cline{2-6}
+     & & \cellcolor{black} & & & & \\
+    \cline{2-6}
+     & & \cellcolor{black} & & \cellcolor{black} & \cellcolor{black} & \\
+    \cline{2-6}
+    Entrée $\rightarrow$ & \phantom{-5} & \phantom{-5} & \phantom{-5} & \phantom{-5} & \phantom{-5} & $\leftarrow$ Sortie \\
+    \cline{2-6}
+     & & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
+    \cline{2-6}
+     & & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
+    \cline{2-6}
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Q-table}
+  La Q-table correspondante, initialisée avec des 0s, serait~:
+
+  \begin{tabular}{ccccc}
+    \toprule
+    \diagbox{État}{Action} & $\uparrow$ & $\rightarrow$ & $\downarrow$ & $\leftarrow$ \\
+    \midrule
+    $(1, 1)$ & 0 & 0 & 0 & 0 \\
+    $(1, 2)$ & 0 & 0 & 0 & 0 \\
+    $(1, 3)$ & 0 & 0 & 0 & 0 \\
+    $(1, 4)$ & 0 & 0 & 0 & 0 \\
+    $(1, 5)$ & 0 & 0 & 0 & 0 \\
+    $(2, 1)$ & 0 & 0 & 0 & 0 \\
+    \multicolumn{5}{c}{…} \\
+    $(5, 5)$ & 0 & 0 & 0 & 0 \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Apprentissage des valeurs de la Q-table}
+  Utilisation de l'équation de Bellman pour mettre àjour une valeur dans la table~:
+  \[
+    Q_{\text{new}}(s_t, a_t)
+    \leftarrow
+    \underbrace{Q(s_t, a_t)}_{\mathclap{\text{Ancienne valeur}}}
+    +
+    \alpha
+    \underbrace{\left[
+      \overbrace{
+        r_t
+        +
+        \gamma \max_a Q\left(s_{t+1}, a\right)
+      }^{\mathclap{\text{Nouvelle valeur}}}
+      - Q(s_t, a_t)
+    \right]}_{\mathclap{\text{Différence temporelle}}}
+  \]
+  where
+  \begin{description}
+    \item[$\alpha$] Pas d'apprentissage ($0 \leq \alpha \leq 1$)
+    \item[$r_t$] Récompense pour avoir choisi $a_t$ dans l'état $s_t$
+    \item[$\gamma$] Facteur de réduction ($0 \leq \gamma \leq 1$)
+    \item[$\max_a Q\left(s_{t+1}, a\right)$] Récompense maximale dans l'état d'arrivée
+  \end{description}
+\end{frame}
+
+\begin{frame}{Exemple de mise à jour de la Q-table}
+  En commençant en $(3, 1)$ et en choisissant l'action $\uparrow$~:
+  \begin{alignat*}{9}
+    Q_{\text{new}}(s_t, a_t) & =
+    Q(s_t, a_t)
+    && +
+    \alpha
+    &&[
+        r_t
+        && +
+        \gamma \max_a Q\left(s_{t+1}, a\right)
+      && - Q(s_t, a_t)
+    ] \\
+    Q_{\text{new}}((3, 1), \uparrow) & =
+    Q((3, 1), \uparrow)
+    && +
+    0.1
+    &&[
+        -1
+        && +
+        \gamma \max_a Q\left((2, 1), a\right)
+      && - Q((3, 1), \uparrow)
+    ] \\
+    Q_{\text{new}}((3, 1), \uparrow) & =
+    && -0.1 && && && \\
+  \end{alignat*}
+
+  \begin{tabular}{ccccc}
+    \toprule
+    \diagbox{État}{Action} & $\uparrow$ & $\rightarrow$ & $\downarrow$ & $\leftarrow$ \\
+    \midrule
+    \multicolumn{5}{c}{…} \\
+    $(3, 1)$ & $-0.1$ & 0 & 0 & 0 \\
+    \multicolumn{5}{c}{…} \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Limitations}
+  \begin{itemize}[<+->]
+    \item Pas adapté aux états trop nombreux
+    \item Peut manquer d'efficience dans l'utilisation des données
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Améliorations --- Deep Q-learning}
+  \begin{itemize}[<+->]
+    \item Utilisation d'un réseau pour prédire $Q(s, a)$
+    \item Utilisation de l'équation de Bellman comme fonction de perte
+    \item Ok pour les états nombreux~!
+    \item Dur à entraîner~: les astuces de stabilité de RL sont nécessaires
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Améliorations --- Experience replay}
+  Au lieu d'utiliser un épisode complet à chaque fois, sélection d'une transition aléatoire dans un buffer d'épisodes.
+
+  $\rightarrow$ Exemples d'apprentissage non corrélés. Grosse amélioration en efficience des données et en stabilité.
+\end{frame}
+
+\begin{frame}{Améliorations --- Q-apprentissage double}
+  Entraîner deux réseaux conjointement pour éviter des problèmes de stabilité.
+
+  Le réseau A estime la valeur pour le réseau B dans l'équation de Bellman, et inversement.
+
+  Chaque réseau est entraîné sur des épisodes différents.
+\end{frame}

@@ -1,0 +1,18 @@
+\begin{frame}{Wasserstein GAN}
+  \begin{itemize}[<+->]
+    \item Utilise la distance de transport optimal entre la distribution des vraies et fausses données au lieu de l'entropie binaire croisée
+    \item Gradient non saturé~: meilleur signal d'apprentissage
+    \item Rend l'optimisation plus facile
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Wasserstein GAN --- Visualisation}
+  \V{["img/wgan", "tw", 0.7] | image}
+\end{frame}
+
+\begin{frame}{BEGAN}
+  \begin{itemize}[<+->]
+    \item Utilise un auto-encodeur au lieu d'un classifieur comme discriminateur
+    \item Le discriminateur doit avoir une plus grande erreur de reconstruction pour les fausses images
+  \end{itemize}
+\end{frame}

@@ -1,11 +1,20 @@
 default_titles:
+  actor-critic: Acteur-critique
   alphago: Alphago
   deep: Deep Learning
   intro: Introduction
+  q-learning: Q-apprentissage
 flavors:
-  full:
+  light:
     - intro
     - deep
+    - alphago
+    - /questions
+  full:
+    - intro
+    - q-learning
+    - deep: null
+    - actor-critic
     - alphago
     - /questions
 title: Apprentissage par renforcement

@@ -18,10 +18,6 @@
       flavor: intro
 
     - path: rl
-      flavor: full
-
-    - path: nn/gan
-      title: Des réseaux particuliers
       flavor: light
 
     - path: big-questions

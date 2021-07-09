@@ -1,15 +1,21 @@
 
 \begin{frame}{Principe}
-  Calcul du gradient de l'erreur par rapport aux paramètres:
-  \[
-  \frac{\partial{Err}}{\partial{w_i}}
-  \]
-  Mise à jour :
-  \[
-  w_i' = w_i - \gamma * grad 
-  \]
-  où : $0 < \gamma < 1$ (learning rate)
-  \V{["img/gradient-nzmog", "tw", 0.25] | image}
+  \begin{columns}
+    \begin{column}{0.5\tw}
+      Calcul du gradient de l'erreur par rapport aux paramètres:
+      \[
+        \frac{\partial{E}}{\partial{w_i}}
+      \]
+      Mise à jour :
+      \[
+        w_i \leftarrow w_i - \gamma\frac{\partial{E}}{\partial{w_i}}
+      \]
+      où $0 < \gamma < 1$ (pas d'apprentissage)
+    \end{column}
+    \begin{column}{0.5\tw}
+      \V{["img/gradient-nzmog", "tw", 1] | image}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Algorithme}
@@ -30,11 +36,11 @@
 \begin{frame}{Exemple de dérivation --- Régression linéaire}
   \begin{minipage}[l]{0.49\linewidth}
     \begin{align*}
-      E_\Omega & = \frac{1}{2n} \sum_{i=1}^n( \hat{y_i} - y_i )^2 \\
-      E_\Omega & = \frac{1}{2n}\sum_{i=1}^n( \hat{y_i} - (ax_i + b) )^2 \\
+      E & = \frac{1}{2n} \sum_{i=1}^n( \hat{y_i} - y_i )^2 \\
+      E & = \frac{1}{2n}\sum_{i=1}^n( \hat{y_i} - (ax_i + b) )^2 \\
       & ... \\
-      \frac{\partial E_\Omega}{\partial a} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - \hat{y_i})x_i \\
-      \frac{\partial E_\Omega}{\partial b} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - \hat{y_i}) \\
+      \frac{\partial E}{\partial a} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - \hat{y_i})x_i \\
+      \frac{\partial E}{\partial b} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - \hat{y_i}) \\
     \end{align*}
   \end{minipage}\hfill
   \begin{minipage}[c]{0.49\linewidth}
@@ -49,8 +55,8 @@
     \begin{center}
       \textbf{Mise à jour}
 
-      $a \leftarrow a - \gamma\frac{\partial{E_{\Omega}}}{\partial{a}}$ \\
-      $b \leftarrow b - \gamma\frac{\partial{E_{\Omega}}}{\partial{b}}$ \\
+      $a \leftarrow a - \gamma\frac{\partial{E}}{\partial{a}}$ \\
+      $b \leftarrow b - \gamma\frac{\partial{E}}{\partial{b}}$ \\
       $\;$ \\
       où $0 < \gamma < 1$ (pas d'apprentissage)
     \end{center}

@@ -6,11 +6,6 @@ flavors:
     - $dimensionality-reduction: light
     - $clustering: light
     - $anomaly-detection: light
-  medium:
-    - introduction
-    - $dimensionality-reduction: light-tp
-    - $clustering: kmeans
-    - $anomaly-detection: light
   full:
     - introduction
     - $dimensionality-reduction: full

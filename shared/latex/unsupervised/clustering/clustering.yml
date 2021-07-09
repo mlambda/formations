@@ -29,9 +29,4 @@ flavors:
     - dbscan
     - conclusion
     - demo
-  kmeans:
-    - intro
-    - kmeans-gaussian
-    - demo
-    - /questions
 title: Clustering

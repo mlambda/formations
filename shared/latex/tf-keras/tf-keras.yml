@@ -1,11 +1,19 @@
 default_titles:
   keras: Keras
   tf: TensorFlow 2
+  /nn/tp-nn: Travaux pratiques
 flavors:
   full:
     - tf
     - keras
     - /questions
+  full-demo:
+    - tf
+    - /questions
+    - /nn/tp-demo-tf
+    - keras
+    - /questions
+    - /nn/tp-demo-keras
   keras:
     - keras: Principes \& API
     - /questions

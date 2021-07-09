@@ -14,6 +14,13 @@
   \end{columns}
 \end{frame}
 
+\begin{frame}{Approche pour optimiser les hyper-paramètres}
+  \begin{itemize}[<+->]
+    \item Commencer avec une bonne baseline et une rapide recherche \frquote{à la main}
+    \item When you are done with the basic pipeline, implement a proper search using a dedicated library
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Learning rate}
   \begin{minipage}{0.49\textwidth}
     \centering
@@ -44,4 +51,11 @@
 
 \begin{frame}{Nombre de couches}
   \mintedpycode{addlayer-template}
+\end{frame}
+
+\begin{frame}{Pour aller plus loin}
+  Entraîner des modèles coûte cher.
+  Une bonne navigation de l'espace des hyper-paramètres est importante.
+
+  $\Rightarrow$ Faire appel à une librairie dédiée comme Keras Tuner, Hyperopt, Nevergrad, Optuna ou Ray pour utiliser des processus gaussiens ou d'autres méthodes état de l'art.
 \end{frame}

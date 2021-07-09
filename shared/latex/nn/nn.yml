@@ -18,16 +18,6 @@ default_titles:
   tp-transformer: Travaux Pratiques --- Transformeurs
   transformer: Réseaux transformeurs
 flavors:
-  deep-discover:
-    - intro
-    - playground
-    - optimize
-    - deep-optimize
-    - regularisation
-    - playground
-    - $gan: light
-    - $cnn: model-light
-    - $rnn: model-light
   deep-discover-demo:
     - intro
     - playground
@@ -37,18 +27,7 @@ flavors:
     - playground
     - $cnn: demo
     - $rnn: demo
-    - $gan: demo
-    - /questions
-  deep-detailed-demo:
-    - intro
-    - playground
-    - optimize
-    - deep-optimize
-    - regularisation
-    - playground
-    - $cnn: demo
-    - $rnn: demo-detailed
-    - $gan: demo
+    - $gan: light
     - /questions
   deep-intro:
     - intro
@@ -75,7 +54,7 @@ flavors:
     - /tf-keras/keras 
     - tp-nn
     - $cnn: full
-    - $gan: light
+    - $gan: full
     - $rnn: model
   recurrent-text:
     - intro
@@ -89,10 +68,5 @@ flavors:
     - tp-nn: null
   tp-tf-pur:
     - tp-nn-tf: null
-  transformer:
-    - attention-model
-    - transformer: Méthode
-    - /questions
-    - tp-transformer: Travaux Pratiques
 title: Réseaux de neurones
 version: 3

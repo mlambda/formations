@@ -1,7 +1,98 @@
-\begin{frame}{Que voyez-vous ?}
-  \V{["img/gan-zebra-horse", "tw", 1] | image}
+\begin{frame}{Principe}
+  \begin{itemize}[<+->]
+    \item Utiliser le pouvoir d'un réseau pour en entraîner un autre, génératif
+    \item Modéliser l'apprentissage comme un jeu
+    \item Le premier réseau génère des exemples depuis du bruit
+    \item Le deuxième distingue entre les générations du premier et les vrais exemples
+  \end{itemize}
 \end{frame}
 
-\begin{frame}{Que voyez-vous ?}
-  \V{["img/gan-faux-visages", "th", 0.8] | image}
+\begin{frame}{Architecture}
+  \V{ ["tikz/neural-networks/gan/gan", "tw", 1] | image }
+\end{frame}
+
+\begin{frame}{Discriminateur}
+  Entraîné pour maximiser la probabilité d'assigner $1$ aux vrais exemples et $0$ aux faux~:
+
+  \[
+    \max_D
+      \left\{
+        \underbrace{\green{y \log D(\vect{x})}}_{\mathclap{\text{vrai exemple}}}
+        +
+        \underbrace{\red{(1 - y) \log (1 - D(\vect{x}))}}_{\mathclap{\text{faux exemple}}}
+      \right\}
+  \]
+
+  \begin{itemize}[<+(1)->]
+    \item Pour un vrai exemple ($y=1$), le terme à maximiser est $\green{\log D(\vect{x})}$
+
+    $\Rightarrow$ $D(\vect{x})$ doit tendre vers $1$
+    \item Pour un faux exemple ($y=0$), le terme à maximiser est $\red{\log (1 - D(\vect{x}))}$
+
+    $\Rightarrow$ $D(\vect{x})$ doit tendre vers $0$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Générateur}
+  Entraîné pour minimiser la probabilité que $D$ assigne $0$ à de faux exemples~:
+
+  \[
+    \min_G
+      \left\{
+        (1 - y) \log (1 - D(G(\vect{z})))
+      \right\}
+  \]
+  Le terme à minimiser est $\log (1 - D(G(\vect{z})))$
+
+  $\Rightarrow$ $D(G(\vect{z}))$ doit tendre vers $1$
+\end{frame}
+
+\begin{frame}{Fonction d'entraînement complète}
+  Les deux équations précédentes, combinées sur tous les exemples (vrais et faux)~:
+
+  \[
+    \max_D \min_G \left\{
+      \underbrace{\mathbb{E}_{\vect{x} \sim \text{Data}} \log D(\vect{x})}_{\mathclap{\text{Seulement $D$}}}
+      + \underbrace{\mathbb{E}_{\vect{z} \sim \text{Noise}} \log (1 - D(G(\vect{z})))}_{\mathclap{\text{$D$ \& $G$}}}
+    \right\}
+  \]
+
+  $\Rightarrow$ Description du jeu minimax entre $G$ \& $D$.
+\end{frame}
+
+\begin{frame}{Algorithme d'apprentissage}
+  Pour chaque itération d'apprentissage~:
+
+  \begin{enumerate}[<+(1)->]
+    \item Échantillonner le vecteur de bruit $\vect{Z}$
+    \item Échantillonner un batch de vrais exemples $\vect{X}$
+    \item Mettre à jour les paramètres de $D$ ($\theta_D$) par montée de gradient~:
+    \[
+      \theta_D \leftarrow \theta_D + \alpha \nabla_{\theta_D} \frac{1}{m} \sum_{i=1}^m \left[
+        \log D\left(\vect{X}_i\right) + \log\left(1 - D\left(G\left(\vect{Z}_i\right)\right)\right)
+      \right]
+    \]
+    \item Mettre à jour les paramètres de $G$ ($\theta_G$) par descente de gradient~:
+    \[
+      \theta_G \leftarrow \theta_G - \alpha \nabla_{\theta_G} \frac{1}{m} \sum_{i=1}^m \left[
+        \log\left(1 - D\left(G\left(\vect{Z}_i\right)\right)\right)
+      \right]
+    \]
+  \end{enumerate}
+  \onslide<+(1)->{Les étapes 3. et 4. peuvent être répétées plusieurs fois.}
+\end{frame}
+
+\begin{frame}{Stabilité de l'apprentissage}
+  Entraîner un GAN est difficile~:
+
+  \begin{itemize}[<+(1)->]
+    \item Le discriminateur peut dominer
+    \item Le générateur peut boucler sur certaines générations (mode collapse)
+    \item Il peut être nécessaire d'entraîner un réseau plus que l'autre
+    \item La distribution du bruit est importante
+    \item Le pas d'apprentissage est important
+    \item …
+  \end{itemize}
+
+  \onslide<+(1)->{Conseils utiles~: \url{https://github.com/soumith/ganhacks}}
 \end{frame}

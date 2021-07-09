@@ -88,6 +88,16 @@ flavors:
     - /questions
     - demo-random-forest
     - tp-random-forest
+  drn:
+    - regression-lineaire
+    - cost-error-function
+    - /nn/gradient-descent
+    - /questions
+    - demo-linear-regression
+    - naive-bayes
+    - /questions
+    - random-forest
+    - /questions
 
   classification:
     - classification

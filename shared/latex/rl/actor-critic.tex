@@ -1,0 +1,84 @@
+\begin{frame}{Introduction}
+  Les méthodes acteur-critique sont des méthodes de gradient de politique.
+
+  Elles optimisent une politique en calculant le gradient de la récompense par rapport à la politique.
+\end{frame}
+
+\begin{frame}{Objectif}
+  Comme toujours en apprentissage par renforcement, on optimise la récompense totale attendue~:
+
+  \[
+    J(\theta) = \mathbb{E}\left[\sum_{t=0}^{T-1}r_{t + 1}\right]
+  \]
+\end{frame}
+
+\begin{frame}{Apprentissage --- Méthode}
+  Calcul du gradient de $J(\theta)$ par rapport à $\theta$. On peut ensuite maximiser $J(\theta)$ par montée de gradient~:
+
+  \[
+    \theta \leftarrow \theta + \nabla_\theta J(\theta)
+  \]
+
+  $\Rightarrow$ Fonction de politique $\pi_\theta$ qui maximise la récompense totale (au moins localement).
+\end{frame}
+
+\begin{frame}{Gradient de politique basique}
+
+  \[
+    \nabla_\theta J(\theta) = \mathbb{E}_{\pi_\theta} \left[\nabla_\theta \log \pi_\theta(s, a)G_t\right]
+  \]
+
+  Où $G_t$ est la récompense totale attendue.
+
+  Voir \bluelink{https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html}{ce billet de blog} par Lilian Weng pour les dérivations.
+\end{frame}
+
+\begin{frame}{Méthodes acteur-critique}
+  2 sous-modèles~:
+
+  \begin{itemize}
+    \item Un \red{critique} qui estime la qualité des décisions de l'acteur
+    \item Un \green{acteur} qui décide quelle action choisir
+  \end{itemize}
+
+  \[
+    \nabla_{\green{\theta}} J(\green{\theta}) = \mathbb{E}_{\green{\pi_\theta}} \left[\nabla_\theta \log \green{\pi_\theta(s, a)}\red{G_t}\right]
+  \]
+
+  Pour le gradient de politique basique, le critique est $\red{G_t}$, la valeur de l'état $\red{V(s_t)}$.
+\end{frame}
+
+\begin{frame}{Options pour le critique}
+  Utiliser $G_t$ (1) a une grande variance et rend l'apprentissage instable.
+
+  Les options (2)--(4) ne biaisent pas l'algorithme mais ont de meilleures propriétés~:
+
+  \begin{align*}
+    \nabla_{\green{\theta}} J(\green{\theta}) & = \mathbb{E}_{\green{\pi_\theta}} \left[\nabla_\theta \ln \green{\pi_\theta(a \mid s)}\red{G_t}\right] & \text{Gradient de politique (1)} \\
+    & = \mathbb{E}_{\green{\pi_\theta}} \left[\nabla_\theta \ln \green{\pi_\theta(a \mid s)}\red{Q^w(s, a)}\right] & \text{Q acteur-critique (2)} \\
+    & = \mathbb{E}_{\green{\pi_\theta}} \left[\nabla_\theta \ln \green{\pi_\theta(a \mid s)}\red{A^w(s, a)}\right] & \text{acteur-critique avantage (3)} \\
+    & = \mathbb{E}_{\green{\pi_\theta}} \left[\nabla_\theta \ln \green{\pi_\theta(a \mid s)}\red{\delta}\right] & \text{acteur-critique TD (4)} \\
+  \end{align*}
+\end{frame}
+
+\begin{frame}{Détails de l'algorithme d'acteur-critique}
+  Ici avec le critique Q ($\red{Q_w}$):
+
+  \begin{enumerate}[<+->]
+    \item Initialiser $s$, $\green{\theta}$, $\red{w}$ aléatoirement. Échantillonner $a \sim \green{\pi_\theta(a \mid s)}$
+    \item Pour $t=1\dots T$:
+      \begin{enumerate}
+        \item Échantillonner la récompense $r_t \sim R(s, a)$ et l'état suivant $s' \sim P(s' \mid s, a)$
+        \item Échantillonner l'action suivante $a' \sim \green{\pi_\theta(a' \mid s')}$
+        \item Mettre à jour la politique~: $\green{\theta} \leftarrow \green{\theta} + \alpha_{\green{\theta}} \red{Q_w(s, a)}\nabla_{\green{\theta}} \ln \green{\pi_\theta(a \mid s)}$
+        \item Calculer l'erreur TD $t$:
+
+          $\delta_t = r_t + \gamma \red{Q_w(s', a')} - \red{Q_w(s, a)}$
+
+          puis mettre à jour le critique~:
+
+          $\red{w} \leftarrow \red{w} + \alpha_{\red{w}} \delta_t\nabla_{\red{w}}\red{Q_w(s, a)}$
+        \item Mettre à jour $a \leftarrow a'$ et $s \leftarrow s'$
+      \end{enumerate}
+  \end{enumerate}
+\end{frame}

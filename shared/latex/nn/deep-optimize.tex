@@ -1,3 +1,16 @@
+\begin{frame}{Rétropropagation du gradient}
+  Pour calculer le gradient dans des réseaux profonds, on utilise la rétropropagation~:
+
+  \begin{itemize}
+    \item Algorithme de programmation dynamique
+    \item Commence par calculer le gradient de la dernière couche
+    \item Calcule le gradient d'une couche en se basant sur le gradient de la couche suivante
+    \item Utilise la règle de dérivation des fonctions composées pour le faire
+  \end{itemize}
+
+  $\Rightarrow$ Évite de recalculer des sous-expressions.
+\end{frame}
+
 \begin{frame}{Disparition du gradient (ou son explosion)}
   \V{["tikz/optimization/vanishing-gradients", "tw", 1.0] | image}
 \end{frame}
@@ -24,13 +37,40 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Adaptative Gradient Algorithm (AdaGrad)}
-  Calcul d'un learning rate adapté à chaque itération, pour chaque paramètre du modèle.
+\begin{frame}{Root Mean Square Propagation (RMSProp)}
+  \begin{itemize}[<+->]
+    \item Un pas d'apprentissage par paramètre
+    \item Empêche les grandes mises à jour fréquentes~:
+      \begin{itemize}
+        \item Calcule une moyenne glissante exponentielle~:
+
+        \[v_t(w) \leftarrow \gamma v_{t-1}(w) + (1 - \gamma)\nabla_w L\]
+
+        \item Met à jour chaque gradient en le divisant par sa moyenne glissante~:
+
+        \[w \leftarrow w - \frac{\eta}{\sqrt{v_t(w)}}\nabla_wL\]
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
-\begin{frame}{Root Mean Square Propagation (RMSProp)}
-  Utilisation d'inertie dans le gradient appliqué :
-  $$
-    Grad_t = Grad_t + Grad_{t-1}
-  $$
+\begin{frame}{Adaptative Gradient Algorithm (AdaGrad)}
+  Pénalise les mises à jour fréquentes comme RMSProp mais calcule le facteur différement~:
+
+  \[
+    w \leftarrow w - \frac{\eta}{\sqrt{\sum_{\tau=1}^t(\nabla_{w,\tau} L)^2}}\nabla_{w} L
+  \]
+\end{frame}
+
+\begin{frame}{Adam}
+  Similaire à RMSProp dans l'algorithme. Garde deux valeurs au lieu d'une en mémoire pour chaque paramètre~: la moyenne $m$ et la variance $v$ de son gradient.
+
+  \begin{align*}
+    m_w^{(t+1)} &\leftarrow \beta_1m_w^{(t)} + (1 - \beta_1)\nabla_wL^{t} \\
+    v_w^{(t+1)} &\leftarrow \beta_2v_w^{(t)} + (1 - \beta_2)(\nabla_wL^{t})^2 \\
+    \hat{m_w} &= \frac{m_w^{(t+1)}}{1 - \beta_1^{t+1}} \\
+    \hat{v_w} &= \frac{v_w^{(t+1)}}{1 - \beta_2^{t+1}} \\
+    w^{(t+1)} &\leftarrow w^{(t)} - \eta\frac{\hat{m_w}}{\sqrt{\hat{v_w}} + \epsilon} \\
+  \end{align*}
+
+  $\beta_1$ et $\beta_2$ sont des facteurs d'oubli, $\epsilon$ est une petite valeur
 \end{frame}

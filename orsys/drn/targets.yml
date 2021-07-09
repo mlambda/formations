@@ -1,5 +1,5 @@
 - name: j1
-  title: Jour 1 --- Techniques du Machine Learning
+  title: Jour 1
   sections:
     - path: about
       flavor: orsys-3j
@@ -10,11 +10,39 @@
     - path: ml
       flavor: detailed-no-tp
 
+    - path: supervised
+      flavor: drn
+
     - path: nn
-      flavor: deep-detailed-demo
+      flavor: deep-intro
+
+    - path: tf-keras
+      flavor: full-demo
+
+- name: j2
+  title: Jour 2
+  sections:
+
+    - path: nn/cnn
+      flavor: full-demo
+
+    - path: nn/rnn
+      flavor: demo-detailed-keras
+
+    - path: nn/ae
+      flavor: demo
+
+- name: j3
+  title: Jour 3
+  sections:
+
+    - path: nn/gan
+      flavor: full
 
     - path: rl
       flavor: full
 
     - path: tools
       flavor: detailed
+
+    - contact

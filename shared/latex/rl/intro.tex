@@ -1,31 +1,185 @@
-\begin{frame}{Définition}
+\begin{frame}{Paradigme}
   \V{["img/rl", "tw", 0.5] | image}
-  où :
-  \newline
-  $S_t$ est l'état de l'environnement,
-  \newline
-  $A_t$ l'action effectuée par l'agent et
-  \newline
-  $R_t$ la récompense de l'environnement à l'agent (conséquence de $A_t$)
+
+  Où
+
+  \begin{description}
+    \item[$S_t$] État de l'environnement au temps $t$
+    \item[$A_t$] Action choisie par l'agent au temps $t$
+    \item[$R_t$] Récompense reçue par l'agent au temps $t$
+  \end{description}
+\end{frame}
+
+\begin{frame}{But}
+  Maximiser la récompense cumulative attendue~:
+
+  \[
+    G_t = \sum_{k=0}^T R_{t+k+1}
+  \]
+
+  where
+
+  \begin{description}
+    \item[$G_t$] Récompense cumulative attendue
+    \item[$R_t$] Récompense reçue au temps $t$
+  \end{description}
+\end{frame}
+
+\begin{frame}{Types de tâches}
+  \begin{description}[<+->]
+    \item[Épisodique] Début et fin clairs (\textit{i.e.} jusqu'au Game Over d'un jeu)
+    \item[Continue] Début non clair, pas de fin (\textit{i.e.} bourse)
+  \end{description}
+\end{frame}
+
+\begin{frame}{Familles principales}
+  Approches~:
+
+  \begin{itemize}
+    \item Orientées valeur d'états ou états/actions
+    \item Orientées politique
+    \item Orientées modèle
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Approches orientées valeur}
+  Calculer une valeur pour chaque état possible~: la récompense cumulative (potentiellement \red{réduite}) attendue depuis cet état.
+
+  \[
+    V_\pi(s) = \mathbb{E}\left[
+      R_{t + 1}
+      + \red{\gamma} R_{t + 2}
+      + \red{\gamma^2} R_{t + 3}
+      + \dots
+      \mid S_t = s
+    \right]
+  \]
+
+  \pause
+
+  Pour calculer $a$ depuis $V_\pi$~: choisir l'action $a$ qui mène à l'état avec la plus haute valeur ($V_\pi(s)$).
+
+  \pause
+
+  Bonne approche quand le nombre d'état est raisonnable.
+
+  \pause
+
+  Variante~: calculer une valeur pour une combinaison état/action.
+\end{frame}
+
+\begin{frame}{Exemple --- Problème}
+  Aller du départ à l'arrivée. Chaque mouvement coûte $1$ (récompense de $-1$).
+
+  \begin{tabular}{c|c|c|c|c|c|c}
+    \cline{2-6}
+     & & \cellcolor{black} & & & & \\
+    \cline{2-6}
+     & & \cellcolor{black} & & \cellcolor{black} & \cellcolor{black} & \\
+    \cline{2-6}
+    Entrée $\rightarrow$ & \phantom{-5} & \phantom{-5} & \phantom{-5} & \phantom{-5} & \phantom{-5} & $\leftarrow$ Sortie \\
+    \cline{2-6}
+     & & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
+    \cline{2-6}
+     & & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
+    \cline{2-6}
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Exemple --- Solution orientée valeur}
+  Calculer $V(s)$ pour tous les états:
+
+  \begin{tabular}{c|c|c|c|c|c|c}
+    \cline{2-6}
+      & -7 & \cellcolor{black} & -5 & -6 & -7 & \\
+      \cline{2-6}
+      & -6 & \cellcolor{black} & -4 & \cellcolor{black} & \cellcolor{black} & \\
+      \cline{2-6}
+      Entrée $\rightarrow$ & -5 & -4 & -3 & -2 & -1 & $\leftarrow$ Sortie \\
+      \cline{2-6}
+      & -6 & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
+      \cline{2-6}
+      & -7 & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
+      \cline{2-6}
+  \end{tabular}
+
+  \pause
+
+  Politique correspondante~: choisir l'action qui mène à l'état qui a la plus haute valeur~:
+
+  \begin{tabular}{c|c|c|c|c|c|c}
+    \cline{2-6}
+      & $\downarrow$ & \cellcolor{black} & $\downarrow$ & $\leftarrow$ & $\leftarrow$ & \\
+      \cline{2-6}
+      & $\downarrow$ & \cellcolor{black} & $\downarrow$ & \cellcolor{black} & \cellcolor{black} & \\
+      \cline{2-6}
+      Entrée $\rightarrow$ & $\rightarrow$ & $\rightarrow$ & $\rightarrow$ & $\rightarrow$ & $\rightarrow$ & $\leftarrow$ Sortie \\
+      \cline{2-6}
+      & $\uparrow$ & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
+      \cline{2-6}
+      & $\uparrow$ & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
+      \cline{2-6}
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Approches orientées politique}
+  Définir une politique (Distribution de probabilités sur les actions étant donné un état).
+
+  \[
+    \pi(a \mid s) = \mathbb{P}[A_t = a \mid S_t = s]
+  \]
+
+  Choisir une politique avec la plus haute récompense cumulative attendue.
+
+  Bon choix quand le nombre d'états est grand.
+\end{frame}
+
+\begin{frame}{Exemple --- Solution orientée politique}
+  Calculer \textbf{directement} une politique qui choisit les actions qui mènent à la plus haute récompense cumulative attendue~:
+
+  \begin{tabular}{c|c|c|c|c|c|c}
+    \cline{2-6}
+      & $\downarrow$ & \cellcolor{black} & $\downarrow$ & $\leftarrow$ & $\leftarrow$ & \\
+      \cline{2-6}
+      & $\downarrow$ & \cellcolor{black} & $\downarrow$ & \cellcolor{black} & \cellcolor{black} & \\
+      \cline{2-6}
+      Entrée $\rightarrow$ & $\rightarrow$ & $\rightarrow$ & $\rightarrow$ & $\rightarrow$ & $\rightarrow$ & $\leftarrow$ Sortie \\
+      \cline{2-6}
+      & $\uparrow$ & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
+      \cline{2-6}
+      & $\uparrow$ & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \\
+      \cline{2-6}
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Hybrides valeur/politique}
+  Certaines approches combinent les deux mécanismes (\textit{i.e.} méthodes acteur-critique ou Alpha Zero).
+\end{frame}
+
+\begin{frame}{Approches orientées modèles}
+  Autoriser l'agent à construire une représentation de son environnement.
+
+  Pour comparaison, une approche sans modèle n'apprend que les dynamiques état/action.
+\end{frame}
+
+\begin{frame}{Approches sur et hors politique}
+  Certaines approches n'utilisent pas la même politique pour choisir les actions (simulation) et apprendre (fonction cible). Elles sont dites \frquote{hors politique}.
 \end{frame}
 
 \begin{frame}{Contraintes techniques \& théoriques}
   \begin{itemize}[<+->]
-    \item L'environnement n'est pas forcément parfaitement modélisable
-    \item La récompense n'est pas forcément calculable immédiatement
+    \item L'environnement ne peut souvent pas être simulé parfaitement
+    \item La récompense peut être lointaine
+    \item L'espace à explorer peut être très grand
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Contraintes techniques \& théoriques --- Bourse}
-    \red{Environnement modélisable ? Récompense calculable ?}
-  \V{["img/bourse-ny", "th", 0.6] | image}
+  \V{["img/stock-market", "th", 0.7] | image}
 \end{frame}
 
 \begin{frame}{Contraintes techniques \& théoriques --- Échecs}
-  \begin{center}
-    \red{Environnement modélisable ? Récompense calculable ?}
-  \end{center}
-  \V{["img/echec", "th", 0.5] | image}
+  \V{["img/chess", "th", 0.5] | image}
   \pause
   \begin{center}
     $\approx 10^{120}$ parties possibles $\ggg 6 x 10^{85}$
@@ -35,21 +189,8 @@
 \end{frame}
 
 \begin{frame}{Contraintes techniques \& théoriques --- Go}
-  \V{["img/go", "th", 0.6] | image}
+  \V{["img/goban", "th", 0.5] | image}
   \begin{center}
     \huge{$\approx 10^{600}$}
   \end{center}
 \end{frame}
-
-\begin{frame}{Plannification}
-  \begin{itemize}
-  \item L'environnement n'est pas forcément parfaitement modélisable
-  \item La récompense n'est pas forcément calculable immédiatement
-  \item \red{\textbf{Plannification}}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Plannification --- Voyageur de commerce}
-  \V{["img/voyageur-commerce", "th", 0.6] | image}
-\end{frame}
-

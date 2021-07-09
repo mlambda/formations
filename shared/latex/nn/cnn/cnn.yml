@@ -23,4 +23,14 @@ flavors:
     - model
     - /questions
     - tp
+  full-demo:
+    - data
+    - model
+    - /questions
+    - demo
+    - modern-architectures
+    - /questions
+    - keras
+    - /questions
+    - tp-demo
 title: Réseaux de neurones à convolutions

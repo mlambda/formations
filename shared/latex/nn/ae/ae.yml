@@ -6,5 +6,9 @@ flavors:
     - autoencoder
     - /questions
     - tp
+  demo:
+    - autoencoder
+    - /questions
+    - tp-demo
 title: Auto-encodeurs
 version: 3
