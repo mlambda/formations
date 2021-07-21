@@ -37,27 +37,29 @@
   \begin{minipage}[l]{0.49\linewidth}
     \begin{align*}
       E & = \frac{1}{2n} \sum_{i=1}^n( \hat{y_i} - y_i )^2 \\
-      E & = \frac{1}{2n}\sum_{i=1}^n( \hat{y_i} - (ax_i + b) )^2 \\
+      E & = \frac{1}{2n}\sum_{i=1}^n( (ax_i + b) - y_i )^2 \\
       & ... \\
-      \frac{\partial E}{\partial a} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - \hat{y_i})x_i \\
-      \frac{\partial E}{\partial b} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - \hat{y_i}) \\
+      \frac{\partial E}{\partial a} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - y_i)x_i \\
+      \frac{\partial E}{\partial b} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - y_i) \\
     \end{align*}
   \end{minipage}\hfill
   \begin{minipage}[c]{0.49\linewidth}
     \begin{center}
-      $\boxed{y = ax+b}$
+      $\boxed{\hat{y} = ax+b}$
     \end{center}
 
     \begin{center}
       $\boxed{U^{2\;\prime}=2U' \times U}$
     \end{center}
-    \vfill
+
     \begin{center}
       \textbf{Mise à jour}
 
-      $a \leftarrow a - \gamma\frac{\partial{E}}{\partial{a}}$ \\
-      $b \leftarrow b - \gamma\frac{\partial{E}}{\partial{b}}$ \\
-      $\;$ \\
+      \begin{align*}
+        a & \leftarrow a - \gamma\frac{\partial{E}}{\partial{a}} \\
+        b & \leftarrow b - \gamma\frac{\partial{E}}{\partial{b}} \\
+      \end{align*}
+
       où $0 < \gamma < 1$ (pas d'apprentissage)
     \end{center}
   \end{minipage}\hfill
