@@ -1,41 +1,37 @@
-\begin{frame}
-  \frametitle{Détection d'Anomalies}
-  Détection :
+\begin{frame}{Buts}
+  Détection~:
   \begin{itemize}
-  \item de Fraude
-  \item d'Intrusion/Fuite (physique ou électronique)
-  \item Santé (biologique, geologique, machine, ...)
+  \item de fraude
+  \item d'intrusion/de Fuite (physique ou électronique)
+  \item en santé (biologique, geologique, machine, ...)
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Définition}
+\begin{frame}{Définition}
   \begin{itemize}
   \item une anomalie diffère de la norme par ses features
   \item les anomalies sont rares comparées aux instances normales
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Modes de détection d'anomalie}
+\begin{frame}{Paradigmes}
   \V{["img/anomaly-modes", "tw", 0.8] | image}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Détection d'Anomalies : Supervisé}
-  Problème de classification normal. \\
+\begin{frame}{Supervisé}
+  Problème de classification normal, avec fort déséquilibre de classes.
+  Utiliser par exemple une librairie de ré-échantillonnage comme \bluelink{https://imbalanced-learn.org/}{imbalanced-learn}.
+
   Réseaux de neurones et SVM très performants.
 \end{frame}
 
-\begin{frame}
-  \frametitle{Détection d'Anomalies : Semi-Supervisé}
+\begin{frame}{Semi-Supervisé}
   Détection de nouveauté. \\
   Pas traité ici. \\
   One-class SVM très utilisé.
 \end{frame}
 
-\begin{frame}
-  \frametitle{Détection d'Anomalies : Non-Supervisé}
+\begin{frame}{Non-Supervisé}
   De nombreuses méthodes : 
   \begin{itemize}
   \item Local Outlier Factor (LOF)
@@ -46,8 +42,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Détection d'Anomalies}
+\begin{frame}{Détection d'Anomalies}
   \V{["img/voronoi-airports", "tw", 1.0] | image}
 \end{frame}
 

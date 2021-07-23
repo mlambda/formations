@@ -11,6 +11,11 @@ flavors:
     - $dimensionality-reduction: full
     - $clustering: full
     - $anomaly-detection: light
+  full-trees:
+    - introduction
+    - $dimensionality-reduction: full
+    - $clustering: full
+    - $anomaly-detection: light-trees
   dimreduce-anodetect:
     - $dimensionality-reduction: light-tp
     - $anomaly-detection: light

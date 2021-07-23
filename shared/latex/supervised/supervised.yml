@@ -45,6 +45,7 @@ flavors:
     - svm
     - demo-svm
     - trees
+    - trees-details
     - random-forest
     - /questions
     - demo-random-forest
@@ -84,6 +85,7 @@ flavors:
     - svm
     - demo-svm
     - trees
+    - trees-details
     - random-forest
     - /questions
     - demo-random-forest
@@ -112,6 +114,7 @@ flavors:
     - /nn/intro
     - /questions
     - trees
+    - trees-details
     - random-forest
     - /questions
     - demo-random-forest

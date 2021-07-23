@@ -1,29 +1,27 @@
-\begin{frame}
-  \frametitle{Introduction}
-  Équivalent de la régression linéaire mais quand la sortie est binaire. \\
-  L'approche est bayésienne, basée sur une étude statistique. \\
+\begin{frame}{Introduction}
+  Les régressions linéaire et logistique partagent le même cœur~: une fonction affine des données.
+  
+  La régression logistique ajoute à ce cœur un mécanisme pour prédire des probabilités.
 \end{frame}
 
-\begin{frame}
-  \frametitle{Le cas à 2 classes}
-  On s'intéresse à faire une régression de l'\textit{"évidence"} de la variable aléatoire cible : 
+\begin{frame}{Le cas à 2 classes}
   \begin{center}
-    $\ln {\frac {P(1\vert X)}{1-P(1\vert X)}}=b_{0}+b_{1}x_{1}+...+b_{d}x_{d}$
+    \V{["tikz/activations/sigmoid", "tw", 1] | image}
   \end{center}
-  où 
-  \begin{itemize}
-  \item $X = [x_1, ... , x_d]$ un exemple de la base
-  \item $B = [b_1, ... , b_d]$ l'ensemble des paramètres de notre modèle
-  \item $P(1\vert X)$ est la probabilité que X soit de classe 1
-  \end{itemize}
-  Les coéfficients B sont alors estimés par descente de gradient
+
+  Ajout d'une sigmoïde au mécanisme de régression linéaire pour prédire des probabilités d'appartenance à une classe~: 
+  \begin{center}
+    $P(Y = 1 \mid X) = \sigma(\theta_0 + \theta_1 x_1 + \dots + \theta_d x_d)$
+  \end{center}
+
+  On décide ensuite d'un seuil pour déterminer la classe prédite (par exemple $0,5$).
 \end{frame}
 
-\begin{frame}
-  \frametitle{Multinomial logistic Regression}
-  Problème à K classes :
-  \begin{itemize}
-  \item (K-1) prédicteurs binaire en utilisant une classe 'pivot'
-  \item Maximum de vraisemblance pour la prédiction finale
-  \end{itemize}
+\begin{frame}{Régression logistique à plusieurs classes}
+  Avec $k$ classes~:
+
+  \begin{description}
+  \item[Un contre tous] $k$ régressions logistiques~: chaque classe contre toutes les autres
+  \item[Un contre un] $\frac{k(k - 1)}{2}$ régressions logistiques~: chaque classe contre chaque autre classe
+  \end{description}
 \end{frame}

@@ -3,10 +3,19 @@ default_titles:
   intro: Introduction
   isolation-forest: Forêt d'isolement
   lof: Local Outlier Factor
+  /supervised/trees: Introduction aux arbres de décision
 flavors:
   light:
     - intro
     - lof
+    - isolation-forest
+    - demo
+    - /questions
+  light-trees:
+    - intro
+    - lof
+    - /supervised/trees
+    - /supervised/random-forest
     - isolation-forest
     - demo
     - /questions
