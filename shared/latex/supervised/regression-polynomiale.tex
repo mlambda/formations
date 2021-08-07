@@ -13,7 +13,7 @@
   \begin{columns}
     \begin{column}{0.25\tw}
       \[
-        \hat{y}_i = \sum_{k = 0}^n a_kx_i^k
+        \hat{y}_i = \sum_{k = 0}^n \theta_k x_i^k
       \]
     \end{column}
     \begin{column}{0.75\tw}
@@ -24,14 +24,14 @@
 
 \begin{frame}{Gradient et mise à jour}
   \begin{align*}
-    \hat{y}_i & = \sum_{k = 0}^n{a_kx_i^k} \\
-    E & = \frac{1}{2n}\sum_{i=1}^n( \hat{y_i} - y_i )^2 \\
-    \frac{\partial{E}}{\partial{a_k}} & = \frac{1}{n}\sum_{i=1}^n(\hat{y_i} - y_i)x_i^k
+    \hat{y}_i & = \sum_{k = 0}^n \theta_k x_i^k \\
+    E & = \frac{1}{2n} \sum_{i=1}^n (\hat{y_i} - y_i)^2 \\
+    \frac{\partial{E}}{\partial{\theta_k}} & = \frac{1}{n} \sum_{i=1}^n (\hat{y_i} - y_i) x_i^k
   \end{align*}
 
   Mise à jour, avec $1 > \gamma > 0$ (pas d'apprentissage)~:
 
   \[
-    a_k \leftarrow a_k - \gamma\frac{\partial{E}}{\partial{a_k}}
+    \theta_k \leftarrow \theta_k - \gamma\frac{\partial{E}}{\partial{\theta_k}}
   \]
 \end{frame}

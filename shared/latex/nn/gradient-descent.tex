@@ -4,16 +4,16 @@
     \begin{column}{0.5\tw}
       Calcul du gradient de l'erreur par rapport aux paramètres:
       \[
-        \frac{\partial{E}}{\partial{w_i}}
+        \frac{\partial{E}}{\partial{\theta_i}}
       \]
       Mise à jour :
       \[
-        w_i \leftarrow w_i - \gamma\frac{\partial{E}}{\partial{w_i}}
+        \theta_i \leftarrow \theta_i - \gamma\frac{\partial{E}}{\partial{\theta_i}}
       \]
       où $0 < \gamma < 1$ (pas d'apprentissage)
     \end{column}
     \begin{column}{0.5\tw}
-      \V{["img/gradient-nzmog", "tw", 1] | image}
+      \V{["img/linear-regression-error-surface", "tw", 1] | image}
     \end{column}
   \end{columns}
 \end{frame}
@@ -37,15 +37,15 @@
   \begin{minipage}[l]{0.49\linewidth}
     \begin{align*}
       E & = \frac{1}{2n} \sum_{i=1}^n( \hat{y_i} - y_i )^2 \\
-      E & = \frac{1}{2n}\sum_{i=1}^n( (ax_i + b) - y_i )^2 \\
+      E & = \frac{1}{2n}\sum_{i=1}^n( (\theta_0 + \theta_1 x_i) - y_i )^2 \\
       & ... \\
-      \frac{\partial E}{\partial a} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - y_i)x_i \\
-      \frac{\partial E}{\partial b} & = \frac{1}{n}\sum^n_{i=1}(ax_i + b - y_i) \\
+      \frac{\partial E}{\partial \theta_0} & = \frac{1}{n}\sum^n_{i=1}(\theta_0 + \theta_1 x_i - y_i) \\
+      \frac{\partial E}{\partial \theta_1} & = \frac{1}{n}\sum^n_{i=1}(\theta_0 + \theta_1 x_i - y_i) x_i \\
     \end{align*}
   \end{minipage}\hfill
   \begin{minipage}[c]{0.49\linewidth}
     \begin{center}
-      $\boxed{\hat{y} = ax+b}$
+      $\boxed{\hat{y_i} = \theta_0 + \theta_1 x_i}$
     \end{center}
 
     \begin{center}
@@ -56,8 +56,8 @@
       \textbf{Mise à jour}
 
       \begin{align*}
-        a & \leftarrow a - \gamma\frac{\partial{E}}{\partial{a}} \\
-        b & \leftarrow b - \gamma\frac{\partial{E}}{\partial{b}} \\
+        \theta_0 & \leftarrow \theta_0 - \gamma\frac{\partial{E}}{\partial{\theta_0}} \\
+        \theta_1 & \leftarrow \theta_1 - \gamma\frac{\partial{E}}{\partial{\theta_1}} \\
       \end{align*}
 
       où $0 < \gamma < 1$ (pas d'apprentissage)
@@ -68,88 +68,88 @@
 \begin{frame}{Exemple}
   Initialisation au hasard ($\gamma = 0.01$)
   \begin{itemize}
-    \item a = 0.58 ($\hat{a} = 3.0$)
-    \item b = 0.25 ($\hat{b} = 0.5$)
+    \item $\theta_0 = 0.25$ (vrai $\theta_0 = 0.5$)
+    \item $\theta_1 = 0.58$ (vrai $\theta_1 = 3.0$)
   \end{itemize}
   \V{["img/regression-1", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Exemple}
   \begin{itemize}
-    \item a = 0.58 ($\hat{a} = 3.0$)
-    \item b = 0.25 ($\hat{b} = 0.5$)
+    \item $\theta_0 = 0.25$ (vrai $\theta_0 = 0.5$)
+    \item $\theta_1 = 0.58$ (vrai $\theta_1 = 3.0$)
   \end{itemize}
   \V{["img/regression-error", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Exemple}
   \begin{itemize}
-    \item a = 1.50 ($\hat{a} = 3.0$)
-    \item b = 0.35 ($\hat{b} = 0.5$)
+    \item $\theta_0 = 0.35$ (vrai $\theta_0 = 0.5$)
+    \item $\theta_1 = 1.50$ (vrai $\theta_1 = 3.0$)
   \end{itemize}
   \V{["img/regression-2", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Exemple}
   \begin{itemize}
-    \item a = 2.10 ($\hat{a} = 3.0$)
-    \item b = 0.40 ($\hat{b} = 0.5$)
+    \item $\theta_0 = 0.40$ (vrai $\theta_0 = 0.5$)
+    \item $\theta_1 = 2.10$ (vrai $\theta_1 = 3.0$)
   \end{itemize}
   \V{["img/regression-3", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Exemple}
   \begin{itemize}
-    \item a = 2.48 ($\hat{a} = 3.0$)
-    \item b = 0.43 ($\hat{b} = 0.5$)
+    \item $\theta_0 = 0.43$ (vrai $\theta_0 = 0.5$)
+    \item $\theta_1 = 2.48$ (vrai $\theta_1 = 3.0$)
   \end{itemize}
   \V{["img/regression-4", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Exemple}
   \begin{itemize}
-    \item a = 2.73 ($\hat{a} = 3.0$)
-    \item b = 0.46 ($\hat{b} = 0.5$)
+    \item $\theta_0 = 0.46$ (vrai $\theta_0 = 0.5$)
+    \item $\theta_1 = 2.73$ (vrai $\theta_1 = 3.0$)
   \end{itemize}
   \V{["img/regression-5", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Exemple}
   \begin{itemize}
-    \item a = 2.89 ($\hat{a} = 3.0$)
-    \item b = 0.47 ($\hat{b} = 0.5$)
+    \item $\theta_0 = 0.47$ (vrai $\theta_0 = 0.5$)
+    \item $\theta_1 = 2.89$ (vrai $\theta_1 = 3.0$)
   \end{itemize}
   \V{["img/regression-6", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Exemple}
   \begin{itemize}
-    \item a = 2.99 ($\hat{a} = 3.0$)
-    \item b = 0.48 ($\hat{b} = 0.5$)
+    \item $\theta_0 = 0.48$ (vrai $\theta_0 = 0.5$)
+    \item $\theta_1 = 2.99$ (vrai $\theta_1 = 3.0$)
   \end{itemize}
   \V{["img/regression-7", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Exemple}
   \begin{itemize}
-    \item a = 3.06 ($\hat{a} = 3.0$)
-    \item b = 0.49 ($\hat{b} = 0.5$)
+    \item $\theta_0 = 0.49$ (vrai $\theta_0 = 0.5$)
+    \item $\theta_1 = 3.06$ (vrai $\theta_1 = 3.0$)
   \end{itemize}
   \V{["img/regression-8", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Exemple}
   \begin{itemize}
-    \item a = 3.10 ($\hat{a} = 3.0$)
-    \item b = 0.49 ($\hat{b} = 0.5$)
+    \item $\theta_0 = 0.49$ (vrai $\theta_0 = 0.5$)
+    \item $\theta_1 = 3.10$ (vrai $\theta_1 = 3.0$)
   \end{itemize}
   \V{["img/regression-9", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Exemple}
   \begin{itemize}
-    \item a = 3.13 ($\hat{a} = 3.0$)
-    \item b = 0.50 ($\hat{b} = 0.5$)
+    \item $\theta_0 = 0.50$ (vrai $\theta_0 = 0.5$)
+    \item $\theta_1 = 3.13$ (vrai $\theta_1 = 3.0$)
   \end{itemize}
   \V{["img/regression-10", "th", 0.6] | image}
 \end{frame}
