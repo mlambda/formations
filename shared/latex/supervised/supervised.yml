@@ -124,5 +124,10 @@ flavors:
     - svm
     - demo-svm
     - tp-svm-text
+  text-svm:
+    - svm
+    - demo-svm
+    - tp-svm-text
+
 title: Apprentissage supervisé
 version: 3

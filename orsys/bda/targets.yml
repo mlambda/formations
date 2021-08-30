@@ -28,4 +28,17 @@
     - path: nlp
       flavor: intro-tp
 
+    - title: Apprentissage supervisé
+      path: supervised
+      flavor: text-svm
+
+    - path: nn
+      flavor: deep-intro
+
+    - path: nn/cnn
+      flavor: full
+
+    - path: nn/rnn
+      flavor: full
+
     - contact
