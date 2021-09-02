@@ -8,40 +8,6 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Raisonnement bayésien}
-  \begin{itemize}
-    \item Formulation d'une hypothèse sans regarder les annotations (probabilité antérieure)
-    \item Prise en compte des données pour mettre à jour l'hypothèse (probabilité postérieure)
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Notation}
-  Pour la suite, nous utiliserons la notation suivante~:
-
-  \begin{description}[<+(1)->]
-    \item[$C$] Variable aléatoire représentant la classe d'un exemple
-    \item[$C_k$] Une valeur possible de $C$
-    \item[$F$] Variable aléatoire représentant les caractéristiques des exemples
-    \item[$F_i$] Valeur des caractéristiques de l'exemple $i$
-  \end{description}
-\end{frame}
-
-\begin{frame}{Méthode de calcul}
-  Utilisation du théorème de Bayes~:
-  \[
-    P(C = C_k \mid F_i) = \frac{P(C = C_k) \times P(F_i \mid C = C_k)}{P(F_i)}
-  \]
-
-  Où~:
-
-  \begin{description}
-    \item[$P(C = C_k \mid F_i)$] Probabilité postérieure
-    \item[$P(C = C_k)$] Probabilité antérieure
-    \item[$P(F_i \mid C = C_k)$] Vraisemblance
-    \item[$P(F_i)$] Évidence
-  \end{description}
-\end{frame}
-
 \begin{frame}{Exemple --- But}
   \def\banane{\text{banane}}%
   \def\orange{\text{orange}}%
