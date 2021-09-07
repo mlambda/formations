@@ -65,6 +65,43 @@
 
 \begin{frame}
   \frametitle{Word Embeddings} 
+  \chgrand[first=0,last=99]
+  \begin{minipage}[l]{0.59\linewidth}
+    \begin{tabular}{|l||c|c|c|c|}
+      \hline
+      & 1 & 2 & ... & K \\
+      \hline
+      je & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+      \hline
+      tu & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+      \hline
+      mange & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+      \hline
+      cuisine & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+      \hline
+      un & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+      \hline
+      ce & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+      \hline
+      le & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+      \hline
+      poulet & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+      \hline
+      poisson & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+      \hline
+      frit & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+      \hline
+      mariné & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+      \hline
+    \end{tabular}
+  \end{minipage}\hfill
+  \begin{minipage}[r]{0.40\linewidth}
+    Chaque mot est initialement projeté au hasard dans l'espace en dimension~K.
+  \end{minipage}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Word Embeddings} 
   \V{["img/word2vec", "tw", 1] | image}
 \end{frame}
 
