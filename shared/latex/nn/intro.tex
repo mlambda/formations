@@ -74,39 +74,32 @@
 \end{frame}
 
 \begin{frame}{Modélisation matricielle --- Poids}
-  Représentables sous forme de matrice de poids et de vecteur de biais~:
+  Représentables sous forme de matrice de poids~:
 
-  \begin{align*}
-    \vect{W} & = \begin{bmatrix}
-      W_{1,1} & W_{1,2} & \dots  & W_{1,n} \\
-      W_{2,1} & W_{2,2} & \dots  & W_{2,n} \\
+  \[
+    \vect{\theta} = \begin{bmatrix}
+      \theta_{0,1} & \theta_{0,2} & \dots  & \theta_{0,n} \\
+      \theta_{1,1} & \theta_{1,2} & \dots  & \theta_{1,n} \\
       \vdots & \vdots & \ddots & \vdots \\
-      W_{d,1} & W_{d,2} & \dots  & W_{d,n}
-    \end{bmatrix} \\
-    \vect{b} & = \begin{bmatrix}
-      b_1 & b_2 & \dots & b_n
+      \theta_{d,1} & \theta_{d,2} & \dots  & \theta_{d,n}
     \end{bmatrix}
-  \end{align*}
+  \]
 \end{frame}
 
 \begin{frame}{Modélisation matricielle complète}
   \footnotesize
   \begin{align*}
-    O & = \sigma (\vect{X}.\vect{W} + \vect{b}) \\
+    \vect{O} & = \sigma (\begin{bmatrix}\begin{bmatrix}1 \\ \vdots \\ 1\end{bmatrix}\vect{X}\end{bmatrix}.\vect{\theta}) \\
     & = \sigma \left(
     \begin{bmatrix}
-      X_{1,1} & X_{1,2} & \dots & X_{1,d} \\
-      X_{2,1} & X_{2,2} & \dots & X_{2,d}
+      1 & X_{1,1} & X_{1,2} & \dots & X_{1,d} \\
+      1 & X_{2,1} & X_{2,2} & \dots & X_{2,d}
     \end{bmatrix}
     \begin{bmatrix}
-      W_{1,1} & W_{1,2} & \dots  & W_{1,n} \\
-      W_{2,1} & W_{2,2} & \dots  & W_{2,n} \\
+      \theta_{0,1} & \theta_{0,2} & \dots  & \theta_{0,n} \\
+      \theta_{1,1} & \theta_{1,2} & \dots  & \theta_{1,n} \\
       \vdots & \vdots & \ddots & \vdots \\
-      W_{d,1} & W_{d,2} & \dots  & W_{d,n}
-    \end{bmatrix}
-    +
-    \begin{bmatrix}
-      b_1 & b_2 & \dots & b_n
+      \theta_{d,1} & \theta_{d,2} & \dots  & \theta_{d,n}
     \end{bmatrix}
     \right) \\
     & = \begin{bmatrix}
@@ -114,12 +107,11 @@
       O_{2,1} & O_{2,2} & \dots & O_{2,n}
     \end{bmatrix}
   \end{align*}
-  où :
   \begin{description}[<+->]
-    \item[X] Données en entrée de dimension $d$
-    \item[W \& b] Paramètres à trouver des $n$ neurones de notre modèle
-    \item[$\bm{\sigma}$] Fonction d'activation
-    \item[O] Sortie du réseau
+    \item[$\vect{X}$] Données en entrée de dimension $d$
+    \item[$\vect{\theta}$] Paramètres à trouver des $n$ neurones de notre modèle
+    \item[$\vect{\sigma}$] Fonction d'activation
+    \item[$\vect{O}$] Sortie du réseau
   \end{description}
 \end{frame}
 
