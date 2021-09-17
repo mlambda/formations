@@ -1,0 +1,48 @@
+- name: j1
+  title: Jour 1
+  sections:
+    - path: about
+      flavor: orsys-2j
+
+    - path: ai
+      flavor: full
+
+    - path: engineering
+      flavor: data-sources
+
+    - path: ml
+      flavor: detailed-no-tp
+
+    - path: supervised
+      flavor: drn
+
+    - path: unsupervised
+      flavor: light
+
+    - path: nn
+      flavor: deep-intro
+
+    - path: tf-keras
+      flavor: full-demo
+
+- name: j2
+  title: Jour 2
+  sections:
+    - path: nlp
+      flavor: intro
+      
+    - path: rl
+      flavor: full
+
+    - path: big-questions
+      flavor: full
+
+    - path: engineering
+      flavor: mlcraftmyass
+
+    - path: actors
+      flavor: full
+
+    - path: sectors
+      flavor: full
+
