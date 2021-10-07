@@ -44,11 +44,11 @@
       \begin{itemize}
         \item Calcule une moyenne glissante exponentielle~:
 
-        \[v_t(w) \leftarrow \gamma v_{t-1}(w) + (1 - \gamma)\nabla_w L\]
+        \[v_t(\theta) \leftarrow \gamma v_{t-1}(\theta) + (1 - \gamma)\nabla_\theta L\]
 
         \item Met à jour chaque gradient en le divisant par sa moyenne glissante~:
 
-        \[w \leftarrow w - \frac{\eta}{\sqrt{v_t(w)}}\nabla_wL\]
+        \[\theta \leftarrow \theta - \frac{\eta}{\sqrt{v_t(\theta)}}\nabla_\theta L\]
       \end{itemize}
   \end{itemize}
 \end{frame}
@@ -57,7 +57,7 @@
   Pénalise les mises à jour fréquentes comme RMSProp mais calcule le facteur différement~:
 
   \[
-    w \leftarrow w - \frac{\eta}{\sqrt{\sum_{\tau=1}^t(\nabla_{w,\tau} L)^2}}\nabla_{w} L
+    \theta \leftarrow \theta - \frac{\eta}{\sqrt{\sum_{\tau=1}^t(\nabla_{\theta,\tau} L)^2}}\nabla_{\theta} L
   \]
 \end{frame}
 
@@ -65,11 +65,11 @@
   Similaire à RMSProp dans l'algorithme. Garde deux valeurs au lieu d'une en mémoire pour chaque paramètre~: la moyenne $m$ et la variance $v$ de son gradient.
 
   \begin{align*}
-    m_w^{(t+1)} &\leftarrow \beta_1m_w^{(t)} + (1 - \beta_1)\nabla_wL^{t} \\
-    v_w^{(t+1)} &\leftarrow \beta_2v_w^{(t)} + (1 - \beta_2)(\nabla_wL^{t})^2 \\
-    \hat{m_w} &= \frac{m_w^{(t+1)}}{1 - \beta_1^{t+1}} \\
-    \hat{v_w} &= \frac{v_w^{(t+1)}}{1 - \beta_2^{t+1}} \\
-    w^{(t+1)} &\leftarrow w^{(t)} - \eta\frac{\hat{m_w}}{\sqrt{\hat{v_w}} + \epsilon} \\
+    m_\theta^{(t+1)} &\leftarrow \beta_1m_\theta^{(t)} + (1 - \beta_1)\nabla_\theta L^{t} \\
+    v_\theta^{(t+1)} &\leftarrow \beta_2v_\theta^{(t)} + (1 - \beta_2)(\nabla_\theta L^{t})^2 \\
+    \hat{m_\theta} &= \frac{m_\theta^{(t+1)}}{1 - \beta_1^{t+1}} \\
+    \hat{v_\theta} &= \frac{v_\theta^{(t+1)}}{1 - \beta_2^{t+1}} \\
+    \theta^{(t+1)} &\leftarrow \theta^{(t)} - \eta\frac{\hat{m_\theta}}{\sqrt{\hat{v_\theta}} + \epsilon} \\
   \end{align*}
 
   $\beta_1$ et $\beta_2$ sont des facteurs d'oubli, $\epsilon$ est une petite valeur
