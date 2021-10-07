@@ -20,7 +20,7 @@
       flavor: light
 
     - path: nn
-      flavor: deep-intro
+      flavor: deep-discover-demo
 
     - path: tf-keras
       flavor: full-demo

@@ -37,6 +37,7 @@ flavors:
     - deep-optimize
     - regularisation
     - playground
+    - tp-nn
     - /questions
   intro-cnn:
     - intro
