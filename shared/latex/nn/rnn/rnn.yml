@@ -11,6 +11,12 @@ flavors:
     - keras
     - /questions
     - tp
+  full-no-tp:
+    - model
+    - lstm
+    - variants
+    - keras
+    - /questions
   demo:
     - model
     - /questions

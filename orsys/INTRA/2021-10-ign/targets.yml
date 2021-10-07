@@ -1,0 +1,48 @@
+- name: j1
+  title: Jour 1 --- TensorFlow pour le Deep Learning
+  sections:
+    - path: about
+      flavor: orsys-3j
+
+    - path: nn
+      flavor: deep-intro
+
+    - path: supervised/classification
+
+    - path: tf-keras
+      flavor: tf
+
+    - path: nn
+      flavor: tp-tf-pur
+
+- name: j2
+  title: Jour 2 --- Traitement d'images et auto-encodeurs
+  sections:
+    - path: tf-keras
+      flavor: keras
+
+    - path: nn/cnn
+      flavor: full
+
+    - path: nn/ae
+      flavor: full
+
+- name: j3
+  title: Jour 3 --- Langage et traitement de séquences
+  sections:
+    - path: sequential-data
+      flavor: full
+
+    - path: nn/rnn
+      flavor: full-no-tp
+
+    - title: null
+      path: tp-time-series
+
+    - title: Travaux pratiques sur les données IGN
+      path: tp-image-segmentation
+
+    - path: tools
+      flavor: detailed
+
+    - contact
