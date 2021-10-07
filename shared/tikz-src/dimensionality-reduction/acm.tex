@@ -1,0 +1,36 @@
+\documentclass[class=beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+\pgfdeclarelayer{bg}    % declare background layer
+\pgfsetlayers{bg,main}
+  \begin{tikzpicture}
+    \node (1k)      at (0.5,0)  {$1$};
+    \node (K)       at (3.5,0)  {$K$};
+    \node (1kpim)   at (3.8,0)    {$1$};
+    \node (Kprim)   at (4.65,0)  {$K'$};
+    \node (1i)      at (0,-0.5) {$1$};
+    \node (I)       at (0,-3.5) {$I$};
+    
+    \node (ensLeft)    at (-1,-2)     {\small\textbf{Individus}};
+    \node (ensTop)     at (2.5,1)  {\small\textbf{Questions}};
+    \node (caraPrinc)  at (2,0.45)    {\tiny\textbf{Principales}};
+    \node (caraSecond) at (4.25,0.45) {\tiny\textbf{Secondaires}};
+
+    \draw (0.25,-0.25) rectangle (3.75,-3.75);
+    \draw (3.75,-3.75) rectangle (4.75,-0.25);
+    
+    \node (x)   at (2,-2) {\tiny oui/non};
+    \draw[dashed] (x.west)  -- (0.25,-2);
+    \draw[dashed] (x.east)  -- (4.75,-2);
+    \draw[dashed] (x.north) -- (2,-0.25);
+    \draw[dashed] (x.south) -- (2,-3.75);
+    
+
+    \begin{pgfonlayer}{bg}    % select the background layer
+      \draw[fill=gray!30,very thick] (3.75,-3.75) rectangle (4.75,-0.25);
+    \end{pgfonlayer}
+
+  \end{tikzpicture}
+\end{document}

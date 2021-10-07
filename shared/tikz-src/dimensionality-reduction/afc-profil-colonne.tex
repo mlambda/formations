@@ -1,0 +1,36 @@
+\documentclass[class=beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+\pgfdeclarelayer{bg}    % declare background layer
+\pgfsetlayers{bg,main}
+  \begin{tikzpicture}
+    \node (1j)      at (0.5,0)  {$1$};
+    \node (j)       at (1.5,0)  {$j$};
+    \node (J)       at (2.5,0)  {$J$};
+    \node (1i)      at (0,-0.5) {$1$};
+    \node (i)       at (0,-2)   {$i$};
+    \node (I)       at (0,-3.5) {$I$};
+    \node (prligne) at (3,-2)   {$p_i$};
+    \node (prcol)   at (1.5,-4) {$1$};
+    
+    \node (ensLeft)  at (-1.5,-2) {\textcolor{blue}{\textbf{Variable A}}};
+    \node (ensTop)  at (1.5,0.65) {\textcolor{red}{\textbf{Variable B}}};
+
+    \draw (0.25,-0.25) rectangle (2.75,-3.75);
+    
+    \node (x)   at (1.5,-2) {$\frac{p_{ij}}{p_{j}}$};
+    \draw[dashed] (x.west)  -- (0.25,-2);
+    \draw[dashed] (x.east)  -- (2.75,-2);
+    \draw[dashed] (x.north) -- (1.5,-0.25);
+    \draw[dashed] (x.south) -- (1.5,-3.75);
+    
+
+    \begin{pgfonlayer}{bg}    % select the background layer
+      \draw[fill=red!30,draw=red,very thick] (1j.north west) rectangle ($(J.south east) -(0,-0.1)$);
+      \draw[fill=blue!30,draw=blue,very thick] (1i.north west) rectangle (I.south east);
+    \end{pgfonlayer}
+
+  \end{tikzpicture}
+\end{document}
