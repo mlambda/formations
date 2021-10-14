@@ -1,15 +1,13 @@
-\begin{frame}
-  \frametitle{Analyse des correspondances}
+\begin{frame}{Analyse des correspondances}
   \begin{itemize}
-    \item Similaires à l'ACP dans la mise en \oe uvre,
-    \item mais se focalisent sur l'analyse de relations entre les caractéristiques des données.
+    \item Similaire à l'ACP dans la mise en \oe uvre,
+    \item Mais se focalise sur l'analyse de relations entre les caractéristiques des données.
   \end{itemize}
 
-  Fréquemment utilisées dans les données de sondages (INSEE, enquêtes d'opinions).
+  Fréquemment utilisée dans les données de sondages (INSEE, enquêtes d'opinions).
 \end{frame}
 
-\begin{frame}
-  \frametitle{Analyse Factorielle des Correspondances (AFC)}
+\begin{frame}{Analyse Factorielle des Correspondances (AFC)}
   \begin{center}
     L'AFC s'applique sur des données croisées.\\Une ligne \textbf{ne représente pas} un individu. 
   \end{center}
@@ -23,8 +21,7 @@
   \end{minipage}
 \end{frame}
 
-\begin{frame}
-  \frametitle{AFC --  Exemple de données}
+\begin{frame}{AFC --- Exemple de données}
   \begin{scriptsize}
     \begin{table}
       \begin{tabular}{llcccccc}
@@ -44,13 +41,12 @@
         $p_{.j}$& & .197 & .500 & .088 & .215 & & 1.000\\
         \bottomrule
       \end{tabular}
-      \caption{Transmission de l'attachement(1995) ; Van  IJzendoorn ;Kroonenberg, P. M., \& Lombardo, R. }
+      \caption{Transmission de l'attachement (1995)~; Van  IJzendoorn~; Kroonenberg \& Lombardo.}
     \end{table}
   \end{scriptsize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{AFC -- Probabilités}
+\begin{frame}{AFC --- Probabilités}
   \begin{minipage}{0.45\linewidth}
     \V{["tikz/dimensionality-reduction/afc-proba", "tw", 1.0] | image}
   \end{minipage}
@@ -64,8 +60,7 @@
   \end{minipage}
 \end{frame}
 
-\begin{frame}
-  \frametitle{AFC -- Profils ligne et colonnes}
+\begin{frame}{AFC --- Profils ligne et colonne}
   \begin{minipage}{0.45\linewidth}
     \V{["tikz/dimensionality-reduction/afc-profil-ligne", "tw", 1.0] | image}
   \end{minipage}
@@ -74,11 +69,10 @@
     \V{["tikz/dimensionality-reduction/afc-profil-colonne", "tw", 1.0] | image}
   \end{minipage}
 
-  À partir de la table de probabilité, on calcule le profil ligne et colonne, c'est à dire les probabilités conditionnelles par ligne et par colonne.
+  À partir de la table de probabilité, on calcule les profils ligne et colonne, c'est à dire les probabilités conditionnelles par ligne et par colonne.
 \end{frame}
 
-\begin{frame}
-  \frametitle{AFC -- Axes d'inertie maximale}
+\begin{frame}{AFC --- Axes d'inertie maximale}
   Sur chacun des deux profils, on applique une réduction de dimension (comme pour la PCA) sur la matrice des distances $\chi^2$ de chacun point dans chaque profil à leur barycentre respectif.
 
   Exemple sur la variable $A$ / Profil ligne :
@@ -87,11 +81,10 @@
   \end{equation*}
   avec $G_i$ le barycentre du profil ligne.
 
-  La somme des distances des points pondéré par leur probabilité (\emph{Inertie}) est égale au $\phi^2$ qui mesure l'écart à l'indépendance entre les variables.
+  La somme des distances des points pondéré par leur probabilité (\emph{inertie}) est égale au $\phi^2$ qui mesure l'écart à l'indépendance entre les variables.
 \end{frame}
 
-\begin{frame}
-  \frametitle{AFC -- Visualisation}
+\begin{frame}{AFC --- Visualisation}
   \begin{minipage}{0.59\linewidth}
     \V{["img/afc-g8-agreements", "tw", 1] | image}
   \end{minipage}
@@ -100,19 +93,17 @@
   \end{minipage}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Analyse des Correspondances Multiples (ACM)}
-  Pour l'ACM, données par individus et colonnes des caractéristiques type questions à choix multiples.
+\begin{frame}{Analyse des Correspondances Multiples (ACM)}
+  Pour l'ACM, contrairement à l'AFC, les lignes sont des individus et les colonnes des caractéristiques type questions à choix multiples.
   \begin{center}
-    \V{["tikz/dimensionality-reduction/acm", "tw", 0.6] | image}
+    \V{["tikz/dimensionality-reduction/acm", "th", 0.5] | image}
   \end{center}
-  Le tableau est ensuite transformé en tableau disjonctif complet (TDC) (aka one hot encoding).
+  Le tableau est ensuite transformé en tableau disjonctif complet (TDC, ou encodage one hot).
 \end{frame}
 
-\begin{frame}
-  \frametitle{ACM -- Calcul des distances}
+\begin{frame}{ACM --- Calcul des distances}
 
-  Comme pour AFC, remplacement des valeurs $x_{ik}$ par une pondération dépendantes de la probabilités des caractéristiques :
+  Comme pour AFC, remplacement des valeurs $x_{ik}$ par une pondération dépendante de la probabilité des caractéristiques~:
   \begin{equation*}
     x'_{ik}=\frac{x_{ik}}{p_k}
   \end{equation*}
@@ -124,15 +115,14 @@
 
   \begin{itemize}
     \item Beaucoup de réponses similaires $\Leftrightarrow$ distance faible
-    \item Un des individu a une réponse inhabituelle $\Leftrightarrow$ distance élevé
+    \item Un des individu a une réponse inhabituelle $\Leftrightarrow$ distance élevée
     \item Deux individus ont une réponse inhabituelle commune $\Leftrightarrow$ distance faible
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{ACM -- Projection}
+\begin{frame}{ACM --- Projection}
   \begin{itemize}
-    \item Projection par réduction de dimension avec une recherche de vecteurs propres. 
+    \item Projection par réduction de dimensionnalité avec une recherche de vecteurs propres. 
     \item Au lieu de projeter tous les individus, projection des barycentres des groupes d'individus par caractéristiques possédées. 
     \item Utilisation des caractéristiques secondaires pour aider l'interprétation.
   \end{itemize}
@@ -141,7 +131,6 @@
 
 \end{frame}
 
-\begin{frame}
-  \frametitle{Analyse Factorielle pour données mixtes (AFDM)}
+\begin{frame}{Analyse Factorielle pour données mixtes (AFDM)}
   Quand on a des variables qualitatives ET quantitatives pour décrire nos échantillons, on discrétise chaque variable quantitative. On peut ainsi procéder à l'Analyse en Composantes Multiples
 \end{frame}
