@@ -39,6 +39,16 @@ flavors:
     - playground
     - tp-nn
     - /questions
+  deep-intro-demo:
+    - intro
+    - playground
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - tp-demo-tf
+    - /questions
   intro-cnn:
     - intro
     - online-demo

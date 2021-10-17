@@ -27,9 +27,9 @@ flavors:
     - data
     - model
     - /questions
-    - demo
     - modern-architectures
     - /questions
+    - demo
     - keras
     - /questions
     - tp-demo
