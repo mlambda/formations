@@ -14,7 +14,7 @@
       flavor: drn
 
     - path: nn
-      flavor: deep-intro-demo
+      flavor: deep-intro-no-tp
 
     - path: tf-keras
       flavor: full-demo

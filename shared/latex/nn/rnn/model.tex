@@ -10,13 +10,25 @@
 
 \begin{frame}{Modèle}
   \V{["tikz/neural-networks/rnn/simple-unfold", "th", 0.25] | image}
-  \begin{tabular}{ ll } 
-    $x_{t}$ : entrée  & $h_{t}=\sigma_{h}(Ux_{t}+Vh_{t-1}+b_{h})$ \\
-    $h_t$ : couche cachée  & $o_{t}=\sigma_{o}(Wh_{t}+b_{o})$ \\
-    $o_{t}$ : sortie \\
-    $U$, $V$, $W$, $b_h$ et $b_o$ : paramètres  \\
-    $\sigma_{h}$ et $\sigma_o$ : activations tanh  \\
-  \end{tabular}
+
+  \begin{columns}
+    \begin{column}{0.5\tw}
+      \begin{description}
+        \item[$x_t$] Entrée
+        \item[$h_t$] Couche cachée
+        \item[$o_t$] Sortie
+        \item[$U, V, W$] Matrices de poids
+        \item[$b_h, b_o$] Vecteurs de biais
+        \item[$\sigma_h, \sigma_o$] Activations tanh
+      \end{description}
+    \end{column}
+    \begin{column}{0.5\tw}
+      \begin{align*}
+      h_t & = \sigma_h(U x_t + V h_{t - 1} + b_h) \\
+      o_t & = \sigma_o(W h_t + b_o) \\
+      \end{align*}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Prédiction d'une sortie}

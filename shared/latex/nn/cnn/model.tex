@@ -28,6 +28,12 @@
   Habituellement la dimension de profondeur est omise quand on décrit une convolution (convolution $2 \times 2$ au lieu de $2 \times 2 \times 2$).
 \end{frame}
 
+\begin{frame}{Remplissage}
+  Le remplissage (\textit{padding} en anglais) contrôle le changement de taille dû à l'opérateur de corrélation croisée en ajoutant des $0$s:
+
+  \V{["img/d2l/conv-pad", "th", 0.4] | image}
+\end{frame}
+
 \begin{frame}{Pas de convolution}
   Les pas de convolution (\textit{strides} en anglais) permettent de réduire les dimensions spatiales dans un CNN~:
 
@@ -42,12 +48,6 @@
   \V{["tikz/neural-networks/cnn/maxpool", "tw", 0.8] | image}
 
   Une aggrégation $n \times m$ est souvent utilisée avec des pas $(n, m)$.
-\end{frame}
-
-\begin{frame}{Remplissage}
-  Le remplissage (\textit{padding} en anglais) contrôle le changement de taille dû à l'opérateur de corrélation croisée en ajoutant des $0$s:
-
-  \V{["img/d2l/conv-pad", "th", 0.4] | image}
 \end{frame}
 
 \begin{frame}{Combinaison des blocs de base en un réseau convolutif}

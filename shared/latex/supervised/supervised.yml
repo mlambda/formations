@@ -98,6 +98,7 @@ flavors:
     - demo-linear-regression
     - naive-bayes
     - /questions
+    - trees
     - random-forest
     - /questions
 
