@@ -5,10 +5,10 @@
 
 \begin{frame}{Par la pénalisation de l'utilisation des paramètres}
   Coût supplémentaire pour l'utilisation des paramètres dans la fonction de perte~:
-
-  \[
-    E = E + \lambda\sum||\vect{\theta}||^2
-  \]
+  \begin{description}[<+->]
+    \item[L1] $E = E + \lambda ||\vect{\theta}||_1$
+    \item[L2] $E = E + \lambda ||\vect{\theta}||_2^2$
+  \end{description}
 
   où $\lambda$ est un hyperparamètre
 \end{frame}
