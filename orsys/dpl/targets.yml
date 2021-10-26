@@ -11,9 +11,6 @@
 
     - path: supervised/classification
 
-    - path: tools
-      flavor: detailed
-
     - title: TensorFlow 2
       path: tf-keras
       flavor: tf
@@ -53,5 +50,8 @@
     - title: Réseaux transformeurs
       path: nn/transformer
       flavor: full
+
+    - path: tools
+      flavor: detailed
 
     - contact

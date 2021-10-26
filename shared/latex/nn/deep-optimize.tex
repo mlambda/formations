@@ -44,7 +44,7 @@
       \begin{itemize}
         \item Calcule une moyenne glissante exponentielle~:
 
-        \[v_t(\theta) \leftarrow \gamma v_{t-1}(\theta) + (1 - \gamma)\nabla_\theta L\]
+        \[v_t(\theta) \leftarrow \gamma v_{t-1}(\theta) + (1 - \gamma)(\nabla_\theta L)^2\]
 
         \item Met à jour chaque gradient en le divisant par sa moyenne glissante~:
 
@@ -65,10 +65,10 @@
   Similaire à RMSProp dans l'algorithme. Garde deux valeurs au lieu d'une en mémoire pour chaque paramètre~: la moyenne $m$ et la variance $v$ de son gradient.
 
   \begin{align*}
-    m_\theta^{(t+1)} &\leftarrow \beta_1m_\theta^{(t)} + (1 - \beta_1)\nabla_\theta L^{t} \\
-    v_\theta^{(t+1)} &\leftarrow \beta_2v_\theta^{(t)} + (1 - \beta_2)(\nabla_\theta L^{t})^2 \\
-    \hat{m_\theta} &= \frac{m_\theta^{(t+1)}}{1 - \beta_1^{t+1}} \\
-    \hat{v_\theta} &= \frac{v_\theta^{(t+1)}}{1 - \beta_2^{t+1}} \\
+    m_\theta^{(t+1)} &\leftarrow \beta_1m_\theta^{(t)} + (1 - \beta_1)\nabla_\theta L^{(t)} \\
+    v_\theta^{(t+1)} &\leftarrow \beta_2v_\theta^{(t)} + (1 - \beta_2)(\nabla_\theta L^{(t)})^2 \\
+    \hat{m_\theta} &= \frac{m_\theta^{(t+1)}}{1 - \beta_1} \\
+    \hat{v_\theta} &= \frac{v_\theta^{(t+1)}}{1 - \beta_2} \\
     \theta^{(t+1)} &\leftarrow \theta^{(t)} - \eta\frac{\hat{m_\theta}}{\sqrt{\hat{v_\theta}} + \epsilon} \\
   \end{align*}
 

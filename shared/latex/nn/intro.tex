@@ -89,7 +89,7 @@
 \begin{frame}{Modélisation matricielle complète}
   \footnotesize
   \begin{align*}
-    \vect{O} & = \sigma (\begin{bmatrix}\begin{bmatrix}1 \\ \vdots \\ 1\end{bmatrix}\vect{X}\end{bmatrix}.\vect{\theta}) \\
+    \vect{O} & = \sigma (\begin{bmatrix}\begin{bmatrix}1 \\ \vdots \\ 1\end{bmatrix}\vect{X}\end{bmatrix}\vect{\theta}) \\
     & = \sigma \left(
     \begin{bmatrix}
       1 & X_{1,1} & X_{1,2} & \dots & X_{1,d} \\
@@ -181,13 +181,13 @@
 
 \begin{frame}{Fonctions d'activation --- Softmax}
   \begin{description}[<+->]
-    \item[Définition] \[\softmax(x_i) = \frac{\exp(x_i)}{\sum_{k = 1}^n{\exp(x_k)}}\]
-    \item[Propriété] \[\sum_{i = 1}^n{\softmax(x_i)} = 1\]
+    \item[Définition] \[\softmax(x)_i = \frac{\exp(x_i)}{\sum_{k = 1}^n{\exp(x_k)}}\]
+    \item[Propriété] \[\sum_{i = 1}^n{\softmax(x)_i} = 1\]
     \item[Gradient] \[
-      \frac{\partial \softmax(x_i)}{\partial x_j} =
+      \frac{\partial \softmax(x)_i}{\partial x_j} =
         \begin{cases}
-          \softmax(x_i)(1 - \softmax(x_j)) & i = j \\
-          -\softmax(x_i)\softmax(x_j) & i \neq j
+          \softmax(x)_i(1 - \softmax(x)_j) & i = j \\
+          -\softmax(x)_i\softmax(x)_j & i \neq j
         \end{cases}
       \]
   \end{description}

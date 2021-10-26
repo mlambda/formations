@@ -6,8 +6,14 @@
 \begin{frame}{Par la pénalisation de l'utilisation des paramètres}
   Coût supplémentaire pour l'utilisation des paramètres dans la fonction de perte~:
   \begin{description}[<+->]
-    \item[L1] $E = E + \lambda ||\vect{\theta}||_1$
-    \item[L2] $E = E + \lambda ||\vect{\theta}||_2^2$
+    \item[L1] Produit beaucoup de poids à 0, s'appelle aussi Lasso~:
+      \[
+        E = E + \lambda ||\vect{\theta}||_1
+      \]
+    \item[L2] Pénalise les très gros poids, s'appelle aussi Ridge~:
+      \[
+        E = E + \lambda ||\vect{\theta}||_2^2
+      \]
   \end{description}
 
   où $\lambda$ est un hyperparamètre
