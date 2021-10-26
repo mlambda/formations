@@ -25,21 +25,12 @@
     - path: tools
       flavor: detailed
 
-    - title: TensorFlow 2
-      path: tf-keras
-      flavor: tf
-
-    - title: Travaux Pratiques --- Réseau de neurones avec TensorFlow
-      path: nn
-      flavor: tp-tf-pur
+    - path: tf-keras
+      flavor: full-tp
 
 - name: j3
   title: Jour 3 --- Traitement d'images et auto-encodeurs
   sections:
-    - title: Keras
-      path: tf-keras
-      flavor: keras
-
     - title: Réseaux de convolutions
       path: nn/cnn
       flavor: full

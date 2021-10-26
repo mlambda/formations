@@ -26,17 +26,11 @@
     - path: big-questions
       flavor: full
 
-    - title: Réseaux de Neurones
-      path: nn
+    - path: nn
       flavor: deep-intro
 
-    - title: TensorFlow et Deep Learning
-      path: tf-keras
-      flavor: full
-
-    - title: Réseau de Neurones
-      path: nn
-      flavor: tp-nn-keras
+    - path: tf-keras
+      flavor: full-tp
 
     - path: nn/cnn
       flavor: full

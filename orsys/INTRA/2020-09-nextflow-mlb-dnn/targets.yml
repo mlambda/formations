@@ -29,18 +29,7 @@
 
     - title: TensorFlow et Deep Learning
       path: tf-keras
-      flavor: tf
-
-    - title: Réseaux de Neurones
-      path: nn
-      flavor: tp-tf-pur
-
-    - title: TensorFlow et Deep Learning
-      path: tf-keras
-      flavor: keras
-
-    - path: nn
-      flavor: tp-nn-keras
+      flavor: full-tp
 
     - path: big-questions
       flavor: full

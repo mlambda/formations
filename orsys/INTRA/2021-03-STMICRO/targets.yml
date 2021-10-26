@@ -17,11 +17,7 @@
 
     - title: TensorFlow 2
       path: tf-keras
-      flavor: tf
-
-    - title: Travaux Pratiques --- Réseau de neurones avec TensorFlow
-      path: nn
-      flavor: tp-tf-pur
+      flavor: full-tp
 
 - name: j2
   title: Jour 2 --- Traitement d'images et auto-encodeurs

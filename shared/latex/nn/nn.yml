@@ -1,22 +1,9 @@
 default_titles:
-  attention-model: Modèle à attention
   deep-optimize: Optimisation de réseaux profonds
-  gan-intro: Petit jeu de rapidité
-  gan-models: Generative Adversarial Network (GAN)
   gradient-descent: Descente de gradient
   intro: Introduction
-  lstm: Réseaux à longue mémoire de court terme
   optimize: Optimisation des hyper-paramètres
   regularisation: Régularisation
-  rnn: Réseaux de neurones récurrents
-  rnn-keras: Utilisation dans Keras
-  rnn-variants: Variantes de réseaux récurrents
-  tp-nn: Travaux Pratiques --- Tensorflow et Keras
-  tp-nn-tf: Travaux Pratiques --- Réseau de neurones avec Tensorflow
-  tp-rnn: Travaux Pratiques --- RNN
-  tp-rnn-text: Travaux Pratiques --- RNN --- Classification de texte
-  tp-transformer: Travaux Pratiques --- Transformeurs
-  transformer: Réseaux transformeurs
 flavors:
   deep-discover-demo:
     - intro
@@ -37,20 +24,10 @@ flavors:
     - deep-optimize
     - regularisation
     - playground
-    - tp-nn
-    - /questions
-  deep-intro-no-tp:
-    - intro
-    - playground
-    - gradient-descent
-    - optimize
-    - deep-optimize
-    - regularisation
-    - playground
     - /questions
   intro-cnn:
     - intro
-    - online-demo
+    - playground
     - $cnn: model-light
   ml5j:
     - intro
@@ -61,8 +38,7 @@ flavors:
     - regularisation
     - playground
     - /questions
-    - /tf-keras/keras 
-    - tp-nn
+    - $/tf-keras: full
     - $cnn: full
     - $gan: full
     - $rnn: model
@@ -74,9 +50,5 @@ flavors:
     - regularisation
     - playground
     - $rnn: full
-  tp-nn-keras:
-    - tp-nn: null
-  tp-tf-pur:
-    - tp-nn-tf: null
 title: Réseaux de neurones
 version: 3

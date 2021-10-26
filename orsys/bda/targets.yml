@@ -35,6 +35,9 @@
     - path: nn
       flavor: deep-intro
 
+    - path: tf-keras
+      flavor: full-tp
+
     - path: nn/cnn
       flavor: full
 

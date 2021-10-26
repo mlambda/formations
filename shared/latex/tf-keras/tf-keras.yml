@@ -1,25 +1,28 @@
 default_titles:
   keras: Keras
   tf: TensorFlow 2
-  /nn/tp-nn: Travaux pratiques
 flavors:
   full:
     - tf
     - keras
     - /questions
+  full-tp:
+    - tf
+    - /questions
+    - tp-tf
+    - keras
+    - /questions
+    - tp-keras
   full-demo:
     - tf
     - /questions
-    - /nn/tp-demo-tf
+    - tp-demo-tf
     - keras
     - /questions
-    - /nn/tp-demo-keras
+    - tp-demo-keras
   keras:
-    - keras: Principes \& API
+    - keras: null
     - /questions
-    - /nn/tp-nn: Travaux Pratiques
-  tf:
-    - tf: null
-    - /questions
+    - tp-keras
 title: TensorFlow et Keras
 version: 3

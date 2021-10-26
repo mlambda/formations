@@ -11,7 +11,7 @@
 
     - title: TensorFlow et Deep Learning
       path: tf-keras
-      flavor: full
+      flavor: full-tp
 
     - path: nn/cnn
       flavor: full

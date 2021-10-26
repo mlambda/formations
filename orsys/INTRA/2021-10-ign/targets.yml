@@ -10,17 +10,11 @@
     - path: supervised/classification
 
     - path: tf-keras
-      flavor: tf
-
-    - path: nn
-      flavor: tp-tf-pur
+      flavor: full-tp
 
 - name: j2
   title: Jour 2 --- Traitement d'images et auto-encodeurs
   sections:
-    - path: tf-keras
-      flavor: keras
-
     - path: nn/cnn
       flavor: full
 

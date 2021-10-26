@@ -5,29 +5,19 @@
       path: about
       flavor: orsys-3j
 
-    - title: Réseaux de neurones
-      path: nn
+    - path: nn
       flavor: deep-intro
 
-    - path: supervised/classification
+    - title: Classification
+      path: supervised/classification
 
-    - title: TensorFlow 2
-      path: tf-keras
-      flavor: tf
-
-    - title: Travaux Pratiques --- Réseau de neurones avec TensorFlow
-      path: nn
-      flavor: tp-tf-pur
+    - path: tf-keras
+      flavor: full-tp
 
 - name: j2
   title: Jour 2 --- Traitement d'images et auto-encodeurs
   sections:
-    - title: Keras
-      path: tf-keras
-      flavor: keras
-
-    - title: Réseaux de convolutions
-      path: nn/cnn
+    - path: nn/cnn
       flavor: full
 
     - path: nn/ae
@@ -39,16 +29,13 @@
     - path: nlp
       flavor: intro-nlp
 
-    - title: Données séquentielles
-      path: sequential-data
+    - path: sequential-data
       flavor: intro
 
-    - title: Réseaux de neurones récurrents
-      path: nn/rnn
+    - path: nn/rnn
       flavor: full
 
-    - title: Réseaux transformeurs
-      path: nn/transformer
+    - path: nn/transformer
       flavor: full
 
     - path: tools
