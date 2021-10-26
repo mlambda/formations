@@ -53,5 +53,6 @@ flavors:
     - wordembeddings
     - /questions
     - tp-text-features-engineering
+    - tp-wordembeddings
 title: Traitement automatique des langues
 version: 3
