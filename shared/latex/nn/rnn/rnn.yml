@@ -3,6 +3,7 @@ default_titles:
   model: Modèle
   keras: Implémentation avec Keras
   variants: Variantes
+  /nlp/wordembeddings: Représentation de variables catégorielles
 flavors:
   full:
     - model
@@ -21,7 +22,8 @@ flavors:
     - model
     - /questions
     - demo
-  demo-detailed-keras:
+  demo-detailed-keras-with-word-embeddings:
+    - /nlp/wordembeddings
     - model
     - lstm
     - variants

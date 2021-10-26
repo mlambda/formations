@@ -27,7 +27,7 @@
       flavor: full-demo
 
     - path: nn/rnn
-      flavor: demo-detailed-keras
+      flavor: demo-detailed-keras-with-word-embeddings
 
     - path: nn/ae
       flavor: demo
