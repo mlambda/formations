@@ -7,7 +7,8 @@ default_titles:
   tp-text-features-engineering: Travaux pratiques text mining
   tp-text-reco-system: Travaux pratiques recommandation de texte
   tp-text-regex: Travaux pratiques expressions régulières
-  vectors: Vecteurs textuels
+  tf-idf: Représentations TF-IDF
+  wordembeddings: Word Embeddings
   /python/regexes/regexes: Expressions régulières
 flavors:
   full:
@@ -15,35 +16,41 @@ flavors:
     - usages-nlp
     - $/python/regexes: full
     - preprocessing
-    - vectors
+    - tf-idf
     - /questions
     - tp-text-features-engineering
     - similarity-text
     - recommandation-text
     - /questions
     - tp-text-reco-system
+    - wordembeddings
+    - tp-wordembeddings
   intro:
     - ml-nlp
     - usages-nlp
     - preprocessing
-    - vectors
+    - tf-idf
+    - wordembeddings
     - /questions
   intro-nlp:
     - ml-nlp
     - usages-nlp
     - preprocessing
-    - vectors
+    - tf-idf
+    - wordembeddings
     - /questions
   intro-nn:
     - ml-nlp
-    - vectors
+    - tf-idf
+    - wordembeddings
     - usages-nlp
     - /questions
   intro-tp:
     - ml-nlp
     - usages-nlp
     - preprocessing
-    - vectors
+    - tf-idf
+    - wordembeddings
     - /questions
     - tp-text-features-engineering
 title: Traitement automatique des langues
