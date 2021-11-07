@@ -5,3 +5,8 @@ build_command:
   - -dvi-
   - -ps-
   - -pdf
+
+default_img_values:
+  author:
+    all:
+      mlambda: F.-M. Giraud, R. Rincé \& H. Mougard
