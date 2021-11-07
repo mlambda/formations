@@ -1,0 +1,27 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \node[output,circle] (O) at (4 , 3) {$\sigma\left(\sum{\left[\theta_i x_i\right]} + \theta_0\right)$};
+    \node[input] (S) at (7 , 3) {Y};
+    \node[input] (X) at (-3, 3) {X};
+    \node(I) at (-1.8, 3) {};
+    \node[input] (I1) at (0, 6) {$x_1$};
+    \node[input] (I2) at (0, 4) {$x_2$};
+    \node[input] (I3) at (0, 2) {$x_3$};
+    \node[input] (I4) at (0, 0) {$x_4$};
+    \node (T) at (2, -1) {où $\sigma(x) = \begin{cases}1 & \text{si } x \geq 0 \\ 0 & \text{sinon}\\\end{cases}$};
+    \draw[->,>=stealth] (O) to (S);
+    \path[->,>=stealth] (I1) edge [bend  left=20] node [pos=0.45,label distance=1.5,below] {$\theta_1$} (O);
+    \path[->,>=stealth] (I2) edge [bend  left=20] node [pos=0.45,label distance=1.5,below] {$\theta_2$} (O);
+    \path[->,>=stealth] (I3) edge [bend right=20] node [pos=0.45,label distance=1.5,above] {$\theta_3$} (O);
+    \path[->,>=stealth] (I4) edge [bend right=20] node [pos=0.45,label distance=1.5,above] {$\theta_4$} (O);
+    \draw[dashed,-] (X) |- (I.center);
+    \draw[dashed,-] (I.center) |- (I1);
+    \draw[dashed,-] (I.center) |- (I2);
+    \draw[dashed,-] (I.center) |- (I3);
+    \draw[dashed,-] (I.center) |- (I4);
+  \end{tikzpicture}
+\end{document}

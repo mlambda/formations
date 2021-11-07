@@ -1,8 +1,7 @@
 - name: j1
   title: "Vue d'ensemble des enjeux de l'Intelligence Artificielle"
   sections:
-    - title: "Machine Learning et Deep Learning"
-      path: about
+    - path: about
       flavor: eni-1j
 
     - path: ai
