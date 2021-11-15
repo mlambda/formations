@@ -40,8 +40,12 @@
 \maketitle
 
 %% if toc is defined and toc:
-\begin{frame}{Programme}
-\tableofcontents[subsectionstyle=hide]
+\begin{frame}{Table des matières}
+%% if "toc_size" in config:
+  \\V{config["toc_size"]}{\tableofcontents[subsectionstyle=hide]}
+%% else:
+  \tableofcontents[subsectionstyle=hide]
+%% endif
 \end{frame}
 %% endif
 
