@@ -1,0 +1,41 @@
+- name: j1
+  title: Jour 1
+  sections:
+    - path: about
+      flavor: sparks-formation-2j
+
+    - path: ai
+      flavor: full
+
+    - title: Sources de données
+      path: engineering
+      flavor: data-sources
+
+    - path: ml
+      flavor: detailed-no-tp-no-prereq
+
+    - path: supervised
+      flavor: drn
+
+    - path: unsupervised
+      flavor: dimreduce-clustering
+
+    - path: nn
+      flavor: deep-discover-demo-light
+
+- name: j2
+  title: Jour 2
+  sections:
+    - path: nlp
+      flavor: intro
+      
+    - path: rl
+      flavor: light
+
+    - path: big-questions
+      flavor: full
+
+    - path: sectors
+      flavor: full
+
+    - contact

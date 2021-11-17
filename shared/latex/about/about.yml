@@ -36,6 +36,12 @@ flavors:
     - ressources-eni
     - horaires-5j-eni
     - tour2table
+  sparks-formation-2j:
+    - formateur
+    - description
+    - ressources-eni
+    - horaires-2j-orsys
+    - tour2table
   sparks-formation-3j:
     - formateur
     - description
