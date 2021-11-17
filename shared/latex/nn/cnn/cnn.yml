@@ -22,7 +22,7 @@ flavors:
     - data
     - model
     - /questions
-    - tp
+    - tp-demo
   full-demo:
     - data
     - model

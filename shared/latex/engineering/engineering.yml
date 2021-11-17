@@ -20,6 +20,6 @@ flavors:
     - engineering-practices
     - /questions
   data-sources:
-    - data-sources
+    - data-sources: null
 title: Ingénierie du Machine Learning
 version: 3

@@ -21,4 +21,8 @@ flavors:
     - $anomaly-detection: light
   dimreduce:
     - $dimensionality-reduction: light-tp
+  dimreduce-clustering:
+    - introduction
+    - $dimensionality-reduction: light
+    - $clustering: light
 title: Apprentissage non-supervisé

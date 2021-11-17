@@ -16,6 +16,12 @@ flavors:
     - $rnn: demo
     - $gan: light
     - /questions
+  deep-discover-demo-light:
+    - intro
+    - playground
+    - $cnn: demo
+    - $rnn: demo
+    - /questions
   deep-intro:
     - intro
     - playground

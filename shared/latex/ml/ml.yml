@@ -20,6 +20,12 @@ flavors:
     - evaluation
     - learning
     - /questions
+  detailed-no-tp-no-prereq:
+    - intro
+    - data-preparation
+    - evaluation
+    - learning
+    - /questions
   detailed-no-tp:
     - intro
     - $prerequisites: full

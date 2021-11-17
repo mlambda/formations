@@ -7,23 +7,21 @@
     - path: ai
       flavor: full
 
-    - path: engineering
+    - title: Sources de données
+      path: engineering
       flavor: data-sources
 
     - path: ml
-      flavor: detailed-no-tp
+      flavor: detailed-no-tp-no-prereq
 
     - path: supervised
       flavor: drn
 
     - path: unsupervised
-      flavor: light
+      flavor: dimreduce-clustering
 
     - path: nn
-      flavor: deep-discover-demo
-
-    - path: tf-keras
-      flavor: full-demo
+      flavor: deep-discover-demo-light
 
 - name: j2
   title: Jour 2
@@ -32,17 +30,12 @@
       flavor: intro
       
     - path: rl
-      flavor: full
+      flavor: light
 
     - path: big-questions
-      flavor: full
-
-    - path: engineering
-      flavor: mlcraftmyass
-
-    - path: actors
       flavor: full
 
     - path: sectors
       flavor: full
 
+    - contact
