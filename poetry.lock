@@ -114,7 +114,7 @@ test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 
 [[package]]
 name = "deckz"
-version = "15.0.1"
+version = "15.0.2"
 description = "Tool to handle multiple beamer decks."
 category = "main"
 optional = false
@@ -738,8 +738,8 @@ commonmark = [
     {file = "commonmark-0.9.1.tar.gz", hash = "sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"},
 ]
 deckz = [
-    {file = "deckz-15.0.1-py3-none-any.whl", hash = "sha256:7910e42e89c8cc6b9da3993a258230180226d9a498018e37fa0517fe65392fd5"},
-    {file = "deckz-15.0.1.tar.gz", hash = "sha256:b6603391cf17a011e2b3e3ce0398489631539f7bdfa5812996393e28855743d5"},
+    {file = "deckz-15.0.2-py3-none-any.whl", hash = "sha256:29ffb07d52d652f9678dc46361c30beee5eeb23a87bd16289b3eea8d68017ab5"},
+    {file = "deckz-15.0.2.tar.gz", hash = "sha256:78cf26fda7c49568cbf3ac384fb7261e24e35d4bab5aba4db70205947c13119b"},
 ]
 dnspython = [
     {file = "dnspython-2.1.0-py3-none-any.whl", hash = "sha256:95d12f6ef0317118d2a1a6fc49aac65ffec7eb8087474158f42f26a639135216"},
