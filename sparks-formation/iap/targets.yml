@@ -35,6 +35,9 @@
     - path: big-questions
       flavor: full
 
+    - path: actors
+      flavor: full
+
     - path: sectors
       flavor: full
 
