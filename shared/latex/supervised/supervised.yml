@@ -102,6 +102,19 @@ flavors:
     - random-forest
     - /questions
 
+  iap:
+    - regression-lineaire
+    - cost-error-function
+    - /nn/gradient-descent
+    - /questions
+    - demo-linear-regression
+    - naive-bayes
+    - /questions
+    - trees
+    - trees-details
+    - random-forest
+    - /questions
+
   classification:
     - classification
       

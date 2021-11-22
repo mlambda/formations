@@ -11,7 +11,7 @@
       flavor: detailed-no-tp-no-prereq
 
     - path: supervised
-      flavor: drn
+      flavor: iap
 
     - path: unsupervised
       flavor: dimreduce-clustering
