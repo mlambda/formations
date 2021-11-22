@@ -1,0 +1,183 @@
+\begin{frame}{Buts}
+  \begin{itemize}[<+->]
+    \item Mesurer la qualité des prédictions du modèle
+    \item Évaluer si un modèle peut remplir un objectif métier
+    \item Se protéger des régressions après mise à jour
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Évaluation de modèles de régression}
+  \begin{itemize}
+    \item Erreur absolue moyenne (MAE)
+    \item Erreur quadratique moyenne (MSE)
+    \item Racine de l'erreur quadratique moyenne (RMSE)
+    \item $R^2$-score
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Erreur absolue moyenne (MAE)}
+  \begin{equation*}
+    MAE(y,\hat{y})=\frac{1}{n}\sum^n_{i=1}|y_i-\hat{y_i}|
+  \end{equation*}
+
+  \begin{itemize}
+    \item Simple à interpréter
+    \item Le coût de l'erreur est linéaire
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Erreur quadratique moyenne (MSE)}
+  \begin{equation*}
+    MSE(y,\hat{y})=\frac{1}{n}\sum^n_{i=1}(y_i-\hat{y_i})^2
+  \end{equation*}
+
+  \begin{itemize}
+    \item Moins simple à interpréter que la MAE
+    \item Utile en apprentissage pour les propriétés de convergence
+    \item Pénalise les fortes erreurs
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Racine de l'erreur quadratique moyenne (RMSE)}
+  \begin{equation*}
+    RMSE(y,\hat{y})=\sqrt{\frac{1}{n}\sum^n_{i=1}(y_i-\hat{y_i})^2}
+  \end{equation*}
+
+  \begin{itemize}
+    \item Donne une valeur dans un ordre de grandeur à peu près proche des données à prédire
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{$R^2$-score}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      Somme du carre des résiduels :
+      \begin{equation*}
+        RSS(y,\hat{y})=\sum^n_{i=1}(y_i-\hat{y_i})^2
+      \end{equation*}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      Somme totale des carrées :
+      \begin{equation*}
+        TSS(y)=\sum^n_{i=1}(y_i-\bar{y})^2
+      \end{equation*}
+    \end{column}
+  \end{columns}
+  \vfill
+  \begin{equation*}
+    R^2(y,\hat{y})=1-\frac{RSS(y,\hat{y})}{TSS(y)}
+  \end{equation*}
+
+  \begin{itemize}
+    \item Compare les erreurs de prédiction à la variance de l'échantillon
+    \item Score de 1 : Prédiction parfaite
+    \item Score de 0 : Pas de prédiction (équivalent à une constante en linéaire)
+    \item Attention peut être négatif
+  \end{itemize}
+  \vfill
+\end{frame}
+
+\begin{frame}{Évaluation de modèles de classification}
+  Les deux premières métriques sont les plus utilisées:
+  \begin{description}
+  \item[Précision]
+    \[
+    \frac{\text{vrais positifs}}{\text{vrais positifs + faux positifs}}
+    \]
+  \item[Rappel]
+    \[
+    \frac{\text{vrais positifs}}{\text{vrais positifs + faux négatifs}}
+  \]
+  \item[F-mesure] Moyenne harmonique entre précision et rappel (aussi appelée score F1)
+  \end{description}
+\end{frame}
+
+\begin{frame}{Illustration de la précision et du rappel}
+  \V{["img/precisionrecall", "th", 0.7] | image}
+\end{frame}
+
+\begin{frame}{Matrice de confusion}
+  Montrer clairement quelles sont les erreurs faites par le modèle
+  \V{["img/confusion-matrix-nzmog", "th", 0.6] | image}
+\end{frame}
+
+\begin{frame}{Espace ROC}
+  Mesure la performance du modèle à plusieurs seuils de décision.
+  \begin{columns}
+    \begin{column}{.48\textwidth}
+      \textbf{Abscisse}
+
+      1 - spécificité, taux de faux positifs, ou probabilité de \emph{fausse alerte} ($\frac{\text{FP}}{\text{VN} + \text{FP}}$)
+ 
+      \vspace{1cm}
+      \textbf{Ordonnée}
+  
+      Sensibilité, taux de vrais positifs ou rappel ($\frac{\text{VP}}{\text{VP} + \text{FN}}$)
+    \end{column}
+    \begin{column}{.52\textwidth}
+      \V{["img/roc-space", "tw", 0.8] | image}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{AUC --- Aera Under the Curve}
+  \begin{columns}
+    \begin{column}{0.48\linewidth}
+      L'AUC est l'aire sous la courbe ROC.
+      \begin{itemize}
+        \item Lorsque la reconnaissance est parfaite, l'aire sous la courbe vaut 1.
+        \item Lorsque la reconnaissance est aléatoire (sur deux classes), l'aire sous la courbe vaut 0.5.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.52\linewidth}
+      \V{["img/auc", "tw", 1] | image}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Comparaisons de modèles}
+Selon la tache considérée, il peut être plus ou moins difficile d'évaluer les résultats fournis par les différentes métriques.
+
+Une méthode simple est de interpréter les résultats est de comparer les métriques sur un autre modèle :
+\begin{itemize}
+  \item Modèle simple (Baseline)
+  \item Performances humaines
+  \item Gold standard
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Baseline}
+La baseline consiste à avoir un modèle très simple qui produit des résultats suffisamment pour un coût très réduit :
+\begin{itemize}
+  \item Modèle aléatoire ou constant : météo $\rightarrow$ prédire le même temps que la veille
+  \item Modèle de prédiction simple : réseau de neurones avec quelques couches, naive bayes, etc.
+\end{itemize}
+
+\textbf{Points importants}
+\begin{itemize}
+  \item[\textcolor{green}{+}] Coût de développement et d'utilisation faible. 
+  \item[\textcolor{red}{-}] Peu précis. $\approx$ Borne inférieure
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Performances humaines}
+  Un humain est en général capable de produire des résultats très bons sur certaines tâches (reconnaissance d'image, NLP, ...) et peut être utilisé comme modèle d'évaluation.
+
+\textbf{Points importants}
+\begin{itemize}
+  \item[\textcolor{green}{+}] Très précis sur certaines tâches. Souvent considéré comme un Bayes optimal classifier 
+  \item[\textcolor{red}{-}] Très coûteux et long.
+  \item Souvent ils s'agit déjà du taggage sur les données utilisées. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Gold standard}
+  Le gold standard est le modèle le plus performant sur la tâche à accomplir. (modèle \emph{état de l'art})
+
+\textbf{Points importants}
+\begin{itemize}
+  \item[\textcolor{green}{+}] Le meilleur modèle existant. Borne maximale théorique actuelle.
+  \item[\textcolor{red}{-}] Difficilement dépassable sans faire de la recherche.
+  \item S'il existe autant l'utiliser que d'en refaire un moins performant.
+\end{itemize}
+\end{frame}
