@@ -1,10 +1,15 @@
 default_titles:
   chine: Cas particulier de la Chine
   gafa: Recherche dans le monde
-  startup: Startups dans le monde (et un peu en france)
+  startup: Startups dans le monde (et un peu en France)
 flavors:
   gafa:
     - gafa
+    - /questions
+  gafa-startups:
+    - gafa
+    - startup
+    - chine
     - /questions
   full:
     - gafa

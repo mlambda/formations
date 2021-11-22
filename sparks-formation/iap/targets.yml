@@ -7,10 +7,6 @@
     - path: ai
       flavor: full
 
-    - title: Sources de données
-      path: engineering
-      flavor: data-sources
-
     - path: ml
       flavor: detailed-no-tp-no-prereq
 
@@ -32,11 +28,14 @@
     - path: rl
       flavor: light
 
+    - path: tools
+      flavor: detailed
+
     - path: big-questions
       flavor: full
 
     - path: actors
-      flavor: full
+      flavor: gafa-startups
 
     - path: sectors
       flavor: full
