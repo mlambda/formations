@@ -20,7 +20,7 @@ flavors:
     - intro
     - playground
     - $cnn: demo
-    - $rnn: demo
+    - $rnn: demo-detailed
     - /questions
   deep-intro:
     - intro

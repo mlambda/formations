@@ -32,12 +32,11 @@ flavors:
     - tf-idf
     - wordembeddings
     - /questions
-  intro-nlp:
+  intro-no-we:
     - ml-nlp
     - usages-nlp
     - preprocessing
     - tf-idf
-    - wordembeddings
     - /questions
   intro-nn:
     - ml-nlp

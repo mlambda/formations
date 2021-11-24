@@ -27,7 +27,7 @@
   title: Jour 2
   sections:
     - path: nlp
-      flavor: intro
+      flavor: intro-no-we
       
     - path: rl
       flavor: light
