@@ -6,7 +6,6 @@ default_titles:
   tp-help: Quelques liens utiles
   tp-text-features-engineering: Travaux pratiques text mining
   tp-text-reco-system: Travaux pratiques recommandation de texte
-  tp-text-regex: Travaux pratiques expressions régulières
   tf-idf: Représentations TF-IDF
   wordembeddings: Word Embeddings
   /python/regexes/regexes: Expressions régulières
