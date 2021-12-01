@@ -52,8 +52,8 @@ $$X \sim Ber(\theta)$$
 
 \begin{frame}
   \frametitle{Modèle Statistique : Multinomiale}
-    Soit $Z$ une variable aléatoire pouvant prendre $K$ valeurs possibles. $Z$ peut alors être representée par $K$ variables binaires $X=(X_1,X_2,\ldots,X_K)$ où l'évenement $\{Z=k\}$ correspond à $$\{X_k=1 \text{ et } X_l=0, \forall l \neq k\}.$$ \\
-    Si on paramètrise $P(Z=k)$ par un parmètre $\theta_k \in [0,1]$, alors 
+    Soit $Z$ une variable aléatoire pouvant prendre $K$ valeurs possibles. $Z$ peut alors être représentée par $K$ variables binaires $X=(X_1,X_2,\ldots,X_K)$ où l'événement $\{Z=k\}$ correspond à $$\{X_k=1 \text{ et } X_l=0, \forall l \neq k\}.$$ \\
+    Si on paramétrise $P(Z=k)$ par un paramètre $\theta_k \in [0,1]$, alors 
     $$P(X_k=1) = \theta_k \ \ \forall k=1,2,\ldots,K,$$
     où $\sum_{k=1}^K \theta_k=1$. \\
     La distribution de probabilité sur $\x=(x_1,\ldots, x_k)$ peut donc être écrite ainsi
@@ -89,7 +89,7 @@ $$X \sim Ber(\theta)$$
 
 \begin{frame}
   \frametitle{Maximum de vraisemblance (MLE)}
-  Pour des raisons pratiques, on manipule le logarithme de la vraisemblance que l'on appelera \textit{log-vraisemblance}:
+  Pour des raisons pratiques, on manipule le logarithme de la vraisemblance que l'on appellera \textit{log-vraisemblance}:
   \[
       l(\theta) = \sum_{i=1}^n \log p(x_i; \, \theta)
   \]

@@ -65,7 +65,6 @@ flavors:
   bayes:
     - proba-rappel
     - naive-bayes
-    - regression-logistique
     - bayes-inference
     - gaussian-mixture
     - modeles-graphiques
@@ -79,7 +78,7 @@ flavors:
     - /nn/gradient-descent
     - regression-polynomiale
     - classification
-    - /nn/intro
+    - regression-logistique
     - /questions
     - tp-reg-lin-poly
     - svm
