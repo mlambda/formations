@@ -38,7 +38,6 @@ flavors:
     - /nn/gradient-descent
     - regression-polynomiale
     - classification
-    - /nn/intro
     - regression-logistique
     - /questions
     - tp-reg-lin-poly

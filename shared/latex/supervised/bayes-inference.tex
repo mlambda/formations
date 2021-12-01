@@ -50,26 +50,26 @@ $$X \sim Ber(\theta)$$
   $$P(N=k)=\binom{n}{k} {\theta}^k (1-\theta)^{n-k}.$$
 \end{frame}
 
-\begin{frame}
-  \frametitle{Modèle Statistique : Multinomiale}
-    Soit $Z$ une variable aléatoire pouvant prendre $K$ valeurs possibles. $Z$ peut alors être représentée par $K$ variables binaires $X=(X_1,X_2,\ldots,X_K)$ où l'événement $\{Z=k\}$ correspond à $$\{X_k=1 \text{ et } X_l=0, \forall l \neq k\}.$$ \\
-    Si on paramétrise $P(Z=k)$ par un paramètre $\theta_k \in [0,1]$, alors 
-    $$P(X_k=1) = \theta_k \ \ \forall k=1,2,\ldots,K,$$
-    où $\sum_{k=1}^K \theta_k=1$. \\
-    La distribution de probabilité sur $\x=(x_1,\ldots, x_k)$ peut donc être écrite ainsi
-    $$p(\mathbf{x};\bm{\theta})=\prod_{k=1}^K\theta_k^{x_k}$$
-    On notera cette distribution $\mathcal{M}(1,\theta)$ 
-\end{frame}
+% \begin{frame}
+%   \frametitle{Modèle Statistique : Multinomiale}
+%     Soit $Z$ une variable aléatoire pouvant prendre $K$ valeurs possibles. $Z$ peut alors être représentée par $K$ variables binaires $X=(X_1,X_2,\ldots,X_K)$ où l'événement $\{Z=k\}$ correspond à $$\{X_k=1 \text{ et } X_l=0, \forall l \neq k\}.$$ \\
+%     Si on paramétrise $P(Z=k)$ par un paramètre $\theta_k \in [0,1]$, alors 
+%     $$P(X_k=1) = \theta_k \ \ \forall k=1,2,\ldots,K,$$
+%     où $\sum_{k=1}^K \theta_k=1$. \\
+%     La distribution de probabilité sur $x=(x_1,\ldots, x_k)$ peut donc être écrite ainsi
+%     $$p(\mathbf{x};\bm{\theta})=\prod_{k=1}^K\theta_k^{x_k}$$
+%     On notera cette distribution $\mathcal{M}(1,\theta)$ 
+% \end{frame}
 
 \begin{frame}
   \frametitle{Modèle Statistique : Gaussienne}
-  La distribution Gaussienne (ou Loi Normale) d'une variable aléatoire $X \in \mathbb{R}$ :
+  La distribution Gaussienne (ou Loi Normale) d'une variable aléatoire $X \in \mathbb{R}$~:
     \[
     \mathcal{N}(x; \, \mu,\sigma^2)=\frac{1}{(2\pi\sigma^2)^{1/2}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
     \]
     où $\mu$ est la moyenne et $\sigma^2$ la variance de $X$ \\
     \newline
-    Pour un vecteur $X$ de dimension $d$, la loi gaussienne multidimensionnelle s'écrit alors :
+    Pour un vecteur $X$ de dimension $d$, la loi gaussienne multidimensionnelle s'écrit alors~:
     \[
     \mathcal{N}(\mathbf{x}|\bm{\mu},\bm{\Sigma})=\frac{1}{(2\pi)^{d/2}}\frac{1}{|\bm{\Sigma}|^{1/2}}\exp\left(-\frac{1}{2}(\mathbf{x}-\bm{\mu})^T\bm{\Sigma}^{-1}(\mathbf{x}-\bm{\mu})\right)
     \]
@@ -79,7 +79,7 @@ $$X \sim Ber(\theta)$$
 
 \begin{frame}
   \frametitle{Maximum de vraisemblance (MLE)}
-  Soit $x_1,x_2,\ldots,x_n$ un ensemble de $n$ i.i.d observations générées par une distribution $p(x_1,x_2,\ldots,x_n;\theta)$, on cherche le paramètre $\hat{\theta}$ tel que :
+  Soit $x_1,x_2,\ldots,x_n$ un ensemble de $n$ i.i.d observations générées par une distribution $p(x_1,x_2,\ldots,x_n;\theta)$, on cherche le paramètre $\hat{\theta}$ tel que~:
   $$\hat{\theta} = \argmax_\theta p(x_1,x_2,\ldots,x_n; \, \theta)$$
   Appelons \textit{vraisemblance} la fonction
   $$\mathcal{L}(\theta) = p(x_1,x_2,\ldots,x_n; \, \theta)$$
@@ -89,9 +89,9 @@ $$X \sim Ber(\theta)$$
 
 \begin{frame}
   \frametitle{Maximum de vraisemblance (MLE)}
-  Pour des raisons pratiques, on manipule le logarithme de la vraisemblance que l'on appellera \textit{log-vraisemblance}:
+  Pour des raisons pratiques, on manipule le logarithme de la vraisemblance que l'on appellera \textit{log-vraisemblance}~:
   \[
-      l(\theta) = \sum_{i=1}^n \log p(x_i; \, \theta)
+    \ell(\theta) = \sum_{i=1}^n \log p(x_i; \, \theta)
   \]
 \end{frame}
 
