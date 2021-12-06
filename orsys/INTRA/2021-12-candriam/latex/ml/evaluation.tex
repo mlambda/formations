@@ -71,8 +71,8 @@
   \begin{itemize}
     \item Compare les erreurs de prédiction à la variance de l'échantillon
     \item Score de 1 : Prédiction parfaite
-    \item Score de 0 : Pas de prédiction (équivalent à une constante en linéaire)
-    \item Attention peut être négatif
+    \item Score de 0 : Prédit la moyenne 
+    \item Score < 0 : Pire qu'une prédiction sur la moyenne
   \end{itemize}
   \vfill
 \end{frame}
@@ -145,7 +145,7 @@
       Lettre & Réponses ordonnées\\
       \midrule
       F & 1.M 2.O 3.\textbf{G}\\
-      M & 1.\textbf{N} 2.Z 3.M\\
+      M & 1.\textbf{N} 2.Y 3.X\\
       G & 1.A 2.\textbf{H} 3.E\\
       \bottomrule
     \end{tabular}
@@ -168,7 +168,7 @@
       Lettre & Réponses ordonnées & Rang & Score de rang\\
       \midrule
       F & 1.M 2.O 3.\textbf{G} & 3 & $\frac{1}{3}$\\
-      M & 1.\textbf{N} 2.Z 3.M & 1 & $1$\\
+      M & 1.\textbf{N} 2.Y 3.X & 1 & $1$\\
       G & 1.A 2.\textbf{H} 3.E & 2 & $\frac{1}{2}$\\
       \bottomrule
     \end{tabular}
@@ -190,7 +190,7 @@
       Lettre & Réponses ordonnées & Score de rang\\
       \midrule
       F & 1.M 2.O 3.\textbf{G} & $0$\\
-      M & 1.\textbf{N} 2.Z 3.M & $\frac{1}{3}$\\
+      M & 1.\textbf{N} 2.Y 3.X & $\frac{1}{3}$\\
       G & 1.\textbf{H} 2.\textbf{H} 3.E & $\frac{2}{3}$\\
       \bottomrule
     \end{tabular}
@@ -241,6 +241,31 @@
 
 \end{frame}
 
+\begin{frame}{Évaluation intrinsèque et extrinsèque}
+  \begin{itemize}
+    \item \textbf{Évaluation intrinsèque} : Correspond au score de votre modèle sur vos données. 
+    \item \textbf{Évaluation extrinsèque} : Évaluation effectuée sur une utilisation avancée du modèle (par un utilisateur du logiciel, par exemple).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{A/B~Testing}
+  Le A/B Testing permet d'evaluer un nouveau modèle de ML de façon transparente pour le client.
+
+  Étant donné un modèle A classique déjà introduit et un modèle B sensé être plus performant qui devra, à terme, remplacer le modèle A :
+  \begin{itemize}
+    \item 95 \% d'utilisateurs restent avec le modèle standard A.
+    \item 5 \% vont utiliser le nouveau modèle plus performant B.
+  \end{itemize}
+  Cela permet d'étudier les performances du nouveau modèle en le comparant à l'usage standard de l'ancien modèle.
+\end{frame}
+
+\begin{frame}{Travaux pratiques : A/B~Testing}
+  \bluelink{https://colab.research.google.com/drive/1BDBsopKu4CUgYbAmFOw5sUs82JuKgh7p?usp=sharing\#forceEdit=true&sandboxMode=true}{A/B Testing}
+\end{frame}
+
+
+
+
 \begin{frame}{Comparaisons de modèles}
 Selon la tache considérée, il peut être plus ou moins difficile d'évaluer les résultats fournis par les différentes métriques.
 
@@ -278,7 +303,7 @@ La baseline consiste à avoir un modèle très simple qui produit des résultats
 \end{frame}
 
 \begin{frame}{Gold standard}
-  Le gold standard est le modèle le plus performant sur la tâche à accomplir. (modèle \emph{état de l'art})
+  Le gold standard est, soit le modèle le plus performant sur la tâche à accomplir (modèle \emph{état de l'art}), soit le meilleur modèle théorique possible.
 
 \textbf{Points importants}
 \begin{itemize}

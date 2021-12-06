@@ -1,50 +1,44 @@
 - name: j1
   title: Jour 1 --- Introduction au Machine Learning
   sections:
-  #   - path: about
-  #     title: Machine Learning, Méthodes et Solutions
-  #     flavor: orsys-4j
+    - path: about
+      title: Machine Learning, Méthodes et Solutions
+      flavor: orsys-3j
 
-  #   - path: tools
-  #     flavor: init-python
-
-    # - path: ml
-    #   flavor: full
-    
-    - title: null
-      path: evaluation-advanced
+    - path: ml
+      flavor: detailed-no-tp
 
 
-# - name: j2
-#   title: Jour 2 --- Algorithmes 1/2
-#   sections:
-    # - path: supervised
-    #   flavor: standard-nobayes
+- name: j2
+  title: Jour 2 --- Algorithmes 1/2
+  sections:
+    - path: supervised
+      flavor: standard-nobayes
 
-    # - path: unsupervised
-    #   flavor: dimreduce
+    - path: unsupervised
+      flavor: dimreduce
 
-# - name: j3
-#   title: Jour 3 --- Algorithmes 2/2
-#   sections:
-#     - path: supervised
-#       flavor: bayes
+- name: j3
+  title: Jour 3 --- Algorithmes 2/2
+  sections:
+    - path: supervised
+      flavor: bayes
 
-#     - path: nn
-#       flavor: deep-intro
+    - path: nn
+      flavor: deep-intro
 
-#     - title: Keras
-#       path: tf-keras
-#       flavor: keras
+    - title: Keras
+      path: tf-keras
+      flavor: keras
 
-#     - path: nn/cnn
-#       flavor: full
+    - path: nn/cnn
+      flavor: full
 
-#     - path: nn/ae
-#       flavor: full
+    - path: nn/ae
+      flavor: full
 
-#     - path: nn/rnn
-#       flavor: full
+    - path: nn/rnn
+      flavor: full
 
 
 # - name: j4
