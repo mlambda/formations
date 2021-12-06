@@ -6,6 +6,8 @@ default_titles:
   tp: Travaux pratiques
   tsne-umap: Projections non-linéaires
   tuto: Exemples \texttt{scikit-learn}
+  help-pointers: Des liens pour y revenir
+
 flavors:
   full:
     - intro
@@ -15,16 +17,19 @@ flavors:
     - /questions
     - tuto
     - tp
+    - help-pointers
   light:
     - intro
     - pca-lda
     - demo
     - /questions
+    - help-pointers
   light-tp:
     - intro
     - pca-lda
     - /questions
     - tuto
     - tp
+    - help-pointers
 
 title: Réduction de la dimensionnalité

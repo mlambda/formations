@@ -4,6 +4,8 @@ default_titles:
   model: Modèle
   modern-architectures: Architectures modernes
   tp: Travaux pratiques
+  help-pointers: Des liens pour y revenir
+
 flavors:
   full:
     - data
@@ -14,15 +16,19 @@ flavors:
     - keras
     - /questions
     - tp
+    - help-pointers
+
   model-light:
     - data
     - model
     - /questions
+    - help-pointers
   demo:
     - data
     - model
     - /questions
     - tp-demo
+    - help-pointers
   full-demo:
     - data
     - model
@@ -33,4 +39,5 @@ flavors:
     - keras
     - /questions
     - tp-demo
+    - help-pointers
 title: Réseaux de neurones à convolutions

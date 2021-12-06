@@ -5,6 +5,7 @@ default_titles:
   linear-algebra: Algèbre linéaire
   probabilities: Probabilités
   statistics: Statistique
+  help-pointers: Des liens pour y revenir
 flavors:
   full:
     - goals
@@ -14,4 +15,5 @@ flavors:
     - statistics
     - conclusion
     - /questions
+    - help-pointers
 title: Prérequis

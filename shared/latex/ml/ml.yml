@@ -6,6 +6,8 @@ default_titles:
   learning: Apprentissage
   tp-data: Travaux Pratiques
   /tp-help: Ressources pour les travaux pratiques
+  help-pointers: Des liens pour y revenir
+
 flavors:
   full:
     - intro
@@ -15,36 +17,41 @@ flavors:
     - /questions
     - /tp-help
     - tp-data
+    - help-pointers
   intro:
     - intro
     - evaluation
     - learning
     - /questions
+    - help-pointers
   detailed-no-tp-no-prereq:
     - intro
     - data-preparation
     - evaluation
     - learning
     - /questions
+    - help-pointers
   detailed-no-tp:
     - intro
-    - $prerequisites: full
+    - $/prerequisites: full
     - data-preparation
     - evaluation
     - learning
     - /questions
+    - help-pointers
   ml5j:
     - intro
-    - $prerequisites: full
+    - $/prerequisites: full
     - data-preparation
     - evaluation
     - learning
     - /questions
     - /tp-help
     - tp-data
+    - help-pointers
   bda:
     - intro
-    - $prerequisites: full
+    - $/prerequisites: full
     - data-preparation
     - evaluation
     - /questions
@@ -52,5 +59,6 @@ flavors:
     - tp-data
     - learning
     - /questions
+    - help-pointers
 title: Machine Learning
 version: 3
