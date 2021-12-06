@@ -4,6 +4,8 @@ default_titles:
   isolation-forest: Forêt d'isolement
   lof: Local Outlier Factor
   /supervised/trees: Introduction aux arbres de décision
+  help-pointers: Des liens pour y revenir
+
 flavors:
   light:
     - intro
@@ -11,6 +13,7 @@ flavors:
     - isolation-forest
     - demo
     - /questions
+    - help-pointers
   light-trees:
     - intro
     - lof
@@ -19,4 +22,5 @@ flavors:
     - isolation-forest
     - demo
     - /questions
+    - help-pointers
 title: Détection d'anomalies

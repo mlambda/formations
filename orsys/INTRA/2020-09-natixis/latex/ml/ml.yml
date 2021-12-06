@@ -14,7 +14,7 @@ default_titles:
 flavors:
   natixis:
     - intro
-    - $prerequisites: full
+    - $/prerequisites: full
     - data-preparation
     - evaluation
     - learning

@@ -9,6 +9,8 @@ default_titles:
   tf-idf: Représentations TF-IDF
   wordembeddings: Word Embeddings
   /python/regexes/regexes: Expressions régulières
+  help-pointers: Des liens pour y revenir
+
 flavors:
   full:
     - ml-nlp
@@ -24,6 +26,7 @@ flavors:
     - tp-text-reco-system
     - wordembeddings
     - tp-wordembeddings
+    - help-pointers
   intro:
     - ml-nlp
     - usages-nlp
@@ -31,18 +34,21 @@ flavors:
     - tf-idf
     - wordembeddings
     - /questions
+    - help-pointers
   intro-no-we:
     - ml-nlp
     - usages-nlp
     - preprocessing
     - tf-idf
     - /questions
+    - help-pointers
   intro-nn:
     - ml-nlp
     - tf-idf
     - wordembeddings
     - usages-nlp
     - /questions
+    - help-pointers
   intro-tp:
     - ml-nlp
     - usages-nlp
@@ -52,5 +58,6 @@ flavors:
     - /questions
     - tp-text-features-engineering
     - tp-wordembeddings
+    - help-pointers
 title: Traitement automatique des langues
 version: 3

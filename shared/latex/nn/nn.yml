@@ -4,6 +4,7 @@ default_titles:
   intro: Introduction
   optimize: Optimisation des hyper-paramètres
   regularisation: Régularisation
+  help-pointers: Des liens pour y revenir
 flavors:
   deep-discover-demo:
     - intro
@@ -16,12 +17,14 @@ flavors:
     - $rnn: demo
     - $gan: light
     - /questions
+    - help-pointers
   deep-discover-demo-light:
     - intro
     - playground
     - $cnn: demo
     - $rnn: demo-detailed
     - /questions
+    - help-pointers
   deep-intro:
     - intro
     - playground
@@ -31,10 +34,12 @@ flavors:
     - regularisation
     - playground
     - /questions
+    - help-pointers
   intro-cnn:
     - intro
     - playground
     - $cnn: model-light
+    - help-pointers
   ml5j:
     - intro
     - playground
@@ -48,6 +53,7 @@ flavors:
     - $cnn: full
     - $gan: full
     - $rnn: model
+    - help-pointers
   recurrent-text:
     - intro
     - playground
@@ -56,5 +62,6 @@ flavors:
     - regularisation
     - playground
     - $rnn: full
+    - help-pointers
 title: Réseaux de neurones
 version: 3
