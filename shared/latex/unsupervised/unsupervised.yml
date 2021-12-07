@@ -1,28 +1,23 @@
 default_titles:
   introduction: Introduction
 flavors:
-  light:
+  bda:
     - introduction
-    - $dimensionality-reduction: light
-    - $clustering: light
-    - $anomaly-detection: light
-  full:
+    - $dimensionality-reduction: bda
+    - $clustering: bda
+    - $anomaly-detection: full
+  mle:
     - introduction
-    - $dimensionality-reduction: full
-    - $clustering: full
-    - $anomaly-detection: light
-  full-trees:
+    - $dimensionality-reduction: mle
+    - $clustering: mle
+  iao:
     - introduction
-    - $dimensionality-reduction: full
-    - $clustering: full
-    - $anomaly-detection: light-trees
-  dimreduce-anodetect:
-    - $dimensionality-reduction: light-tp
-    - $anomaly-detection: light
-  dimreduce:
-    - $dimensionality-reduction: light-tp
-  dimreduce-clustering:
-    - introduction
-    - $dimensionality-reduction: light
-    - $clustering: light
+    - $dimensionality-reduction: mle
+    - $clustering: mle
+    - $anomaly-detection: full    
+  ml3:
+    - $dimensionality-reduction: mlb
+    - $anomaly-detection: full
+  mlb:
+    - $dimensionality-reduction: mlb
 title: Apprentissage non-supervisé

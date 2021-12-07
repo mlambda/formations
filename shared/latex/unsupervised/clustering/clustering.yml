@@ -11,7 +11,7 @@ default_titles:
   tp: Travaux pratiques
   tuto: Exemples \texttt{scikit-learn}
 flavors:
-  full:
+  bda:
     - intro
     - kmeans-gaussian
     - dbscan
@@ -23,7 +23,7 @@ flavors:
     - tuto
     - /questions
     - tp
-  light:
+  mle:
     - intro
     - kmeans-gaussian
     - dbscan

@@ -9,45 +9,26 @@ default_titles:
   help-pointers: Des liens pour y revenir
 
 flavors:
-  full:
-    - intro
-    - data-preparation
-    - evaluation
-    - learning
-    - /questions
-    - /tp-help
-    - tp-data
-    - help-pointers
   intro:
     - intro
     - evaluation
     - learning
     - /questions
     - help-pointers
-  detailed-no-tp-no-prereq:
+  mle:
     - intro
     - data-preparation
     - evaluation
     - learning
     - /questions
     - help-pointers
-  detailed-no-tp:
+  drn:
     - intro
     - $/prerequisites: full
     - data-preparation
     - evaluation
     - learning
     - /questions
-    - help-pointers
-  ml5j:
-    - intro
-    - $/prerequisites: full
-    - data-preparation
-    - evaluation
-    - learning
-    - /questions
-    - /tp-help
-    - tp-data
     - help-pointers
   bda:
     - intro

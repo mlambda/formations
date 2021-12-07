@@ -30,37 +30,6 @@ default_titles:
   tp-svm: "Travaux Pratiques : SVM (TODO)"
   tp-svm-text: "Travaux Pratiques : SVM"
 flavors:
-  standard:
-    - proba-rappel
-    - naive-bayes
-    - regression-lineaire
-    - cost-error-function
-    - /nn/gradient-descent
-    - regression-polynomiale
-    - classification
-    - regression-logistique
-    - /questions
-    - tp-reg-lin-poly
-    - svm
-    - demo-svm
-    - trees
-    - trees-details
-    - random-forest
-    - /questions
-    - demo-random-forest
-    - tp-random-forest
-  regressions-and-naive-bayes:
-    - regression-lineaire
-    - cost-error-function
-    - /nn/gradient-descent
-    - regression-polynomiale
-    - classification
-    - regression-logistique
-    - /questions
-    - tp-reg-lin-poly
-    - proba-rappel
-    - naive-bayes
-    - /questions
   bayes:
     - proba-rappel
     - naive-bayes
@@ -71,7 +40,23 @@ flavors:
     - markov-model
     - hmm
     - /questions
-  standard-nobayes:
+  svm-text:
+    - svm
+    - demo-svm
+    - tp-svm-text
+  bda:
+    - proba-rappel
+    - naive-bayes
+    - regression-lineaire
+    - cost-error-function
+    - /nn/gradient-descent
+    - regression-polynomiale
+    - classification
+    - regression-logistique
+    - /questions
+    - tp-reg-lin-poly
+    - /questions
+  mlb:
     - regression-lineaire
     - cost-error-function
     - /nn/gradient-descent
@@ -88,35 +73,7 @@ flavors:
     - /questions
     - demo-random-forest
     - tp-random-forest
-  drn:
-    - regression-lineaire
-    - cost-error-function
-    - /nn/gradient-descent
-    - /questions
-    - demo-linear-regression
-    - naive-bayes
-    - /questions
-    - trees
-    - random-forest
-    - /questions
-
-  iap:
-    - regression-lineaire
-    - cost-error-function
-    - /nn/gradient-descent
-    - /questions
-    - demo-linear-regression
-    - naive-bayes
-    - /questions
-    - trees
-    - trees-details
-    - random-forest
-    - /questions
-
-  classification:
-    - classification
-      
-  text:
+  mmd:
     - proba-rappel
     - naive-bayes
     - regression-lineaire
@@ -136,10 +93,18 @@ flavors:
     - svm
     - demo-svm
     - tp-svm-text
-  text-svm:
-    - svm
-    - demo-svm
-    - tp-svm-text
+  drn:
+    - naive-bayes
+    - regression-lineaire
+    - cost-error-function
+    - /nn/gradient-descent
+    - /questions
+    - demo-linear-regression
+    - /questions
+    - trees
+    - trees-details
+    - random-forest
+    - /questions
 
 title: Apprentissage supervisé
 version: 3

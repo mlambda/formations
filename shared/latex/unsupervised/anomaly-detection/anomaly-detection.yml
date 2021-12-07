@@ -7,14 +7,7 @@ default_titles:
   help-pointers: Des liens pour y revenir
 
 flavors:
-  light:
-    - intro
-    - lof
-    - isolation-forest
-    - demo
-    - /questions
-    - help-pointers
-  light-trees:
+  full:
     - intro
     - lof
     - /supervised/trees

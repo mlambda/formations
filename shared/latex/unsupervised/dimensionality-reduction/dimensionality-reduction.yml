@@ -9,7 +9,7 @@ default_titles:
   help-pointers: Des liens pour y revenir
 
 flavors:
-  full:
+  bda:
     - intro
     - pca-lda
     - pca-variantes: null
@@ -18,13 +18,13 @@ flavors:
     - tuto
     - tp
     - help-pointers
-  light:
+  mle:
     - intro
     - pca-lda
     - demo
     - /questions
     - help-pointers
-  light-tp:
+  mlb:
     - intro
     - pca-lda
     - /questions
