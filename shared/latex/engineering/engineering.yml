@@ -5,7 +5,7 @@ default_titles:
   tp-deploying: Travaux Pratiques
   data-sources: Sources de données
 flavors:
-  full:
+  mlcraftmyass:
     - engineering-practices
     - data-sources
     - data-engineering
@@ -16,10 +16,5 @@ flavors:
     - deploying
     - /questions
     - tp-deploying
-  mlcraftmyass:
-    - engineering-practices
-    - /questions
-  data-sources:
-    - data-sources: null
 title: Ingénierie du Machine Learning
 version: 3

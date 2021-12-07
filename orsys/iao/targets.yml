@@ -24,7 +24,7 @@
   title: Jour 2 --- Applications et ingénierie du Machine Learning
   sections:
     - path: engineering
-      flavor: full
+      flavor: mlcraftmyass
 
     - path: sectors
       flavor: full

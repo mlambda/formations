@@ -9,7 +9,9 @@
       flavor: init-python
 
     - path: ml
-      flavor: natixis
+      flavor: drn
+
+    - path: ml/tp-data-natixis
 
 - name: j2
   title: Jour 2 --- Apprentissage supervisé
@@ -27,7 +29,13 @@
   title: Jour 4 --- Réseaux de neurones \& séries temporelles
   sections:
     - path: sequential-data
-      flavor: full
+      flavor: intra
+
 
     - path: nn
+      flavor: deep-discover-demo-light
+
+    - path: nn/transformer
       flavor: full
+
+    - path: sequential-data/tp-tf-natixis

@@ -4,11 +4,6 @@ default_titles:
   sante: Santé
   transport: Transport
 flavors:
-  light:
-    - intro
-    - sante
-    - coding
-    - /questions
   full:
     - intro
     - transport

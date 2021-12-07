@@ -5,7 +5,7 @@ default_titles:
   sequence-handling: Approches
   tp-tf: TP séquence temporelles
 flavors:
-  full:
+  intra:
     - sequential-data
     - sequential-models
     - statistical-approaches

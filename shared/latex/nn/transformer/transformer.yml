@@ -8,8 +8,4 @@ flavors:
     - model
     - /questions
     - tp
-  light:
-    - attention-model
-    - model
-    - /questions
 title: Réseaux transformeurs

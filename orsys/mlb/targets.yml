@@ -46,7 +46,7 @@
       flavor: full
 
     - path: sectors
-      flavor: light
+      flavor: full
 
     - path: tools
       flavor: demo-spark

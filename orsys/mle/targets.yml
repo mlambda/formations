@@ -8,8 +8,8 @@
       flavor: full
 
     - title: Sources de données
-      path: engineering
-      flavor: data-sources
+      path: engineering/data-sources
+      
 
     - path: ml
       flavor: mle

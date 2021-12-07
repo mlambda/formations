@@ -47,7 +47,7 @@
   title: Jour 5 --- Neurones et Séquences
   sections:
     - path: sequential-data
-      flavor: full
+      flavor: intra
 
     - path: nlp
       flavor: dpl

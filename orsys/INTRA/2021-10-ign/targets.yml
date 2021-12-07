@@ -25,7 +25,7 @@
   title: Jour 3 --- Langage et traitement de séquences
   sections:
     - path: sequential-data
-      flavor: full
+      flavor: intra
 
     - path: nn/rnn
       flavor: full-no-tp

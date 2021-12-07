@@ -11,10 +11,6 @@ flavors:
     - startup
     - chine
     - /questions
-  full:
-    - gafa
-    - startup
-    - chine
-    - /questions
+
 title: Acteurs du domaine
 version: 3
