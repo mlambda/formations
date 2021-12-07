@@ -237,8 +237,6 @@
   \begin{itemize}
     \item Surtout utilisée en prédiction de texte.
   \end{itemize}
-  
-
 \end{frame}
 
 \begin{frame}{Évaluation intrinsèque et extrinsèque}
@@ -257,6 +255,35 @@
     \item 5 \% vont utiliser le nouveau modèle plus performant B.
   \end{itemize}
   Cela permet d'étudier les performances du nouveau modèle en le comparant à l'usage standard de l'ancien modèle.
+\end{frame}
+
+\begin{frame}{Multi-Armed Bandit (MAB)}
+  Le Multi-Armed Bandit est la variation du A/B Testing qui permet de tester plusieurs modèles et configurations en parallèle.
+
+  \begin{itemize}
+    \item Adapte le nombre de personnes testant un modèle en fonction de ses résultats.
+    \item Demande d'avoir une base d'utilisateurs important.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Slice-based learning}
+  Le (\emph{Slice-based learning}) consiste à utiliser l'information experte de la criticité des données pour améliorer un apprentissage.
+  
+  \V{["img/slice-learning-slices", "tw", 1] | image}
+
+\end{frame}
+
+\begin{frame}{Slice-based learning}
+  Entraînement multi-objectifs via une supervision faible pour améliorer l'apprentissage.
+  
+  \V{["img/slice-learning-architecture", "tw", 0.7] | image}
+
+\end{frame}
+
+\begin{frame}{Slice-based learning}
+  Les sections critiques sont définis grâce à des \og \emph{observateurs}\fg{} simples permettant d'identifier des données critiques.
+
+  Pour l'évaluation, il est ensuite possible de définir simplement les sections critiques dans les données pour définir des tests spécifiques.
 \end{frame}
 
 \begin{frame}{Travaux pratiques : A/B~Testing}
