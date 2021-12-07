@@ -20,8 +20,8 @@
 - name: j3
   title: Jour 3 --- Méthodes Bayésiennes, Réseaux de neurones
   sections:
-    - path: supervised
-      flavor: bayes
+    - path: bayesian
+      flavor: mlb
 
     - title: Réseaux de Neurones
       path: nn

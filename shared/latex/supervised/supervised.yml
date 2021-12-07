@@ -1,52 +1,33 @@
 default_titles:
   classification: Classification
-  bayes-inference: Inférence et Apprentissage Bayésiens
-  proba-rappel: Probabilités
-  bayes-networks: "Réseaux Bayésiens"
-  tp-bayes: "Travaux Pratique : Réseaux Bayésiens"
   cost-error-function: Fonction de Coût/Erreur
-  demo-gradient-boosting: Démo Sklearn
-  demo-random-forest: Démo Sklearn
-  demo-svm: Démo Sklearn
-  gaussian-mixture: Mixture de gaussienne
-  gradient-boosting: Gradient Boosting
-  hmm: Modèles de Markov cachés
-  markov-model: Modèles de Markov
-  modeles-graphiques: Réseaux Bayésiens
-  naive-bayes: Naive Bayes
-  random-forest: Random Forest
+
   regression-lineaire: Regression Linéaire
   regression-logistique: Régression Logistique
   regression-polynomiale: Régression Polynomiale
-  svm: Support Vector Machine
+  tp-reg-lin-poly: "Travaux Pratiques : Régression Linéaire"
+
+  trees: Arbres de décision
+  random-forest: Random Forest
+  demo-random-forest: Démo Sklearn
   tp-random-forest: "Travaux Pratiques : Random Forest"
   tp-random-forest-text: "Travaux Pratiques : Random Forest"
-  trees: Arbres de décision
-  tp-reg-lin-poly: "Travaux Pratiques : Régression Linéaire"
+
   gradient-boosting: Gradient Boosting
   demo-gradient-boosting: Démo Sklearn
+
   svm: Support Vector Machine
   demo-svm: Démo Sklearn
   tp-svm: "Travaux Pratiques : SVM (TODO)"
   tp-svm-text: "Travaux Pratiques : SVM"
 flavors:
-  bayes:
-    - proba-rappel
-    - naive-bayes
-    - bayes-inference
-    - gaussian-mixture
-    - modeles-graphiques
-    - bayes-networks
-    - markov-model
-    - hmm
-    - /questions
   svm-text:
     - svm
     - demo-svm
     - tp-svm-text
   bda:
-    - proba-rappel
-    - naive-bayes
+    - /prerequisites/proba-rappel
+    - /bayesian/naive-bayes
     - regression-lineaire
     - cost-error-function
     - /nn/gradient-descent
@@ -74,8 +55,8 @@ flavors:
     - demo-random-forest
     - tp-random-forest
   mmd:
-    - proba-rappel
-    - naive-bayes
+    - /prerequisites/proba-rappel
+    - /bayesian/naive-bayes
     - regression-lineaire
     - cost-error-function
     - /nn/gradient-descent
@@ -94,7 +75,7 @@ flavors:
     - demo-svm
     - tp-svm-text
   drn:
-    - naive-bayes
+    - /bayesian/naive-bayes
     - regression-lineaire
     - cost-error-function
     - /nn/gradient-descent
