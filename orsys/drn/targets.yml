@@ -8,7 +8,7 @@
       flavor: full
 
     - path: ml
-      flavor: detailed-no-tp
+      flavor: drn
 
     - path: supervised
       flavor: drn

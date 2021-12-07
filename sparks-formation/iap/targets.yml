@@ -8,13 +8,13 @@
       flavor: full
 
     - path: ml
-      flavor: detailed-no-tp-no-prereq
+      flavor: mle
 
     - path: supervised
-      flavor: iap
+      flavor: drn
 
     - path: unsupervised
-      flavor: dimreduce-clustering
+      flavor: mle
 
     - path: nn
       flavor: deep-discover-demo-light
@@ -23,7 +23,7 @@
   title: Jour 2
   sections:
     - path: nlp
-      flavor: intro-no-we
+      flavor: mle
       
     - path: rl
       flavor: light

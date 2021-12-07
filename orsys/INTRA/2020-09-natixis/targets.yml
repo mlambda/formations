@@ -15,13 +15,13 @@
   title: Jour 2 --- Apprentissage supervisé
   sections:
     - path: supervised
-      flavor: standard
+      flavor: mlb
 
 - name: j3
   title: Jour 3 --- Apprentissage non supervisé
   sections:
     - path: unsupervised
-      flavor: full-trees
+      flavor: bda
 
 - name: j4
   title: Jour 4 --- Réseaux de neurones \& séries temporelles

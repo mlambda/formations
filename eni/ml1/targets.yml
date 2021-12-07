@@ -14,7 +14,7 @@
       flavor: intro-cnn
 
     - path: nlp
-      flavor: intro
+      flavor: dpl
 
     - path: rl
       flavor: light

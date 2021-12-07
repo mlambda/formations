@@ -9,16 +9,16 @@
       flavor: init-python
 
     - path: ml
-      flavor: full
+      flavor: bda
 
 - name: j2
   title: Jour 2 --- Algorithmes 1/2
   sections:
     - path: unsupervised
-      flavor: dimreduce-anodetect
+      flavor: ml3
 
     - path: supervised
-      flavor: standard
+      flavor: mlb
 
 - name: j3
   title: Jour 3 --- Réseaux de neurones

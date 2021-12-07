@@ -5,7 +5,7 @@
       flavor: orsys-3j
 
     - path: nlp
-      flavor: full
+      flavor: mmd
 
 - name: j2
   title: Jour 2 --- Classification Supervisée de Texte
@@ -16,14 +16,14 @@
 
     - title: Apprentissage supervisé
       path: supervised
-      flavor: text
+      flavor: mmd
 
 - name: j3
   title: Jour 3 --- NLP et Deep Learning
   sections:
     - title: Données séquentielles
       path: sequential-data
-      flavor: intro
+      flavor: dpl
 
     - title: TensorFlow \& Keras
       path: tf-keras

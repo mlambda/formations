@@ -9,16 +9,16 @@
       flavor: init-python
 
     - path: ml
-      flavor: full
+      flavor: bda
 
 - name: j2
   title: Jour 2 --- Algorithmes 1/2
   sections:
     - path: supervised
-      flavor: standard-nobayes
+      flavor: mlb
 
     - path: unsupervised
-      flavor: dimreduce
+      flavor: mlb
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2

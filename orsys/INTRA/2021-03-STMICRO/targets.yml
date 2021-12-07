@@ -40,11 +40,11 @@
   title: Jour 3 --- Langage et traitement de séquences
   sections:
     - path: nlp
-      flavor: intro
+      flavor: dpl
 
     - title: Données séquentielles
       path: sequential-data
-      flavor: intro
+      flavor: dpl
 
     - title: Réseaux de neurones récurrents
       path: nn/rnn

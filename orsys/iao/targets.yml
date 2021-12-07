@@ -15,7 +15,7 @@
       flavor: deep-discover-demo
 
     - path: unsupervised
-      flavor: light
+      flavor: iao
 
     - path: rl
       flavor: full

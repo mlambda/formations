@@ -5,19 +5,19 @@
       flavor: eni-5j
 
     - path: ml
-      flavor: ml5j
+      flavor: bda
 
 - name: j2
   title: Jour 2 --- Algorithmes 1/2
   sections:
     - path: supervised
-      flavor: standard
+      flavor: mlb
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
   sections:
     - path: unsupervised
-      flavor: full
+      flavor: bda
 
 - name: j4
   title: Jour 4 --- Réseaux de neurones

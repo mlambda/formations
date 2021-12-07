@@ -6,16 +6,16 @@
       flavor: orsys-5j
 
     - path: ml
-      flavor: ml5j
+      flavor: bda
 
 - name: j2
   title: Jour 2 --- Apprentissage Supervisé
   sections:
     - path: unsupervised
-      flavor: dimreduce-anodetect
+      flavor: ml3
 
     - path: supervised
-      flavor: standard-nobayes
+      flavor: mlb
 
 - name: j3
   title: Jour 3 --- Méthodes Bayésiennes, Réseaux de neurones
@@ -50,7 +50,7 @@
       flavor: full
 
     - path: nlp
-      flavor: intro-nn
+      flavor: dpl
 
     - path: nn/rnn
       flavor: full

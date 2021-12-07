@@ -27,10 +27,10 @@
   title: Jour 3 --- Langage et traitement de séquences
   sections:
     - path: nlp
-      flavor: intro
+      flavor: dpl
 
     - path: sequential-data
-      flavor: intro
+      flavor: dpl
 
     - path: nn/rnn
       flavor: full
