@@ -1,0 +1,27 @@
+default_titles:
+  naive-bayes: Naive Bayes
+  bayes-inference: Inférence et Apprentissage Bayésiens
+
+  gaussian-mixture: Mixture de gaussienne
+
+  modeles-graphiques: Réseaux Bayésiens
+
+  bayes-networks: "Réseaux Bayésiens"
+  tp-bayes: "Travaux Pratique : Réseaux Bayésiens"
+
+  hmm: Modèles de Markov cachés
+  markov-model: Modèles de Markov
+
+flavors:
+  mlb:
+    - /prerequisites/proba-rappel
+    - naive-bayes
+    - bayes-inference
+    - gaussian-mixture
+    - modeles-graphiques
+    - bayes-networks
+    - markov-model
+    - hmm
+    - /questions
+title: Données séquentielles
+version: 3
