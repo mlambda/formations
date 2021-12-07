@@ -25,17 +25,4 @@
       flavor: mlb
 
     - path: nn
-      flavor: deep-intro
-
-    - title: Keras
-      path: tf-keras
-      flavor: keras
-
-    - path: nn/cnn
-      flavor: full
-
-    - path: nn/ae
-      flavor: full
-
-    - path: nn/rnn
-      flavor: full
+      flavor: ml5j

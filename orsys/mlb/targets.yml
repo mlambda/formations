@@ -27,20 +27,7 @@
       flavor: mlb
 
     - path: nn
-      flavor: deep-intro
-
-    - title: Keras
-      path: tf-keras
-      flavor: keras
-
-    - path: nn/cnn
-      flavor: full
-
-    - path: nn/ae
-      flavor: full
-
-    - path: nn/rnn
-      flavor: full
+      flavor: mlb
 
 
 - name: j4
@@ -50,7 +37,7 @@
       flavor: gafa
 
     - path: tools
-      flavor: in-depth
+      flavor: devops
 
     - path: engineering
       flavor: mlcraftmyass

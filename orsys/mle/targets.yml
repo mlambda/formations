@@ -30,7 +30,7 @@
       flavor: mle
       
     - path: rl
-      flavor: light
+      flavor: mle
 
     - path: big-questions
       flavor: full

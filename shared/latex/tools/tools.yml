@@ -21,28 +21,22 @@ default_titles:
 flavors:
   demo-spark:
     - demo-spark-tf-keras-cnn
-  in-depth:
-    - hadoop
-    - spark
-    - kaggle
-    - arXiv
-    - github
-    - cloud-computing
-    - /questions
   init-python:
     - python
     - notebooks
     - anaconda
     - /questions
     - tp
-  detailed:
+  devops:
     - intro
     - ml-dl
     - environment
     - engineering
     - big-data
     - apis
+    - cloud-computing
     - information
+    - kaggle
     - /questions
   git:
     - git

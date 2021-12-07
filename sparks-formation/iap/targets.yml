@@ -26,10 +26,10 @@
       flavor: mle
       
     - path: rl
-      flavor: light
+      flavor: mle
 
     - path: tools
-      flavor: detailed
+      flavor: devops
 
     - path: big-questions
       flavor: full

@@ -22,10 +22,10 @@
       flavor: deep-intro
 
     - path: tools
-      flavor: detailed
+      flavor: devops
 
     - path: tf-keras
-      flavor: full-tp
+      flavor: bda
 
 - name: j3
   title: Jour 3 --- Traitement d'images et auto-encodeurs
@@ -38,7 +38,7 @@
       flavor: full
 
     - path: rl
-      flavor: full
+      flavor: drn
 
 
 - name: j4

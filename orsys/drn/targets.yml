@@ -17,7 +17,7 @@
       flavor: deep-intro
 
     - path: tf-keras
-      flavor: full-demo
+      flavor: drn
 
 - name: j2
   title: Jour 2
@@ -40,9 +40,9 @@
       flavor: full
 
     - path: rl
-      flavor: full
+      flavor: drn
 
     - path: tools
-      flavor: detailed
+      flavor: devops
 
     - contact

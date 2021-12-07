@@ -5,12 +5,12 @@ default_titles:
   intro: Introduction
   q-learning: Q-apprentissage
 flavors:
-  light:
+  mle:
     - intro
     - deep
     - alphago
     - /questions
-  full:
+  drn:
     - intro
     - q-learning
     - demo

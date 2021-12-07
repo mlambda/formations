@@ -13,19 +13,15 @@
       flavor: deep-intro
 
     - path: tools
-      flavor: detailed
+      flavor: devops
 
     - title: TensorFlow 2
       path: tf-keras
-      flavor: full-tp
+      flavor: bda
 
 - name: j2
   title: Jour 2 --- Traitement d'images et auto-encodeurs
   sections:
-    - title: Keras
-      path: tf-keras
-      flavor: keras
-
     - path: nn/cnn
       flavor: full
 
@@ -33,7 +29,7 @@
       flavor: full
 
     - path: rl
-      flavor: full
+      flavor: drn
 
 
 - name: j3

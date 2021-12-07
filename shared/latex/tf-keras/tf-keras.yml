@@ -2,27 +2,19 @@ default_titles:
   keras: Keras
   tf: TensorFlow 2
 flavors:
-  full:
-    - tf
-    - keras
-    - /questions
-  full-tp:
+  bda:
     - tf
     - /questions
     - tp-tf
     - keras
     - /questions
     - tp-keras
-  full-demo:
+  drn:
     - tf
     - /questions
     - tp-demo-tf
     - keras
     - /questions
     - tp-demo-keras
-  keras:
-    - keras: null
-    - /questions
-    - tp-keras
 title: TensorFlow et Keras
 version: 3

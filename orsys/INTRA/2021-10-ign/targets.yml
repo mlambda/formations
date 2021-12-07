@@ -10,7 +10,7 @@
     - path: supervised/classification
 
     - path: tf-keras
-      flavor: full-tp
+      flavor: bda
 
 - name: j2
   title: Jour 2 --- Traitement d'images et auto-encodeurs
@@ -37,6 +37,6 @@
       path: tp-image-segmentation
 
     - path: tools
-      flavor: detailed
+      flavor: devops
 
     - contact

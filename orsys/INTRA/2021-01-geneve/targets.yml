@@ -11,7 +11,7 @@
 
     - title: TensorFlow et Deep Learning
       path: tf-keras
-      flavor: full-tp
+      flavor: bda
 
     - path: nn/cnn
       flavor: full
@@ -21,7 +21,7 @@
       flavor: git
 
     - path: tools
-      flavor: detailed
+      flavor: devops
 
     - path: engineering
       flavor: deploying

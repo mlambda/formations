@@ -30,7 +30,7 @@
       flavor: deep-intro
 
     - path: tf-keras
-      flavor: full-tp
+      flavor: bda
 
     - path: nn/cnn
       flavor: full

@@ -49,10 +49,21 @@ flavors:
     - regularisation
     - playground
     - /questions
-    - $/tf-keras: full
+    - $/tf-keras: bda
     - $cnn: full
     - $gan: full
-    - $rnn: model
+    - $rnn: full
+    - help-pointers
+  mlb:
+    - intro
+    - playground
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - /questions
+    - $/tf-keras: bda
     - help-pointers
   recurrent-text:
     - intro

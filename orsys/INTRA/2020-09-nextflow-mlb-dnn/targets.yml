@@ -29,7 +29,7 @@
 
     - title: TensorFlow et Deep Learning
       path: tf-keras
-      flavor: full-tp
+      flavor: bda
 
     - path: big-questions
       flavor: full

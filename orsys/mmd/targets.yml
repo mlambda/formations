@@ -27,7 +27,7 @@
 
     - title: TensorFlow \& Keras
       path: tf-keras
-      flavor: full
+      flavor: bda
 
     - title: Réseaux de neurones récurrents
       path: nn
