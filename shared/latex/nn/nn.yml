@@ -15,7 +15,7 @@ flavors:
     - playground
     - $cnn: demo
     - $rnn: demo
-    - $gan: light
+    - $gan: full
     - /questions
     - help-pointers
   deep-discover-demo-light:

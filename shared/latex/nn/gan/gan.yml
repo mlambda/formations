@@ -8,8 +8,4 @@ flavors:
     - variants
     - /questions
     - demo
-  light:
-    - intro
-    - /questions
-    - demo
 title: Réseaux génératifs antagonistes
