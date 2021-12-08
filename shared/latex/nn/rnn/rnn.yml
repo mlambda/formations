@@ -37,9 +37,4 @@ flavors:
     - keras
     - /questions
     - demo
-  model:
-    - model
-    - lstm
-    - variants
-    - /questions
 title: Réseaux de neurones récurrents
