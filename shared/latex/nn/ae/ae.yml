@@ -2,11 +2,11 @@ default_titles:
   autoencoder: Présentation
   tp: Travaux Pratiques
 flavors:
-  full:
+  dpl:
     - autoencoder
     - /questions
     - tp
-  demo:
+  drn:
     - autoencoder
     - /questions
     - tp-demo

@@ -1,4 +1,4 @@
-- name: j1
+- name: j123
   title: Jour 1 --- TensorFlow pour le Deep Learning
   sections:
     - title: Deep Learning par la Pratique
@@ -10,44 +10,11 @@
 
     - title: Réseaux de neurones
       path: nn
-      flavor: deep-intro
-
-    - path: tools
-      flavor: devops
-
-    - title: TensorFlow 2
-      path: tf-keras
-      flavor: bda
-
-- name: j2
-  title: Jour 2 --- Traitement d'images et auto-encodeurs
-  sections:
-    - path: nn/cnn
-      flavor: full
-
-    - path: nn/ae
-      flavor: full
-
+      flavor: dpl
+    
     - path: rl
       flavor: drn
 
-
-- name: j3
-  title: Jour 3 --- Langage et traitement de séquences
-  sections:
-    - path: nlp
-      flavor: dpl
-
-    - title: Données séquentielles
-      path: sequential-data
-      flavor: dpl
-
-    - title: Réseaux de neurones récurrents
-      path: nn/rnn
-      flavor: full
-
-    - title: Réseaux transformeurs
-      path: nn/transformer
-      flavor: full
-
+    - path: tools
+      flavor: devops
     - contact

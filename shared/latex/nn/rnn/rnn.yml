@@ -5,31 +5,31 @@ default_titles:
   variants: Variantes
   /nlp/wordembeddings: Représentation de variables catégorielles
 flavors:
-  full:
+  dpl:
     - model
     - lstm
     - variants
     - keras
     - /questions
     - tp
-  full-no-tp:
+  intra-ign:
     - model
     - lstm
     - variants
     - keras
     - /questions
-  demo:
+  iao:
     - model
     - /questions
     - demo
-  demo-detailed:
+  mle:
     - /nlp/wordembeddings
     - model
     - lstm
     - variants
     - /questions
     - demo
-  demo-detailed-keras-with-word-embeddings:
+  drn:
     - /nlp/wordembeddings
     - model
     - lstm

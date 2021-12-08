@@ -1,4 +1,4 @@
-- name: j1
+- name: j123
   title: Jour 1 --- TensorFlow pour le Deep Learning
   sections:
     - title: Deep Learning par la Pratique
@@ -6,37 +6,7 @@
       flavor: orsys-3j
 
     - path: nn
-      flavor: deep-intro
-
-    - title: Classification
-      path: supervised/classification
-
-    - path: tf-keras
-      flavor: bda
-
-- name: j2
-  title: Jour 2 --- Traitement d'images et auto-encodeurs
-  sections:
-    - path: nn/cnn
-      flavor: full
-
-    - path: nn/ae
-      flavor: full
-
-- name: j3
-  title: Jour 3 --- Langage et traitement de séquences
-  sections:
-    - path: nlp
       flavor: dpl
-
-    - path: sequential-data
-      flavor: dpl
-
-    - path: nn/rnn
-      flavor: full
-
-    - path: nn/transformer
-      flavor: full
 
     - path: tools
       flavor: devops

@@ -23,7 +23,7 @@
   title: Jour 4 --- Réseaux de neurones
   sections:
     - path: nn
-      flavor: ml5j
+      flavor: ml5
 
 - name: j5
   title: Jour 5 --- Bonnes Pratiques. Systèmes de Recommendation
@@ -32,9 +32,6 @@
       flavor: mlcraftmyass
 
     - path: big-questions
-      flavor: full
-  
-    - path: nn/ae
       flavor: full
 
     - path: recommander-system

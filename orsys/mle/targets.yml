@@ -21,7 +21,7 @@
       flavor: mle
 
     - path: nn
-      flavor: deep-discover-demo-light
+      flavor: mle
 
 - name: j2
   title: Jour 2

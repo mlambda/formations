@@ -33,7 +33,7 @@
 
 
     - path: nn
-      flavor: deep-discover-demo-light
+      flavor: mle
 
     - path: nn/transformer
       flavor: full

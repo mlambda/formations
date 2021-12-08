@@ -7,29 +7,18 @@ default_titles:
   help-pointers: Des liens pour y revenir
 
 flavors:
-  full:
-    - data
-    - model
-    - /questions
-    - modern-architectures
-    - /questions
-    - keras
-    - /questions
-    - tp
-    - help-pointers
-
-  model-light:
+  ml1:
     - data
     - model
     - /questions
     - help-pointers
-  demo:
+  mle:
     - data
     - model
     - /questions
     - tp-demo
     - help-pointers
-  full-demo:
+  drn:
     - data
     - model
     - /questions
@@ -39,5 +28,15 @@ flavors:
     - keras
     - /questions
     - tp-demo
+    - help-pointers
+  dpl:
+    - data
+    - model
+    - /questions
+    - modern-architectures
+    - /questions
+    - keras
+    - /questions
+    - tp
     - help-pointers
 title: Réseaux de neurones à convolutions

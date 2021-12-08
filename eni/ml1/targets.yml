@@ -11,7 +11,7 @@
       flavor: intro
 
     - path: nn
-      flavor: intro-cnn
+      flavor: ml1
 
     - path: nlp
       flavor: dpl

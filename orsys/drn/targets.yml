@@ -1,4 +1,4 @@
-- name: j1
+- name: j123
   title: Jour 1
   sections:
     - path: about
@@ -14,30 +14,7 @@
       flavor: drn
 
     - path: nn
-      flavor: deep-intro
-
-    - path: tf-keras
       flavor: drn
-
-- name: j2
-  title: Jour 2
-  sections:
-
-    - path: nn/cnn
-      flavor: full-demo
-
-    - path: nn/rnn
-      flavor: demo-detailed-keras-with-word-embeddings
-
-    - path: nn/ae
-      flavor: demo
-
-- name: j3
-  title: Jour 3
-  sections:
-
-    - path: nn/gan
-      flavor: full
 
     - path: rl
       flavor: drn

@@ -12,7 +12,7 @@
       flavor: intro
 
     - path: nn
-      flavor: deep-discover-demo
+      flavor: iao
 
     - path: unsupervised
       flavor: iao

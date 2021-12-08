@@ -6,26 +6,33 @@ default_titles:
   regularisation: Régularisation
   help-pointers: Des liens pour y revenir
 flavors:
-  deep-discover-demo:
+  ml1:
+    - intro
+    - playground
+    - $cnn: ml1
+    - help-pointers
+  mle:
+    - intro
+    - playground
+    - $/tf-keras: drn
+    - $cnn: mle
+    - $rnn: mle
+    - /questions
+    - help-pointers
+  iao:
     - intro
     - playground
     - optimize
     - deep-optimize
     - regularisation
     - playground
-    - $cnn: demo
-    - $rnn: demo
+    - $/tf-keras: drn
+    - $cnn: mle
+    - $rnn: iao
     - $gan: full
     - /questions
     - help-pointers
-  deep-discover-demo-light:
-    - intro
-    - playground
-    - $cnn: demo
-    - $rnn: demo-detailed
-    - /questions
-    - help-pointers
-  deep-intro:
+  drn:
     - intro
     - playground
     - gradient-descent
@@ -34,27 +41,13 @@ flavors:
     - regularisation
     - playground
     - /questions
-    - help-pointers
-  intro-cnn:
-    - intro
-    - playground
-    - $cnn: model-light
-    - help-pointers
-  ml5j:
-    - intro
-    - playground
-    - gradient-descent
-    - optimize
-    - deep-optimize
-    - regularisation
-    - playground
-    - /questions
-    - $/tf-keras: bda
-    - $cnn: full
+    - $/tf-keras: drn
+    - $cnn: drn
+    - $rnn: drn
+    - $ae: drn
     - $gan: full
-    - $rnn: full
     - help-pointers
-  mlb:
+  bda:
     - intro
     - playground
     - gradient-descent
@@ -65,14 +58,51 @@ flavors:
     - /questions
     - $/tf-keras: bda
     - help-pointers
-  recurrent-text:
+  mmd:
     - intro
     - playground
     - optimize
     - deep-optimize
     - regularisation
     - playground
-    - $rnn: full
+    - $/tf-keras: bda
+    - $rnn: dpl
     - help-pointers
+  ml5:
+    - intro
+    - /supervised/classification
+    - playground
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - /questions
+    - $/tf-keras: bda
+    - $cnn: dpl
+    - $rnn: dpl
+    - $ae: dpl
+    - $gan: full
+    - help-pointers
+  dpl:
+    - intro
+    - /supervised/classification
+    - playground
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - /questions
+    - $/tf-keras: bda
+    - $cnn: dpl
+    - $ae: dpl
+    - $gan: full
+    - $/nlp: dpl
+    - $/sequential-data: dpl
+    - $rnn: dpl
+    - $transformer: full
+    - help-pointers
+
 title: Réseaux de neurones
 version: 3

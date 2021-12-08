@@ -7,14 +7,10 @@
 
     - title: Réseaux de Neurones
       path: nn
-      flavor: deep-intro
-
-    - title: TensorFlow et Deep Learning
-      path: tf-keras
       flavor: bda
 
     - path: nn/cnn
-      flavor: full
+      flavor: dpl
 
     - title: Git
       path: tools

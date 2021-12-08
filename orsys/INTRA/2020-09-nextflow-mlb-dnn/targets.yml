@@ -1,4 +1,4 @@
-- name: j1
+- name: j12345
   title: Jour 1 --- Introduction au Machine Learning
   sections:
     - path: about
@@ -8,52 +8,18 @@
     - path: ml
       flavor: bda
 
-- name: j2
-  title: Jour 2 --- Apprentissage Supervisé
-  sections:
     - path: unsupervised
       flavor: ml3
 
     - path: supervised
       flavor: mlb
 
-- name: j3
-  title: Jour 3 --- Méthodes Bayésiennes, Réseaux de neurones
-  sections:
     - path: bayesian
       flavor: mlb
-
-    - title: Réseaux de Neurones
-      path: nn
-      flavor: deep-intro
-
-    - title: TensorFlow et Deep Learning
-      path: tf-keras
-      flavor: bda
 
     - path: big-questions
       flavor: full
 
-- name: j4
-  title: Jour 4 --- Neurones et Images 2/2
-  sections:
-    - path: nn/cnn
-      flavor: full
-
-    - path: nn/ae
-      flavor: full
-
-- name: j5
-  title: Jour 5 --- Neurones et Séquences
-  sections:
-    - path: sequential-data
-      flavor: intra
-
-    - path: nlp
+    - title: Réseaux de Neurones
+      path: nn
       flavor: dpl
-
-    - path: nn/rnn
-      flavor: full
-
-    - path: nn/transformer
-      flavor: full

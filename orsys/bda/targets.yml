@@ -33,15 +33,7 @@
       flavor: svm-text
     
     - path: nn
-      flavor: deep-intro
-
-    - path: tf-keras
       flavor: bda
 
-    - path: nn/cnn
-      flavor: full
-
-    - path: nn/rnn
-      flavor: full
 
     - contact

@@ -27,10 +27,4 @@
       flavor: full
 
     - path: nn
-      flavor: deep-intro
-
-    - path: tf-keras
       flavor: bda
-
-    - path: nn/cnn
-      flavor: full

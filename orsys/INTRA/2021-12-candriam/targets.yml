@@ -25,4 +25,4 @@
       flavor: mlb
 
     - path: nn
-      flavor: ml5j
+      flavor: ml5

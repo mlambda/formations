@@ -31,7 +31,7 @@
 
     - title: Réseaux de neurones récurrents
       path: nn
-      flavor: recurrent-text
+      flavor: mmd
 
     - title: Transformeurs
       path: nn/transformer
