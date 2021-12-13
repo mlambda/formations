@@ -8,11 +8,10 @@ version = "1.0.0"
 
 [tool.poetry.dependencies]
 Pygments = "^2.9.0"
-python = ">= 3.8, < 3.11"
-numpy = "^1.21.4"
 matplotlib = "^3.5.1"
-scikit-learn = "^1.0.1"
-deckz = "^16.2.0"
+plots = {path = "figures/plt", develop = true}
+python = ">= 3.8, < 3.11"
+deckz = "^17.0.0"
 
 [tool.poetry.dev-dependencies]
 black = "^21.12b0"

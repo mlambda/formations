@@ -1,4 +1,4 @@
-from deckz.plot_utils import save
+from deckz.standalones import register_plot
 
 
 def main(hidden_label: str, data_label: str, degree_label: str) -> None:
@@ -49,5 +49,11 @@ def main(hidden_label: str, data_label: str, degree_label: str) -> None:
     plot_polynomial(15, ax3)
 
 
-save(lambda: main("Fonction cachée", "Observations", "Degré"))
-save(lambda: main("Hidden function", "Training data", "Degree"), "en")
+@register_plot()
+def overfit_polynomial() -> None:
+    main("Fonction cachée", "Observations", "Degré")
+
+
+@register_plot()
+def overfit_polynomial_en() -> None:
+    main("Hidden function", "Training data", "Degree")
