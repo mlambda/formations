@@ -6,7 +6,7 @@
 
 ## Participants
 
-Développeur voulant produire des fonctionnalités moderne de traitement automatique du langage naturel.
+Développeur voulant produire des fonctionnalités modernes de traitement automatique du langage naturel.
 
 ## Prérequis
 
@@ -31,7 +31,6 @@ Multiples cas d'utilisation avec Keras.
 - Introduction à l'intelligence artificielle ;
 - De l'importance des données et des prétraitements ;
 - Les différents cadres : non-supervisé, supervisé, renforcement ;
-- Utilisation du texte dans le cadre de signaux hétérogènes.
 
 ### Concepts fondamentaux d'un réseau de neurones
 
@@ -39,37 +38,40 @@ Multiples cas d'utilisation avec Keras.
 - Apprentissage d'un réseau de neurones : fonctions de coût, SGD, Adam ;
 - Initialisation et régularisation : orthogonalité à l'initialisation, régularisations L1/L2, politiques de batchs, dropout.
 
-### Traitement automatique du langage naturel (*TALN*)
+### Traitement automatique du langage naturel
 
+- Représentation sac de mots, TFIDF ;
+- Prétraitements usuels (étiquetage morphosyntaxique, lemmatisation, etc) ;
 - Dictionnaire de mots et n-gram ;
-- Représentation One-hot et Word-embeddings ;
+- Représentation one-hot et word embeddings.
+- Utilisation du texte dans le cadre de signaux hétérogènes.
 
-### Réseaux Reccurents (*RNNs*)
+### Réseaux récurrents (RNNs)
 
 - Présentation des RNNs : principes fondamentaux et applications ;
-- Fonctionnement fondamental d'un RNN : padding, taille des séquences ;
+- Variantes modernes : LSTMs, GRUs, réseaux bi-directionnels ;
+- Éléments techniques de gestion des RNNs : padding, taille des séquences ;
+- Mécanisme de décodage pour produire une séquence.
 
 ### Modèles à attention
 
-- Transformer ;
-- .
+- Attention simple intégrée à un RNN ;
+- Modèles transformeurs ;
+- Architectures encodeur-décodeur ou à base de masque ;
+- Variantes modernes : Reformer, Performer, XLNet, etc.
 
 ### Cas d'utilisation du traitement du langage moderne
 
-- Classif ;
-- QA/selection/NLU ;
+- Classification ;
+- Question/réponse, sélection de texte pertinent et compréhension de langage ;
 - Génération conditionnelle ;
-- Transfert & multitache (superglue) ;
-- Chatbot avec dialog flow ;
-- Big ARTM (détection de thématique).
+- Transfert & multitâche (SuperGLUE) ;
+- Agents conversationnels avec DialogFlow ;
+- Détection de thématiques avec BigARTM.
 
-### Interprétations de RNN
+### Questions éthiques
 
-- ?
-
-### Attaques de RNN
-
-- ?
-
-
-
+- Perpétuation des biais des données ;
+- Représentation des sous-populations dans les données ;
+- Intoxication des conversations publiques avec des données générées ;
+- Utilisation des données utilisateurs (RGPD & CNIL).

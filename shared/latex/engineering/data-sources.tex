@@ -1,93 +1,125 @@
-\begin{frame}
-  \frametitle{Sources de données}
-  \V{["img/trends-bigdata-ml", "tw", 1.0] | image}
-\end{frame}
+\fmg{
+  \begin{frame}{Sources de données}
+    \V{["img/trends-bigdata-ml", "tw", 1.0] | image}
+  \end{frame}
+}
 
-\begin{frame}
-  \frametitle{Sources de données}
-  Les différents formats de sources de  données :
+\begin{frame}{Formats de données}
   \begin{itemize}
-  \item Fichiers (TXT, CSV, Xml, Json, ...)
-  \item BDD Relationnelles : SQL
-  \item BDD ``pas que'' Relationnelles : NoSQL (Représentation non-tabulaire des données)
+    \item Fichiers (textes, CSV, XML, JSON, HDF5, Parquet, …)
+    \item BDDs relationnelles : SQL
+    \item BDDs ``pas que'' relationnelles : NoSQL (représentation non-tabulaire des données)
   \end{itemize}
-  \V{["img/bdd", "th", 0.5] | image}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Sources de données}
-  Dans un premier temps, les données internes de l'entreprise
-  \V{["img/datalake", "tw", 0.9] | image}
+\begin{frame}{Types de données}
+  \begin{itemize}
+    \item Logs d'activité (tabulaire)
+    \item IOT (capteurs)
+    \item Réseaux sociaux
+    \item Open data (data-gouv.fr, geonames.org, ...)
+    \item Web crawling 
+  \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Sources de données}
-  Entrepot de données sur les clients (Datawarehouse)
-  \V{["img/data-warehouse", "tw", 0.9] | image}
+\begin{frame}{Lac de données (\textit{data lake})}
+
+  Caractéristiques
+
+  \begin{itemize}
+    \item Espace de stockage global pour les informations de l'entreprise
+    \item Pas de schéma de données
+    \item Pas de format imposé
+    \item Pas de transactions
+    \item Potentiellement volatile
+  \end{itemize}
+
+  Utilité
+
+  \begin{itemize}
+    \item[\textcolor{green}{+}] Facilité \& faible coût de stockage, scalable
+    \item[\textcolor{red}{-}] Pas de gouvernance, de vérification d'intégrité
+    \item[\textcolor{red}{-}] Pas de transactionnalité
+  \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Extract Transform Load (ETL)}
+\begin{frame}{Entrepôt de données (\textit{data warehouse})}
+  Caractéristiques
+
+  \begin{itemize}
+    \item Espace de stockage global pour les informations de l'entreprise
+    \item Schéma de données
+    \item Base de données relationnelle
+    \item Transactions
+    \item Non volatile
+  \end{itemize}
+
+  Utilité
+
+  \begin{itemize}
+    \item[\textcolor{green}{+}] Gouvernance \& vérifications d'intégrité
+    \item[\textcolor{red}{-}] Peu scalable
+    \item[\textcolor{red}{-}] Travail important de normalisation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\textit{Lakehouse}}
+  Combinaison de data lake \& data warehouse~: utilisation des normes de la warehouse sur du stockage big data
+  \begin{itemize}
+    \item Espace de stockage global pour les informations de l'entreprise
+    \item Schéma de données
+    \item Format imposé (par exemple Parquet)
+    \item Transactions
+    \item Non volatile
+  \end{itemize}
+
+  Utilité
+
+  \begin{itemize}
+    \item[\textcolor{green}{+}] Gouvernance \& vérifications d'intégrité
+    \item[\textcolor{green}{+}] Scalable
+    \item[\textcolor{red}{-}] Travail important de normalisation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Extraction Transformation Chargement (\textit{ETL})}
   \V{["img/etl-schema", "th", 0.45] | image}
   \begin{minipage}[l]{0.49\linewidth}
-    Orientés \textbf{synchronisation}
+    Orientés \textbf{Synchronisation}
     \begin{itemize}
-    \item Blendo
-    \item Fivetran
-    \item Segment
-    \item Stitch
-    \item ...
+      \item Blendo
+      \item Fivetran
+      \item Segment
+      \item Stitch
     \end{itemize}
   \end{minipage}\hfill
   \begin{minipage}[l]{0.49\linewidth}
-    Orientés \textbf{Transformations}
+    Orientés \textbf{Transformation}
     \begin{itemize}
-    \item DataVirtuality
-    \item Alooma
-    \item Etleap
-    \item Xplenty
-    \item ...
+      \item DataVirtuality
+      \item Alooma
+      \item Etleap
+      \item Xplenty
     \end{itemize}
   \end{minipage}\hfill
 \end{frame}
 
-\begin{frame}
-  \frametitle{Sources de données}
-  Processus de gestion (ERP)
-  \V{["img/erp", "th", 0.8] | image}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Sources de données}
-  Forme des données :
+\begin{frame}{Sources de données}
+  Bases de données sur les clients disponibles~:
   \begin{itemize}
-  \item logs d'activité (tabulaire)
-  \item IOT (capteurs)
-  \item Réseaux sociaux
-  \item Open-data (data-gouv.fr, geonames.org, ...)
-  \item Web crawling 
-  \end{itemize}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Sources de données}
-  Bases de données sur les clients dsponibles :
-  \begin{itemize}
-  \item Institut de sondage
-  \item Réseaux sociaux
-  \item Profils clients
-  \item ...
+    \item Instituts de sondage
+    \item Réseaux sociaux
+    \item Profils clients
+    \item ...
   \end{itemize}
 \end{frame}
     
-\begin{frame}
-  \frametitle{Sources de données}
+\begin{frame}{Sources de données}
   Des places de marché en ligne de données :
   \begin{itemize}
-  \item Microsoft Azure Marketplace
-  \item Datamarket
-  \item Data Publica
-  \item ...
+    \item Microsoft Azure Marketplace
+    \item Datamarket
+    \item Data Publica
+    \item ...
   \end{itemize}
 \end{frame}
