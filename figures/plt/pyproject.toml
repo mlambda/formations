@@ -1,11 +1,13 @@
 [tool.poetry]
 authors = ["mlambda <142691+m09@users.noreply.github.com>"]
 description = ""
+include = ["data/**/*"]
 name = "plots"
 version = "0.1.0"
 
 [tool.poetry.dependencies]
 matplotlib = "^3.5.1"
+pandas = "^1.3.5"
 python = ">= 3.8, < 3.11"
 scikit-learn = "^1.0.1"
 

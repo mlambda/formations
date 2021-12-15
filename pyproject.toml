@@ -11,7 +11,7 @@ Pygments = "^2.9.0"
 matplotlib = "^3.5.1"
 plots = {path = "figures/plt", develop = true}
 python = ">= 3.8, < 3.11"
-deckz = "^17.0.0"
+deckz = "^17.2.0"
 
 [tool.poetry.dev-dependencies]
 black = "^21.12b0"
