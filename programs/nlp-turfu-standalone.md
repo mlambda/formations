@@ -31,7 +31,6 @@ Multiples cas d'utilisation avec Keras.
 - Introduction à l'intelligence artificielle ;
 - De l'importance des données et des prétraitements ;
 - Les différents cadres : non-supervisé, supervisé, renforcement ;
-- Utilisation du texte dans le cadre de signaux hétérogènes.
 
 ### Concepts fondamentaux d'un réseau de neurones
 
@@ -45,6 +44,7 @@ Multiples cas d'utilisation avec Keras.
 - Prétraitements usuels (étiquetage morphosyntaxique, lemmatisation, etc) ;
 - Dictionnaire de mots et n-gram ;
 - Représentation one-hot et word embeddings.
+- Utilisation du texte dans le cadre de signaux hétérogènes.
 
 ### Réseaux récurrents (RNNs)
 
