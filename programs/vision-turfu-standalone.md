@@ -2,19 +2,19 @@
 
 ## Durée
 
-3 jours.
+4 jours.
 
 ## Participants
 
-Analystes des données, ingénieurs ML.
+Développeur voulant produire des fonctionnalités moderne de traitement d'image
 
 ## Prérequis
 
-Bonne connaissance et pratique du Machine Learning avec Python.
+Notions de Python, produit scalaire, matrices, moyenne, variance, dérivation
 
 ## Description
 
-Formation avancée spécialisée dans le traitement d'images.
+Formation spécialisée dans le traitement d'images.
 
 ## Objectifs pédagogiques
 
@@ -26,7 +26,13 @@ Multiples cas d'utilisation avec Keras.
 
 ## Programme
 
-### Rappels : Concepts fondamentaux d'un réseau de neurones
+### Données, Intelligence Artificielle et Machine Learning
+
+- Introduction à l'intelligence artificielle ;
+- De l'importance des données et des prétraitements ;
+- Les différents cadres : non-supervisé, supervisé, renforcement.
+
+### Concepts fondamentaux d'un réseau de neurones
 
 - Réseau de neurones : formalisme, fonctions d'activations ;
 - Apprentissage d'un réseau de neurones : fonctions de coût, SGD, Adam ;

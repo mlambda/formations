@@ -30,8 +30,8 @@ Multiples cas d'utilisation avec Keras.
 
 - Introduction à l'intelligence artificielle ;
 - De l'importance des données et des prétraitements ;
-- Les différents cadres : non-supervisé, supervisé, renforcement.
-- input hétérogène
+- Les différents cadres : non-supervisé, supervisé, renforcement ;
+- Utilisation du texte dans le cadre de signaux hétérogènes.
 
 ### Concepts fondamentaux d'un réseau de neurones
 
@@ -41,10 +41,8 @@ Multiples cas d'utilisation avec Keras.
 
 ### Traitement automatique du langage naturel (*TALN*)
 
--  ;
--  ;
--  ;
-- .
+- Dictionnaire de mots et n-gram ;
+- Représentation One-hot et Word-embeddings ;
 
 ### Réseaux Reccurents (*RNNs*)
 
@@ -67,7 +65,11 @@ Multiples cas d'utilisation avec Keras.
 
 ### Interprétations de RNN
 
+- ?
+
 ### Attaques de RNN
+
+- ?
 
 
 
