@@ -1,51 +1,67 @@
 # The Vision of TurFu
 
 ## Durée
-    4j
+
+4 jours.
+
 ## Participants
-    data-analyst, ml-engieneer
+
+Analystes des données, ingénieurs ML.
+
 ## Prérequis
-    Machine Learning et python
+
+Bonne connaissance et pratique du Machine Learning avec Python.
+
 ## Description
-    Formation avancée spécialisée dans le traitement d'images
+
+Formation avancée spécialisée dans le traitement d'images.
+
 ## Objectifs pédagogiques
-    Acquérir les fondamentaux de l'état de l'art en traitement d'image
+
+Acquérir les fondamentaux de l'état de l'art en traitement d'image.
+
 ## Travaux pratiques
-    Oui
+
+Multiples cas d'utilisation avec Keras.
+
 ## Programme
 
-__Concepts fondamentaux d'un réseau de neurones__
+### Concepts fondamentaux d'un réseau de neurones
 
-- Le réseau de neurones : formalisme, fonctions d'activations,
-- L'apprentissage d'un réseau de neurones : fonctions de coût, SGD, ADAM, ...
-- Initialisation et Régularisation : Orthogonalité à l'initialisation, L1/L2 Regularization, Batch Normalization, Dropout.
+- Réseau de neurones : formalisme, fonctions d'activations ;
+- Apprentissage d'un réseau de neurones : fonctions de coût, SGD, Adam ;
+- Initialisation et régularisation : orthogonalité à l'initialisation, régularisations L1/L2, normalisation de batchs, dropout.
 
-__Convolutional Neural Networks (CNN)__
+### Réseaux convolutifs (*CNNs*)
 
-- Présentation des CNNs : principes fondamentaux et applications.
-- Fonctionnement fondamental d'un CNN : kernel, padding et stride...
-- Quelques exemples classiques : LeNet, VGG Networks, Network in Network...
-- Transfert Learning
+- Présentation des CNNs : principes fondamentaux et applications ;
+- Fonctionnement fondamental d'un CNN : filtre, remplissage et pas de convolution ;
+- Quelques exemples classiques : LeNet, VGG, Network in Network ;
+- Architectures modernes : ResNet, DenseNet ;
+- Transfert d'apprentissage.
 
-__Auto-encodeur et GAN__
-- Auto-encoder : réduction de dimensionnalité, semi-supervisé et détection d'anomalie
-- Présentation de Generative Adversarial Networks (GAN).
-- Convergence d'un GAN : Wasserstein, BeGAN, Earth Moving Distance.
-- Régularisation
-- semi-supervisé
+### Auto-encodeurs et réseaux antagonistes (*GANs*)
 
-__Modèles__
-- Object detection
-- Segmentation instance / image
-- Unobfuscation
-- Object Tracking (YoloV4)
+- Auto-encodeurs : réduction de dimensionnalité & détection d'anomalie ;
+- Présentation des réseaux antagonistes (GAN) ;
+- Convergence d'un GAN : WassersteinGAN, BeGAN, distance du terrassier (*Earth Moving Distance*) ;
+- Régularisation ;
+- Entraînement sans supervision & en semi-supervision.
 
-__Interpretations de CNN__
-- Saliency maps
-- gradconv
-- occlusion sensitivty
-- D-Rise (Black-box Explanation of Object Detectors via Saliency Maps)
+### Cas d'utilisation de la vision par ordinateur moderne
 
-__Attaques de CNN__
+- Détection d'objets ;
+- Segmentation d'instances et d'images ;
+- Unobfuscation / inpainting ;
+- Suivi vidéo avec YoloV4 (*Object Tracking*).
+
+### Interprétations de CNN
+
+- Saliency maps ;
+- gradconv ;
+- occlusion sensitivty ;
+- D-Rise (Black-box Explanation of Object Detectors via Saliency Maps).
+
+### Attaques de CNN
+
 - Papier du cul
-
