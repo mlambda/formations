@@ -21,6 +21,5 @@
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
   sections:
-
     - path: nn
       flavor: ml5
