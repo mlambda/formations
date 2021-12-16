@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from deckz.standalones import register_plot
 
 
@@ -12,44 +14,31 @@ def main(drivers_label: str, cnns_label: str) -> None:
     btc_path = "data/stock-prices/BTC-USD.csv"
     eth_path = "data/stock-prices/ETH-USD.csv"
 
-    def tonum(x):
-        return int(x[0:4]) + (int(x[5:7]) - 1) * 30 / 365 + int(x[9:]) / 365
-
-    def convert(df):
-        return df.apply(lambda x: tonum(x))
-
     def load_csv(path: str) -> DataFrame:
         content = get_data(__name__, path)
         if content is None:
             raise RuntimeError(f"Could not load {path}")
-        return read_csv(StringIO(content.decode("utf8")))
+        df = read_csv(
+            StringIO(content.decode("utf8")), index_col="Date", parse_dates=True
+        )
+        df = df.resample("90d").mean()
+        return df
 
     nvidia_df = load_csv(nvidia_path)
-    x = nvidia_df["Date"]
-    y = nvidia_df["Open"]
-    x_nvidia = convert(x)
-    plt.plot(x_nvidia, y, label="NVIDIA")
+    plt.plot(nvidia_df.index, nvidia_df["Open"], label="NVIDIA")
 
     btc_df = load_csv(btc_path)
-    x = btc_df["Date"]
-    y = btc_df["Open"]
-    x_btc = convert(x)
-    plt.plot(x_btc, y / 100, label="BTC/100")
+    plt.plot(btc_df.index, btc_df["Open"] / 100, "--", label="BTC/100")
 
     eth_df = load_csv(eth_path)
-    x = eth_df["Date"]
-    y = eth_df["Open"]
-    x_eth = convert(x)
-    plt.plot(x_eth, y / 10, label="ETH/10")
+    plt.plot(eth_df.index, eth_df["Open"] / 10, "-.", label="ETH/10")
 
-    cuda = tonum("2007-06-23")
-    cuda = [cuda, cuda]
-    catneuron = tonum("2012-07-12")
-    catneuron = [catneuron, catneuron]
-    plt.plot(cuda, [0, 100], c="k")
-    plt.annotate(drivers_label, (cuda[0] - 2.2, 115))
-    plt.plot(catneuron, [0, 200], c="k")
-    plt.annotate(cnns_label, (catneuron[0] - 2.2, 215))
+    cuda = datetime.fromisoformat("2007-06-23")
+    catneuron = datetime.fromisoformat("2012-07-01")
+    plt.plot([cuda, cuda], [0, 100], ":k")
+    plt.annotate(drivers_label, (cuda, 115), ha="center")
+    plt.plot([catneuron, catneuron], [0, 200], ":k")
+    plt.annotate(cnns_label, (catneuron, 215), ha="center")
     plt.legend(prop={"size": 15})
 
 

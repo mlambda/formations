@@ -64,12 +64,12 @@ def main(
 
     preds_x = linspace(0, 8, n * 1000)
 
-    for degree, color in [(3, "b"), (5, "g"), (8, "r")]:
+    for degree, fmt in [(3, "-.b"), (5, "--g"), (8, "r")]:
         poly = poly1d(polyfit(x, y, degree))
         ax.plot(
             preds_x,
             poly(preds_x),
-            c=color,
+            fmt,
             label=f"{degree_label} {degree}",
             linewidth=4,
         )

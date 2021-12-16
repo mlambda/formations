@@ -19,10 +19,26 @@ def main(
     ax.plot(x, y, c="g", label=validation_label, linewidth=4)
 
     y = 3 / (x + 1) ** 2
-    ax.plot(x, y, c="b", label=train_label, linewidth=4)
-    ax.plot([1.884499, 1.884499], [0, 0.831687178], c="r", linewidth=4)
+    ax.plot(x, y, "--", c="b", label=train_label, linewidth=4)
+    ax.plot([1.884499, 1.884499], [0, 0.831687178], ":", c="r", linewidth=4)
 
-    ax.annotate(optimum_label, (2, 0.6), fontsize=30)
+    ax.annotate(
+        optimum_label,
+        xy=[1.884499, 0.831687178],
+        xytext=(15, -60),
+        textcoords="offset points",
+        fontsize=30,
+        ha="left",
+        va="top",
+        arrowprops=dict(
+            arrowstyle="->",
+            color="black",
+            linewidth=0.75,
+            connectionstyle="arc3,rad=0.2",
+            shrinkB=20,
+            relpos=(0.5, 1),
+        ),
+    )
 
     ax.set_xlabel(complexity_label, fontsize=30)
     ax.set_ylabel(error_label, fontsize=30)

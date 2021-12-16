@@ -18,8 +18,10 @@ class Overfitting(metaclass=Singleton):
         from sklearn.model_selection import train_test_split
         from sklearn.svm import LinearSVC
         from tensorflow import keras
+        from tensorflow.random import set_seed
 
         seed(42)
+        set_seed(42)
 
         # Création des données
         N = 300
@@ -89,7 +91,7 @@ class Overfitting(metaclass=Singleton):
 
         Z_nn = model_nn.predict(to_predict)
         self.zz_nn = Z_nn.reshape(self.xx.shape)
-        self.linewidth = 3
+        self.linewidth = 2
 
     def plot_all(
         self,
@@ -111,6 +113,7 @@ class Overfitting(metaclass=Singleton):
             handles + [svm_artist, nn_artist],
             labels + [svm_label, nn_label.format(n_hidden=self.n_hidden)],
             loc="upper right",
+            markerscale=2,
         )
 
     def plot_train(self, svm_label: str, nn_label: str, hidden_label: str) -> None:
@@ -123,6 +126,7 @@ class Overfitting(metaclass=Singleton):
             handles + [svm_artist, nn_artist],
             labels + [svm_label, nn_label.format(n_hidden=self.n_hidden)],
             loc="upper right",
+            handlelength=5,
         )
 
     def _initialize_ax(self, ax: Axes, title: Optional[str]) -> None:
@@ -150,32 +154,47 @@ class Overfitting(metaclass=Singleton):
             fig, ax1 = plt.subplots(figsize=(6, 5))
             self._initialize_ax(ax1, title=train_title)
 
+        y0_train_mask = self.y_train == 0
+        y1_train_mask = self.y_train == 1
+        y0_mask = self.y == 0
+        y1_mask = self.y == 1
+
         # Data points scatter plot(s)
-        ax1.scatter(
-            self.X_train[:, 0],
-            self.X_train[:, 1],
-            s=30,
-            c=self.y_train,
-            cmap=plt.cm.rainbow,
-            edgecolors="k",
+        ax1.plot(
+            self.X_train[:, 0][y0_train_mask],
+            self.X_train[:, 1][y0_train_mask],
+            "bv",
+            markersize=2,
+        )
+
+        ax1.plot(
+            self.X_train[:, 0][y1_train_mask],
+            self.X_train[:, 1][y1_train_mask],
+            "r^",
+            markersize=2,
         )
 
         if also_plot_all_data:
-            ax2.scatter(
-                self.X[:, 0],
-                self.X[:, 1],
-                s=30,
-                c=self.y,
-                cmap=plt.cm.rainbow,
-                edgecolors="k",
+            ax2.plot(
+                self.X[:, 0][y0_mask],
+                self.X[:, 1][y0_mask],
+                "bv",
+                markersize=2,
+            )
+
+            ax2.plot(
+                self.X[:, 0][y1_mask],
+                self.X[:, 1][y1_mask],
+                "r^",
+                markersize=2,
             )
 
         # Hidden function
         ax1.plot(
             numpy_sort(self.X[:, 1]),
             numpy_sort(self.X[:, 1]) ** 2 + -0.4,
+            "--k",
             linewidth=self.linewidth,
-            c="g",
             label=hidden_label,
         )
 
@@ -183,8 +202,8 @@ class Overfitting(metaclass=Singleton):
             ax2.plot(
                 numpy_sort(self.X[:, 1]),
                 numpy_sort(self.X[:, 1]) ** 2 + -0.4,
+                "--k",
                 linewidth=self.linewidth,
-                c="g",
             )
 
         if also_plot_all_data:
@@ -197,17 +216,25 @@ class Overfitting(metaclass=Singleton):
             self.xx,
             self.yy,
             self.zz_svm,
-            levels=[0.5],
+            linestyles="dotted",
+            levels=[0],
             linewidths=self.linewidth,
-            colors="b",
+            colors="g",
         )
         contours_nn = ax.contour(
             self.xx,
             self.yy,
             self.zz_nn,
             levels=[0.5],
-            linewidths=self.linewidth,
+            linewidths=0.5,
             colors="m",
+        )
+        ax.contourf(
+            self.xx,
+            self.yy,
+            self.zz_nn,
+            levels=[0, 0.5, 1],
+            colors=[(0, 0, 1, 0.07), (1, 0, 0, 0.07)],
         )
         return contours_svm.legend_elements()[0][0], contours_nn.legend_elements()[0][0]
 

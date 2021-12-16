@@ -19,7 +19,7 @@ def main(data_label: str) -> None:
     h = f + g
 
     ax.plot(x, f, c="r", label="$f(x)$", linewidth=4)
-    ax.plot(x, g, c="g", label="$g(x)$", linewidth=4)
+    ax.plot(x, g, "-.", c="g", label="$g(x)$", linewidth=4)
     ind = permutation(len(x))[:200]
     ax.scatter(x[ind], h[ind], c="b", label=data_label)
 

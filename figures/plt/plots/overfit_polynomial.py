@@ -31,7 +31,7 @@ def main(hidden_label: str, data_label: str, degree_label: str) -> None:
     def plot_polynomial(degree: int, ax: Axes) -> None:
         poly = fit_poly(x, y, degree)
         preds_y = poly(preds_x)
-        ax.plot(preds_x, y_real, c="g", label=hidden_label)
+        ax.plot(preds_x, y_real, "--", c="g", label=hidden_label)
         ax.scatter(x, y, label=data_label)
         ax.plot(preds_x, preds_y, c="r", label=f"{degree_label} {poly.order}")
         rmse_obs = mean_squared_error(y, poly(x))
