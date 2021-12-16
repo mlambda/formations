@@ -1,6 +1,9 @@
+from os.path import join as path_join
+from tempfile import TemporaryDirectory
 from typing import Optional, Tuple, Union
 
 from deckz.standalones import register_plot
+from matplotlib.artist import Artist
 from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 
@@ -43,7 +46,7 @@ class Overfitting(metaclass=Singleton):
         # Entraînement du NN
         hidden_size = 50
         self.n_hidden = 10
-        epochs = 2_000
+        epochs = 3_000
         patience = 50
         learning_rate = 1e-4
 
@@ -64,24 +67,25 @@ class Overfitting(metaclass=Singleton):
             loss="binary_crossentropy",
             metrics=["accuracy"],
         )
-
-        model_nn.fit(
-            self.X_train,
-            self.y_train,
-            epochs=epochs,
-            batch_size=1024,
-            callbacks=[
-                keras.callbacks.EarlyStopping(monitor="loss", patience=patience),
-                keras.callbacks.ModelCheckpoint(
-                    filepath="overfitting_best_model.h5",
-                    monitor="accuracy",
-                    mode="max",
-                    save_weights_only=True,
-                    save_best_only=True,
-                ),
-            ],
-        )
-        model_nn.load_weights("overfitting_best_model.h5")
+        with TemporaryDirectory() as tmpdirname:
+            best_model_path = path_join(tmpdirname, "overfitting_best_model.h5")
+            model_nn.fit(
+                self.X_train,
+                self.y_train,
+                epochs=epochs,
+                batch_size=1024,
+                callbacks=[
+                    keras.callbacks.EarlyStopping(monitor="loss", patience=patience),
+                    keras.callbacks.ModelCheckpoint(
+                        filepath=best_model_path,
+                        monitor="accuracy",
+                        mode="max",
+                        save_weights_only=True,
+                        save_best_only=True,
+                    ),
+                ],
+            )
+            model_nn.load_weights(best_model_path)
 
         Z_nn = model_nn.predict(to_predict)
         self.zz_nn = Z_nn.reshape(self.xx.shape)
@@ -91,8 +95,8 @@ class Overfitting(metaclass=Singleton):
         self,
         train_title: str,
         all_title: str,
-        label_svm: str,
-        label_nn: str,
+        svm_label: str,
+        nn_label: str,
         hidden_label: str,
     ) -> None:
         fig, ax1, ax2 = self._setup_plot(  # type: ignore
@@ -100,16 +104,26 @@ class Overfitting(metaclass=Singleton):
             train_title=train_title,
             all_title=all_title,
         )
-        self._add_contours(ax1, label_nn=label_nn, label_svm=label_svm)
+        svm_artist, nn_artist = self._add_contours(ax1)
         self._add_contours(ax2)
-        ax1.legend(loc="lower right")
+        handles, labels = ax1.get_legend_handles_labels()
+        ax1.legend(
+            handles + [svm_artist, nn_artist],
+            labels + [svm_label, nn_label.format(n_hidden=self.n_hidden)],
+            loc="upper right",
+        )
 
-    def plot_train(self, label_svm: str, label_nn, hidden_label: str) -> None:
+    def plot_train(self, svm_label: str, nn_label: str, hidden_label: str) -> None:
         fig, ax1 = self._setup_plot(
             also_plot_all_data=False, hidden_label=hidden_label
         )  # type: ignore
-        self._add_contours(ax1, label_nn=label_nn, label_svm=label_svm)
-        ax1.legend(loc="upper right")
+        svm_artist, nn_artist = self._add_contours(ax1)
+        handles, labels = ax1.get_legend_handles_labels()
+        ax1.legend(
+            handles + [svm_artist, nn_artist],
+            labels + [svm_label, nn_label.format(n_hidden=self.n_hidden)],
+            loc="upper right",
+        )
 
     def _initialize_ax(self, ax: Axes, title: Optional[str]) -> None:
         ax.set_xticks([])
@@ -178,10 +192,8 @@ class Overfitting(metaclass=Singleton):
         else:
             return fig, ax1
 
-    def _add_contours(
-        self, ax: Axes, label_svm: Optional[str] = None, label_nn: Optional[str] = None
-    ):
-        contours = ax.contour(
+    def _add_contours(self, ax: Axes) -> Tuple[Artist, Artist]:
+        contours_svm = ax.contour(
             self.xx,
             self.yy,
             self.zz_svm,
@@ -189,9 +201,7 @@ class Overfitting(metaclass=Singleton):
             linewidths=self.linewidth,
             colors="b",
         )
-        if label_svm is not None:
-            contours.collections[0].set_label(label_svm)
-        contours = ax.contour(
+        contours_nn = ax.contour(
             self.xx,
             self.yy,
             self.zz_nn,
@@ -199,8 +209,7 @@ class Overfitting(metaclass=Singleton):
             linewidths=self.linewidth,
             colors="m",
         )
-        if label_nn is not None:
-            contours.collections[0].set_label(label_nn.format(n_hidden=self.n_hidden))
+        return contours_svm.legend_elements()[0][0], contours_nn.legend_elements()[0][0]
 
 
 @register_plot()
@@ -209,8 +218,8 @@ def overfitting() -> None:
     overfitting.plot_all(
         train_title="Données d'entraînement",
         all_title="Toutes les données",
-        label_svm="SVM à noyau linéaire",
-        label_nn="Réseau de neurones à {n_hidden} couches cachées",
+        svm_label="SVM à noyau linéaire",
+        nn_label="Réseau de neurones à {n_hidden} couches cachées",
         hidden_label="Fonction cachée",
     )
 
@@ -219,7 +228,7 @@ def overfitting() -> None:
 def overfitting_train() -> None:
     overfitting = Overfitting()
     overfitting.plot_train(
-        label_svm="SVM à noyau linéaire",
-        label_nn="Réseau de neurones à {n_hidden} couches cachées",
+        svm_label="SVM à noyau linéaire",
+        nn_label="Réseau de neurones à {n_hidden} couches cachées",
         hidden_label="Fonction cachée",
     )
