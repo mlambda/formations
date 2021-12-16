@@ -6,7 +6,6 @@ default_titles:
   tp: Travaux pratiques
   tsne-umap: Projections non-linéaires
   tuto: Exemples \texttt{scikit-learn}
-  help-pointers: Des liens pour y revenir
 
 flavors:
   bda:

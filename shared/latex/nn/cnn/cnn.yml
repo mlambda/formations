@@ -4,7 +4,6 @@ default_titles:
   model: Modèle
   modern-architectures: Architectures modernes
   tp: Travaux pratiques
-  help-pointers: Des liens pour y revenir
 
 flavors:
   ml1:

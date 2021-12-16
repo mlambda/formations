@@ -4,7 +4,6 @@ default_titles:
   isolation-forest: Forêt d'isolement
   lof: Local Outlier Factor
   /supervised/trees: Introduction aux arbres de décision
-  help-pointers: Des liens pour y revenir
 
 flavors:
   full:

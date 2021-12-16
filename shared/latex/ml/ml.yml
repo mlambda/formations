@@ -6,7 +6,6 @@ default_titles:
   learning: Apprentissage
   tp-data: Travaux Pratiques
   /tp-help: Ressources pour les travaux pratiques
-  help-pointers: Des liens pour y revenir
 
 flavors:
   intro:

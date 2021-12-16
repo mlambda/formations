@@ -4,7 +4,6 @@ default_titles:
   intro: Introduction
   optimize: Optimisation des hyper-paramètres
   regularisation: Régularisation
-  help-pointers: Des liens pour y revenir
 flavors:
   ml1:
     - intro

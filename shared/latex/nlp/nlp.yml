@@ -9,7 +9,6 @@ default_titles:
   tf-idf: Représentations TF-IDF
   wordembeddings: Word Embeddings
   /python/regexes/regexes: Expressions régulières
-  help-pointers: Des liens pour y revenir
 
 flavors:
   mle:

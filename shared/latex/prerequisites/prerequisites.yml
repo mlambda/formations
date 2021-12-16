@@ -6,7 +6,6 @@ default_titles:
   probabilities: Probabilités
   proba-rappel: Probabilités
   statistics: Statistique
-  help-pointers: Des liens pour y revenir
 flavors:
   full:
     - goals
