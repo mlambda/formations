@@ -1,36 +1,28 @@
-from datetime import datetime
-
 from deckz.standalones import register_plot
 
 
 def main(drivers_label: str, cnns_label: str) -> None:
-    from io import StringIO
-    from pkgutil import get_data
+    from datetime import datetime
 
     import matplotlib.pyplot as plt
-    from pandas import DataFrame, read_csv
+    from pandas import DataFrame
 
-    nvidia_path = "data/stock-prices/NVDA.csv"
-    btc_path = "data/stock-prices/BTC-USD.csv"
-    eth_path = "data/stock-prices/ETH-USD.csv"
+    from .utils import load_csv
 
-    def load_csv(path: str) -> DataFrame:
-        content = get_data(__name__, path)
-        if content is None:
-            raise RuntimeError(f"Could not load {path}")
-        df = read_csv(
-            StringIO(content.decode("utf8")), index_col="Date", parse_dates=True
+    def load_stock_csv(name: str) -> DataFrame:
+        df = load_csv(
+            f"data/stock-prices/{name}.csv", index_col="Date", parse_dates=True
         )
         df = df.resample("90d").mean()
         return df
 
-    nvidia_df = load_csv(nvidia_path)
+    nvidia_df = load_stock_csv("NVDA")
     plt.plot(nvidia_df.index, nvidia_df["Open"], label="NVIDIA")
 
-    btc_df = load_csv(btc_path)
+    btc_df = load_stock_csv("BTC-USD")
     plt.plot(btc_df.index, btc_df["Open"] / 100, "--", label="BTC/100")
 
-    eth_df = load_csv(eth_path)
+    eth_df = load_stock_csv("ETH-USD")
     plt.plot(eth_df.index, eth_df["Open"] / 10, "-.", label="ETH/10")
 
     cuda = datetime.fromisoformat("2007-06-23")
