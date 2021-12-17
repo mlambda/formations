@@ -32,6 +32,9 @@
     - path: rl
       flavor: mle
 
+    - path: tools
+      flavor: devops
+
     - path: big-questions
       flavor: full
 
