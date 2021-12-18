@@ -252,10 +252,32 @@ def overfitting() -> None:
 
 
 @register_plot()
+def overfitting_en() -> None:
+    overfitting = Overfitting()
+    overfitting.plot_all(
+        train_title="Training data",
+        all_title="All data",
+        svm_label="Linear kernel SVM",
+        nn_label="Neural network with {n_hidden} hidden layers",
+        hidden_label="True function",
+    )
+
+
+@register_plot()
 def overfitting_train() -> None:
     overfitting = Overfitting()
     overfitting.plot_train(
         svm_label="SVM à noyau linéaire",
         nn_label="Réseau de neurones à {n_hidden} couches cachées",
         hidden_label="Fonction cachée",
+    )
+
+
+@register_plot()
+def overfitting_train_en() -> None:
+    overfitting = Overfitting()
+    overfitting.plot_train(
+        svm_label="Linear kernel SVM",
+        nn_label="Neural network with {n_hidden} hidden layers",
+        hidden_label="True function",
     )

@@ -1,6 +1,9 @@
+from contextlib import contextmanager
 from io import StringIO
+from os.path import join as path_join
 from pkgutil import get_data
-from typing import Any, Dict, Type, TypeVar
+from tempfile import NamedTemporaryFile
+from typing import IO, Any, Dict, Iterator, Type, TypeVar
 
 from pandas import DataFrame, read_csv
 
@@ -18,10 +21,21 @@ class Singleton(type):
         return cls._instances[cls]
 
 
-def load_csv(path: str, **kwargs: Any) -> DataFrame:
-    content = get_data(__name__, path)
+def _load_resource(path: str) -> bytes:
+    content = get_data(__name__, path_join("data", path))
     if content is None:
         raise RuntimeError(f"Could not load {path}")
-    df = read_csv(StringIO(content.decode("utf8")), index_col="Date", parse_dates=True)
-    df = df.resample("90d").mean()
-    return df
+    return content
+
+
+def load_csv(path: str, **kwargs: Any) -> DataFrame:
+    return read_csv(StringIO(_load_resource(path).decode("utf8")), **kwargs)
+
+
+@contextmanager
+def resource_as_binary_tempfile(path: str) -> Iterator[IO[bytes]]:
+    content = _load_resource(path)
+    with NamedTemporaryFile() as fh:
+        fh.write(content)
+        fh.seek(0)
+        yield fh

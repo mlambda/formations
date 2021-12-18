@@ -10,9 +10,7 @@ def main(drivers_label: str, cnns_label: str) -> None:
     from .utils import load_csv
 
     def load_stock_csv(name: str) -> DataFrame:
-        df = load_csv(
-            f"data/stock-prices/{name}.csv", index_col="Date", parse_dates=True
-        )
+        df = load_csv(f"stock-prices/{name}.csv", index_col="Date", parse_dates=True)
         df = df.resample("90d").mean()
         return df
 
