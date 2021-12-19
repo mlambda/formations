@@ -1,4 +1,0 @@
-author: mlambda
-license: CC-BY-SA-4.0
-title: scipy.stats.probplot(X, dist='norm', plot=plt)
-title_en: Q-Q plot on AMES data

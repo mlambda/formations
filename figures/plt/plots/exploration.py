@@ -97,6 +97,41 @@ class Exploration(metaclass=Singleton):
         ax = histplot(self.train_y, kde=True, linewidth=0)
         ax.set(xlabel=saleprice_label, ylabel=count_label)
 
+    def plot_hist_gaussian(self, saleprice_label: str, density_label: str) -> None:
+        from numpy import linspace
+        from scipy.stats import norm
+        from seaborn import histplot
+
+        ax = histplot(self.train_y, kde=True, linewidth=0, stat="density")
+        ax.set(xlabel=saleprice_label, ylabel=density_label)
+        mu, std = norm.fit(self.train_y)
+        xx = linspace(*ax.get_xlim(), 100)  # type: ignore
+        ax.plot(xx, norm.pdf(xx, mu, std), "k-")
+
+    def plot_qq(self, quantiles_label: str, values_label: str) -> None:
+        import matplotlib.pyplot as plt
+        from scipy.stats import probplot
+
+        _, ax = plt.subplots()
+        probplot(self.train_y, dist="norm", plot=ax)
+        ax.set(title=None, xlabel=quantiles_label, ylabel=values_label)
+
+    def plot_corrmat(self, title: str) -> None:
+        import matplotlib.pyplot as plt
+        from seaborn import diverging_palette, heatmap
+
+        sale_price_corrs = self.train_X.corrwith(self.train_y).sort_values().dropna()
+        top_corrs_index = sale_price_corrs[-10:][::-1].index
+        top_anticorrs_index = sale_price_corrs[:10].index
+        index = top_corrs_index.union(top_anticorrs_index, sort=False)
+        heatmap(
+            self.train_X.loc[:, index].corr(),
+            vmin=-1,
+            vmax=1,
+            cmap=diverging_palette(220, 20, n=100),
+        )
+        plt.title(title)
+
 
 @register_plot()
 def histplot() -> None:
@@ -108,3 +143,47 @@ def histplot() -> None:
 def histplot_en() -> None:
     exploration = Exploration()
     exploration.plot_hist(saleprice_label="Sale price", count_label="Count")
+
+
+@register_plot()
+def histplot_gaussian() -> None:
+    exploration = Exploration()
+    exploration.plot_hist_gaussian(
+        saleprice_label="Prix de vente", density_label="Densité"
+    )
+
+
+@register_plot()
+def histplot_gaussian_en() -> None:
+    exploration = Exploration()
+    exploration.plot_hist_gaussian(
+        saleprice_label="Sale price", density_label="Density"
+    )
+
+
+@register_plot()
+def qq_plot() -> None:
+    exploration = Exploration()
+    exploration.plot_qq(
+        quantiles_label="Quantiles théoriques", values_label="Valeurs triées"
+    )
+
+
+@register_plot()
+def qq_plot_en() -> None:
+    exploration = Exploration()
+    exploration.plot_qq(
+        quantiles_label="Theoretical quantiles", values_label="Ordered values"
+    )
+
+
+@register_plot()
+def corrmat() -> None:
+    exploration = Exploration()
+    exploration.plot_corrmat(title="Plus grandes corrélations et anti-corrélations")
+
+
+@register_plot()
+def corrmat_en() -> None:
+    exploration = Exploration()
+    exploration.plot_corrmat(title="Biggest correlations and anti-correlations")

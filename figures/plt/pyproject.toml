@@ -6,13 +6,14 @@ name = "plots"
 version = "0.1.0"
 
 [tool.poetry.dependencies]
+Pillow = "^8.4.0"
 matplotlib = "^3.5.1"
 pandas = "^1.3.5"
 python = ">= 3.8, < 3.10"
 scikit-learn = "^1.0.1"
-tensorflow = "^2.7.0"
-Pillow = "^8.4.0"
+scipy = "^1.7.3"
 seaborn = "^0.11.2"
+tensorflow = "^2.7.0"
 
 [tool.poetry.dev-dependencies]
 black = "^21.12b0"
