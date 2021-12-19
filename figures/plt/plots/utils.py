@@ -1,9 +1,11 @@
 from contextlib import contextmanager
-from io import StringIO
+from io import BytesIO, StringIO
 from os.path import join as path_join
+from pathlib import Path
 from pkgutil import get_data
 from tempfile import NamedTemporaryFile
 from typing import IO, Any, Dict, Iterator, Type, TypeVar
+from zipfile import ZipFile
 
 from pandas import DataFrame, read_csv
 
@@ -28,8 +30,10 @@ def _load_resource(path: str) -> bytes:
     return content
 
 
-def load_csv(path: str, **kwargs: Any) -> DataFrame:
-    return read_csv(StringIO(_load_resource(path).decode("utf8")), **kwargs)
+def load_csv(path: Path, **kwargs: Any) -> DataFrame:
+    with ZipFile(BytesIO(_load_resource(str(path.with_suffix(".csv.zip"))))) as zip_fh:
+        with zip_fh.open(f"{path.name}.csv") as fh:
+            return read_csv(StringIO(fh.read().decode("utf8")), **kwargs)
 
 
 @contextmanager

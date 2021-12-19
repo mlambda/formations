@@ -3,14 +3,17 @@ from deckz.standalones import register_plot
 
 def main(drivers_label: str, cnns_label: str) -> None:
     from datetime import datetime
+    from pathlib import Path
 
     import matplotlib.pyplot as plt
     from pandas import DataFrame
 
     from .utils import load_csv
 
+    stock_prices_dir = Path("stock-prices")
+
     def load_stock_csv(name: str) -> DataFrame:
-        df = load_csv(f"stock-prices/{name}.csv", index_col="Date", parse_dates=True)
+        df = load_csv(stock_prices_dir / name, index_col="Date", parse_dates=True)
         df = df.resample("90d").mean()
         return df
 
