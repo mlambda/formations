@@ -132,24 +132,53 @@ class Exploration(metaclass=Singleton):
         )
         plt.title(title)
 
+    def plot_scatter(self, area_label: str, saleprice_label: str) -> None:
+        from seaborn import jointplot
+
+        joint_grid = jointplot(x=self.train_X["GrLivArea"] / 10.764, y=self.train_y)
+        joint_grid.ax_joint.set(xlabel=area_label, ylabel=saleprice_label)
+
+    def plot_violin(self, quality_label: str, saleprice_label: str) -> None:
+        from seaborn import violinplot
+
+        ax = violinplot(x=self.train_X["OverallQual"], y=self.train_y)
+        ax.set(xlabel=quality_label, ylabel=saleprice_label)
+
+    def plot_bar(self, quality_label: str, saleprice_label: str) -> None:
+        from seaborn import barplot
+
+        ax = barplot(x=self.train_X["OverallQual"], y=self.train_y)
+        ax.set(xlabel=quality_label, ylabel=saleprice_label)
+
+    def plot_reg(self, area_label: str, saleprice_label: str):
+        from seaborn import regplot
+
+        ax = regplot(
+            x=self.train_X["GrLivArea"] / 10.764,
+            y=self.train_y,
+            scatter_kws=dict(alpha=0.10),
+            line_kws=dict(color="red"),
+        )
+        ax.set(xlabel=area_label, ylabel=saleprice_label)
+
 
 @register_plot()
 def histplot() -> None:
     exploration = Exploration()
-    exploration.plot_hist(saleprice_label="Prix de vente", count_label="Décompte")
+    exploration.plot_hist(saleprice_label="Prix de vente ($)", count_label="Décompte")
 
 
 @register_plot()
 def histplot_en() -> None:
     exploration = Exploration()
-    exploration.plot_hist(saleprice_label="Sale price", count_label="Count")
+    exploration.plot_hist(saleprice_label="Sale price ($)", count_label="Count")
 
 
 @register_plot()
 def histplot_gaussian() -> None:
     exploration = Exploration()
     exploration.plot_hist_gaussian(
-        saleprice_label="Prix de vente", density_label="Densité"
+        saleprice_label="Prix de vente ($)", density_label="Densité"
     )
 
 
@@ -157,7 +186,7 @@ def histplot_gaussian() -> None:
 def histplot_gaussian_en() -> None:
     exploration = Exploration()
     exploration.plot_hist_gaussian(
-        saleprice_label="Sale price", density_label="Density"
+        saleprice_label="Sale price ($)", density_label="Density"
     )
 
 
@@ -165,7 +194,7 @@ def histplot_gaussian_en() -> None:
 def qq_plot() -> None:
     exploration = Exploration()
     exploration.plot_qq(
-        quantiles_label="Quantiles théoriques", values_label="Valeurs triées"
+        quantiles_label="Quantiles théoriques", values_label="Prix de vente triés ($)"
     )
 
 
@@ -173,7 +202,7 @@ def qq_plot() -> None:
 def qq_plot_en() -> None:
     exploration = Exploration()
     exploration.plot_qq(
-        quantiles_label="Theoretical quantiles", values_label="Ordered values"
+        quantiles_label="Theoretical quantiles", values_label="Ordered sale prices ($)"
     )
 
 
@@ -187,3 +216,65 @@ def corrmat() -> None:
 def corrmat_en() -> None:
     exploration = Exploration()
     exploration.plot_corrmat(title="Biggest correlations and anti-correlations")
+
+
+@register_plot()
+def scatter_plot() -> None:
+    exploration = Exploration()
+    exploration.plot_scatter(
+        area_label="Surface (m²)", saleprice_label="Prix de vente ($)"
+    )
+
+
+@register_plot()
+def scatter_plot_en() -> None:
+    exploration = Exploration()
+    exploration.plot_scatter(
+        area_label="Ground area (m²)", saleprice_label="Sale price ($)"
+    )
+
+
+@register_plot()
+def violin_plot() -> None:
+    exploration = Exploration()
+    exploration.plot_violin(
+        quality_label="Qualité globale", saleprice_label="Prix de vente ($)"
+    )
+
+
+@register_plot()
+def violin_plot_en() -> None:
+    exploration = Exploration()
+    exploration.plot_violin(
+        quality_label="Global quality", saleprice_label="Sale price ($)"
+    )
+
+
+@register_plot()
+def bar_plot() -> None:
+    exploration = Exploration()
+    exploration.plot_bar(
+        quality_label="Qualité globale", saleprice_label="Prix de vente ($)"
+    )
+
+
+@register_plot()
+def bar_plot_en() -> None:
+    exploration = Exploration()
+    exploration.plot_bar(
+        quality_label="Global quality", saleprice_label="Sale price ($)"
+    )
+
+
+@register_plot()
+def reg_plot() -> None:
+    exploration = Exploration()
+    exploration.plot_reg(area_label="Surface (m²)", saleprice_label="Prix de vente ($)")
+
+
+@register_plot()
+def reg_plot_en() -> None:
+    exploration = Exploration()
+    exploration.plot_reg(
+        area_label="Ground area (m²)", saleprice_label="Sale price ($)"
+    )
