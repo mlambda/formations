@@ -161,6 +161,39 @@ class Exploration(metaclass=Singleton):
         )
         ax.set(xlabel=area_label, ylabel=saleprice_label)
 
+    def plot_reglin_mse_loss(self, error_label: str) -> None:
+        import matplotlib.pyplot as plt
+        from numpy import linspace, meshgrid, zeros_like
+        from sklearn.preprocessing import StandardScaler
+
+        X = self.train_X[["GrLivArea"]].values
+        Y = self.train_y.values[:, None]
+
+        x_scaled = StandardScaler().fit_transform(X)[:, 0]
+        y_scaled = StandardScaler().fit_transform(Y)[:, 0]
+
+        def mse(theta_0: float, theta_1: float) -> float:
+            return ((x_scaled * theta_1 + theta_0 - y_scaled) ** 2).mean()
+
+        xx, yy = meshgrid(linspace(-4, 4, 100), linspace(-4, 4, 100))
+        zz = zeros_like(xx)
+
+        for i in range(xx.shape[0]):
+            for j in range(xx.shape[1]):
+                zz[i, j] = mse(xx[i, j], yy[i, j])
+
+        fig, ax = plt.subplots(subplot_kw=dict(projection="3d"))
+        ax.plot_surface(xx, yy, zz)
+
+        ax.set(
+            xlabel=r"$\theta_0$",
+            ylabel=r"$\theta_1$",
+            zlabel=error_label,
+            xticklabels=[],
+            yticklabels=[],
+            zticklabels=[],
+        )
+
 
 @register_plot()
 def histogram() -> None:
@@ -278,3 +311,15 @@ def reg_plot_en() -> None:
     exploration.plot_reg(
         area_label="Ground area (m²)", saleprice_label="Sale price ($)"
     )
+
+
+@register_plot()
+def linear_regression_error_surface() -> None:
+    exploration = Exploration()
+    exploration.plot_reglin_mse_loss(error_label="Erreur quadratique moyenne")
+
+
+@register_plot()
+def linear_regression_error_surface_en() -> None:
+    exploration = Exploration()
+    exploration.plot_reglin_mse_loss(error_label="Mean squared error")
