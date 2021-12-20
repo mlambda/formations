@@ -163,19 +163,19 @@ class Exploration(metaclass=Singleton):
 
 
 @register_plot()
-def histplot() -> None:
+def histogram() -> None:
     exploration = Exploration()
     exploration.plot_hist(saleprice_label="Prix de vente ($)", count_label="Décompte")
 
 
 @register_plot()
-def histplot_en() -> None:
+def histogram_en() -> None:
     exploration = Exploration()
     exploration.plot_hist(saleprice_label="Sale price ($)", count_label="Count")
 
 
 @register_plot()
-def histplot_gaussian() -> None:
+def histogram_gaussian() -> None:
     exploration = Exploration()
     exploration.plot_hist_gaussian(
         saleprice_label="Prix de vente ($)", density_label="Densité"
@@ -183,7 +183,7 @@ def histplot_gaussian() -> None:
 
 
 @register_plot()
-def histplot_gaussian_en() -> None:
+def histogram_gaussian_en() -> None:
     exploration = Exploration()
     exploration.plot_hist_gaussian(
         saleprice_label="Sale price ($)", density_label="Density"
