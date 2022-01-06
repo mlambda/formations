@@ -1,4 +1,4 @@
-# Traitement automatique du langage par deep learning.
+# Traitement automatique du langage par deep learning (Expert)
 
 ## Durée
 

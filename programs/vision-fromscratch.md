@@ -1,4 +1,4 @@
-# Traitement d'image par Deep Learning
+# Traitement d'image par Deep Learning from sratch
 
 ## Durée
 
