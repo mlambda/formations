@@ -10,7 +10,7 @@ version = "1.0.0"
 Pygments = "^2.9.0"
 plots = {path = "figures/plt", develop = true}
 python = ">= 3.8, < 3.10"
-deckz = "^17.4.0"
+deckz = "^18.0.0"
 
 [tool.poetry.dev-dependencies]
 black = "^21.12b0"
