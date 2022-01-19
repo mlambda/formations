@@ -22,4 +22,7 @@
   title: Jour 3 --- Algorithmes 2/2
   sections:
     - path: nn
-      flavor: ml5
+      flavor: dpl
+
+    - contact
+
