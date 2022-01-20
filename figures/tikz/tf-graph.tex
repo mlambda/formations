@@ -1,0 +1,27 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \node [hencoder,circle] (op1) at (0, 3) {+};
+    \node [hencoder,circle] (op2) at (-1, 1.5) {*};
+    \node [hencoder,circle] (op3) at (1, 1.5) {+};
+    \node [hencoder,circle] (op4) at (-2, 0) {*};
+    \node [input,circle] (var1) at (-2, -1.5) {x};
+    \node [input,circle] (var2) at (0, 0 ) {y};
+    \node [input,circle] (var3) at (2, 0) {6};
+
+    \path[->,>=stealth] (op2.north) edge (op1.south west);
+    \path[->,>=stealth] (op3.north) edge (op1.south east);
+    \path[->,>=stealth] (op4.north) edge (op2.south west);
+    \path[->,>=stealth] (var2.north) edge (op2.south east);
+    \path[->,>=stealth] (var2.north) edge (op3.south west);
+    \path[->,>=stealth] (var3.north) edge (op3.south east);
+    \path[->,>=stealth] (var1.north) edge [bend left=15] (op4.south west);
+    \path[->,>=stealth] (var1.north) edge [bend right=15] (op4.south east);
+
+    \node [output] (f) at (-4,3) {$f(x,y)=x^2y+y+6$};
+
+  \end{tikzpicture}
+\end{document}
