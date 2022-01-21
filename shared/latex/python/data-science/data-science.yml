@@ -1,0 +1,17 @@
+default_titles:
+  intro: Introduction
+  matplotlib: \texttt{matplotlib}
+  numpy: \texttt{numpy}
+  pandas: \texttt{pandas}
+
+flavors:
+  full:
+    - intro
+    - numpy
+    - /questions
+    - pandas
+    - /questions
+    - matplotlib
+    - /questions
+
+title: Modules de science des données

@@ -41,6 +41,9 @@ flavors:
     - /python/regexes/regexes
     - /questions
     - /python/regexes/tp-regexes
+    - oop
+    - tp-oop
+    - /questions
     - exceptions
     - /questions
   no-tp:
@@ -64,6 +67,8 @@ flavors:
     - native-functions
     - /questions
     - /python/regexes/regexes
+    - /questions
+    - oop
     - /questions
     - exceptions
     - /questions

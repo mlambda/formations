@@ -1,0 +1,20 @@
+- name: j1
+  title: Jour 1
+  sections:
+    - path: about
+      flavor: sparks-formation-2j
+
+    - path: python/basics
+      flavor: full
+
+- name: j2
+  title: Jour 2
+  sections:
+    - path: python/testing
+      flavor: full
+
+    - path: python/linting
+      flavor: full
+
+    - path: python/data-science
+      flavor: full
