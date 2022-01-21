@@ -2,39 +2,37 @@ print(
     r"""\documentclass[beamer,crop,tikz]{standalone}
 \usepackage{formation}
 \begin{document}
-  \begin{tikzpicture}[transparent/.style={text opacity=1, text=black}]"""
+  \begin{tikzpicture}[x=2cm,transparent/.style={text opacity=1, text=black}]"""
 )
 
-words = ["J", "ai", "vraiment", "adoré", "ce", "film", "il", "est", "super"]
+for y in range(1,5):
+    print(rf"""\node[input] (I{y}) at (0, {3 - y}) {{$X_{y}$}};""")
 
-for i, word in enumerate(words):
-    i_o = i / (len(words) + 1)
-    h_o = (i + 1) / (len(words) + 1)
-    print(
-        f"""
-    \\node[hencoder, transparent, fill opacity={h_o}] (H{i}) at ({i * 1.5}, 1) {{$h_{i}$}};
-    \\node[input, transparent, fill opacity={i_o}] (WE{i}) at ({i * 1.5}, 0) {{$x_{i}$}};
-    \\node[anchor=mid] (TI{i}) at ({i * 1.5}, -1) {{{word}}};
-    \\draw[->] (WE{i}) -- (H{i});
-    \\draw[densely dotted] (TI{i}) -- (WE{i});
-    \\draw[color=gray] ({i* 1.5 - 0.5}, -1.4)
-      -- ({i * 1.5 - 0.5}, -1.5)
-      -- ({i* 1.5 + 0.5}, -1.5) node [below, midway] {{$t_{i}$}}
-      -- ({i* 1.5 + 0.5}, -1.4);"""
-    )
-for i in range(len(words) - 1):
-    print(
-        f"""
-    \\draw[->] (H{i}) -- (H{i + 1});"""
-    )
+for h in range(1,7):
+    for y in range(1,5):
+        op = h/6
+        print(rf"""\node[hencoder, transparent, fill opacity={op}] (H{h}{y}) at ({h}, {3 - y}) {{}};""")    
+
+for y in range(1,5):
+    print(rf"""\node[output] (O{y}) at (7, {3 - y}) {{$O_{y}$}};""")
+
+for i in range(1,5):
+    for j in range(1,5):
+        print(rf"""\draw[->,>=stealth] (I{i}.east) to (H1{j}.west);""")
+
+for h in range(1,6):
+    for i in range(1,5):
+        for j in range(1,5):
+            print(rf"""\draw[->,>=stealth] (H{h}{i}.east) to (H{h+1}{j}.west);""")
+    
+
+for i in range(1,5):
+    for j in range(1,5):
+        print(rf"""\draw[->,>=stealth] (H6{i}.east) to (O{j}.west);""")
 
 print(
-    f"""
-    \\node[output] (O) at ({(len(words) - 1) * 1.5}, 2) {{$y$}};
-    \\node[anchor=mid] (TO) at ({(len(words) - 1) * 1.5}, 3) {{Positif}};
-    \\draw[->] (H{len(words) - 1}) -- (O);
-    \\draw[densely dotted] (O) -- (TO);
-  \\end{{tikzpicture}}
-\\end{{document}}
+    rf"""
+  \end{{tikzpicture}}
+\end{{document}}
 """
 )
