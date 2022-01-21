@@ -1,0 +1,29 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \node [input,circle,minimum size=1.5cm] (C) at (7, 7) {};
+    \node [input,circle,minimum size=1.5cm] (T) at (3, 5) {};
+    \node [input,circle,minimum size=1.5cm] (F) at (11, 5) {};
+    \node [output,circle,minimum size=1.8cm] (PA) at (1,   2.5) {};
+    \node [input,circle,minimum size=1.5cm] (TT) at (4, 2.5) {};
+    \node [input,circle,minimum size=1.5cm] (TTT) at (10, 2.5) {};
+    \node [output,circle,minimum size=1.8cm] (B) at (13, 2.5) {};
+    \node [output,circle,minimum size=1.8cm] (PO1) at (3, 0) {};
+    \node [output,circle,minimum size=1.8cm] (R) at (5.5, 0) {};
+    \node [output,circle,minimum size=1.8cm] (PO2) at (8.5, 0) {};
+    \node [output,circle,minimum size=1.8cm] (CI) at (11, 0) {};
+    \path[->,>=stealth] (C)     edge node [left]   {} (T);
+    \path[->,>=stealth] (C)     edge node [right]  {} (F);
+    \path[->,>=stealth] (T)     edge node [left]   {} (PA);
+    \path[->,>=stealth] (T)     edge node [right]  {} (TT);
+    \path[->,>=stealth] (TT)    edge node [left]   {} (PO1);
+    \path[->,>=stealth] (TT)    edge node [right]  {} (R);
+    \path[->,>=stealth] (F)     edge node [left]   {} (TTT);
+    \path[->,>=stealth] (F)     edge node [right]  {} (B);
+    \path[->,>=stealth] (TTT)   edge node [left]   {} (PO2);
+    \path[->,>=stealth] (TTT)   edge node [right]  {} (CI);
+  \end{tikzpicture}
+\end{document}
