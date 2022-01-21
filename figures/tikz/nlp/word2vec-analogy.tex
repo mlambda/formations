@@ -1,0 +1,20 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}[x=2cm]
+    % Neurones
+    \node[input,circle,minimum size=1.6cm] (man)   at (0,0) {homme};
+    \node[input,circle,minimum size=1.6cm] (woman) at ($(man)+(1.5,1)$) {femme};
+    \node[input,circle,minimum size=1.6cm] (uncle)   at (0.5,2) {oncle};
+    \node[input,circle,minimum size=1.6cm] (aunt) at ($(uncle)+(1.5,1)$) {tante};
+    \node[input,circle,minimum size=1.6cm] (king)   at (1,-1) {roi};
+    \node[input,circle,minimum size=1.6cm] (queen) at ($(king)+(1.5,1)$) {reine};
+
+    \path[->,>=stealth] (man) edge (woman);
+    \path[->,>=stealth] (uncle) edge (aunt);
+    \path[->,>=stealth] (king) edge (queen);
+
+  \end{tikzpicture}
+\end{document}
