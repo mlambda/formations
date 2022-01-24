@@ -7,9 +7,9 @@
     - path: python/intro
       flavor: full
 
-- name: j2
-  title: Jour 2 --- Ingénierie
-  sections:
+    - path: python/basics
+      flavor: lpy
+
     - path: python/linting
       flavor: full
 
