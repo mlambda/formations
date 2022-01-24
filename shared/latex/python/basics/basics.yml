@@ -7,6 +7,7 @@ default_titles:
   functions: Fonctions
   lists: Listes
   native-functions: Fonctions natives
+  oop: Programmation orientée objet
   support: Support de cours
   tuples: N-uplets
   variables: Types de base et variables
