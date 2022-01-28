@@ -1,0 +1,11 @@
+>>> a, b = np.array([1, 2]), np.array([3, 4]); a, b
+(array([1, 2]), array([3, 4]))
+
+>>> a + 2, a - 2, a * 2, a ** 2
+(array([3, 4]), array([-1,  0]), array([2, 4]), array([1, 4]))
+
+>>> a + b, a - b, a * b, a @ b, a ** b
+(array([4, 6]), array([-2, -2]), array([3, 8]), 11, array([ 1, 16]))
+
+>>> a.min(), a.max(), a.std(), a.mean(), a.sum()
+(1, 2, 0.5, 1.5, 3)

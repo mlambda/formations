@@ -1,0 +1,15 @@
+>>> a = np.arange(4); a
+array([0, 1, 2, 3])
+
+>>> a.reshape(2, 2)
+array([[0, 1],
+       [2, 3]])
+
+>>> a[:, np.newaxis]
+array([[0],
+       [1],
+       [2],
+       [3]])
+
+>>> a[np.newaxis, :]
+array([[0, 1, 2, 3]])
