@@ -5,7 +5,7 @@ x = np.linspace(0, np.pi * 4, 1000)
 y1 = np.cos(x)
 y2 = np.sin(x)
 
-_, ax = plt.subplots()
+fig, ax = plt.subplots()
 
 # Limites d'affichage
 ax.set_ylim(0, 1)

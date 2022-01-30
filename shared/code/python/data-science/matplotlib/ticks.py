@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 x = np.linspace(0, np.pi * 4, 1000)
 y1, y2 = np.cos(x), np.sin(x)
 
-_, ax = plt.subplots()
+fig, ax = plt.subplots()
 ax.set_xlim(0, np.pi * 2)
 
 ax.set_xticks(  # Changement des ticks
