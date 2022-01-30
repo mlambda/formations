@@ -1,15 +1,16 @@
 from deckz.standalones import register_plot
 
 
-def main():
+@register_plot()
+def anatomy():
     # ----------------------------------------------------------------------------
     # Title:   Scientific Visualisation - Python & Matplotlib
     # Author:  Nicolas P. Rougier
     # License: BSD
     # ----------------------------------------------------------------------------
-    import numpy as np
     import matplotlib.pyplot as plt
-    from matplotlib.ticker import AutoMinorLocator, MultipleLocator, FuncFormatter
+    import numpy as np
+    from matplotlib.ticker import AutoMinorLocator, FuncFormatter, MultipleLocator
 
     np.random.seed(123)
 
@@ -21,12 +22,10 @@ def main():
     fig = plt.figure(figsize=(8, 8))
     ax = fig.add_subplot(1, 1, 1, aspect=1)
 
-
     def minor_tick(x, pos):
         if not x % 1.0:
             return ""
         return "%.2f" % x
-
 
     ax.xaxis.set_major_locator(MultipleLocator(1.000))
     ax.xaxis.set_minor_locator(AutoMinorLocator(4))
@@ -52,8 +51,7 @@ def main():
     ax.set_xlabel("X axis label")
     ax.set_ylabel("Y axis label")
 
-    ax.legend(loc='upper right')
-
+    ax.legend(loc="upper right")
 
     def circle(x, y, radius=0.15):
         from matplotlib.patches import Circle
@@ -71,7 +69,6 @@ def main():
         )
         ax.add_artist(circle)
 
-
     def text(x, y, text):
         ax.text(
             x,
@@ -84,7 +81,6 @@ def main():
             weight="regular",
             color="#000099",
         )
-
 
     # Minor tick
     circle(0.50, -0.10)
@@ -160,10 +156,3 @@ def main():
         weight="regular",  # fontsize="large", fontname="Yanone Kaffeesatz",
         arrowprops=dict(arrowstyle="->", connectionstyle="arc3", color=color),
     )
-
-
-@register_plot()
-def anatomy():
-    main()
-
-

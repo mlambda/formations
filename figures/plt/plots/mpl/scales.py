@@ -1,13 +1,14 @@
 from deckz.standalones import register_plot
 
 
-def main():
-    import numpy as np
+@register_plot()
+def scales():
     import matplotlib.pyplot as plt
-    from matplotlib.ticker import NullFormatter, MultipleLocator
+    import numpy as np
+    from matplotlib.ticker import MultipleLocator
 
     X = np.linspace(0.001, 90, 5000)
-    figure = plt.figure(figsize=(6, 6))
+    _ = plt.figure(figsize=(6, 6))
 
     # Style
     # -----------------------------------------------------------------------------
@@ -15,7 +16,6 @@ def main():
     plt.rc("xtick", labelsize="small")
     plt.rc("ytick", labelsize="small")
     plt.rc("axes", labelsize="medium", titlesize="medium")
-
 
     # X-linear Y-linear
     # -----------------------------------------------------------------------------
@@ -37,7 +37,6 @@ def main():
     ax1.text(5.50, 1.50, "$f(x) = log_{10}(x)$", color="C2")
     ax1.set_title("X linear - Y linear")
 
-
     # X-log Y-linear
     # -----------------------------------------------------------------------------
     ax2 = plt.subplot(2, 2, 2, xlim=(0.001, 100), ylim=(0.0, 10), sharey=ax1)
@@ -50,7 +49,6 @@ def main():
     ax2.grid(True, "minor", color="0.85", linewidth=0.50, zorder=-20)
     ax2.grid(True, "major", color="0.65", linewidth=0.75, zorder=-10)
     ax2.set_title("X logarithmic - Y linear")
-
 
     # X-linear Y-log
     # -----------------------------------------------------------------------------
@@ -67,7 +65,9 @@ def main():
 
     # X-log Y-log
     # -----------------------------------------------------------------------------
-    ax4 = plt.subplot(2, 2, 4, xlim=(0.001, 100), ylim=(0.001, 100), sharex=ax2, sharey=ax3)
+    ax4 = plt.subplot(
+        2, 2, 4, xlim=(0.001, 100), ylim=(0.001, 100), sharex=ax2, sharey=ax3
+    )
     ax4.set_xscale("log")
     ax4.set_yscale("log")
     ax4.tick_params(which="both", labelleft=False, left=False)
@@ -79,14 +79,6 @@ def main():
     ax4.grid(True, "major", color="0.65", linewidth=0.75, zorder=-10)
     ax4.set_title("X logarithmic - Y logarithmic")
 
-
     # Show
     # -----------------------------------------------------------------------------
     plt.tight_layout()
-
-
-@register_plot()
-def scales():
-    main()
-
-

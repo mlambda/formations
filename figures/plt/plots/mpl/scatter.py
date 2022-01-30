@@ -1,17 +1,14 @@
 from deckz.standalones import register_plot
 
 
-def main():
+@register_plot()
+def scatter():
     import matplotlib.pyplot as plt
     import numpy as np
 
-    x=np.random.normal(size=250)
-    y=np.random.normal(size=250)
+    rng = np.random.default_rng()
 
-    plt.scatter(x,y)
+    x = rng.normal(size=250)
+    y = rng.normal(size=250)
 
-@register_plot()
-def scatter():
-    main()
-
-
+    plt.scatter(x, y)
