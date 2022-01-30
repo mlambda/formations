@@ -80,8 +80,129 @@
     \begin{minipage}[t]{0.49\linewidth}
         \mintedcustomcode{python/data-science/matplotlib/boxplot}{py}
     \end{minipage}
-    \begin{minipage}[t]{0.49\linewidth}
+    \begin{minipage}[t]{0.49\linewidth} 
         \vfill
-        \V{["plt/mpl/boxplot", "tw", 1] | image} 
+        \V{["plt/mpl/boxplot", "tw", 1] | image}
     \end{minipage}
+\end{frame}
+
+\begin{frame}{Une librairie simple \visible<2>{?}}
+    Ces premiers exemples en quelques lignes laissent supposer une librairie facile d'accès et simple d'utilisation pour la création de visualisation.
+
+    \visible<2>{\centering\Large\alert{\textbf{Il n'en est rien.}}}
+\end{frame}
+
+\begin{frame}{Une librairie riche et complexe}
+    \begin{itemize}
+        \positem Matplotlib est un libraire hautement configurable. C'est ce qui permet à beaucoup d'autres librairies de s'appuyer sur elle.
+        \negitem Mais cela vient nécessairement avec un coût pour réussir à faire des schémas esthétiques
+        \negitem Et malheureusement, la documentation est améliorable
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Anatomie d'une figure}
+    \V{["plt/mpl/anatomy", "th", 0.75] | image}
+\end{frame}
+
+\begin{frame}{Anatomie d'une figure}
+    \begin{minipage}{0.49\linewidth}
+        \begin{itemize}
+            \item \textbf{\alert{Figure}}~: Structure de plus haut niveau qui contiendra tous les éléments à afficher
+            \item \textbf{\alert{Axe}}~: Élément contenant un graphique. Un ou plusieurs \texttt{axes} par \texttt{figure}
+            \item \textbf{\alert{Spine}}~: Cadre d'un \texttt{axe}   
+            \item \textbf{\alert{Legend}}~: Légende associée à un \texttt{axe}   
+            \item \textbf{\alert{Title}}~: Titre associé à un \texttt{axe}   
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["plt/mpl/anatomy", "tw", 1] | image}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Anatomie d'une figure}
+    \begin{minipage}{0.49\linewidth}
+        \begin{itemize}
+            \item \textbf{\alert{Suptitle}}~: Titre associé à une \texttt{figure}
+            \item \textbf{\alert{Label}}~: Descripteur d'\texttt{axe} associé à l'axe \texttt{x} et \texttt{y}    
+            \item \textbf{\alert{Tick}} (Major,Minor)~: Marqueur sur les spines pour représenter l'échelle des valeurs   
+            \item \textbf{\alert{Grid}}~: Grille affichée sur la visualisation   
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["plt/mpl/anatomy", "tw", 1] | image}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Paramétrisation}
+    Il existe une grande quantité d'éléments pouvant être modifiés pour changer la visualisation.
+\end{frame}
+
+\begin{frame}{Taille et résolution}
+    \begin{minipage}[t]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/classique-start}{py}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \V{["plt/mpl/classique-start", "tw", 0.65] | image} 
+    \end{minipage}
+\end{frame} 
+
+\begin{frame}{Titre et légendes}
+    \begin{minipage}{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/legend}{py}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["plt/mpl/legend", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Changer les limites}
+    \begin{minipage}{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/limits}{py}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["plt/mpl/limits", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Modifier les spines}
+    \begin{minipage}{0.52\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/spines}{py}
+    \end{minipage}
+    \begin{minipage}{0.46\linewidth}
+        \V{["plt/mpl/spines", "tw", 1] | image}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Ajouter les labels}
+    \begin{minipage}[c]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/labels}{py}
+    \end{minipage}
+    \begin{minipage}[c]{0.49\linewidth}
+        \V{["plt/mpl/labels", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Modifier les ticks}
+    \begin{minipage}[c]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/ticks}{py}
+    \end{minipage}
+    \begin{minipage}[c]{0.49\linewidth}
+        \V{["plt/mpl/ticks", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Plots multiples et projection}
+    \V{["plt/mpl/scales", "tw", 0.6] | image} 
+\end{frame}
+
+\begin{frame}{Sous-plots}
+    \mintedcustomcode{python/data-science/matplotlib/subplots1}{py}
+\end{frame}
+
+\begin{frame}{Sous-plots}
+    \mintedcustomcode{python/data-science/matplotlib/subplots2}{py}
+\end{frame}
+
+\begin{frame}{Sauvegarder des fichiers}
 \end{frame}
