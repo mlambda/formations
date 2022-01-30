@@ -1,0 +1,3 @@
+>>> a = np.arange(4)
+>>> mask = a >= 2; mask
+array([False, False,  True,  True])

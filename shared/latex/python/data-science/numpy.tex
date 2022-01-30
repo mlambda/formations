@@ -23,19 +23,27 @@
 \end{frame}
 
 \begin{frame}{Création de tableau ⋅ Suite de valeurs}
+  Pour générer des suites de valeurs sans passer par les objets Python et \texttt{np.array}, il existe des méthodes dédiées.
   \mintedcustomcode{python/data-science/numpy/creation-interval}{pycon}
 \end{frame}
 
 \begin{frame}{Création de tableau ⋅ Génération aléatoire}
+  Il est possible de générer des tableaux aléatoires grâce au paquet \texttt{numpy.random}.
   \mintedcustomcode{python/data-science/numpy/creation-random}{pycon}
 \end{frame}
 
 \begin{frame}{Étude d'un tableau existant}
+  Les attributs \texttt{ndim}, \texttt{shape} et \texttt{size} permettent de connaître respectivement le nombre de dimensions, la forme et le nombre total d'éléments d'un tableau.
   \mintedcustomcode{python/data-science/numpy/shape}{pycon}
 \end{frame}
 
 \begin{frame}{Opérations sur un tableau}
+  Beaucoup d'opérations sont applicables directement sur des tableaux. Celles-ci sont \textbf{beaucoup} plus efficaces que l'équivalent itératif en Python.
   \mintedcustomcode{python/data-science/numpy/operations}{pycon}
+\end{frame}
+
+\begin{frame}{Opérations sur un tableau ⋅ Vectorisation d'une fonction}
+  \mintedcustomcode{python/data-science/numpy/operations-custom}{pycon}
 \end{frame}
 
 \begin{frame}{Opérations sur des axes spécifiques}
@@ -59,11 +67,53 @@
 \end{frame}
 
 \begin{frame}{Indiçage dans un tableau ⋅ Tranches}
+  Comme pour les listes Python~:
   \mintedcustomcode{python/data-science/numpy/indexing-slicing}{pycon}
 \end{frame}
 
-\begin{frame}{Indiçage dans un tableau ⋅ Raccourci}
+\begin{frame}{Indiçage dans un tableau ⋅ Par un tableau}
+  Permet de récupérer en un appel plusieurs valeurs sans les contraintes des tranches~:
+  \mintedcustomcode{python/data-science/numpy/indexing-array}{pycon}
+\end{frame}
+
+\begin{frame}{Indiçage dans un tableau ⋅ Par un tableau booléen}
+  On peut facilement créer des tableaux booléens~:
+  \mintedcustomcode{python/data-science/numpy/indexing-boolean-array-creation}{pycon}
+
+  Ceux-ci peuvent indexer d'autres tableaux~:
+  \mintedcustomcode{python/data-science/numpy/indexing-boolean-array}{pycon}
+
+  Ce mécanisme est \textbf{extrêmement souvent} utilisé en \texttt{numpy}.
+\end{frame}
+
+\begin{frame}{Indiçage dans un tableau ⋅ Raccourci pour plusieurs dimensions}
   \mintedcustomcode{python/data-science/numpy/indexing-shortcuts}{pycon}
 \end{frame}
 
+
+\begin{frame}{Broadcast ⋅ Introduction}
+  Il est possible d'effectuer des opérations sur des tableaux de tailles différentes.
+  \texttt{numpy} applique l'algorithme suivant~:
+  \begin{enumerate}
+    \item Alignement à droite des dimensions des deux tableaux
+    \item Ajout de dimensions au plus petit tableau
+    \item Les dimensions de taille 1 sont étendues à la taille de l'autre tableau en répliquant autant de fois que nécessaire les valeurs dans la dimension
+  \end{enumerate}
+  \begin{tabular}{clrcc}
+    \toprule
+    & Forme & Étape 1 & Étape 2 & Étape 3 \\
+    \midrule
+    Tableau 1 & \texttt{(3, 1)} & \texttt{(3, 1)} & \texttt{(1, 3, 1)} & \texttt{(2, 3, 5)} \\
+    Tableau 2 & \texttt{(2, 1, 5)} & \texttt{(2, 1, 5)} & \texttt{(2, 1, 5)} & \texttt{(2, 3, 5)} \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Broadcast ⋅ Exemple}
+  \mintedcustomcode{python/data-science/numpy/broadcast}{pycon}
+\end{frame}
+
+\begin{frame}{Sauvegarde de tableaux \texttt{numpy}}
+  \mintedcustomcode{python/data-science/numpy/save}{pycon}
+\end{frame}
 % TODO Broadcast, map et compagnie
