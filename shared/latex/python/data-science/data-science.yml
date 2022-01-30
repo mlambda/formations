@@ -9,6 +9,7 @@ flavors:
     - intro
     - numpy
     - /questions
+    - tp-numpy
     - pandas
     - /questions
     - matplotlib
