@@ -42,6 +42,17 @@
   \mintedcustomcode{python/data-science/numpy/operations}{pycon}
 \end{frame}
 
+\begin{frame}{Opérations et mémoire}
+  Deux possibilités pour la sortie d'une opération~:
+  \begin{itemize}
+    \item elle est stockée dans un nouveau tableau (utilisation de nouvelle mémoire)
+    \item elle vient remplacer les valeurs précédentes d'un tableau (opération sur place)
+  \end{itemize}
+  $\Rightarrow$ Bien regarder si il y a un argument \texttt{out}, il permet souvent de choisir entre l'application sur place et la création d'un nouveau tableau.
+
+  Il est aussi possible d'utiliser les opérateurs dédiés (\texttt{a += 1} modifie \texttt{a} sur place par exemple).
+\end{frame}
+
 \begin{frame}{Opérations sur un tableau ⋅ Vectorisation d'une fonction}
   \mintedcustomcode{python/data-science/numpy/operations-custom}{pycon}
 \end{frame}
@@ -90,6 +101,12 @@
   \mintedcustomcode{python/data-science/numpy/indexing-shortcuts}{pycon}
 \end{frame}
 
+\begin{frame}{Affectation d'une partie d'un tableau}
+  On peut n'effectuer une opération que sur un partie d'un tableau~:
+  \mintedcustomcode{python/data-science/numpy/indexing-assignment}{pycon}
+
+  C'est la raison majeure pour laquelle l'indiçage booléen est très souvent utilisé.
+\end{frame}
 
 \begin{frame}{Broadcast ⋅ Introduction}
   Il est possible d'effectuer des opérations sur des tableaux de tailles différentes.
