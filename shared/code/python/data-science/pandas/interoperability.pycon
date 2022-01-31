@@ -1,0 +1,13 @@
+>>> np.exp(df.Survived)
+PassengerId
+1      1.000000
+2      2.718282
+...
+890    2.718282
+891    1.000000
+Name: Survived, Length: 891, dtype: float64
+
+>>> df.Survived.values
+array([0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1,
+       ...
+       1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0])

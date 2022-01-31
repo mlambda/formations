@@ -1,0 +1,7 @@
+>>> df = pd.DataFrame([(0, 5, "a"), (1, 5, "b")],
+...                   index=["L1", "L2"],
+...                   columns=["C1", "C2", "C3"])
+>>> df.index
+Index(['L1', 'L2'], dtype='object')
+>>> df.columns
+Index(['C1', 'C2', 'C3'], dtype='object')

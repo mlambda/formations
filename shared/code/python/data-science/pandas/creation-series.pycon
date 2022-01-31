@@ -1,0 +1,11 @@
+>>> pd.Series([1, 3, 2])
+0    1
+1    3
+2    2
+dtype: int64
+
+>>> pd.Series([1, 3, 2], index=["a", "b", "c"])
+a    1
+b    3
+c    2
+dtype: int64

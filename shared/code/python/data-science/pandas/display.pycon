@@ -1,0 +1,15 @@
+>>> df.head(2)
+             Survived  Pclass  ... Cabin Embarked
+PassengerId                    ...               
+1                   0       3  ...   NaN        S
+2                   1       1  ...   C85        C
+
+[2 rows x 11 columns]
+
+>>> df.tail(2)
+             Survived  Pclass                   Name  ...   Fare  Cabin  Embarked
+PassengerId                                           ...                        
+890                 1       1  Behr, Mr. Karl Howell  ...  30.00   C148         C
+891                 0       3    Dooley, Mr. Patrick  ...   7.75    NaN         Q
+
+[2 rows x 11 columns]

@@ -1,0 +1,9 @@
+>>> s = pd.Series([2, 1], index=["a", "b"]); s
+a    2
+b    1
+dtype: int64
+
+>>> s.sort_values()
+b    1
+a    2
+dtype: int64

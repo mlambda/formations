@@ -1,0 +1,14 @@
+>>> df = pd.DataFrame({"a": np.arange(2),
+...                    "b": 5,
+...                    "c": ["a", "b"]},
+...                   index=["A1", "A2"]); df
+    a  b  c
+A1  0  5  a
+A2  1  5  b
+
+>>> df = pd.DataFrame([(0, 5, "a"), (1, 5, "b")],
+...                   columns=["a", "b", "c"],
+...                   index=["A1", "A2"]); df
+    a  b  c
+A1  0  5  a
+A2  1  5  b

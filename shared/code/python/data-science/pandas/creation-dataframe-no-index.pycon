@@ -1,0 +1,11 @@
+>>> df = pd.DataFrame({"a": np.arange(2),
+...                    "b": 5,
+...                    "c": ["a", "b"]}); df
+   a  b  c
+0  0  5  a
+1  1  5  b
+
+>>> df = pd.DataFrame([(0, 5, "a"), (1, 5, "b")], columns=["a", "b", "c"]); df
+   a  b  c
+0  0  5  a
+1  1  5  b

@@ -1,0 +1,20 @@
+>>> df = pd.DataFrame({"a": [1, 2, np.nan], "b": [np.nan, 3, 7]}); df
+     a    b
+0  1.0  NaN
+1  2.0  3.0
+2  NaN  7.0
+
+>>> df.isna()
+       a      b
+0  False   True
+1  False  False
+2   True  False
+
+>>> df.isna().sum().sum()
+2
+
+>>> df.fillna(df.mean())
+     a    b
+0  1.0  5.0
+1  2.0  3.0
+2  1.5  7.0
