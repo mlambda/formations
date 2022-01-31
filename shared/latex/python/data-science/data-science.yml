@@ -9,10 +9,12 @@ flavors:
     - numpy
     - /questions
     - tp-numpy
-    - pandas
     - /questions
     - matplotlib
     - /questions
     - tp-matplotlib
+    - pandas
+    - /questions
+    - tp-pandas
 
 title: Modules de science des données
