@@ -102,6 +102,13 @@
   Si il y a trop de colonnes pour que la sortie soit lisible, utiliser \texttt{df.describe().transpose()}.
 \end{frame}
 
+\begin{frame}{Description ⋅ Ensemble de valeurs et comptage}
+  Il est possible de récupérer l'ensemble des valeurs différentes d'une série avec \texttt{unique()}.
+  
+  Ou récupérer un comptage de chaque valeur avec \texttt{value\_counts()}.
+  \mintedcustomcode{python/data-science/pandas/value-counts}{pycon}
+\end{frame}
+
 \begin{frame}{Opérations}
   Très similaires à \texttt{numpy}~: vectorisées et très efficaces par rapport à des opérations itératives Python.
 
