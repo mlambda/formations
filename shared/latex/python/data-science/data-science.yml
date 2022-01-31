@@ -1,5 +1,4 @@
 default_titles:
-  intro: Introduction
   matplotlib: \texttt{matplotlib}
   numpy: \texttt{numpy}
   pandas: \texttt{pandas}
