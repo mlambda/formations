@@ -1,0 +1,8 @@
+default_titles:
+  seaborn: \texttt{seaborn}
+
+flavors:
+  full:
+    - seaborn
+
+title: Seaborn

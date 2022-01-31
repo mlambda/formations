@@ -14,5 +14,6 @@ flavors:
     - /questions
     - matplotlib
     - /questions
+    - tp-matplotlib
 
 title: Modules de science des données
