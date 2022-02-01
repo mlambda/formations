@@ -1,0 +1,37 @@
+- name: j1
+  title: Jour 1
+  sections:
+    - path: about
+      flavor: sparks-formation-4j
+
+    - path: python/basics
+      flavor: full
+
+    - path: python/data-science
+      flavor: full
+
+    - path: python/testing
+      flavor: full
+
+    - path: python/linting
+      flavor: full
+
+    - path: python/advanced
+      flavor: full
+
+    - path: python/collections
+      flavor: full
+
+    - path: python/performance
+      flavor: full
+
+    - path: python/parallelism
+      flavor: full
+
+    - path: python/concurrency
+      flavor: full
+
+    - path: python/production
+      flavor: full
+
+    - contact

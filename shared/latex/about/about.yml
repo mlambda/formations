@@ -48,5 +48,10 @@ flavors:
     - ressources-eni
     - horaires-3j-orsys
     - tour2table
+  sparks-formation-4j:
+    - formateur
+    - description
+    - ressources-eni
+    - horaires-4j-orsys
+    - tour2table
 title: Informations sur la formation
-version: 3
