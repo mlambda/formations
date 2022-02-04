@@ -14,4 +14,4 @@ ax.spines["right"].set_visible(False)
 ax.plot(x, y1)
 ax.plot(x, y2)
 
-plt.show()
+fig.show()

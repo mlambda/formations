@@ -14,4 +14,4 @@ ax.legend()
 # Titre
 ax.set_title("Cosinus et Sinus")
 
-plt.show()
+fig.show()

@@ -14,4 +14,4 @@ ax.set_xlim(0, np.pi * 2)
 ax.plot(x, y1)
 ax.plot(x, y2)
 
-plt.show()
+fig.show()

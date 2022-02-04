@@ -17,4 +17,4 @@ ax.set_xticklabels([
 
 ax.plot(x, y1)
 ax.plot(x, y2)
-plt.show()
+fig.show()
