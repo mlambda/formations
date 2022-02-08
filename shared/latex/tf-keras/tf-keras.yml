@@ -3,9 +3,6 @@ default_titles:
   tf: TensorFlow 2
 flavors:
   bda:
-    - tf
-    - /questions
-    - tp-tf
     - keras
     - /questions
     - tp-keras
