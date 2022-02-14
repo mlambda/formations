@@ -7,6 +7,10 @@
     - path: python/basics
       flavor: full
 
+    - path: python/data-science
+      flavor: full
+      title: Outils data-science (Optionnel)
+
 - name: j2
   title: Jour 2 --- Apprentissage non-supervisé
   sections:
