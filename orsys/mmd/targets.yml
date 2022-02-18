@@ -35,6 +35,6 @@
 
     - title: Transformeurs
       path: nn/transformer
-      flavor: full
+      flavor: text
 
     - path: contact

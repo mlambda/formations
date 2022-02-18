@@ -36,6 +36,6 @@
       flavor: mle
 
     - path: nn/transformer
-      flavor: full
+      flavor: text
 
     - path: sequential-data/tp-tf-natixis

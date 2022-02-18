@@ -1,9 +1,13 @@
 default_titles:
   data: Données en vision par ordinateur
+  task: Différents cas d'application
+  interpret: Interpréter un modèle appris
   keras: Implémentation en Keras
   model: Modèle
   modern-architectures: Architectures modernes
   tp: Travaux pratiques
+  tp-demo: Démonstration
+  demo-task: Démonstrations
 
 flavors:
   ml1:
@@ -23,11 +27,23 @@ flavors:
     - /questions
     - modern-architectures
     - /questions
-    - demo
+    - demo-task
     - keras
     - /questions
     - tp-demo
     - help-pointers
+  vision-expert:
+    - data
+    - model
+    - task
+    - demo-task
+    - interpret
+    - /questions
+    - modern-architectures
+    - /questions
+    - keras
+    - /questions
+    - tp-demo
   dpl:
     - data
     - model

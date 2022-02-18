@@ -1,0 +1,22 @@
+- name: j123
+  title: Jour 1
+  sections:
+    - path: about
+      flavor: orsys-3j
+
+    - path: ai
+      flavor: full
+
+    - path: ml
+      flavor: drn
+
+    - path: supervised
+      flavor: drn
+
+    - path: nn
+      flavor: vision-expert
+
+    - path: tools
+      flavor: devops
+
+    - contact

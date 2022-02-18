@@ -1,11 +1,19 @@
 default_titles:
   attention-model: Modèles à attention
   model: Modèle
-  tp: Travaux pratiques
+  vision-transformer: Les \og Vision Transformer \fg
+  text-tp: Travaux pratiques
+  vision-demo: Démonstration
 flavors:
-  full:
+  text:
     - attention-model
     - model
     - /questions
-    - tp
+    - text-tp
+  image:
+    - attention-model
+    - vision-transformer
+    - /questions
+    - vision-demo
+
 title: Réseaux transformeurs

@@ -4,6 +4,7 @@ default_titles:
   keras: Implémentation avec Keras
   variants: Variantes
   /nlp/wordembeddings: Représentation de variables catégorielles
+  video: Application aux vidéos
 flavors:
   dpl:
     - model
@@ -35,6 +36,15 @@ flavors:
     - lstm
     - variants
     - keras
+    - /questions
+    - demo
+  vision-expert:
+    - /nlp/wordembeddings
+    - model
+    - lstm
+    - variants
+    - keras
+    - video
     - /questions
     - demo
 title: Réseaux de neurones récurrents

@@ -46,6 +46,22 @@ flavors:
     - $ae: drn
     - $gan: full
     - help-pointers
+  vision-expert:
+    - intro
+    - playground
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - /questions
+    - $/tf-keras: drn
+    - $cnn: vision-expert
+    - $transformer: image
+    - $ae: drn
+    - $gan: full
+    - $rnn: vision-expert
+    - help-pointers
   bda:
     - intro
     - playground
@@ -100,7 +116,7 @@ flavors:
     - $/nlp: dpl
     - $/sequential-data: dpl
     - $rnn: dpl
-    - $transformer: full
+    - $transformer: text
     - help-pointers
 
 title: Réseaux de neurones
