@@ -68,6 +68,13 @@
 (p1-farsoutheast)  -- (c4-farsouthwest)
 (p1-farnortheast)  -- (c4-farnorthwest)
 ;
+\draw [connection]  (c4-east)   -- node {\midarrow} (up2-west);
+\draw[densely dashed]
+(c4-nearnortheast) -- (up2-nearnorthwest)
+(c4-nearsoutheast) -- (up2-nearsouthwest)
+(c4-farsoutheast)  -- (up2-farsouthwest)
+(c4-farnortheast)  -- (up2-farnorthwest)
+;
 \draw [connection]  (up2-east)   -- node {\midarrow} (c5-west);
 \draw[densely dashed]
 (up2-nearnortheast) -- (c5-nearnorthwest)
