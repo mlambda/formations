@@ -2,9 +2,10 @@
  * Python
  * Bonnes connaissances de l'apprentissage automatique et de ses algorithmes
   
-# Programme
+# Programme (1J)
+Programme de formation sur une journée répartie à 50%/50% entre pratique et cours
 
-## Tensorflow
+## Tensorflow (4h)
  * Structure de l'API
  * Différences Tensorflow 1 et 2
  * Tenseurs, variables et constantes
@@ -14,7 +15,7 @@
   
 TP : Implémentation d'un réseau de neurones en utilisant le GradientTape
 
-## Keras
+## Keras (3h)
  * Introduction à Keras
  * Intêret de Keras par rapport à Tensorflow seul
  * Créer un modèle simple avec Keras
