@@ -25,7 +25,7 @@
 %% Draw Layer Blocks
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%   
-\node[canvas is zy plane at x=0] (alan) at (0,0,0) {\includegraphics[width=9cm,height=9cm]{img/sub-img/toothbrush-masked-1.png}};
+\node[canvas is zy plane at x=0] (alan) at (0,0,0) {\includegraphics[width=9cm,height=9cm]{img/sub-img/landscape-example-masked.png}};
 
 % CONVOLUTION
 \pic[shift={(4,0,0)}] at (alan) {RightBandedBox={name=c1,caption=CONVOLUTION,
@@ -52,7 +52,7 @@
         fill=\ConvColor,bandfill=\ConvReluColor,
         height=40,width={2,2,2,2,2},depth=40}};
 
-\node[canvas is zy plane at x=4] (alan2) at (c5-east) {\includegraphics[width=9cm,height=9cm]{img/sub-img/toothbrush.png}};
+\node[canvas is zy plane at x=4] (alan2) at (c5-east) {\includegraphics[width=9cm,height=9cm]{img/sub-img/landscape-example.png}};
 
 %Connections
 \draw [connection]  (c1-east)   -- node {\midarrow} (c2-west);

@@ -1,5 +1,6 @@
 \documentclass[border=15pt, multi, tikz]{standalone}
 
+
 \usepackage{tikz}
 \usetikzlibrary{quotes,arrows.meta}
 \usetikzlibrary{positioning}
@@ -17,6 +18,18 @@
 
 \usetikzlibrary{3d} %for including external image 
 
+\definecolor{Auburn}{HTML}{9E2A2B}
+
+\tikzset{hencoder/.style={
+  minimum width=1cm,
+  minimum height=0.7cm,
+  rectangle,
+  rounded corners=3pt,
+  fill=Auburn,
+  text=white,
+  line width=0.5mm,
+  draw=Auburn!50}}
+
 \begin{document}
 
 \begin{tikzpicture}
@@ -25,14 +38,19 @@
 %% Draw Layer Blocks
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%   
-\node (alan) at (0,0,0) {\includegraphics[width=12cm,height=12cm]{img/sub-img/landscape-example-masked.png}};
+\node (input) at (0,3.5,0) {\includegraphics[width=3cm,height=3cm]{img/sub-img/toothbrush-defective.png}};
+\node (labelinput) at (0,1.5,0) {input};
 
+\node[hencoder] (euclide) at (4,3.5,0) {Distance euclidienne};
 
-\node (alan2) at (20,0,0) {\includegraphics[width=12cm,height=12cm]{img/sub-img/landscape-example.png}};
+\node (output) at (8,3.5,0) {\includegraphics[width=3cm,height=3cm]{img/sub-img/toothbrush.png}};
+\node (labeloutput) at (8,1.5,0) {output};
+
+\node (heatmap) at (4,0,0) {\includegraphics[width=3cm,height=3cm]{img/sub-img/toothbrush.png}};
 
 %Connections
-
-\path[->,>=stealth,line width=10pt] (alan) edge node [left] {} (alan2);
-
+\path[->,>=stealth] (input.east) edge node [left] {} (euclide.west);
+\path[->,>=stealth] (output.west) edge node [left] {} (euclide.east);
+\path[->,>=stealth] (euclide.south) edge node [left] {} (heatmap.north);
 \end{tikzpicture}
 \end{document}\grid
