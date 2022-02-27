@@ -26,9 +26,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%   
 
-\node[canvas is zy plane at x=0]  (mask1) at (0,0,0)   {\includegraphics[width=12cm,height=12cm]{img/sub-img/toothbrush-defective-masked1.png}};
-\node[canvas is zy plane at x=3]  (mask2) at (2,3,0)   {\includegraphics[width=12cm,height=12cm]{img/sub-img/toothbrush-defective-masked2.png}};
-\node[canvas is zy plane at x=6]  (mask3) at (4,6,0)   {\includegraphics[width=12cm,height=12cm]{img/sub-img/toothbrush-defective-masked3.png}};
+\node[canvas is zy plane at x=0]  (mask1) at (0,0,0)   {\includegraphics[width=12cm,height=12cm]{img/sub-img/transistor-defective-masked1.png}};
+\node[canvas is zy plane at x=3]  (mask2) at (2,3,0)   {\includegraphics[width=12cm,height=12cm]{img/sub-img/transistor-defective-masked2.png}};
+\node[canvas is zy plane at x=6]  (mask3) at (4,6,0)   {\includegraphics[width=12cm,height=12cm]{img/sub-img/transistor-defective-masked3.png}};
 
 % CONVOLUTION
 \pic[shift={(20,0,0)}] at (mask1) {RightBandedBox={name=c1,caption=CONVOLUTION,
@@ -45,15 +45,16 @@
         fill=\ConvColor,bandfill=\ConvReluColor,
         height=40,width={2,2,2,2,2},depth=40}};
 
+       
 % CONVOLUTION
 \pic[shift={(3,0,0)}] at (c3-east) {RightBandedBox={name=c4,caption=CONVOLUTION,
         fill=\ConvColor,bandfill=\ConvReluColor,
         height=40,width={2,2,2,2,2},depth=40}};
 
 
-\node[canvas is zy plane at x=0]  (pred1) at (50,0,0)  {\includegraphics[width=12cm,height=12cm]{img/sub-img/toothbrush-extracted1.png}};
-\node[canvas is zy plane at x=3]  (pred2) at (52,3,0)  {\includegraphics[width=12cm,height=12cm]{img/sub-img/toothbrush-extracted2.png}};
-\node[canvas is zy plane at x=6]  (pred3) at (54,6,0)  {\includegraphics[width=12cm,height=12cm]{img/sub-img/toothbrush-extracted3.png}};
+\node[canvas is zy plane at x=0]  (pred1) at (50,0,0)  {\includegraphics[width=12cm,height=12cm]{img/sub-img/transistor-defective-extracted1.png}};
+\node[canvas is zy plane at x=3]  (pred2) at (52,3,0)  {\includegraphics[width=12cm,height=12cm]{img/sub-img/transistor-defective-extracted2.png}};
+\node[canvas is zy plane at x=6]  (pred3) at (54,6,0)  {\includegraphics[width=12cm,height=12cm]{img/sub-img/transistor-defective-extracted3.png}};
 
 \draw [connection]  (mask1.center)   -- node {\midarrow} (c1-west);
 \draw[->, densely dashed]
@@ -93,7 +94,7 @@
 (c4-farsoutheast)  -- (pred1.south west)
 (c4-farnortheast)  -- (pred1.north west)
 ;
-\node[canvas is zy plane at x=0]  (pred1) at (50,0,0)  {\includegraphics[width=12cm,height=12cm]{img/sub-img/toothbrush-extracted1.png}};
+\node[canvas is zy plane at x=0]  (pred1) at (50,0,0)  {\includegraphics[width=12cm,height=12cm]{img/sub-img/transistor-defective-extracted1.png}};
 
 
 \end{tikzpicture}

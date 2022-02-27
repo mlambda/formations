@@ -27,11 +27,11 @@
 %%%%%%%%%%   
 
 
-\node (mask1) at (0, 20,0) {\includegraphics[width=12cm,height=12cm]{img/sub-img/toothbrush-extracted1.png}};
-\node (mask2) at (13,20,0) {\includegraphics[width=12cm,height=12cm]{img/sub-img/toothbrush-extracted2.png}};
-\node (mask3) at (26,20,0) {\includegraphics[width=12cm,height=12cm]{img/sub-img/toothbrush-extracted3.png}};
+\node (mask1) at (0, 20,0) {\includegraphics[width=12cm,height=12cm]{img/sub-img/transistor-defective-extracted1.png}};
+\node (mask2) at (13,20,0) {\includegraphics[width=12cm,height=12cm]{img/sub-img/transistor-defective-extracted2.png}};
+\node (mask3) at (26,20,0) {\includegraphics[width=12cm,height=12cm]{img/sub-img/transistor-defective-extracted3.png}};
 
-\node (original) at (13,0,0) {\includegraphics[width=12cm,height=12cm]{img/sub-img/toothbrush.png}};
+\node (original) at (13,0,0) {\includegraphics[width=12cm,height=12cm]{img/sub-img/transistor-predicted.png}};
 %Connections
 \path[->,>=stealth,line width=10pt]  (mask1.south) edge [bend left=10, looseness=1] (original.north);
 \path[->,>=stealth,line width=10pt]  (mask2.south) edge                             (original.north);

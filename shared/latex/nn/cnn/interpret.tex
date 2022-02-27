@@ -3,18 +3,23 @@
   \V{["tikz/neural-networks/cnn/classification", "tw", 1] | image}
 \end{frame}
 
-\begin{frame}{Saliency map}
-  Evaluation de la contribution de chaque pixel à la décision finale
-  \alert{TODO}
-\end{frame}
-
-\begin{frame}{Gradconv}
-
-  \alert{TODO}
+\begin{frame}{Occlusion sensitivity}
+  \begin{itemize}
+    \item prédiction sur des images \og masquées \fg
+    \item création d'une heatmap reflétant la chute de performance 
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Occlusion sensitivity}
-  Suppression de parties de l'image pour estimer à quel point cela dégrade les performances
-  \alert{TODO}
+  \V{["img/cnn-interpret-occlusion-sensitivity", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Occlusion sensitivity}
+  Utilisation du gradient sur une couche haute pour créer la heatmap
+  \V{["tikz/neural-networks/cnn/classification", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Grad-CAM}
+  \V{["img/cnn-interpret-grad-cam", "tw", 1] | image}
 \end{frame}
   
