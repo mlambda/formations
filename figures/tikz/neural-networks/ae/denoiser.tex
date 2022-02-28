@@ -7,7 +7,8 @@
   \begin{tikzpicture}
     \node[inner sep=0pt] (input) at (0,0) {\includegraphics[width=.25\textwidth]{img/sub-img/ae-denoiser-input.png}};
     \node[hencoder] (noise) at (2, 0) {+};
-    \node[inner sep=0pt] (noisy) at (4,0) {\includegraphics[width=.25\textwidth]{img/sub-img/ae-denoiser-noisy-input.png}};
+    \node[scale=0.6] (legend) at (2, -0.5) {bruit gaussien};
+    \node[inner sep=0pt] (noisy) at (4.1,0) {\includegraphics[width=.25\textwidth]{img/sub-img/ae-denoiser-noisy-input.png}};
     \node[hencoder] (encoder) at (6.5, 0) {encoder};
     \node[input] (code) at (8.5, 0) {Z};
     \node[output] (decoder) at (10.5, 0) {decoder};

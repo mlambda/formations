@@ -1,7 +1,8 @@
 default_titles:
   attention-model: Modèles à attention
   model: Modèle
-  vision-transformer: Les \og Vision Transformer \fg
+  transformer-cell: La cellule \og Transformer \fg
+  vision-transformer: Le \og Vision Transformer \fg
   text-tp: Travaux pratiques
   vision-demo: Démonstration
 flavors:
@@ -12,6 +13,7 @@ flavors:
     - text-tp
   image:
     - attention-model
+    - transformer-cell
     - vision-transformer
     - /questions
     - vision-demo
