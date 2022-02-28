@@ -354,6 +354,8 @@
 \definecolor{IndianYellow}{HTML}{E09F3E}
 \definecolor{Auburn}{HTML}{9E2A2B}
 \definecolor{Rosewood}{HTML}{540B0E}
+\definecolor{applegreen}{HTML}{8DB600}
+
 
 \newcommand{\green}[1]{\textcolor{OliveGreen}{#1}}
 \newcommand{\red}[1]{\textcolor{BrickRed}{#1}}
@@ -394,6 +396,16 @@
 \usetikzlibrary{quotes,arrows.meta}
 \usetikzlibrary{positioning}
 
+\tikzset{feedforward/.style={
+  hencoder,
+  fill=cyan,
+  text=white,
+  draw=cyan!50}}
+\tikzset{self-attention/.style={
+  hencoder,
+  fill=applegreen,
+  text=white,
+  draw=applegreen!50}}
 
 \tikzset{hencoder/.style={
   minimum width=1cm,
@@ -424,3 +436,31 @@
   fill=IndianYellow,
   text=white,
   draw=IndianYellow!50}}
+
+\tikzset{operator/.style={%For operators like +  and  x
+  circle,
+  draw,
+  inner sep=-0.5pt,
+  minimum height =.5cm,
+  fill=green
+  }}
+
+
+\tikzset{ArrowC1/.style={% Arrows with rounded corners
+  rounded corners=.25cm,
+  thick,
+  }}
+\tikzset{ArrowC2/.style={% Arrows with big rounded corners
+  rounded corners=.5cm,
+  thick,
+  }}
+
+\tikzset{
+  *|/.style={ %magic vertical arrow 
+      to path={
+          (perpendicular cs: horizontal line through={(\tikztostart)},
+                                vertical line through={(\tikztotarget)})
+          -- (\tikztotarget) \tikztonodes
+      }
+  }
+}
