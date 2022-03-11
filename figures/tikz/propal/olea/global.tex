@@ -1,0 +1,60 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+%   \begin{tikzpicture}[x=2cm]
+% %nodes context part
+%     \foreach \y in {1,...,3} {
+%         \node[input] (I\y) at (\y -1, 0) {$\vec{c}_\y$};
+%     }
+%     \node[feedforward,minimum width=5cm] (context-encoder) at (1,1.5) {Encodeur de contexte};
+%     \foreach \y in {1,...,3} {
+%         \node[hencoder] (K\y) at (\y -1, 3) {$\vec{k}_\y$};
+%     }
+%     \foreach \y in {1,...,3} {
+%         \node[scalar] (W\y) at (\y -1, 6) {$w_\y$};
+%     }
+%     \node[operator] (sumw) at (1,7.5) {+};
+%     \node[output] (output) at (1,9) {$\vec{V}$};
+% %nodes input part
+%     \node[input] (input) at              (-2,0) {$\vec{X}$};
+%     \node[feedforward] (input-encoder) at   (-2,1.5) {Encodeur de l'entrée};
+%     \node[hencoder] (H) at               (-2, 3) {$\vec{q}$};
+%     \node[self-attention,align=left] (dotw) at (-2,4.5) {produit scalaire\\ puis softmax};
+% 
+% %labels
+%     \node () at (2.8,0) {Contexte};
+%     \node () at (2.8,3) {Clés};
+%     \node () at (2.8,6) {Poids};
+%     \node () at (2.3,9) {Vecteur de Contexte};
+%     
+%     \node () at (-2.7,0) {Entrée};
+%     \node () at (-2.7,3) {Requête};
+% 
+% %links context part
+%     \foreach \y in {1,...,3} {
+%         \draw[<-,dashed,>=stealth] (context-encoder.south) to[*|] (I\y.north);
+%     }
+%     \foreach \y in {1,...,3} {
+%         \draw[->,dashed,>=stealth] (context-encoder.north) to[*|] (K\y.south);
+%     }
+%     \foreach \y in {1,...,3} {
+%         \draw[-,dashed,>=stealth] (K\y) to (W\y);
+%     }
+%     \foreach \y in {1,...,3} {
+%         \draw[->,dashed,>=stealth] (W\y) to (sumw);
+%     }
+%     \draw[->,dashed,>=stealth] (sumw) to (output);
+% %link input part
+%     \draw[->,dashed,>=stealth] (input) to (input-encoder);      
+%     \draw[->,dashed,>=stealth] (input-encoder) to (H);
+%     \draw[->,dashed,>=stealth] (H) to (dotw);
+%     \foreach \y in {1,...,3} {
+%         \draw[->,dashed,>=stealth] (dotw) to (W\y);
+%     }
+%     \foreach \y in {1,...,3} {
+%         \draw[->,dashed,>=stealth] (K\y) to (dotw);
+%     }
+\end{tikzpicture}
+\end{document}

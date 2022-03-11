@@ -16,6 +16,9 @@
     - path: nn
       flavor: vision-expert
 
+    - path: rl
+      flavor: drn
+
     - path: tools
       flavor: devops
 
