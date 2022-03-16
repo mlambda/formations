@@ -16,4 +16,10 @@
     - path: python/production
       flavor: light
 
+    - path: python/sys-admin
+      flavor: full
+
+    - path: python/data-science
+      flavor: full
+
     - contact
