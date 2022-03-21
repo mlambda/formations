@@ -4,6 +4,7 @@ default_titles:
   evaluation: Évaluation
   intro: Introduction
   learning: Apprentissage
+  /python/data-science/pandas: Introduction pandas (optionnelle)
   tp-data: Travaux Pratiques
   /tp-help: Ressources pour les travaux pratiques
 
@@ -35,6 +36,8 @@ flavors:
     - data-preparation
     - evaluation
     - /questions
+    - /python/data-science/pandas
+    - /python/data-science/tp-pandas
     - /tp-help
     - tp-data
     - learning

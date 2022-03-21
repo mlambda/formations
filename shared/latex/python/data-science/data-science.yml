@@ -16,5 +16,9 @@ flavors:
     - pandas
     - /questions
     - tp-pandas
+  pandas:
+    - pandas
+    - /questions
+    - tp-pandas
 
 title: Modules de science des données
