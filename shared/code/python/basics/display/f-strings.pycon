@@ -1,0 +1,4 @@
+>>> prenom = "James"
+>>> nom = "Bond"
+>>> f"My name is {nom}, {prenom} {nom}."
+'My name is Bond, James Bond.'

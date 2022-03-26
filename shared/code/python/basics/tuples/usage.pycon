@@ -1,0 +1,18 @@
+>>> my_tuple = ()         # Création d'un n-uplet vide
+>>> my_tuple = (1, 2, 3)  # Création avec éléments
+>>> my_tuple[0]           # Accès à un élément par indiçage positif
+1
+>>> my_tuple[1]
+2
+>>> my_tuple[-1]          # Accès à un élément par indiçage positif
+3
+>>> my_tuple[-2]
+2
+>>> 1 in my_tuple         # Test d'appartenance
+True
+>>> 4 in my_tuple
+False
+>>> my_tuple + (4, 5, 6)  # Concaténation
+(1, 2, 3, 4, 5, 6)
+>>> len(my_tuple)         # Taille du n-uplet
+3

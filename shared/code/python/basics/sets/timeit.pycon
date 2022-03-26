@@ -1,0 +1,9 @@
+>>> import timeit
+>>> timeit.timeit(setup="my_list = list(range(1_000_000))",
+...               stmt="1_000_000 in my_list",
+...               number=1_000)
+6.942514133999794
+>>> timeit.timeit(setup="my_set = set(range(1_000_000))",
+...               stmt="1_000_000 in my_set",
+...               number=1_000)
+2.4280000616272446e-05

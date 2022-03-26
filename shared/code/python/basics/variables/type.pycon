@@ -1,0 +1,6 @@
+>>> question = "Quelle est la réponse à l'univers ?"
+>>> answer = 42
+>>> type(question)
+<class 'str'>
+>>> type(answer)
+<class 'int'>

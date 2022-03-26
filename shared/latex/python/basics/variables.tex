@@ -11,28 +11,26 @@
 
 \begin{frame}{Utilisation d'une variable}
   Pour utiliser une variable, on utilise son nom~:
-  \mintedpycode{python/basics/variables/usage}
+  \pycon{python/basics/variables/usage}
 \end{frame}
 
 \begin{frame}{Nommage}
   On peut nommer ses variables en respectant ces deux règles~:
 
-  \begin{itemize}[<+(1)->]
+  \begin{itemize}
     \item Le nom commence par une lettre minuscule ou majuscule ou un tiret bas
     \item Le nom continue par ces mêmes caractères ou des chiffres
   \end{itemize}
 
-  \onslide<+(1)->{
-    \begin{alertblock}{Unicode}
-      Depuis Python 3, on peut utiliser de l'unicode. \emph{C'est toutefois très déconseillé}
-    \end{alertblock}
-  }
+  \begin{alertblock}{Unicode}
+    Depuis Python 3, on peut utiliser de l'unicode. \emph{C'est toutefois très déconseillé}
+  \end{alertblock}
 \end{frame}
 
 \begin{frame}{Types de base}
   Pour représenter des valeurs simples, on utilise principalement~:
 
-  \begin{description}[<+(1)->]
+  \begin{description}
     \item[\texttt{int}] Nombres entiers
     \item[\texttt{float}] Nombres réels
     \item[\texttt{str}] Chaînes de caractères
@@ -43,11 +41,11 @@
 \begin{frame}{La fonction \texttt{type}}
   Permet de connaître le type d'un objet~:
 
-  \mintedcustom{python/basics/variables/type}{py}{text}
+  \pycon{python/basics/variables/type}
 \end{frame}
 
 \begin{frame}{Conversion de types}
   On peut utiliser les classes représentants les types pour convertir vers ceux-ci~:
 
-  \mintedcustom{python/basics/variables/type-conversion}{py}{text}
+  \pycon{python/basics/variables/type-conversion}
 \end{frame}

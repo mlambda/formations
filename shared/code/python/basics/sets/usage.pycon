@@ -1,0 +1,17 @@
+>>> my_set = set()                      # Création d'un ensemble vide
+>>> my_set = {"a"}                      # Création avec éléments
+>>> my_set = set(["a"])                 # Création à partir d'un itérable
+>>> my_set.add("b")                     # Ajout d'un élément
+>>> my_set.update(["c", "d"])           # Ajout de plusieurs éléments
+>>> my_set
+{'c', 'b', 'd', 'a'}
+>>> "a" in my_set                       # Test d'appartenance
+True
+>>> "e" in my_set
+False
+>>> my_set | {"e", "f"}                 # Union
+{'c', 'b', 'e', 'a', 'f', 'd'}
+>>> my_set & {"a", "e"}                 # Intersection
+{'a'}
+>>> my_set - {"a", "e"}                 # Différence
+>>> my_set < {"a", "b", "c", "d", "e"}  # Test de sous-ensemble
