@@ -1,0 +1,16 @@
+- name: full
+  title: Jour 1 --- TensorFlow pour le Deep Learning
+  sections:
+    - path: about
+      flavor: sparks-formation-3j
+
+    - path: ml
+      flavor: bda
+
+    - path: nn
+      flavor: testia
+
+    - path: tools
+      flavor: devops
+
+    - contact

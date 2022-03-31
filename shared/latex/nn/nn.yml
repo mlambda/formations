@@ -118,6 +118,21 @@ flavors:
     - $rnn: dpl
     - $transformer: text
     - help-pointers
+  testia:
+    - intro
+    - /supervised/classification
+    - playground
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - /questions
+    - $/tf-keras: bda
+    - $cnn: dpl
+    - $ae: dpl
+    - $/sequential-data: dpl
+    - $rnn: dpl
+    - help-pointers
 
 title: Réseaux de neurones
-version: 3
