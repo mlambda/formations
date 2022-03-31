@@ -1,0 +1,13 @@
+>>> d = {"a": 1, "b": 2}
+
+>>> for key in d:
+...     print(key)
+... 
+a
+b
+
+>>> for key, value in d.items():
+...     print(key, value)
+... 
+a 1
+b 2

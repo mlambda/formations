@@ -3,7 +3,6 @@ default_titles:
   env: Variables d'environnement
   files: Manipulation de fichiers
   std: Flux standards
-  tp: Travaux pratiques
 flavors:
   full:
     - files

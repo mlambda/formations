@@ -1,19 +1,19 @@
->>> my_list = []                # Création d'une liste vide
->>> my_list = [1, 2, 3]         # Création avec éléments
->>> my_list[0]                  # Accès à un élément par indiçage positif
+>>> l = []                # Création d'une liste vide
+>>> l = [1, 2, 3]         # Création avec éléments
+>>> l[0]                  # Accès par indiçage positif
 1
->>> my_list[1]
+>>> l[1]
 2
->>> my_list[-1]                 # Accès à un élément par indiçage négatif
+>>> l[-1]                 # Accès par indiçage négatif
 3
->>> my_list[-2]
+>>> l[-2]
 2
->>> my_list.append(4)           # Ajout d'un élément
->>> my_list.extend([5, 6])      # Ajout de plusieurs éléments
->>> my_list.sort(reverse=True)  # Tri de liste, ici inversé
->>> len(my_list)                # Taille de la liste
+>>> l.append(4)           # Ajout d'un élément
+>>> l.extend([5, 6])      # Ajout de plusieurs éléments
+>>> l.sort(reverse=True)  # Tri de liste, ici inversé
+>>> len(l)                # Taille de la liste
 6
->>> del my_list[4]              # Suppression d'un élément par son indice
->>> my_list.remove(1)           # Suppression d'un élément par son contenu
->>> my_list
+>>> del l[4]              # Suppression par indice
+>>> l.remove(1)           # Suppression par valeur
+>>> l
 [6, 5, 4, 3]

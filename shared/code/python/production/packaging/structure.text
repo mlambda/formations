@@ -1,0 +1,11 @@
+mon-paquet
+├── pyproject.toml
+├── README.md
+├── mon_paquet
+│   ├── __init__.py
+│   ├── module1.py
+│   └── module2.py
+└── tests
+    ├── __init__.py
+    ├── module1.py
+    └── module2.py

@@ -1,18 +1,18 @@
->>> my_dict = {}                          # Création d'un dictionnaire vide
->>> my_dict = {"a": 1, "b": 2}            # Création avec éléments initiaux
->>> my_dict = dict([("a", 1), ("b", 2)])  # Création à partir d'un itérable
->>> my_dict = dict(a=1, b=2)              # Création par arguments mots-clefs
->>> my_dict["a"]                          # Accès à la valeur associée à une clef
+>>> d = {}                          # Création d'un dictionnaire vide
+>>> d = {"a": 1, "b": 2}            # Création avec éléments initiaux
+>>> d = dict([("a", 1), ("b", 2)])  # Création à partir d'un itérable
+>>> d = dict(a=1, b=2)              # Création par arguments mots-clefs
+>>> d["a"]                          # Accès à une valeur
 1
->>> my_dict["c"] = 3                      # Modification ou ajout d'une valeur
->>> "a" in my_dict                        # Test d'appartenance
+>>> d["c"] = 3                      # Modification ou ajout d'une valeur
+>>> "a" in d                        # Test d'appartenance
 True
->>> "d" in my_dict
+>>> "d" in d
 False
->>> 1 in my_dict
+>>> 1 in d
 False
->>> len(my_dict)                          # Taille d'un dictionnaire
+>>> len(d)                          # Taille d'un dictionnaire
 3
->>> del my_dict["a"]                      # Suppression d'un élément
->>> my_dict
+>>> del d["a"]                      # Suppression d'un élément
+>>> d
 {"b": 2, "c": 3}

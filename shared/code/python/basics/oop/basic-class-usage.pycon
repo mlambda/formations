@@ -1,0 +1,13 @@
+>>> from math import sqrt
+>>> class Point:
+...     def __init__(self, x, y):
+...         self.x = x
+...         self.y = y
+...     def distance(self, other):
+...         return sqrt((other.x - self.x) ** 2
+...                     + (other.y - self.y) ** 2)
+... 
+>>> point1 = Point(2, 2)
+>>> point2 = Point(-2, -2)
+>>> point1.distance(point2)
+5.656854249492381

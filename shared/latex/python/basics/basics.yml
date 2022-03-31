@@ -70,9 +70,7 @@ flavors:
     - tp-functions
     - native-functions
     - /questions
-    - /python/regexes/regexes
-    - /questions
-    - /python/regexes/tp-regexes
+    - $/python/regexes: full
     - oop
     - tp-oop
     - /questions
@@ -98,11 +96,9 @@ flavors:
     - /questions
     - native-functions
     - /questions
-    - /python/regexes/regexes
-    - /questions
+    - $/python/regexes: no-tp
     - oop
     - /questions
     - exceptions
     - /questions
 title: Bases du langage Python
-version: 3

@@ -1,0 +1,10 @@
+>>> def div(a, b):
+...     try:
+...         return a / b
+...     except ArithmeticError:
+...         return float("nan")
+... 
+>>> div(4, 3)
+1.3333333333333333
+>>> div(4, 0)
+nan

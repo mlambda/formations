@@ -1,4 +1,0 @@
-Hello World
-Traceback (most recent call last):
-  File "<stdin>", line 2, in <module>
-ZeroDivisionError: division by zero

@@ -10,6 +10,5 @@ flavors:
     - /questions
     - pytest
     - /questions
-    - tp-testing
+    - tp
 title: Tests
-version: 3

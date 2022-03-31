@@ -2,6 +2,4 @@ flavors:
   full:
     - performance
     - /questions
-    - tp-performance
 title: Performances
-version: 3

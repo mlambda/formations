@@ -1,7 +1,9 @@
 flavors:
   full:
     - regexes
-    - tp-regexes
+    - /questions
+    - tp
+  no-tp:
+    - regexes
     - /questions
 title: Expressions régulières
-version: 3

@@ -1,0 +1,10 @@
+>>> try:
+...     1 / 0
+... except ArithmeticError:
+...     print("Division impossible")
+...     raise
+... 
+Division impossible
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ZeroDivisionError: division by zero

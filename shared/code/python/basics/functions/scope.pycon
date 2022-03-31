@@ -1,0 +1,11 @@
+>>> s = 3
+>>> def square(n):
+...     s = n ** 2
+...     return s
+... 
+>>> s
+3
+>>> square(3)
+9
+>>> s
+3

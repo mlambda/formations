@@ -1,0 +1,9 @@
+>>> ok = False
+>>> while not ok:
+...     answer = input("Entrez o ou n: ")
+...     ok = answer in {"o", "n"}
+... 
+Entrez o ou n: oui
+Entrez o ou n: o
+>>> answer
+'o'

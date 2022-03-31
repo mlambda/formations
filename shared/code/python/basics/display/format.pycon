@@ -1,2 +1,3 @@
->>> "My name is {nom}, {prenom} {nom}.".format(prenom="James", nom="Bond")
+>>> "My name is {nom}, {prenom} {nom}.".format(prenom="James",
+...                                            nom="Bond")
 'My name is Bond, James Bond.'

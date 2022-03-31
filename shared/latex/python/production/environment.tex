@@ -1,6 +1,6 @@
 \begin{frame}{Introduction}
   Contrôler son environnement logiciel pour~:
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Rendre son environnement de développement reproductible
     \item Contrôler les dépendances pour la prod
     \item Déployer son environnement facilement sur différents clouds
@@ -9,7 +9,7 @@
 
 \begin{frame}{Isolation de l'environnement --- \texttt{venv}}
   \texttt{venv} permet d'isoler un environnement Python~:
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item N'intéragit pas avec l'environnement système
     \item Permet la cohabitation de plusieurs environnements incompatibles
     \item Plus rapide et natif que les solutions basées sur les conteneurs
@@ -26,7 +26,7 @@
 
   Plusieurs bons outils~:
 
-  \begin{description}[<+->]
+  \begin{description}
     \item[\texttt{pip} + \texttt{setup.py}] Outil traditionnel, définit un paquet Python
     \item[\texttt{pip} + \texttt{requirements.txt}] Liste simple de dépendances
     \item[\texttt{pip} + \texttt{pip-compile}] Lister les dépendances puis les geler pour la stabilité
@@ -36,14 +36,14 @@
 \end{frame}
 
 \begin{frame}{Utilisation de \texttt{poetry}}
-  \begin{itemize}[<+->]
-    \item Définition d'un fichier de configuration (\texttt{poetry init} peut aider)
-    \item Gestion des dépendances avec \texttt{poetry add} et \texttt{poetry remove}
-    \item Mise à jour des dépendances avec \texttt{poetry update}
-    \item Installation de dépendances définies avec \texttt{poetry install}
-    \item Gestion de la version avec \texttt{poetry version}
-    \item Publication du paquet avec \texttt{poetry publish}
-  \end{itemize}
+  Quelques \bluelink{https://python-poetry.org/docs/cli/}{commandes} utiles pour la gestion de dépendances~:
+  \begin{description}
+    \item[\texttt{poetry new}] Crée un squelette de paquet Python géré par \texttt{poetry}
+    \item[\texttt{poetry add}] Ajoute un paquet comme dépendance du projet
+    \item[\texttt{poetry remove}] Enlève un paquet comme dépendance du projet
+    \item[\texttt{poetry install}] Installe les dépendances telles que spécifiées dans le fichier \texttt{poetry.lock} (géré automatiquement par \texttt{poetry})
+    \item[\texttt{poetry export}] Exporte le fichier \texttt{pyproject.toml} vers d'autres formats (comme \texttt{requirements.txt})
+  \end{description}
 \end{frame}
 
 \begin{frame}{Faciliter le déploiement}
@@ -51,14 +51,14 @@
 
   Le plus souvent, une étape intermédiaire est nécessaire avant le déploiement, la transformation en conteneur~:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Permet de contrôler les librairies natives en plus des librairies Python
     \item Plus grande robustesse si le logiciel s'exécute sur plusieurs OS
     \item Plus lourd à mettre en place que \texttt{venv}
     \item Plus adapté pour la prod (déploiement facile par Kubernetes)
   \end{itemize}
 
-  \onslide<+->{$\Rightarrow$ Dockerisation du paquet Python à l'aide d'un fichier \texttt{Dockerfile}}
+  $\Rightarrow$ Dockerisation du paquet Python à l'aide d'un fichier \texttt{Dockerfile}
 \end{frame}
 
 \begin{frame}{Exemple de \texttt{Dockerfile}}

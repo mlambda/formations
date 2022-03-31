@@ -10,37 +10,52 @@
 
 \begin{frame}{Structure conditionnelle}
   Utilisation de \texttt{if}, \texttt{elif} et \texttt{else}~:
-  \mintedpycode{python/basics/control-structures/if}
+  \pycon{python/basics/control-structures/if}
 \end{frame}
 
-\begin{frame}{Structure de boucle «~Pour dans~» ⋅ Fonction \texttt{range}}
+\begin{frame}{Structure de boucle «~Pour dans~» ⋅ Avec des indices}
   La fonction \texttt{range} permet de créer des suites d'indices~:
 
   \mintedpycode{python/basics/control-structures/range}
 
   Par défaut elle renvoie des objets de type \texttt{range}, plus efficaces que des listes.
+
+  Utilisation dans une boucle~:
+
+  \pycon{python/basics/control-structures/for-indices}
 \end{frame}
 
-\begin{frame}{Structure de boucle «~Pour dans~» ⋅ Utilisation}
-  Utilisation de \texttt{for}~:
-  \mintedpycode{python/basics/control-structures/for}
+\begin{frame}{Structure de boucle «~Pour dans~» ⋅ Avec une liste}
+  \pycon{python/basics/control-structures/for-list}
+\end{frame}
+
+\begin{frame}{Structure de boucle «~Pour dans~» ⋅ Avec un dictionnaire}
+  \pycon{python/basics/control-structures/for-dict}
+\end{frame}
+
+\begin{frame}{Structure de boucle «~Pour dans~» ⋅ Avec plusieurs itérables}
+  Utilisation de la fonction \texttt{zip}~:
+
+  \pycon{python/basics/control-structures/for-zip}
+
+  Fonctionne avec un nombre arbitraire d'itérables.
 \end{frame}
 
 \begin{frame}{Structure de boucle «~tant que~»}
-  \mintedpycode{python/basics/control-structures/while}
+  \pycon{python/basics/control-structures/while}
 \end{frame}
 
 \begin{frame}{\texttt{break} \& \texttt{continue}}
-  \begin{description}[<+->]
+  \begin{description}
     \item[\texttt{break}] Utilisé pour sortir de la boucle la plus intérieure
     \item[\texttt{continue}] Utilisé pour passer directement à l'itération suivante de la boucle la plus intérieure
   \end{description}
 
-  \onslide<+->{\mintedcustom{python/basics/control-structures/break-continue}{py}{text}}
+  \pycon{python/basics/control-structures/break-continue}
 \end{frame}
 
 \begin{frame}{Clause \texttt{else} pour les boucles}
-  La clause \texttt{else} est exécutée si on sort normalement de la boucle (sans \texttt{break})~:
+  La clause \texttt{else} est exécutée si on sort de la boucle sans \texttt{break}~:
 
-  \mintedcustom{python/basics/control-structures/else}{py}{text}
+  \pycon{python/basics/control-structures/else}
 \end{frame}

@@ -1,0 +1,16 @@
+>>> l1 = ["a", "b", "c"]
+>>> l2 = [True, False]
+
+>>> for item1, item2 in zip(l1, l2):
+...     print(item1, item2)
+... 
+a True
+b False
+
+>>> import itertools
+>>> for item1, item2 in itertools.zip_longest(l1, l2):
+...     print(item1, item2)
+... 
+a True
+b False
+c None

@@ -1,6 +1,6 @@
 \begin{frame}{Introduction}
   Buts~:
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Respect des normes dans une équipe
     \item Minimiser les pertes de temps en revue de code
     \item Produire un logiciel plus maintenable
@@ -10,7 +10,7 @@
 \begin{frame}{Possibilités}
   Les points majeurs que l'on vérifie habituellement~:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Types
     \item Éléments de code non utilisés
     \item Documentation non présente ou incomplète
@@ -22,26 +22,26 @@
 \begin{frame}{Outils}
   L'organisation PyCQA maintient plusieurs outils de vérification, parmi eux~:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item \texttt{flake8}
     \item \texttt{pylint}
     \item \texttt{RedBaron}
   \end{itemize}
 
-  \onslide<+->{On utilise aussi beaucoup \texttt{mypy} pour vérifier les types.}
+  On utilise aussi beaucoup \texttt{mypy} pour vérifier les types.
 \end{frame}
 
 \begin{frame}{Typage}
   Sûrement le point le plus important à vérifier~:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Permet de modifier aggressivement le logiciel
     \item Résout une grande partie des bugs avant l'intégration à la base de code
     \item Documente le code
     \item Permet des générations automatiques (CLI avec Typer par exemple)
   \end{itemize}
 
-  \onslide<+->{Le passage à une base de code typée peut être progressif.}
+  Le passage à une base de code typée peut être progressif.
 \end{frame}
 
 \begin{frame}{Notations de typage}
@@ -57,7 +57,7 @@
 \begin{frame}{Vérifications générales}
   L'outil incontournable est \texttt{flake8}. En fonction des extensions installées, il vérifiera~:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item La syntaxe
     \item Les éléments non utilisés
     \item Les imports
@@ -89,8 +89,8 @@
 \begin{frame}{Vérification du style}
   Pour le style, je vous recommande fortement l'utilisation de \texttt{black}~:
 
-  \begin{itemize}[<+->]
-    \item Formatage automatique (transformation en AST puis en Python)
+  \begin{itemize}
+    \item Formatage automatique (transformation du code source en arbre syntaxique puis de nouveau en code source $\Rightarrow$ formatage original inutilisé)
     \item Possibilité de vérifier l'application sur la base de code
     \item Style homogène
     \item Plus de problèmes de style en revue de code !
@@ -100,20 +100,20 @@
 \begin{frame}{Vérification de la documentation}
   Utilisation de \texttt{pylint} avec seulement ces options~:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item \texttt{missing-param-doc}
     \item \texttt{differing-param-doc}
     \item \texttt{differing-type-doc}
     \item \texttt{missing-return-doc}
   \end{itemize}
 
-  \onslide<+->{Ainsi que \texttt{flake8-docstrings} pour le style des docstrings.}
+  Ainsi que \texttt{flake8-docstrings} pour le style des docstrings.
 \end{frame}
 
 \begin{frame}{Préconisations d'utilisation}
   Recommandé~: regrouper les vérifications dans une seule commande (avec un Makefile par exemple).
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Faire tourner ces vérifications avant chaque PR (hook git possible)
     \item Les intégrer à la CI
     \item \alert{Une PR ne doit pas être revue tant que ces soucis ne sont pas réglés}
@@ -121,7 +121,7 @@
 \end{frame}
 
 \begin{frame}{Paramétrage}
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Définir en équipe les points à vérifier
     \item Analyser régulièrement le coût/bénéfice de chaque élément vérifié
     \item Rajouter ou enlever des vérifications en fonction de ces analyses
@@ -131,10 +131,10 @@
 \begin{frame}{Reproductibilité}
   Il faut gérer les outils de vérification comme des dépendances~:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Chaque collègue doit avoir les mêmes résultats étant donné une base de code
     \item Les outils doivent être faciles à installer, y compris sur la CI
   \end{itemize}
 
-  \onslide<+->{Attention toutefois à ne pas installer ces dépendances en prod.}
+  Attention toutefois à ne pas installer ces dépendances en prod.
 \end{frame}

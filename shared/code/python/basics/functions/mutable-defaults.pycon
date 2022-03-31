@@ -1,0 +1,8 @@
+>>> def append_to(item, lst=[]):
+...     lst.append(item)
+...     return lst
+... 
+>>> append_to(1)
+[1]
+>>> append_to(1)
+[1, 1]
