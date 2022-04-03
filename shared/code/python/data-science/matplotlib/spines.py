@@ -7,7 +7,6 @@ y2 = np.sin(x)
 
 fig, ax = plt.subplots()
 
-# Modification des spines
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 

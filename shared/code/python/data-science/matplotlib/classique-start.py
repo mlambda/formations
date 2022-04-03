@@ -7,8 +7,9 @@ y2 = np.sin(x)
 
 # Proportion, taille et résolution
 # Récupération du nouveau graphe
-fig, ax = plt.subplots(figsize=(4, 8),
-                       dpi=100)
+fig, ax = plt.subplots(
+    figsize=(4, 8),
+    dpi=100)
 
 ax.plot(x, y1)
 ax.plot(x, y2)

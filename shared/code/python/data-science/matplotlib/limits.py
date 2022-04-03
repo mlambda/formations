@@ -7,7 +7,6 @@ y2 = np.sin(x)
 
 fig, ax = plt.subplots()
 
-# Limites d'affichage
 ax.set_ylim(0, 1)
 ax.set_xlim(0, np.pi * 2)
 

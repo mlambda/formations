@@ -9,9 +9,9 @@ fig, ax = plt.subplots()
 
 ax.plot(x, y1, label="cos")
 ax.plot(x, y2, label="sin")
-# Legende
+
 ax.legend()
-# Titre
+
 ax.set_title("Cosinus et Sinus")
 
 fig.show()
