@@ -37,12 +37,12 @@ flavors:
     - functions
     - /questions
     - tp-functions
-    - native-functions
-    - /questions
     - oop
     - /questions
     - tp-oop
     - exceptions
+    - /questions
+    - native-functions
     - /questions
   full:
     - support
@@ -68,13 +68,13 @@ flavors:
     - functions
     - /questions
     - tp-functions
-    - native-functions
-    - /questions
     - $/python/regexes: full
     - oop
     - tp-oop
     - /questions
     - exceptions
+    - /questions
+    - native-functions
     - /questions
   no-tp:
     - support
@@ -94,11 +94,11 @@ flavors:
     - /questions
     - functions
     - /questions
-    - native-functions
-    - /questions
     - $/python/regexes: no-tp
     - oop
     - /questions
     - exceptions
+    - /questions
+    - native-functions
     - /questions
 title: Bases du langage Python

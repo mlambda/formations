@@ -1,0 +1,17 @@
+>>> class Point:
+...     pass
+... 
+>>> point = Point()
+
+>>> setattr(point, "x", 3)
+>>> point.x
+3
+
+>>> getattr(point, "x")
+3
+
+>>> delattr(point, "x")
+>>> point.x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'Point' object has no attribute 'x'

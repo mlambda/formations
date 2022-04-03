@@ -1,0 +1,15 @@
+>>> callable(int)
+True
+>>> callable(42)
+False
+
+>>> type(True)
+bool
+
+>>> isinstance(True, int)
+True
+>>> type(True) == int
+False
+
+>>> issubclass(bool, int)
+True
