@@ -1,4 +1,5 @@
->>> df = pd.read_csv("titanic/train.csv", index_col="PassengerId"); df.head()
+>>> df = pd.read_csv("titanic/train.csv", index_col="PassengerId")
+>>> df.head()
              Survived  Pclass  ... Cabin Embarked
 PassengerId                    ...               
 1                   0       3  ...   NaN        S

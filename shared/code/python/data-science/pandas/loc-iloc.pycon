@@ -8,12 +8,12 @@ PassengerId                    ...
 Int64Index([1, 2, 3, 4, 5], dtype='int64', name='PassengerId')
 Index(['Survived', 'Pclass', 'Name', 'Sex', 'Age'], dtype='object')
 
->>> df.loc[2, "Cabin"]  # Utilise les valeurs de df.index et de df.columns
+>>> df.loc[2, "Cabin"]  # Utilise df.index et de df.columns
 
->>> df.iloc[1, -2]  # Utilise la position des éléments
+>>> df.iloc[1, -2]      # Utilise la position
 'C85'
 
->>> df.loc[[2, 1], ["Cabin", "Survived"]]  #  Indiçage avancé avec loc possible
+>>> df.loc[[2, 1], ["Cabin", "Survived"]]  #  Indiçage avancé avec loc
             Cabin  Survived
 PassengerId                
 2             C85         1

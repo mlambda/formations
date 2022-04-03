@@ -1,6 +1,6 @@
->>> df["NormalizedAge"] = (df["Age"] - df["Age"].mean()) / df["Age"].std()
+>>> df["NormalizedAge"] = (df.Age - df.Age.mean()) / df.Age.std()
 
->>> mask = df.Survived.astype(bool); mask  # ou df["Survived"].astype(bool)
+>>> mask = df.Survived.astype(bool); mask
 PassengerId
 1      False
 2       True
