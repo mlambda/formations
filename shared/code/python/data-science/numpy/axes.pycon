@@ -1,11 +1,11 @@
->>> a_2dim = np.array([[0, 1], [2, 3]]); a_2dim
+>>> a_2d = np.array([[0, 1], [2, 3]]); a_2d
 array([[0, 1],
        [2, 3]])
 
->>> a_2dim.transpose()  # ou a_2dim.T. Inverse l'ordre des axes
+>>> a_2d.transpose()  # ou a_2d.T. Inverse l'ordre des axes
 array([[0, 2],
        [1, 3]])
 
->>> a_2dim.swapaxes(0, 1)  # Inverse deux axes
+>>> a_2d.swapaxes(0, 1)  # Inverse deux axes
 array([[0, 2],
        [1, 3]])
