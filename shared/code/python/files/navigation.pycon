@@ -1,0 +1,19 @@
+>>> import pathlib
+
+>>> formations_dir = pathlib.Path.home() / "work" / "formations"
+>>> formations_dir
+PosixPath('/home/mog/work/formations')
+>>> str(formations_dir)
+'/home/mog/work/formations'
+
+>>> config_file = formations_dir / "config.yml"
+>>> config_file.with_suffix(".txt")
+PosixPath('/home/mog/work/formations/config.txt')
+>>> config_file.name
+'config.yml'
+
+>>> for item in formations_dir.iterdir():
+...     print(item)
+... 
+/home/mog/work/formations/formation.sty
+/home/mog/work/formations/.git

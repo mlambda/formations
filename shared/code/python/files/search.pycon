@@ -1,0 +1,10 @@
+>>> import pathlib
+
+
+>>> home = pathlib.Path.home()
+>>> for jpg in home.rglob("*.jpg"):
+...     print(jpg)
+... 
+/home/mog/pictures/cat.jpg
+/home/mog/pictures/dog.jpg
+/home/mog/work/formations/img/python-logo.jpg
