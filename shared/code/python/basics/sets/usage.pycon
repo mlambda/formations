@@ -14,4 +14,6 @@ False
 >>> s & {"a", "e"}                 # Intersection
 {'a'}
 >>> s - {"a", "e"}                 # Différence
+{'d', 'c', 'b'}
 >>> s < {"a", "b", "c", "d", "e"}  # Test de sous-ensemble
+True
