@@ -12,7 +12,7 @@ b
 0 a
 1 b
 
->>> for i, item in enumerate(my_list):
+>>> for i, item in enumerate(l):
 ...     print(i, item)
 0 a
 1 b
