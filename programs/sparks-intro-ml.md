@@ -10,7 +10,7 @@ Ingénieurs/chefs de projet interressé par les techniques d'apprentissage autom
 
 ## Prérequis
 
-Notions de Python
+Bases du langage Python
 
 ## Objectifs
 Cette formation vous permettra d'acquérir les bases du Machine Learning afin d'identifier les points d'intégrations dans vos applications métier. 
