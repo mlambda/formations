@@ -369,7 +369,7 @@
 \newcommand\purple[1]{\textcolor{purple}{#1}}
 \newcommand\smallgray[1]{\textcolor{gray}{\footnotesize\it #1}}
 
-\DeclareDocumentCommand\question{ m o }{%
+\NewDocumentCommand\question{ m o }{%
   {\alert{#1}%
     \ifnum\value{beamerpauses}=1
       \setcounter{beamerpauses}{2}
@@ -378,17 +378,24 @@
   }%
 }
 
-\newcommand{\mog}[2][]{%
-  \ifthenelse{\equal{\Trainer}{mog}}
-    {#2}
-    {#1}%
+\NewDocumentCommand\whitelisttrainer{ m m o }{%
+  \ifthenelse{\equal{\Trainer}{#1}}%
+    {#2}%
+    {\IfNoValueF{#3}{#3}}%
 }
 
-\newcommand{\fmg}[2][]{%
-  \ifthenelse{\equal{\Trainer}{fmg}}
-    {#2}
-    {#1}%
+\NewDocumentCommand\blacklisttrainer{ m m o }{%
+  \ifthenelse{\NOT{\equal{\Trainer}{#1}}}%
+    {#2}%
+    {\IfNoValueF{#3}{#3}}%
 }
+
+\NewDocumentCommand\mog{ m o }{\whitelisttrainer{mog}{#1}[#2]}
+\NewDocumentCommand\fmg{ m o }{\whitelisttrainer{fmg}{#1}[#2]}
+\NewDocumentCommand\nyx{ m o }{\whitelisttrainer{nyx}{#1}[#2]}
+\NewDocumentCommand\notmog{ m o }{\blacklisttrainer{mog}{#1}[#2]}
+\NewDocumentCommand\notfmg{ m o }{\blacklisttrainer{fmg}{#1}[#2]}
+\NewDocumentCommand\notnyx{ m o }{\blacklisttrainer{nyx}{#1}[#2]}
 
 % Positive and negative item for itemize
 \newcommand{\positem}{\item[\Large\green{\textbf{+}}]}
