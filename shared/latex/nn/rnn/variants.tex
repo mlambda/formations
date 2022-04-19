@@ -12,7 +12,7 @@
   \begin{description}[<+->]
     \item[Update gate] $z_t = \sigma (W_z \times x_t + U_z \times h_{t - 1} + b_z)$
     \item[Reset gate] $r_t = \sigma (W_r \times x_t + U_r \times h_{t - 1} + b_r)$
-    \item[Sortie] $h_t = (1 - z_t) \times h_{t - 1} + z_t \times \tanh(W_h \times x_t + U_h (r_t \times h_{t - 1}) + b_h)$
+    \item[Sortie] $h_t = (1 - z_t) \times h_{t - 1} + z_t \times \tanh(W_h \times x_t + r_t \times U_h \times (h_{t - 1}) + b_h)$
   \end{description}
 \end{frame}
 

@@ -4,7 +4,7 @@
   \item[Régression] coût si on rendait la moyenne des instances
     comme résultat
     \[
-      Loss = \sum|\hat{y}-y| \approx variance
+      Loss = \sum|\bar{y}-y| \approx variance
     \]
   \item[Classification] Entropie de Shannon :
     \[
@@ -69,10 +69,10 @@
         [{1, 2, 3, 4, 5, 6, 7, 8, 9}
           [{4, 6, 7, 8, 9},
           edge label={node[midway,left,font=\scriptsize]{jardinage}}
-            [{$\hat{y}=57,2$} [{$L=80,8$}]]]
+            [{$\bar{y}=57,2$} [{$L=80,8$}]]]
           [{1, 2, 3, 5},
           edge label={node[midway,right,font=\scriptsize]{$\neg$ jardinage}}
-            [{$\hat{y}=19,25$} [{$L=31,5$}]]]
+            [{$\bar{y}=19,25$} [{$L=31,5$}]]]
         ]
       \end{forest}\\
       Loss totale : $122,3$
@@ -106,10 +106,10 @@
         [{1, 2, 3, 4, 5, 6, 7, 8, 9}
           [{1, 2, 3, 4, 5, 7},%
           edge label={node[midway,left,font=\scriptsize]{jeux vidéos}}
-            [{$\hat{y}=28,3$} [{$L=92,6$}]]]
+            [{$\bar{y}=28,3$} [{$L=92,6$}]]]
           [{6, 8, 9},
           edge label={node[midway,right,font=\scriptsize]{$\neg$ jeux vidéos}}
-            [{$\hat{y}=64,3$} [{$L=30,7$}]]]
+            [{$\bar{y}=64,3$} [{$L=30,7$}]]]
         ]
       \end{forest}\\
       Loss totale : $123,3$
@@ -143,10 +143,10 @@
         [{1, 2, 3, 4, 5, 6, 7, 8, 9}
           [{1, 4, 5, 7, 9},%
           edge label={node[midway,left,font=\scriptsize]{chapeaux}}
-            [{$\hat{y}=42,8$} [{$L=110,8$}]]]
+            [{$\bar{y}=42,8$} [{$L=110,8$}]]]
           [{2, 3, 6, 8},
           edge label={node[midway,right,font=\scriptsize]{$\neg$ chapeaux}}
-            [{$\hat{y}=37,25$} [{$L=91$}]]]
+            [{$\bar{y}=37,25$} [{$L=91$}]]]
         ]
       \end{forest}\\
       Loss totale : $201,8$
