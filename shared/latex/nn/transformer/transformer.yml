@@ -3,7 +3,6 @@ default_titles:
   model: Modèle
   transformer-cell: La cellule \og Transformer \fg
   vision-transformer: Le \og Vision Transformer \fg
-  text-tp: Travaux pratiques
   vision-demo: Démonstration
 flavors:
   text:

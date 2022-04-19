@@ -1,11 +1,10 @@
-\begin{frame}
-  \frametitle{Sur-apprentissage (et sous-apprentissage)}
-  \V{["plt/overfitting-train", "tw", 0.8] | image}
+\begin{frame}{Sur-apprentissage (et sous-apprentissage)}
+  \V{["plt/overfitting-train", "th", 0.7] | image}
 \end{frame}
 
 \begin{frame}{Par la pénalisation de l'utilisation des paramètres}
   Coût supplémentaire pour l'utilisation des paramètres dans la fonction de perte~:
-  \begin{description}[<+->]
+  \begin{description}
     \item[L1] Produit beaucoup de poids à 0, s'appelle aussi Lasso~:
       \[
         E = E + \lambda ||\vect{\theta}||_1

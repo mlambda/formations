@@ -20,7 +20,7 @@
 
 \begin{frame}{Modélisation d'un réseau de neurones}
   Agencement de beaucoup de neurones~:
-  \begin{description}[<+->]
+  \begin{description}
     \item[En parallèle] Calculent des résultats indépendamment dans la même couche
     \item[En série] Prennent en entrée les résultats des neurones de la couche précédente
   \end{description}
@@ -28,7 +28,7 @@
 
 \begin{frame}{Deux types de neurones}
   On distingue deux types de neurones~:
-  \begin{description}[<+->]
+  \begin{description}
     \item[Neurones cachés] Neurones des couches intermédiaires. Améliorent l'expressivité du modèle
     \item[Neurones de sortie] Neurones de la couche finale. Contraints par le type de sortie attendu
   \end{description}
@@ -109,7 +109,7 @@
       O_{2,1} & O_{2,2} & \dots & O_{2,n}
     \end{bmatrix}
   \end{align*}
-  \begin{description}[<+->]
+  \begin{description}
     \item[$\vect{X}$] Données en entrée de dimension $d$
     \item[$\vect{\theta}$] Paramètres à trouver des $n$ neurones de notre modèle
     \item[$\vect{\sigma}$] Fonction d'activation
@@ -118,7 +118,7 @@
 \end{frame}
 
 \begin{frame}{Fonctions d'activation --- Critères de choix}
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Propriétés mathématiques (conservation du gradient)
     \item Propriétés d'apprentissage (éviter la création de poids morts)
     \item Rapidité de calcul
@@ -141,10 +141,22 @@
     \V{["tikz/activations/sigmoid", "tw", 1] | image}
   \end{center}
 
-  \begin{description}[<+->]
-    \item[Définition] \[\phi(x) = \frac{1}{1 + e^{-x}}\]
-    \item[Dérivée] \[\phi'(x)=\phi(x)(1-\phi(x))\]
-  \end{description}
+  \begin{columns}
+    \begin{column}{.5\tw}
+      \centering
+      \textbf{Définition}
+      \[
+        \phi(x) = \frac{1}{1 + e^{-x}}
+      \]
+      \end{column}
+    \begin{column}{{.5\tw}}
+      \centering
+      \textbf{Dérivée}
+      \[
+        \phi'(x) = \phi(x)(1 - \phi(x))
+      \]
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Fonctions d'activation --- Tangente hyperbolique}
@@ -152,10 +164,22 @@
     \V{["tikz/activations/tanh", "tw", 1] | image}
   \end{center}
 
-  \begin{description}[<+->]
-    \item[Définition] \[\tanh(x)=\frac{1-e^{-2x}}{1+e^{-2x}}\]
-    \item[Dérivée] \[\tanh'(x)=1-\tanh^2(x)\]
-  \end{description}
+  \begin{columns}
+    \begin{column}{.5\tw}
+      \centering
+      \textbf{Définition}
+      \[
+        \tanh(x) = \frac{1 - e^{-2x}}{1 + e^{-2x}}
+      \]
+      \end{column}
+    \begin{column}{{.5\tw}}
+      \centering
+      \textbf{Dérivée}
+      \[
+        \tanh'(x) = 1 - \tanh^2(x)
+      \]
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Fonctions d'activation --- ReLU}
@@ -163,26 +187,43 @@
     \V{["tikz/activations/relu", "tw", 0.6] | image}
   \end{center}
 
-  \begin{description}[<+->]
-    \item[Définition] \[\ReLU(x)=\begin{cases} 0 & x \leq 0 \\ x & x > 0\end{cases}\]
-    \item[Dérivée] \[\ReLU'(x)=\begin{cases} 0 & x \leq 0 \\ 1 & x > 0\end{cases}\]
-  \end{description}
+  \begin{columns}
+    \begin{column}{.5\tw}
+      \centering
+      \textbf{Définition}
+      \[
+        \ReLU(x) = \begin{cases}
+                     0 & x \leq 0 \\
+                     x & x > 0 \\
+                   \end{cases}
+      \]
+      \end{column}
+    \begin{column}{{.5\tw}}
+      \centering
+      \textbf{Dérivée}
+      \[
+        \ReLU'(x) =  \begin{cases}
+                       0 & x \leq 0 \\
+                       1 & x > 0\\
+                     \end{cases}
+      \]
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Fonctions d'activation --- Approximation d'une fonction}
   \centering
-    \V{["tikz/activations/approximation", "tw", 1] | image}
+  \V{["tikz/activations/approximation", "tw", 1] | image}
   {\small
     \begin{align*}
-      n_1 & = \ReLU(-5x - 7.7) & n_4 & = \ReLU(1.2x - 0.2) \\
-      n_2 & = \ReLU(-1.2x - 1.3) & n_5 & = \ReLU(2x - 1.1) \\
-      n_3 & = \ReLU(1.2x + 1) & n_6 & = \ReLU(5x - 5) \\
+      n_1 & = \ReLU(-5x - 7.7) & n_2 & \ReLU(-1.2x - 1.3) & n_3 & = \ReLU(1.2x + 1) \\
+      n_4 & = \ReLU(1.2x - 0.2) & n_5 & = \ReLU(2x - 1.1) & n_6 & = \ReLU(5x - 5) \\
     \end{align*}
   }
 \end{frame}
 
 \begin{frame}{Fonctions d'activation --- Softmax}
-  \begin{description}[<+->]
+  \begin{description}
     \item[Définition] \[\softmax(x)_i = \frac{\exp(x_i)}{\sum_{k = 1}^n{\exp(x_k)}}\]
     \item[Propriété] \[\sum_{i = 1}^n{\softmax(x)_i} = 1\]
     \item[Gradient] \[

@@ -1,6 +1,5 @@
 default_titles:
   autoencoder: Présentation
-  tp: Travaux Pratiques
 flavors:
   dpl:
     - autoencoder

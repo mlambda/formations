@@ -1,7 +1,3 @@
-default_titles:
-  intro: Introduction
-  variants: Variantes
-  demo: Démonstration
 flavors:
   full:
     - intro

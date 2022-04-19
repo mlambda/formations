@@ -6,8 +6,6 @@ default_titles:
   model: Modèle
   modern-anomaly-detection: "Une méthode de détection d'anomalie moderne"
   modern-architectures: Architectures modernes
-  tp: Travaux pratiques
-  tp-demo: Démonstration
   demo-task: Démonstrations
 
 flavors:

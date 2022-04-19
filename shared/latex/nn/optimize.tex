@@ -40,12 +40,18 @@
 \end{frame}
 
 \begin{frame}{Taille du batch}
-  \V{["plt/batch-size-effect", "tw", 0.8] | image}
-  Usuellement, des puissances de 2, pour optimiser les ressources GPU
+  \begin{columns}
+    \begin{column}{.5\tw}
+      Usuellement, des puissances de 2.
+    \end{column}
+    \begin{column}{.5\tw}
+      \V{["plt/batch-size-effect", "tw", 1] | image}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Taille des couches}
-  Usuellement, des puissances de 2, pour optimiser les ressources GPU. \\
+  Usuellement, des puissances de 2. \\
   Même intuition que pour le nombre de couches.
 \end{frame}
 
