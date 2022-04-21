@@ -6,6 +6,13 @@ flavors:
     - keras
     - /questions
     - tp-keras
+  dpl:
+    - tf
+    - /questions
+    - tp-tf
+    - keras
+    - /questions
+    - tp-keras
   drn:
     - tf
     - /questions

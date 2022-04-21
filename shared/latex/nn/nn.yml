@@ -109,7 +109,7 @@ flavors:
     - regularisation
     - playground
     - /questions
-    - $/tf-keras: bda
+    - $/tf-keras: dpl
     - $cnn: dpl
     - $ae: dpl
     - $gan: full
