@@ -82,6 +82,7 @@ flavors:
     - playground
     - $/tf-keras: bda
     - $rnn: dpl
+    - $transformer: text
     - help-pointers
   ml5:
     - intro

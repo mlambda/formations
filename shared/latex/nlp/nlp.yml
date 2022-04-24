@@ -1,12 +1,9 @@
 default_titles:
-  intro: Natural Language Processing (NLP)
   preprocessing: Prétraitements
-  recommandation-text: Recommandation de textes
-  similarity-text: Similarités de textes
+  information-retrieval: Recherche d'information
+  similarity-text: Similarité textuelle
   tp-help: Quelques liens utiles
-  tp-text-features-engineering: Travaux pratiques text mining
-  tp-text-reco-system: Travaux pratiques recommandation de texte
-  tf-idf: Représentations TF-IDF
+  tf-idf: Représentation TF-IDF
   wordembeddings: Word Embeddings
   /python/regexes/regexes: Expressions régulières
 
@@ -31,9 +28,10 @@ flavors:
     - usages-nlp
     - preprocessing
     - tf-idf
-    - wordembeddings
     - /questions
     - tp-text-features-engineering
+    - wordembeddings
+    - /questions
     - tp-wordembeddings
     - help-pointers
   mmd:
@@ -45,10 +43,11 @@ flavors:
     - /questions
     - tp-text-features-engineering
     - similarity-text
-    - recommandation-text
+    - information-retrieval
     - /questions
-    - tp-text-reco-system
+    - tp-information-retrieval
     - wordembeddings
+    - /questions
     - tp-wordembeddings
     - help-pointers
 title: Traitement automatique des langues

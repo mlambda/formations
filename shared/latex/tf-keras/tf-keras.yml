@@ -3,7 +3,7 @@ default_titles:
   tf: TensorFlow 2
 flavors:
   bda:
-    - keras
+    - keras: null
     - /questions
     - tp-keras
   dpl:
@@ -21,4 +21,3 @@ flavors:
     - /questions
     - tp-demo-keras
 title: TensorFlow et Keras
-version: 3

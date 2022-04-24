@@ -1,29 +1,21 @@
 default_titles:
   classification: Classification
-  cost-error-function: Fonction de Coût/Erreur
+  cost-error-function: Fonction de coût/erreur
 
-  regression-lineaire: Regression Linéaire
-  regression-logistique: Régression Logistique
-  regression-polynomiale: Régression Polynomiale
-  tp-reg-lin-poly: "Travaux Pratiques : Régression Linéaire"
+  regression-lineaire: Regression linéaire
+  regression-logistique: Régression logistique
+  regression-polynomiale: Régression polynômiale
 
   trees: Arbres de décision
-  random-forest: Random Forest
-  demo-random-forest: Démo Sklearn
-  tp-random-forest: "Travaux Pratiques : Random Forest"
-  tp-random-forest-text: "Travaux Pratiques : Random Forest"
+  random-forest: Random forest
 
-  gradient-boosting: Gradient Boosting
-  demo-gradient-boosting: Démo Sklearn
+  gradient-boosting: Gradient boosting
 
   svm: Support Vector Machine
-  demo-svm: Démo Sklearn
-  tp-svm: "Travaux Pratiques : SVM (TODO)"
-  tp-svm-text: "Travaux Pratiques : SVM"
 flavors:
   svm-text:
     - svm
-    - demo-svm
+    - demo-sklearn-svm
     - tp-svm-text
   bda:
     - /prerequisites/proba-rappel
@@ -47,32 +39,32 @@ flavors:
     - /questions
     - tp-reg-lin-poly
     - svm
-    - demo-svm
+    - demo-sklearn-svm
     - trees
     - trees-details
     - random-forest
     - /questions
-    - demo-random-forest
+    - demo-sklearn-random-forest
     - tp-random-forest
   mmd:
     - /prerequisites/proba-rappel
     - /bayesian/naive-bayes
+    - /questions
     - regression-lineaire
     - cost-error-function
     - /nn/gradient-descent
-    - classification
-    - /nn/intro
     - /questions
     - trees
     - trees-details
     - random-forest
     - /questions
-    - demo-random-forest
+    - demo-sklearn-random-forest
     - gradient-boosting
     - /questions
-    - demo-gradient-boosting
+    - demo-sklearn-gradient-boosting
     - svm
-    - demo-svm
+    - /questions
+    - demo-sklearn-svm
     - tp-svm-text
   drn:
     - /bayesian/naive-bayes

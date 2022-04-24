@@ -1,5 +1,5 @@
-- name: j1
-  title: Jour 1 --- Une approche classique en Text Mining
+- name: j1j2j3
+  title: …
   sections:
     - path: about
       flavor: orsys-3j
@@ -7,34 +7,13 @@
     - path: nlp
       flavor: mmd
 
-- name: j2
-  title: Jour 2 --- Classification Supervisée de Texte
-  sections:
-    - title: Fondamentaux du machine learning
-      path: ml
+    - path: ml
       flavor: intro
 
-    - title: Apprentissage supervisé
-      path: supervised
+    - path: supervised
       flavor: mmd
 
-- name: j3
-  title: Jour 3 --- NLP et Deep Learning
-  sections:
-    - title: Données séquentielles
-      path: sequential-data
-      flavor: dpl
-
-    - title: TensorFlow \& Keras
-      path: tf-keras
-      flavor: bda
-
-    - title: Réseaux de neurones récurrents
-      path: nn
+    - path: nn
       flavor: mmd
-
-    - title: Transformeurs
-      path: nn/transformer
-      flavor: text
 
     - path: contact

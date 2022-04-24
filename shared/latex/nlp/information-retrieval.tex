@@ -1,0 +1,27 @@
+\begin{frame}{Tâche}
+  Chercher dans une base de documents (souvent très grande) les documents les plus pertinents par rapport à une requête.
+\end{frame}
+
+\begin{frame}{okapi BM25}
+  Amélioration du produit scalaire TF-IDF :
+  \[
+  \text{score}(D, Q)
+  = \sum _{i = 1}^n
+  \text{IDF}(q_i)
+  \cdot
+  \frac{f(q_i, D) \cdot (k_1 + 1)}%
+       {f(q_i, D) + k_1 \cdot \left(1 - b + b \cdot \frac{|D|}{\bar{|D|}}\right)}
+  \]
+  où :
+  \begin{description}
+  \item[$\vect{\text{IDF}(q_i)}$] Inverse de la fréquence de document du terme $q_i$
+  \item[$\vect{f(q_i, D)}$] Fréquence du terme $q_i$ dans le document $D$
+  \item[$\vect{|D|}$] Nombre de documents dans $D$
+  \item[$\bar{\vect{|D|}}$] Longueur moyenne des documents de la base
+  \item[$\vect{k_1}$ \& $\vect{b}$] Paramètres du système avec usuellement :
+  \begin{itemize}
+    \item $k_1 \in [1,2;2]$
+    \item $b = 0,75$
+  \end{itemize}
+  \end{description}
+\end{frame}
