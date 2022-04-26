@@ -1,21 +1,22 @@
 \begin{frame}{Évaluation de la qualité d'un split}
-  En fonction de la tâche :
+  En fonction de la tâche~:
   \begin{description}
-  \item[Régression] coût si on rendait la moyenne des instances
-    comme résultat
+  \item[Régression] Coût si on rendait la moyenne des instances comme résultat~:
     \[
-      Loss = \sum|\overline{y}-y| \approx variance
+      \text{Erreur} = \sum|\overline{y}-y| \approx variance
     \]
   \item[Classification] Entropie de Shannon :
     \[
-    Loss = -\sum_{x \in X}P_x*\log_2(P_x)
+      \text{Erreur} = -\sum_{x \in X}P_x\log_2(P_x)
     \]
-    $= 0 \Rightarrow$ il n'y a pas d'incertitude \\
-    maximale quand on a une distribution uniforme
+    \begin{itemize}
+      \item Minimale il n'y a pas d'incertitude
+      \item Maximale quand il y a le maximum d'incertitude (distribution uniforme)
+    \end{itemize}
   \end{description}
 \end{frame}
 
-\begin{frame}{Exemple — démarrage}
+\begin{frame}{Exemple — Démarrage}
   \begin{columns}
     \begin{column}{.5\textwidth}
       ID, jardinage, jeux vidéos, chapeaux, âge
@@ -43,7 +44,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Exemple — split}
+\begin{frame}{Exemple — Test du split jardinage}
   \begin{columns}
     \begin{column}{.5\textwidth}
       ID, jardinage, jeux vidéos, chapeaux, âge
@@ -63,24 +64,24 @@
     \end{column}
     \begin{column}{.5\textwidth}
       Split du premier nœud. Il faut tester 3 splits. Split sur
-      jardinage :
+      jardinage~:
       \\[1cm]
       \begin{forest}
         [{1, 2, 3, 4, 5, 6, 7, 8, 9}
           [{4, 6, 7, 8, 9},
           edge label={node[midway,left,font=\scriptsize]{jardinage}}
-            [{$\overline{y}=57,2$} [{$L=80,8$}]]]
+            [{$\overline{y} = 57,2$} [{$E = 80,8$}]]]
           [{1, 2, 3, 5},
           edge label={node[midway,right,font=\scriptsize]{$\neg$ jardinage}}
-            [{$\overline{y}=19,25$} [{$L=31,5$}]]]
+            [{$\overline{y} = 19,25$} [{$E = 31,5$}]]]
         ]
       \end{forest}\\
-      Loss totale : $122,3$
+      Erreur totale~: $122,3$
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Exemple — split}
+\begin{frame}{Exemple — Test du split jeux vidéos}
   \begin{columns}
     \begin{column}{.5\textwidth}
       ID, jardinage, jeux vidéos, chapeaux, âge
@@ -100,24 +101,24 @@
     \end{column}
     \begin{column}{.5\textwidth}
       Split du premier nœud. Il faut tester 3 splits. Split sur
-      jeux vidéos :
+      jeux vidéos~:
       \\[1cm]
       \begin{forest}
         [{1, 2, 3, 4, 5, 6, 7, 8, 9}
           [{1, 2, 3, 4, 5, 7},%
           edge label={node[midway,left,font=\scriptsize]{jeux vidéos}}
-            [{$\overline{y}=28,3$} [{$L=92,6$}]]]
+            [{$\overline{y} = 28,3$} [{$E = 92,6$}]]]
           [{6, 8, 9},
           edge label={node[midway,right,font=\scriptsize]{$\neg$ jeux vidéos}}
-            [{$\overline{y}=64,3$} [{$L=30,7$}]]]
+            [{$\overline{y} = 64,3$} [{$E = 30,7$}]]]
         ]
       \end{forest}\\
-      Loss totale : $123,3$
+      Erreur totale~: $123,3$
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Exemple — split}
+\begin{frame}{Exemple — Test du split chapeaux}
   \begin{columns}
     \begin{column}{.5\textwidth}
       ID, jardinage, jeux vidéos, chapeaux, âge
@@ -137,24 +138,24 @@
     \end{column}
     \begin{column}{.5\textwidth}
       Split du premier nœud. Il faut tester 3 splits. Split sur
-      chapeaux :
+      chapeaux~:
       \\[1cm]
       \begin{forest}
         [{1, 2, 3, 4, 5, 6, 7, 8, 9}
           [{1, 4, 5, 7, 9},%
           edge label={node[midway,left,font=\scriptsize]{chapeaux}}
-            [{$\overline{y}=42,8$} [{$L=110,8$}]]]
+            [{$\overline{y} = 42,8$} [{$E = 110,8$}]]]
           [{2, 3, 6, 8},
           edge label={node[midway,right,font=\scriptsize]{$\neg$ chapeaux}}
-            [{$\overline{y}=37,25$} [{$L=91$}]]]
+            [{$\overline{y} = 37,25$} [{$E = 91$}]]]
         ]
       \end{forest}\\
-      Loss totale : $201,8$
+      Erreur totale~: $201,8$
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Exemple — split}
+\begin{frame}{Exemple — Sélection du meilleur split}
   \begin{columns}
     \begin{column}{.5\textwidth}
       ID, jardinage, jeux vidéos, chapeaux, âge
@@ -174,9 +175,9 @@
     \end{column}
     \begin{column}{.5\textwidth}
       \begin{description}
-      \item[122,3] jardinage
-      \item[123,3] jeux vidéos
-      \item[201,8] chapeaux
+        \item[122,3] jardinage
+        \item[123,3] jeux vidéos
+        \item[201,8] chapeaux
       \end{description}
       → On split donc sur jardinage
     \end{column}
@@ -202,7 +203,7 @@
       \]
     \end{column}
     \begin{column}{.5\textwidth}
-      Résultat après le premier split :\\[1cm]
+      Résultat après le premier split~:\\[1cm]
 
       \begin{forest}
         [{1, 2, 3, 4, 5, 6, 7, 8, 9}
@@ -211,19 +212,20 @@
           [{1, 2, 3, 5},
           edge label={node[midway,right,font=\scriptsize]{$\neg$ jardinage}}]
         ]
-      \end{forest}\\
-      \onslide<+->{À vous de jouer !}
+      \end{forest}\\[1cm]
+
+      À vous de jouer !
     \end{column}
   \end{columns}
 \end{frame}
 
 \begin{frame}{Limiter l'overfit}
-  Fait par :
+  Fait par~:
   \begin{itemize}
-  \item la profondeur maximum
-  \item le nombre minimum d'instances dans chaque feuille
-  \item une baisse d'entropie maximale à chaque split
-  \item le nombre minimum d'instances pour split
-  \item le pruning
+    \item Profondeur maximum
+    \item Nombre minimum d'instances dans chaque feuille
+    \item Baisse d'entropie au dessus d'un minimum à chaque split
+    \item Nombre minimum d'instances pour split
+    \item Élagage
   \end{itemize}
 \end{frame}

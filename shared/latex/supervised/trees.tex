@@ -1,73 +1,69 @@
 \begin{frame}{Introduction}
-  Modèle de classification ou regréssion qui classe un input dans une
-  de ses feuilles pour rendre sa prédiction :
+  Modèle de classification ou regréssion qui classe un exemple dans une de ses feuilles pour rendre sa prédiction~:
   \V{["tikz/tree/decision", "th", 0.6] | image}
 \end{frame}
 
 \begin{frame}{Avantages}
   Les arbres de décision
-  \begin{itemize}[<+->]
-  \item gèrent les inputs numériques comme catégoriels
-  \item ne nécessitent pas que la variable d'output soit normalement
-    distribuée (regression linéaire)
-  \item sont interprétables
-  \item sont très rapides durant l'inférence
-  \item ne nécessitent pas de normalisation des données
-  \item leur apprentissage est hautement parallèlisable
+
+  \begin{itemize}
+    \item gèrent les inputs numériques comme catégoriels
+    \item sont interprétables
+    \item sont très rapides durant l'inférence
+    \item ne nécessitent pas de normalisation des données
+    \item leur apprentissage est hautement parallèlisable
   \end{itemize}
-  \onslide<+->{→ Couteau-suisse du machine learning tabulaire.}
+
+  $\Rightarrow$ Couteau-suisse du machine learning tabulaire.
 \end{frame}
 
 \begin{frame}{Désavantages}
-  \begin{itemize}[<+->]
-  \item peuvent overfit les données, mais l'ensembling résoud ce
-    problème
-  \item sont sensibles aux déséquilibres de classe
+  Les arbres de décision
+
+  \begin{itemize}
+    \item peuvent overfit les données, mais l'ensembling résoud ce problème
+    \item sont sensibles aux déséquilibres de classe
   \end{itemize}
-  \onslide<+->{→ Si les classes ne sont pas équilibrées, peut-être les
-    resampler.}
+  $\Rightarrow$ Si les classes ne sont pas équilibrées, peut-être les ré-échantillonner.
 \end{frame}
 
 \begin{frame}{Arbres de classification}
-  \V{["tikz/tree/decision", "tw", 1] | image}
+  \V{["tikz/tree/decision", "th", 0.7] | image}
 \end{frame}
 
 \begin{frame}{Arbres de régression}
-  \V{["tikz/tree/regression", "tw", 1] | image}
+  \V{["tikz/tree/regression", "th", 0.7] | image}
 \end{frame}
 
 \begin{frame}{Apprendre un arbre de décision}
-  Approche \og top-down\fg, procédure récursive :
-  \begin{itemize}[<+->]
-  \item créer un nœud de départ qui contient toutes les instances du
-    training set
-  \item tant qu'il reste des nœuds non-traités :
-    \begin{itemize}
-    \item choisir un nœud non traité
-    \item si le nœud remplit des conditions de feuille finale, ne rien
-      faire
-    \item sinon, créer deux branches à partir du nœud non traité
-      pour répartir les instances dans deux nouveaux nœuds
-    \end{itemize}
+  Approche descendante, procédure récursive~:
+
+  \begin{itemize}
+    \item Créer un nœud de départ qui contient toutes les instances de la base d'entraînement
+    \item Tant qu'il reste des nœuds non-traités~:
+      \begin{itemize}
+        \item Choisir un nœud non traité
+        \item Si le nœud remplit des conditions de feuille finale, ne rien faire
+        \item Sinon, créer deux branches à partir du nœud non traité pour répartir les instances dans deux nouveaux nœuds
+      \end{itemize}
   \end{itemize}
-  \onslide<+->{Conditions de feuilles finales : contient $n_{min}$
-    éléments, est déjà à profondeur $p_{max}$, splitterait sans
-    décroître assez l'entropie…}
+
+  Conditions de feuilles finales~: contient $n_{min}$ éléments, est déjà à profondeur $p_{max}$, splitterait sans décroître assez l'entropie…
 \end{frame}
 
 \begin{frame}{Décision rendue}
-  En fonction de la tâche, une fois arrivé dans la feuille de fin :
+  En fonction de la tâche, une fois arrivé dans la feuille de fin~:
+
   \begin{description}
-  \item[Classification] classe majoritaire
-  \item[Régression] moyenne des valeurs cibles
+  \item[Classification] Classe majoritaire
+  \item[Régression] Moyenne des valeurs cibles
   \end{description}
 \end{frame}
 
 \begin{frame}{Splits possibles}
-  Splits possibles d'une feature donnée :
+  Splits possibles d'une caractéristique donnée~:
   \begin{description}
-  \item[Catégorielle] chaque catégorie vs le reste
-  \item[Ordinale/Continue] milieu de chaque valeur ou
-    quantiles
+    \item[Catégorielle] Chaque catégorie contre le reste
+    \item[Ordinale/Continue] Milieu de chaque paire de valeurs consécutives ou quantiles
   \end{description}
 \end{frame}

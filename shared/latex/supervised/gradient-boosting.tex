@@ -1,39 +1,30 @@
-\begin{frame}
-  \frametitle{Introduction}
+\begin{frame}{Introduction}
   Arbres qui s'améliorent successivement.
   \V{["tikz/tree/tree-training-modes", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Idée à retenir}
+\begin{frame}{Idées à retenir}
   \begin{itemize}
-  \item séquence d'arbres qui s'entraînent à corriger les erreurs de
-    l'arbre d'avant
-  \item modélisation de la correction de l'erreur par un pas de
-    descente de gradient pour plus de flexibilité.
-  \end{itemize}
-   
-\end{frame}
-
-\begin{frame}
-  \frametitle{Extensions}
-  \begin{itemize}
-  \item row sampling
-  \item column sampling
-  \item tree structure cost
+    \item Séquence d'arbres qui s'entraînent à corriger les erreurs de l'arbre d'avant
+    \item Modélisation de la correction de l'erreur par un pas de descente de gradient pour plus de flexibilité.
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Avantages}
+\begin{frame}{Extensions}
   \begin{itemize}
-  \item modèle extrêmement performant et polyvalent
-  \item entraînement parallélisable
+    \item Bagging (échantillonnage des lignes)
+    \item Échantillonnage des colonnes
+    \item Coût de structure d'arbre
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Désavantages}
-  Sujet à l'overfit si pas assez régularisé (tree structure cost) et
-  randomisé (row \& column sampling)
+\begin{frame}{Avantages}
+  \begin{itemize}
+    \item Modèle extrêmement performant et polyvalent
+    \item Entraînement parallélisable
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Désavantages}
+  Sujet à l'overfit si pas assez régularisé (coût de structure d'arbre, échantillonnage de lignes \& de colonnes)
 \end{frame}

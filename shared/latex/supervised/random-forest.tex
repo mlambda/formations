@@ -1,10 +1,10 @@
 \begin{frame}{Introduction}
   \begin{itemize}
-  \item les arbres de décision overfit facilement
-  \item ils sont rapides à apprendre
-  \item en combiner beaucoup est faisable et réduit la variance
+    \item Les arbres de décision sur-apprennent facilement
+    \item Ils sont rapides à apprendre
+    \item En combiner beaucoup est faisable et réduit la variance
   \end{itemize}
-  → création d'une forêt (ensemble d'arbres) aléatoire
+  $\Rightarrow$ Création d'une forêt (ensemble d'arbres) aléatoire
 \end{frame}
 
 \begin{frame}{But}
@@ -12,45 +12,34 @@
   réduire la variance.
 \end{frame}
 
-\begin{frame}{Outil 1 — bagging (row sampling)}
+\begin{frame}{Outil 1 — Bagging (échantillonnage de lignes)}
   \textbf{B}oostrap \textbf{agg}regat\textbf{ing} (Bagging) :
   \begin{itemize}
-  \item tirer un échantillon du dataset avec replacement
-  \item entraîner un arbre sur cet échantillon
-  \item répéter $B$ fois
+    \item Tirer un échantillon du dataset avec replacement
+    \item Entraîner un arbre sur cet échantillon
+    \item Répéter $B$ fois
   \end{itemize}
-  Le bagging s'appelle aussi row sampling.
+  Le bagging s'appelle aussi échantillonnage de lignes.
 \end{frame}
 
-\begin{frame}{Outil 2 — random subspace method (column sampling)}
+\begin{frame}{Outil 2 — Échantillonnage de colonnes}
   \begin{itemize}
-  \item à chaque split, considérer seulement un sous-ensemble des
-    features
-  \item valeurs conseillées :
-    \begin{itemize}
-    \item classification : $\lvert\sqrt m\rvert$ features par split
-    \item regréssion: $\lvert\frac{m}{3}\rvert$ features par split, 5
-      exemples par node minimum
-    \end{itemize}
+    \item À chaque split, considérer seulement un sous-ensemble des caractéristiques
+    \item Valeurs conseillées~:
+      \begin{description}
+        \item[Classification] $\lvert\sqrt m\rvert$ caractéristiques par split
+        \item[Regréssion] $\lvert\frac{m}{3}\rvert$ caractéristiques par split, 5 exemples par nœud minimum
+      \end{description}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Random Forest}
-  \V{["img/random-forest-full", "tw", 1.05] | image}
-\end{frame}
-
-\begin{frame}{Random Forest}
-  \begin{itemize}
-  \item Pas de sur-apprentissage en augmentant le nombre d'arbres
-  \item Une fois appris, le modèle est très rapide
-  \end{itemize}
+\begin{frame}{Illustration}
+  \V{["img/random-forest-full", "tw", 1] | image}
 \end{frame}
 
 \begin{frame}{Conclusion}
   \begin{itemize}
-  \item les arbres sont interprétables, rapides à entraîner,
-    combinables.
-  \item random forest combine des arbres faibles en un prédicteur
-    polyvalent
+    \item Les arbres sont interprétables, rapides à entraîner, combinables
+    \item Une forêt aléatoire combine des arbres limités en un prédicteur polyvalent
   \end{itemize}
 \end{frame}

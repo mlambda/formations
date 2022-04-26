@@ -6,12 +6,12 @@ default_titles:
   regression-logistique: Régression logistique
   regression-polynomiale: Régression polynômiale
 
-  trees: Arbres de décision
-  random-forest: Random forest
+  trees: Arbre de décision
+  random-forest: Forêt aléatoire
 
-  gradient-boosting: Gradient boosting
+  gradient-boosting: Arbre de décision amplifié par le gradient
 
-  svm: Support Vector Machine
+  svm: Séparateur à vaste marge
 flavors:
   svm-text:
     - svm
@@ -61,7 +61,7 @@ flavors:
     - demo-sklearn-random-forest
     - gradient-boosting
     - /questions
-    - demo-sklearn-gradient-boosting
+    - demo-catboost-gradient-boosting
     - svm
     - /questions
     - demo-sklearn-svm
