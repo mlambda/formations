@@ -43,9 +43,23 @@ flavors:
     - tp-demo
     - modern-architectures
     - modern-anomaly-detection
+  vision-expert-tp:
+    - data
+    - model
+    - task
+    - demo-task
+    - interpret
+    - modern-anomaly-detection
+    - modern-architectures
+    - /questions
+    - keras
+    - /questions
+    - tp
+    - help-pointers
   dpl:
     - data
     - model
+    - task
     - /questions
     - modern-architectures
     - /questions

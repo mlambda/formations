@@ -62,6 +62,22 @@ flavors:
     - $gan: full
     - $rnn: vision-expert
     - help-pointers
+  vision-expert-tp:
+    - intro
+    - playground
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - /questions
+    - $/tf-keras: bda
+    - $cnn: vision-expert-tp
+    - $transformer: image
+    - $ae: dpl
+    - $gan: full
+    - $rnn: dpl
+    - help-pointers
   bda:
     - intro
     - playground
@@ -111,8 +127,9 @@ flavors:
     - playground
     - /questions
     - $/tf-keras: dpl
-    - $cnn: dpl
+    - $cnn: vision-expert
     - $ae: dpl
+    - $transformer: image
     - $gan: full
     - $/nlp: dpl
     - $/sequential-data: dpl
