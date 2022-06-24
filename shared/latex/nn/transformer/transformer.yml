@@ -10,6 +10,10 @@ flavors:
     - model
     - /questions
     - text-tp
+  drn:
+    - model
+    - /questions
+    - text-tp
   image:
     - attention-model
     - transformer-cell

@@ -26,6 +26,8 @@ flavors:
     - /questions
     - modern-architectures
     - /questions
+    - interpret
+    - modern-anomaly-detection
     - demo-task
     - keras
     - /questions
