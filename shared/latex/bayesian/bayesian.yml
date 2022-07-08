@@ -4,9 +4,7 @@ default_titles:
 
   gaussian-mixture: Mixture de gaussienne
 
-  modeles-graphiques: Réseaux Bayésiens
-
-  bayes-networks: "Réseaux Bayésiens"
+  bayesian-networks: Réseaux Bayésiens
   tp-bayes: "Travaux Pratique : Réseaux Bayésiens"
 
   hmm: Modèles de Markov cachés
@@ -18,8 +16,7 @@ flavors:
     - naive-bayes
     - bayes-inference
     - gaussian-mixture
-    - modeles-graphiques
-    - bayes-networks
+    - bayesian-networks
     - markov-model
     - hmm
     - /questions
