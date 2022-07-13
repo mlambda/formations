@@ -22,4 +22,7 @@
     - path: python/data-science
       flavor: full
 
+    - path: python/testing
+      flavor: full
+
     - contact
