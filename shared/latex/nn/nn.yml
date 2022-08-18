@@ -131,8 +131,6 @@ flavors:
     - $/tf-keras: dpl
     - $cnn: vision-expert
     - $ae: dpl
-    - $transformer: image
-    - $gan: full
     - $/nlp: dpl
     - $/sequential-data: dpl
     - $rnn: dpl

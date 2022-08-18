@@ -7,7 +7,7 @@ default_titles:
 flavors:
   text:
     - attention-model
-    - model
+    - transformer-cell
     - /questions
     - text-tp
   drn:
