@@ -9,7 +9,7 @@
       flavor: init-python
 
     - path: ml
-      flavor: bda
+      flavor: mlb
 
 - name: j2
   title: Jour 2 --- Algorithmes 1/2

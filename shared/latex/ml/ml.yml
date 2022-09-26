@@ -36,6 +36,17 @@ flavors:
     - data-preparation
     - evaluation
     - /questions
+    - /tp-help
+    - tp-data
+    - learning
+    - /questions
+    - help-pointers
+  mlb:
+    - intro
+    - $/prerequisites: full
+    - data-preparation
+    - evaluation
+    - /questions
     - /python/data-science/pandas
     - /python/data-science/tp-pandas
     - /tp-help
