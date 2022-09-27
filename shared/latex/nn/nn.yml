@@ -20,7 +20,9 @@ flavors:
     - help-pointers
   iao:
     - intro
+    - /supervised/classification
     - playground
+    - gradient-descent
     - optimize
     - deep-optimize
     - regularisation
