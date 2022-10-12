@@ -44,7 +44,6 @@ flavors:
     - /questions
     - $/tf-keras: drn
     - $cnn: drn
-    - $transformer: image
     - $rnn: drn
     - $transformer: drn
     - $ae: drn

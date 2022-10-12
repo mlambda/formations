@@ -26,12 +26,13 @@ flavors:
     - /questions
     - modern-architectures
     - /questions
-    - interpret
-    - modern-anomaly-detection
-    - demo-task
     - keras
     - /questions
     - tp-demo
+    - interpret
+    - modern-anomaly-detection
+    - demo-task
+    - /questions
     - help-pointers
   vision-expert:
     - data

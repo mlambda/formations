@@ -11,9 +11,13 @@ flavors:
     - /questions
     - text-tp
   drn:
-    - model
+    - attention-model
+    - transformer-cell
     - /questions
     - text-tp
+    - vision-transformer
+    - /questions
+    - vision-demo
   image:
     - attention-model
     - transformer-cell
