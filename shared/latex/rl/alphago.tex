@@ -24,11 +24,11 @@
   \end{minipage}\hfill
 \end{frame}
 
-\begin{frame}{Réseau de value}
+\begin{frame}{Réseau de valeur}
   \begin{minipage}[c]{0.68\linewidth}
     \begin{itemize}[<+->]
       \item $\softmax(\text{convolutions}_{13}(19 \times 19 \times 48\text{bits}))$
-      \item 48bits : input sur la position, la configuration
+      \item 48 bits : entrées sur la position, la configuration
       \item Appris sur données supervisées d'abord
       \item Amélioré par renforcement ensuite
     \end{itemize}
@@ -38,7 +38,7 @@
   \end{minipage}\hfill
 \end{frame}
 
-\begin{frame}{Réseau de policy}
+\begin{frame}{Réseau de politique}
   \begin{minipage}[c]{0.50\linewidth}
     \V{["img/alphago-policy", "th", 0.8] | image}
   \end{minipage}\hfill
@@ -46,16 +46,16 @@
     \begin{itemize}[<+->]
       \item Appris sur données supervisées d'abord
       \item Puis amélioré par self-play
-      \item A l'aide d'une recherche MCTS boostée par les deux réseaux (value \& policy)
+      \item A l'aide d'une recherche MCTS boostée par les deux réseaux (valeur \& politique)
     \end{itemize}
   \end{minipage}\hfill
 \end{frame}
 
-\begin{frame}{Monte-Carlo Tree Search + réseaux de value \& policy}
+\begin{frame}{Monte-Carlo Tree Search + réseaux de valeur \& politique}
   \V{["img/alphago-mcts", "tw", 0.8] | image}
   \begin{itemize}[<+->]
-    \item Sélection par maximum de Q-value + u(P) où P est une proba à priori pour chaque coup
-    \item Expansion en fonction de la policy qui produit des probabilités stockées pour chaque action
+    \item Sélection par maximum de Q-valeur + u(P) où P est une proba à priori pour chaque coup
+    \item Expansion en fonction de la politique qui produit des probabilités stockées pour chaque action
   \end{itemize}
 \end{frame}
 
@@ -134,14 +134,14 @@
 
 \begin{frame}{Alpha Zero}
   \begin{itemize}[<+->]
-    \item Encore plus général~: généralise les inputs et les outputs
-    \item Bat tous les bot d'échecs, go et shogi
+    \item Encore plus général~: généralise les entrées et les sorties
+    \item Bat tous les bots d'échecs, go et shogi
   \end{itemize}  
 \end{frame}
 
 \begin{frame}{Mu Zero}
   \begin{itemize}[<+->]
-    \item Encore plus général~: infère les règles depuis les inputs et outputs
+    \item Encore plus général~: infère les règles depuis les entrées et sorties
     \item Était état de l'art sur les jeux Atari, bat Alpha Zero
   \end{itemize}
 \end{frame}

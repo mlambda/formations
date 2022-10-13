@@ -52,7 +52,7 @@ for i in range(6):
 
 print(r"""
 \node at (Yinput0) [above=0.75,text=MediumChampagne!50!black] {{$Y$}};
-\node at (V0) [above=.75,text=Rosewood] {{$Y$}};
+\node at (V0) [above=.75,text=Rosewood] {{$V$}};
 \node at (Yhat0) [above=0.75,text=MediumChampagne!50!black] {{$\widehat{{Y}}$}};
 """)
 
