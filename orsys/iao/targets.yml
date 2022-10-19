@@ -11,10 +11,10 @@
     - path: ml
       flavor: intro
 
-    - path: nn
+    - path: unsupervised
       flavor: iao
 
-    - path: unsupervised
+    - path: nn
       flavor: iao
 
     - path: rl
