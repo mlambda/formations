@@ -14,10 +14,10 @@ flavors:
     - introduction
     - $dimensionality-reduction: mle
     - $clustering: mle
-    - $anomaly-detection: full    
+    - $anomaly-detection: full
   ml3:
-    - $dimensionality-reduction: mlb
+    - $dimensionality-reduction: bda
     - $anomaly-detection: full
   mlb:
-    - $dimensionality-reduction: mlb
+    - $dimensionality-reduction: bda
 title: Apprentissage non-supervisé

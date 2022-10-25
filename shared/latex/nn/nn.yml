@@ -91,7 +91,6 @@ flavors:
     - playground
     - /questions
     - $/tf-keras: bda
-    - help-pointers
   mmd:
     - intro
     - playground

@@ -39,11 +39,11 @@
 
 \begin{document}
   \begin{tikzpicture}
-    \node [input,hexagon,color-data] (get-data) at (0,0) {Get Data};
-    \node [input,hexagon,color-clean, align=center] (get-data) at (0,4.5) {Clean, Prepare\\ Manipulate Data};
-    \node [input,hexagon,color-train] (get-data) at (3.9,6.75) {Train Model};
-    \node [input,hexagon,color-test] (get-data) at (7.8,4.5) {Test Data};
-    \node [input,hexagon,color-improve] (get-data) at (7.8,0) {Improve};
+    \node [input,hexagon,color-data, align=center] (get-data) at (0,0) {Récupération\\des données};
+    \node [input,hexagon,color-clean, align=center] (clean-data) at (0,4.5) {Nettoyage \&\\préparation\\des données};
+    \node [input,hexagon,color-train, align=center] (train) at (3.9,6.75) {Entraînement\\des modèles};
+    \node [input,hexagon,color-test, align=center] (test-data) at (7.8,4.5) {Évaluation\\des modèles};
+    \node [input,hexagon,color-improve] (improve) at (7.8,0) {Amélioration};
     
     \draw[-{>[flex=0.75]},>=stealth,line width=2mm] (3,0.7) arc (240:-60:1.8cm);
   \end{tikzpicture}

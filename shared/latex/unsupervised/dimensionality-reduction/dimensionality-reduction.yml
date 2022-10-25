@@ -23,12 +23,5 @@ flavors:
     - demo
     - /questions
     - help-pointers
-  mlb:
-    - intro
-    - pca-lda
-    - /questions
-    - tuto
-    - tp
-    - help-pointers
 
 title: Réduction de la dimensionnalité

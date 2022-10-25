@@ -4,7 +4,6 @@ default_titles:
   goals: Quelques prérequis
   linear-algebra: Algèbre linéaire
   probabilities: Probabilités
-  proba-rappel: Probabilités
   statistics: Statistique
 flavors:
   full:
