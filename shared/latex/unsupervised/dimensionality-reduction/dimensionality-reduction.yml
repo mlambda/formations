@@ -20,8 +20,17 @@ flavors:
   mle:
     - intro
     - pca-lda
+    - tsne-umap
     - demo
     - /questions
+    - help-pointers
+  mlb:
+    - intro
+    - pca-lda
+    - tsne-umap
+    - /questions
+    - tuto
+    - tp
     - help-pointers
 
 title: Réduction de la dimensionnalité
