@@ -24,24 +24,26 @@
 \begin{frame}{AFC --- Exemple de données}
   \begin{scriptsize}
     \begin{table}
-      \begin{tabular}{llcccccc}
+      \begin{tabular}{lccccccccc}
         \toprule
-        &&\multicolumn{4}{c}{Attachment Classification Mother}\\
-        \cline{3-7}
-        \multicolumn{2}{l}{Infant} & Ds & F & E & U &Row&\\
-        \multicolumn{2}{l}{Classification} & Dismissing & Autonomous & Preoccupied & Unresolved & Margin &$p_{i.}$\\
+        &\multicolumn{8}{c}{Catégorie de Nobel}&\\
+        \cline{2-8}
+        Pays & Chimie &	Économie &	Litt. &	Médecine &	Paix &	Physique &	Maths & Total &$p_{i.}$\\
         \midrule
-        A & Avoidant     & 62 &  29 & 14 & 11 & 116& .212\\
-        B & Secure       & 24 & 210 & 14 & 39 & 287& .524\\
-        C & Resistant    &  3 &   9 & 10 &  6 &  28& .051\\
-        D & Disorganised & 19 &  26 & 10 & 62 & 117& .214\\
-        &&&&&&&\\
-        \multicolumn{2}{l}{Column Margin} & 108 & 274 & 48 & 118 & 548 &\\
+        Canada    &	4 &	3 &	2 &	4 &	1 &	4 &	1 & 19 & 0.04\\
+        France    &	8 &	3 &	11 &	12 &	10 &	9 &	11 & 64 & 0.12\\
+        GB        &	23 &	6 &	7 &	26 &	11 &	20 &	4 & 97 & 0.18\\
+        Italie    &	1 &	1 &	6 &	5 &	1 &	5 &	1 & 20 & 0.04\\
+        Japon     &	6 &	0 &	2 &	3 &	1 &	11 &	3 & 26 & 0.05\\
+        Russie    &	4 &	3 &	5 &	2 &	3 &	10 &	9 & 36 & 0.07\\
+        USA     &	51 &	43 &	8 &	70 &	19 &	66 &	13 & 270 & 0.51\\
+        &&&&&&&&&\\
+        Total & 97 & 59 & 41 & 122 & 46 & 125 & 42 & 532 & 1.00\\
         \midrule
-        $p_{.j}$& & .197 & .500 & .088 & .215 & & 1.000\\
+        $p_{.j}$ & 0.18 & 0.11 & 0.08 & 0.23 & 0.09 & 0.23 & 0.08 & 1.00 &1.00\\
         \bottomrule
       \end{tabular}
-      \caption{Transmission de l'attachement (1995)~; Van  IJzendoorn~; Kroonenberg \& Lombardo.}
+      \caption{Nombre de prix nobels par pays}
     \end{table}
   \end{scriptsize}
 \end{frame}
@@ -86,7 +88,7 @@
 
 \begin{frame}{AFC --- Visualisation}
   \begin{minipage}{0.59\linewidth}
-    \V{["img/afc-g8-agreements", "tw", 1] | image}
+    \V{["img/afc-nobels", "tw", 1] | image}
   \end{minipage}
   \begin{minipage}{0.4\linewidth}
     En projetant et en centrant les barycentres sur un graphe, il est possible d'observer graphiquement les co-dépendances entre caractéristiques.
