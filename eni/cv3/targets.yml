@@ -1,0 +1,28 @@
+- name: j123
+  title: CV3
+  sections:
+    - path: about
+      flavor: eni-3j
+
+    - path: nn
+      flavor: cv3
+
+    - path: nn/cnn
+      flavor: vision-expert-tp
+
+    - path: nn/ae
+      flavor: dpl
+
+    - path: nn/gan
+      flavor: full
+
+    - path: nn/rnn
+      flavor: dpl
+
+    - path: nn/transformer
+      flavor: image
+
+    - path: tools
+      flavor: devops
+
+    - contact

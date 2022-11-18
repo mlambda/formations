@@ -91,6 +91,16 @@ flavors:
     - playground
     - /questions
     - $/tf-keras: bda
+  cv3:
+    - intro
+    - playground
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - /questions
+    - $/tf-keras: dpl
   mmd:
     - intro
     - playground

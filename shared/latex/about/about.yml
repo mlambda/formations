@@ -30,6 +30,12 @@ flavors:
     - ressources-eni
     - horaires-1j-eni
     - tour2table
+  eni-3j:
+    - formateur
+    - description
+    - ressources-eni
+    - horaires-3j-eni
+    - tour2table
   eni-5j:
     - formateur
     - description
