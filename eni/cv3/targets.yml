@@ -22,7 +22,13 @@
     - path: nn/transformer
       flavor: image
 
+    - path: engineering
+      flavor: mlcraftmyass
+
     - path: tools
       flavor: devops
+
+    - path: tools
+      flavor: demo-spark
 
     - contact
