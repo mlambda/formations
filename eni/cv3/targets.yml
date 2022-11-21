@@ -31,7 +31,8 @@
     - path: tools
       flavor: devops
 
-    - path: tools
+    - title: Démonstration Spark
+      path: tools
       flavor: demo-spark
 
     - contact
