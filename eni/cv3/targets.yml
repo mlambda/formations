@@ -4,6 +4,9 @@
     - path: about
       flavor: eni-3j
 
+    - path: prerequisites
+      flavor: full
+
     - path: nn
       flavor: cv3
 
