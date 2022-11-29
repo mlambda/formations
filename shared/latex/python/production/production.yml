@@ -15,7 +15,7 @@ flavors:
     - /questions
     - cli
     - /questions
-    - tp-cli
+    - tp-cli-stegano
   light:
     - environment
     - /questions
