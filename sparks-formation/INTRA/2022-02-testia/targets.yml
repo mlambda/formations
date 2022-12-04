@@ -17,7 +17,7 @@
       flavor: full
 
     - path: python/advanced
-      flavor: full
+      flavor: pav
 
     - path: python/collections
       flavor: full

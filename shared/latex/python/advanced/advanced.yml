@@ -7,7 +7,7 @@ default_titles:
   metaclasses: Méta-classes
   tp: Travaux pratiques
 flavors:
-  full:
+  pyp:
     - generators
     - /questions
     - tp-generators
@@ -20,7 +20,26 @@ flavors:
     - context-managers
     - /questions
     - tp-context-managers
-  medium:
+    - closures
+    - /questions
+    - tp-closures
+    - comprehensions
+    - /questions
+    - tp-comprehensions
+  pav:
+    - generators
+    - /questions
+    - tp-generators
+    - decorators
+    - /questions
+    - tp-decorators
+    - metaclasses
+    - /questions
+    - tp-metaclasses
+    - context-managers
+    - /questions
+    - tp-context-managers
+  aap:
     - decorators
     - /questions
     - closures

@@ -12,7 +12,7 @@
       flavor: full
 
     - path: python/advanced
-      flavor: full
+      flavor: pyp
 
     - path: python/collections
       flavor: full
