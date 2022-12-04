@@ -1,6 +1,0 @@
-flavors:
-  full:
-    - concurrency
-    - /questions
-    - tp
-title: Programmation concurrente

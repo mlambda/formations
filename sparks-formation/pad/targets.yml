@@ -16,11 +16,8 @@
     - path: python/sys-admin
       flavor: full
 
-    - path: python/parallelism
-      flavor: full
-
-    - path: python/concurrency
-      flavor: full
+    - path: python/performance
+      flavor: light
 
     - path: python/signals
       flavor: full

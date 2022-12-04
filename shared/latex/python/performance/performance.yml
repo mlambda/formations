@@ -1,5 +1,23 @@
+default_titles:
+  measure: Mesure des performances
+  parallelism: Programmation parallèle
+  concurrency: Programmation concurrente
+
 flavors:
   full:
-    - performance
+    - measure
     - /questions
+    - parallelism
+    - /questions
+    - concurrency
+    - /questions
+    - tp
+
+  light:
+    - parallelism
+    - /questions
+    - concurrency
+    - /questions
+    - tp
+
 title: Performances

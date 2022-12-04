@@ -32,12 +32,6 @@
     - path: python/performance
       flavor: full
 
-    - path: python/parallelism
-      flavor: full
-
-    - path: python/concurrency
-      flavor: full
-
     - path: python/production
       flavor: full
 
