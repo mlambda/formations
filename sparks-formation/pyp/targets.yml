@@ -1,0 +1,38 @@
+- name: full
+  title: Jour 1, 2 \& 3
+  sections:
+    - path: about
+      flavor: sparks-formation-3j
+
+    - path: python/basics
+      title: Rappels
+      flavor: no-tp
+
+    - path: python/warmup
+      flavor: full
+
+    - path: python/advanced
+      flavor: full
+
+    - path: python/collections
+      flavor: full
+
+    - path: python/testing
+      flavor: full
+
+    - path: python/linting
+      flavor: full
+
+    - path: python/performance
+      flavor: full
+
+    - path: python/parallelism
+      flavor: full
+
+    - path: python/concurrency
+      flavor: full
+
+    - path: python/production
+      flavor: full
+
+    - contact
