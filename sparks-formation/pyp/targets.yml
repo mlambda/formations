@@ -1,5 +1,5 @@
-- name: full
-  title: Jours 1, 2 \& 3
+- name: d1
+  title: Jours 1
   sections:
     - path: about
       flavor: sparks-formation-3j
@@ -14,6 +14,12 @@
     - path: python/advanced
       flavor: pyp
 
+    - path: python/performance
+      flavor: full
+
+- name: d2
+  title: Jours 2
+  sections:
     - path: python/collections
       flavor: full
 
@@ -23,12 +29,12 @@
     - path: python/network
       flavor: full
 
-    - path: python/performance
-      flavor: full
-
     - path: python/testing
       flavor: full
 
+- name: d3
+  title: Jours 3
+  sections:
     - path: python/linting
       flavor: full
 
