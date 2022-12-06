@@ -9,4 +9,5 @@ with engine.begin() as conn:
 
 # Utilisation des méthodes de SQLAlchemy Core
 with engine.begin() as conn:
-    conn.execute(insert(some_table), [{"x": 6, "y": 8}, {"x": 9, "y": 10}])
+    conn.execute(insert(some_table),
+                 [{"x": 6, "y": 8}, {"x": 9, "y": 10}])
