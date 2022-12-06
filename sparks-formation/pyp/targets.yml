@@ -17,28 +17,22 @@
     - path: python/performance
       flavor: full
 
-- name: d2
-  title: Jours 2
-  sections:
-    - path: python/collections
-      flavor: full
-
-    - path: python/storage
-      flavor: full
-
-    - path: python/network
-      flavor: full
-
     - path: python/testing
+      flavor: full
+
+    - path: python/linting
+      flavor: full
+
+    - path: python/production
       flavor: full
 
 - name: d3
   title: Jours 3
   sections:
-    - path: python/linting
+    - path: python/storage
       flavor: full
 
-    - path: python/production
+    - path: python/network
       flavor: full
 
     - contact
