@@ -1,0 +1,7 @@
+flavors:
+  full:
+    - intro
+    - xml
+    - databases
+    - /questions
+title: Traitement de données

@@ -1,0 +1,9 @@
+
+flavors:
+  full:
+    - full
+
+  light:
+    - overview
+
+title: Bases de données

@@ -1,0 +1,5 @@
+flavors:
+  full:
+    - network
+    - /questions
+title: Programmation réseau

@@ -1,0 +1,53 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \node[input,
+          minimum width = 3cm,
+          minimum height = 12cm,
+          text depth = 11cm] at (-4, -5.5) {Serveur};
+    \node[output, minimum width = 1.8cm] (S1) at (-4, -1.2) {socket};
+    \node[output, minimum width = 1.8cm] (S2) at (-4, -2.4) {bind};
+    \node[output, minimum width = 1.8cm] (S3) at (-4, -3.6) {listen};
+    \node[output, minimum width = 1.8cm] (S4) at (-4, -4.8) {accept};
+    \node (S5) at (-4, -6) {};
+    \node[output, minimum width = 1.8cm] (S6) at (-4, -7.2) {recv};
+    \node[output, minimum width = 1.8cm] (S7) at (-4, -8.4) {send};
+    \node[output, minimum width = 1.8cm] (S8) at (-4, -9.6) {recv};
+    \node[output, minimum width = 1.8cm] (S9) at (-4, -10.8) {close};
+
+    \node[input,
+          minimum width = 3cm,
+          minimum height = 12cm,
+          text depth = 11cm] at (4, -5.5) {Client};
+    \node[output, minimum width = 1.8cm] (C1) at (4, -4.8) {socket};
+    \node[output, minimum width = 1.8cm] (C2) at (4, -6) {connect};
+    \node[output, minimum width = 1.8cm] (C3) at (4, -7.2) {send};
+    \node[output, minimum width = 1.8cm] (C4) at (4, -8.4) {recv};
+    \node[output, minimum width = 1.8cm] (C5) at (4, -9.6) {close};
+
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (S1) to (S2);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (S2) to (S3);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (S3) to (S4);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (S4) to (S6);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (S4) to (S6);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (S6) to (S7);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (S7) to (S8);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (S8) to (S9);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (S7) to [out=180,in=180,looseness=1.2] (S6);
+
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (C1) to (C2);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (C2) to (C3);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (C3) to (C4);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (C4) to (C5);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (C4) to [out=0,in=0,looseness=1.2] (C3);
+
+    \draw[<->,>={Stealth[length=3mm, width=2mm]}] (S5.base) to (C2);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (C3) to (S6);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (S7) to (C4);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (C5) to (S8);
+    \draw[->,>={Stealth[length=3mm, width=2mm]}] (S7) to [out=180,in=180,looseness=1.2] (S6);
+  \end{tikzpicture}
+\end{document}
