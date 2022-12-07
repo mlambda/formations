@@ -26,13 +26,13 @@
     - path: python/production
       flavor: full
 
-- name: d3
-  title: Jours 3
-  sections:
-    - path: python/storage
+    - path: python/network
       flavor: full
 
-    - path: python/network
+    - path: python/xml
+      flavor: full
+
+    - path: python/databases
       flavor: full
 
     - contact

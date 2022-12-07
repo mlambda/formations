@@ -1,0 +1,11 @@
+>>> def handle_artist(_path, artist):
+...     print(artist["name"])
+...     return True
+>>> 
+>>> xmltodict.parse(GzipFile('discogs_artists.xml.gz'),
+...     item_depth=2, item_callback=handle_artist)
+A Perfect Circle
+Fantômas
+King Crimson
+Chris Potter
+...

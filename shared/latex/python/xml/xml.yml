@@ -1,0 +1,6 @@
+flavors:
+  full:
+    - xml
+    - /questions
+
+title: XML
