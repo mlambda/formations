@@ -2,6 +2,7 @@
 flavors:
   full:
     - full
+    - tp
 
   light:
     - overview
