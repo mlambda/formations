@@ -20,26 +20,26 @@
 
 \begin{frame}{Algorithme}
   \begin{enumerate}[<+->]
-    \item Initialisation aléatoire du modèle
+    \item Initialisation aléatoire des paramètres $\theta_i$ du modèle $f_{\theta}, i\in[1..k]$
     \item Pour $n$ itérations~:
       \begin{itemize}
-        \item Échantillonnage des données en batch de k exemples
+        \item Échantillonnage des données en batch de $m$ exemples
         \item Pour les $b$ batchs~:
         \begin{itemize}
-          \item \textbf{Forward}~: Calcul des prédictions $\hat{Y_i} = f_{\theta}(X_i), i\in[1..k]$
-          \item Calcul des erreurs $|\hat{Y_i}-Y_i|, i\in[1..k]$
+          \item \textbf{Forward}~: Calcul des prédictions $\hat{Y_j} = f_{\theta}(X_j), j\in[1..m]$
+          \item Calcul des erreurs $|\hat{Y_j}-Y_j|, j\in[1..m]$
           \item \textbf{Backward}~: Mise à jour :
           \[
-            \theta_j \leftarrow \theta_j - \gamma\frac{\partial{E}}{\partial{\theta_j}}
+            \theta_i \leftarrow \theta_i - \gamma\frac{\partial{E}}{\partial{\theta_i}}
           \]
-          pour chaque paramètre $\theta_j$ de notre modèle $f_\theta$ \\$\,$
+          pour chaque paramètre $\theta_i$ de notre modèle $f_\theta$ \\$\,$
 
           \item Vérification des critères d'arrêt
         \end{itemize}
       \end{itemize}
   \end{enumerate}
 
-  Où $n$, $k$ et $\gamma$ sont des hyperparamètres du modèle.
+  Où $k$, $n$, $m$ et $\gamma$ sont des hyperparamètres du modèle.
 \end{frame}
 
 
