@@ -1,0 +1,20 @@
+- name: webAI
+  title: Webinaire AI
+  sections:
+    - path: about
+      title: Intelligence Artificielle, Mythes et Réalités
+      flavor: mlambda
+
+    - path: ai
+      flavor: light
+
+    - path: ml
+      flavor: light
+
+    - path: nn
+      flavor: ml1
+
+    - path: nn/chatgpt
+      title: ChatGPT
+
+    - contact

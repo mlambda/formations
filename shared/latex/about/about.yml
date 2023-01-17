@@ -1,5 +1,8 @@
 default_titles: null
 flavors:
+  mlambda:
+    - formateur
+    - description
   orsys-2j:
     - formateur
     - description

@@ -6,5 +6,7 @@ flavors:
     - intro
     - history
     - /questions
+  light:
+    - intro
 title: Intelligence Artificielle
 version: 3
