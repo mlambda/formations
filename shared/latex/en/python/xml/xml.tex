@@ -1,0 +1,36 @@
+\begin{frame}{Introduction}
+  XML (eXtensible Markup Language) est un format à mi-chemin entre un format dédié aux machines et un format lisible par les humains.
+
+  Il est très utilisé pour la configuration et l'échange de petits volumes de données.
+\end{frame}
+
+\begin{frame}{Exemple}
+  \mintedcustomcode{python/xml/example}{xml}
+\end{frame}
+
+\begin{frame}{Utilisation en Python}
+  La bibliothèque standard contient un ensemble de paquets dédiés~:
+
+  \begin{description}
+    \item[\texttt{xml.etree.ElementTree}] API basique qui construit un arbre représentant le document XML
+    \item[\texttt{xml.dom}] Implémentation du DOM (pages HTML)
+    \item[\texttt{xml.sax}] Paquet SAX (Simple API for XML), gestion des fichiers par traitement d'événements
+    \item[\texttt{xml.parsers.expat}] Binding vers la libexpat, un parseur extrêmement rapide
+  \end{description}
+\end{frame}
+
+\begin{frame}{Alternative plus simple et très performante}
+  La bibliothèque externe \bluelink{https://github.com/martinblech/xmltodict}{\texttt{xmltodict}} permet de~:
+
+  \begin{itemize}
+    \item récupérer les objets d'un document au fur et à mesure (pas de chargement du document entier en mémoire)
+    \item récupérer les objets sous forme de dictionnaire, souvent plus simples à manipuler que l'API ElementTree
+    \item produire des fichiers XML à partir de dictionnaires directement
+  \end{itemize}
+
+  Cette bibliothèque utilise le parseur expat de la bibliothèque standard
+\end{frame}
+
+\begin{frame}{Alternative plus simple et très performante}
+  \mintedcustomcode{python/xml/xmltodict}{pycon}
+\end{frame}

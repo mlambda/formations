@@ -1,0 +1,20 @@
+default_titles:
+  engineering-practices: Gestion d'un projet de Machine Learning
+  data-engineering: Gestion des données
+  deploying: Déploiement
+  tp-deploying: Travaux Pratiques
+  data-sources: Sources de données
+flavors:
+  mlcraftmyass:
+    - engineering-practices
+    - data-sources
+    - data-engineering
+    - /questions
+  deploying:
+    - engineering-practices
+    - data-engineering
+    - deploying
+    - /questions
+    - tp-deploying
+title: Ingénierie du Machine Learning
+version: 3

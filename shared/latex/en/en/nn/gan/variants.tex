@@ -1,0 +1,18 @@
+\begin{frame}{Wasserstein GAN model}
+  \begin{itemize}[<+->]
+    \item Use the Earth Mover distance between the true and fake output distributions as a loss instead of binary cross-entropy
+    \item Non-saturating gradient: better learning signal
+    \item Makes the optimization smoother in practice
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Wasserstein GAN}
+  \V{["img/wgan", "tw", 0.7] | image}
+\end{frame}
+
+\begin{frame}{BEGAN}
+  \begin{itemize}[<+->]
+    \item Use an auto-encoder instead of a classifier as a discriminator
+    \item The discriminator must make the reconstruction error distribution different for real and fake images
+  \end{itemize}
+\end{frame}

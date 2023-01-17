@@ -1,0 +1,47 @@
+\begin{frame}{Introduction}
+  Les interfaces sont un des concepts les plus importants en ingénierie logicielle objet.
+\end{frame}
+
+\begin{frame}{Définition}
+  Une interface est un ensemble de signatures de méthodes publiques.
+
+  Le point crucial est que l'implémentation \textbf{ne} fait \textbf{pas} partie de l'interface.
+\end{frame}
+
+\begin{frame}{Principe fondamental}
+  En programmation orientée objet, on doit toujours \emph{coder pour l'interface}.
+
+  Cela respecte le principe d'encapsulation.
+\end{frame}
+
+\begin{frame}{Types d'interfaces en Python}
+  \begin{itemize}
+    \item Interfaces informelles
+    \item Interfaces formelles
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Interfaces informelles}
+  Définies par une simple classe, avec des méthodes qui retournent NotImplementedError.
+
+  Les classes filles en héritent.
+
+  \mintedpycode{python/advanced/interfaces/simple-class}
+\end{frame}
+
+\begin{frame}{Interfaces formelles}
+  Utilisent le module \bluelink{https://docs.python.org/fr/3/library/abc.html}{\texttt{abc}}.
+
+  \mintedpycode{python/advanced/interfaces/abc}
+\end{frame}
+
+\begin{frame}{Enregistrement d'implémentations}
+  \mintedpycode{python/advanced/interfaces/register}
+\end{frame}
+
+\begin{frame}{Choix entre les deux types d'interface}
+  \begin{itemize}
+    \item On utilise plus souvent l'interface informelle : moins lourde, moins de surprises
+    \item Dès que l'on a besoin de l'enregistrement d'implémentations, on utilise le module \texttt{abc}
+  \end{itemize}
+\end{frame}

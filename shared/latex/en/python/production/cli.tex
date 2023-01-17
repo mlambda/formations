@@ -1,0 +1,74 @@
+\begin{frame}{Introduction}
+  Buts~:
+  \begin{itemize}[<+->]
+    \item Créer des outils facilement manipulables
+    \item Pouvoir scripter à partir de vos programmes Python
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Mécanismes}
+  \begin{itemize}[<+->]
+    \item \texttt{sys.argv} contient les arguments passés à votre programme
+    \item \texttt{argparse}, \texttt{click} ou encore \texttt{Typer} parsent ce tableau pour vous
+  \end{itemize}  
+\end{frame}
+
+\begin{frame}{\texttt{argparse}}
+  Pour définir une ILC avec \texttt{argparse}, il faut~:
+  \begin{itemize}[<+->]
+    \item Créer un parser
+    \item Appeler ce parser depuis le point d'entrée du programme
+    \item Traiter les arguments parsés
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Création d'un parser}
+  Création d'un \texttt{argparse.ArgumentParser} puis ajout d'arguments avec la méthode \texttt{add\_argument}~:
+  \mintedpycode{python/cli/creation}
+\end{frame}
+
+\begin{frame}{Ajouter un argument}
+  On peut spécifier à \texttt{add\_argument} de nombreux points. Parmi eux~:
+
+  \begin{itemize}[<+->]
+    \item Une option courte (\texttt{"-d"}) et longue (\texttt{"--directory"})
+    \item Une chaîne d'aide (\texttt{help="Aide de l'argument."})
+    \item Un type (\texttt{type=int})
+    \item Une action, pour créer des flags booléens par exemple
+    \item Une valeur par défaut
+  \end{itemize}
+
+  \onslide<+->{La \bluelink{https://docs.python.org/fr/3/library/argparse.html\#the-add-argument-method}{documentation officielle} est très complète.}
+\end{frame}
+
+\begin{frame}{Commandes multiples}
+  Possibilité de définir plusieurs commandes : création des sous-parsers que l'on traite ensuite comme le parser principal~:
+
+  \mintedpycode{python/cli/subparsers}
+\end{frame}
+
+\begin{frame}{Utilisation}
+  Appel de la méthode \texttt{parse\_args} puis traitement des arguments recupérés.
+
+  \mintedpycode{python/cli/usage}
+\end{frame}
+
+\begin{frame}{Utilisation avancée qui couple la CLI à la fonction appelée}
+  \begin{alertblock}{Attention}
+    Utilisation avancée, à regarder pendant un deuxième passage sur les slides.
+  \end{alertblock}
+  \mintedpycode{python/cli/usage-coupled}
+
+  \begin{itemize}
+    \item \texttt{vars} transforme l'objet \texttt{args} en dictionnaire
+    \item \texttt{**} «~éclate~» le dictionnaire en mots-clefs et valeurs
+    \item suppression préalable des arguments non-utilisés avec \texttt{delattr}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Quelques bonus apportés par \texttt{argparse}}
+  \begin{itemize}[<+->]
+    \item Aide générée automatiquement
+    \item Messages d'erreurs informatifs quand les arguments sont incorrects
+  \end{itemize}
+\end{frame}

@@ -1,0 +1,69 @@
+\begin{frame}{Introduction}
+  Buts~:
+  \begin{itemize}[<+->]
+    \item Exécuter du code pendant la définition d'une fonction
+    \item Disposer d'une grande flexibilité d'extension des fonctions
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple}
+  \mintedpycode{python/advanced/decorators/example}
+
+  Le décorateur \texttt{command} est exécuté pendant la définition de \texttt{my\_command}.
+\end{frame}
+
+\begin{frame}{Concept}
+  \begin{itemize}[<+->]
+    \item Décorateur = fonction
+    \item Prend en entrée une fonction
+    \item Rend usuellement en sortie une fonction
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple reformulé}
+  \begin{center}
+    \mintedpycode{python/advanced/decorators/example}
+    {\Huge =}
+    \mintedpycode{python/advanced/decorators/example-reformulated}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Possibilités}
+  \begin{itemize}[<+->]
+    \item Modification des arguments ou du résultat d'une fonction
+    \item Effets de bord (logging, mesure des performances, …)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Définition d'un décorateur}
+  \mintedpycode{python/advanced/decorators/definition}
+\end{frame}
+
+\begin{frame}{Définition d'un décorateur avec arguments}
+  \mintedpycode{python/advanced/decorators/definition-args}
+\end{frame}
+
+\begin{frame}{Utilisation de plusieurs décorateurs}
+  \begin{center}
+    \mintedpycode{python/advanced/decorators/multiple}
+    {\Huge =}
+    \mintedpycode{python/advanced/decorators/multiple-equivalent}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Quelques décorateurs utiles}
+  \begin{description}[<+->]
+    \item[\texttt{classmethod}] Déclare une méthode comme étant une méthode de classe
+    \item[\texttt{staticmethod}] Déclare une méthode comme étant statique
+    \item[\texttt{property}] Définit une ou des méthode(s) qui se comporte(nt) comme un attribut
+    \item[\texttt{functools.cache}] Permet de stocker le résultat d'un appel de fonction pour ne pas le recalculer
+  \end{description}
+\end{frame}
+
+\begin{frame}{Un outil indispensable}
+  Pour créer des décorateurs, l'utilisation de \texttt{functools.wraps} est \alert{très} recommandée.
+\end{frame}
+
+\begin{frame}{Décorateurs de classes}
+  Exactement de la même manière que pour les fonctions, il est possible de décorer des classes.
+\end{frame}

@@ -1,0 +1,99 @@
+\begin{frame}{Introduction}
+  Keras is a high level API to define and train models in TensorFlow.
+
+  \V{["img/logos/keras-tensorflow", "tw", 0.5] | image}
+\end{frame}
+
+\begin{frame}{Pros --- Ease of use}
+  \begin{itemize}[<+->]
+    \item Simple API
+    \item Easy access to metrics, losses, models and optimizers
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Pros --- Modular}
+  \begin{itemize}[<+->]
+    \item A network can be used as a layer: great modularity
+    \item Configuration is easy
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Pros --- State of the art}
+  \begin{itemize}[<+->]
+    \item Good models, losses, optimizers \& metrics are added quickly
+    \item Fast reproduction of recent papers by the community
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Pros --- Extensible}
+  Easy to develop new:
+  \begin{itemize}[<+(1)->]
+    \item Layers
+    \item Loss functions
+    \item Evaluation metrics
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Neural networks}
+  \mintedpycode{en/tf-keras/mlp}
+\end{frame}
+
+\begin{frame}{Configuring a layer}
+  \mintedpycode{en/tf-keras/configurelayer}
+\end{frame}
+
+\begin{frame}{Optimizer, loss function \& evaluation metrics}
+  \mintedpycode{en/tf-keras/compile}
+\end{frame}
+
+\begin{frame}{Model display}
+  \mintedpy{en/tf-keras/print-model}
+\end{frame}
+
+\begin{frame}{Model learning}
+  \mintedpycode{en/tf-keras/learn-1}
+\end{frame}
+
+\begin{frame}{Model learning with validation}
+  \mintedpycode{en/tf-keras/learn-2}
+\end{frame}
+
+\begin{frame}{Model learning with validation by split}
+  \mintedpycode{en/tf-keras/learn-3}
+\end{frame}
+
+\begin{frame}{\texttt{td.data.Dataset} usage}
+  \mintedpycode{en/tf-keras/learn-4}
+\end{frame}
+
+\begin{frame}{Evaluation}
+  \mintedpy{en/tf-keras/evaluate}
+\end{frame}
+
+\begin{frame}{Prediction}
+  \mintedpy{en/tf-keras/predict}
+\end{frame}
+
+\begin{frame}{Saving model configuration}
+  \mintedpycode{en/tf-keras/save-config}
+\end{frame}
+
+\begin{frame}{Saving model weights}
+  \mintedpycode{en/tf-keras/save-weights}
+\end{frame}
+
+\begin{frame}{Saving a full model}
+  \mintedpycode{en/tf-keras/save-all}
+\end{frame}
+
+\begin{frame}{Callbacks}
+  \mintedpycode{en/tf-keras/callbacks}
+\end{frame}
+
+\begin{frame}{Custom layer creation}
+  \mintedpycode{en/tf-keras/custom-layer}
+\end{frame}
+
+\begin{frame}{Custom layer usage}
+  \mintedpycode{en/tf-keras/custom-layer-use}
+\end{frame}

@@ -1,0 +1,98 @@
+\begin{frame}{Principle}
+  \begin{itemize}[<+->]
+    \item Leverage the discriminative power of NNs to train a generative model
+    \item Model learning as a game between two networks
+    \item The first network generates samples from random noise
+    \item The second network tries to find out whether a sample is true or generated
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Architecture}
+  \V{ ["tikz/neural-networks/gan/gan-en", "tw", 1] | image }
+\end{frame}
+
+\begin{frame}{Discriminator}
+  Trained to maximize the probability of assigning $1$ to true data and $0$ to fake data:
+
+  \[
+    \max_D
+      \left\{
+        \underbrace{\green{y \log D(\vect{x})}}_{\mathclap{\text{true data}}}
+        +
+        \underbrace{\red{(1 - y) \log (1 - D(\vect{x}))}}_{\mathclap{\text{fake data}}}
+      \right\}
+  \]
+
+  \begin{itemize}[<+(1)->]
+    \item For true data ($y=1$), the term to maximize is $\green{\log D(\vect{x})}$
+
+    $\Rightarrow$ $D(\vect{x})$ should be close to $1$
+    \item For fake data ($y=0$), the term to maximize is $\red{\log (1 - D(\vect{x}))}$
+
+    $\Rightarrow$ $D(\vect{x})$ should be close to $0$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Generator}
+  Trained to minimize the probability of $D$ assigning $0$ to fake data:
+
+  \[
+    \min_G
+      \left\{
+        (1 - y) \log (1 - D(G(\vect{z})))
+      \right\}
+  \]
+  The term to minimize is $\log (1 - D(G(\vect{z})))$
+
+  $\Rightarrow$ $D(G(\vect{z}))$ should be close to $1$
+\end{frame}
+
+\begin{frame}{Complete training function}
+  Previous equations combined and averaged aver all training samples:
+
+  \[
+    \max_D \min_G \left\{
+      \underbrace{\mathbb{E}_{\vect{x} \sim \text{Data}} \log D(\vect{x})}_{\mathclap{\text{Only $D$}}}
+      + \underbrace{\mathbb{E}_{\vect{z} \sim \text{Noise}} \log (1 - D(G(\vect{z})))}_{\mathclap{\text{Both $D$ \& $G$}}}
+    \right\}
+  \]
+
+  $\Rightarrow$ Description of the minimax game between $G$ \& $D$.
+\end{frame}
+
+\begin{frame}{Learning algorithm}
+  For each training iteration:
+
+  \begin{enumerate}[<+(1)->]
+    \item Sample minimatch of noise $\vect{Z}$
+    \item Sample minimatch of true examples $\vect{X}$
+    \item Update the discriminator parameters ($\theta_D$) with gradient ascent:
+    \[
+      \theta_D \leftarrow \theta_D + \alpha \nabla_{\theta_D} \frac{1}{m} \sum_{i=1}^m \left[
+        \log D\left(\vect{X}_i\right) + \log\left(1 - D\left(G\left(\vect{Z}_i\right)\right)\right)
+      \right]
+    \]
+    \item Update the generator parameters ($\theta_G$) with gradient descent:
+    \[
+      \theta_G \leftarrow \theta_G - \alpha \nabla_{\theta_G} \frac{1}{m} \sum_{i=1}^m \left[
+        \log\left(1 - D\left(G\left(\vect{Z}_i\right)\right)\right)
+      \right]
+    \]
+  \end{enumerate}
+  \onslide<+(1)->{Steps 3. and 4. can be repeated several times to stabilize training.}
+\end{frame}
+
+\begin{frame}{Training stability}
+  Training a GAN is hard:
+
+  \begin{itemize}[<+(1)->]
+    \item The discriminator can take over
+    \item The generator can loop on only some values (mode collapse)
+    \item Depending on the dataset one network might need more updates than the other
+    \item The noise distribution is important
+    \item The learning rate is important
+    \item …
+  \end{itemize}
+
+  \onslide<+(1)->{Useful tips: \url{https://github.com/soumith/ganhacks}}
+\end{frame}

@@ -1,0 +1,36 @@
+default_titles:
+  demo: Démonstration \texttt{scikit-learn}
+  intro: Introduction
+  pca-lda: Projections linéaires
+  pca-variantes: Variantes spécifiques
+  tp: Travaux pratiques
+  tsne-umap: Projections non-linéaires
+  tuto: Exemples \texttt{scikit-learn}
+
+flavors:
+  bda:
+    - intro
+    - pca-lda
+    - pca-variantes: null
+    - tsne-umap
+    - /questions
+    - tuto
+    - tp
+    - help-pointers
+  mle:
+    - intro
+    - pca-lda
+    - tsne-umap
+    - demo
+    - /questions
+    - help-pointers
+  mlb:
+    - intro
+    - pca-lda
+    - tsne-umap
+    - /questions
+    - tuto
+    - tp
+    - help-pointers
+
+title: Réduction de la dimensionnalité

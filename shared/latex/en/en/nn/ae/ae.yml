@@ -1,0 +1,12 @@
+default_titles:
+  autoencoder: Auto-encoder
+flavors:
+  dpl:
+    - autoencoder
+    - /questions
+    - tp
+  drn:
+    - autoencoder
+    - /questions
+    - tp-demo
+title: Auto-encodeurs

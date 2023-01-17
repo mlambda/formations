@@ -1,0 +1,223 @@
+\begin{frame}{Introduction}
+
+    \texttt{matplotlib} est la librairie graphique de référence pour la visualisation 2D (la seule ?).
+    
+    Un très grand nombre de librairies gravitent autour de matplotlib pour répondre à différents besoins et différents domaines.
+\end{frame}
+
+\begin{frame}{Un premier plot avec \texttt{plot(x, y)}}
+    \begin{minipage}[t]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/simple}{py}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vfill
+        \V{["plt/mpl/simple", "tw", 1] | image}  
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Différents types de plot : \texttt{scatter(x, y)}}
+    \begin{minipage}[t]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/scatter}{py}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vfill
+        \V{["plt/mpl/scatter", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Différents types de plot : \texttt{fill\_between(x, y, y1)}}
+    \begin{minipage}[t]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/fill-between}{py}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vfill
+        \V{["plt/mpl/fill-between", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Différents types de plot : \texttt{bar(x, y)}}
+    \begin{minipage}[t]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/bar}{py}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vfill
+        \V{["plt/mpl/bar", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Différents types de plot : \texttt{imshow(Z)}}
+    \begin{minipage}[t]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/imshow}{py}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vfill
+        \V{["plt/mpl/imshow", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Différents types de plot : \texttt{contour(X, Y, Z)}}
+    \begin{minipage}[t]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/contour}{py}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vfill
+        \V{["plt/mpl/contour", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Différents types de plot : \texttt{hist(x)}}
+    \begin{minipage}[t]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/hist}{py}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vfill
+        \V{["plt/mpl/hist", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Différents types de plot : \texttt{boxplot(X)}}
+    \begin{minipage}[t]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/boxplot}{py}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth} 
+        \vfill
+        \V{["plt/mpl/boxplot", "tw", 1] | image}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Une librairie simple \visible<2>{?}}
+    Ces premiers exemples en quelques lignes laissent supposer une librairie facile d'accès et simple d'utilisation pour la création de visualisation.
+
+    \visible<2>{\centering\Large\alert{\textbf{Il n'en est rien.}}}
+\end{frame}
+
+\begin{frame}{Une librairie riche et complexe}
+    \begin{itemize}
+        \positem Matplotlib est un libraire hautement configurable. C'est ce qui permet à beaucoup d'autres librairies de s'appuyer sur elle.
+        \negitem Mais cela vient nécessairement avec un coût pour réussir à faire des schémas esthétiques
+        \negitem Et malheureusement, la documentation est améliorable
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Anatomie d'une figure}
+    \V{["plt/mpl/anatomy", "th", 0.75] | image}
+\end{frame}
+
+\begin{frame}{Anatomie d'une figure}
+    \begin{minipage}{0.49\linewidth}
+        \begin{description}
+          \item[Figure] Structure de plus haut niveau qui contiendra tous les éléments à afficher
+          \item[Axes] Élément contenant un graphique. Un ou plusieurs \texttt{axes} par \texttt{figure}
+          \item[Spine] Cadre d'un \texttt{axe}
+          \item[Legend] Légende associée à un \texttt{axe}
+          \item[Title] Titre associé à un \texttt{axe}
+      \end{description}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["plt/mpl/anatomy", "tw", 1] | image}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Anatomie d'une figure}
+    \begin{minipage}{0.49\linewidth}
+        \begin{description}
+            \item[Suptitle] Titre associé à une \texttt{figure}
+            \item[Label] Descripteur d'\texttt{axe} associé à l'axe \texttt{x} et \texttt{y}
+            \item[Tick] Marqueur sur les spines pour représenter l'échelle des valeurs
+            \item[Grid] Grille affichée sur la visualisation
+        \end{description}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["plt/mpl/anatomy", "tw", 1] | image}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Paramétrisation}
+    Il existe une grande quantité d'éléments pouvant être modifiés pour changer la visualisation.
+\end{frame}
+
+\begin{frame}{Taille et résolution}
+    \begin{minipage}[t]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/classique-start}{py}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \V{["plt/mpl/classique-start", "tw", 0.65] | image} 
+    \end{minipage}
+\end{frame} 
+
+\begin{frame}{Titre et légendes}
+    \begin{minipage}{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/legend}{py}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["plt/mpl/legend", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Changer les limites}
+    \begin{minipage}{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/limits}{py}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["plt/mpl/limits", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Modifier les spines}
+    \begin{minipage}{0.52\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/spines}{py}
+    \end{minipage}
+    \begin{minipage}{0.46\linewidth}
+        \V{["plt/mpl/spines", "tw", 1] | image}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Ajouter les labels}
+    \begin{minipage}[c]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/labels}{py}
+    \end{minipage}
+    \begin{minipage}[c]{0.49\linewidth}
+        \V{["plt/mpl/labels", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Modifier les ticks}
+    \begin{minipage}[c]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/ticks}{py}
+    \end{minipage}
+    \begin{minipage}[c]{0.49\linewidth}
+        \V{["plt/mpl/ticks", "tw", 1] | image} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Plots multiples et projection}
+    \V{["plt/mpl/scales", "tw", 0.6] | image} 
+\end{frame}
+
+\begin{frame}{Sous-plots}
+    \mintedcustomcode{python/data-science/matplotlib/subplots1}{py}
+\end{frame}
+
+\begin{frame}{Sous-plots}
+    \mintedcustomcode{python/data-science/matplotlib/subplots2}{py}
+\end{frame}
+
+\begin{frame}{Sauvegarder une visualisation}
+    \mintedcustomcode{python/data-science/matplotlib/save}{py}
+\end{frame}
+
+\begin{frame}{Documentation}
+  \begin{itemize}
+    \item \bluelink{https://matplotlib.org/stable/users/index}{Documentation officielle}
+    \item Feuilles d'aides~:
+      \begin{itemize}
+        \item \bluelink{https://matplotlib.org/cheatsheets/cheatsheets.pdf}{Principale}
+        \item \bluelink{https://matplotlib.org/cheatsheets/handout-beginner.pdf}{Supplémentaire, niveau débutant}
+        \item \bluelink{https://matplotlib.org/cheatsheets/handout-intermediate.pdf}{Supplémentaire, niveau intermédiaire}
+        \item \bluelink{https://matplotlib.org/cheatsheets/handout-tips.pdf}{Supplémentaire, quelques astuces}
+      \end{itemize}
+    \item \bluelink{https://github.com/rougier/scientific-visualization-book}{Livre niveau intermédiaire/avancé sur \texttt{matplotlib}}
+    \item \bluelink{https://pyviz.org/}{Pyviz~: liste des librairies dépendantes de \texttt{matplotlib}}
+  \end{itemize}
+\end{frame}

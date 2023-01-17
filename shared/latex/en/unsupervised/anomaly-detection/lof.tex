@@ -1,0 +1,29 @@
+\begin{frame}{Principe}
+  Local outlier factor en Anglais.
+  \begin{columns}
+    \begin{column}{.7\tw}
+      \begin{itemize}[<+->]
+        \item anomalies locales
+        \item basé sur les k voisins du point
+        \item définit une \og atteignabilité\fg{} par les distances de ces voisins
+        \item calcule un ratio moyen d'atteignabilité du point et de ses voisins
+      \end{itemize}
+    \end{column}
+    \begin{column}{.3\tw}
+      \V{["img/lof-density", "tw", 1] | image}
+    \end{column}
+  \end{columns}
+
+  \onslide<+->{→ Anomalie si le ratio moyen d'atteignabilité est beaucoup plus faible que celui de ses plus proches voisins.}
+\end{frame}
+
+\begin{frame}{Exemple}
+  \V{["img/lof", "tw", 0.7] | image}
+\end{frame}
+
+\begin{frame}{Désavantages}
+  \begin{itemize}
+  \item lent (quadratique)
+  \item a des à priori sur la distribution des données
+  \end{itemize}
+\end{frame}

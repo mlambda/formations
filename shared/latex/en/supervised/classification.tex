@@ -1,0 +1,88 @@
+\begin{frame}{Classification}
+  \V{["tikz/variables", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{Classification}
+  \V{["img/mnist", "th", 0.7] | image}
+\end{frame}
+
+\begin{frame}{Classification}
+  $\approx$ Distance entre la sortie et la cible ?
+  \newline
+  \newline
+  \newline
+  \underline{\textbf{Sortie :}}
+
+  \begin{tabular}{|*{10}{c|}}
+    \hline
+    0.00  & 0.10  & 0.40  & 0.00  & 0.00  & 0.20  & 0.10  & 0.00  & 0.20  & 0.00 \\
+    \hline
+  \end{tabular}
+  \newline
+  \newline
+  \underline{\textbf{Cible :}}
+
+  \begin{tabular}{|*{10}{c|}}
+    \hline
+    0.00  & 0.00  & \textbf{\red{1.00}}  & 0.00  & 0.00  & 0.00  & 0.00  & 0.00  & 0.00  & 0.00  \\
+    \hline
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Classification}
+  Critère de l'erreur absolue (MAE) = 0.12
+  \newline
+  \newline
+  \newline
+  \underline{\textbf{Sortie :}}
+
+  \begin{tabular}{|*{10}{c|}}
+    \hline
+    0.00  & 0.10  & 0.40  & 0.00  & 0.00  & 0.20  & 0.10  & 0.00  & 0.20  & 0.00 \\ 
+    \hline
+  \end{tabular}
+  \newline
+  \newline
+  \underline{\textbf{Cible :}}
+
+  \begin{tabular}{|*{10}{c|}}
+    \hline
+    0.00  & 0.00  & \textbf{\red{1.00}}  & 0.00  & 0.00  & 0.00  & 0.00  & 0.00  & 0.00  & 0.00  \\
+    \hline
+  \end{tabular}
+\end{frame}
+
+
+\begin{frame}{Classification}
+  Critère de l'erreur absolue (MAE) = 0.12
+  \newline
+  \newline
+  \newline
+  \underline{\textbf{Sortie :}}
+
+  \begin{tabular}{|*{10}{c|}}
+    \hline
+    0.12  & 0.12  & 0.88  & 0.12  & 0.12  & 0.12  & 0.12  & 0.12  & 0.12  & 0.12 \\ 
+    \hline
+  \end{tabular}
+  \newline
+  \newline
+  \underline{\textbf{Cible :}}
+
+  \begin{tabular}{|*{10}{c|}}
+    \hline
+    0.00  & 0.00  & \textbf{\red{1.00}}  & 0.00  & 0.00  & 0.00  & 0.00  & 0.00  & 0.00  & 0.00  \\
+    \hline
+  \end{tabular}
+\end{frame}
+
+
+\begin{frame}{Classification}
+  Entropie croisée entre la sortie et la cible :
+  \[
+    \mathrm{H}(y, \hat{y})=-\sum_{i} y_i \log \hat{y}_i
+  \]
+
+  $\Rightarrow$ Minimale quand sortie = cible
+    
+\end{frame}

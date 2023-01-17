@@ -1,0 +1,94 @@
+\begin{frame}{Projections linéaires}
+  Deux méthodes principales~:
+  \begin{itemize}
+    \item Analyse en composantes principales (ACP, \textit{PCA} en anglais, non-supervisée)
+    \item Analyse discriminante linéaire (ADL, \textit{LDA} en anglais, supervisée)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{ACP --- Caractéristiques}
+  \begin{itemize}
+    \item Crée de nouvelles colonnes (combinaisons linéaires des originales)
+    \item Ces colonnes sont décorrélées
+    \item Les premières sont les plus informatives
+    \item Pour réduire la dimensionnalité~: ne conserver que les $k$ premières
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{ACP --- Exemple 1}
+  \V{["img/pca-nuage", "th", 0.7] | image}
+\end{frame}
+
+\begin{frame}{ACP --- Exemple 2}
+  \V{["img/pca-fish", "th", 0.7] | image}
+\end{frame}
+
+\begin{frame}{ACP --- Point de départ}
+  \[
+  X = \begin{bmatrix}
+    X_{1,1} & \dots  & X_{1,D} \\
+    \vdots & \ddots & \vdots \\
+    X_{N,1} & \dots  & X_{N,D}
+  \end{bmatrix}
+  \]
+\end{frame}
+
+\begin{frame}{ACP --- Procédé}
+  Chaque colonne est centrée~:
+  \[
+  \overline{X} =
+  \begin{bmatrix}
+    X_{1,1}-\overline{X_1} & \dots  & X_{1,D}-\overline{X_D} \\
+    \vdots & \ddots & \vdots \\
+    X_{N,1}-\overline{X_1} & \dots  & X_{N,D}-\overline{X_D}
+  \end{bmatrix}
+  \]
+
+  puis optionnellement réduite~:
+
+  \[
+  \widetilde{X} =
+  \begin{bmatrix}
+    \frac{X_{1,1}-\overline{X_1}}{\sigma(X_1)} & \dots  & \frac{X_{1,D}-\overline{X_D}}{\sigma(X_D)} \\
+    \vdots & \ddots & \vdots \\
+    \frac{X_{N,1}-\overline{X_1}}{\sigma(X_1)} & \dots  & \frac{X_{N,D}-\overline{X_D}}{\sigma(X_D)}
+  \end{bmatrix}
+  \]
+\end{frame}
+
+\begin{frame}{ACP --- Procédé (suite)}
+  \begin{itemize}
+    \item Calcul de la matrice de covariance (resp corrélation)~:
+      \[
+      \frac{1}{N} \times \overline{X^T} \times \overline{X}
+      \quad
+      ( \frac{1}{N} \times \widetilde{X^T} \times \widetilde{X} )
+      \]
+    \item Calcul des vecteurs propres de cette matrice~: ce sont les combinaisons linéaires des nouvelles colonnes
+    \item Tri des vecteurs par valeur propre décroissante
+    \item Réduction de dimension : on ne conserve que les $k$ premiers vecteurs propres
+  \end{itemize}
+
+  \bluelink{https://youtu.be/VrNw9TTVExY}{Illustration de l'ACP}
+\end{frame}
+
+\begin{frame}{ADL --- Analyse discriminante linéaire}
+  Procédé~:
+
+  \begin{itemize}
+    \item Estimation de la matrice de covariance de chaque classe
+    \item ACP sur chacune de ces matrices
+    \item Projection en maximisant la variance inter-classes
+  \end{itemize}
+  \bluelink{https://youtu.be/sYrBSNp3jZc}{Illustration de l'ADL}
+\end{frame}
+
+\begin{frame}{ADL --- Analyse discriminante linéaire}
+  Attention, technique délicate qui est sensible à~:
+
+  \begin{itemize}
+    \item Forte dimensionnalité
+    \item Distribution multimodale
+    \item Homoscédasticité
+  \end{itemize}
+\end{frame}

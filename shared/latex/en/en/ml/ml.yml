@@ -1,0 +1,14 @@
+default_titles:
+  learning: Learning
+  data-preparation: Data preparation
+  evaluation: Evaluation
+  intro: Introduction
+flavors:
+  detailed-no-tp:
+    - intro
+    - $prerequisites: full
+    - data-preparation
+    - learning
+    - evaluation
+    - /questions
+title: Machine Learning

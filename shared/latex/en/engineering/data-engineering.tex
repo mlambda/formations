@@ -1,0 +1,61 @@
+\begin{frame}{Introduction}
+  \begin{alertblock}{Trash in $\rightarrow$ Trash out}
+    L'ingénierie des données est primordiale.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Souvent délaissée}
+  Classique dans une entreprise~:
+
+  \begin{itemize}[<+->]
+    \item Le code est versionné
+    \item Tous les ingénieurs utilisent CI/CD
+    \item La base de code est testée
+  \end{itemize}
+
+  \onslide<+->{Et en même temps~:}
+
+  \begin{itemize}[<+->]
+    \item Les données ne sont pas versionnées
+    \item Les traitements faits dessus pas reproductibles
+    \item Les formats inconsistents
+    \item …
+  \end{itemize}
+
+  \onslide<+->{$\rightarrow$ Pertes énormes en maintenabilité sur tous les produits basés sur les données.}
+\end{frame}
+
+\begin{frame}{Étapes de traitement}
+  \begin{enumerate}[<+->]
+    \item Récupération depuis la source originale, intégration au lac de données
+    \item Normalisation générale, adjonction d'une version
+    \item Normalisation spécifique
+  \end{enumerate}  
+\end{frame}
+
+\begin{frame}{Étapes de traitement --- Intégration au lac de données}
+  \begin{itemize}[<+->]
+    \item Peu ou pas de transformation de la source originale
+    \item Formats très différents
+    \item Métadonnées sur l'obtention des données
+  \end{itemize}  
+\end{frame}
+
+\begin{frame}{Étapes de traitement --- Normalisation générale}
+  \begin{itemize}[<+->]
+    \item Transformation pour extraire toutes les informations utiles
+    \item Surveiller les biais~: a minima les documenter, mieux~: les corriger
+    \item Format standard en ML (JSON, JSONL, HDF5, …)
+    \item Versionnage sémantique
+  \end{itemize}  
+\end{frame}
+
+\begin{frame}{Étapes de traitement --- Normalisation spécifique}
+  \begin{itemize}[<+->]
+    \item Extraction des données utiles à une tâche
+    \item Peut être beaucoup plus petit que le dataset général
+    \item Peut combiner plusieurs datasets
+    \item Peut intégrer des pré-traitements importants
+    \item Versionnage sémantique
+  \end{itemize}  
+\end{frame}

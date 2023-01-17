@@ -1,0 +1,14 @@
+default_titles:
+  coding: Informatique
+  intro: Introduction
+  sante: Santé
+  transport: Transport
+flavors:
+  full:
+    - intro
+    - transport
+    - sante
+    - coding
+    - /questions
+title: Impact sur des secteurs d'activité
+version: 3

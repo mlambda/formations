@@ -1,0 +1,51 @@
+\begin{frame}{Introduction}
+  Les signaux sont un mécanisme de communication entre processus hérité du C.
+
+  En particulier, les systèmes d'exploitation communiquent avec les programmes par ce mécanisme.
+\end{frame}
+
+\begin{frame}{Module \texttt{signal} de la bibliothèque standard}
+  En Python, le module \texttt{signal} est utilisé pour intercepter et envoyer des signaux. Il définit~:
+
+  \begin{itemize}[<+(1)->]
+    \item Une variable pour chaque signal (\texttt{SIGINT}, \texttt{SIGTERM}, …)
+    \item Une fonction \texttt{signal} pour exécuter une fonction à chaque réception de signal
+    \item Plusieurs fonctions connexes moins utilisées à étudier dans la \bluelink{https://docs.python.org/fr/3/library/signal.html}{documentation officielle}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Signification de chaque signal}
+  Description des \bluelink{https://fr.wikipedia.org/wiki/Signal_(informatique)}{signaux POSIX} sur Wikipédia et des \bluelink{https://docs.python.org/fr/3/library/signal.html\#module-contents}{signaux du module \texttt{signal}} dans la documentation Python.
+\end{frame}
+
+\begin{frame}{Définition d'un gestionnaire de signal}
+  \mintedcustom{python/signals/signal}{py}{console}
+\end{frame}
+
+\begin{frame}{Points à noter}
+  \begin{itemize}[<+->]
+    \item Les signaux diffèrent entre les systèmes d'exploitation
+    \item Les signaux arrivent dans le thread principal
+    \item On ne peut pas ignorer ou redéfinir \texttt{SIGKILL}
+    \item Possibilités de situations de compétition entre signaux
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Cadre d'utilisation}
+  \begin{exampleblock}{Conseillé}
+    Traiter les signaux du système d'exploitation ou envoyés depuis des scripts d'admin ou des programmes C.
+
+    Suivre la norme POSIX pour réagir aux signaux.
+  \end{exampleblock}
+
+  \begin{alertblock}{Déconseillé}
+    Pour faire de la communication à l'intérieur d'une application ou entre applications. Préférez~:
+
+    \begin{itemize}
+      \item Exposer une interface RPC (\emph{Remote Procedure Call})
+      \item Exposer un serveur HTTP
+      \item Utiliser une queue d'événements
+      \item …
+    \end{itemize}
+  \end{alertblock}
+\end{frame}

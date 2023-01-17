@@ -1,0 +1,62 @@
+\begin{frame}{What are hyperparameters?}
+  \begin{columns}
+    \begin{column}[c]{0.5\textwidth}
+      \V{["tikz/neural-networks/deep-ff-notext", "tw", 1] | image}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item Learning rate
+        \item Batch size
+        \item Number of layers
+        \item Size of layers
+        \item …
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Approach to optimize hyperparameters}
+  \begin{itemize}[<+->]
+    \item Start with good baselines and a simple “manual” search
+    \item When you are done with the basic pipeline, implement a proper search using a dedicated library
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Learning rate}
+  \begin{minipage}{0.49\textwidth}
+    \centering
+    Too big
+  \end{minipage}\hfill
+  \begin{minipage}{0.49\linewidth}
+    \centering
+    Ok
+  \end{minipage}\hfill
+
+  \V{["img/learning-rate-big-small", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{First approach --- Learning rate}
+  Use a logarithmic scale at first:
+  \mintedpycode{gridsearch-template}
+  Then tune with a linear scale.
+\end{frame}
+
+\begin{frame}{First approach --- Batch size}
+  Usually powers of 2, to optimize GPU resources
+  \V{["plt/batch-size-effect-en", "th", 0.6] | image}
+\end{frame}
+
+\begin{frame}{First approach --- Size of layers}
+  As for batch size: usually powers of 2
+\end{frame}
+
+\begin{frame}{First approach --- Number of layers}
+  \mintedpycode{addlayer-template}
+\end{frame}
+
+\begin{frame}{Beyond manual tuning}
+  Training models is extremely costly.
+  A good navigation in the hyperparameters space is important.
+
+  $\Rightarrow$ Use a dedicated library like Keras Tuner, Hyperopt, Nevergrad, Optuna or Ray to leverage Gaussian Processes and similar state of the art methods.
+\end{frame}

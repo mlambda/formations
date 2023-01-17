@@ -1,0 +1,28 @@
+default_titles:
+  attention-model: Modèles à attention
+  model: Modèle
+  transformer-cell: La cellule \og Transformer \fg
+  vision-transformer: Le \og Vision Transformer \fg
+  vision-demo: Démonstration
+flavors:
+  text:
+    - attention-model
+    - transformer-cell
+    - /questions
+    - text-tp
+  drn:
+    - attention-model
+    - transformer-cell
+    - /questions
+    - text-tp
+    - vision-transformer
+    - /questions
+    - vision-demo
+  image:
+    - attention-model
+    - transformer-cell
+    - vision-transformer
+    - /questions
+    - vision-demo
+
+title: Réseaux transformeurs

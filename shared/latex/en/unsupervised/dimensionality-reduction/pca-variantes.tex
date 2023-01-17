@@ -1,0 +1,138 @@
+\begin{frame}{Analyse des correspondances}
+  \begin{itemize}
+    \item Similaire à l'ACP dans la mise en \oe uvre,
+    \item Mais se focalise sur l'analyse de relations entre les caractéristiques des données.
+  \end{itemize}
+
+  Fréquemment utilisée dans les données de sondages (INSEE, enquêtes d'opinions).
+\end{frame}
+
+\begin{frame}{Analyse Factorielle des Correspondances (AFC)}
+  \begin{center}
+    L'AFC s'applique sur des données croisées.\\Une ligne \textbf{ne représente pas} un individu. 
+  \end{center}
+  
+  \begin{minipage}{0.45\linewidth}
+    \V{["tikz/dimensionality-reduction/afc", "tw", 1.0] | image}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.49\linewidth}
+    $X_{ij}$ correspond au nombre d'individus qui possède la caractéristique $i$ de la \textcolor{blue}{variable A} et la caractéristique $j$ de la \textcolor{red}{variable B}.
+  \end{minipage}
+\end{frame}
+
+\begin{frame}{AFC --- Exemple de données}
+  \begin{scriptsize}
+    \begin{table}
+      \begin{tabular}{lccccccccc}
+        \toprule
+        &\multicolumn{8}{c}{Catégorie de Nobel}&\\
+        \cline{2-8}
+        Pays & Chimie &	Économie &	Litt. &	Médecine &	Paix &	Physique &	Maths & Total &$p_{i.}$\\
+        \midrule
+        Canada    &	4 &	3 &	2 &	4 &	1 &	4 &	1 & 19 & 0.04\\
+        France    &	8 &	3 &	11 &	12 &	10 &	9 &	11 & 64 & 0.12\\
+        GB        &	23 &	6 &	7 &	26 &	11 &	20 &	4 & 97 & 0.18\\
+        Italie    &	1 &	1 &	6 &	5 &	1 &	5 &	1 & 20 & 0.04\\
+        Japon     &	6 &	0 &	2 &	3 &	1 &	11 &	3 & 26 & 0.05\\
+        Russie    &	4 &	3 &	5 &	2 &	3 &	10 &	9 & 36 & 0.07\\
+        USA     &	51 &	43 &	8 &	70 &	19 &	66 &	13 & 270 & 0.51\\
+        &&&&&&&&&\\
+        Total & 97 & 59 & 41 & 122 & 46 & 125 & 42 & 532 & 1.00\\
+        \midrule
+        $p_{.j}$ & 0.18 & 0.11 & 0.08 & 0.23 & 0.09 & 0.23 & 0.08 & 1.00 &1.00\\
+        \bottomrule
+      \end{tabular}
+      \caption{Nombre de prix nobels par pays}
+    \end{table}
+  \end{scriptsize}
+\end{frame}
+
+\begin{frame}{AFC --- Probabilités}
+  \begin{minipage}{0.45\linewidth}
+    \V{["tikz/dimensionality-reduction/afc-proba", "tw", 1.0] | image}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.49\linewidth}
+    Pour les calculs de l'AFC, les données sont représentées par des probabilités avec :
+    \begin{equation*}
+      p_{ij}=\frac{X_{ij}}{n} 
+    \end{equation*}
+    avec $n$ la somme des valeurs.
+  \end{minipage}
+\end{frame}
+
+\begin{frame}{AFC --- Profils ligne et colonne}
+  \begin{minipage}{0.45\linewidth}
+    \V{["tikz/dimensionality-reduction/afc-profil-ligne", "tw", 1.0] | image}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\linewidth}
+    \V{["tikz/dimensionality-reduction/afc-profil-colonne", "tw", 1.0] | image}
+  \end{minipage}
+
+  À partir de la table de probabilité, on calcule les profils ligne et colonne, c'est à dire les probabilités conditionnelles par ligne et par colonne.
+\end{frame}
+
+\begin{frame}{AFC --- Axes d'inertie maximale}
+  Sur chacun des deux profils, on applique une réduction de dimension (comme pour la PCA) sur la matrice des distances $\chi^2$ de chacun point dans chaque profil à leur barycentre respectif.
+
+  Exemple sur la variable $A$ / Profil ligne :
+  \begin{equation*}
+    d_{\chi^2}^2(i,G_i) = \sum^J_{j=1}\frac{1}{p_j}\left(\frac{p_{ij}}{p_i} - p_j \right)^2 
+  \end{equation*}
+  avec $G_i$ le barycentre du profil ligne.
+
+  La somme des distances des points pondéré par leur probabilité (\emph{inertie}) est égale au $\phi^2$ qui mesure l'écart à l'indépendance entre les variables.
+\end{frame}
+
+\begin{frame}{AFC --- Visualisation}
+  \begin{minipage}{0.59\linewidth}
+    \V{["img/afc-nobels", "tw", 1] | image}
+  \end{minipage}
+  \begin{minipage}{0.4\linewidth}
+    En projetant et en centrant les barycentres sur un graphe, il est possible d'observer graphiquement les co-dépendances entre caractéristiques.
+  \end{minipage}
+\end{frame}
+
+\begin{frame}{Analyse des Correspondances Multiples (ACM)}
+  Pour l'ACM, contrairement à l'AFC, les lignes sont des individus et les colonnes des caractéristiques type questions à choix multiples.
+  \begin{center}
+    \V{["tikz/dimensionality-reduction/acm", "th", 0.5] | image}
+  \end{center}
+  Le tableau est ensuite transformé en tableau disjonctif complet (TDC, ou encodage one hot).
+\end{frame}
+
+\begin{frame}{ACM --- Calcul des distances}
+
+  Comme pour AFC, remplacement des valeurs $x_{ik}$ par une pondération dépendante de la probabilité des caractéristiques~:
+  \begin{equation*}
+    x'_{ik}=\frac{x_{ik}}{p_k}
+  \end{equation*}
+
+  À partir des ces valeurs, on considère la distance entre deux individus $i$ et $i'$:
+  \begin{equation*}
+    d_{i,i'}^2=\frac{1}{J}\sum^K_{k=1} \frac{1}{p_k}(x'_{ik}-x'_{i'k})^2
+  \end{equation*}
+
+  \begin{itemize}
+    \item Beaucoup de réponses similaires $\Leftrightarrow$ distance faible
+    \item Un des individu a une réponse inhabituelle $\Leftrightarrow$ distance élevée
+    \item Deux individus ont une réponse inhabituelle commune $\Leftrightarrow$ distance faible
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{ACM --- Projection}
+  \begin{itemize}
+    \item Projection par réduction de dimensionnalité avec une recherche de vecteurs propres. 
+    \item Au lieu de projeter tous les individus, projection des barycentres des groupes d'individus par caractéristiques possédées. 
+    \item Utilisation des caractéristiques secondaires pour aider l'interprétation.
+  \end{itemize}
+  
+  
+
+\end{frame}
+
+\begin{frame}{Analyse Factorielle pour données mixtes (AFDM)}
+  Quand on a des variables qualitatives ET quantitatives pour décrire nos échantillons, on discrétise chaque variable quantitative. On peut ainsi procéder à l'Analyse en Composantes Multiples
+\end{frame}

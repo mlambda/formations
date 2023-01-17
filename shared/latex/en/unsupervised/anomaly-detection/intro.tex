@@ -1,0 +1,49 @@
+\begin{frame}{Buts}
+  Détection~:
+  \begin{itemize}
+  \item de fraude
+  \item d'intrusion/de Fuite (physique ou électronique)
+  \item en santé (biologique, geologique, machine, ...)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Définition}
+  \begin{itemize}
+  \item une anomalie diffère de la norme par ses features
+  \item les anomalies sont rares comparées aux instances normales
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paradigmes}
+  \begin{itemize}
+    \item supervisé
+    \item non-supervisé
+    \item semi-supervisé
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Supervisé}
+  Problème de classification normal, avec fort déséquilibre de classes.
+  Utiliser par exemple une librairie de ré-échantillonnage comme \bluelink{https://imbalanced-learn.org/}{imbalanced-learn}.
+
+  Réseaux de neurones et SVM très performants.
+\end{frame}
+
+\begin{frame}{Semi-Supervisé}
+  Détection de nouveauté. \\
+  Pas traité ici. \\
+  One-class SVM très utilisé.
+\end{frame}
+
+\begin{frame}{Non-Supervisé}
+  De nombreuses méthodes : 
+  \begin{itemize}
+  \item Local Outlier Factor (LOF)
+  \item Unweighted Cluster-Based Outlier Factor
+  \item Isolation Forest
+  \item Autoencoder
+  \item ...
+  \end{itemize}
+\end{frame}
+
+

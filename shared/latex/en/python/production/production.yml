@@ -1,0 +1,29 @@
+default_titles:
+  deployment: Déploiement
+  environment: Gestion de l'environment logiciel
+  packaging: Création de paquets Python
+  cli: Interfaces en ligne de commande
+flavors:
+  full:
+    - environment
+    - /questions
+    - demo-environment
+    - packaging
+    - /questions
+    - tp-packaging
+    - deployment
+    - /questions
+    - cli
+    - /questions
+    - tp-cli-stegano
+  light:
+    - environment
+    - /questions
+    - demo-environment
+    - packaging
+    - /questions
+    - tp-packaging
+    - cli
+    - /questions
+    - tp-cli
+title: Ingénierie de projets en Python

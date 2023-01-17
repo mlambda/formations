@@ -1,0 +1,51 @@
+\begin{frame}{K-Means --- Introduction}
+  Algorithme EM
+  \V{["img/cluster-2", "th", 0.7] | image}
+\end{frame}
+
+\begin{frame}{K-Means --- Algorithme}
+  \begin{itemize}[<+->]
+    \item Choisir $k$ points comme clusters initiaux
+    \item Itérer les phases E (expectation) et M (maximisation)~:
+      \begin{description}[<+->]
+        \item[E] Attribuer à chaque point le cluster dont le centroïde est le plus proche
+        \item[M] Réajuster les centroïdes pour qu'ils soient au milieu des points qui leur est attribué
+      \end{description}
+  \end{itemize}  
+\end{frame}
+
+\begin{frame}{K-Means --- Exemple}
+  \bluelink{https://youtu.be/BVFG7fd1H30}{Vidéo de plusieurs apprentissages}
+\end{frame}
+
+\begin{frame}{K-Means --- Distance}
+  distance euclidienne, Manhattan, Chebychev
+  \V{["img/distances-euclidienne-manahattan-chebychev", "tw", 0.9] | image}
+\end{frame}
+
+\begin{frame}{K-Means++}
+  Améliore l'initialisation~:
+
+  \begin{itemize}[<+->]
+    \item Choisir un point comme cluster initial
+    \item Pour les points suivants, itérer~:
+      \begin{itemize}[<+->]
+        \item Calculer la distance de chaque point à son cluster le plus proche
+        \item Choisir un point avec une probabilité proportionnelle à la distance calculée
+      \end{itemize}
+  \end{itemize}
+
+  \onslide<+->{$\rightarrow$ Bien meilleures propriétés de convergence~!}
+\end{frame}
+
+\begin{frame}{Gaussian Mixture Model --- Introduction}
+  Les clusters sont représentés par un centre et une matrice de covariance.
+  \V{["img/gaussian-mixture", "tw", 0.7] | image}
+\end{frame}
+
+\begin{frame}{Gaussian Mixture Model --- Caractéristiques}
+  \begin{itemize}[<+->]
+    \item \og{}Soft\fg{} clustering~: chaque cluster est une fonction de densité de probabilité
+    \item Algorithme EM, souvent initialisé avec K-Means
+  \end{itemize}
+\end{frame}

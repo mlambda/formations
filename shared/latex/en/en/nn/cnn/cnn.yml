@@ -1,0 +1,72 @@
+default_titles:
+  data: Dataset for computer vision
+  task: Tasks
+  interpret: Interpret a learned model
+  keras: Keras implementation
+  model: Model
+  modern-anomaly-detection: An visual anomaly detection example
+  modern-architectures: Modern CNN architectures
+  demo-task: Demonstrations
+flavors:
+  ml1:
+    - data
+    - model
+    - /questions
+    - help-pointers
+  mle:
+    - data
+    - model
+    - /questions
+    - tp-demo
+    - help-pointers
+  drn:
+    - data
+    - model
+    - /questions
+    - modern-architectures
+    - /questions
+    - keras
+    - /questions
+    - tp-demo
+    - interpret
+    - modern-anomaly-detection
+    - demo-task
+    - /questions
+    - help-pointers
+  vision-expert:
+    - data
+    - model
+    - task
+    - demo-task
+    - interpret
+    - /questions
+    - keras
+    - /questions
+    - tp-demo
+    - modern-architectures
+    - modern-anomaly-detection
+  vision-expert-tp:
+    - data
+    - model
+    - task
+    - demo-task
+    - interpret
+    - modern-anomaly-detection
+    - modern-architectures
+    - /questions
+    - keras
+    - /questions
+    - tp
+    - help-pointers
+  dpl:
+    - data
+    - model
+    - task
+    - /questions
+    - modern-architectures
+    - /questions
+    - keras
+    - /questions
+    - tp
+    - help-pointers
+title: Réseaux de neurones à convolutions

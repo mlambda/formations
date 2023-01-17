@@ -1,0 +1,23 @@
+default_titles:
+  introduction: Introduction
+flavors:
+  bda:
+    - introduction
+    - $dimensionality-reduction: bda
+    - $clustering: bda
+    - $anomaly-detection: full
+  mle:
+    - introduction
+    - $dimensionality-reduction: mle
+    - $clustering: mle
+  iao:
+    - introduction
+    - $dimensionality-reduction: mle
+    - $clustering: mle
+    - $anomaly-detection: full    
+  ml3:
+    - $dimensionality-reduction: mlb
+    - $anomaly-detection: full
+  mlb:
+    - $dimensionality-reduction: mlb
+title: Apprentissage non-supervisé

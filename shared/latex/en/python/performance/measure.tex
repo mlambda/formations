@@ -1,0 +1,45 @@
+\begin{frame}{Introduction}
+  Buts~:
+  \begin{itemize}[<+->]
+    \item Savoir mesurer correctement les performances de votre code
+    \item Connaître les possibilités d'amélioration
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Mesure du temps d'exécution en Python}
+  Instrumentation du code par un outil qui mesure le temps écoulé durant l'exécution du programme~:
+  \begin{itemize}[<+->]
+    \item Outil \texttt{cProfile} de la bibliothèque standard, mesure tous les appels
+    \item Outil \texttt{pyinstrument}, échantillonne les mesures
+  \end{itemize}
+  \onslide<+->{\texttt{pyinstrument} très conseillé, output en arbre d'appels adaptatif.}
+\end{frame}
+
+\begin{frame}{Démonstration}
+  Démonstration d'utilisation de \texttt{pyinstrument}.
+\end{frame}
+
+\begin{frame}{Mesure de la mémoire utilisée}
+  Plusieurs options disponibles~:
+
+  \begin{description}[<+->]
+    \item[\texttt{filprofiler}] Produit des flame graphs interactifs
+    \item[\texttt{Guppy3}] Analyse l'utilisation de la heap
+    \item[memory\_profiler] Produit un rapport d'utilisation de mémoire par ligne
+    \item …
+  \end{description}
+\end{frame}
+
+\begin{frame}{Démonstration}
+  Démonstration d'utilisation de \texttt{filprofiler}.
+\end{frame}
+
+\begin{frame}{Pistes d'amélioration}
+  \begin{itemize}[<+->]
+    \item Utilisation de librairies performantes (NumPy par exemple)
+    \item Meilleur choix de structures de données
+    \item Lenteur de plusieurs appels réseau ? Concurrence (\texttt{asyncio}, \texttt{threading}, \texttt{multiprocessing})
+    \item Lenteur de plusieurs traitements longs ? Parallélisme avec \texttt{multiprocessing}
+    \item Passage en Cython des éléments les plus sollicités
+  \end{itemize}
+\end{frame}

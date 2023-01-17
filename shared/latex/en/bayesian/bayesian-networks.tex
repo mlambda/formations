@@ -1,0 +1,46 @@
+\begin{frame}{Modéles graphiques}
+  Utilisation de graphes orientés pour représenter les dépendances entre les variables :
+  \begin{itemize}
+  \item Noeuds $\Leftrightarrow$ Variables
+  \item Arcs $\Leftrightarrow$ Probabilités conditionnelles
+  \end{itemize}
+  \V{["tikz/graph/oriented", "th", 0.5] | image}
+\end{frame}
+
+\begin{frame}{Exemple de distributions}
+  Graphe orienté acyclique
+  \V{["tikz/bayesian/net", "th", 0.6] | image}
+\end{frame}
+
+\begin{frame}{Structure}
+  Si possible, la structure est donnée par un expert.
+
+  Dans le cas contraire, la recherche de structure est un problème NP-complet. Pour une centaine de variables dans le graphe, cela reste "calculable". Au delà, il faut utiliser des méthodes approchées
+  \begin{itemize}
+  \item Optimisation d'un score (ex : probabilité à priori des données d'apprentissage) à l'aide d'une stratégie de recherche
+  \item Markov Chain Monte-Carlo
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paramètres}
+  L'apprentissage des paramètres du modèle se fait à l'aide d'algorithmes de type Espérance-Maximisation.
+\end{frame}
+
+\begin{frame}{Utilisations}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      \begin{itemize}
+      \item Diagnostique médical
+      \item Diagnostique machine
+      \item Analyse de risque
+      \item Prédiction supervisée
+      \item Détection d'anomalie
+      \item ...
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \V{["tikz/graph/oriented", "tw", 0.6] | image}
+    \end{column}
+  \end{columns}
+\end{frame}

@@ -1,0 +1,37 @@
+\begin{frame}{Deep Q Network}
+  \begin{itemize}
+  \item 49 jeux Atari
+  \item 210x160 pixels
+  \item 8 à 16 actions
+  \end{itemize}
+  \V{["img/atari", "tw", 0.6] | image}
+\end{frame}
+
+\begin{frame}{DQN --- Détails techniques}
+  \begin{itemize}
+  \item input 84x84x4
+  \item Récompense [-1,0,+1] suivant les variations de score
+  \item Même préprocessing pour tous les jeux. (50M frames $\approx$ 38 jours de jeux)
+  \item 29/46 jeux : DQN $\geq$ Humain
+    \begin{itemize}
+    \item dont 22 où l'IA est strictement supérieure
+    \item les humains ont 2H d'entrainement par jeu
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{DQN --- Application au jeu Pong}
+  \bluelink{https://www.youtube.com/watch?v=lcVg9hVya-c}{Démo DQN PONG}
+\end{frame}
+
+\begin{frame}{Successeurs de DQN}
+  \begin{description}[<+->]
+    \item[R2D2] Utilise des réseaux récurrents
+    \item[Never Give Up] Utilise des réseaux à mémoire et des mécanismes d'exploration
+    \item[Agent57] Partage intelligent des mécanismes d'exploration entre les jeux
+  \end{description}
+
+  \onslide<+->{Agent57 bat les humains sur les 57 jeux}
+
+  \onslide<+->{\bluelink{https://youtu.be/M9Yn1kYZb6E}{Y compris sur des jeux d'exploration}}
+\end{frame}

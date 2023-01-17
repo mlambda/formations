@@ -1,0 +1,32 @@
+\begin{frame}{Utilité}
+  Souvent besoin de minimiser une fonction en machine learning.
+\end{frame}
+
+\begin{frame}{Idée clef}
+
+  Décider d'un $x$ de départ puis suivre la pente jusqu'au minimum.
+
+  \onslide<2->{Pente = dérivée}
+
+  \onslide<3->{→ Modifier itérativement $x$ par un pas vers l'opposé
+    de la dérivée.}
+\end{frame}
+
+\begin{frame}{Pente positive}
+
+  \V{["plt/slope-positive", "tw", 0.5] | image}
+
+  Opposé de la pente = $-2$. Avec un pas de $0,1$, on passe de $1$ à $0,8$.
+\end{frame}
+
+\begin{frame}{Pente négative}
+
+  \V{["plt/slope-negative", "tw", 0.5] | image}
+
+  Opposé de la pente = $2$. Avec un pas de $0,1$, on passe de $-1$ à $-0,8$.
+\end{frame}
+
+\begin{frame}{Exemple en 2 dimensions}
+  Dérivée → gradient
+  \V{["plt/gradient-descent", "th", 0.65] | image}
+\end{frame}

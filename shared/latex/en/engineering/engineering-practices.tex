@@ -1,0 +1,172 @@
+\begin{frame}{Pipeline d'un projet de Machine Learning}
+  \V{["tikz/ml/ml-ingenierie", "th", 0.75] | image}
+\end{frame}
+
+\begin{frame}{Complexification des solutions : retours dégressifs}
+  \V{["plt/ml-effort-vs-value", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Caractéristiques et buts différents}
+  Projet orientés académiques Vs orientés industriels
+  \begin{itemize}
+  \item $\neq$ Développement logiciel
+  \item $\neq$ Infrastructure
+  \item $\neq$ Performances
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Différentes caractéristiques --- Développement logiciel}
+  Orienté académique
+
+  \begin{tabularx}{\textwidth}{rX}
+    \textbf{Type de code} & Pile de scripts \\
+    \onslide<2->{\textbf{Documentation} & Strict nécessaire à la collaboration immédiate \\}
+    \onslide<3->{\textbf{Maintenabilité} & Fonctionne le temps de l'expérience \\}
+    \onslide<4->{\textbf{Licence} & « Fair use » \\}
+  \end{tabularx}
+
+  \vfill
+  Orienté industriel
+
+  \begin{tabularx}{\textwidth}{rX}
+    \textbf{Type de code} & Code hiérarchisé et déployable en production \\
+    \onslide<2->{\textbf{Documentation} & Documentation fournie, testée \\}
+    \onslide<3->{\textbf{Maintenabilité} & Code maintenable et robuste, CI/CD \\}
+    \onslide<4->{\textbf{Licence} & Galaxies de licences à respecter \\}
+  \end{tabularx}
+\end{frame}
+
+\begin{frame}{Différentes caractéristiques --- Infrastructure}
+  Orienté académique
+
+  \begin{tabularx}{\textwidth}{rX}
+    \textbf{Données} & Benchmarks, souvent quelques fichiers \\
+    \onslide<2->{\textbf{Hardware} & Limité, ou contraignant (clusters publics) \\}
+  \end{tabularx}
+
+  \vfill
+  Orienté industriel
+
+  \begin{tabularx}{\textwidth}{rX}
+    \textbf{Données} & \og{}Data lake\fg{} \\
+    \onslide<2->{\textbf{Hardware} & Cloud computing \& clusters locaux \\}
+  \end{tabularx}
+\end{frame}
+
+\begin{frame}{Différentes caractéristiques --- Performance}
+  Orienté académique
+
+  Citations, rapidité, ouverture de collaborations, …
+
+  \vfill
+  Orienté industriel
+
+  Plus value, avantage compétitif, gain d'image, …
+\end{frame}
+
+\begin{frame}{Qualité des données}
+  Un problème d'ingénérie avant d'être un problème de machine learning~:
+
+  \begin{center}
+    \textbf{Données et prétraitements de qualité > Algorithme de qualité}
+  \end{center}
+
+  C'est une conséquence du fameux~:
+
+  \begin{center}
+    \textbf{Trash in $\rightarrow$ trash out}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Développer un projet en Machine Learning}
+  Une approche en 4 étapes :
+  \begin{enumerate}
+  \item Créer un pipeline robuste de bout en bout (sans ML)
+  \item Intégrer du ML simple
+  \item Étendre et améliorer les datasets
+  \item Améliorer les modèles
+  \end{enumerate}
+
+  \vfill
+
+  \begin{alertblock}{Attention}
+    Toujours conserver une pipeline robuste \& s'arrêter dès que les objectifs sont atteints (\textbf{potentiellement à l'étape 1.})
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Étape 1~: Créer un pipeline robuste de bout en bout (sans ML)}
+  \begin{itemize}[<+->]
+  \item Acquérir et nettoyer les données
+  \item Créer un modèle baseline avec une heuristique simple
+  \item Mettre en place l'évaluation (métrique, statistiques, visualisations, logs)
+  \item Si nécessaire (industrie), mettre en place le déploiement
+  \end{itemize}
+
+  \onslide<+->{Buts~:}
+
+  \begin{itemize}[<+->]
+    \item Régler tous les détails importants d'ingénierie \textbf{avant} d'introduire du ML
+    \item S'assurer d'une base solide pour comparer les modèles
+  \end{itemize}
+
+  \onslide<+->{\begin{alertblock}{Important}
+    S'arrêter là si l'heuristique simple suffit à atteindre les objectifs.
+  \end{alertblock}}
+\end{frame}
+
+\begin{frame}{Étape 2~: Intégrer du ML simple}
+  \begin{itemize}[<+->]
+    \item Implémenter le modèle avec le meilleur retour coût/bénéfice attendu
+    \item Si nécessaire, mettre en place une recherche d'hyper-paramètres
+  \end{itemize}
+
+  \begin{alertblock}{Important}
+    Comparer à la baseline. Comme auparavant, s'arrêter là si les objectifs sont atteints.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Étape 3~: Étendre et améliorer les datasets}
+  Étendre et améliorer les datasets~:
+
+  \begin{itemize}[<+->]
+    \item Ajouter de nouvelles sources de données
+    \item Étendre les sources existantes
+    \item Travailler le pré-processing et la normalisation des différentes sources
+    \item Versionner les données autant que le code
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Étape 3~: Ajouter des caractéristiques sensées}
+  \begin{itemize}[<+->]
+    \item Beaucoup de caractéristiques simples > peu de caractéristiques complexes
+    \item Des caractéristiques répandues plutôt que rares
+    \item Regarder les erreurs pour imaginer les caractéristiques qui aideraient
+    \item Communiquer avec les experts métiers
+    \item Versionner les caractéristiques autant que le code
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Étape 4~: Améliorer les modèles}
+  Si les objectifs ne sont toujours pas atteints, retour à l'étape 2 avec un modèle plus complexe~:
+
+  \begin{itemize}[<+->]
+    \item Implémenter le modèle avec le meilleur retour coût/bénéfice attendu
+    \item Si nécessaire, mettre en place une recherche d'hyper-paramètres
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Puis itérer}
+  Améliorer autant de fois que nécessaire les données et les modèles.
+\end{frame}
+
+\begin{frame}{Évolution dans le temps}
+  \begin{itemize}[<+->]
+    \item Apprendre un modèle tous les $n$ jours
+    \item Évaluer la dégradation des performances en fonction de l'âge du modèle
+    \item Vérifier les performances en test avant de déployer en production
+    \item Modèle appris sur des données jusqu'au jour $n$, tester sur les données après le jour $n$
+    \item Mesurer la différence entre performance en apprentissage et test
+    \item Plateau de performance $\Rightarrow$ trouver de nouvelles caractéristiques/augmenter la puissance du modèle
+    \item En fonction du modèle, supprimer des caractéristiques pas déterminantes
+  \end{itemize}
+\end{frame}

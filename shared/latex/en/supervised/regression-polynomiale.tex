@@ -1,0 +1,37 @@
+
+\begin{frame}{Régression polynômiale}
+  Limites de la regression linéaire
+  \V{["plt/residuals-1", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Régression polynômiale}
+  Limites de la regression linéaire
+  \V{["plt/residuals-2", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Exemple de régressions polynômiales}
+  \begin{columns}
+    \begin{column}{0.25\tw}
+      \[
+        \hat{y}_i = \sum_{k = 0}^n \theta_k x_i^k
+      \]
+    \end{column}
+    \begin{column}{0.75\tw}
+      \V{["plt/polynomial-regression", "tw", 0.8] | image}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Gradient et mise à jour}
+  \begin{align*}
+    \hat{y}_i & = \sum_{k = 0}^n \theta_k x_i^k \\
+    E & = \frac{1}{2n} \sum_{i=1}^n (\hat{y_i} - y_i)^2 \\
+    \frac{\partial{E}}{\partial{\theta_k}} & = \frac{1}{n} \sum_{i=1}^n (\hat{y_i} - y_i) x_i^k
+  \end{align*}
+
+  Mise à jour, avec $1 > \gamma > 0$ (pas d'apprentissage)~:
+
+  \[
+    \theta_k \leftarrow \theta_k - \gamma\frac{\partial{E}}{\partial{\theta_k}}
+  \]
+\end{frame}

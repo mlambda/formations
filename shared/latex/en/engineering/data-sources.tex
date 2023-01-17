@@ -1,0 +1,125 @@
+\notmog{
+  \begin{frame}{Sources de données}
+    \V{["img/trends-bigdata-ml", "tw", 1.0] | image}
+  \end{frame}
+}
+
+\begin{frame}{Formats de données}
+  \begin{itemize}
+    \item Fichiers (textes, CSV, XML, JSON, HDF5, Parquet, …)
+    \item BDDs relationnelles : SQL
+    \item BDDs ``pas que'' relationnelles : NoSQL (représentation non-tabulaire des données)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Types de données}
+  \begin{itemize}
+    \item Logs d'activité (tabulaire)
+    \item IOT (capteurs)
+    \item Réseaux sociaux
+    \item Open data (data-gouv.fr, geonames.org, ...)
+    \item Web crawling 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Lac de données (\textit{data lake})}
+
+  Caractéristiques
+
+  \begin{itemize}
+    \item Espace de stockage global pour les informations de l'entreprise
+    \item Pas de schéma de données
+    \item Pas de format imposé
+    \item Pas de transactions
+    \item Potentiellement volatile
+  \end{itemize}
+
+  Utilité
+
+  \begin{itemize}
+    \item[\textcolor{green}{+}] Facilité \& faible coût de stockage, scalable
+    \item[\textcolor{red}{-}] Pas de gouvernance, de vérification d'intégrité
+    \item[\textcolor{red}{-}] Pas de transactionnalité
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Entrepôt de données (\textit{data warehouse})}
+  Caractéristiques
+
+  \begin{itemize}
+    \item Espace de stockage global pour les informations de l'entreprise
+    \item Schéma de données
+    \item Base de données relationnelle
+    \item Transactions
+    \item Non volatile
+  \end{itemize}
+
+  Utilité
+
+  \begin{itemize}
+    \item[\textcolor{green}{+}] Gouvernance \& vérifications d'intégrité
+    \item[\textcolor{red}{-}] Peu scalable
+    \item[\textcolor{red}{-}] Travail important de normalisation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\textit{Lakehouse}}
+  Combinaison de data lake \& data warehouse~: utilisation des normes de la warehouse sur du stockage big data
+  \begin{itemize}
+    \item Espace de stockage global pour les informations de l'entreprise
+    \item Schéma de données
+    \item Format imposé (par exemple Parquet)
+    \item Transactions
+    \item Non volatile
+  \end{itemize}
+
+  Utilité
+
+  \begin{itemize}
+    \item[\textcolor{green}{+}] Gouvernance \& vérifications d'intégrité
+    \item[\textcolor{green}{+}] Scalable
+    \item[\textcolor{red}{-}] Travail important de normalisation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Extraction Transformation Chargement (\textit{ETL})}
+  \V{["img/etl-schema", "th", 0.45] | image}
+  \begin{minipage}[l]{0.49\linewidth}
+    Orientés \textbf{Synchronisation}
+    \begin{itemize}
+      \item Blendo
+      \item Fivetran
+      \item Segment
+      \item Stitch
+    \end{itemize}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+    Orientés \textbf{Transformation}
+    \begin{itemize}
+      \item DataVirtuality
+      \item Alooma
+      \item Etleap
+      \item Xplenty
+    \end{itemize}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}{Sources de données}
+  Bases de données sur les clients disponibles~:
+  \begin{itemize}
+    \item Instituts de sondage
+    \item Réseaux sociaux
+    \item Profils clients
+    \item ...
+  \end{itemize}
+\end{frame}
+    
+\begin{frame}{Sources de données}
+  Des places de marché en ligne de données :
+  \begin{itemize}
+    \item Microsoft Azure Marketplace
+    \item Datamarket
+    \item Data Publica
+    \item ...
+  \end{itemize}
+\end{frame}

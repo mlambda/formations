@@ -1,0 +1,60 @@
+default_titles:
+  comprehensions: Compréhensions
+  context-managers: Gestionnaires de contexte
+  closures: Fermetures
+  decorators: Décorateurs
+  design-patterns: Patrons de conception
+  generators: Générateurs
+  interfaces: Interfaces
+  metaclasses: Méta-classes
+  tp: Travaux pratiques
+flavors:
+  pyp:
+    - generators
+    - /questions
+    - tp-generators
+    - decorators
+    - /questions
+    - tp-decorators
+    - metaclasses
+    - /questions
+    - tp-metaclasses
+    - context-managers
+    - /questions
+    - tp-context-managers
+    - closures
+    - /questions
+    - tp-closures
+    - comprehensions
+    - /questions
+    - tp-comprehensions
+    - interfaces
+    - /questions
+    - tp-interfaces
+    - design-patterns
+    - /questions
+    - tp-design-patterns
+  pav:
+    - generators
+    - /questions
+    - tp-generators
+    - decorators
+    - /questions
+    - tp-decorators
+    - metaclasses
+    - /questions
+    - tp-metaclasses
+    - context-managers
+    - /questions
+    - tp-context-managers
+  aap:
+    - decorators
+    - /questions
+    - closures
+    - /questions
+    - generators
+    - /questions
+    - comprehensions
+    - /questions
+    - tp
+title: Éléments avancés de Python

@@ -1,0 +1,50 @@
+\begin{frame}
+  \frametitle{TF-IDF}
+  Un document = un vecteur de la taille d'un dictionnaire. (donc à dimension fixe) \\
+  \begin{center}
+    $\boxed{w_{ij} = tf_{ij}\log{\frac{N}{df_i}}}$
+  \end{center}
+  où :
+
+  \begin{description}[<+->]
+    \item[$tf_{ij}$] Nombre d'occurrences du mot $i$ dans le document $j$
+    \item[$df_i$] Nombre de documents contenant le mot $i$
+    \item[$N$] Nombre total de documents
+  \end{description}
+  \onslide<+->{$\Rightarrow$ Produit scalaire, SVM, arbres, réseaux de neurones, …}
+\end{frame}
+
+\begin{frame}{TF-IDF --- Intérêt de $df_i$}
+  Loi de Zipf, justifiant l'utilisation du terme $df_i$
+  \V{["img/zipf-law", "tw", 0.9] | image}
+\end{frame}
+
+\begin{frame}{TF-IDF}
+  Utilisation de $n$-grammes de mots ou de caractères.
+  \begin{center}
+  Exemple~: «~Le chien mange de la viande~»
+  \end{center}
+
+  Bigrammes de mots~:
+
+  \begin{itemize}
+  \item le-chien, chien-mange, mange-de, de-la, la-viande
+  \end{itemize}
+
+  Trigrammes de caractères~:
+
+  \begin{itemize}
+  \item le\_, e\_c, \_ch, chi, hie, ien, en\_, n\_m, \_ma, man, …
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Analyse sémantique latente}
+  Famille algorithmique des modèles thématiques (topic models)~:
+
+  \begin{itemize}[<+(1)->]
+    \item $\approx$ PCA sur la matrice des documents $\rightarrow$ relations entre les mots
+    \item Composantes principales $\approx$ topics
+  \end{itemize}
+
+  \onslide<+(1)->{Par exemple~: un axe correspond au champ lexical du sport, un autre à celui de l'économie, etc.}
+\end{frame}

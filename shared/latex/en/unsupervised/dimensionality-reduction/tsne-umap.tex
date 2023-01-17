@@ -1,0 +1,36 @@
+\begin{frame}{Projections non linéaires}
+  Plus intéressant pour découvrir des patterns en haute dimension~:
+
+  \begin{itemize}[<+->]
+    \item t-SNE
+    \item UMAP
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Méthode}
+  Algorithmes de disposition de graphe.
+
+  Minimisation de la différence topologique entre deux graphes~:
+
+  \begin{itemize}[<+->]
+    \item Graphe construit en haute dimension
+    \item Graphe construit dans la dimension de projection
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paramètres}
+  Dans les deux algorithmes, on peut contrôler le trade-off structure local / structure globale~:
+
+  \begin{itemize}[<+->]
+    \item La perplexité de t-SNE $\approx$ nombre de voisins considérés comme connectés
+    \item UMAP utilise explicitement un argument de nombre de voisins connectés
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{t-SNE --- Bonnes pratiques \& Analyse}
+  \bluelink{https://distill.pub/2016/misread-tsne/}{Article t-SNE}
+\end{frame}
+
+\begin{frame}{UMAP --- Bonnes pratiques \& Analyse}
+  \bluelink{https://pair-code.github.io/understanding-umap/}{Article UMAP}
+\end{frame}

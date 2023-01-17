@@ -1,0 +1,32 @@
+\begin{frame}{Données séparables linéairement}
+  \V{["img/separable-problem-linear-nzmog", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{Mauvaise solution — Données d'entraînement}
+  \V{["img/separable-problem-linear-solution-nzmog", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{Mauvaise solution — Nouvelles données}
+  \V{["img/separable-problem-linear-solution-bad-nzmog", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{Solution d'un séparateur à vaste marge}
+  \V{["img/svm-schema-nzmog", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{Données non séparables linéairement}
+  \V{["plt/separable-problem-nonlinear-solution", "th", 0.75] | image}
+\end{frame}
+
+\begin{frame}{Transformation par un noyau (ici polynômial)}
+  \V{["plt/separable-problem-nonlinear-kernelsvm", "th", 0.75] | image}
+\end{frame}
+
+\begin{frame}{Stratégies pour la classification multi-classes}
+  Pour un problème à $k$ classes~:
+
+  \begin{description}
+    \item[Un contre le reste] $k$ modèles. Agrégation par meilleur score.
+    \item[Un contre un] $\frac{k(k - 1)}{2}$ modèles. Vote majoritaire.
+  \end{description}
+\end{frame}

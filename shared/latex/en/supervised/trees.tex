@@ -1,0 +1,69 @@
+\begin{frame}{Introduction}
+  Modèle de classification ou regréssion qui classe un exemple dans une de ses feuilles pour rendre sa prédiction~:
+  \V{["tikz/tree/decision", "th", 0.6] | image}
+\end{frame}
+
+\begin{frame}{Avantages}
+  Les arbres de décision
+
+  \begin{itemize}
+    \item gèrent les inputs numériques comme catégoriels
+    \item sont interprétables
+    \item sont très rapides durant l'inférence
+    \item ne nécessitent pas de normalisation des données
+    \item leur apprentissage est hautement parallèlisable
+  \end{itemize}
+
+  $\Rightarrow$ Couteau-suisse du machine learning tabulaire.
+\end{frame}
+
+\begin{frame}{Désavantages}
+  Les arbres de décision
+
+  \begin{itemize}
+    \item peuvent overfit les données, mais l'ensembling résoud ce problème
+    \item sont sensibles aux déséquilibres de classe
+  \end{itemize}
+  $\Rightarrow$ Si les classes ne sont pas équilibrées, peut-être les ré-échantillonner.
+\end{frame}
+
+\begin{frame}{Arbres de classification}
+  \V{["tikz/tree/decision", "th", 0.7] | image}
+\end{frame}
+
+\begin{frame}{Arbres de régression}
+  \V{["tikz/tree/regression", "th", 0.7] | image}
+\end{frame}
+
+\begin{frame}{Apprendre un arbre de décision}
+  Approche descendante, procédure récursive~:
+
+  \begin{itemize}
+    \item Créer un nœud de départ qui contient toutes les instances de la base d'entraînement
+    \item Tant qu'il reste des nœuds non-traités~:
+      \begin{itemize}
+        \item Choisir un nœud non traité
+        \item Si le nœud remplit des conditions de feuille finale, ne rien faire
+        \item Sinon, créer deux branches à partir du nœud non traité pour répartir les instances dans deux nouveaux nœuds
+      \end{itemize}
+  \end{itemize}
+
+  Conditions de feuilles finales~: contient $n_{min}$ éléments, est déjà à profondeur $p_{max}$, splitterait sans décroître assez l'entropie…
+\end{frame}
+
+\begin{frame}{Décision rendue}
+  En fonction de la tâche, une fois arrivé dans la feuille de fin~:
+
+  \begin{description}
+  \item[Classification] Classe majoritaire
+  \item[Régression] Moyenne des valeurs cibles
+  \end{description}
+\end{frame}
+
+\begin{frame}{Splits possibles}
+  Splits possibles d'une caractéristique donnée~:
+  \begin{description}
+    \item[Catégorielle] Chaque catégorie contre le reste
+    \item[Ordinale/Continue] Milieu de chaque paire de valeurs consécutives ou quantiles
+  \end{description}
+\end{frame}

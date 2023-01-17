@@ -1,0 +1,40 @@
+\begin{frame}{Gated Recurrent Unit --- Principe}
+  Similaire au LSTM, mais~:
+  \begin{description}[<+->]
+    \item[Update gate] $\approx$ Input et forget gates du LSTM combinées
+    \item[Reset gate] $\approx$ Influence de la mémoire pendant l'update
+  \end{description}
+  \onslide<+->{$\rightarrow$ Moins de paramètres que LSTM, peut être aussi efficace sur certains datasets}
+\end{frame}
+
+\begin{frame}{Gated Recurrent Unit --- Détails théoriques}
+  \V{["tikz/neural-networks/rnn/gru", "th", 0.5] | image}
+  \begin{description}[<+->]
+    \item[Update gate] $z_t = \sigma (W_z \times x_t + U_z \times h_{t - 1} + b_z)$
+    \item[Reset gate] $r_t = \sigma (W_r \times x_t + U_r \times h_{t - 1} + b_r)$
+    \item[Sortie] $h_t = (1 - z_t) \times h_{t - 1} + z_t \times \tanh(W_h \times x_t + r_t \times U_h \times (h_{t - 1}) + b_h)$
+  \end{description}
+\end{frame}
+
+\begin{frame}{Réseaux récurrents bi-directionnels}
+  \V{["tikz/neural-networks/rnn/bidirectional", "tw", 0.8] | image}
+  \begin{itemize}[<+->]
+    \item Permet d'apprendre sur des séquences plus longues
+    \item Permet de modéliser des dépendances droite-gauche
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{D'autres variantes}
+  \begin{itemize}[<+->]
+    \item Récurrence dans la profondeur
+    \item Skip-connexions (qui sautent des couches)
+    \item Résiduels (qui apprennent la différence à l'input)
+    \item …
+  \end{itemize}
+\end{frame}
+
+\notmog{
+  \begin{frame}{D'autres variantes}
+    \V{["img/spaghetti", "tw", 1] | image}
+  \end{frame}
+}

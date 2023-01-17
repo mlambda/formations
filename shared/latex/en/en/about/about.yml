@@ -1,0 +1,8 @@
+flavors:
+  orsys-3j:
+    - formateur
+    - description
+    - ressources-orsys
+    - horaires-3j-orsys
+    - tour2table
+title: About the seminar

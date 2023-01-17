@@ -1,0 +1,59 @@
+\begin{frame}{Introduction}
+   Buts~:
+   \begin{itemize}[<+->]
+     \item Permettre l'implémentation efficace de tous les algorithmes
+     \item Rendre le code plus lisible en simplifiant certaines opérations
+   \end{itemize}
+\end{frame}
+
+\begin{frame}{Paquet \texttt{collections}}
+  La bibliothèque standard contient de très bonnes collections avancées, en particulier son paquet \texttt{collections}~:
+
+  \begin{description}[<+->]
+    \item[\texttt{ChainMap}] Permet de combiner plusieurs dictionnaires en un seul
+    \item[\texttt{Counter}] Compte efficacement les objets
+    \item[\texttt{defaultdict}] Simplifie l'utilisation d'un dictionnaire avec une valeur par défaut
+    \item[\texttt{deque}] Queue à deux bouts
+    \item[\texttt{namedtuple}] Tuple dont les attributs sont nommés
+    \item[\texttt{OrderedDict}] Dictionnaire qui conserve l'ordre
+  \end{description}
+\end{frame}
+
+\begin{frame}{\texttt{ChainMap}}
+  \mintedpy{python/collections/chainmap}
+\end{frame}
+
+\begin{frame}{\texttt{Counter}}
+  \mintedpy{python/collections/counter}
+\end{frame}
+
+\begin{frame}{\texttt{defaultdict}}
+  \mintedcustom{python/collections/defaultdict}{py}{console}
+\end{frame}
+
+\begin{frame}{\texttt{deque}}
+  \mintedpy{python/collections/deque}
+\end{frame}
+
+\begin{frame}{\texttt{namedtuple}}
+  Bien qu'utile parfois, je recommande plutôt la librairie \bluelink{https://www.attrs.org/}{\texttt{attrs}}
+
+  \mintedpycode{python/collections/namedtuple}
+\end{frame}
+
+\begin{frame}{\texttt{OrderedDict}}
+  \mintedpy{python/collections/ordereddict}
+\end{frame}
+
+\begin{frame}{Au delà de \texttt{collections}}
+  Dans la bibliothèque standard~:
+  \begin{itemize}[<+->]
+    \item \texttt{heapq} et le tout nouveau \texttt{graphlib}
+  \end{itemize}
+  Hors de la bibliothèque standard~:
+  \begin{itemize}[<+->]
+    \item pandas
+    \item NumPy
+    \item …
+  \end{itemize}
+\end{frame}

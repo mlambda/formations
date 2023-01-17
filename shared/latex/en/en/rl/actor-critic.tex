@@ -1,0 +1,84 @@
+\begin{frame}{Introduction}
+  Actor-critic methods are policy gradient methods.
+
+  They optimize a policy by computing the gradient of the reward \textit{w.r.t.} the policy.
+\end{frame}
+
+\begin{frame}{Objective}
+  As always in reinforcement learning, we want to maximize the expected cumulative reward:
+
+  \[
+    J(\theta) = \mathbb{E}\left[\sum_{t=0}^{T-1}r_{t + 1}\right]
+  \]
+\end{frame}
+
+\begin{frame}{Learning --- Method}
+  Compute the gradient of $J(\theta)$ \emph{w.r.t.} $\theta$. This way we can maximize $J(\theta)$ by gradient ascent:
+
+  \[
+    \theta \leftarrow \theta + \nabla_\theta J(\theta)
+  \]
+
+  $\Rightarrow$ Policy function $\pi_\theta$ that maximizes the expected cumulative reward (or in a local maximum).
+\end{frame}
+
+\begin{frame}{Vanilla policy gradient}
+
+  \[
+    \nabla_\theta J(\theta) = \mathbb{E}_{\pi_\theta} \left[\nabla_\theta \log \pi_\theta(s, a)G_t\right]
+  \]
+
+  Where $G_t$ is the expected cumulative reward.
+
+  See \bluelink{https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html}{this blog post} by Lilian Weng for derivations.
+\end{frame}
+
+\begin{frame}{Actor-critic methods}
+  Consist of two sub-models:
+
+  \begin{itemize}
+    \item A \red{critic} that estimates the quality of the decision made by the actor
+    \item An \green{actor} that decides of the actions to pick
+  \end{itemize}
+
+  \[
+    \nabla_{\green{\theta}} J(\green{\theta}) = \mathbb{E}_{\green{\pi_\theta}} \left[\nabla_\theta \log \green{\pi_\theta(s, a)}\red{G_t}\right]
+  \]
+
+  For vanilla policy gradient, the critic would be $\red{G_t}$, a.k.a. the state value $\red{V(s_t)}$.
+\end{frame}
+
+\begin{frame}{Critic options}
+  Using $G_t$ (1) has high variance and makes the learning unstable.
+
+  Options (2)--(4) do not bias the algorithm but have smaller variance:
+
+  \begin{align*}
+    \nabla_{\green{\theta}} J(\green{\theta}) & = \mathbb{E}_{\green{\pi_\theta}} \left[\nabla_\theta \ln \green{\pi_\theta(a \mid s)}\red{G_t}\right] & \text{Policy gradient (1)} \\
+    & = \mathbb{E}_{\green{\pi_\theta}} \left[\nabla_\theta \ln \green{\pi_\theta(a \mid s)}\red{Q^w(s, a)}\right] & \text{Q actor-critic (2)} \\
+    & = \mathbb{E}_{\green{\pi_\theta}} \left[\nabla_\theta \ln \green{\pi_\theta(a \mid s)}\red{A^w(s, a)}\right] & \text{Advantage actor-critic (3)} \\
+    & = \mathbb{E}_{\green{\pi_\theta}} \left[\nabla_\theta \ln \green{\pi_\theta(a \mid s)}\red{\delta}\right] & \text{TD actor-critic (4)} \\
+  \end{align*}
+\end{frame}
+
+\begin{frame}{Actor-critic detailed algorithm}
+  Here we use the action-state value critic ($\red{Q_w}$):
+
+  \begin{enumerate}[<+->]
+    \item Initialize $s$, $\green{\theta}$, $\red{w}$ at random; sample $a \sim \green{\pi_\theta(a \mid s)}$
+    \item For $t=1\dots T$:
+      \begin{enumerate}
+        \item Sample reward $r_t \sim R(s, a)$ and next state $s' \sim P(s' \mid s, a)$
+        \item Then sample the next action $a' \sim \green{\pi_\theta(a' \mid s')}$
+        \item Update the policy parameters: $\green{\theta} \leftarrow \green{\theta} + \alpha_{\green{\theta}} \red{Q_w(s, a)}\nabla_{\green{\theta}} \ln \green{\pi_\theta(a \mid s)}$
+        \item Compute the temporal difference error for action-value at time $t$:
+
+          $\delta_t = r_t + \gamma \red{Q_w(s', a')} - \red{Q_w(s, a)}$
+
+          and use it to update the parameters of the action-value function:
+
+          $\red{w} \leftarrow \red{w} + \alpha_{\red{w}} \delta_t\nabla_{\red{w}}\red{Q_w(s, a)}$
+        \item Update $a \leftarrow a'$ and $s \leftarrow s'$
+      \end{enumerate}
+  \end{enumerate}
+\end{frame}

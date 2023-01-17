@@ -1,0 +1,140 @@
+\begin{frame}{Introduction}
+  Buts~:
+  \begin{itemize}
+    \item Respect des normes dans une équipe
+    \item Minimiser les pertes de temps en revue de code
+    \item Produire un logiciel plus maintenable
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Possibilités}
+  Les points majeurs que l'on vérifie habituellement~:
+
+  \begin{itemize}
+    \item Types
+    \item Éléments de code non utilisés
+    \item Documentation non présente ou incomplète
+    \item Motifs qui sont souvent des bugs
+    \item Style du code
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Outils}
+  L'organisation PyCQA maintient plusieurs outils de vérification, parmi eux~:
+
+  \begin{itemize}
+    \item \texttt{flake8}
+    \item \texttt{pylint}
+    \item \texttt{RedBaron}
+  \end{itemize}
+
+  On utilise aussi beaucoup \texttt{mypy} pour vérifier les types \& \texttt{black} pour le formatage.
+\end{frame}
+
+\begin{frame}{Typage}
+  Sûrement le point le plus important à vérifier~:
+
+  \begin{itemize}
+    \item Permet de modifier aggressivement le logiciel
+    \item Résout une grande partie des bugs avant l'intégration à la base de code
+    \item Documente le code
+    \item Permet des générations automatiques (CLI avec Typer par exemple)
+  \end{itemize}
+
+  Le passage à une base de code typée peut être progressif.
+\end{frame}
+
+\begin{frame}{Notations de typage}
+  On type une expression en précédant l'annotation de type de \texttt{:}.
+
+  Pour les retours de fonctions, on utilise \texttt{->}.
+
+  \mintedpycode{python/linting/mypy}
+
+  Des types additionnels sont présents dans le module \texttt{typing}.
+\end{frame}
+
+\begin{frame}{Vérifications générales}
+  L'outil incontournable est \texttt{flake8}. En fonction des extensions installées, il vérifiera~:
+
+  \begin{itemize}
+    \item La syntaxe
+    \item Les éléments non utilisés
+    \item Les imports
+    \item La complexité du code
+    \item …
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Extensions de \texttt{flake8}}
+  Quelques extensions très pratiques~:
+
+  \begin{itemize}
+    \item \texttt{flake8-bugbear}
+    \item \texttt{flake8-docstrings}
+    \item \texttt{flake8-import-order}
+    \item \texttt{flake8-black}
+    \item \texttt{flakehell}
+  \end{itemize}
+
+  Retrouvez une liste plus complète dans ce \bluelink{https://github.com/DmytroLitvinov/awesome-flake8-extensions}{dépôt \texttt{git}}.
+\end{frame}
+
+\begin{frame}{Configuration de \texttt{flake8}}
+  \texttt{flake8} se configure dans le fichier \texttt{.flake8} à la racine de votre projet.
+
+  \mintedcustomcode{python/linting/flake8}{ini}
+\end{frame}
+
+\begin{frame}{Vérification du style}
+  Pour le style, je vous recommande fortement l'utilisation de \texttt{black}~:
+
+  \begin{itemize}
+    \item Formatage automatique (transformation du code source en arbre syntaxique puis de nouveau en code source $\Rightarrow$ formatage original inutilisé)
+    \item Possibilité de vérifier l'application sur la base de code
+    \item Style homogène
+    \item Plus de problèmes de style en revue de code !
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Vérification de la documentation}
+  Utilisation de \texttt{pylint} avec seulement ces options~:
+
+  \begin{itemize}
+    \item \texttt{missing-param-doc}
+    \item \texttt{differing-param-doc}
+    \item \texttt{differing-type-doc}
+    \item \texttt{missing-return-doc}
+  \end{itemize}
+
+  Ainsi que \texttt{flake8-docstrings} pour le style des docstrings.
+\end{frame}
+
+\begin{frame}{Préconisations d'utilisation}
+  Recommandé~: regrouper les vérifications dans une seule commande (avec un Makefile par exemple).
+
+  \begin{itemize}
+    \item Faire tourner ces vérifications avant chaque PR (hook git possible)
+    \item Les intégrer à la CI
+    \item \alert{Une PR ne doit pas être revue tant que ces soucis ne sont pas réglés}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paramétrage}
+  \begin{itemize}
+    \item Définir en équipe les points à vérifier
+    \item Analyser régulièrement le coût/bénéfice de chaque élément vérifié
+    \item Rajouter ou enlever des vérifications en fonction de ces analyses
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Reproductibilité}
+  Il faut gérer les outils de vérification comme des dépendances~:
+
+  \begin{itemize}
+    \item Chaque collègue doit avoir les mêmes résultats étant donné une base de code
+    \item Les outils doivent être faciles à installer, y compris sur la CI
+  \end{itemize}
+
+  Attention toutefois à ne pas installer ces dépendances en prod.
+\end{frame}

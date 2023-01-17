@@ -1,0 +1,41 @@
+\begin{frame}{Problématique}
+    \begin{center}
+      Comment appréhender des données en grande dimension ?
+    \end{center}
+    \[
+    X = \begin{bmatrix}
+      X_{1,1} & X_{1,2} & \dots  & X_{1,D} \\
+      X_{2,1} & X_{2,2} & \dots  & X_{2,D} \\
+      \vdots & \vdots & \ddots & \vdots \\
+      X_{N,1} & X_{N,2} & \dots  & X_{N,D}
+    \end{bmatrix}
+    \]
+\end{frame}
+
+\begin{frame}{La malédiction des grandes dimensions}
+    \begin{center}
+      Nombre d'extrémités dans une espace de dimension : \\
+      $\;$ \\
+      \begin{tabular}{cc}
+        Dimensions & Points d'un hypercube \\
+        \midrule
+        1 & 2 \\
+        2 & 4 \\
+        3 & 8 \\
+        4 & 16 \\
+        5 & 32 \\
+      \end{tabular}
+    \end{center}
+
+  \begin{alertblock}{Besoin en données}
+    Corrélé exponentiellement à la taille des espaces.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Approches}
+    \begin{itemize}
+    \item Séléction de dimensions
+    \item Projections linéaires (ACP, LDA, …)
+    \item Projections non-linéaires (t-SNE, UMAP, kernels, embeddings, …)
+    \end{itemize}
+\end{frame}

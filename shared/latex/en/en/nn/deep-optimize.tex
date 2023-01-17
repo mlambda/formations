@@ -1,0 +1,76 @@
+\begin{frame}{Backpropagation}
+  To compute gradient descent on deep networks, backpropagation is used:
+
+  \begin{itemize}
+    \item Dynamic algorithm
+    \item First computes the gradient of the final layer
+    \item Computes the gradient of a layer based on the gradient of the following layer
+    \item Uses the chain rule to do so
+  \end{itemize}
+
+  $\Rightarrow$ Avoids recomputing subexpressions.
+\end{frame}
+
+\begin{frame}{Vanishing and exploding gradients}
+  \V{["tikz/optimization/vanishing-gradients", "tw", 1.0] | image}
+\end{frame}
+
+\begin{frame}{Vanishing gradient}
+  Use ReLus instead of sigmoids
+  \vfill
+  \V{["tikz/activations/relu", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Exploding gradients}
+  Clip the gradient
+  \V{["plt/gradient-clipping-en", "th", 0.5] | image}
+  For recurrent neural networks $\Rightarrow$ orthogonal matrix initialization
+\end{frame}
+
+\begin{frame}{Optimization algorithm}
+  Better than vanilla stochastic gradient descent
+  \begin{itemize}[<+(1)->]
+    \item Root Mean Square Propagation (RMSProp)
+    \item Adaptative Gradient Algorithm (AdaGrad)
+    \item Adaptative Moment Estimation (Adam)    $\qquad\Leftarrow$ Default choice
+    \item … AdaBound (2019)?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Root Mean Square Propagation (RMSProp)}
+  \begin{itemize}[<+->]
+    \item One learning rate per parameter
+    \item Prevents large frequent updates:
+      \begin{itemize}
+        \item Computes an exponential running average:
+
+        \[v_t(w) \leftarrow \gamma v{t-1}(w) + (1 - \gamma)(\nabla_w L)\]
+
+        Updates each gradient by diving the gradient by this running average
+
+        \[w \leftarrow w - \frac{\eta}{\sqrt{v_t(w)}}\nabla_wL\]
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Adaptative Gradient Algorithm (AdaGrad)}
+  Penalizes frequent updates like RMSProp but computes the factor differently.
+
+  \[
+    w \leftarrow w - \frac{\eta}{\sqrt{\sum_{\tau=1}^t(\nabla_{w,\tau} L)^2}}\nabla_{w} L
+  \]
+\end{frame}
+
+\begin{frame}{Adam}
+  Similar to RMSProp in its algorithm. Keeps two values instead of one in memory for each parameter, the mean $m$ and variance $v$ of its gradient.
+
+  \begin{align*}
+    m_w^{(t+1)} &\leftarrow \beta_1m_w^{(t)} + (1 - \beta_1)\nabla_wL^{t} \\
+    v_w^{(t+1)} &\leftarrow \beta_2v_w^{(t)} + (1 - \beta_2)(\nabla_wL^{t})^2 \\
+    \hat{m_w} &= \frac{m_w^{(t+1)}}{1 - \beta_1^{t+1}} \\
+    \hat{v_w} &= \frac{v_w^{(t+1)}}{1 - \beta_2^{t+1}} \\
+    w^{(t+1)} &\leftarrow w^{(t)} - \eta\frac{\hat{m_w}}{\sqrt{\hat{v_w}} + \epsilon} \\
+  \end{align*}
+
+  $\beta_1$ and $\beta_2$ are forgetting factors, $\epsilon$ is a small value
+\end{frame}

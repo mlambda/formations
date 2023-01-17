@@ -1,0 +1,77 @@
+\begin{frame}{Introduction}
+  Buts~:
+  \begin{itemize}
+    \item Pouvoir publier un logiciel Python sous forme de paquet sur PyPI
+    \item Bien définir ses dépendances et méta-données
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paquet Python}
+  Pour transformer un dossier contenant des sources Python en paquet~:
+
+  \begin{itemize}
+    \item Rajouter des fichier \texttt{\_\_init\_\_.py} dans chaque dossier de source
+    \item Ajouter des méta-données (dépendantes de l'outil de build)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Outils}
+  \begin{itemize}
+    \item \texttt{setup.py}, \& \texttt{setuptools}
+    \item \texttt{Pipenv}
+    \item \texttt{poetry}
+  \end{itemize}
+
+  \texttt{poetry} est recommandé actuellement. Outil simple, moderne et complet.
+\end{frame}
+
+\begin{frame}{Structure d'un paquet géré par \texttt{poetry}}
+  \mintedcustomcode{python/production/packaging/structure}{text}
+  \begin{alertblock}{Attention}
+    Le nom du dossier source n'est pas \texttt{src} mais le nom du paquet (avec les \texttt{-} remplacés par des \texttt{\_})
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Fichier \texttt{pyproject.toml}}
+  Standard depuis la PEP 518~:
+
+  \begin{itemize}
+    \item Définit l'outil de build du paquet à utiliser
+    \item Contient les méta-données
+    \item Spécifie les dépendances, y compris de développement et extras
+    \item En cours d'adoption par toute la chaîne d'outillage
+    \item Déjà utilisable car supporté par \texttt{pip}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple de fichier \texttt{pyproject.toml}}
+  \mintedcustomcode{python/production/packaging/example}{toml}
+\end{frame}
+
+\begin{frame}{Utilisation de \texttt{poetry}}
+  Quelques \bluelink{https://python-poetry.org/docs/cli/}{commandes} utiles pour la gestion de paquets~:
+  \begin{description}
+    \item[\texttt{poetry version}] Affiche ou modifie la version du paquet
+    \item[\texttt{poetry build}] Construit la distribution du paquet
+    \item[\texttt{poetry publish}] Publie le paquet sur PyPI
+  \end{description}
+\end{frame}
+
+\begin{frame}{Dépôt PyPI}
+  Dépôt des projets Python~:
+
+  \begin{description}
+    \item[Projets] 350k+
+    \item[Versions] 3M+
+    \item[Fichiers] 5M+
+    \item[Utilisateurs] 500k+
+  \end{description}
+\end{frame}
+
+\begin{frame}{Intérêt}
+  \begin{itemize}
+    \item Utilisation depuis \texttt{pip}, \texttt{poetry}, \texttt{Pipenv}, …
+    \item Impossible de remplacer les fichiers d'une version par de nouveaux fichiers
+    \item Possibilité d'utilisation depuis la CI
+  \end{itemize}
+\end{frame}

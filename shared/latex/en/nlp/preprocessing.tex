@@ -1,0 +1,76 @@
+\begin{frame}{Collecte}
+  Des sources variées :
+  \begin{itemize}
+  \item Wikipedia
+  \item Articles de journaux
+  \item Littérature
+  \item User Generated Content
+    \begin{itemize}
+    \item Blogs
+    \item Commentaires
+    \item Réseaux sociaux
+    \end{itemize}
+  \end{itemize}
+  Une source $\Rightarrow$ un «~web scraper~»
+\end{frame}
+
+\begin{frame}{Caractères accentués et spéciaux}
+  \mintedcustom{demo-special-character}{py}{text}
+\end{frame}
+
+\begin{frame}{Tokenisation}
+  Séparer une chaîne de caractères en tokens n'est pas trivial :
+
+  \begin{center}
+    Le Dr. Pond èleve des poules. L'éleveur les sur-exploite.
+  \end{center}
+
+  (en phrases ou en mots)
+\end{frame}
+
+\begin{frame}{Étiquetage morpho-syntaxique}
+  \V{["img/pos-tagging", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{Reconnaissance d'entités nommées}
+  \V{["img/named-entity-recognition", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{Analyse syntaxique}
+  \V{["img/parse-tree", "tw", 0.8] | image}
+\end{frame}
+
+\begin{frame}{Lemmatisation}
+  Exprimer les mots (ou groupes de mots) sous une forme canonique : \\
+
+  \centering
+  \begin{tabular}{cc}
+    \textbf{Mot} & \textbf{Lemme} \\
+    jouant & jouer \\
+    ont été jouées & jouer \\
+    étoiles & étoile \\
+    claires & clair \\
+    noire & noir
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Outils --- WordNet}
+  \V{["img/wordnet-1", "th", 0.7] | image}  
+  Projet sur le français : WOLF (Wordnet Libre du Français) 
+\end{frame}
+
+\begin{frame}{Outils --- DBpedia}
+  \V{["img/dbpedia", "tw", 0.9] | image}
+\end{frame}
+
+\notmog{
+  \begin{frame}{Utilisation actuelle}
+    \V{["img/chatbot", "tw", 0.9] | image}
+  \end{frame}
+}
+
+\notmog{
+  \begin{frame}{Maintenabilité}
+    \V{["img/usine-a-gaz", "tw", 0.9] | image}
+  \end{frame}
+}

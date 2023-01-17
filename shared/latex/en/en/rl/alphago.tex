@@ -1,0 +1,158 @@
+\begin{frame}{Introduction}
+  In 2016, DeepMind introduced AlphaGo, the first program to beat pros at the game of Go.
+
+  It used a combination of:
+
+  \begin{itemize}[<+(1)->]
+  \item Deep neural networks
+  \item Monte Carlo Tree Search
+  \item Reinforcement learning
+  \item “Google scale”(> 30 M\$ total cost)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Go}
+  \begin{minipage}[c]{0.6\linewidth}
+    \V{["img/go-regles", "tw", 1] | image}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.33\linewidth}
+    \begin{center}
+      \underline{Go vs Chess} \\
+      \textbf{Number of moves} \\
+      $\approx$ 200 vs $\approx$ 35 \\
+      \textbf{Number of turns} \\
+      $\approx$ 300 vs $\approx$ 80 \\
+      $\Rightarrow$ $\approx 10^{120}\lll \;\approx 10^{690}$
+    \end{center}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}{Value network}
+  \begin{minipage}[c]{0.68\linewidth}
+    \begin{itemize}[<+->]
+      \item Convolutional network topped by a tanh output neuron
+      \item 48 input channels: position of white and black stones, ko, ladders, …
+      \item First learned by supervised learning
+      \item Then improved by reinforcement learning
+    \end{itemize}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.31\linewidth}
+  \V{["img/alphago-value", "tw", 1] | image}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}{Policy network}
+  \begin{minipage}[c]{0.50\linewidth}
+    \V{["img/alphago-policy", "th", 0.8] | image}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.49\linewidth}
+    \begin{itemize}[<+->]
+      \item Convolutional network topped by a softmax
+      \item Also learned by supervised learning and improved by reinforcement learning
+    \end{itemize}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}{Monte-Carlo Tree Search + value \& policy networks}
+  \V{["img/alphago-mcts", "tw", 0.8] | image}
+  \begin{itemize}[<+->]
+    \item Select by maximum of Q-value + u(P) where u(P) controls exploration
+    \item Set priors when expanding the tree with the policy network
+    \item Evaluation is made by the value network
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Learning phases}
+  \begin{description}[<+->]
+    \item[Supervised] 3 weeks (50 TPU) 
+    \item[Reinforcement] 1 day (5000 TPU)
+  \end{description}
+
+  \onslide<+->{Comparison between a TPU and a Core i7:}
+
+  \begin{description}[<+->]
+    \item[50 TPU] $\approx$ 2000 TFLOPS
+    \item[Core i7] $\approx$ 0.07 TFLOPS (to match 5k TPUs $\approx$ 30k)
+  \end{description}
+\end{frame}
+
+\begin{frame}{Performance at the game of Go}
+  \begin{minipage}[c]{0.7\linewidth}
+    \V{["img/go-winrate-dan", "tw", 1] | image}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.26\linewidth}
+    \begin{adjustbox}{scale=0.8}
+      \begin{tabular}{| r | l |}
+        \hline
+        EGF & Ranking \\ \hline
+        2940 & 9 dan pro \\ \hline
+        2820 & 8 dan amateur \\ \hline
+        2700 & 7 dan amateur \\ \hline
+        2600 & 6 dan amateur \\ \hline
+        2500 & 5 dan \\ \hline
+        2400 & 4 dan \\ \hline
+        2300 & 3 dan \\ \hline
+        2200 & 2 dan \\ \hline
+        2100 & 1 dan \\ \hline
+        2000 & 1 kyu \\ \hline
+        1900 & 2 kyu \\ \hline
+        1800 & 3 kyu \\ \hline
+        1500 & 6 kyu \\ \hline
+        1000 & 11 kyu \\ \hline
+        500 & 16 kyu \\ \hline
+        100 & 20 kyu \\ \hline
+      \end{tabular}
+    \end{adjustbox}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}{AlphaGo performance}
+  Depending on version:
+  \begin{description}
+  \item[AlphaGo] 5--0 vs Fan Hui (2015/10)
+  \item[AlphaGo Lee] 4--1 vs Lee Sedol (2016/3)
+  \item[AlphaGo Master] 60--0 vs pros on the internet (2016/12)
+  \item[AlphaGo Zero] No more supervised learning. $>$ AlphaGo Master
+  \item[Alpha Zero] $\geq$ AlphaGo Zero but applicable to Chess, Shogi, …
+  \item[Mu Zero] $\geq$ Alpha Zero and learns rules with a model
+  \end{description}
+\end{frame}
+
+\begin{frame}{AlphaGo}
+  \begin{center}
+    AlphaGo vs Lee Sedol (or Fan Hui)
+  \end{center}
+  \huge
+  1 202 CPU cores and 176 TPUs
+\end{frame}
+
+\begin{frame}{AlphaGo Zero}
+  \begin{description}[<+->]
+    \item[Stronger] 100--0 vs AlphaGo
+    \item[More general] No supervised learning: only reinforcement learning
+  \end{description}
+
+  \V{["img/alphagozero-lerningcurve", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Alpha Zero}
+  \begin{itemize}[<+->]
+    \item Even more general: generalizes inputs and outputs
+    \item Beats all bots in all games (Chess, Shogi, Go, …)
+  \end{itemize}  
+\end{frame}
+
+\begin{frame}{Mu Zero}
+  \begin{itemize}[<+->]
+    \item Even more general: learns rules from inputs and outputs
+    \item State of the art on Atari games, beats Alpha Zero
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Some distance}
+  \begin{itemize}[<+->]
+    \item A human brain $\approx$ 20 Watts
+    \item AlphaGo $\approx$ 440 000 Watts (440 toasters)
+    \item A pocket calculator is superhuman at basic operations
+  \end{itemize}
+\end{frame}

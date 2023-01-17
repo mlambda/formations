@@ -1,0 +1,93 @@
+\begin{frame}{Introduction}
+  La programmation orientée objet est un style de programmation ayant pour buts~:
+
+  \begin{itemize}
+    \item l'encapsulation
+    \item la modularité
+    \item la réutilisabilité du code
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Idée clef}
+  Définition d'\alert{objets} qui regroupent~:
+
+  \begin{itemize}
+    \item des données
+    \item des méthodes pour traiter ces données
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Définition d'objets}
+  Pour définir des objets, on écrit une classe, celle-ci est une «~recette~» pour obtenir un objet (qu'on appelle aussi instance)~:
+
+  \mintedpycode{python/basics/oop/basic-class}
+
+  \begin{itemize}
+    \item \texttt{Point} est le nom de classe
+    \item \texttt{\_\_init\_\_} est une méthode spéciale pour initialiser notre objet
+    \item \texttt{self.x} \& \texttt{self.y} sont des attributs d'instance
+    \item \texttt{distance} est une méthode arbitraire que l'on a définie
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Utilisation d'objets}
+  Une fois la classe définie, on peut l'utiliser comme tout autre objet Python~:
+
+  \pycon{python/basics/oop/basic-class-usage}
+\end{frame}
+
+\begin{frame}{Différence entre attributs d'instance et de classe}
+  \pycon{python/basics/oop/class-instance-attributes}
+
+  Si un attribut d'instance a le même nom qu'un attribut de classe, il est prioritaire (\texttt{objet.nom} référera à l'attribut d'instance).
+\end{frame}
+
+\begin{frame}{Quelques points importants}
+  \begin{itemize}
+    \item On nomme le premier argument \texttt{self} par convention
+    \item Pas de notion de méthodes ou d'attributs privés en Python
+    \item Pour \alert{dire} qu'un un attribut ou une méthode sont privés, on ajoute un \texttt{\_} devant le nom (\texttt{self.\_x})
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Polymorphisme}
+  Adaptation du comportement de fonctions ou opérateurs au type des arguments qu'on lui passe.
+
+  Par exemple, l'opérateur \texttt{+} en Python peut être~:
+
+  \begin{itemize}
+    \item La concaténation de chaîne de caractères
+    \item La concaténation de listes
+    \item L'addition d'entiers
+    \item …
+  \end{itemize}
+
+  $\Rightarrow$ Une méthode différente est appelée dans chaque cas~!
+
+  \begin{alertblock}{Attention}
+    On parle de polymorphisme aussi pour des fonctions simples ou des méthodes de classes, pas seulement pour des opérateurs.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Exemple de polymorphisme par surcharge d'opérateur}
+  \pycon{python/basics/oop/polymorphism-addition}
+\end{frame}
+
+\begin{frame}{Héritage}
+  Pour définir une classe, on peut partir d'une classe existante plutôt que depuis 0. C'est la notion d'héritage~:
+
+  \pycon{python/basics/oop/inheritance}
+\end{frame}
+
+\begin{frame}{Héritage multiple}
+  On peut partir de plusieurs classes pour définir une nouvelle classe.
+
+  \begin{itemize}
+    \item L'ordre dans lequel les classes parentes seront sollicitées pour trouver une méthode appelée avec \texttt{super()} est appelé MRO (\textit{Method Resolution Order})
+    \item On peut accéder au MRO d'une classe par son attribut \texttt{\_\_mro\_\_}
+  \end{itemize}
+
+  \begin{alertblock}{Attention}
+    Utiliser l'héritage multiple est courant en Python mais rend le code plus complexe à bien des égards.
+  \end{alertblock}
+\end{frame}

@@ -1,0 +1,13 @@
+default_titles:
+  env: Variables d'environnement
+  files: Manipulation de fichiers
+  std: Flux standards
+flavors:
+  full:
+    - files
+    - env
+    - std
+    - $/python/databases: light
+    - /questions
+    - tp
+title: Fonctionnalités d'administration système

@@ -1,0 +1,54 @@
+\begin{frame}{Introduction}
+  Recurrent neural networks:
+
+  \begin{itemize}[<+(1)->]
+    \item Handle sequences
+    \item Process their input sequentially
+    \item Replicate a neural network for each element in the input sequence
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Model}
+  \V{["tikz/neural-networks/rnn/simple-unfold", "th", 0.3] | image}
+  \begin{align*}
+    \vect{h_t} &= \sigma_h(\vect{U} \vect{x_t} + \vect{V} \vect{h_{t-1}} + \vect{b_h}) \\
+    \vect{o_t} &= \sigma_o(\vect{W} \vect{h_t} + \vect{b_o})
+  \end{align*}
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      \begin{description}
+        \item[$\vect{x_t}$] Input vector
+        \item[$\vect{h_t}$] Hidden vector
+        \item[$\vect{o_t}$] Output vector
+        \end{description}
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \begin{description}
+        \item[$\vect{U}$, $\vect{V}$, $\vect{W}$] Weight matrices
+        \item[$\vect{b_h}$, $\vect{b_o}$] Bias vectors
+        \item[$\sigma_h$, $\sigma_o$] Activation functions
+        \end{description}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Prediction of a single output}
+  Example: polarity detection.
+
+  \begin{figure}
+    \centering
+    \V{["tikz/neural-networks/rnn/lastoutput-en", "th", 0.7] | image}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Prediction of one output per input}
+  \V{["tikz/neural-networks/rnn/alloutputs-en", "tw", 0.5] | image}
+\end{frame}
+
+\begin{frame}{Prediction of an arbitrary number of outputs}
+  \V{["tikz/neural-networks/rnn/seq2seq", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Vanishing gradient problem: recurrence edition}
+  \V{["tikz/optimization/vanishing-gradients-rnn-en", "tw", 0.7] | image}
+\end{frame}

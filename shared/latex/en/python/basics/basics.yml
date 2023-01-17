@@ -1,0 +1,104 @@
+default_titles:
+  control-structures: Structures de contrôle
+  dictionaries: Dictionnaires
+  display: Affichage
+  exceptions: Traitement des erreurs
+  files: Lecture et écriture de fichiers
+  functions: Fonctions
+  lists: Listes
+  native-functions: Fonctions natives
+  oop: Programmation orientée objet
+  support: Support de cours
+  tuples: N-uplets
+  variables: Types de base et variables
+  /python/regexes/regexes: Expressions régulières
+flavors:
+  lpy:
+    - support
+    - variables
+    - /questions
+    - tp-variables
+    - display
+    - /questions
+    - tp-display
+    - intro-collections: Collections
+    - lists: null
+    - dictionaries: null
+    - tuples: null
+    - sets: null
+    - /questions
+    - tp-collections
+    - control-structures
+    - /questions
+    - tp-control-structures
+    - files
+    - /questions
+    - tp-files
+    - functions
+    - /questions
+    - tp-functions
+    - oop
+    - /questions
+    - tp-oop
+    - exceptions
+    - /questions
+    - native-functions
+    - /questions
+  full:
+    - support
+    - variables
+    - /questions
+    - tp-variables
+    - display
+    - /questions
+    - tp-display
+    - intro-collections: Collections
+    - lists: null
+    - dictionaries: null
+    - tuples: null
+    - sets: null
+    - /questions
+    - tp-collections
+    - control-structures
+    - /questions
+    - tp-control-structures
+    - files
+    - /questions
+    - tp-files
+    - functions
+    - /questions
+    - tp-functions
+    - $/python/regexes: full
+    - oop
+    - tp-oop
+    - /questions
+    - exceptions
+    - /questions
+    - native-functions
+    - /questions
+  no-tp:
+    - support
+    - variables
+    - /questions
+    - display
+    - /questions
+    - intro-collections: Collections
+    - lists: null
+    - dictionaries: null
+    - tuples: null
+    - sets: null
+    - /questions
+    - control-structures
+    - /questions
+    - files
+    - /questions
+    - functions
+    - /questions
+    - $/python/regexes: no-tp
+    - oop
+    - /questions
+    - exceptions
+    - /questions
+    - native-functions
+    - /questions
+title: Bases du langage Python
