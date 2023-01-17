@@ -1,0 +1,33 @@
+- name: j1
+  title: Data science tools
+  sections:
+    - path: en/python/data-science
+      flavor: full
+
+    - path: en/python/production
+      flavor: light
+
+- name: j2
+  title: Machine Learning --- Supervised
+  sections:
+    - path: en/supervised
+      flavor: mlb
+
+- name: j3
+  title: Machine Learning --- Unsupervised
+  sections:
+    - en/unsupervised/introduction
+    - path: en/unsupervised/dimensionality-reduction
+      flavor: mlb
+    - path: en/unsupervised/clustering
+      flavor: bda
+    - path: en/unsupervised/anomaly-detection
+      flavor: full
+
+- name: j4
+  title: Deep Learning
+  sections:
+    - path: en/nn
+      flavor: dpl
+
+

@@ -1,14 +1,49 @@
 default_titles:
   keras: Implementation in Keras
   lstm: Long Short-Term Memory Networks
-  rnn: Model
-  rnn-variants: Other architectures
+  variants: Other architectures
+  /nlp/wordembeddings: Words embeddings
+  video: Application to videos
 flavors:
-  demo-detailed:
-    - rnn
+  dpl:
+    - model
     - lstm
-    - rnn-variants
+    - variants
+    - keras
+    - /questions
+    - tp
+  intra-ign:
+    - model
+    - lstm
+    - variants
+    - keras
+    - /questions
+  iao:
+    - model
+    - /questions
+    - demo
+  mle:
+    - /nlp/wordembeddings
+    - model
+    - lstm
+    - variants
+    - /questions
+    - demo
+  drn:
+    - /nlp/wordembeddings
+    - model
+    - lstm
+    - variants
     - keras
     - /questions
     - demo
-title: Recurrent Neural Networks
+  vision-expert:
+    - /nlp/wordembeddings
+    - model
+    - lstm
+    - variants
+    - keras
+    - video
+    - /questions
+    - demo
+title: Réseaux de neurones récurrents

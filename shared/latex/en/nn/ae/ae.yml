@@ -1,9 +1,12 @@
 default_titles:
-  autoencoder: Model
-  tp: Demonstration
+  autoencoder: Auto-encoder
 flavors:
-  demo:
+  dpl:
     - autoencoder
     - /questions
-    - demo
-title: Auto-encoders
+    - tp
+  drn:
+    - autoencoder
+    - /questions
+    - tp-demo
+title: Auto-encodeurs

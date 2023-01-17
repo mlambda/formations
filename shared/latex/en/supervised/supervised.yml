@@ -1,16 +1,83 @@
 default_titles:
-  linear-regression: Linear regression
-  naive-bayes: Naive Bayes
-  random-forest: Random Forest
+  classification: Classification
+  cost-error-function: Lost function
+
+  regression-lineaire: Linear regression
+  regression-logistique: Logistic regression
+  regression-polynomiale: Polynomial regression
+
+  trees: Decision trees
+  random-forest: Random forests
+
+  gradient-boosting: Boosted tree
+
+  svm: Support vector machine
 flavors:
-  drn:
-    - linear-regression
+  svm-text:
+    - svm
+    - demo-sklearn-svm
+    - tp-svm-text
+  bda:
+    - /prerequisites/proba-rappel
+    - /bayesian/naive-bayes
+    - regression-lineaire
     - cost-error-function
-    - /en/nn/gradient-descent
+    - /nn/gradient-descent
+    - regression-polynomiale
+    - classification
+    - regression-logistique
     - /questions
-    - demo-linear-regression
-    - naive-bayes
+    - tp-reg-lin-poly
     - /questions
+  mlb:
+    - regression-lineaire
+    - cost-error-function
+    - /nn/gradient-descent
+    - regression-polynomiale
+    - classification
+    - regression-logistique
+    - /questions
+    - tp-reg-lin-poly
+    - svm
+    - demo-sklearn-svm
+    - trees
+    - trees-details
     - random-forest
     - /questions
-title: Overview of classical machine learning
+    - demo-sklearn-random-forest
+    - tp-random-forest
+  mmd:
+    - /prerequisites/proba-rappel
+    - /bayesian/naive-bayes
+    - /questions
+    - regression-lineaire
+    - cost-error-function
+    - /nn/gradient-descent
+    - /questions
+    - trees
+    - trees-details
+    - random-forest
+    - /questions
+    - demo-sklearn-random-forest
+    - gradient-boosting
+    - /questions
+    - demo-catboost-gradient-boosting
+    - svm
+    - /questions
+    - demo-sklearn-svm
+    - tp-svm-text
+  drn:
+    - /bayesian/naive-bayes
+    - regression-lineaire
+    - cost-error-function
+    - /nn/gradient-descent
+    - /questions
+    - demo-linear-regression
+    - /questions
+    - trees
+    - trees-details
+    - random-forest
+    - /questions
+
+title: Apprentissage supervisé
+version: 3
