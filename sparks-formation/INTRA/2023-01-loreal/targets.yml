@@ -1,0 +1,33 @@
+- name: j1
+  title: Jour 1 --- Outils data science
+  sections:
+    - path: python/data-science
+      flavor: full
+
+    - path: python/production
+      flavor: light
+
+- name: j2
+  title: Jour 2 --- Machine Learning -- Supervisé
+  sections:
+    - path: supervised
+      flavor: mlb
+
+- name: j3
+  title: Jour 3 --- Machine Learning -- Non Supervisé
+  sections:
+    - unsupervised/introduction
+    - path: unsupervised/dimensionality-reduction
+      flavor: mlb
+    - path: unsupervised/clustering
+      flavor: bda
+    - path: unsupervised/anomaly-detection
+      flavor: full
+
+- name: j4
+  title: Jour 4 --- Deep Learing
+  sections:
+    - path: nn
+      flavor: dpl
+
+
