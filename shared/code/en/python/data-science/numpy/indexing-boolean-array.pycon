@@ -1,0 +1,4 @@
+>>> b = np.arange(4) * 10; b
+array([ 0, 10, 20, 30])
+>>> b[mask]
+array([20, 30])

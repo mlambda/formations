@@ -1,0 +1,21 @@
+>>> print(df.head(2)); print(df.index[:5]); print(df.columns[:5])
+             Survived  Pclass  ... Cabin Embarked
+PassengerId                    ...               
+1                   0       3  ...   NaN        S
+2                   1       1  ...   C85        C
+
+[2 rows x 11 columns]
+Int64Index([1, 2, 3, 4, 5], dtype='int64', name='PassengerId')
+Index(['Survived', 'Pclass', 'Name', 'Sex', 'Age'], dtype='object')
+
+>>> df.loc[2, "Cabin"]  # Using df.index et de df.columns
+'C85'
+
+>>> df.iloc[1, -2]      # Using relative numeric position
+'C85'
+
+>>> df.loc[[2, 1], ["Cabin", "Survived"]]  #  Advanced use of loc
+            Cabin  Survived
+PassengerId                
+2             C85         1
+1             NaN         0

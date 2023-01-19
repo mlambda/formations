@@ -1,0 +1,11 @@
+>>> df = pd.read_csv("titanic/train.csv", index_col="PassengerId")
+>>> df.head()
+             Survived  Pclass  ... Cabin Embarked
+PassengerId                    ...               
+1                   0       3  ...   NaN        S
+2                   1       1  ...   C85        C
+3                   1       3  ...   NaN        S
+4                   1       1  ...  C123        S
+5                   0       3  ...   NaN        S
+
+[5 rows x 11 columns]

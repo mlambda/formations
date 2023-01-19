@@ -6,24 +6,24 @@ default_titles:
 flavors:
   full:
     - environment
-    - /questions
+    - /en/questions
     - demo-environment
     - packaging
-    - /questions
+    - /en/questions
     - tp-packaging
     - deployment
-    - /questions
+    - /en/questions
     - cli
-    - /questions
+    - /en/questions
     - tp-cli-stegano
   light:
     - environment
-    - /questions
+    - /en/questions
     - demo-environment
     - packaging
-    - /questions
+    - /en/questions
     - tp-packaging
     - cli
-    - /questions
+    - /en/questions
     - tp-cli
 title: Ingénierie de projets en Python

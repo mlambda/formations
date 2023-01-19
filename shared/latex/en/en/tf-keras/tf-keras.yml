@@ -1,9 +1,0 @@
-default_titles:
-  keras: Keras
-  tf: TensorFlow 2
-flavors:
-  full:
-    - tf
-    - keras
-    - /questions
-title: TensorFlow 2 \& Keras

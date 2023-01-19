@@ -1,0 +1,21 @@
+>>> df["NormalizedAge"] = (df.Age - df.Age.mean()) / df.Age.std()
+
+>>> mask = df.Survived.astype(bool); mask
+PassengerId
+1      False
+2       True
+...
+890     True
+891    False
+Name: Survived, Length: 891, dtype: bool
+
+>>> df[mask].Age.mean(), df[~mask].Age.mean()
+(28.343689655172415, 30.62617924528302)
+
+>>> df_numeric = df.select_dtypes(include=["number"])
+
+>>> df_numeric.mean()
+Survived         3.838384e-01
+...
+NormalizedAge    2.338621e-16
+dtype: float64

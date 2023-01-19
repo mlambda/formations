@@ -7,14 +7,14 @@ flavors:
   full:
     - intro
     - numpy
-    - /questions
+    - /en/questions
     - tp-numpy
-    - /questions
+    - /en/questions
     - matplotlib
-    - /questions
+    - /en/questions
     - tp-matplotlib
     - pandas
-    - /questions
+    - /en/questions
     - tp-pandas
 
 title: Modules de science des données

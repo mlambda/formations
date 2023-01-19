@@ -1,0 +1,7 @@
+>>> df.sex.unique()
+array(['female', 'male'], dtype=object)
+
+>>> df.sex.value_counts()
+male      843
+female    466
+Name: sex, dtype: int64

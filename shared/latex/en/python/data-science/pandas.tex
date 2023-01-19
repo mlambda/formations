@@ -1,157 +1,157 @@
 \begin{frame}{Introduction}
-  \texttt{pandas} permet de facilement manipuler des données.
+  \texttt{pandas} allows to easily manipulate data.
 
-  Avec, on peut~:
+  Using it, it is possible to~:
 
   \begin{itemize}
-    \item Charger beaucoup de formats de données dans une structure facilement manipulable
-    \item Filtrer, grouper, séparer, réagencer, combiner des données
-    \item Résumer, agréger, observer
-    \item Gérer des valeurs manquantes
+    \item Load many data formats in an easy to use structure
+    \item Filter, group, separate, rearrange, combine data
+    \item Summarize, aggregate, observe
+    \item Manage missing values
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Structures de données}
-  La librairie est articulée autour de deux structures de données~:
+\begin{frame}{Data structures}
+  The library is articulated around two data structures~:
 
   \begin{description}
-    \item[\texttt{Series}] Série indexée de valeurs
-    \item[\texttt{DataFrame}] Plusieurs séries de valeurs avec le même index
+    \item[\texttt{Series}] Indexed series of values
+    \item[\texttt{DataFrame}] Several series of values with the same index
   \end{description}
 
-  Une \texttt{Series} n'a qu'une dimension, elle représente plusieurs échantillons d'une même variable.
+  A \texttt{Series} has only one dimension, it represents several samples of the same variable.
 
-  Une \texttt{DataFrame} a deux dimensions. Elle représente autant de variables qu'elle a de colonnes. Elle est constituée d'une \texttt{Series} par colonne.
+  A \texttt{DataFrame} has two dimensions. It represents as many variables as it has columns. It consists of one \texttt{Series} per column.
 
-  \begin{alertblock}{Conseil d'apprentissage}
-    Il est très important d'apprendre à reconnaître quand on manipule une \texttt{Series} ou une \texttt{DataFrame}. Portez-y une attention particulière~!
+  \begin{alertblock}{Learning tip}
+    It is very important to learn to recognize when you are handling a \texttt{Series} or \texttt{DataFrame}. Pay extra attention to this!
   \end{alertblock}
 \end{frame}
 
-\begin{frame}{Concept d'index}
-  Le concept d'index est \textbf{très} important en \texttt{pandas}. C'est le point majeur, avec l'hétérogénéité des colonnes, qui distingue \texttt{pandas} de \texttt{numpy}.
+\begin{frame}{Index concept}
+  The concept of index is \textbf{very} important in Pandas. It is the major point, with the columns heterogeneity, which distinguishes \texttt{pandas} from \texttt{numpy}.
 
-  L'index est modifié en même temps que les valeurs pendant toutes les opérations en \texttt{pandas}, c'est \textbf{extrêmement} utilisé en \texttt{pandas}.
+  Index is modified with the associated values during all operations in \texttt{pandas}, it is \textbf{extremely} used in \texttt{pandas}.
 
   \mintedcustomcode{python/data-science/pandas/index}{pycon}
 \end{frame}
 
-\begin{frame}{Concept d'index ⋅ \texttt{DataFrame}}
-  Une \texttt{DataFrame} contient \textbf{deux} index~:
+\begin{frame}{Index concept ⋅ \texttt{DataFrame}}
+  A \texttt{DataFrame} contains \textbf{two} indexes~:
   \begin{description}
-    \item[\texttt{df.index}] L'index des lignes
-    \item[\texttt{df.columns}] L'index des colonnes
+    \item[\texttt{df.index}] The line index
+    \item[\texttt{df.columns}] The column index
   \end{description}
 
   \mintedcustomcode{python/data-science/pandas/index-df}{pycon}
 
-  \begin{alertblock}{Potentielle confusion}
-    Le nom de l'index des lignes (\texttt{df.index}) correspond au nom du concept d'index (et du type \texttt{Index}).
-    L'index des colonnes (\texttt{df.columns}) est pourtant bien un index lui aussi.
+  \begin{alertblock}{Potential confusion}
+    The name of the row index (\texttt{df.index}) is simitar to the index type : \texttt{Index}.
+    The column index (\texttt{df.columns}) is however also an index (\texttt{Index} type).
   \end{alertblock}
 \end{frame}
 
-\begin{frame}{Import de \texttt{pandas}}
-  La manière standard d'importer \texttt{pandas} est de renommer l'import \texttt{pd}~:
+\begin{frame}{\texttt{pandas} inport}
+  The standard way to import \texttt{pandas} is to rename the import \texttt{pd}~:
   \mintedcustomcode{python/data-science/pandas/import}{py}
 \end{frame}
 
-\begin{frame}{Import de données dans une \texttt{DataFrame}}
-  \texttt{pandas} peut ingérer des données depuis beaucoup de formats avec ses méthodes \texttt{read\_*}~: \texttt{read\_csv}, \texttt{read\_excel}, \texttt{read\_json}, \texttt{read\_xml}, \texttt{read\_parquet}, …
+\begin{frame}{Import data into a \texttt{DataFrame}}
+  \texttt{pandas} can deal with data from many formats with the corresponding \texttt{read\_*}~methods: \texttt{read\_csv}, \texttt{read\_excel}, \texttt{read\_json}, \texttt{read\_xml}, \texttt{read\_parquet}, ...
 
   \mintedcustomcode{python/data-science/pandas/read-csv}{pycon}
 
-  De nombreux arguments sont disponibles pour contrôler très finement le chargement des données (par exemple ici \texttt{index\_col}).
+  Many arguments are available to control precisely the data parsing (here an example with \texttt{index\_col}).
 \end{frame}
 
-\begin{frame}{Création de \texttt{DataFrame} ⋅ Index par défaut}
-  Méthodes les plus utilisées~: par colonnes et par lignes.
+\begin{frame}{Create \texttt{DataFrame} ⋅ Default index}
+  Create a \texttt{DataFrame} by specifying columns or lines :
 
   \mintedcustomcode{python/data-science/pandas/creation-dataframe-no-index}{pycon}
 \end{frame}
 
-\begin{frame}{Création de \texttt{DataFrame} ⋅ Index explicite}
-  Pour utiliser un index existant ou en préciser un différent de l'index numérique par défaut, utiliser l'argument \texttt{index}~:
+\begin{frame}{\texttt{DataFrame} creation ⋅ Explicit index}
+  To use an existing index or specify one different from the default numeric index, use the \texttt{index}~ argument:
 
   \mintedcustomcode{python/data-science/pandas/creation-dataframe-explicit-index}{pycon}
 \end{frame}
 
-\begin{frame}{Création d'une \texttt{Series}}
+\begin{frame}{\texttt{Series} creation}
   \mintedcustomcode{python/data-science/pandas/creation-series}{pycon}
 
-  On peut omettre l'index si le défaut convient.
+  Index can be omitted if the default one is appropriate.
 \end{frame}
 
-\begin{frame}{Affichage}
+\begin{frame}{Display}
   \mintedcustomcode{python/data-science/pandas/display}{pycon}
 
-  On peut aussi juste utiliser \texttt{print(df)} qui combine \texttt{df.head()} \& \texttt{df.tail()}.
+  You can also just use \texttt{print(df)} which combines \texttt{df.head()} \& \texttt{df.tail()}.
 \end{frame}
 
-\begin{frame}{Description ⋅ Généralités}
+\begin{frame}{Description ⋅ General}
   \mintedcustomcode{python/data-science/pandas/description}{pycon}
 \end{frame}
 
-\begin{frame}{Description ⋅ Caractéristiques numériques}
+\begin{frame}{Description ⋅ Numerical features}
   \mintedcustomcode{python/data-science/pandas/description-numerical}{pycon}
 
-  Si il y a trop de colonnes pour que la sortie soit lisible, utiliser \texttt{df.describe().transpose()}.
+  If there are too many columns for the output to be readable, use \texttt{df.describe().transpose()}.
 \end{frame}
 
-\begin{frame}{Description ⋅ Ensemble de valeurs et comptage}
-  Il est possible de récupérer l'ensemble des valeurs différentes d'une série avec \texttt{unique()}.
+\begin{frame}{Description ⋅ Value set and value count}
+  It is possible to retrieve the set of all different values in a series with \texttt{unique()}.
   
-  Ou récupérer un comptage de chaque valeur avec \texttt{value\_counts()}.
+  Or retrieve a count of each value with \texttt{value\_counts()}.
   \mintedcustomcode{python/data-science/pandas/value-counts}{pycon}
 \end{frame}
 
-\begin{frame}{Opérations}
-  Très similaires à \texttt{numpy}~: vectorisées et très efficaces par rapport à des opérations itératives Python.
+\begin{frame}{Operations}
+  Similarly to \texttt{numpy}~: operations are vectorized and very efficient compared to Python iterative operations.
 
-  \texttt{pandas} dispose, en plus des opérations similaires à \texttt{numpy}, d'une riche bibliothèque de fonctions pour traiter les dates et les chaînes de caractères.
+  \texttt{pandas} has, in addition to operations similar to \texttt{numpy}, a rich library of functions to handle times and strings.
 
-  \begin{alertblock}{Différence principale}
-    Par défaut, les opérations sur une \texttt{DataFrame} s'appliquent \textbf{par colonne}. En \texttt{numpy}, elles s'appliquent à tous les éléments.
+  \begin{alertblock}{Main difference}
+    By default, operations on a \texttt{DataFrame} are applied \textbf{per column}. In \texttt{numpy}, they apply to all the elements.
   \end{alertblock}
 \end{frame}
 
-\begin{frame}{Opérations ⋅ Exemples}
+\begin{frame}{Operations ⋅ Examples}
   \mintedcustomcode{python/data-science/pandas/operations}{pycon}
 \end{frame}
 
-\begin{frame}{Indiçage}
-  Deux modes d'indiçage existent~:
+\begin{frame}{Indexing}
+  Two modes of indexing exist~:
   \begin{description}
-    \item[\texttt{loc}] Utilisation des valeurs de l'index
-    \item[\texttt{iloc}] Utilisation de la position (comme \texttt{numpy})
+    \item[\texttt{loc}] Based on the index values
+    \item[\texttt{iloc}] Based on the position (like \texttt{numpy})
   \end{description}
-  $\Rightarrow$ Utiliser le plus lisible / pratique dans une situation donnée.
+  $\Rightarrow$ Use the most readable / practical in a given situation.
 \end{frame}
 
-\begin{frame}{Indiçage ⋅ Exemple \texttt{loc} \& \texttt{iloc}}
+\begin{frame}{Indexing ⋅ Example \texttt{loc} \& \texttt{iloc}}
   \mintedcustomcode{python/data-science/pandas/loc-iloc}{pycon}
 \end{frame}
 
-\begin{frame}{Valeurs manquantes}
+\begin{frame}{Missing values}
   \mintedcustomcode{python/data-science/pandas/fillna}{pycon}
 \end{frame}
 
-\begin{frame}{Regroupements}
-  Il est possible de travailler sur des sous-ensembles des données complètes avec la fonction \texttt{df.groupby}~:
+\begin{frame}{Groupings}
+  It is possible to work on data subsets with the function \texttt{df.groupby}~:
   \mintedcustomcode{python/data-science/pandas/groupby}{pycon}
 \end{frame}
 
-\begin{frame}{Intéropérabilité avec \texttt{numpy}}
-  Il est possible d'utiliser une \texttt{DataFrame} comme argument des fonctions \texttt{numpy} qui s'appliquent \textbf{élément par élément}.
+\begin{frame}{Interoperability with \texttt{numpy}}
+  It is possible to pass \texttt{DataFrame}  to \texttt{numpy} functions which are applied \textbf{element by element}.
 
-  On peut récupérer un tableau \texttt{numpy} à partir d'une \texttt{Series} ou \texttt{DataFrame} avec l'attribut \texttt{values}
+  A numpy array might be extract from a \texttt{Series} or \texttt{DataFrame} with the attribute \texttt{values}
 
   \mintedcustomcode{python/data-science/pandas/interoperability}{pycon}
 \end{frame}
 
 \begin{frame}{Documentation}
   \begin{itemize}
-    \item \bluelink{https://pandas.pydata.org/docs/user_guide/index.html}{Documentation officielle}
-    \item \bluelink{https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf}{Feuille d'aide}
+    \item \bluelink{https://pandas.pydata.org/docs/user_guide/index.html}{Official Documentation}
+    \item \bluelink{https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf}{Cheat Sheet}
   \end{itemize}
 \end{frame}
