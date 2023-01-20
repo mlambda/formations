@@ -1,74 +1,74 @@
 \begin{frame}{Introduction}
-  Buts~:
-  \begin{itemize}[<+->]
-    \item Créer des outils facilement manipulables
-    \item Pouvoir scripter à partir de vos programmes Python
+  Goals:
+  \begin{itemize}
+    \item Create easy-to-use tools
+    \item Use your Python programs in your (bash) scripts
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Mécanismes}
-  \begin{itemize}[<+->]
-    \item \texttt{sys.argv} contient les arguments passés à votre programme
-    \item \texttt{argparse}, \texttt{click} ou encore \texttt{Typer} parsent ce tableau pour vous
+\begin{frame}{Mechanisms}
+  \begin{itemize}
+    \item \texttt{sys.argv} exposes the arguments received by your program as a list
+    \item \texttt{argparse}, \texttt{click} or \texttt{Typer} can parse this list for you
   \end{itemize}  
 \end{frame}
 
 \begin{frame}{\texttt{argparse}}
-  Pour définir une ILC avec \texttt{argparse}, il faut~:
-  \begin{itemize}[<+->]
-    \item Créer un parser
-    \item Appeler ce parser depuis le point d'entrée du programme
-    \item Traiter les arguments parsés
+  To define a CLI with \texttt{argparse}, you need to:
+  \begin{itemize}
+    \item Create a parser
+    \item Call this parser from the entrypoint of your program
+    \item Use the received arguments to call the corresponding parts of your program
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Création d'un parser}
-  Création d'un \texttt{argparse.ArgumentParser} puis ajout d'arguments avec la méthode \texttt{add\_argument}~:
+\begin{frame}{Parser creation}
+  First we create a \texttt{argparse.ArgumentParser}, then we add arguments with the \texttt{add\_argument} method:
   \mintedpycode{python/cli/creation}
 \end{frame}
 
-\begin{frame}{Ajouter un argument}
-  On peut spécifier à \texttt{add\_argument} de nombreux points. Parmi eux~:
+\begin{frame}{Adding an argument}
+  \texttt{add\_argument} has many options. Amongst them, you can specify:
 
-  \begin{itemize}[<+->]
-    \item Une option courte (\texttt{"-d"}) et longue (\texttt{"--directory"})
-    \item Une chaîne d'aide (\texttt{help="Aide de l'argument."})
-    \item Un type (\texttt{type=int})
-    \item Une action, pour créer des flags booléens par exemple
-    \item Une valeur par défaut
+  \begin{itemize}
+    \item A short string name (\texttt{"-d"}) and a long one (\texttt{"--directory"})
+    \item A help string (\texttt{help="Help message for argument XYZ."})
+    \item A type (\texttt{type=int})
+    \item An action, to create boolean flags amongst other things
+    \item A default value
   \end{itemize}
 
-  \onslide<+->{La \bluelink{https://docs.python.org/fr/3/library/argparse.html\#the-add-argument-method}{documentation officielle} est très complète.}
+  The \bluelink{https://docs.python.org/3/library/argparse.html\#the-add-argument-method}{official documentation} is very thorough.
 \end{frame}
 
-\begin{frame}{Commandes multiples}
-  Possibilité de définir plusieurs commandes : création des sous-parsers que l'on traite ensuite comme le parser principal~:
+\begin{frame}{Multiple commands}
+  You can define multiple commands by creating sub-parsers that are then used as normal parsers to define a given command:
 
   \mintedpycode{python/cli/subparsers}
 \end{frame}
 
-\begin{frame}{Utilisation}
-  Appel de la méthode \texttt{parse\_args} puis traitement des arguments recupérés.
+\begin{frame}{Parser usage}
+  First we call the \texttt{parse\_args} method, then we handle the received arguments.
 
   \mintedpycode{python/cli/usage}
 \end{frame}
 
-\begin{frame}{Utilisation avancée qui couple la CLI à la fonction appelée}
-  \begin{alertblock}{Attention}
-    Utilisation avancée, à regarder pendant un deuxième passage sur les slides.
+\begin{frame}{Advanced usage to couple the CLI and the called feature}
+  \begin{alertblock}{Warning}
+    Not suited for a first exposition, you can study that after having mastered simple CLIs.
   \end{alertblock}
   \mintedpycode{python/cli/usage-coupled}
 
   \begin{itemize}
-    \item \texttt{vars} transforme l'objet \texttt{args} en dictionnaire
-    \item \texttt{**} «~éclate~» le dictionnaire en mots-clefs et valeurs
-    \item suppression préalable des arguments non-utilisés avec \texttt{delattr}
+    \item \texttt{vars} turns the object \texttt{args} into a dictionary
+    \item \texttt{**} «~spreads~» the dictionary into keywords and values
+    \item deletion of unused keys with \texttt{delattr} before calling the target function/class
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Quelques bonus apportés par \texttt{argparse}}
-  \begin{itemize}[<+->]
-    \item Aide générée automatiquement
-    \item Messages d'erreurs informatifs quand les arguments sont incorrects
+\begin{frame}{Some reasons to use \texttt{argparse}}
+  \begin{itemize}
+    \item It generates a help argument and text automatically
+    \item It gives informative error messages when your program is used incorrectly 
   \end{itemize}
 \end{frame}

@@ -1,66 +1,66 @@
 \begin{frame}{Introduction}
-  Contrôler son environnement logiciel pour~:
+  Goals of controlling your software environment~:
   \begin{itemize}
-    \item Rendre son environnement de développement reproductible
-    \item Contrôler les dépendances pour la prod
-    \item Déployer son environnement facilement sur différents clouds
+    \item Make your dev environment reproducible
+    \item Control dependencies for production
+    \item Deploy easily on any cloud
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Isolation de l'environnement --- \texttt{venv}}
-  \texttt{venv} permet d'isoler un environnement Python~:
+\begin{frame}{Environment isolation --- \texttt{venv}}
+  \texttt{venv} allows you to isolate your Python environment~:
   \begin{itemize}
-    \item N'intéragit pas avec l'environnement système
-    \item Permet la cohabitation de plusieurs environnements incompatibles
-    \item Plus rapide et natif que les solutions basées sur les conteneurs
-    \item Copie d'une distribution Python de base + customisation
+    \item It will not interact with your system installation
+    \item It allows multiple and non-compatible environments on the same machine
+    \item It is faster than container-based solutions
+    \item It works by copying a Python installation (\textit{e.g.} the system one) and customizing it
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Utilisation de \texttt{venv}}
+\begin{frame}{\texttt{venv} usage}
   \mintedcustomcode{python/production/environment/venv}{console}
 \end{frame}
 
-\begin{frame}{Contrôle des dépendances}
-  But~: décrire précisément quelles libraires (et leur version) sont utilisées.
+\begin{frame}{Dependencies management}
+  Goal~: describe precisely which libraries (including their version) are used.
 
-  Plusieurs bons outils~:
+  Several good tools exist~:
 
   \begin{description}
-    \item[\texttt{pip} + \texttt{setup.py}] Outil traditionnel, définit un paquet Python
-    \item[\texttt{pip} + \texttt{requirements.txt}] Liste simple de dépendances
-    \item[\texttt{pip} + \texttt{pip-compile}] Lister les dépendances puis les geler pour la stabilité
-    \item[\texttt{Pipenv}] Définition moderne d'une \textbf{application} Python (pas librairie)
-    \item[\texttt{poetry}] Définition moderne d'application ou librairie
+    \item[\texttt{pip} + \texttt{setup.py}] Traditional tool, defines a Python package
+    \item[\texttt{pip} + \texttt{requirements.txt}] Simple dependencies list
+    \item[\texttt{pip} + \texttt{pip-compile}] Same as above and handles dependencies version freeze
+    \item[\texttt{Pipenv}] Modern tool to define a Python \textbf{client} but not a library
+    \item[\texttt{poetry}] Modern tool to define a Python client or library
   \end{description}
 \end{frame}
 
-\begin{frame}{Utilisation de \texttt{poetry}}
-  Quelques \bluelink{https://python-poetry.org/docs/cli/}{commandes} utiles pour la gestion de dépendances~:
+\begin{frame}{\texttt{poetry} usage}
+  A few useful \bluelink{https://python-poetry.org/docs/cli/}{commands} to manage dependencies~:
   \begin{description}
-    \item[\texttt{poetry new}] Crée un squelette de paquet Python géré par \texttt{poetry}
-    \item[\texttt{poetry add}] Ajoute un paquet comme dépendance du projet
-    \item[\texttt{poetry remove}] Enlève un paquet comme dépendance du projet
-    \item[\texttt{poetry install}] Installe les dépendances telles que spécifiées dans le fichier \texttt{poetry.lock} (géré automatiquement par \texttt{poetry})
-    \item[\texttt{poetry export}] Exporte le fichier \texttt{pyproject.toml} vers d'autres formats (comme \texttt{requirements.txt})
+    \item[\texttt{poetry new}] Creates a Python package skeleton that follows \texttt{poetry} standards
+    \item[\texttt{poetry add}] Adds a Python package as dependency
+    \item[\texttt{poetry remove}] Removes a Python package as dependency
+    \item[\texttt{poetry install}] Installs dependencies as described in the \texttt{poetry.lock} file (which is handled by \texttt{poetry})
+    \item[\texttt{poetry export}] Exports the \texttt{poetry.lock} to other formats (\textit{e.g.} \texttt{requirements.txt})
   \end{description}
 \end{frame}
 
-\begin{frame}{Faciliter le déploiement}
-  Quelques plate-formes minoritaires acceptent les paquets Python pour le déploiement.
+\begin{frame}{Towards deployment}
+  A few platforms will directly deploy Python packages.
 
-  Le plus souvent, une étape intermédiaire est nécessaire avant le déploiement, la transformation en conteneur~:
+  More often, you will have to perform an additional step before deploying, containerization~:
 
   \begin{itemize}
-    \item Permet de contrôler les librairies natives en plus des librairies Python
-    \item Plus grande robustesse si le logiciel s'exécute sur plusieurs OS
-    \item Plus lourd à mettre en place que \texttt{venv}
-    \item Plus adapté pour la prod (déploiement facile par Kubernetes)
+    \item It allows to manage native dependencies on top of Python dependencies
+    \item It has a greater robustness if the software is deployed on several OSes
+    \item It is heavier to setup than \texttt{venv}
+    \item It is overall more suited for production (\textit{e.g.} easy deployment on a Kubernetes cluster)
   \end{itemize}
 
-  $\Rightarrow$ Dockerisation du paquet Python à l'aide d'un fichier \texttt{Dockerfile}
+  $\Rightarrow$ Dockerization of a Python package with a \texttt{Dockerfile}
 \end{frame}
 
-\begin{frame}{Exemple de \texttt{Dockerfile}}
+\begin{frame}{\texttt{Dockerfile} example}
   \mintedcustomcode{python/production/environment/Dockerfile}{docker}
 \end{frame}

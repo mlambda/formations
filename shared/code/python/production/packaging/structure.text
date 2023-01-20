@@ -1,7 +1,7 @@
-mon-paquet
+demo-package
 ├── pyproject.toml
 ├── README.md
-├── mon_paquet
+├── demo_package
 │   ├── __init__.py
 │   ├── module1.py
 │   └── module2.py

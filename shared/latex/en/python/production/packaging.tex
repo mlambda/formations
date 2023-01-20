@@ -1,77 +1,76 @@
 \begin{frame}{Introduction}
-  Buts~:
+  Goals:
   \begin{itemize}
-    \item Pouvoir publier un logiciel Python sous forme de paquet sur PyPI
-    \item Bien définir ses dépendances et méta-données
+    \item Publish a Python software as a proper PyPI package
+    \item Define metadata \& dependencies correctly
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Paquet Python}
-  Pour transformer un dossier contenant des sources Python en paquet~:
+\begin{frame}{Python package}
+  To turn a folder containing Python sources into a package, you need to:
 
   \begin{itemize}
-    \item Rajouter des fichier \texttt{\_\_init\_\_.py} dans chaque dossier de source
-    \item Ajouter des méta-données (dépendantes de l'outil de build)
+    \item Add \texttt{\_\_init\_\_.py} files in each source directory
+    \item Add some metadata (\textit{how much} and \textit{what exactly} will depend on the build tool)
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Outils}
+\begin{frame}{Tools}
   \begin{itemize}
     \item \texttt{setup.py}, \& \texttt{setuptools}
     \item \texttt{Pipenv}
     \item \texttt{poetry}
   \end{itemize}
 
-  \texttt{poetry} est recommandé actuellement. Outil simple, moderne et complet.
+  \texttt{poetry} is the recommended choice. Simple, modern, efficient.
 \end{frame}
 
-\begin{frame}{Structure d'un paquet géré par \texttt{poetry}}
+\begin{frame}{Structure of a \texttt{poetry} package}
   \mintedcustomcode{python/production/packaging/structure}{text}
-  \begin{alertblock}{Attention}
-    Le nom du dossier source n'est pas \texttt{src} mais le nom du paquet (avec les \texttt{-} remplacés par des \texttt{\_})
+  \begin{alertblock}{Warning}
+    The source folder is not \texttt{src} but your package name (often your project name in lowercase with \texttt{-} replaced by \texttt{\_})
   \end{alertblock}
 \end{frame}
 
-\begin{frame}{Fichier \texttt{pyproject.toml}}
-  Standard depuis la PEP 518~:
+\begin{frame}{\texttt{pyproject.toml} file}
+  Contains:
 
   \begin{itemize}
-    \item Définit l'outil de build du paquet à utiliser
-    \item Contient les méta-données
-    \item Spécifie les dépendances, y compris de développement et extras
-    \item En cours d'adoption par toute la chaîne d'outillage
-    \item Déjà utilisable car supporté par \texttt{pip}
+    \item Metadata
+    \item Dependencies specification (but most often not frozen versions)
+    \item Dev dependencies specification (same as above)
+    \item Entrypoints
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Exemple de fichier \texttt{pyproject.toml}}
+\begin{frame}{\texttt{pyproject.toml} example file}
   \mintedcustomcode{python/production/packaging/example}{toml}
 \end{frame}
 
-\begin{frame}{Utilisation de \texttt{poetry}}
-  Quelques \bluelink{https://python-poetry.org/docs/cli/}{commandes} utiles pour la gestion de paquets~:
+\begin{frame}{\texttt{poetry} usage}
+  A few useful \bluelink{https://python-poetry.org/docs/cli/}{commands} for packaging:
   \begin{description}
-    \item[\texttt{poetry version}] Affiche ou modifie la version du paquet
-    \item[\texttt{poetry build}] Construit la distribution du paquet
-    \item[\texttt{poetry publish}] Publie le paquet sur PyPI
+    \item[\texttt{poetry version}] Displays or modifies the package version
+    \item[\texttt{poetry build}] Creates the files needed to upload the package to PyPI
+    \item[\texttt{poetry publish}] Publishes the package
   \end{description}
 \end{frame}
 
-\begin{frame}{Dépôt PyPI}
-  Dépôt des projets Python~:
+\begin{frame}{PyPI repository}
+  Python packages repository:
 
   \begin{description}
-    \item[Projets] 350k+
-    \item[Versions] 3M+
-    \item[Fichiers] 5M+
-    \item[Utilisateurs] 500k+
+    \item[Projects] 400k+
+    \item[Versions] 4M+
+    \item[Files] 7M+
+    \item[Users] 600k+
   \end{description}
 \end{frame}
 
-\begin{frame}{Intérêt}
+\begin{frame}{Pros}
   \begin{itemize}
-    \item Utilisation depuis \texttt{pip}, \texttt{poetry}, \texttt{Pipenv}, …
-    \item Impossible de remplacer les fichiers d'une version par de nouveaux fichiers
-    \item Possibilité d'utilisation depuis la CI
+    \item Usable from \texttt{pip}, \texttt{poetry}, \texttt{Pipenv}, …
+    \item \textbf{Some} security: impossible to replace the files of a given version by new files
+    \item Usable from CI
   \end{itemize}
 \end{frame}

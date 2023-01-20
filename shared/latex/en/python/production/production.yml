@@ -1,8 +1,8 @@
 default_titles:
-  deployment: Déploiement
-  environment: Gestion de l'environment logiciel
-  packaging: Création de paquets Python
-  cli: Interfaces en ligne de commande
+  deployment: Deployment
+  environment: Software environment management
+  packaging: Python packages creation
+  cli: Command line interfaces
 flavors:
   full:
     - environment
@@ -26,4 +26,4 @@ flavors:
     - cli
     - /en/questions
     - tp-cli
-title: Ingénierie de projets en Python
+title: Python software engineering
