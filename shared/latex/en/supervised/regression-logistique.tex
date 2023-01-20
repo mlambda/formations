@@ -1,27 +1,27 @@
 \begin{frame}{Introduction}
-  Les régressions linéaire et logistique partagent le même cœur~: une fonction affine des données.
+  Linear and logistic regressions share the same core: an affine function of the data.
   
-  La régression logistique ajoute à ce cœur un mécanisme pour prédire des probabilités.
+  Logistic regression adds to this core a mechanism for predicting probabilities.
 \end{frame}
 
-\begin{frame}{Le cas à 2 classes}
+\begin{frame}{The 2-class case}
   \begin{center}
-    \V{["tikz/activations/sigmoid", "tw", 1] | image}
+    \V{["tikz/activations/sigmoid", "tw", 0.9] | image}
   \end{center}
 
-  Ajout d'une sigmoïde au mécanisme de régression linéaire pour prédire des probabilités d'appartenance à une classe~: 
+  Adding a sigmoid to the linear regression to predict class probabilities:
   \begin{center}
     $P(Y = 1 \mid X) = \sigma(\theta_0 + \theta_1 x_1 + \dots + \theta_d x_d)$
   \end{center}
 
-  On décide ensuite d'un seuil pour déterminer la classe prédite (par exemple $0,5$).
+  Then, set a threshold to determine the predicted class (for example $0.5$).
 \end{frame}
 
-\begin{frame}{Régression logistique à plusieurs classes}
-  Avec $k$ classes~:
+\begin{frame}{Multi-class logistic regression}
+  With $k$ classes:
 
   \begin{description}
-  \item[Un contre tous] $k$ régressions logistiques~: chaque classe contre toutes les autres
-  \item[Un contre un] $\frac{k(k - 1)}{2}$ régressions logistiques~: chaque classe contre chaque autre classe
+  \item[One against all] $k$ logistic regressions: each class against all others
+  \item[One versus one] $\frac{k(k - 1)}{2}$ logistic regressions~: each class against each other class
   \end{description}
 \end{frame}

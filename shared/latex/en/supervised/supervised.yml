@@ -32,18 +32,18 @@ flavors:
   mlb:
     - regression-lineaire
     - cost-error-function
-    - /nn/gradient-descent
+    - /en/nn/gradient-descent
     - regression-polynomiale
     - classification
     - regression-logistique
-    - /questions
+    - /en/questions
     - tp-reg-lin-poly
     - svm
     - demo-sklearn-svm
     - trees
     - trees-details
     - random-forest
-    - /questions
+    - /en/questions
     - demo-sklearn-random-forest
     - tp-random-forest
   mmd:

@@ -1,15 +1,15 @@
 
-\begin{frame}{Régression polynômiale}
-  Limites de la regression linéaire
+\begin{frame}{Polynomial regression}
+  Linear regression limitations
   \V{["plt/residuals-1", "tw", 1] | image}
 \end{frame}
 
-\begin{frame}{Régression polynômiale}
-  Limites de la regression linéaire
+\begin{frame}{Polynomial regression}
+  Linear regression limitations
   \V{["plt/residuals-2", "tw", 1] | image}
 \end{frame}
 
-\begin{frame}{Exemple de régressions polynômiales}
+\begin{frame}{Example of polynomial regressions}
   \begin{columns}
     \begin{column}{0.25\tw}
       \[
@@ -22,14 +22,14 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Gradient et mise à jour}
+\begin{frame}{Gradient and update}
   \begin{align*}
     \hat{y}_i & = \sum_{k = 0}^n \theta_k x_i^k \\
-    E & = \frac{1}{2n} \sum_{i=1}^n (\hat{y_i} - y_i)^2 \\
-    \frac{\partial{E}}{\partial{\theta_k}} & = \frac{1}{n} \sum_{i=1}^n (\hat{y_i} - y_i) x_i^k
+    E & = \frac{1}{2n} \sum_{i=1}^n (\hat{y}_i - y_i)^2 \\
+    \frac{\partial{E}}{\partial{\theta_k}} & = \frac{1}{n} \sum_{i=1}^n (\hat{y}_i - y_i) x_i^k
   \end{align*}
 
-  Mise à jour, avec $1 > \gamma > 0$ (pas d'apprentissage)~:
+  Update, with $0 < \gamma < 1$ (learning rate):
 
   \[
     \theta_k \leftarrow \theta_k - \gamma\frac{\partial{E}}{\partial{\theta_k}}

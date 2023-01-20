@@ -1,14 +1,14 @@
-\begin{frame}{Définition du problème}
-  Soit $\{(x_i, y_i)\}_{i \in \mathbb{N}}$ un ensemble de données tel que $\forall i, x_i \in \mathbb{R}$ et $y_i \in \mathbb{R}$ \\
+\begin{frame}{Problem definition}
+  Let  $\{(x_i, y_i)\}_{i \in \mathbb{N}}$ be a dataset where $\forall i, x_i \in \mathbb{R}$ and $y_i \in \mathbb{R}$.
 
-  Trouver $f: x_i \mapsto \hat{y_i}$ telle que $\hat{y_i} = \theta_0 + \theta_1 x_i$
+  Find $f: x_i \mapsto \hat{y_i}$ such that $\hat{y_i} = \theta_0 + \theta_1 x_i$
 
-  On souhaite minimiser l'erreur commise, par exemple~:
+  We want to minimize the error:
   \[
     \argmin_f \sum_i \lvert \hat{y_i} - y_i \rvert
   \]
 \end{frame}
 
-\begin{frame}{Visualisation}
-  \V{["plt/reg-plot", "th", 0.7] | image}
+\begin{frame}{Visualization}
+  \V{["plt/reg-plot-en", "th", 0.7] | image}
 \end{frame}
