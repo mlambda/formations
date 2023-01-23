@@ -1,69 +1,69 @@
 \begin{frame}{Introduction}
-  Modèle de classification ou regréssion qui classe un exemple dans une de ses feuilles pour rendre sa prédiction~:
+  Classification (or regression) model that classifies an example into one of its leaves to make its prediction:
   \V{["tikz/tree/decision", "th", 0.6] | image}
 \end{frame}
 
-\begin{frame}{Avantages}
-  Les arbres de décision
+\begin{frame}{Benefits}
+  Decision trees
 
   \begin{itemize}
-    \item gèrent les inputs numériques comme catégoriels
-    \item sont interprétables
-    \item sont très rapides durant l'inférence
-    \item ne nécessitent pas de normalisation des données
-    \item leur apprentissage est hautement parallèlisable
+    \item handle numerical inputs as categorical
+    \item interpretable
+    \item fast inference
+    \item data normalization not required
+    \item highly parallelizable learning
   \end{itemize}
 
-  $\Rightarrow$ Couteau-suisse du machine learning tabulaire.
+  $\Rightarrow$ The Swiss Army knife of tabular machine learning.
 \end{frame}
 
-\begin{frame}{Désavantages}
-  Les arbres de décision
+\begin{frame}{Disadvantages}
+  Decision trees
 
   \begin{itemize}
-    \item peuvent overfit les données, mais l'ensembling résoud ce problème
-    \item sont sensibles aux déséquilibres de classe
+    \item can overfit the data, but ensembling solves this problem
+    \item are sensitive to class imbalances
   \end{itemize}
-  $\Rightarrow$ Si les classes ne sont pas équilibrées, peut-être les ré-échantillonner.
+  $\Rightarrow$ If the classes are not balanced, perhaps resample them.
 \end{frame}
 
-\begin{frame}{Arbres de classification}
+\begin{frame}{Classification trees}
   \V{["tikz/tree/decision", "th", 0.7] | image}
 \end{frame}
 
-\begin{frame}{Arbres de régression}
+\begin{frame}{Regression trees}
   \V{["tikz/tree/regression", "th", 0.7] | image}
 \end{frame}
 
-\begin{frame}{Apprendre un arbre de décision}
-  Approche descendante, procédure récursive~:
+\begin{frame}{Learn a decision tree}
+  Top-down approach, recursive procedure~:
 
   \begin{itemize}
-    \item Créer un nœud de départ qui contient toutes les instances de la base d'entraînement
-    \item Tant qu'il reste des nœuds non-traités~:
+    \item Create a start node that contains all instances of the training base
+    \item As long as there are still unprocessed nodes~:
       \begin{itemize}
-        \item Choisir un nœud non traité
-        \item Si le nœud remplit des conditions de feuille finale, ne rien faire
-        \item Sinon, créer deux branches à partir du nœud non traité pour répartir les instances dans deux nouveaux nœuds
+        \item Choose an unprocessed node
+        \item If the node meets final leaf conditions, do nothing
+        \item If not, create two branches from the unprocessed node to distribute the instances into two new nodes
       \end{itemize}
   \end{itemize}
 
-  Conditions de feuilles finales~: contient $n_{min}$ éléments, est déjà à profondeur $p_{max}$, splitterait sans décroître assez l'entropie…
+  Final leaf conditions: contains $n_{min}$ elements, is already $p_{max}$ deep, would split without decreasing entropy enough...
 \end{frame}
 
-\begin{frame}{Décision rendue}
-  En fonction de la tâche, une fois arrivé dans la feuille de fin~:
+\begin{frame}{Decision made}
+  According to the task, once arrived at the final leaf:
 
   \begin{description}
-  \item[Classification] Classe majoritaire
-  \item[Régression] Moyenne des valeurs cibles
+  \item[Classification] Majority class
+  \item[Regression] Target values mean
   \end{description}
 \end{frame}
 
-\begin{frame}{Splits possibles}
-  Splits possibles d'une caractéristique donnée~:
+\begin{frame}{Possible splits}
+  Possible splits of a given feature:
   \begin{description}
-    \item[Catégorielle] Chaque catégorie contre le reste
-    \item[Ordinale/Continue] Milieu de chaque paire de valeurs consécutives ou quantiles
+    \item[Categorical] Each category against the rest
+    \item[Ordinal/Continuous] Middle of each pair of consecutive values or quantiles
   \end{description}
 \end{frame}

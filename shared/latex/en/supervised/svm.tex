@@ -1,32 +1,32 @@
-\begin{frame}{Données séparables linéairement}
+\begin{frame}{Linearly separable data}
   \V{["img/separable-problem-linear-nzmog", "tw", 0.8] | image}
 \end{frame}
 
-\begin{frame}{Mauvaise solution — Données d'entraînement}
+\begin{frame}{Wrong solution -- Training data}
   \V{["img/separable-problem-linear-solution-nzmog", "tw", 0.8] | image}
 \end{frame}
 
-\begin{frame}{Mauvaise solution — Nouvelles données}
+\begin{frame}{Wrong solution -- Nex data}
   \V{["img/separable-problem-linear-solution-bad-nzmog", "tw", 0.8] | image}
 \end{frame}
 
-\begin{frame}{Solution d'un séparateur à vaste marge}
+\begin{frame}{SVM solution}
   \V{["img/svm-schema-nzmog", "tw", 0.8] | image}
 \end{frame}
 
-\begin{frame}{Données non séparables linéairement}
+\begin{frame}{Non-linearly separable data}
   \V{["plt/separable-problem-nonlinear-solution", "th", 0.75] | image}
 \end{frame}
 
-\begin{frame}{Transformation par un noyau (ici polynômial)}
+\begin{frame}{Kernel transformation (here polynomiale)}
   \V{["plt/separable-problem-nonlinear-kernelsvm", "th", 0.75] | image}
 \end{frame}
 
-\begin{frame}{Stratégies pour la classification multi-classes}
-  Pour un problème à $k$ classes~:
+\begin{frame}{Strategies for multi-class classification}
+  For a $k$ class problem:
 
   \begin{description}
-    \item[Un contre le reste] $k$ modèles. Agrégation par meilleur score.
-    \item[Un contre un] $\frac{k(k - 1)}{2}$ modèles. Vote majoritaire.
+    \item[One versus all] $k$ models. Best score aggregation.
+    \item[One versus one] $\frac{k(k - 1)}{2}$ models. Majority vote.
   \end{description}
 \end{frame}
