@@ -1,12 +1,12 @@
-\begin{frame}{Principe}
-  Local outlier factor en Anglais.
+\begin{frame}{Principles}
+  Local outlier factor
   \begin{columns}
     \begin{column}{.7\tw}
-      \begin{itemize}[<+->]
-        \item anomalies locales
-        \item basé sur les k voisins du point
-        \item définit une \og atteignabilité\fg{} par les distances de ces voisins
-        \item calcule un ratio moyen d'atteignabilité du point et de ses voisins
+      \begin{itemize}
+        \item Local anomalies
+        \item based on the k neighbors of the point
+        \item defines a reachability by the distances of these neighbors
+        \item computes an average ratio of reachability between the point and its neighbors
       \end{itemize}
     \end{column}
     \begin{column}{.3\tw}
@@ -14,16 +14,16 @@
     \end{column}
   \end{columns}
 
-  \onslide<+->{→ Anomalie si le ratio moyen d'atteignabilité est beaucoup plus faible que celui de ses plus proches voisins.}
+  \onslide<+->{→ Anomaly if the average reachability ratio is much lower than its nearest neighbors}
 \end{frame}
 
-\begin{frame}{Exemple}
+\begin{frame}{Example}
   \V{["img/lof", "tw", 0.7] | image}
 \end{frame}
 
-\begin{frame}{Désavantages}
+\begin{frame}{Disadvantages}
   \begin{itemize}
-  \item lent (quadratique)
-  \item a des à priori sur la distribution des données
+  \item slow (quadratic)
+  \item has preconceived notions about the distribution of the data
   \end{itemize}
 \end{frame}

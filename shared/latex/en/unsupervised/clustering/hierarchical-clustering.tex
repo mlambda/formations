@@ -1,36 +1,41 @@
 
-\begin{frame}{Clustering Hiérarchique}
-  Deux approches~:
+\begin{frame}{Hierarchical clustering}
+  Two approaches:
 
-  \begin{itemize}[<+->]
-    \item Agglomératives (bottom-up)
-    \item Divisantes (top-down), moins utilisées
+  \begin{itemize}
+    \item Agglomerative (bottom-up)
+    \item Divisive (top-down) \textit{\#less used}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Clustering Hiérarchique --- Procédé}
-  Méthode Agglomérative
+\begin{frame}{Hierarchical clustering --- Process}
+  Agglomerative method
 
-  \begin{description}[<+->]
-    \item[Initialisation] Chaque élément est dans une classe distincte
-    \item[Aggrégation] Itérativement, fusion deux par deux les classes les plus similaires
-    \item[Exploitation] On choisit le nombre de clusters à exploiter
+  \begin{description}
+    \item[Initialization] Each element is in a separate class
+    \item[Aggregation] Iteratively, merge two by two the most similar classes
+    \item[Exploitation] We choose the number of clusters to exploit
   \end{description}
 \end{frame}
 
-\begin{frame}{Clustering Hiérarchique --- Résultat}
+\begin{frame}{Hierarchical clustering --- Résultat}
   \V{["img/dendogram", "th", 0.8] | image}
 \end{frame}
 
-\begin{frame}{Clustering Hiérarchique --- Procédé}
+\begin{frame}{Hierarchical clustering --- Process}
 
-  Pour décider des clusters les plus similaires (à fusionner donc), plusieurs options~:
+  To decide which clusters are the most similar (to be merged), several options:
 
-  \begin{description}[<+->]
-  \item[Saut minimum] $\underset{x \in C_1,y \in C_2}{\min}{D(x,y)}$
-  \item[Saut maximum] $\underset{x \in C_1,y \in C_2}{\max}{D(x,y)}$
-  \item[Saut moyen] $\underset{x \in C_1,y \in C_2}{\mean}{D(x,y)}$
-  \item[Méthode de Ward] Maximise l'inertie inter-classe
+  \begin{description}
+  \item[Minimal linkage] $\underset{x \in C_1,y \in C_2}{\min}{D(x,y)}$
+  \item[Maximal linkage] $\underset{x \in C_1,y \in C_2}{\max}{D(x,y)}$
+  \item[Average linkage] $\underset{x \in C_1,y \in C_2}{\mean}{D(x,y)}$
+  \item[Ward linkage] Minimize total within-cluster variance
+  \[
+    \sum_{x\in C_1\cup C_2} \lVert x - \mu_{C_1\cup C_2} \rVert^2
+    - \sum_{x\in C_1} \lVert x - \mu_{C_1} \rVert^2
+    - \sum_{x\in C_2} \lVert x - \mu_{C_2} \rVert^2
+  \]  
   \item ...
   \end{description}
 

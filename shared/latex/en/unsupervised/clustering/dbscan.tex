@@ -2,59 +2,59 @@
 \begin{frame}{DBSCAN --- Introduction}
   Density-Based Spatial Clustering of Applications with Noise…
 
-  \begin{itemize}[<+->]
-    \item Gère le bruit (points sans clusters)
-    \item Fonctionne bien dans la pratique
-    \item Ne nécessite pas de nombre de clusters prédéfini
+  \begin{itemize}
+    \item Handles noise (clusterless points)
+    \item Works well in practice
+    \item Does not require a predefined number of clusters
   \end{itemize}
 \end{frame}
 
-\begin{frame}{DBSCAN --- Procédé}
-  Tant qu'il reste des points non étiquetés~:
+\begin{frame}{DBSCAN --- Process}
+  As long as there are unlabeled points:
 
   \begin{enumerate}
-  \item Définir une distance $\epsilon$ et un nombre minimum de voisins $v$
-  \item Prendre un point non-étiqueté au hasard et regarder son $\epsilon$-voisinage
-  \item Si il y a $v$ voisins ou plus on crée un nouveau cluster
-    \begin{enumerate}
-    \item Expansion du cluster de proche en proche dans le voisinage
+    \item Define an $\epsilon$ distance and a minimum number of neighbors $v$
+    \item Take a non-labeled point at random and look at its $epsilon$-neighborhood
+    \item If there are $v$ neighbors, we create a new cluster
+      \begin{itemize}
+      \item[Iterate] Expand the cluster from near to near data points
+      \end{itemize}
+    \item Otherwise do nothing (Data point is noise)
     \end{enumerate}
-  \item Sinon (Bruit)
-  \end{enumerate}
 \end{frame}
 
-\begin{frame}{DBSCAN --- Démonstration}
+\begin{frame}{DBSCAN --- Demonstration}
   \V{["img/dbscan-1", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}{DBSCAN --- Démonstration}
+\begin{frame}{DBSCAN --- Demonstration}
   \V{["img/dbscan-2", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}{DBSCAN --- Démonstration}
+\begin{frame}{DBSCAN --- Demonstration}
   \V{["img/dbscan-3", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}{DBSCAN --- Démonstration}
+\begin{frame}{DBSCAN --- Demonstration}
   \V{["img/dbscan-4", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}{DBSCAN --- Démonstration}
+\begin{frame}{DBSCAN --- Demonstration}
   \V{["img/dbscan-5", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}{DBSCAN --- Démonstration}
+\begin{frame}{DBSCAN --- Demonstration}
   \V{["img/dbscan-6", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}{DBSCAN --- Démonstration}
+\begin{frame}{DBSCAN --- Demonstration}
   \V{["img/dbscan-7", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}{DBSCAN --- Démonstration}
+\begin{frame}{DBSCAN --- Demonstration}
   \V{["img/dbscan-8", "tw", 0.9] | image}
 \end{frame}
 
-\begin{frame}{DBSCAN --- Démonstration}
+\begin{frame}{DBSCAN --- Demonstration}
   \V{["img/dbscan-9", "tw", 0.9] | image}
 \end{frame}

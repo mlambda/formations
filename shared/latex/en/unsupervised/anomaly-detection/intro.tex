@@ -1,42 +1,42 @@
-\begin{frame}{Buts}
-  Détection~:
+\begin{frame}{Goals}
+  Detection~:
   \begin{itemize}
-  \item de fraude
-  \item d'intrusion/de Fuite (physique ou électronique)
-  \item en santé (biologique, geologique, machine, ...)
+  \item Fraud
+  \item Intrusion/data leakage (physical or electronic)
+  \item Health conditions (biological, geological, machine, ...)
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Définition}
+\begin{frame}{Definition}
   \begin{itemize}
-  \item une anomalie diffère de la norme par ses features
-  \item les anomalies sont rares comparées aux instances normales
+  \item An anomaly differs from the mean and standard deviation of features
+  \item Anomalies are rare compared to normal instances
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Paradigmes}
+\begin{frame}{Paradigms}
   \begin{itemize}
-    \item supervisé
-    \item non-supervisé
-    \item semi-supervisé
+    \item supervised
+    \item unsupervised
+    \item semi-supervised
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Supervisé}
-  Problème de classification normal, avec fort déséquilibre de classes.
-  Utiliser par exemple une librairie de ré-échantillonnage comme \bluelink{https://imbalanced-learn.org/}{imbalanced-learn}.
+\begin{frame}{Supervised}
+  Normal classification problem, with strong class imbalance.
+  Use for example a resampling library like \bluelink{https://imbalanced-learn.org/}{imbalanced-learn}.
 
-  Réseaux de neurones et SVM très performants.
+  Very efficient neural networks and SVM.
 \end{frame}
 
-\begin{frame}{Semi-Supervisé}
-  Détection de nouveauté. \\
-  Pas traité ici. \\
-  One-class SVM très utilisé.
+\begin{frame}{Semi-Supervised}
+  Novelty detection. \\
+  Not covered here. \\
+  One-class SVM widely used.
 \end{frame}
 
-\begin{frame}{Non-Supervisé}
-  De nombreuses méthodes : 
+\begin{frame}{Unsupervised}
+  Many methods: 
   \begin{itemize}
   \item Local Outlier Factor (LOF)
   \item Unweighted Cluster-Based Outlier Factor

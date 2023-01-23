@@ -1,36 +1,38 @@
 \begin{frame}{Projections non linéaires}
-  Plus intéressant pour découvrir des patterns en haute dimension~:
+  More efficient to discover patterns in high dimension:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item t-SNE
     \item UMAP
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Méthode}
-  Algorithmes de disposition de graphe.
+But they lose all linear interpretations.
 
-  Minimisation de la différence topologique entre deux graphes~:
+\begin{frame}{Method}
+  Graph layout algorithms.
 
-  \begin{itemize}[<+->]
-    \item Graphe construit en haute dimension
-    \item Graphe construit dans la dimension de projection
+  Minimization of the topological difference between two graphs~:
+
+  \begin{itemize}
+    \item Graph constructed in high dimension
+    \item Graph constructed in the projection dimension
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Paramètres}
-  Dans les deux algorithmes, on peut contrôler le trade-off structure local / structure globale~:
+\begin{frame}{Parameters}
+  In both algorithms, we can control the trade-off local structure / global structure~:
 
-  \begin{itemize}[<+->]
-    \item La perplexité de t-SNE $\approx$ nombre de voisins considérés comme connectés
-    \item UMAP utilise explicitement un argument de nombre de voisins connectés
+  \begin{itemize}
+    \item The perplexity of t-SNE $\approx$ number of neighbors considered as connected
+    \item UMAP explicitly uses a number of connected neighbors argument
   \end{itemize}
 \end{frame}
 
-\begin{frame}{t-SNE --- Bonnes pratiques \& Analyse}
-  \bluelink{https://distill.pub/2016/misread-tsne/}{Article t-SNE}
+\begin{frame}{t-SNE --- Good practices \& Analysis}
+  \bluelink{https://distill.pub/2016/misread-tsne/}{t-SNE}
 \end{frame}
 
-\begin{frame}{UMAP --- Bonnes pratiques \& Analyse}
-  \bluelink{https://pair-code.github.io/understanding-umap/}{Article UMAP}
+\begin{frame}{UMAP --- Good practices \& Analysis}
+  \bluelink{https://pair-code.github.io/understanding-umap/}{UMAP}
 \end{frame}

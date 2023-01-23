@@ -1,64 +1,47 @@
-\begin{frame}{Métriques de clustering --- Introduction}
-  Deux cas~:
+\begin{frame}{Clustering metrics --- Introduction}
+  Two cases:
 
-  \begin{enumerate}[<+->]
-    \item Si on dispose de données annotées (même insuffisantes pour apprendre) $\rightarrow$ métriques supervisées de classification
-    \item Sinon, on évalue la qualité \emph{intrinsèque} des clusters
+  \begin{enumerate}
+    \item If we have annotated data (even insufficient to learn) $\rightarrow$ supervised classification metrics
+    \item Otherwise, we evaluate the quality of the clusters
   \end{enumerate}
 
 \end{frame}
 
-\begin{frame}{Métriques de clustering --- Application des métriques supervisées}
-  Un calcul préalable est nécessaire~: le mapping optimal entre les clusters et les labels.
+\begin{frame}{Clustering metrics --- Application of supervised metrics}
+  A prior computation is necessary: the optimal mapping between clusters and labels.
 
-  Plusieurs possibilités~:
+  Several possibilities:
 
-  \begin{itemize}[<+->]
-    \item Algorithme hongrois
-    \item Sous-optimal mais bonne première approche~: classe la plus représentée dans chaque cluster
+  \begin{itemize}
+    \item Hungarian algorithm
+    \item Sub-optimal but good first approach: most represented class in each cluster
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Métriques de clustering --- Inertie}
+\begin{frame}{Clustering metrics --- Inertia}
   \begin{center}
-    coût = $\sum_i \sum_j \delta_{i,j}\lVert x_j - \mu_i \rVert^2$
+    loss = $\sum_i \sum_j \delta_{i,j}\lVert x_j - \mu_i \rVert^2$
   \end{center}
-  où $\delta_{i,j}$ vaut 1 si le cluster $\mu_i$ est le plus proche du point $x_j$, 0 sinon
+  with $\delta_{i,j}$ is 1 if the cluster $\mu_i$ is the closest to $x_j$, 0 otherwise
 \end{frame}
 
-\begin{frame}{Métriques de clustering --- Silhouette}
-  Points $x = \{x_1, \dotsc, x_n\}$ , Clusters $\mu = \{\mu_1, \dotsc, \mu_k\}$. \\
+\begin{frame}{Clustering metrics --- Silhouette}
+  Data $x = \{x_1, \dotsc, x_n\}$ , Clusters $\mu = \{\mu_1, \dotsc, \mu_k\}$ and $x_i\in\mu_I$ \\
   \[
-  \boxed{a(x_i) = \frac{1}{\#\mu_i-1}\sum_j |x_i - x_j|}
+  \boxed{a_i = \frac{1}{|\mu_I|-1}\sum_{j\in|\mu_I|, i \neq j} |x_i - x_j|}
   \]
   \[
-  \boxed{b(x_i) = \min_{i \neq j} \frac{1}{\#\mu_j}\sum_j |x_i - x_j|}
+  \boxed{b_i = \min_{I \neq J} \frac{1}{|\mu_J|}\sum_j |x_i - x_j|}
   \]
-  où : \\
-  $\#\mu_i$ est le nombre d'éléments de x dans le cluster $\mu_i$ \\
-  L'ensembe d'indice j ne représente que ceux des points appartenant au cluster $\mu_j$ \\
-  $a(x_i)$ : distance moyenne aux autres points du cluster contenant $x_i$ \\
-  $b(x_i)$ : distance moyenne aux points du cluster le plus proche
+  where : \\
+  $|\mu_I|$  is the number of elements of x in the cluster $\mu_I$ \\
+  $a_i$ : average distance to the points in the same cluster than $x_i$ \\
+  $b_i$ : average distance to the points of the nearest cluster which do not contains $x_i$
   
 \end{frame}
 
-\begin{frame}{Métriques de clustering --- Silhouette}
-  Points $x = \{x_1, \dotsc, x_n\}$ , Clusters $\mu = \{\mu_1, \dotsc, \mu_k\}$. \\
-  \[
-  \boxed{a(x_i) = \frac{1}{\#\mu_i-1}\sum_j |x_i - x_j|}
-  \]
-  \[
-  \boxed{b(x_i) = \min_{i \neq j} \frac{1}{\#\mu_j}\sum_j |x_i - x_j|}
-  \]
-  où : \\
-  $\#\mu_i$ est le nombre d'éléments de x dans le cluster $\mu_i$ \\
-  L'ensembe d'indice j ne représente que ceux des points appartenant au cluster $\mu_j$ \\
-  $a(x_i)$ : distance moyenne aux autres points du cluster contenant $x_i$ \\
-  $b(x_i)$ : distance moyenne aux points du cluster le plus proche
-  
-\end{frame}
-
-\begin{frame}{Métriques de clustering --- Silhouette}
+\begin{frame}{Clustering metrics --- Silhouette}
   
   \begin{center}
     \[
@@ -72,17 +55,17 @@
     \]
     
   \end{center}
-  donc $s_i \in [-1, 1]$ \\
+  with $s_i \in [-1, 1]$ \\
   \\
-  $s_i \approx 1 \iff$ $x_i$ bien clusterisé \\
-  $s_i \approx 0 \iff$ $x_i$ au bord de 2 clusters\\
-  $s_i \approx -1 \iff$ $x_i$ mal clusterisé
+  $s_i \approx 1 \iff$ $x_i$ well clusterized \\
+  $s_i \approx 0 \iff$ $x_i$ at the edge between two clusters\\
+  $s_i \approx -1 \iff$ $x_i$ poorly clusterized
 \end{frame}
 
-\begin{frame}{Métriques de clustering --- Et d'autres options existent}
+\begin{frame}{Clustering metrics --- Many other metrics}
   \begin{itemize}
-  \item Calinski-Harabaz index
-  \item Davies-Bouldin Index
+  \item Calinski-Harabaz index: Density comparison inter vs intra cluster (no bound, the higher the better)
+  \item Davies-Bouldin Index: cluster similarity measurement (the lower the better)
   \item ...
   \end{itemize}
 \end{frame}

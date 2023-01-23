@@ -1,9 +1,9 @@
 default_titles:
-  demo: Démonstration \texttt{scikit-learn}
+  demo: \texttt{Scikit-learn} demonstration
   intro: Introduction
-  isolation-forest: Forêt d'isolement
+  isolation-forest: Isolation forest
   lof: Local Outlier Factor
-  /supervised/trees: Introduction aux arbres de décision
+  /supervised/trees: Decision trees introduction
 
 flavors:
   full:
@@ -15,4 +15,11 @@ flavors:
     - demo
     - /questions
     - help-pointers
-title: Détection d'anomalies
+  full-no-tree-intro:
+    - intro
+    - lof
+    - isolation-forest
+    - demo
+    - /questions
+    - help-pointers
+title: Anomaly detection

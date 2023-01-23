@@ -1,15 +1,15 @@
 default_titles:
   conclusion: Conclusions
   dbscan: DBSCAN
-  demo: Démonstration
-  hierarchical-clustering: Clustering Hiérarchique
+  demo: Demonstration
+  hierarchical-clustering: Hierarchical clustering
   intro: Introduction
   kmeans-gaussian: K-Means
-  metrics: Métriques de clustering
-  pca-classification-hierarchique-composantes-principales: Méthodes hybrides
-  pca-inverse: Clustering par ACP
-  tp: Travaux pratiques
-  tuto: Exemples \texttt{scikit-learn}
+  metrics: Clustering metrics
+  pca-classification-hierarchique-composantes-principales: Hybrid methods
+  pca-inverse: Clustering with PCA
+  tp: Exercices
+  tuto: \texttt{Scikit-learn} examples
 flavors:
   bda:
     - intro

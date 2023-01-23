@@ -27,34 +27,33 @@
 \end{frame}
 
 \begin{frame}{Métriques de clustering --- Silhouette}
-  Points $x = \{x_1, \dotsc, x_n\}$ , Clusters $\mu = \{\mu_1, \dotsc, \mu_k\}$. \\
+  Points $x = \{x_1, \dotsc, x_n\}$ , Clusters $\mu = \{\mu_1, \dotsc, \mu_k\}$ et $x_i\in\mu_I$. \\
   \[
-  \boxed{a(x_i) = \frac{1}{\#\mu_i-1}\sum_j |x_i - x_j|}
+  \boxed{a(x_i) = \frac{1}{|\mu_I|-1}\sum_{j\in|\mu_I|, i \neq j} |x_i - x_j|}
   \]
   \[
-  \boxed{b(x_i) = \min_{i \neq j} \frac{1}{\#\mu_j}\sum_j |x_i - x_j|}
+  \boxed{b(x_i) = \min_{I \neq J} \frac{1}{|\mu_J|}\sum_j |x_i - x_j|}
   \]
   où : \\
-  $\#\mu_i$ est le nombre d'éléments de x dans le cluster $\mu_i$ \\
-  L'ensembe d'indice j ne représente que ceux des points appartenant au cluster $\mu_j$ \\
+  $|\mu_I|$ est le nombre d'éléments de x dans le cluster $\mu_I$ \\
   $a(x_i)$ : distance moyenne aux autres points du cluster contenant $x_i$ \\
-  $b(x_i)$ : distance moyenne aux points du cluster le plus proche
+  $b(x_i)$ : distance moyenne aux points du cluster le plus proche ne contenant pas $x_i$
   
 \end{frame}
 
 \begin{frame}{Métriques de clustering --- Silhouette}
   Points $x = \{x_1, \dotsc, x_n\}$ , Clusters $\mu = \{\mu_1, \dotsc, \mu_k\}$. \\
   \[
-  \boxed{a(x_i) = \frac{1}{\#\mu_i-1}\sum_j |x_i - x_j|}
+  \boxed{a_i = \frac{1}{\#\mu_i-1}\sum_j |x_i - x_j|}
   \]
   \[
-  \boxed{b(x_i) = \min_{i \neq j} \frac{1}{\#\mu_j}\sum_j |x_i - x_j|}
+  \boxed{b_i = \min_{i \neq j} \frac{1}{\#\mu_j}\sum_j |x_i - x_j|}
   \]
   où : \\
   $\#\mu_i$ est le nombre d'éléments de x dans le cluster $\mu_i$ \\
   L'ensembe d'indice j ne représente que ceux des points appartenant au cluster $\mu_j$ \\
-  $a(x_i)$ : distance moyenne aux autres points du cluster contenant $x_i$ \\
-  $b(x_i)$ : distance moyenne aux points du cluster le plus proche
+  $a_i$ : distance moyenne aux autres points du cluster contenant $x_i$ \\
+  $b_i$ : distance moyenne aux points du cluster le plus proche
   
 \end{frame}
 
@@ -81,8 +80,8 @@
 
 \begin{frame}{Métriques de clustering --- Et d'autres options existent}
   \begin{itemize}
-  \item Calinski-Harabaz index
-  \item Davies-Bouldin Index
+  \item Calinski-Harabaz index : Comparaison densité inter et intra cluster (sans borne. Plus le score est élevé, plus le clustering est bon)
+  \item Davies-Bouldin Index : Mesure de similarité des clusters (Plus le score est faible, plus le clustering est bon)
   \item ...
   \end{itemize}
 \end{frame}

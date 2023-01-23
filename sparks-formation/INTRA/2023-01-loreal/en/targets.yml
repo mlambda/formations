@@ -19,8 +19,16 @@
     - en/unsupervised/introduction
     - path: en/unsupervised/dimensionality-reduction
       flavor: mlb
-    - path: en/unsupervised/clustering
-      flavor: bda
+    - en/unsupervised/clustering/intro
+    - en/unsupervised/clustering/kmeans-gaussian
+    - en/unsupervised/clustering/dbscan
+    - en/unsupervised/clustering/hierarchical-clustering
+    - en/unsupervised/clustering/pca-classification-hierarchique-composantes-principales
+    - en/unsupervised/clustering/metrics
+    - en/unsupervised/clustering/conclusion
+    - en/unsupervised/clustering/tuto
+    - en/unsupervised/clustering//questions
+    - en/unsupervised/clustering/tp
     - path: en/unsupervised/anomaly-detection
       flavor: full
 

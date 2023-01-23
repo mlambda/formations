@@ -1,29 +1,29 @@
-\begin{frame}{Projections linéaires}
-  Deux méthodes principales~:
+\begin{frame}{Linear projections}
+  Two main methods:
   \begin{itemize}
-    \item Analyse en composantes principales (ACP, \textit{PCA} en anglais, non-supervisée)
-    \item Analyse discriminante linéaire (ADL, \textit{LDA} en anglais, supervisée)
+    \item Principal Component Analysis (PCA, unsupervised)
+    \item Linear Discriminant Analysis (LDA, supervised)
   \end{itemize}
 \end{frame}
 
-\begin{frame}{ACP --- Caractéristiques}
+\begin{frame}{PCA --- Specificities}
   \begin{itemize}
-    \item Crée de nouvelles colonnes (combinaisons linéaires des originales)
-    \item Ces colonnes sont décorrélées
-    \item Les premières sont les plus informatives
-    \item Pour réduire la dimensionnalité~: ne conserver que les $k$ premières
+    \item Creates new columns (linear combinations of the original)
+    \item These columns are decorrelated
+    \item The first ones are the most informative
+    \item To reduce the dimensionality: keep only the first $k$.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{ACP --- Exemple 1}
+\begin{frame}{PCA --- Example 1}
   \V{["img/pca-nuage", "th", 0.7] | image}
 \end{frame}
 
-\begin{frame}{ACP --- Exemple 2}
+\begin{frame}{PCA --- Example 2}
   \V{["img/pca-fish", "th", 0.7] | image}
 \end{frame}
 
-\begin{frame}{ACP --- Point de départ}
+\begin{frame}{PCA --- Start point}
   \[
   X = \begin{bmatrix}
     X_{1,1} & \dots  & X_{1,D} \\
@@ -33,8 +33,8 @@
   \]
 \end{frame}
 
-\begin{frame}{ACP --- Procédé}
-  Chaque colonne est centrée~:
+\begin{frame}{PCA --- Process}
+  Each column is standardized:
   \[
   \overline{X} =
   \begin{bmatrix}
@@ -43,9 +43,7 @@
     X_{N,1}-\overline{X_1} & \dots  & X_{N,D}-\overline{X_D}
   \end{bmatrix}
   \]
-
-  puis optionnellement réduite~:
-
+then
   \[
   \widetilde{X} =
   \begin{bmatrix}
@@ -56,39 +54,39 @@
   \]
 \end{frame}
 
-\begin{frame}{ACP --- Procédé (suite)}
+\begin{frame}{PCA --- Process}
   \begin{itemize}
-    \item Calcul de la matrice de covariance (resp corrélation)~:
+    \item Calculation of the covariance matrix (respectively correlation):
       \[
       \frac{1}{N} \times \overline{X^T} \times \overline{X}
       \quad
       ( \frac{1}{N} \times \widetilde{X^T} \times \widetilde{X} )
       \]
-    \item Calcul des vecteurs propres de cette matrice~: ce sont les combinaisons linéaires des nouvelles colonnes
-    \item Tri des vecteurs par valeur propre décroissante
-    \item Réduction de dimension : on ne conserve que les $k$ premiers vecteurs propres
+    \item Calculation of the matrix eigenvectors: they are the linear combinations of the new columns
+    \item Sorting the vectors by decreasing eigenvalue
+    \item Dimensionality reduction: we keep only the first $k$ eigenvectors
   \end{itemize}
 
-  \bluelink{https://youtu.be/VrNw9TTVExY}{Illustration de l'ACP}
+  \bluelink{https://youtu.be/VrNw9TTVExY}{PCA illustration}
 \end{frame}
 
-\begin{frame}{ADL --- Analyse discriminante linéaire}
-  Procédé~:
+\begin{frame}{LDA --- Linear Discriminant Analysis}
+  Process:
 
   \begin{itemize}
-    \item Estimation de la matrice de covariance de chaque classe
-    \item ACP sur chacune de ces matrices
-    \item Projection en maximisant la variance inter-classes
+    \item Estimation of the covariance matrix of each class
+    \item PCA on each of these matrices
+    \item Projection by maximizing the inter-class variance
   \end{itemize}
-  \bluelink{https://youtu.be/sYrBSNp3jZc}{Illustration de l'ADL}
+  \bluelink{https://youtu.be/sYrBSNp3jZc}{LDA illustration}
 \end{frame}
 
-\begin{frame}{ADL --- Analyse discriminante linéaire}
-  Attention, technique délicate qui est sensible à~:
+\begin{frame}{LDA --- Linear Discriminant Analysis}
+  \textbf{Warning} This technique is sensitive to:
 
   \begin{itemize}
-    \item Forte dimensionnalité
-    \item Distribution multimodale
-    \item Homoscédasticité
+    \item High dimensionality
+    \item Multimodal distribution
+    \item Homoscedasticity
   \end{itemize}
 \end{frame}
