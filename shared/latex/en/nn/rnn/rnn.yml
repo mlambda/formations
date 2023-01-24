@@ -10,7 +10,7 @@ flavors:
     - lstm
     - variants
     - keras
-    - /questions
+    - /en/questions
     - tp
   drn:
     - /nlp/wordembeddings
@@ -18,6 +18,6 @@ flavors:
     - lstm
     - variants
     - keras
-    - /questions
+    - /en/questions
     - demo
-title: Réseaux de neurones récurrents
+title: Recurrent neural networks

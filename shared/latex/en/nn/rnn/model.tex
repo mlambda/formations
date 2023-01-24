@@ -1,53 +1,56 @@
 \begin{frame}{Introduction}
-  Caractéristiques des réseaux récurrents~:
+  Recurrent neural networks:
 
-  \begin{itemize}[<+->]
-    \item Gestion des séquences
-    \item Traitement séquentiel des entrées
-    \item Réplication d'un réseau autant de fois qu'il y a d'entrées
+  \begin{itemize}[<+(1)->]
+    \item Handle sequences
+    \item Process their input sequentially
+    \item Replicate a neural network for each element in the input sequence
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Modèle}
-  \V{["tikz/neural-networks/rnn/simple-unfold", "th", 0.25] | image}
-
+\begin{frame}{Model}
+  \V{["tikz/neural-networks/rnn/simple-unfold", "th", 0.3] | image}
+  \vspace{-2ex}
+  \begin{align*}
+    \vect{h_t} &= \sigma_h(\vect{U} \vect{x_t} + \vect{V} \vect{h_{t-1}} + \vect{b_h}) \\
+    \vect{o_t} &= \sigma_o(\vect{W} \vect{h_t} + \vect{b_o})
+  \end{align*}
+  \vspace{-2ex}
   \begin{columns}
-    \begin{column}{0.5\tw}
+    \begin{column}{.5\textwidth}
       \begin{description}
-        \item[$x_t$] Entrée
-        \item[$h_t$] Couche cachée
-        \item[$o_t$] Sortie
-        \item[$U, V, W$] Matrices de poids
-        \item[$b_h, b_o$] Vecteurs de biais
-        \item[$\sigma_h, \sigma_o$] Activations tanh
-      \end{description}
+        \item[$\vect{x_t}$] Input vector
+        \item[$\vect{h_t}$] Hidden vector
+        \item[$\vect{o_t}$] Output vector
+        \end{description}
     \end{column}
-    \begin{column}{0.5\tw}
-      \begin{align*}
-      h_t & = \sigma_h(U x_t + V h_{t - 1} + b_h) \\
-      o_t & = \sigma_o(W h_t + b_o) \\
-      \end{align*}
+    \begin{column}{.5\textwidth}
+      \begin{description}
+        \item[$\vect{U}$, $\vect{V}$, $\vect{W}$] Weight matrices
+        \item[$\vect{b_h}$, $\vect{b_o}$] Bias vectors
+        \item[$\sigma_h$, $\sigma_o$] Activation functions
+        \end{description}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Prédiction d'une sortie}
-  Exemple~: détection de polarité.
+\begin{frame}{Prediction of a single output}
+  Example: polarity detection.
 
   \begin{figure}
     \centering
-    \V{["tikz/neural-networks/rnn/lastoutput", "th", 0.7] | image}
+    \V{["tikz/neural-networks/rnn/lastoutput-en", "th", 0.7] | image}
   \end{figure}
 \end{frame}
 
-\begin{frame}{Prédiction d'autant de sorties qu'il y a d'entrées}
-  \V{["tikz/neural-networks/rnn/alloutputs", "tw", 0.5] | image}
+\begin{frame}{Prediction of one output per input}
+  \V{["tikz/neural-networks/rnn/alloutputs-en", "tw", 0.5] | image}
 \end{frame}
 
-\begin{frame}{Prédiction d'un nombre arbitraire de sorties}
+\begin{frame}{Prediction of an arbitrary number of outputs}
   \V{["tikz/neural-networks/rnn/seq2seq", "tw", 1] | image}
 \end{frame}
 
-\begin{frame}{Problème du gradient qui disparaît (vanishing gradient)}
-  \V{["tikz/optimization/vanishing-gradients-rnn", "th", 0.7] | image}
+\begin{frame}{Vanishing gradient problem: recurrence edition}
+  \V{["tikz/optimization/vanishing-gradients-rnn-en", "tw", 0.7] | image}
 \end{frame}

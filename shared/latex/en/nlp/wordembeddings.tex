@@ -1,17 +1,16 @@
 
-\begin{frame}
-    \frametitle{Word Embeddings} 
-    mot = indice dans un dictionnaire (dimension > 30000)
-    \newline
-    mot = vecteur ``sémantique'' (dimension < 1000) 
-    \begin{itemize}
-    \item word2vec
-    \item CBOW/Skip-Gram
-    \item GloVe
-    \item Thought vector (pour des phrases ou même des documents entiers)
-    \item ...
-    \end{itemize}
-  \end{frame}
+\begin{frame}{Word Embeddings} 
+  word = index in a dictionary (dimension > 30000)
+  \newline
+  word = semantic vector (dimension < 1000) 
+  \begin{itemize}
+  \item word2vec
+  \item CBOW/Skip-Gram
+  \item GloVe
+  \item Thought vector (for sentences or even whole documents)
+  \item ...
+  \end{itemize}
+\end{frame}
   
   \begin{frame}
     \frametitle{Word Embeddings} 
@@ -21,32 +20,32 @@
         \hline
         & 1 & 2 & ... & K \\
         \hline
-        je & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+        I & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
         \hline
-        tu & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+        you & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
         \hline
-        mange & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+        eat & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
         \hline
-        cuisine & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+        kitchen & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
         \hline
-        un & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+        a & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
         \hline
-        ce & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+        this & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
         \hline
-        le & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+        the & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
         \hline
-        poulet & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+        chicken & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
         \hline
-        poisson & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+        fish & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
         \hline
-        frit & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+        fry & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
         \hline
-        mariné & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
+        marinated & 0.\rand\arabic{rand} & 0.\rand\arabic{rand} & ... & 0.\rand\arabic{rand} \\
         \hline
       \end{tabular}
     \end{minipage}\hfill
     \begin{minipage}[r]{0.40\linewidth}
-      Chaque mot est initialement projeté au hasard dans l'espace en dimension~K.
+      Each word is initially projected randomly into the~K dimensional space.
     \end{minipage}
   \end{frame}
   
@@ -59,8 +58,8 @@
     \frametitle{Word Embeddings} 
     \V{["tikz/nlp/word2vec-analogy", "tw", 0.5] | image}
     \begin{center}
-      \bluelink{https://projector.tensorflow.org/}{Visualisation de l'espace word2vec} \\
-      \bluelink{http://vectors.nlpl.eu/repository/}{Word Embeddings à télécharger}
+      \bluelink{https://projector.tensorflow.org/}{Word2vec latent space visualization} \\
+      \bluelink{http://vectors.nlpl.eu/repository/}{Word Embeddings to download}
     \end{center}
   \end{frame}
 

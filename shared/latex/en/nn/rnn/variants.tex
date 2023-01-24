@@ -1,40 +1,40 @@
-\begin{frame}{Gated Recurrent Unit --- Principe}
-  Similaire au LSTM, mais~:
-  \begin{description}[<+->]
-    \item[Update gate] $\approx$ Input et forget gates du LSTM combinées
-    \item[Reset gate] $\approx$ Influence de la mémoire pendant l'update
+\begin{frame}{Gated Recurrent Unit --- Principle}
+  Very close to LSTM. Uses 2 gates instead of 3:
+  \begin{description}[<+(1)->]
+    \item[Update gate] $\approx$ Combined input \& forget LSTM gates
+    \item[Reset gate] $\approx$ Influence of memory during the update
   \end{description}
-  \onslide<+->{$\rightarrow$ Moins de paramètres que LSTM, peut être aussi efficace sur certains datasets}
+  \onslide<+(1)->{$\rightarrow$ Less parameters than LSTM, can be as efficient on some datasets}
 \end{frame}
 
-\begin{frame}{Gated Recurrent Unit --- Détails théoriques}
-  \V{["tikz/neural-networks/rnn/gru", "th", 0.5] | image}
+\begin{frame}{Gated Recurrent Unit --- Theoretical details}
+  \V{["tikz/neural-networks/rnn/gru", "tw", 0.55] | image}
   \begin{description}[<+->]
     \item[Update gate] $z_t = \sigma (W_z \times x_t + U_z \times h_{t - 1} + b_z)$
     \item[Reset gate] $r_t = \sigma (W_r \times x_t + U_r \times h_{t - 1} + b_r)$
-    \item[Sortie] $h_t = (1 - z_t) \times h_{t - 1} + z_t \times \tanh(W_h \times x_t + r_t \times U_h \times (h_{t - 1}) + b_h)$
+    \item[Output] $h_t = (1 - z_t) \circ h_{t - 1} + z_t \circ \tanh(W_h \times x_t + U_h (r_t \circ h_{t - 1}) + b_h)$
   \end{description}
 \end{frame}
 
-\begin{frame}{Réseaux récurrents bi-directionnels}
-  \V{["tikz/neural-networks/rnn/bidirectional", "tw", 0.8] | image}
-  \begin{itemize}[<+->]
-    \item Permet d'apprendre sur des séquences plus longues
-    \item Permet de modéliser des dépendances droite-gauche
+\begin{frame}{Bidirectional recurrent neural networks}
+  \V{["tikz/neural-networks/rnn/bidirectional-en", "tw", 0.8] | image}
+  \begin{itemize}[<+(1)->]
+    \item Can learn longer dependencies
+    \item Model both left-right and right-left dependencies
   \end{itemize}
 \end{frame}
 
-\begin{frame}{D'autres variantes}
+\begin{frame}{Other variants}
   \begin{itemize}[<+->]
-    \item Récurrence dans la profondeur
-    \item Skip-connexions (qui sautent des couches)
-    \item Résiduels (qui apprennent la différence à l'input)
+    \item Recurrent depth
+    \item Skip-connections (\emph{e.g.} connections between layers 1 \& 3)
+    \item Residuals (learn the difference from the input instead of the output directly)
     \item …
   \end{itemize}
 \end{frame}
 
-\notmog{
-  \begin{frame}{D'autres variantes}
+\fmg{
+  \begin{frame}{Other variants}
     \V{["img/spaghetti", "tw", 1] | image}
   \end{frame}
 }

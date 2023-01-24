@@ -1,31 +1,31 @@
 \begin{frame}{Introduction}
   \begin{center}
-    Datasets dont les instances sont des séquences de caractéristique(s).
+    Datasets whose instances are sequences of features
   \end{center}
 \end{frame}
 
 \begin{frame}{Définition}
-  Soit $X=(x_i)_{1<i<k}$ un dataset de k exemples~:
+  Let $X=(x_i)_{1<i<k}$ be a dataset of k examples:
 
-  où
+  where
 
-  $x_i = (x_{i}^1 , ... , x_{i}^{n_i})$ avec $x_i$ une séquence de $n_i$ frames
+  $x_i = (x_{i}^1 , ... , x_{i}^{n_i})$ a sequence of $n_i$ frames
 
-  Pour des séries d'entiers par exemple~:
+  For series of integers for example:
 
   $x_1 = (1,3,5,2,8)$ \\
   $x_2 = (7,3)$ \\
   $x_3 = (4,0,9,1)$ \\
   $x_4 = (...)$
 
-  Pour des séries de vecteurs~:
+  For series of vectors:
 
   $x_1 = ([2,5],[9,8],[3,6])$ \\
   $x_2 = ([1,1],[3,4],[5,4],[3,2],[8,1])$ \\
   $x_3 = (...)$ 
 \end{frame}
 
-\begin{frame}{Types de données séquentielles --- texte}
+\begin{frame}{Sequential data types --- texte}
   \begin{enumerate}
     \item \texttt{lorem ipsum dolor sit amet, consectetur adipiscing elit, ...}
     \item \texttt{Great minds discuss ideas; average minds discuss events; small minds discuss people.}
@@ -34,27 +34,27 @@
   \end{enumerate}
 \end{frame}
 
-\begin{frame}{Types de données séquentielles --- ADN}
+\begin{frame}{Sequential data types --- ADN}
   \begin{enumerate}
     \item \texttt{ATGCGATCTATCGCTAGCCGCGCTATACGCA}
     \item \texttt{GATTATAGCTAGCTCGCGCTATATCGCTAGCTAGCTAGCTAGC}
   \end{enumerate}
 \end{frame}
 
-\begin{frame}{Types de données séquentielles --- son}
+\begin{frame}{Sequential data types --- son}
   \V{["img/fourier", "th", 0.7] | image}  
 \end{frame}
 
-\begin{frame}{Types de données séquentielles --- vidéo}
+\begin{frame}{Sequential data types --- vidéo}
   \V{["img/video-frames", "tw", 0.7] | image}
 \end{frame}
 
-\begin{frame}{Types de données séquentielles --- et bien d'autres}
-  \begin{description}[<+->]
-  \item[Economie] actions, obligations, monnaies
-  \item[Météo] date, latitude, longitude, température, pression, vent, pluie
-  \item[Santé] date, température, pouls
-  \item[Comportements Clients] date, achat, fréquence de visite
-  \item …
-  \end{description}
+\begin{frame}{Sequential data types --- et bien d'autres}
+  \begin{description}
+    \item[Economy] stocks, bonds, currencies
+    \item[Weather] date, latitude, longitude, temperature, pressure, wind, rain
+    \item[Health] date, temperature, pulse
+    \item[Customer Behaviors] date, purchase, frequency of visit
+    \item ...
+    \end{description}
 \end{frame}

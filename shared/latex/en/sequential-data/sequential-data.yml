@@ -6,6 +6,6 @@ flavors:
   dpl:
     - sequential-data
     - sequential-models
-    - /questions
+    - /en/questions
 
-title: Données séquentielles
+title: Sequential data
