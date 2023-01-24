@@ -16,7 +16,7 @@ flavors:
     - $/tf-keras: drn
     - $cnn: mle
     - $rnn: mle
-    - /questions
+    - /en/questions
     - help-pointers
   iao:
     - intro
@@ -31,7 +31,7 @@ flavors:
     - $cnn: mle
     - $rnn: iao
     - $gan: full
-    - /questions
+    - /en/questions
     - help-pointers
   drn:
     - intro
@@ -41,7 +41,7 @@ flavors:
     - deep-optimize
     - regularization
     - playground
-    - /questions
+    - /en/questions
     - $/tf-keras: drn
     - $cnn: drn
     - $rnn: drn
@@ -57,7 +57,7 @@ flavors:
     - deep-optimize
     - regularization
     - playground
-    - /questions
+    - /en/questions
     - $/tf-keras: drn
     - $cnn: vision-expert
     - $transformer: image
@@ -73,7 +73,7 @@ flavors:
     - deep-optimize
     - regularization
     - playground
-    - /questions
+    - /en/questions
     - $/tf-keras: bda
     - $cnn: vision-expert-tp
     - $transformer: image
@@ -89,7 +89,7 @@ flavors:
     - deep-optimize
     - regularization
     - playground
-    - /questions
+    - /en/questions
     - $/tf-keras: bda
   cv3:
     - intro
@@ -99,7 +99,7 @@ flavors:
     - deep-optimize
     - regularization
     - playground
-    - /questions
+    - /en/questions
     - $/tf-keras: dpl
   mmd:
     - intro
@@ -121,7 +121,7 @@ flavors:
     - deep-optimize
     - regularization
     - playground
-    - /questions
+    - /en/questions
     - $/tf-keras: bda
     - $cnn: dpl
     - $rnn: dpl
@@ -137,7 +137,7 @@ flavors:
     - deep-optimize
     - regularization
     - playground
-    - /questions
+    - /en/questions
     - $/tf-keras: dpl
     - $cnn: vision-expert
     - $ae: dpl
@@ -155,7 +155,7 @@ flavors:
     - deep-optimize
     - regularization
     - playground
-    - /questions
+    - /en/questions
     - $/tf-keras: bda
     - $cnn: dpl
     - $ae: dpl
