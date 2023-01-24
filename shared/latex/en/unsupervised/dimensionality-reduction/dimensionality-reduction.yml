@@ -1,9 +1,7 @@
 default_titles:
-  demo: \texttt{Scikit-learn} demonstration
+  demo: \texttt{Scikit-learn} Example
   intro: Introduction
-  pca-lda: Linear projection
-  pca-variantes: Variantes
-  tp: Exercices
+  pca-lda: Linear Projections
   tsne-umap: Non linear projections
   tuto: \texttt{Scikit-learn} examples
 
