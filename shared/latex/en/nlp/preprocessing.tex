@@ -1,75 +1,85 @@
-\begin{frame}{Collecte}
-  Des sources variées :
+\begin{frame}{Collection}
+  Various sources:
   \begin{itemize}
   \item Wikipedia
-  \item Articles de journaux
-  \item Littérature
+  \item Newspaper articles
+  \item Literature
   \item User Generated Content
     \begin{itemize}
     \item Blogs
-    \item Commentaires
-    \item Réseaux sociaux
+    \item Comments
+    \item Social Networks
     \end{itemize}
   \end{itemize}
-  Une source $\Rightarrow$ un «~web scraper~»
+  One source $\Rightarrow$ one "web scraper"
 \end{frame}
 
-\begin{frame}{Caractères accentués et spéciaux}
+\begin{frame}{Accented and special characters}
   \mintedcustom{demo-special-character}{py}{text}
 \end{frame}
 
 \begin{frame}{Tokenisation}
-  Séparer une chaîne de caractères en tokens n'est pas trivial :
+  Separating a string into tokens is not trivial:
 
   \begin{center}
-    Le Dr. Pond èleve des poules. L'éleveur les sur-exploite.
+    Dr. Saint-Emilion, I'm glad to see you. Welcome to Hill Valley!
   \end{center}
 
-  (en phrases ou en mots)
+  (Words as well as sentences)
 \end{frame}
 
-\begin{frame}{Étiquetage morpho-syntaxique}
+\begin{frame}{Part-of-speech tagging}
   \V{["img/pos-tagging", "tw", 0.8] | image}
 \end{frame}
 
-\begin{frame}{Reconnaissance d'entités nommées}
+\begin{frame}{Named-entity recognition}
   \V{["img/named-entity-recognition", "tw", 0.8] | image}
 \end{frame}
 
-\begin{frame}{Analyse syntaxique}
+\begin{frame}{Syntax analysis}
   \V{["img/parse-tree", "tw", 0.8] | image}
 \end{frame}
 
+\begin{frame}{Syntax analysis}
+  \vfill
+  \textit{Example from Groucho Marx} :\\\\
+
+  One morning, I shot an elephant in my pajamas.
+
+  \only<2>{How he got into my pyjamas, I'll never know.}
+  \vfill
+\end{frame}
+
 \begin{frame}{Lemmatisation}
-  Exprimer les mots (ou groupes de mots) sous une forme canonique : \\
+  Representing words (or groups of words) in a canonical form: \\
 
   \centering
   \begin{tabular}{cc}
     \textbf{Mot} & \textbf{Lemme} \\
-    jouant & jouer \\
-    ont été jouées & jouer \\
-    étoiles & étoile \\
-    claires & clair \\
-    noire & noir
+    playing & play \\
+    has been played & play \\
+    stars & star \\
+    is & be \\
+    will & be \\
+    'll & be
   \end{tabular}
 \end{frame}
 
-\begin{frame}{Outils --- WordNet}
+\begin{frame}{Tools --- WordNet}
   \V{["img/wordnet-1", "th", 0.7] | image}  
-  Projet sur le français : WOLF (Wordnet Libre du Français) 
 \end{frame}
 
-\begin{frame}{Outils --- DBpedia}
+\begin{frame}{Tools --- DBpedia}
   \V{["img/dbpedia", "tw", 0.9] | image}
 \end{frame}
 
-\notmog{
+\fmg{
   \begin{frame}{Utilisation actuelle}
     \V{["img/chatbot", "tw", 0.9] | image}
   \end{frame}
 }
 
-\notmog{
+\fmg{
   \begin{frame}{Maintenabilité}
     \V{["img/usine-a-gaz", "tw", 0.9] | image}
   \end{frame}

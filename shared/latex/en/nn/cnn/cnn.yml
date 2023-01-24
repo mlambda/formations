@@ -15,12 +15,12 @@ flavors:
     - modern-architectures
     - /questions
     - keras
-    - /questions
+    - /en/questions
     - tp-demo
     - interpret
     - modern-anomaly-detection
     - demo-task
-    - /questions
+    - /en/questions
     - help-pointers
   dpl:
     - data
@@ -28,9 +28,9 @@ flavors:
     - task
     - demo-task
     - interpret
-    - /questions
+    - /en/questions
     - keras
-    - /questions
+    - /en/questions
     - tp-demo
     - modern-architectures
     - modern-anomaly-detection

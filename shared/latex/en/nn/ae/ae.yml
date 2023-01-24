@@ -3,10 +3,10 @@ default_titles:
 flavors:
   dpl:
     - autoencoder
-    - /questions
+    - /en/questions
     - tp
   drn:
     - autoencoder
-    - /questions
+    - /en/questions
     - tp-demo
-title: Auto-encodeurs
+title: Auto-encoders

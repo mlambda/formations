@@ -73,15 +73,13 @@
 \begin{frame}{ResNet --- Residual blocks}
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      Major design contribution: the residual connection.
-
-      Changes the learning problem from learning $y$ from $x$ to learning $y - x$.
-
-      \emph{e.g.} the identity is now trivial to learn.
-
-      Gradient flows very well in those networks.
-
-      It also uses batch normalization (center and reduce data at each layer) to stabilize learning.
+      \begin{itemize}
+        \item Major design contribution: the residual connection.
+        \item Changes the learning problem from learning $y$ from $x$ to learning $y - x$.
+        \item \emph{e.g.} the identity is now trivial to learn.
+        \item  Gradient flows very well in those networks.
+        \item  It also uses batch normalization (center and reduce data at each layer) to stabilize learning.
+      \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
       \V{["img/d2l/residual-block", "tw", 1, "en"] | image}
