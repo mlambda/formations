@@ -1,34 +1,19 @@
 default_titles:
   classification: Classification
-  cost-error-function: Lost function
+  cost-error-function: Lost Function
 
-  regression-lineaire: Linear regression
-  regression-logistique: Logistic regression
-  regression-polynomiale: Polynomial regression
+  regression-lineaire: Linear Regression
+  regression-logistique: Logistic Regression
+  regression-polynomiale: Polynomial Regression
 
-  trees: Decision trees
-  random-forest: Random forests
+  trees: Decision Trees
+  random-forest: Random Forests
 
-  gradient-boosting: Boosted tree
+  gradient-boosting: Boosted Trees
 
   svm: Support vector machine
+
 flavors:
-  svm-text:
-    - svm
-    - demo-sklearn-svm
-    - tp-svm-text
-  bda:
-    - /prerequisites/proba-rappel
-    - /bayesian/naive-bayes
-    - regression-lineaire
-    - cost-error-function
-    - /nn/gradient-descent
-    - regression-polynomiale
-    - classification
-    - regression-logistique
-    - /questions
-    - tp-reg-lin-poly
-    - /questions
   mlb:
     - regression-lineaire
     - cost-error-function
@@ -46,26 +31,6 @@ flavors:
     - /en/questions
     - demo-sklearn-random-forest
     - tp-random-forest
-  mmd:
-    - /prerequisites/proba-rappel
-    - /bayesian/naive-bayes
-    - /questions
-    - regression-lineaire
-    - cost-error-function
-    - /nn/gradient-descent
-    - /questions
-    - trees
-    - trees-details
-    - random-forest
-    - /questions
-    - demo-sklearn-random-forest
-    - gradient-boosting
-    - /questions
-    - demo-catboost-gradient-boosting
-    - svm
-    - /questions
-    - demo-sklearn-svm
-    - tp-svm-text
   drn:
     - /bayesian/naive-bayes
     - regression-lineaire
@@ -79,5 +44,4 @@ flavors:
     - random-forest
     - /questions
 
-title: Apprentissage supervisé
-version: 3
+title: Supervised Learning

@@ -1,9 +1,9 @@
 default_titles:
-  demo: \texttt{Scikit-learn} demonstration
+  demo: \texttt{Scikit-learn} Demonstration
   intro: Introduction
-  isolation-forest: Isolation forest
+  isolation-forest: Isolation Forest
   lof: Local Outlier Factor
-  /supervised/trees: Decision trees introduction
+  /supervised/trees: Decision Trees Introduction
 
 flavors:
   full:
@@ -11,13 +11,6 @@ flavors:
     - lof
     - /supervised/trees
     - /supervised/random-forest
-    - isolation-forest
-    - demo
-    - /questions
-    - help-pointers
-  full-no-tree-intro:
-    - intro
-    - lof
     - isolation-forest
     - demo
     - /questions

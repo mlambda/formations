@@ -1,20 +1,13 @@
 default_titles:
-  preprocessing: Prétraitements
-  information-retrieval: Recherche d'information
-  similarity-text: Similarité textuelle
-  tp-help: Quelques liens utiles
-  tf-idf: Représentation TF-IDF
+  preprocessing: Preprocessing
+  information-retrieval: Information Retrieval
+  similarity-text: Textual Similarity
+  tp-help: Useful Links
+  tf-idf: TF-IDF Representation
   wordembeddings: Word Embeddings
-  /python/regexes/regexes: Expressions régulières
+  /python/regexes/regexes: Regular Expressions
 
 flavors:
-  mle:
-    - ml-nlp
-    - usages-nlp
-    - preprocessing
-    - tf-idf
-    - /questions
-    - help-pointers
   dpl:
     - ml-nlp
     - usages-nlp
@@ -23,32 +16,4 @@ flavors:
     - wordembeddings
     - /questions
     - help-pointers
-  bda:
-    - ml-nlp
-    - usages-nlp
-    - preprocessing
-    - tf-idf
-    - /questions
-    - tp-text-features-engineering
-    - wordembeddings
-    - /questions
-    - tp-wordembeddings
-    - help-pointers
-  mmd:
-    - ml-nlp
-    - usages-nlp
-    - $/python/regexes: full
-    - preprocessing
-    - tf-idf
-    - /questions
-    - tp-text-features-engineering
-    - similarity-text
-    - information-retrieval
-    - /questions
-    - tp-information-retrieval
-    - wordembeddings
-    - /questions
-    - tp-wordembeddings
-    - help-pointers
-title: Traitement automatique des langues
-version: 3
+title: Natural Language Processing

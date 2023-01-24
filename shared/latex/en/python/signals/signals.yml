@@ -1,5 +1,0 @@
-flavors:
-  full:
-    - signals
-    - /questions
-title: Gestion de signaux

@@ -2,7 +2,7 @@ default_titles:
   intro: Introduction
   variants: Variants
 flavors:
-  demo-detailed:
+  full:
     - intro
     - variants
     - /questions

@@ -34,7 +34,7 @@ flavors:
     - demo-task
     - /questions
     - help-pointers
-  vision-expert:
+  dpl:
     - data
     - model
     - task
@@ -59,7 +59,7 @@ flavors:
     - /questions
     - tp
     - help-pointers
-  dpl:
+  ml5:
     - data
     - model
     - task

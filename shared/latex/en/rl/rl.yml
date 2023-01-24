@@ -4,7 +4,7 @@ default_titles:
   intro: Introduction
   q-learning: Q-learning
 flavors:
-  full:
+  drn:
     - intro
     - /questions
     - q-learning

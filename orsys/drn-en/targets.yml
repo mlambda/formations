@@ -1,71 +1,25 @@
-- name: about
-  title: about
+- name: j123
+  title: Jour 1
   sections:
     - path: en/about
       flavor: orsys-3j
 
-- name: ai
-  title: ai
-  sections:
     - path: en/ai
       flavor: full
 
-- name: ml
-  title: ml
-  sections:
     - path: en/ml
-      flavor: detailed-no-tp
+      flavor: drn
 
-- name: supervised
-  title: supervised
-  sections:
     - path: en/supervised
       flavor: drn
 
-- name: nn
-  title: nn
-  sections:
     - path: en/nn
-      flavor: deep-detailed-demo
+      flavor: drn
 
-- name: tf-keras
-  title: tf-keras
-  sections:
-    - path: en/tf-keras
-      flavor: full
-
-- name: cnn
-  title: cnn
-  sections:
-    - path: en/nn/cnn
-      flavor: demo
-
-- name: rnn
-  title: rnn
-  sections:
-    - path: en/nn/rnn
-      flavor: demo-detailed
-
-- name: ae
-  title: auto-encoders
-  sections:
-    - path: en/nn/ae
-      flavor: demo
-
-- name: gan
-  title: gan
-  sections:
-    - path: en/nn/gan
-      flavor: demo-detailed
-
-- name: rl
-  title: rl
-  sections:
     - path: en/rl
-      flavor: full
+      flavor: drn
 
-- name: tools
-  title: tools
-  sections:
     - path: en/tools
-      flavor: detailed
+      flavor: devops
+
+    - contact

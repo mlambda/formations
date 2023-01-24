@@ -59,7 +59,7 @@ flavors:
     - playground
     - /questions
     - $/tf-keras: drn
-    - $cnn: vision-expert
+    - $cnn: dpl
     - $transformer: image
     - $ae: drn
     - $gan: full
@@ -123,7 +123,7 @@ flavors:
     - playground
     - /questions
     - $/tf-keras: bda
-    - $cnn: dpl
+    - $cnn: ml5
     - $rnn: dpl
     - $ae: dpl
     - $gan: full
@@ -139,7 +139,7 @@ flavors:
     - playground
     - /questions
     - $/tf-keras: dpl
-    - $cnn: vision-expert
+    - $cnn: dpl
     - $ae: dpl
     - $/nlp: dpl
     - $/sequential-data: dpl
@@ -157,7 +157,7 @@ flavors:
     - playground
     - /questions
     - $/tf-keras: bda
-    - $cnn: dpl
+    - $cnn: ml5
     - $ae: dpl
     - $/sequential-data: dpl
     - $rnn: dpl

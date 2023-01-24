@@ -7,7 +7,7 @@ default_titles:
   intro: Introduction
   ml-dl: Machine learning \& deep learning
 flavors:
-  detailed:
+  devops:
     - intro
     - ml-dl
     - environment

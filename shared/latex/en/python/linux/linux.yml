@@ -1,5 +1,0 @@
-flavors:
-  full:
-    - linux
-    - /questions
-title: Architecture système Linux pour Python

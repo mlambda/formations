@@ -1,6 +1,0 @@
-flavors:
-  full:
-    - linting
-    - /questions
-    - tp
-title: Vérifications en Python

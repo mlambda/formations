@@ -1,22 +1,11 @@
 default_titles:
   sequential-data: Introduction
-  sequential-models: Modèles Séquentiels
-  statistical-approaches: Approches statistiques
-  sequence-handling: Approches
-  tp-tf: TP séquence temporelles
+  sequential-models: Sequential Models
+
 flavors:
-  intra:
-    - sequential-data
-    - sequential-models
-    - statistical-approaches
-    - /bayesian/markov-model
-    - /bayesian/hmm
-    - sequence-handling
-    - tp-tf
-    - /questions
   dpl:
     - sequential-data
     - sequential-models
     - /questions
+
 title: Données séquentielles
-version: 3

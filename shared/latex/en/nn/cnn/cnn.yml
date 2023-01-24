@@ -8,17 +8,6 @@ default_titles:
   modern-architectures: Modern CNN architectures
   demo-task: Demonstrations
 flavors:
-  ml1:
-    - data
-    - model
-    - /questions
-    - help-pointers
-  mle:
-    - data
-    - model
-    - /questions
-    - tp-demo
-    - help-pointers
   drn:
     - data
     - model
@@ -33,7 +22,7 @@ flavors:
     - demo-task
     - /questions
     - help-pointers
-  vision-expert:
+  dpl:
     - data
     - model
     - task
@@ -45,28 +34,4 @@ flavors:
     - tp-demo
     - modern-architectures
     - modern-anomaly-detection
-  vision-expert-tp:
-    - data
-    - model
-    - task
-    - demo-task
-    - interpret
-    - modern-anomaly-detection
-    - modern-architectures
-    - /questions
-    - keras
-    - /questions
-    - tp
-    - help-pointers
-  dpl:
-    - data
-    - model
-    - task
-    - /questions
-    - modern-architectures
-    - /questions
-    - keras
-    - /questions
-    - tp
-    - help-pointers
 title: Réseaux de neurones à convolutions

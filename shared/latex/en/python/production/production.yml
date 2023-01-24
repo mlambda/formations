@@ -4,18 +4,6 @@ default_titles:
   packaging: Python packages creation
   cli: Command line interfaces
 flavors:
-  full:
-    - environment
-    - /en/questions
-    - demo-environment
-    - packaging
-    - /en/questions
-    - tp-packaging
-    - deployment
-    - /en/questions
-    - cli
-    - /en/questions
-    - tp-cli-stegano
   light:
     - environment
     - /en/questions
