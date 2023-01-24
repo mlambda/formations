@@ -1,12 +1,11 @@
 \begin{frame}{Overfit (and underfit)}
-
   \V{["plt/overfitting-en", "tw", 1, "en"] | image}
 \end{frame}
 
 \begin{frame}{Weight penalty}
   Penalize neurons with big weights with a term in the loss function:
 
-  \begin{description}[<+(1)->]
+  \begin{description}
     \item[L2 or ridge]
     \[
       \text{Loss} = \text{Loss} + \lambda\norm{w}_2^2
@@ -21,7 +20,7 @@
     \]
   \end{description}
 
-  \onslide<+(1)->{Where the $\lambda$s are parameters controlling the regularization strength.}
+  Where the $\lambda$s are parameters controlling the regularization strength.
 \end{frame}
 
 \begin{frame}{Early stopping}

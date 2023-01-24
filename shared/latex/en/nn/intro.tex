@@ -20,7 +20,7 @@
 
 \begin{frame}{Combination to form a neural network}
   Combination of many neurons to form a neural network:
-  \begin{description}[<+(1)->]
+  \begin{description}
     \item[In parallel] Compute results independently in a same layer
     \item[In series] Take as inputs the output of the previous layer
   \end{description}
@@ -28,7 +28,7 @@
 
 \begin{frame}{Two types of neurons}
   Important distinction between two types of neurons:
-  \begin{description}[<+(1)->]
+  \begin{description}
     \item[Hidden neurons] Neurons of intermediate layers. Increase the network capacity
     \item[Output neurons] Neurons of the final layer. Depend \textbf{only} on the kind of output
   \end{description}
@@ -52,6 +52,8 @@
 \begin{frame}{A theoretically interesting model}
   \textbf{Kurt Hornik, 1991:} Universal approximation theorem
   \V{["tikz/activations/approximation", "tw", 1] | image}
+
+  \bluelink{https://youtu.be/5oEBiico-I4}{Visualization of the approximation process}
 \end{frame}
 
 \begin{frame}{Matrix formulation --- Sample}
@@ -123,7 +125,7 @@
     \end{bmatrix}
   \end{align*}
   Where:
-  \begin{description}[<+->]
+  \begin{description}
     \item[$\vect{X}$] $d$ dimensional input data
     \item[$\vect{W}$ \& $\vect{b}$] Weights of the $n$ neurons of the layer
     \item[$\bm{\sigma}$] Activation function
@@ -132,7 +134,7 @@
 \end{frame}
 
 \begin{frame}{Activation functions --- How to pick one}
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Mathematical properties (\emph{e.g.} gradient conservation, …)
     \item Learning properties (\emph{e.g.} dead weights, …)
     \item Ease of computation
@@ -155,7 +157,7 @@
     \V{["tikz/activations/sigmoid", "tw", 1] | image}
   \end{center}
 
-  \begin{description}[<+->]
+  \begin{description}
     \item[Definition] \[\phi(x) = \frac{1}{1 + e^{-x}}\]
     \item[Derivative] \[\phi'(x)=\phi(x)(1-\phi(x))\]
   \end{description}
@@ -166,7 +168,7 @@
     \V{["tikz/activations/tanh", "tw", 1] | image}
   \end{center}
 
-  \begin{description}[<+->]
+  \begin{description}
     \item[Definition] \[\tanh(x)=\frac{1-e^{-2x}}{1+e^{-2x}}\]
     \item[Derivative] \[\tanh'(x)=1-\tanh^2(x)\]
   \end{description}
@@ -177,7 +179,7 @@
     \V{["tikz/activations/relu", "tw", 0.6] | image}
   \end{center}
 
-  \begin{description}[<+->]
+  \begin{description}
     \item[Definition] \[\ReLU(x)=\begin{cases} 0 & x \leq 0 \\ x & x > 0\end{cases}\]
     \item[Derivative] \[\ReLU'(x)=\begin{cases} 0 & x \leq 0 \\ 1 & x > 0\end{cases}\]
   \end{description}
@@ -196,7 +198,7 @@
 \end{frame}
 
 \begin{frame}{Activation functions --- Softmax}
-  \begin{description}[<+->]
+  \begin{description}
     \item[Definition] \[\softmax(x_i) = \frac{\exp(x_i)}{\sum_{k = 1}^n{\exp(x_k)}}\]
     \item[Key property] \[\sum_{i = 1}^n{\softmax(x_i)} = 1\]
     \item[Gradient] \[
