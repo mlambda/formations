@@ -2,9 +2,9 @@ default_titles:
   data: Dataset for computer vision
   task: Tasks
   interpret: Interpret a learned model
-  keras: Keras implementation
+  keras: Keras Implementation
   model: Model
-  modern-anomaly-detection: An visual anomaly detection example
+  modern-anomaly-detection: A Visual Anomaly Detection Example
   modern-architectures: Modern CNN architectures
   demo-task: Demonstrations
 flavors:
@@ -34,4 +34,4 @@ flavors:
     - tp-demo
     - modern-architectures
     - modern-anomaly-detection
-title: Réseaux de neurones à convolutions
+title: Convolutional Neural Networks

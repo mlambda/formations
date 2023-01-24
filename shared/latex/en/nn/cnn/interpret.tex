@@ -1,12 +1,12 @@
-\begin{frame}{Interprétation de CNN}
-  Comment interpréter la prédiction d'un réseau de neurone ?
+\begin{frame}{CNN interpretation}
+  How to interpret a CNN prediction?
   \V{["tikz/neural-networks/cnn/classification", "tw", 1] | image}
 \end{frame}
 
 \begin{frame}{Occlusion sensitivity}
   \begin{itemize}
-    \item prédiction sur des images \og masquées \fg
-    \item création d'une heatmap reflétant la chute de performance 
+    \item prediction on masked images
+    \item creation of a heatmap that reflects the drop in performance
   \end{itemize}
 \end{frame}
 
@@ -15,7 +15,7 @@
 \end{frame}
 
 \begin{frame}{Occlusion sensitivity}
-  Utilisation du gradient sur une couche haute pour créer la heatmap
+  The gradient of a layer close to the end of the network is used to create the heatmap
   \V{["tikz/neural-networks/cnn/classification", "tw", 1] | image}
 \end{frame}
 

@@ -1,13 +1,13 @@
 \begin{frame}{Problème des MLPs pour les images}
   Supposons que nous voulons détecter un objet dans une image. Un bon modèle devrait~:
-  \begin{itemize}[<+(1)->]
+  \begin{itemize}
     \item Trouver l'objet où qu'il soit dans l'image
     \item Utiliser les pixels locaux autour de l'objet pour prendre sa décision
   \end{itemize}
 
-  \onslide<+(1)->{Les MLPs standards ne satisfont pas ces critères.}
+  Les MLPs standards ne satisfont pas ces critères.
 
-  \onslide<+(1)->{$\Rightarrow$ Les réseaux convolutifs, si.}
+  $\Rightarrow$ Les réseaux convolutifs, si.
 \end{frame}
 
 \begin{frame}{Convolution}

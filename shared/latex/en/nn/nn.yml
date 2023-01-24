@@ -1,9 +1,10 @@
 default_titles:
-  deep-optimize: Deep neural networks optimization
-  gradient-descent: Gradient descent
+  deep-optimize: Deep Neural Networks Optimization
+  gradient-descent: Gradient Descent
   intro: Introduction
-  optimize: Hyperparameters optimization
+  optimize: Hyperparameters Optimization
   regularization: Regularization
+
 flavors:
   drn:
     - intro
@@ -21,9 +22,10 @@ flavors:
     - $ae: drn
     - $gan: full
     - help-pointers
+
   dpl:
     - intro
-    - /supervised/classification
+    - /en/supervised/classification
     - playground
     - gradient-descent
     - optimize
@@ -40,4 +42,4 @@ flavors:
     - $transformer: text
     - help-pointers
 
-title: Neural networks
+title: Neural Networks

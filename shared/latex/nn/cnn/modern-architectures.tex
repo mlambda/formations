@@ -11,7 +11,7 @@
 \begin{frame}{AlexNet}
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      \begin{itemize}[<+->]
+      \begin{itemize}
         \item Premier CNN profond entraîné sur des GPUs
         \item A introduit ReLU comme excellente non-linéarité pour entraîner des modèles profonds
         \item Sinon très similaire à LeNet --- en plus profond
@@ -26,7 +26,7 @@
 \begin{frame}{VGG}
   \begin{columns}
     \begin{column}{0.45\textwidth}
-      \begin{itemize}[<+->]
+      \begin{itemize}
         \item A introduit la notion de bloc dans les CNNs
         \item Sinon similaire à AlexNet --- en plus gros \& plus profond
         \item A longtemps été très populaire comme modèle de base pour le transfert d'apprentissage
@@ -41,7 +41,7 @@
 \begin{frame}{Network in Network}
   \begin{columns}
     \begin{column}{0.4\textwidth}
-      \begin{itemize}[<+->]
+      \begin{itemize}
         \item Utilise des noyaux $1 \times 1$ pour appliquer un «~réseau dans un réseau~»
         \item Un noyau $1 \times 1$ ne change pas la structure spatiale. Seulement le nombre de canaux
         \item Il revient à appliquer un MLP à chaque position spatiale
@@ -73,7 +73,7 @@
 \begin{frame}{ResNet --- Blocs résiduels}
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      \begin{itemize}[<+->]
+      \begin{itemize}
         \item Contribution architecturale majeure: le bloc résiduel
         \item Fait évoluer le problème d'apprentissage de \emph{apprendre $y$ depuis $x$} à \emph{apprendre $y - x$ depuis $x$}
         \item Par exemple, l'identité devient triviale à apprendre
