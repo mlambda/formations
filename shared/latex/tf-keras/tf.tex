@@ -20,7 +20,7 @@
   \begin{minipage}[l]{0.5\linewidth}
     \centering
     \textbf{TF1}
-    \begin{itemize}[<+->]
+    \begin{itemize}
       \item Graphes de calcul explicites par défaut
       \item API de haut niveau Keras indépendante
     \end{itemize}
@@ -29,7 +29,7 @@
     \setcounter{beamerpauses}{1}
     \centering
     \textbf{TF2}
-    \begin{itemize}[<+->]
+    \begin{itemize}
       \item Graphes de calcul implicites par défaut
       \item API de haut niveau Keras intégrée à TF
     \end{itemize}
@@ -39,7 +39,7 @@
 \begin{frame}{Tenseurs --- Objets au cœur de TensorFlow}
   Tableaux multidimensionnels, utilisés pour~:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Poids des réseaux
     \item Données
   \end{itemize}
@@ -48,7 +48,7 @@
 \end{frame}
 
 \begin{frame}{Tenseurs --- Création}
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Directement à partir de tableaux NumPy ou de listes
     \item Échantillonnés aléatoirement
     \item Appel à une fonction tensorflow avec un tableau NumPy
@@ -67,7 +67,7 @@
 \begin{frame}{Graphe de calcul}
   Conversion du mode \textit{eager} au mode graphe par \texttt{tf.function}. Permet :
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item L'optimisation du graphe des opérations
     \item Le déploiement vers Android, iOS, TPU, GPU, …
     \item De faire tourner le réseau sans interpréteur Python !
@@ -87,7 +87,7 @@
 
   API principale~:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Accès aux variables du modèle par \texttt{model.variables}
     \item Accès aux variables entraînables du modèle par \texttt{model.trainable\_variables}
     \item Sauvegarde des poids par \texttt{tf.train.Checkpoint}

@@ -21,7 +21,7 @@
   \begin{minipage}[l]{0.5\linewidth}
     \centering
     \textbf{TF1}
-    \begin{itemize}[<+->]
+    \begin{itemize}
       \item Graph mode by default
       \item Independent High level API Keras
     \end{itemize}
@@ -30,7 +30,7 @@
     \setcounter{beamerpauses}{1}
     \centering
     \textbf{TF2}
-    \begin{itemize}[<+->]
+    \begin{itemize}
       \item Eager mode by default
       \item High level API Keras merged in TensorFlow 2
     \end{itemize}
@@ -40,7 +40,7 @@
 \begin{frame}{Tensors --- Core objects in TensorFlow 2}
   Multidimensional arrays, used for:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Model weights
     \item Data
   \end{itemize}
@@ -49,7 +49,7 @@
 \end{frame}
 
 \begin{frame}{Tensors --- Creation}
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Directly from \texttt{numpy.ndarray} or lists
     \item Randomly sampled
     \item Result of a call to a TensorFlow 2 function with \texttt{numpy.ndarray}
@@ -68,7 +68,7 @@
 \begin{frame}{Computation graph}
   Conversion from eager mode to graph mode by \texttt{tf.function}. Allows:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Computation graph optimization
     \item Easy deployment to Android, iOS, TPU, GPU, …
     \item Running the model without a Python interpreter!
@@ -88,7 +88,7 @@
 
   Main API:
 
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item Access model variables with \texttt{model.variables}
     \item Access trainable model variables with \texttt{model.trainable\_variables}
     \item Save weights with \texttt{tf.train.Checkpoint}

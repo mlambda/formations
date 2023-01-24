@@ -5,5 +5,12 @@ flavors:
   full:
     - tf
     - keras
-    - /questions
+    - /en/questions
+  dpl:
+    - tf
+    - /en/questions
+    - tp-tf
+    - keras
+    - /en/questions
+    - tp-keras
 title: TensorFlow 2 \& Keras
