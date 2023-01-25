@@ -3,6 +3,6 @@ flavors:
     - introduction
     - $dimensionality-reduction: mlb
     - $clustering: intra-l-oreal
-    - $anomaly-detection: full
+    - $anomaly-detection: full-no-tree
 
 title: Unsupervised Learning

@@ -163,4 +163,24 @@ flavors:
     - $rnn: dpl
     - help-pointers
 
+  intra-l-oreal:
+    - intro
+    - playground
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - /questions
+    - $/tf-keras: dpl
+    - $cnn: dpl
+    - $transformer: text
+    - help-pointers
+
+  intra-l-oreal-bonus:
+    - $ae: dpl
+    - $/nlp: dpl
+    - $/sequential-data: dpl
+    - $rnn: dpl
+
 title: Réseaux de neurones

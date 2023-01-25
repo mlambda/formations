@@ -9,10 +9,18 @@ flavors:
   full:
     - intro
     - lof
-    - /supervised/trees
-    - /supervised/random-forest
+    - /en/supervised/trees
+    - /en/supervised/random-forest
     - isolation-forest
     - demo
-    - /questions
+    - /en/questions
+    - help-pointers
+
+  full-no-tree:
+    - intro
+    - lof
+    - isolation-forest
+    - demo
+    - /en/questions
     - help-pointers
 title: Anomaly detection

@@ -16,18 +16,20 @@
 - name: j3
   title: Jour 3 --- Machine Learning -- Non Supervisé
   sections:
-    - unsupervised/introduction
-    - path: unsupervised/dimensionality-reduction
-      flavor: mlb
-    - path: unsupervised/clustering
-      flavor: bda
-    - path: unsupervised/anomaly-detection
-      flavor: full
+    - path: unsupervised
+      flavor: intra-l-oreal
 
 - name: j4
-  title: Jour 4 --- Deep Learing
+  title: Deep Learning
   sections:
     - path: nn
-      flavor: dpl
+      flavor: intra-l-oreal
+
+- name: bonus
+  title: Vous reprendrez bien du dessert
+  sections:
+    - path: nn
+      flavor: intra-l-oreal-bonus
+      title: Just a "bit" more
 
 

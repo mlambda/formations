@@ -15,4 +15,11 @@ flavors:
     - demo
     - /questions
     - help-pointers
+  full-no-tree:
+    - intro
+    - lof
+    - isolation-forest
+    - demo
+    - /questions
+    - help-pointers
 title: Détection d'anomalies

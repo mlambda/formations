@@ -29,4 +29,15 @@ flavors:
     - dbscan
     - conclusion
     - demo
+  intra-l-oreal:
+    - intro
+    - kmeans-gaussian
+    - dbscan
+    - hierarchical-clustering
+    - pca-classification-hierarchique-composantes-principales
+    - metrics
+    - conclusion
+    - tuto
+    - /questions
+    - tp
 title: Clustering

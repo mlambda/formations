@@ -21,7 +21,7 @@ flavors:
     - metrics
     - conclusion
     - tuto
-    - /questions
+    - /en/questions
     - tp
 
 title: Clustering

@@ -23,4 +23,11 @@
   title: Deep Learning
   sections:
     - path: en/nn
-      flavor: dpl
+      flavor: intra-l-oreal
+
+- name: bonus
+  title: Just a "Bit" More
+  sections:
+    - path: en/nn
+      flavor: intra-l-oreal-bonus
+      title: Just a "bit" more

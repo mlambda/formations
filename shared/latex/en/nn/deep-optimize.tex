@@ -67,9 +67,9 @@
   \begin{align*}
     m_w^{(t+1)} &\leftarrow \beta_1m_w^{(t)} + (1 - \beta_1)\nabla_wL^{t} \\
     v_w^{(t+1)} &\leftarrow \beta_2v_w^{(t)} + (1 - \beta_2)(\nabla_wL^{t})^2 \\
-    \hat{m_w} &= \frac{m_w^{(t+1)}}{1 - \beta_1^{t+1}} \\
-    \hat{v_w} &= \frac{v_w^{(t+1)}}{1 - \beta_2^{t+1}} \\
-    w^{(t+1)} &\leftarrow w^{(t)} - \eta\frac{\hat{m_w}}{\sqrt{\hat{v_w}} + \epsilon} \\
+    \hat{m}_w &= \frac{m_w^{(t+1)}}{1 - \beta_1^{t+1}} \\
+    \hat{v}_w &= \frac{v_w^{(t+1)}}{1 - \beta_2^{t+1}} \\
+    w^{(t+1)} &\leftarrow w^{(t)} - \eta\frac{\hat{m}_w}{\sqrt{\hat{v}_w} + \epsilon} \\
   \end{align*}
 
   $\beta_1$ and $\beta_2$ are forgetting factors, $\epsilon$ is a small value
