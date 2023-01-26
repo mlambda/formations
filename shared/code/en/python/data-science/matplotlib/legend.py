@@ -12,6 +12,6 @@ ax.plot(x, y2, label="sin")
 
 ax.legend()
 
-ax.set_title("Cosinus et Sinus")
+ax.set_title("Cosinus and Sinus")
 
 fig.show()

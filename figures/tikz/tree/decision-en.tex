@@ -1,0 +1,29 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \node [input,circle,minimum size=1.5cm] (C) at (7, 7) {Color};
+    \node [input,circle,minimum size=1.5cm] (T) at (3, 5) {Size};
+    \node [input,circle,minimum size=1.5cm] (F) at (11, 5) {Shape};
+    \node [output,circle,minimum size=1.8cm] (PA) at (1,   2.5) {Watermelon};
+    \node [input,circle,minimum size=1.5cm] (TT) at (4, 2.5) {Size};
+    \node [input,circle,minimum size=1.5cm] (TTT) at (10, 2.5) {Size};
+    \node [output,circle,minimum size=1.8cm] (B) at (13, 2.5) {Banana};
+    \node [output,circle,minimum size=1.8cm] (PO1) at (3, 0) {Apple};
+    \node [output,circle,minimum size=1.8cm] (R) at (5.5, 0) {Grape};
+    \node [output,circle,minimum size=1.8cm] (PO2) at (8.5, 0) {Pomelo};
+    \node [output,circle,minimum size=1.8cm] (CI) at (11, 0) {Lemon};
+    \path[->,>=stealth] (C) edge node [left] {green} (T);
+    \path[->,>=stealth] (C) edge node [right] {¬green} (F);
+    \path[->,>=stealth] (T) edge node [left] {big} (PA);
+    \path[->,>=stealth] (T) edge node [right] {¬big} (TT);
+    \path[->,>=stealth] (TT) edge node [left] {average} (PO1);
+    \path[->,>=stealth] (TT) edge node [right] {¬average} (R);
+    \path[->,>=stealth] (F) edge node [left] {round} (TTT);
+    \path[->,>=stealth] (F) edge node [right] {¬round} (B);
+    \path[->,>=stealth] (TTT) edge node [left] {big} (PO2);
+    \path[->,>=stealth] (TTT) edge node [right] {¬big} (CI);
+  \end{tikzpicture}
+\end{document}

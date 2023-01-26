@@ -1,3 +1,4 @@
 author: mlambda
 license: CC-BY-SA-4.0
 title: Utilisation de \texttt{plt.subplots} pour créer un plot et changement de la taille de figure.
+title_en: Use of \texttt{plt.subplots} for creating a new plot and set its size.

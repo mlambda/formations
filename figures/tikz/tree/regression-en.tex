@@ -1,0 +1,37 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \node [input,circle,minimum size=1.5cm] (Q) at (7, 7) {Quality};
+    \node [input,circle,minimum size=1.5cm] (S) at (3, 5) {Surface};
+    \node [input,circle,minimum size=1.5cm] (G) at (11, 5) {Garage};
+    \node [input,circle,minimum size=1.5cm] (GG) at (1, 2.5) {Garage};
+    \node [input,circle,minimum size=1.5cm] (GGG) at (5, 2.5) {Garage};
+    \node [input,circle,minimum size=1.5cm] (SS) at (9, 2.5) {Surface};
+    \node [input,circle,minimum size=1.5cm] (SSS) at (13, 2.5) {Surface};
+    \node [output,circle,minimum size=1.4cm] (P1) at (0, 0) {780};
+    \node [output,circle,minimum size=1.4cm] (P2) at (2, 0) {700};
+    \node [output,circle,minimum size=1.4cm] (P3) at (4, 0) {350};
+    \node [output,circle,minimum size=1.4cm] (P4) at (6, 0) {300};
+    \node [output,circle,minimum size=1.4cm] (P5) at (8, 0) {220};
+    \node [output,circle,minimum size=1.4cm] (P6) at (10, 0) {120};
+    \node [output,circle,minimum size=1.4cm] (P7) at (12, 0) {200};
+    \node [output,circle,minimum size=1.4cm] (P8) at (14, 0) {100};
+    \path[->,>=stealth] (Q) edge node [left] {good} (S);
+    \path[->,>=stealth] (Q) edge node [right] {¬good} (G);
+    \path[->,>=stealth] (S) edge node [left] {>150} (GG);
+    \path[->,>=stealth] (S) edge node [right] {≤150} (GGG);
+    \path[->,>=stealth] (G) edge node [left] {true} (SS);
+    \path[->,>=stealth] (G) edge node [right] {false} (SSS);
+    \path[->,>=stealth] (GG) edge node [left] {true} (P1);
+    \path[->,>=stealth] (GG) edge node [right] {false} (P2);
+    \path[->,>=stealth] (GGG) edge node [left] {true} (P3);
+    \path[->,>=stealth] (GGG) edge node [right] {false} (P4);
+    \path[->,>=stealth] (SS) edge node [left] {>150} (P5);
+    \path[->,>=stealth] (SS) edge node [right] {≤150} (P6);
+    \path[->,>=stealth] (SSS) edge node [left] {>150} (P7);
+    \path[->,>=stealth] (SSS) edge node [right] {≤150} (P8);
+  \end{tikzpicture}
+\end{document}

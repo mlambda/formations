@@ -1,3 +1,4 @@
 author: mlambda
 license: CC-BY-SA-4.0
 title: Utilisation de \texttt{contour(X,Y,Z)}.
+title_en: Visualization of \texttt{contour(X,Y,Z)}.
