@@ -1,0 +1,67 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+\usepackage{tikz}
+\usetikzlibrary{positioning, fit, arrows.meta, shapes, decorations.pathreplacing,decorations.markings}
+
+% used to avoid putting the same thing several times...
+% Command \empt{var1}{var2}
+\newcommand{\empt}[2]{$#1^{\langle #2 \rangle}$}
+
+\begin{document}
+
+\begin{tikzpicture}
+%Start drawing the thing...    
+    % Draw the cell: 
+    \node [rectangle, rounded corners=5mm, draw, very thick, minimum height =4cm, minimum width=9cm] at (1,0){} ;
+
+    % Draw input
+    \node[input] (p1) at (-3,-4.5) {$\vec{p}_{1}$};
+    \node[input] (x1) at (-2,-4.5) {$\vec{x}_{1}$};
+    \node[input] (p2) at (0, -4.5) {$\vec{p}_{2}$};
+    \node[input] (x2) at (1, -4.5) {$\vec{x}_{2}$};
+    \node[input] (p3) at (3, -4.5) {$\vec{p}_{3}$};
+    \node[input] (x3) at (4, -4.5) {$\vec{x}_{3}$};
+    
+    \node[self-attention,minimum width=7cm] (self-att) at (1,-1.25) {auto-attention};
+    \node[feedforward,minimum width=7cm] (feedforward) at (1,1.25) {dense layer};
+
+    % Draw add operator
+    \node[operator] (s1) at (-2,-3) {$+$};
+    \node[operator] (s2) at (1, -3) {$+$};
+    \node[operator] (s3) at (4, -3) {$+$};
+    
+    % Draw Value vectors
+    \node[hencoder] (v1) at (-2,0) {$\vec{v}_{1}$};
+    \node[hencoder] (v2) at (1, 0) {$\vec{v}_{2}$};
+    \node[hencoder] (v3) at (4, 0) {$\vec{v}_{3}$};
+
+    % Draw returned vectors
+    \node[output] (r1) at (-2,3) {$\vec{r}_{1}$};
+    \node[output] (r2) at (1, 3) {$\vec{r}_{2}$};
+    \node[output] (r3) at (4, 3) {$\vec{r}_{3}$};
+
+% Start connecting all.
+    %Intersections and displacements are used. 
+    % Drawing arrows    
+    \draw [->, ArrowC1,>=stealth] (p1) |- (s1);
+    \draw [->, ArrowC1,>=stealth] (p2) |- (s2);
+    \draw [->, ArrowC1,>=stealth] (p3) |- (s3);
+    \draw [->, ArrowC1,>=stealth] (x1) to (s1);
+    \draw [->, ArrowC1,>=stealth] (x2) to (s2);
+    \draw [->, ArrowC1,>=stealth] (x3) to (s3);
+    \foreach \y in {1,...,3} {
+        \draw[<-,thick,>=stealth] (self-att.south) to[*|] (s\y.north);    
+    }
+    \foreach \y in {1,...,3} {
+        \draw[->,thick,>=stealth] (self-att.north) to[*|] (v\y.south);    
+    }
+    \foreach \y in {1,...,3} {
+        \draw[<-,thick,>=stealth] (feedforward.south) to[*|] (v\y.north);    
+    }
+    \foreach \y in {1,...,3} {
+        \draw[->,thick,>=stealth] (feedforward.north) to[*|] (r\y.south);    
+    }
+
+\end{tikzpicture}
+\end{document}
