@@ -31,7 +31,7 @@ flavors:
     - /en/questions
     - keras
     - /en/questions
-    - tp-demo
+    - tp
     - modern-architectures
     - modern-anomaly-detection
 title: Convolutional Neural Networks
