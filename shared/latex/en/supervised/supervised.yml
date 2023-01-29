@@ -9,7 +9,7 @@ default_titles:
   trees: Decision Trees
   random-forest: Random Forests
 
-  gradient-boosting: Boosted Trees
+  boosted: Boosted Trees
 
   svm: Support vector machine
 
@@ -43,5 +43,25 @@ flavors:
     - trees-details
     - random-forest
     - /questions
+
+  intra-l-oreal:
+    - regression-lineaire
+    - cost-error-function
+    - /en/nn/gradient-descent
+    - regression-polynomiale
+    - classification
+    - regression-logistique
+    - /en/questions
+    - tp-reg-lin-poly
+    - svm
+    - demo-sklearn-svm
+    - trees
+    - trees-details
+    - random-forest
+    - boosted
+    - /en/questions
+    - demo-sklearn-random-forest
+    - tp-random-forest
+    - tp-boosted
 
 title: Supervised Learning
