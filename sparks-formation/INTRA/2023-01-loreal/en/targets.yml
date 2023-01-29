@@ -11,7 +11,7 @@
   title: Machine Learning --- Supervised
   sections:
     - path: en/supervised
-      flavor: mlb
+      flavor: intra-l-oreal
 
 - name: j3
   title: Machine Learning --- Unsupervised
