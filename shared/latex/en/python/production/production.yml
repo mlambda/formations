@@ -13,5 +13,5 @@ flavors:
     - tp-packaging
     - cli
     - /en/questions
-    - tp-cli
+    - tp-cli-stegano
 title: Python software engineering

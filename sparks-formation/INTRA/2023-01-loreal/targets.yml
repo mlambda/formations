@@ -1,7 +1,10 @@
 - name: j1
   title: Jour 1 --- Outils data science
   sections:
-    - path: python/data-science
+    - path: about
+      flavor: loreal
+
+    - path: en/python/data-science
       flavor: full
 
     - path: python/production
@@ -11,7 +14,7 @@
   title: Jour 2 --- Machine Learning -- Supervisé
   sections:
     - path: supervised
-      flavor: mlb
+      flavor: intra-l-oreal
 
 - name: j3
   title: Jour 3 --- Machine Learning -- Non Supervisé
@@ -30,6 +33,6 @@
   sections:
     - path: nn
       flavor: intra-l-oreal-bonus
-      title: Just a "bit" more
+      title: Vous reprendrez bien du dessert
 
 

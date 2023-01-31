@@ -1,0 +1,42 @@
+\begin{frame}{Boosted Trees}
+    Boosted trees rely on the same concept than random forest to use weak learners to produce a strong learner.
+
+    The main difference being how the weak learners are used.
+
+    While random forests learn trees in parallal, Boosted trees learn trees sequentially.
+\end{frame}
+
+\begin{frame}{Boosted Trees -- General concept}
+Let $F_n$ be a \textit{strong learner}, build over \textit{weak learners} $\{f_0, f_1,\dots , f_n\}$. Each $f_k$ weak learn, might be any potential algorithm, but it is commonly a decision tree. 
+
+$F_k$ can be define, given an input $x$ as an intermediate strong learner build over the subset of weak learners $\{f_0, f_1, \dots , f_k\}$ as follows:
+\begin{align*}
+    F_0(x) &= f_0(x)\\ 
+    F_k(x) &= F_{k-1}(x) - f_k(x) \quad | 0 < k \leq n\\ 
+\end{align*}
+\end{frame}
+
+\begin{frame}{Boosted Trees -- Learning}
+    So what each learner learns ?
+    \begin{itemize}
+        \item \textbf{Strong learners} still try to learn a desired output $y$ by minimizing the error from your prediction $$\hat{y}_k = F_k(x)$$
+        \item \textbf{First weak learner $f_0$} do the same and try to predict $y$ by minimizing the error from your prediction $$\hat{y}_0 = f_0(x) = F_0(x)$$
+        \item \textbf{an other weak learner $f_k$} try to learn the residuals (error) from the previous strong learner $F_{k-1}$. Formally, $f_k$ tries to learn:$$F_{k-1}(x) - y$$. 
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Boosted Trees -- Learning}
+   Consequently, the final strong learner $F_n$ can be define such that:
+   $$F_n(x) = f_0(x) - \sum_{k=1}^{n}f_k(x)$$
+\end{frame}
+
+\begin{frame}{Boosted Trees -- Visualization}
+    \V{["img/boosted-trees", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Boosted Trees -- Pros \& Cons}
+    Boosted trees has been showned to be extremely efficient structures to learn from data, especially on tabular data.
+
+    But, by contrast with random forest, they have a strong tendancy to overfit, which require to put a lot of works on regularization.
+\end{frame}

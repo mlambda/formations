@@ -1,6 +1,9 @@
 - name: j1
   title: Data science tools
   sections:
+    - path: en/about
+      flavor: loreal
+
     - path: en/python/data-science
       flavor: full
 
