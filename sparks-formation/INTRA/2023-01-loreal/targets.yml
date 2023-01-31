@@ -10,6 +10,9 @@
     - path: python/production
       flavor: light
 
+    - path: ml
+      flavor: mle
+
 - name: j2
   title: Jour 2 --- Machine Learning -- Supervisé
   sections:

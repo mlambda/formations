@@ -10,6 +10,9 @@
     - path: en/python/production
       flavor: light
 
+    - path: en/ml
+      flavor: mle
+
 - name: j2
   title: Machine Learning --- Supervised
   sections:

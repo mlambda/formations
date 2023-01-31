@@ -11,4 +11,12 @@ flavors:
     - learning
     - evaluation
     - /questions
+
+  mle:
+    - intro
+    - data-preparation
+    - evaluation
+    - learning
+    - /en/questions
+    - help-pointers
 title: Machine Learning
