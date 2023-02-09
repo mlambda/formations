@@ -1,0 +1,86 @@
+\begin{frame}{Introduction}
+  Modèle de markov où les états générant les observations sont cachés.
+
+  Par exemple : diagnostic, capteur bruité, bourse, achats clients
+
+  \V{["tikz/markov/hmm", "th", 0.55] | image}
+\end{frame}
+
+\begin{frame}{Définition}
+  Un HMM est défini par 5 éléments~:
+  \begin{enumerate}[<+->]
+  \item Ses k observations possibles $O$
+  \item Ses n états $S$
+  \item Les probabilités de commencer dans un état $\pi$
+  \item Ses transitions (matrice $n\times n$ où $T_{ij} = P(S_j|S_i)$)
+  \item Ses émissions (matrice $n\times k$ où $E_{ij} = P(O_j|S_i)$)
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Exemple sur la météo} 
+  \begin{enumerate}[<+->]
+  \item $O = \{beau,gris,pluie\}$ 
+  \item $S =  [H, L]$
+  \item $\pi = [0.7, 0.3]$
+  \item $T$ est de taille $2 \times 2$ 
+  \item $E$ est de taille $2\times 3$
+  \end{enumerate}
+
+  \onslide<+->{Exemple de séquence d'observations~: (beau, gris, gris, pluie, beau)}
+
+  \onslide<+->{Exemple de séquence d'états cachés liés~: (H, L, L, H, H)}
+\end{frame}
+
+\begin{frame}{Ordre du modèle}
+  Comme pour un modèle de Markov sans états cachés, on peut considérer $o$ éléments passés pour décider de la transition.
+
+  Le modèle sera alors d'ordre $o$.
+
+  L'automate qui le représente aura alors $n^o$ états.
+\end{frame}
+
+\begin{frame}{Principaux algorithmes}
+  L'utilisation de HMMs nécessite principalement 3 algorithmes~:
+
+  \begin{description}[<+->]
+  \item[Viterbi] Calcul du chemin d'états cachés le plus probable étant donné des observations
+  \item[Forward-Backward] Calcul de la probabilité d'une séquence
+  \item[Baum-Welch] Algorithme EM pour apprendre les paramètres d'un HMM
+  \end{description}
+\end{frame}
+
+\begin{frame}{Algorithme Viterbi}
+  Calcul de la séquence d'états cachés la plus probable étant donné des observations~:
+  \begin{itemize}[<+->]
+  \item Algorithme de programmation dynamique
+  \item Calcul timestep par timestep pour chaque $S_i$ de la probabilité maximale d'arriver là $P_{i, t}$~:
+    \begin{itemize}
+      \item À $t_0$, proba d'émission de l'observation $O_0$ par l'état $S_i$
+      \item À $t_{i>0}$, produit de~:
+        \begin{itemize}
+          \item $\argmax_j P_{j, t - 1} \times T(j, i)$
+          \item Proba d'émission de l'observation $O_t$ par l'état $S_i$
+        \end{itemize}
+      \item Renvoi du chemin qui aboutit à la valeur max au dernier timestep
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Algorithme Forward}
+  Calcul de la probabilité d'une séquence d'observations.
+
+  Viterbi en remplaçant le $\argmax$ par une somme et en sommant les résultats au timestep final.
+\end{frame}
+
+\begin{frame}{Algorithme Backward \& Baum-Welch}
+  Backward: inverse de l'algorithme forward (part des états finaux, dont on calcule la probabilité avec forward).
+
+  Permet d'implémenter l'algorithme d'apprentissage EM Baum-Welch.
+\end{frame}
+
+\begin{frame}{Des imperfections}
+  \begin{itemize}[<+->]
+  \item Nécessite une quantité de données qui grandit exponentiellement avec l'ordre du modèle
+  \item Doit être smoothé pour éviter les séquences à 0 de proba
+  \end{itemize}
+\end{frame}

@@ -5,6 +5,12 @@ flavors:
     - ressources-orsys
     - horaires-3j-orsys
     - tour2table
+  orsys-4j:
+    - formateur
+    - description
+    - ressources-orsys
+    - horaires-4j-orsys
+    - tour2table
   loreal:
     - formateur
     - horaires-5j-sparks

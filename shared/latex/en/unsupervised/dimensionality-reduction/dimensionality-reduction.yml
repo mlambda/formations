@@ -6,6 +6,15 @@ default_titles:
   tuto: \texttt{Scikit-learn} examples
 
 flavors:
+  bda:
+    - intro
+    - pca-lda
+    - pca-variantes: null
+    - tsne-umap
+    - /en/questions
+    - tuto
+    - tp
+    - help-pointers
   mlb:
     - intro
     - pca-lda

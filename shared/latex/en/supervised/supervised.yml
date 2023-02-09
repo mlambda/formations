@@ -14,6 +14,10 @@ default_titles:
   svm: Support vector machine
 
 flavors:
+  svm-text:
+    - svm
+    - demo-sklearn-svm
+    - tp-svm-text
   mlb:
     - regression-lineaire
     - cost-error-function
@@ -43,7 +47,18 @@ flavors:
     - trees-details
     - random-forest
     - /questions
-
+  bda:
+    - /en/prerequisites/proba-rappel
+    - /en/bayesian/naive-bayes
+    - regression-lineaire
+    - cost-error-function
+    - /en/nn/gradient-descent
+    - regression-polynomiale
+    - classification
+    - regression-logistique
+    - /en/questions
+    - tp-reg-lin-poly
+    - /en/questions
   intra-l-oreal:
     - regression-lineaire
     - cost-error-function

@@ -12,6 +12,18 @@ default_titles:
   tuto: \texttt{Scikit-learn} Examples
 
 flavors:
+  bda:
+    - intro
+    - kmeans-gaussian
+    - dbscan
+    - hierarchical-clustering
+    - pca-classification-hierarchique-composantes-principales
+    - pca-inverse
+    - metrics
+    - conclusion
+    - tuto
+    - /en/questions
+    - tp
   intra-l-oreal:
     - intro
     - kmeans-gaussian

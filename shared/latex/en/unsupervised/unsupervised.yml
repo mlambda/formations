@@ -1,4 +1,9 @@
 flavors:
+  bda:
+    - introduction
+    - $dimensionality-reduction: bda
+    - $clustering: bda
+    - $anomaly-detection: full
   intra-l-oreal:
     - introduction
     - $dimensionality-reduction: mlb

@@ -6,6 +6,16 @@ default_titles:
   regularization: Regularization
 
 flavors:
+  bda:
+    - intro
+    - playground
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - /en/questions
+    - $/en/tf-keras: bda
   drn:
     - intro
     - playground

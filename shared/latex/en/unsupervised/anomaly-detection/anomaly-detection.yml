@@ -6,6 +6,15 @@ default_titles:
   /supervised/trees: Decision Trees Introduction
 
 flavors:
+  full:
+    - intro
+    - lof
+    - /en/supervised/trees
+    - /en/supervised/random-forest
+    - isolation-forest
+    - demo
+    - /en/questions
+    - help-pointers
   full-no-tree:
     - intro
     - lof

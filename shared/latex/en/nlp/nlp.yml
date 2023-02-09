@@ -16,4 +16,15 @@ flavors:
     - wordembeddings
     - /en/questions
     - help-pointers
+  bda:
+    - ml-nlp
+    - usages-nlp
+    - preprocessing
+    - tf-idf
+    - /en/questions
+    - tp-text-features-engineering
+    - wordembeddings
+    - /en/questions
+    - tp-wordembeddings
+    - help-pointers
 title: Natural Language Processing

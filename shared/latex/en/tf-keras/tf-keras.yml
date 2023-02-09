@@ -2,6 +2,10 @@ default_titles:
   keras: Keras
   tf: TensorFlow 2
 flavors:
+  bda:
+    - keras: null
+    - /en/questions
+    - tp-keras
   drn:
     - tf
     - keras
