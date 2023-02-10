@@ -31,37 +31,43 @@ flavors:
     - formateur
     - description
     - ressources-eni
-    - horaires-1j-eni
+    - horaires
     - tour2table
   eni-3j:
     - formateur
     - description
     - ressources-eni
-    - horaires-3j-eni
+    - horaires
     - tour2table
   eni-5j:
     - formateur
     - description
     - ressources-eni
-    - horaires-5j-eni
+    - horaires
     - tour2table
   sparks-formation-2j:
     - formateur
     - description
     - ressources-eni
-    - horaires-2j-orsys
+    - horaires
     - tour2table
   sparks-formation-3j:
     - formateur
     - description
     - ressources-eni
-    - horaires-3j-orsys
+    - horaires
     - tour2table
   sparks-formation-4j:
     - formateur
     - description
     - ressources-eni
-    - horaires-4j-orsys
+    - horaires
+    - tour2table
+  sparks-formation-5j:
+    - formateur
+    - description
+    - ressources-eni
+    - horaires
     - tour2table
   loreal:
     - formateur

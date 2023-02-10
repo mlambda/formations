@@ -2,9 +2,10 @@
   title: Jour 1 --- Outils data science
   sections:
     - path: about
-      flavor: loreal
-
-    - path: en/python/data-science
+      title: Python pour la Data Science
+      flavor: sparks-formation-5j
+    
+    - path: python/data-science
       flavor: full
 
     - path: python/production
@@ -15,6 +16,9 @@
 
 - name: j2
   title: Jour 2 --- Machine Learning -- Supervisé
+  sections:
+    - path: ml
+      flavor: mlb
   sections:
     - path: supervised
       flavor: intra-l-oreal
@@ -32,10 +36,14 @@
       flavor: intra-l-oreal
 
 - name: bonus
-  title: Vous reprendrez bien du dessert
+  title: Pour aller plus loin
   sections:
     - path: nn
       flavor: intra-l-oreal-bonus
+<<<<<<< HEAD
       title: Vous reprendrez bien du dessert
+=======
+      title: Pour aller plus loin
+>>>>>>> 8d0a643... add latex/ml/mlb flavor to 2023-01-loreal/targets.yml; add description.tex;laser clean shared/latex/about/horaires*
 
 
