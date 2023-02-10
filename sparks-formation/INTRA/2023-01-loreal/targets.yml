@@ -40,10 +40,6 @@
   sections:
     - path: nn
       flavor: intra-l-oreal-bonus
-<<<<<<< HEAD
-      title: Vous reprendrez bien du dessert
-=======
       title: Pour aller plus loin
->>>>>>> 8d0a643... add latex/ml/mlb flavor to 2023-01-loreal/targets.yml; add description.tex;laser clean shared/latex/about/horaires*
 
 
