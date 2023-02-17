@@ -1,17 +1,90 @@
-\begin{frame}{Définition du problème}
+\begin{frame}{Présentation du problème}
+    \begin{minipage}{0.49\linewidth}
+        \textbf{Clustering de graphe}
+
+        Faire du clustering sur de données qui présente des données structurées en graphe.
+
+        Dans un premier temps, supposons que nous voulions diviser le graphe en deux.
+        \\
+
+        \alert{\textbf{Comment séparer ce graphe ?}}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \only<1>{\V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}}
+        \only<2>{\V{["tikz/graph/spectral-clustering-2", "tw", 1] | image}}
+    \end{minipage}
 \end{frame}
 
 \begin{frame}{Matrices de graphe}
+    Il existe différentes matrices permettant de décrire un graphe :
+    \begin{itemize}
+        \item La matrice de degrée
+        \item La matrice de d'adjacence
+        \item La matrice de d'incidence
+        \item La matrice laplacienne
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{Matrice Lapiacienne}
+\begin{frame}{Matrice de graphe : Degrée}
+    \begin{minipage}{0.49\linewidth}
+        \begin{itemize}
+            \item Le \alert{degrée d'un nœud} indique le nombre d'arêtes connectées à celui-ci.
+            \item La \alert{matrice de degrée} représente le degrée de chaque nœud dans une matrice diagonale :
+            $$
+            D = \left[\begin{array}{cccccc}
+                3 & 0 & 0 & 0 & 0 & 0\\
+                0 & 2 & 0 & 0 & 0 & 0\\
+                0 & 0 & 2 & 0 & 0 & 0\\
+                0 & 0 & 0 & 3 & 0 & 0\\
+                0 & 0 & 0 & 0 & 2 & 0\\
+                0 & 0 & 0 & 0 & 0 & 2
+            \end{array}\right]
+            $$
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Matrice de graphe : Adjacence}
+    \begin{minipage}{0.49\linewidth}
+        
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Matrice de graphe : Incidence}
+    \begin{minipage}{0.49\linewidth}
+        
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Matrice de graphe : Lapiacienne}
+    \begin{minipage}{0.49\linewidth}
+        
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
+    \end{minipage}
 \end{frame}
 
 \begin{frame}{Vecteurs propres de la laplacienne}
 \end{frame}
-
+ 
 \begin{frame}{Fiedler vector}
 \end{frame}
 
 \begin{frame}{Décomposition en cluster}
+\end{frame}
+
+\begin{frame}{Cas non-binaire}
+\end{frame}
+
+\begin{frame}{Avantages et inconvénients}
 \end{frame}
