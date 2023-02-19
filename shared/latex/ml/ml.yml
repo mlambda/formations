@@ -13,6 +13,8 @@ flavors:
     - intro
     - evaluation
     - learning
+  chatgpt:
+    - intro
   intro:
     - intro
     - evaluation

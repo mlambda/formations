@@ -18,6 +18,13 @@ flavors:
     - vision-transformer
     - /questions
     - vision-demo
+  chatgpt:
+    - attention-model
+    - transformer-cell
+    - /questions
+    - text-tp
+    - vision-transformer
+    - /questions
   image:
     - attention-model
     - transformer-cell

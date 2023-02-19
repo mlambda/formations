@@ -10,6 +10,12 @@ flavors:
     - playground
     - $cnn: ml1
     - help-pointers
+  chatgpt:
+    - intro
+    - playground
+    - $transformer: chatgpt
+    - chatgpt
+    - /questions
   mle:
     - intro
     - playground

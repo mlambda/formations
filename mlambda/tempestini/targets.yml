@@ -9,12 +9,13 @@
       flavor: light
 
     - path: ml
-      flavor: light
+      flavor: chatgpt
+
+    - path: nlp
+      flavor: chatgpt
 
     - path: nn
-      flavor: ml1
-
-    - path: nn/chatgpt
-      title: ChatGPT
+      title: chatGPT
+      flavor: chatgpt
 
     - contact

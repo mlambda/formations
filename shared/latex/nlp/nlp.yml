@@ -50,5 +50,9 @@ flavors:
     - /questions
     - tp-wordembeddings
     - help-pointers
+  chatgpt:
+    - ml-nlp
+    - wordembeddings
+    - /questions
 title: Traitement automatique des langues
 version: 3
