@@ -6,7 +6,7 @@
       flavor: mlambda
 
     - path: ai
-      flavor: light
+      flavor: full
 
     - path: ml
       flavor: chatgpt
