@@ -69,8 +69,4 @@ flavors:
     - ressources-eni
     - horaires
     - tour2table
-  loreal:
-    - formateur
-    - horaires-5j-sparks
-    - tour2table
 title: Informations sur la formation

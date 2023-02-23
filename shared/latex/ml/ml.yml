@@ -9,10 +9,6 @@ default_titles:
   /tp-help: Ressources pour les travaux pratiques
 
 flavors:
-  light:
-    - intro
-    - evaluation
-    - learning
   chatgpt:
     - intro
   intro:

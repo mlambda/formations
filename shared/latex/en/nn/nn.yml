@@ -22,7 +22,7 @@ flavors:
     - gradient-descent
     - optimize
     - deep-optimize
-    - regularization
+    - regularisation
     - playground
     - /en/questions
     - $/en/tf-keras: drn
@@ -39,7 +39,7 @@ flavors:
     - gradient-descent
     - optimize
     - deep-optimize
-    - regularization
+    - regularisation
     - playground
     - /en/questions
     - $/en/tf-keras: dpl
