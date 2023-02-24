@@ -1,0 +1,21 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \node [output,circle] (N1) at (1, 0) {1};
+    \node [output,circle] (N2) at (0, 2) {2};
+    \node [output,circle] (N3) at (0,-2) {3};
+    \node [output,circle] (N4) at (3, 0) {4};
+    \node [output,circle] (N5) at (4, 2) {5};
+    \node [output,circle] (N6) at (4,-2) {6};
+    \path [->,>=stealth] (N1) edge node [right] {2} (N2);
+    \path [->,>=stealth] (N1) edge node [right] {3} (N3);
+    \path [->,>=stealth] (N1) edge node [above] {4} (N4);
+    \path [->,>=stealth] (N2) edge node [left] {1} (N3);
+    \path [->,>=stealth] (N4) edge node [left] {5} (N5);
+    \path [->,>=stealth] (N4) edge node [left] {6} (N6);
+    \path [->,>=stealth] (N5) edge node [right] {7} (N6);
+  \end{tikzpicture}
+\end{document}

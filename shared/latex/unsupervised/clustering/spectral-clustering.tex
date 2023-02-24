@@ -10,8 +10,20 @@
         \alert{\textbf{Comment séparer ce graphe ?}}
     \end{minipage}
     \begin{minipage}{0.49\linewidth}
-        \only<1>{\V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}}
-        \only<2>{\V{["tikz/graph/spectral-clustering-2", "tw", 1] | image}}
+        \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
+    \end{minipage}
+\end{frame}
+\begin{frame}{Présentation du problème}
+    \begin{minipage}{0.49\linewidth}
+        \textbf{Clustering de graphe}
+        \begin{itemize}
+            \item L'objectif est de trouver une séparation qui minimise la conductance ($\approx$ suppression de peu d'arêtes et clusters de tailles similaires)
+            \item Calculer la conductance minimale est NP-complet, on lui préfère une analyse spectrale qui fournit une bonne approximation.
+    \end{itemize}
+        
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["tikz/graph/spectral-clustering-2", "tw", 1] | image}
     \end{minipage}
 \end{frame}
 
@@ -29,16 +41,16 @@
     \begin{minipage}{0.49\linewidth}
         \begin{itemize}
             \item Le \alert{degrée d'un nœud} indique le nombre d'arêtes connectées à celui-ci.
-            \item La \alert{matrice de degrée} représente le degrée de chaque nœud dans une matrice diagonale :
+            \item La \alert{matrice de degrée} $D$ représente le degrée de chaque nœud dans une matrice diagonale :
             $$
-            D = \left[\begin{array}{cccccc}
+            D = \begin{pmatrix}
                 3 & 0 & 0 & 0 & 0 & 0\\
                 0 & 2 & 0 & 0 & 0 & 0\\
                 0 & 0 & 2 & 0 & 0 & 0\\
                 0 & 0 & 0 & 3 & 0 & 0\\
                 0 & 0 & 0 & 0 & 2 & 0\\
                 0 & 0 & 0 & 0 & 0 & 2
-            \end{array}\right]
+            \end{pmatrix}
             $$
         \end{itemize}
     \end{minipage}
@@ -49,7 +61,20 @@
 
 \begin{frame}{Matrice de graphe : Adjacence}
     \begin{minipage}{0.49\linewidth}
-        
+        \begin{itemize}
+            \item La \alert{matrice d'adjacence} $A$ représente les arêtes entre les nœuds. 
+            \item Un 0 représente une absence d'arête entre deux nœuds, un 1 sa présence :
+            $$
+            A = \begin{pmatrix}
+                0 & 1 & 1 & 1 & 0 & 0\\
+                1 & 0 & 1 & 0 & 0 & 0\\
+                1 & 1 & 0 & 0 & 0 & 0\\
+                1 & 0 & 0 & 0 & 1 & 1\\
+                0 & 0 & 0 & 1 & 0 & 1\\
+                0 & 0 & 0 & 1 & 1 & 0
+            \end{pmatrix}
+            $$
+        \end{itemize}
     \end{minipage}
     \begin{minipage}{0.49\linewidth}
         \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
@@ -58,16 +83,66 @@
 
 \begin{frame}{Matrice de graphe : Incidence}
     \begin{minipage}{0.49\linewidth}
-        
+        \begin{itemize}
+            \item La \alert{matrice d'incidence} $I$ représente la relation entre les nœuds et les arêtes
+            \item La matrice est de dimension $n \times p$ avec $n$ le nombe de nœuds et $p$ le nombre d'arêtes
+            \begin{itemize}
+                \item -1 si un arc sort du nœud
+                \item 1 si un arc rentre dans le nœud
+                \item 0 si le nœud n'est pas connecté à l'arc
+            \end{itemize}
+            \item Si le graphe est non orienté, on choisi arbitrairement un graphe orienté correspondant et valide.
+        \end{itemize}
     \end{minipage}
     \begin{minipage}{0.49\linewidth}
-        \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
+        \V{["tikz/graph/spectral-clustering-3", "tw", 1] | image}
     \end{minipage}
 \end{frame}
 
-\begin{frame}{Matrice de graphe : Lapiacienne}
+\begin{frame}{Matrice de graphe : Incidence}
     \begin{minipage}{0.49\linewidth}
-        
+        \begin{itemize}
+            \item La matrice est de dimension $n \times p$ avec $n$ le nombe de nœuds et $p$ le nombre d'arêtes
+            \begin{itemize}
+                \item -1 si un arc sort du nœud
+                \item 1 si un arc rentre dans le nœud
+                \item 0 si le nœud n'est pas connecté à l'arc
+            \end{itemize}
+        \end{itemize}
+        \scriptsize{
+        $$
+        I = \begin{pmatrix}
+            0 & -1 & -1 & -1 & 0 & 0 & 0\\
+            1 & -1 & 0 & 0 & 0 & 0 & 0\\
+            1 & 0 & 1 & 0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 1 & -1 & -1 & 0\\
+            0 & 0 & 0 & 0 & 1 & 0 & -1\\
+            0 & 0 & 0 & 0 & 0 & 1 & 1
+        \end{pmatrix}
+        $$}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \V{["tikz/graph/spectral-clustering-3", "tw", 1] | image}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Matrice de graphe : Laplacienne}
+    \begin{minipage}{0.49\linewidth}
+        \begin{itemize}
+            \item La \alert{laplacienne} $L$ est une matrice particulière de représentation d'un graphe
+            \item $L = I^{T}I$
+            \item $L = D - A$
+        \end{itemize}
+        \footnotesize{$$
+            L = \begin{pmatrix}
+                3 & -1 & -1 & -1 & 0 & 0\\
+                -1 & 2 & -1 & 0 & 0 & 0\\
+                -1 & -1 & 2 & 0 & 0 & 0\\
+                -1 & 0 & 0 & 3 & -1 & -1\\
+                0 & 0 & 0 & -1 & 2 & -1\\
+                0 & 0 & 0 & -1 & -1 & 2
+            \end{pmatrix}
+        $$}
     \end{minipage}
     \begin{minipage}{0.49\linewidth}
         \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
