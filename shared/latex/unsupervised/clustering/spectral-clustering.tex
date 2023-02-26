@@ -192,6 +192,7 @@
     $$
         \min_{x} \frac{x^T L x}{x^T x}
     $$
+    car L est symétrique semi definie positive.
 
     Ce qui est équivalent à une erreur quadratique :
     $$
@@ -208,17 +209,22 @@
 
 \begin{frame}{Vecteurs propres de la laplacienne}
     Les vecteurs propres de la matrice laplacienne vont nous permettre de trouver une solution à notre problème.
+    
+    \begin{alertblock}{Rappel}
+        Si $x$ est un vecteur propre de $L$ de valeur propre $\lambda$ alors~:
+        $$
+            Lx = \lambda x
+        $$
+    \end{alertblock} 
 
-    \textbf{\alert{Rappel}}
+    On va chercher un vecteur propre $x$ tel que $\lambda$ est minimal et différent de 0.
+\end{frame}
 
-    Si $x$ est un vecteur propre de $L$ de valeur propre $\lambda$ alors~:
-    $$
-        Lx = \lambda x
-    $$
-    A TERMINER
+\begin{frame}{Vecteurs propres de la laplacienne}
+    Un vecteur propre trivial est le vecteur $x=(1,1,\dots ,1 )$
 \end{frame}
  
-\begin{frame}{Fiedler vector}
+\begin{frame}{Vecteur de Fiedler}
 \end{frame}
 
 \begin{frame}{Décomposition en cluster}
