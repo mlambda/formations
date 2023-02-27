@@ -1,51 +1,51 @@
-\begin{frame}{Introduction aux variables}
-  Une variable est un \emph{label} assigné à un objet Python.
+\begin{frame}{Introduction to variables}
+  A variable is a \emph{label} assigned to a Python object.
 
-  On peut utiliser ce label à n'importe quel moment en lieu et place de l'objet lui-même.
+  We can use this label instead of the object it refers to at any time in our programs.
 \end{frame}
 
-\begin{frame}{Création d'une variable}
-  Pour créer une variable, on utilise la forme suivante~:
+\begin{frame}{Variable creation}
+  To create a variable, we use the following syntax:
   \mintedpycode{python/basics/variables/creation}  
 \end{frame}
 
-\begin{frame}{Utilisation d'une variable}
-  Pour utiliser une variable, on utilise son nom~:
+\begin{frame}{Variable usage}
+  To use a variable, we just refer to it by its name:
   \pycon{python/basics/variables/usage}
 \end{frame}
 
-\begin{frame}{Nommage}
-  On peut nommer ses variables en respectant ces deux règles~:
+\begin{frame}{Variable naming}
+  There are two rules to respect when it comes to variables names:
 
   \begin{itemize}
-    \item Le nom commence par une lettre minuscule ou majuscule ou un tiret bas
-    \item Le nom continue par ces mêmes caractères ou des chiffres
+    \item The names should start by a lowercase letter, uppercase letter or an underscore
+    \item The names should continue by those same characters and you can also mix in digits
   \end{itemize}
 
   \begin{alertblock}{Unicode}
-    Depuis Python 3, on peut utiliser de l'unicode. \emph{C'est toutefois très déconseillé}
+    From Python 3 on, it's possible to use any unicode letter in variable names. \emph{It's strongly discouraged. Do yourself a favor and stick to ASCII!}
   \end{alertblock}
 \end{frame}
 
-\begin{frame}{Types de base}
-  Pour représenter des valeurs simples, on utilise principalement~:
+\begin{frame}{Basic types}
+  To represent simple values, we mainly use:
 
   \begin{description}
-    \item[\texttt{int}] Nombres entiers
-    \item[\texttt{float}] Nombres réels
-    \item[\texttt{str}] Chaînes de caractères
-    \item[\texttt{bool}] Booléens
+    \item[\texttt{int}] Integers
+    \item[\texttt{float}] Reals
+    \item[\texttt{str}] Strings
+    \item[\texttt{bool}] Booleans
   \end{description}
 \end{frame}
 
-\begin{frame}{La fonction \texttt{type}}
-  Permet de connaître le type d'un objet~:
+\begin{frame}{The \texttt{type} function}
+  Useful to know the type of an object:
 
-  \pycon{python/basics/variables/type}
+  \pycon{en/python/basics/variables/type}
 \end{frame}
 
-\begin{frame}{Conversion de types}
-  On peut utiliser les classes représentants les types pour convertir vers ceux-ci~:
+\begin{frame}{Type conversion}
+  We can use the classes that represent basic values to convert \emph{to} them:
 
   \pycon{python/basics/variables/type-conversion}
 \end{frame}

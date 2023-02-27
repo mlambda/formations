@@ -1,30 +1,30 @@
-\begin{frame}{Fonction d'affichage}
-  \texttt{print} est la principale fonction pour afficher du texte en Python~:
+\begin{frame}{Display function}
+  \texttt{print} is the main function to display text in Python:
 
   \pycon{python/basics/display/basic}
 \end{frame}
 
-\begin{frame}{Arguments de \texttt{print}}
+\begin{frame}{\texttt{print} arguments}
   \begin{description}
-    \item[\texttt{sep}] Affiché entre chaque chaîne argument. Défaut~: un espace
-    \item[\texttt{end}] Affiché en fin d'affichage. Défaut~: un retour chariot
-    \item[\texttt{file}] Fichier de sortie. Défaut~: \texttt{sys.stdout}
-    \item[\texttt{flush}] Faut-il flush le buffer ? Défaut~: \texttt{False}
+    \item[\texttt{sep}] Displayed between each argument. Default: a space
+    \item[\texttt{end}] Displayed after the last argument. Default: a newline
+    \item[\texttt{file}] Output file. Default: \texttt{sys.stdout}
+    \item[\texttt{flush}] Should we flush the buffer? Default: \texttt{False}
   \end{description}
 
   \pycon{python/basics/display/args}
 \end{frame}
 
-\begin{frame}{Chaînes formatées}
-  Il est possible de construire des chaînes complexes avec la méthode \texttt{format}~:
+\begin{frame}{Formated strings}
+  It's possible to build complex strings with the \texttt{format} method:
 
-  \pycon{python/basics/display/format}
+  \pycon{en/python/basics/display/format}
 
-  Le site \bluelink{https://pyformat.info/}{PyFormat} donne des précisions sur toutes les options disponibles.  
+  The website \bluelink{https://pyformat.info/}{PyFormat} gives more examples on available options.  
 \end{frame}
 
 \begin{frame}{\texttt{f-strings}}
-  On peut aussi utiliser un raccourci syntaxique pour appeler \texttt{format}~:
+  \texttt{format} has a handy shortcut:
 
-  \pycon{python/basics/display/f-strings}
+  \pycon{en/python/basics/display/f-strings}
 \end{frame}

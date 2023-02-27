@@ -1,0 +1,4 @@
+>>> "My name is {lastname}, {firstname} {lastname}.".format(
+...     firstname="James",
+...     lastname="Bond")
+'My name is Bond, James Bond.'

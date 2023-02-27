@@ -8,13 +8,11 @@ default_titles:
   lists: Listes
   native-functions: Fonctions natives
   oop: Programmation orientée objet
-  support: Support de cours
   tuples: N-uplets
   variables: Types de base et variables
   /python/regexes/regexes: Expressions régulières
 flavors:
   full:
-    - support
     - variables
     - /questions
     - tp-variables

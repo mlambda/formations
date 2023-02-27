@@ -1,0 +1,4 @@
+>>> firstname = "James"
+>>> lastname = "Bond"
+>>> f"My name is {lastname}, {firstname} {lastname}."
+'My name is Bond, James Bond.'
