@@ -275,8 +275,72 @@
     \end{minipage}
 \end{frame}
 
+\begin{frame}{Résumé}
+    Rappel du protocole complet :
+    \begin{enumerate}
+        \item Calculer la matrice laplacienne du graphe
+        \item Calculer les vecteurs propres de cette matrice
+        \item Conserver le vecteur de plus faible valeur propre supérieure à zéro
+        \item Séparer les nœuds en deux groupes selon que la valeur associée au nœud soit positive ou négative
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Notes et compléments}
+    \begin{itemize}
+        \item Le nombre de valeurs propres nulles indique le nombre de clusters naturels (c-à-d les composantes connexes du graphe)
+        \item Il n'est pas obligatoire de séparer au niveau de zéro. Il est possible d'utiliser une autre valeur de séparation comme par exemple celle qui maximise l'écart de rang entre les nœuds.
+    \end{itemize}
+    \V{["plt/clustering/spectral-clustering-fiedler-rank", "th", 0.5] | image}
+\end{frame}
+
 \begin{frame}{Cas non-binaire}
+    L'algorithme présenté permet seulement de séparer un graphe en deux sous-graphe.
+
+    Dans le cas de plusieurs clusters :
+    \begin{itemize}
+        \item On sépare les sous-graphes récursivement, jusqu'a atteindre le nombre de clusters souhaités (\textit{ancienne approche})
+        \item On utilise les vecteurs propres de la laplacienne avec un algorithme de clustering type k-means (\textit{recommandée}). On parle alors de \alert{Spectral k-means clustering}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Cas non-binaire : Spectral k-means clustering}
+    Au lieu de ne garder que le vecteur de Fiedler, on conserve les $k$ premiers vecteurs propres de plus petites valeurs propres non-nulles.
+
+    Cela donne une matrice de dimension $(n,k)$, sur laquelle on applique un algorithme k-means, avec $k$ clusters.
+
+    \alert{\textbf{Attention}} : 
+    
+    On utilise la laplacienne normalisée dans ce cas 
+    $$L_{norm} = D^{-\frac{1}{2}}LD^{-\frac{1}{2}}$$
 \end{frame}
 
 \begin{frame}{Avantages et inconvénients}
+    \begin{minipage}[t]{0.49\linewidth}
+        \textbf{Avantages : }
+        \begin{itemize}
+            \item Pas d'hypothèse statistique dépendante d'une distance
+            \item Implémentable en quelques lignes d'algèbre
+            \item Produit de bons clusters avec des propriétés mathématiques garanties sur l'optimalité
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \textbf{Inconvénients : }
+        \begin{itemize}
+            \item La dernière phase utilisant k-means peut rendre les résultats aléatoires
+            \item La recherche de valeurs propres peut être très couteuses sur des datasets de grandes tailles. Il existe cependant des algorithmes très performants pour ce type de problème (LOBPCG).
+        \end{itemize}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Clustering sur données non graphe}
+    Pour les données qui ne sont pas des graphes, il est toujours possible de faire du clustering spectral en créant un graphe associé aux données~:
+    \begin{itemize}
+        \item Graphe des $\epsilon$-voisins : les nœuds à une distance de $\epsilon$ sont connectés
+        \item Graphe KNN : Les $k$ plus proches voisins d'un point sont connectés
+        \item Graphe dense de similarités : Graphe où tous les nœuds sont connectés mais les arêtes sont pondérés par 
+        $$
+            s(x_i,x_j) = \exp \left( -\frac{||x_i-x_j||^2}{2\sigma^2} \right)
+        $$
+        avec $\sigma$ l'hyperparametre qui controle la taille d'un \og voisinage \fg{}
+    \end{itemize}
 \end{frame}
