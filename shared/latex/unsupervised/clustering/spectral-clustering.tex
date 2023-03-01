@@ -17,7 +17,7 @@
     \begin{minipage}{0.49\linewidth}
         \textbf{Clustering de graphe}
         \begin{itemize}
-            \item L'objectif est de trouver une séparation qui minimise la conductance ($\approx$ suppression de peu d'arêtes et clusters de tailles similaires)
+            \item L'objectif est de trouver une séparation qui minimise la \alert{conductance} ($\approx$ suppression de peu d'arêtes et clusters de tailles similaires)
             \item Calculer la conductance minimale est NP-complet, on lui préfère une analyse spectrale qui fournit une bonne approximation.
     \end{itemize}
         
@@ -221,13 +221,58 @@
 \end{frame}
 
 \begin{frame}{Vecteurs propres de la laplacienne}
-    Un vecteur propre trivial est le vecteur $x=(1,1,\dots ,1 )$
+    On peut voir un vecteur propre de la laplacienne comme une solution de séparation du graphe et sa valeur propre comme une estimation de la conductance suite à la séparation.
+\end{frame}
+
+\begin{frame}{Vecteurs propres de la laplacienne : Vecteurs nuls}
+    Un vecteur propre évident est le vecteur $x=(1,1,\dots ,1 )$.
+    
+    C'est le principe de la laplacienne puisqu'elle contient à la fois le degré et la liste des adjacences pour chaque nœud.
+    \vfill
+
+    Il s'agit d'un vecteur nul non trivial ($\neq 0$).
+    
+    \alert{Il y aura autant de vecteurs nuls non triviaux qu'il y a de composantes connexes dans le graphe.}
+
+    \centering \textbf{Pourquoi ?}
 \end{frame}
  
 \begin{frame}{Vecteur de Fiedler}
+    \begin{itemize}
+        \item Le \alert{vecteur de Fiedler} est le vecteur non nul ($\lambda \neq 0$) où $\lambda$ est minimal. 
+        \item Le vecteur de Fiedler résout le problème de minimisation de la conductance à \textbf{une} séparation. [Fiedler 73]
+    \end{itemize} 
+\end{frame}
+ 
+\begin{frame}{Vecteur de Fiedler~: Exemple}
+    Voici les vecteurs propres (en colonnes) de notre graphe~:
+    {\footnotesize
+    $$
+    \begin{pmatrix}
+        0.41& \alert{-0.26}& -0.12&  0.11&  0.55& -0.66\\
+        0.41& \alert{-0.46}&  0.62&  0.37& -0.25&  0.18\\
+        0.41& \alert{-0.46}& -0.51& -0.48& -0.31&  0.18\\
+        0.41&  \alert{0.26}& -0.12&  0.11&  0.55&  0.66\\
+        0.41&  \alert{0.46}&  0.46& -0.6 & -0.08& -0.18\\
+        0.41&  \alert{0.46}& -0.35&  0.49& -0.47& -0.18\\
+    \end{pmatrix}
+    $$}
+    Le vecteur de Fiedler est indiqué en \alert{orange}.
+
+    \V{["tikz/graph/spectral-clustering-1", "th", 0.35] | image}
 \end{frame}
 
 \begin{frame}{Décomposition en cluster}
+    \begin{minipage}{0.64\linewidth}
+        \begin{itemize}
+            \item La décomposition en cluster utilise le seul vecteur de Fiedler.
+            \item Les valeurs négatives forment les nœuds du premier groupe, les valeurs positives ceux du second groupe.
+        \end{itemize}
+        $x_F = ({\color{IndianYellow}-0.26, -0.46, -0.46}, {\color{NavyBlue}{0.26, 0.46, 0.46}})$
+    \end{minipage}
+    \begin{minipage}{0.34\linewidth}
+        \V{["tikz/graph/spectral-clustering-2", "tw", 1] | image}
+    \end{minipage}
 \end{frame}
 
 \begin{frame}{Cas non-binaire}
