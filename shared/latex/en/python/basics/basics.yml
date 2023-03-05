@@ -1,16 +1,16 @@
 default_titles:
-  control-structures: Structures de contrôle
-  dictionaries: Dictionnaires
-  display: Affichage
-  exceptions: Traitement des erreurs
-  files: Lecture et écriture de fichiers
-  functions: Fonctions
-  lists: Listes
-  native-functions: Fonctions natives
-  oop: Programmation orientée objet
-  tuples: N-uplets
-  variables: Types de base et variables
-  /python/regexes/regexes: Expressions régulières
+  control-structures: Control Structures
+  dictionaries: Dictionaries
+  display: Display
+  exceptions: Error Handling
+  files: Reading and Writing Files
+  functions: Functions
+  lists: Lists
+  native-functions: Native Functions
+  oop: Object Oriented Programming
+  tuples: Tuples
+  variables: Basic Types and Variables
+  /python/regexes/regexes: Regular Expressions
 flavors:
   full:
     - variables
@@ -43,4 +43,4 @@ flavors:
     - /questions
     - native-functions
     - /questions
-title: Bases du langage Python
+title: Python Fundamentals
