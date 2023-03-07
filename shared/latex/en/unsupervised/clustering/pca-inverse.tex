@@ -1,21 +1,21 @@
-\begin{frame}{Clustering par PCA}
-  (Souvenez-vous)
+\begin{frame}{PCA clustering}
+  (Remember)
 
-  \begin{itemize}[<+->]
-    \item Calcul de la matrice de covariance (resp corrélation)~:
+  \begin{itemize}
+    \item Calculation of the covariance matrix (respectively correlation):
       \[
       \frac{1}{N} \times \overline{X^T} \times \overline{X}
       \quad
       ( \frac{1}{N} \times \widetilde{X^T} \times \widetilde{X} )
       \]
-    \item Calcul des vecteurs propres de cette matrice~: ce sont les combinaisons linéaires des nouvelles features
-    \item Tri des vecteurs par valeur propre décroissante
-    \item Réduction de dimension : on ne conserve que les $k$ premiers vecteurs propres
+    \item Calculation of the matrix eigenvectors: they are the linear combinations of the new columns
+    \item Sorting the vectors by decreasing eigenvalue
+    \item Dimensionality reduction: we keep only the first $k$ eigenvectors
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Clustering par PCA}
-  Considérer les individus comme des features et les features comme des individus.
-  
-  Les vecteurs propres ayant une grande valeur propre peuvent être considérés comme des centre de cluster d'individus.
+\begin{frame}{PCA clustering}
+  We can use the transpose of our matrix: our samples become features and our features become samples.
+
+  Eigenvectors can then be considered as centroids.
 \end{frame}

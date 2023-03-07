@@ -14,33 +14,33 @@ default_titles:
 flavors:
   full:
     - variables
-    - /questions
+    - /en/questions
     - tp-variables
     - display
-    - /questions
+    - /en/questions
     - tp-display
     - intro-collections: Collections
     - lists: null
     - dictionaries: null
     - tuples: null
     - sets: null
-    - /questions
+    - /en/questions
     - tp-collections
     - control-structures
-    - /questions
+    - /en/questions
     - tp-control-structures
     - files
-    - /questions
+    - /en/questions
     - tp-files
     - functions
-    - /questions
+    - /en/questions
     - tp-functions
-    - $/python/regexes: full
+    - $/en/python/regexes: full
     - oop
     - tp-oop
-    - /questions
+    - /en/questions
     - exceptions
-    - /questions
+    - /en/questions
     - native-functions
-    - /questions
+    - /en/questions
 title: Python Fundamentals

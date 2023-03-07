@@ -18,16 +18,13 @@ flavors:
     - evaluation
     - learning
     - /en/questions
-    - help-pointers
   bda:
     - intro
     - $prerequisites: full
     - data-preparation
     - evaluation
     - /en/questions
-    - /tp-help
     - tp-data
     - learning
     - /en/questions
-    - help-pointers
 title: Machine Learning

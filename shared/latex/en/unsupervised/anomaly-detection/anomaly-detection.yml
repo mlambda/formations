@@ -12,9 +12,7 @@ flavors:
     - /en/supervised/trees
     - /en/supervised/random-forest
     - isolation-forest
-    - demo
     - /en/questions
-    - help-pointers
   full-no-tree:
     - intro
     - lof

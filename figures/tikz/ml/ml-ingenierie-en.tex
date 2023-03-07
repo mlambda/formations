@@ -1,0 +1,50 @@
+\documentclass[beamer,crop,tikz]{standalone}
+\usetikzlibrary{arrows.meta,bending}
+
+\usepackage{formation}
+
+\definecolor{LightGreen}{HTML}{1F9F88}
+\definecolor{LightPurple}{HTML}{874da1}
+\definecolor{BloodyOrange}{HTML}{e34b36}
+\definecolor{Gold}{HTML}{f49c21}
+\definecolor{BlueGray}{HTML}{5c6d7d}
+
+\tikzset{hexagon/.style={
+  regular polygon,
+  regular polygon sides=6,
+  minimum width=5cm,
+  line width=1mm}}
+\tikzset{color-data/.style={
+  fill=LightGreen!75!black,
+  draw=LightGreen
+  }}
+\tikzset{color-clean/.style={
+  fill=LightPurple!75!black,
+  draw=LightPurple
+  }}
+\tikzset{color-train/.style={
+  fill=BloodyOrange!75!black,
+  draw=BloodyOrange
+  }}
+\tikzset{color-test/.style={
+  fill=Gold!75!black,
+  draw=Gold
+  }}
+\tikzset{color-improve/.style={
+  fill=BlueGray!75!black,
+  draw=BlueGray
+  }}
+
+
+
+\begin{document}
+  \begin{tikzpicture}
+    \node [input,hexagon,color-data, align=center] (get-data) at (0,0) {Data\\gathering};
+    \node [input,hexagon,color-clean, align=center] (clean-data) at (0,4.5) {Data\\cleaning \&\\preparation};
+    \node [input,hexagon,color-train, align=center] (train) at (3.9,6.75) {Model\\training};
+    \node [input,hexagon,color-test, align=center] (test-data) at (7.8,4.5) {Model\\evaluation};
+    \node [input,hexagon,color-improve] (improve) at (7.8,0) {Improvement};
+    
+    \draw[-{>[flex=0.75]},>=stealth,line width=2mm] (3,0.7) arc (240:-60:1.8cm);
+  \end{tikzpicture}
+\end{document}

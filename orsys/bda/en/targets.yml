@@ -9,7 +9,6 @@
 
     - path: en/python/data-science
       flavor: full
-      title: Outils data-science (Optionnel)
 
 - name: j2
   title: Jour 2 --- Apprentissage non-supervisé
@@ -23,7 +22,6 @@
 - name: j3
   title: Jour 3 --- Apprentissage supervisé
   sections:
-
     - path: en/supervised
       flavor: bda
 
@@ -35,9 +33,8 @@
 
     - path: en/supervised
       flavor: svm-text
-    
+
     - path: en/nn
       flavor: bda
-
 
     - contact

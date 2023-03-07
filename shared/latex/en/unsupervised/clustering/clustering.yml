@@ -8,7 +8,6 @@ default_titles:
   metrics: Clustering Metrics
   pca-classification-hierarchique-composantes-principales: Hybrid Methods
   pca-inverse: Clustering with PCA
-  tp: Exercices
   tuto: \texttt{Scikit-learn} Examples
 
 flavors:
@@ -21,7 +20,6 @@ flavors:
     - pca-inverse
     - metrics
     - conclusion
-    - tuto
     - /en/questions
     - tp
   intra-l-oreal:

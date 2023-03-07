@@ -1,0 +1,133 @@
+\begin{frame}{Introduction}
+  Capture et manipulation de chaînes de caractères par le biais de motifs génériques.
+
+  \begin{exampleblock}{Exemple~: rajouter un espace après chaque ponctuation}
+    «~Le chat mange,délicatement, ses croquettes.Jean est attendri.~» \\
+    $\rightarrow$ \\
+    «~Le chat mange,délicatement, ses croquettes. Jean est attendri. ~» \\
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Utilisations}
+  Une fois le motif capturé, on peut :
+  \begin{itemize}
+  \item supprimer
+  \item modifier
+  \item réutiliser
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Caractères spéciaux}
+  \begin{description}
+  \item[\texttt{\^{}}] début de ligne (ou négation dans un ensemble)
+  \item[\texttt{\$}] fin de ligne
+  \item[\texttt{.}] joker (capture n'importe quel caractère) 
+  \item[\texttt{[}] ouverture d'un ensemble de caractère
+  \item[\texttt{]}] fermeture d'un ensemble de caractère
+  \item[\texttt{(}] ouverture de groupe de capture
+  \item[\texttt{)}] fermeture de groupe de capture
+  \item[\texttt{?}] 0 ou 1 occurence du motif
+  \item[\texttt{*}] de 0 à $\infty$ occurences du motif
+  \item[\texttt{+}] de 1 à $\infty$ occurences du motif
+  \item[\texttt{\char`\{}] ouverture d'intervalle de répétition du motif
+  \item[\texttt{\char`\}}] fermeture d'intervalle de répétition du motif
+  \item[\texttt{\textbackslash}] caractère spécialement spécial
+  \item[\texttt{\textbar}] OU logique dans un groupe de capture
+  \end{description}
+\end{frame}
+
+\begin{frame}{\texttt{re.match}}
+  \mintedcustom{python/regexes/demo-intro-match}{py}{text}
+\end{frame}
+
+\begin{frame}{\texttt{re.search}}
+  \mintedcustom{python/regexes/demo-intro-search}{py}{text}
+\end{frame}
+
+\begin{frame}{\texttt{re.search}}
+  \mintedcustom{python/regexes/demo-search}{py}{text}
+\end{frame}
+
+\begin{frame}{\texttt{re.findall}}
+  \mintedpy{python/regexes/demo-findall}
+\end{frame}
+
+\begin{frame}{\texttt{re.finditer}}
+  \mintedcustom{python/regexes/demo-finditer}{py}{text}
+\end{frame}
+
+\begin{frame}{Le caractère \texttt{\textbackslash}}
+  \texttt{\textbackslash} est un caractère de contôle spécial. \\
+  Permet de définir des groupes de caractères~:
+  \begin{description}
+  \item[\texttt{\textbackslash d}] numériques $\iff$ \texttt{[0-9]}
+  \item[\texttt{\textbackslash D}] non-numériques $\iff$ \texttt{[\^{}0-9]}
+  \item[\texttt{\textbackslash s}] blancs $\iff$ \texttt{[ \textbackslash t\textbackslash n\textbackslash r\textbackslash f\textbackslash v]}
+  \item[\texttt{\textbackslash S}] non-blancs $\iff$ \texttt{[\^{} \textbackslash t\textbackslash n\textbackslash r\textbackslash f\textbackslash v]}
+  \item[\texttt{\textbackslash w}] alpha-numériques $\iff$ \texttt{[a-zA-Z0-9\_]}
+  \item[\texttt{\textbackslash W}] non-alpha-numériques $\iff$ \texttt{[\^{}a-zA-Z0-9\_]}
+  \end{description}
+  Plus généralement \texttt{\textbackslash} permet de capturer les caractères spéciaux (ex: \texttt{\textbackslash .} pour capturer le point)
+\end{frame}
+
+\begin{frame}{Chaîne de caractère brute}
+  Python utilise par défaut des chaînes de caractères littérale : \texttt{\textbackslash} est déjà un caractère spécial...
+  \mintedcustom{python/regexes/demo-str-lit-brut}{py}{text}
+\end{frame}
+
+\begin{frame}{Chaîne de caractère brute}
+  \mintedcustom{python/regexes/demo-pattern-brut}{py}{text}
+\end{frame}
+
+\begin{frame}{Compilation de pattern --- Flag \texttt{re.IGNORECASE} (\texttt{re.I})}
+  Rendre insensible à la casse
+  \mintedpy{python/regexes/demo-pattern-compile-flag-ignorecase}
+\end{frame}
+
+\begin{frame}{Compilation de pattern --- Flag \texttt{re.ASCII} (\texttt{re.A})}
+  Forcer \texttt{\textbackslash w} à fonctionner en mode ASCII
+  \mintedpy{python/regexes/demo-pattern-compile-flag-ascii}
+\end{frame}
+
+\begin{frame}{Compilation de pattern --- Flag \texttt{re.VERBOSE} (\texttt{re.X})}
+  Permet l'écriture d'expressions régulières «~lisibles~»
+  \mintedpycode{python/regexes/demo-pattern-compile-flag-verbose}
+\end{frame}
+
+\begin{frame}{Compilation de pattern --- Autres flags}
+  \begin{description}
+  \item[\texttt{re.DOTALL}] Le caractère spécial \texttt{.} capture aussi les retours chariot
+  \item[\texttt{re.LOCALE}] Utilisation des définitions de la locale courante pour les captures
+  \item[\texttt{re.MULTILINE}] \texttt{\^{}} et \texttt{\$} matchent les début et fin de ligne, et non de chaîne
+  \end{description}
+\end{frame}
+
+\begin{frame}{Groupe de capture}
+  \mintedcustom{python/regexes/demo-groups}{py}{text}
+\end{frame}
+
+\begin{frame}{Répétition de groupe}
+  \mintedcustom{python/regexes/demo-groups-repeat}{py}{text}
+\end{frame}
+
+\begin{frame}{Remplacements}
+  \mintedcustom{python/regexes/demo-replace}{py}{text}
+\end{frame}
+
+\begin{frame}{Remplacements avec groupes}
+  Réutilisation des groupes de capture dans la chaîne de remplacement :
+  \mintedcustom{python/regexes/demo-replace-groups}{py}{text}
+\end{frame}
+
+\begin{frame}{Tokenisation : Split}
+  \mintedpy{python/regexes/demo-split}
+\end{frame}
+
+\begin{frame}{Pour aller plus loin (ou plus vite)}
+  Il existe encore beaucoup de subtilités et techniques avancées…
+
+  Beaucoup de gros fichiers ? `sed` reste la solution optimale depuis les années 70.
+\end{frame}
+
