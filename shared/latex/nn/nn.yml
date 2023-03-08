@@ -189,4 +189,21 @@ flavors:
     - $/sequential-data: dpl
     - $rnn: dpl
 
+  intra-stmicro:
+    - intro
+    - playground
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - /questions
+    - $/tf-keras: bda
+    - $cnn: dpl
+    - $ae: dpl
+    - $/nlp: dpl
+    - $/sequential-data: dpl
+    - $rnn: dpl
+    - help-pointers
+
 title: Réseaux de neurones

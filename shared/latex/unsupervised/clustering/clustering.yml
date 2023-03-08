@@ -40,4 +40,16 @@ flavors:
     - tuto
     - /questions
     - tp
+    intra-stmicro:
+    - intro
+    - kmeans-gaussian
+    - dbscan
+    - hierarchical-clustering
+    - pca-classification-hierarchique-composantes-principales
+    - spectral-clustering
+    - metrics
+    - conclusion
+    - tuto
+    - /questions
+    - tp
 title: Clustering

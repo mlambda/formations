@@ -1,0 +1,35 @@
+- name: j1
+  title: Introduction au Machine Learning
+  sections:
+    - path: about
+      title: Machine Learning, Méthodes et Solutions
+      flavor: orsys-4j
+
+    - path: tools
+      flavor: init-python
+
+    - path: ml
+      flavor: mlb
+
+- name: j2
+  title: Algorithmes Supervisés
+  sections:
+    - path: supervised
+      flavor: mlb
+
+- name: j3
+  title: Algorithmes Non-supervisés
+  sections:
+    - path: unsupervised
+      flavor: mlb
+    - path: recommander-system
+      flavor: full
+
+- name: j4
+  title: Deep learing
+  sections:
+    - path: nn
+      flavor: intra-stmicro
+
+    - contact
+

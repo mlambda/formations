@@ -50,3 +50,5 @@
 
     - path: tools
       flavor: demo-spark
+
+    - contact
