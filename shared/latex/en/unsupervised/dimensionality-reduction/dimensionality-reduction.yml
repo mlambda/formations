@@ -14,7 +14,6 @@ flavors:
     - /en/questions
     - tuto
     - tp
-    - help-pointers
   mlb:
     - intro
     - pca-lda

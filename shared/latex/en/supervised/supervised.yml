@@ -1,6 +1,6 @@
 default_titles:
   classification: Classification
-  cost-error-function: Lost Function
+  cost-error-function: Loss Function
 
   regression-lineaire: Linear Regression
   regression-logistique: Logistic Regression
