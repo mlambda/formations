@@ -8,41 +8,6 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Bayesian reasoning}
-  \begin{itemize}
-    \item Formulate an hypothesis without looking at annotated data (prior probability)
-    \item Update the hypothesis based on the available data (posterior probability)
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Notation}
-  For the following slides, we will use the following notation:
-
-  \begin{description}[<+(1)->]
-    \item[$C$] Random variable for the class of a sample
-    \item[$C_k$] Possible classes (possible values of $C$)
-    \item[$F$] Random variable for the sample features
-    \item[$F_i$] Feature values for sample $i$
-  \end{description}
-\end{frame}
-
-\begin{frame}{Computation of the class of a sample}
-  Bayes theorem:
-  \[
-    P(C = C_k \mid F = F_i) = \frac{P(C = C_k) \times P(F = F_i \mid C = C_k)}{P(F = F_i)}
-  \]
-
-  Where:
-
-  \begin{description}
-    \item[$P(C = C_k \mid F = F_i)$] Posterior probability
-    \item[$P(C = C_k)$] Prior probability
-    \item[$P(F = F_i \mid C = C_k)$] Likelihood
-    \item[$P(F = F_i)$] Prior probability
-  \end{description}
-  %TODO evidence
-\end{frame}
-
 \begin{frame}{Example --- Goal}
   \def\banane{\text{banana}}%
   \def\orange{\text{orange}}%

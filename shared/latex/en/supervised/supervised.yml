@@ -6,6 +6,8 @@ default_titles:
   regression-logistique: Logistic Regression
   regression-polynomiale: Polynomial Regression
 
+  naive-bayes: Naive Bayes
+
   trees: Decision Trees
   random-forest: Random Forests
 
@@ -16,7 +18,6 @@ default_titles:
 flavors:
   svm-text:
     - svm
-    - demo-sklearn-svm
     - tp-svm-text
   drn:
     - /bayesian/naive-bayes
@@ -31,8 +32,7 @@ flavors:
     - random-forest
     - /questions
   bda:
-    - /en/prerequisites/proba-rappel
-    - /en/bayesian/naive-bayes
+    - naive-bayes
     - regression-lineaire
     - cost-error-function
     - /en/nn/gradient-descent
