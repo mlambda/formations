@@ -1,19 +1,17 @@
 default_titles:
-  filtrage-colaboratif: Filtrage Collaboratif
-  filtrage-colaboratif-conclusion: Conclusions
-  filtrage-colaboratif-extend: Filtrage Collaboratif - Aujourd'hui
-  filtrage-colaboratif-item-based: Filtrage Collaboratif 'Item Based'
-  filtrage-colaboratif-user-based: Filtrage Collaboratif 'User Based'
+  content-based-filtering: Filtrage basé sur le contenu
+  collaborative-filtering: Filtrage Collaboratif
+  collaborative-filtering-extend: Filtrage Collaboratif - Aujourd'hui
+  collaborative-filtering-conclusion: Conclusions
   intro: Systèmes de Recommendation
   tp-recommander-system: Travaux Pratiques
 flavors:
   full:
     - intro
-    - filtrage-colaboratif
-    - filtrage-colaboratif-user-based
-    - filtrage-colaboratif-item-based
-    - filtrage-colaboratif-extend
-    - filtrage-colaboratif-conclusion
+    - content-based-filtering
+    - collaborative-filtering
+    - collaborative-filtering-extend
+    - collaborative-filtering-conclusion
     - /questions
     - tp-recommander-system
 title: Système de Recommendation
