@@ -1,0 +1,17 @@
+title: Programmation
+default_titles:
+  intro: Introduction
+  hardware: Le matériel
+  program: Le Programme
+  algorithm: L'Algorithme
+  compiler: Les compilateurs
+  language: Les langages de programmation
+flavors:
+  tho:
+    - intro
+    - hardware
+    - program
+    - algorithm
+    - compiler
+    - language
+version: 3

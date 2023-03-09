@@ -1,0 +1,16 @@
+- name: j1
+  title: Initiation à la programmation, avec Python
+  sections:
+    - path: about
+      flavor: orsys-2j
+
+    - path: programmation
+      flavor: tho
+
+    - path: python/intro
+      flavor: full
+
+    - path: python/basics
+      flavor: lpy
+
+    - contact

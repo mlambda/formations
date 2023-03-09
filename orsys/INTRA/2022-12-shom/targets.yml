@@ -1,0 +1,52 @@
+- name: j1
+  title: Jour 1 --- Introduction au Machine Learning
+  sections:
+    - path: about
+      title: Machine Learning, Méthodes et Solutions
+      flavor: orsys-4j
+
+    - path: tools
+      flavor: init-python
+
+    - path: ml
+      flavor: mlb
+
+- name: j2
+  title: Jour 2 --- Algorithmes 1/2
+  sections:
+    - path: supervised
+      flavor: mlb
+
+    - path: unsupervised
+      flavor: bda
+
+- name: j3
+  title: Jour 3 --- Algorithmes 2/2
+  sections:
+    - path: bayesian
+      flavor: mlb
+
+    - path: nn
+      flavor: dpl
+
+
+- name: j4
+  title: Jour 4 --- Ingénierie
+  sections:
+    - path: actors
+      flavor: gafa
+
+    - path: tools
+      flavor: devops
+
+    - path: engineering
+      flavor: mlcraftmyass
+
+    - path: big-questions
+      flavor: full
+
+    - path: sectors
+      flavor: full
+
+    - path: tools
+      flavor: demo-spark
