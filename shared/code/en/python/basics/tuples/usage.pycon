@@ -1,0 +1,18 @@
+>>> t = ()         # Empty tuple creation
+>>> t = (1, 2, 3)  # Creation with elements
+>>> t[0]           # Positive indices
+1
+>>> t[1]
+2
+>>> t[-1]          # Negative indices
+3
+>>> t[-2]
+2
+>>> 1 in t         # Presence test
+True
+>>> 4 in t
+False
+>>> t + (4, 5, 6)  # Concatenation
+(1, 2, 3, 4, 5, 6)
+>>> len(t)         # Size
+3

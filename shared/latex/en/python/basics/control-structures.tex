@@ -1,61 +1,54 @@
 \begin{frame}{Introduction}
-  Python utilise principalement trois structures de contrôle de flot~: \texttt{if}, \texttt{while} et \texttt{for}.
+  Python has 3 main control structures: \texttt{if}, \texttt{while} and \texttt{for}.
 
-  Donc pas de \texttt{switch} comme dans d'autres langages.
+  We'll talk about \texttt{try}/\texttt{except} later to handle errors.
 
-  Nous  verrons plus tard qu'il existe aussi une structure \texttt{try}/\texttt{except} pour la gestion d'erreurs.
-
-  Il existe aussi une instruction \texttt{match} depuis Python 3.10 mais ce n'est pas encore une version stable.
+  From Python 3.10 on, there's also a \texttt{match} structure but it's still a bit early to use it.
 \end{frame}
 
-\begin{frame}{Structure conditionnelle}
-  Utilisation de \texttt{if}, \texttt{elif} et \texttt{else}~:
-  \pycon{python/basics/control-structures/if}
+\begin{frame}{\texttt{if}}
+  \pycon{en/python/basics/control-structures/if}
 \end{frame}
 
-\begin{frame}{Structure de boucle «~Pour dans~» ⋅ Avec des indices}
-  La fonction \texttt{range} permet de créer des suites d'indices~:
+\begin{frame}{\texttt{for} ⋅ With indices}
+  The \texttt{range} function can be used to generate indices for iteration:
 
   \mintedpycode{python/basics/control-structures/range}
 
-  Par défaut elle renvoie des objets de type \texttt{range}, plus efficaces que des listes.
-
-  Utilisation dans une boucle~:
+  Usage in a loop:
 
   \pycon{python/basics/control-structures/for-indices}
 \end{frame}
 
-\begin{frame}{Structure de boucle «~Pour dans~» ⋅ Avec une liste}
+\begin{frame}{\texttt{for} ⋅ With a list}
   \pycon{python/basics/control-structures/for-list}
 \end{frame}
 
-\begin{frame}{Structure de boucle «~Pour dans~» ⋅ Avec un dictionnaire}
+\begin{frame}{\texttt{for} ⋅ With a dict}
   \pycon{python/basics/control-structures/for-dict}
 \end{frame}
 
-\begin{frame}{Structure de boucle «~Pour dans~» ⋅ Avec plusieurs itérables}
-  Utilisation de la fonction \texttt{zip}~:
-
+\begin{frame}{\texttt{for} ⋅ With several iterables}
   \pycon{python/basics/control-structures/for-zip}
 
-  Fonctionne avec un nombre arbitraire d'itérables.
+  Works with more than 2 iterables.
 \end{frame}
 
-\begin{frame}{Structure de boucle «~tant que~»}
-  \pycon{python/basics/control-structures/while}
+\begin{frame}{\texttt{while}}
+  \pycon{en/python/basics/control-structures/while}
 \end{frame}
 
 \begin{frame}{\texttt{break} \& \texttt{continue}}
   \begin{description}
-    \item[\texttt{break}] Utilisé pour sortir de la boucle la plus intérieure
-    \item[\texttt{continue}] Utilisé pour passer directement à l'itération suivante de la boucle la plus intérieure
+    \item[\texttt{break}] Used to skip to after the most inner loop
+    \item[\texttt{continue}] Used to skip to the next iteration of the most inner loop
   \end{description}
 
   \pycon{python/basics/control-structures/break-continue}
 \end{frame}
 
-\begin{frame}{Clause \texttt{else} pour les boucles}
-  La clause \texttt{else} est exécutée si on sort de la boucle sans \texttt{break}~:
+\begin{frame}{\texttt{else} branch for loops}
+  The \texttt{else} branch is executed if no \texttt{break} was used in the loop body:
 
   \pycon{python/basics/control-structures/else}
 \end{frame}

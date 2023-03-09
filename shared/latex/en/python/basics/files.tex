@@ -1,41 +1,40 @@
-\begin{frame}{Mécanismes principaux}
+\begin{frame}{Main tools}
   \begin{itemize}
-    \item Fonction \texttt{open} pour récupérer un objet pour manipuler le fichier
-    \item Utilisation d'un bloc \texttt{with} pour garantir la fermeture du fichier
+    \item \texttt{open} function to retrieve an object to manipulate a file
+    \item Usage of a \texttt{with} statement to ensure that file closing is handled properly
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Bloc \texttt{with}}
-  Définit un contexte~:
+\begin{frame}{\texttt{with} statement}
+  Introduces a context:
   \begin{itemize}
-    \item L'entrée et la sortie du contexte sont gérés par le gestionnaire de contexte
-    \item Les erreurs peuvent aussi l'être
+    \item Entering and leaving the context will execute some code, here the opening and closing of the file
+    \item Errors can be handled
   \end{itemize}
 
-  Très utile pour la gestion de fichier~: \texttt{open} est un gestionnaire de contexte.
 \end{frame}
 
-\begin{frame}{Paramètres les plus importants d'\texttt{open}}
+\begin{frame}{Most important \texttt{open} parameters}
   \begin{description}
-    \item[\texttt{mode}] Par défaut, \texttt{"r"} pour lecture. Voir \bluelink{https://docs.python.org/fr/3/library/functions.html\#open}{ici} pour la liste complète.
-    \item[\texttt{encoding}] Par défaut, dépend de la locale. Quasi toujours mettre \texttt{encoding="utf8"}.
+    \item[\texttt{mode}] By default, \texttt{"r"} for reading. See \bluelink{https://docs.python.org/3/library/functions.html\#open}{here} for all the options.
+    \item[\texttt{encoding}] By default, locale dependent. Nowaydas, \texttt{encoding="utf8"} is almost always what you want.
   \end{description}
 \end{frame}
 
-\begin{frame}{Lecture}
-  \pycon{python/basics/files/read}
+\begin{frame}{Reading}
+  \pycon{en/python/basics/files/read}
 \end{frame}
 
-\begin{frame}{Écriture}
-  \mintedpycode{python/basics/files/write}
+\begin{frame}{Writing}
+  \mintedpycode{en/python/basics/files/write}
 \end{frame}
 
-\begin{frame}{Manipulation de deux fichiers à la fois}
+\begin{frame}{Manipulating two files at once}
   \mintedpycode{python/basics/files/two-files}
 \end{frame}
 
-\begin{frame}{Sauts de ligne}
-  Par défaut, Python 3 comprend en lecture les sauts de ligne de Windows, Mac OS et GNU/Linux sans travail additionnel.
+\begin{frame}{Newlines}
+  By default, Python 3 understands newlines from all platforms.
 
-  En écriture il utilise \texttt{\textbackslash n} (sauts de ligne GNU/Linux).
+  When writing, it will use mostly \texttt{\textbackslash n} as a default option.
 \end{frame}

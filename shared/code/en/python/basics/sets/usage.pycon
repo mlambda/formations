@@ -1,0 +1,19 @@
+>>> s = set()                      # Empty set creation
+>>> s = {"a"}                      # Creation with elements
+>>> s = set(["a"])                 # Creation from an iterable
+>>> s.add("b")                     # Add an element
+>>> s.update(["c", "d"])           # Add several elements
+>>> s
+{'c', 'b', 'd', 'a'}
+>>> "a" in s                       # Test presence
+True
+>>> "e" in s
+False
+>>> s | {"e", "f"}                 # Union
+{'c', 'b', 'e', 'a', 'f', 'd'}
+>>> s & {"a", "e"}                 # Intersection
+{'a'}
+>>> s - {"a", "e"}                 # Difference
+{'d', 'c', 'b'}
+>>> s < {"a", "b", "c", "d", "e"}  # Subset test
+True

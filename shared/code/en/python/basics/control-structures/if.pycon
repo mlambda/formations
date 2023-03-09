@@ -1,0 +1,9 @@
+>>> age = 23
+>>> if age < 18:
+...     print("Minor in France")
+... elif age < 21:
+...     print("Minor in the US")
+... else:
+...     print("Adult")
+... 
+Adult

@@ -1,19 +1,19 @@
-\begin{frame}{Caractéristiques de \texttt{set}}
-  \texttt{set} définit des collections non ordonnées sans répétition~:
+\begin{frame}{\texttt{set} characteristics}
+  \texttt{set}s are unordered and without repetition and provide:
   \begin{itemize}
-    \item Accès aux opérations d'ensembles (union, intersection, …)
-    \item Test de présence d'un objet en $\mathcal{O}(1)$ (contre $\mathcal{O}(n)$ pour une \texttt{list})
+    \item Math set operations (union, intersection, …)
+    \item Fast presence test ($\mathcal{O}(1)$ vs $\mathcal{O}(n)$ for a \texttt{list})
 
     \pycon{python/basics/sets/timeit}
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Utilisation d'un \texttt{set}}
-  \pycon{python/basics/sets/usage}
+  \pycon{en/python/basics/sets/usage}
 \end{frame}
 
-\begin{frame}{\texttt{set}s immuables}
-  L'alternative \texttt{frozenset} est disponible pour des sets immuables.
+\begin{frame}{Immutable \texttt{set}s}
+  \texttt{frozenset} is an immutable set alternative.
 
-  Équivalent de \texttt{tuple} vis à vis de \texttt{list}.
+  Similar to what \texttt{tuple} is compared to \texttt{list}.
 \end{frame}

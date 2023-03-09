@@ -1,0 +1,19 @@
+>>> l = []                # Create an empty list
+>>> l = [1, 2, 3]         # Create a list with elements
+>>> l[0]                  # Positive indices
+1
+>>> l[1]
+2
+>>> l[-1]                 # Negative indices
+3
+>>> l[-2]
+2
+>>> l.append(4)           # Add an element
+>>> l.extend([5, 6])      # Add several elements
+>>> l.sort(reverse=True)  # Sort, here reversed
+>>> len(l)                # Size
+6
+>>> del l[4]              # Deletion by index
+>>> l.remove(1)           # Deletion by value
+>>> l
+[6, 5, 4, 3]

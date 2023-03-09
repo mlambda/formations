@@ -1,0 +1,18 @@
+>>> d = {}                          # Empty dict creation
+>>> d = {"a": 1, "b": 2}            # Creation with elements
+>>> d = dict([("a", 1), ("b", 2)])  # Creation from an iterable
+>>> d = dict(a=1, b=2)              # Creation with keyword style
+>>> d["a"]                          # Accessing a value
+1
+>>> d["c"] = 3                      # Modifying or adding an entry
+>>> "a" in d                        # Testing presence
+True
+>>> "d" in d
+False
+>>> 1 in d
+False
+>>> len(d)                          # Size
+3
+>>> del d["a"]                      # Deletion
+>>> d
+{"b": 2, "c": 3}

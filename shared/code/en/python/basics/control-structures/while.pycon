@@ -1,0 +1,9 @@
+>>> ok = False
+>>> while not ok:
+...     answer = input("Type y or n: ")
+...     ok = answer in {"y", "n"}
+... 
+Type y or n: yes
+Type y or n: y
+>>> answer
+'y'
