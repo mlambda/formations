@@ -1,0 +1,30 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+\usepackage{tikzpeople}
+\begin{document}
+  \begin{tikzpicture}[x=4cm,y=4cm,every node/.style={font={\tiny}}]
+    \tikzset{pref-movie/.style={->, very thick, -stealth,black!60!green}}
+    \tikzset{rate-movie/.style={->, very thick, -stealth,black!40!blue}}
+    \tikzset{sim-movie/.style={<->, dashed, very thick, stealth-stealth,black!40!red}}
+
+    % Personnage
+    \node[businessman,minimum size=1cm] at (0,-1) (man) {};
+    \node[alice,minimum size=1cm] at (-1,-1) (woman) {};
+
+    % Films
+    \node at (1,0) (shrek1) {\includegraphics[width=2cm]{img/logos/shrek-logo.png}};
+    \node at (1,-1) (jpark1) {\includegraphics[width=2cm]{img/logos/jurassic-park-logo.png}};
+    \node at (1,-2) (rvlf) {\includegraphics[width=2cm]{img/logos/retour-vers-le-futur-logo.png}};
+    \node at (-2,0) (shrek2) {\includegraphics[width=2cm]{img/logos/shrek-logo.png}};
+    \node at (-2,-1) (jpark2) {\includegraphics[width=2cm]{img/logos/jurassic-park-logo.png}};
+
+    \path[pref-movie] (man) edge node [above,sloped] {apprécie} (shrek1) {}
+                            edge node [above,sloped] {apprécie} (jpark1) {}
+                            edge node [above,sloped] {apprécie} (rvlf) {}
+                      (woman) edge node [above,sloped] {apprécie} (shrek2) {}
+                              edge node [above,sloped] {apprécie} (jpark2) {};
+    \path[rate-movie] (rvlf) edge node [below,sloped] {recommander ?} (woman) {};
+    \path[sim-movie] (woman) edge node [above] {Similarité} (man) {};
+  \end{tikzpicture}
+\end{document}

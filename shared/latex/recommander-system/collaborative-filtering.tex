@@ -1,6 +1,14 @@
-\begin{frame}
-  \frametitle{user-based}
-  Exemple de données collectées :
+\begin{frame}{Introduction}
+  La différence entre le content-based filtering et le filtrage collaborative se situe sur l'objet sur lequel on mesure la similarité.\\[2ex]
+
+  Le \alert{filtrage collaborative} mesure la similarité entre les utilisateurs plutôt qu'entre les contenus à recommander.
+\end{frame}
+\begin{frame}{Introduction}
+  \V{["tikz/recommander-system/collaborative-filtering", "tw", 1] | image}
+\end{frame}
+
+\begin{frame}{Données}
+  Exemple de la base de données :
   \begin{center}
   \begin{tabular}{|l|c|c|c|c|}
     \hline
@@ -19,7 +27,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{user-based}
+  \frametitle{Principe}
   Principe : Une bonne recommandation est faite à partir d'individus similaires\\
   \newline
   Condition : Avoir un échantillon important d'individus représentatifs
@@ -27,7 +35,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{user-based}
+  \frametitle{Principe}
   \begin{center}
     \begin{tabular}{|l|c|c|c|c|}
       \hline
@@ -43,23 +51,11 @@
     \hline
     \end{tabular}\\
     \end{center}
-  Comment prédire les notes manquantes ? (et donc faire une recommandation) \\
-  \newline
-  Algorithme pour déterminer u1(film1) :
-  \begin{itemize}
-  \item Identifier les K plus proches utilisateurs de u1
-  \item Agréger leurs notes pour le film1
-  \end{itemize}
+  Comment prédire les notes manquantes ? (et donc faire une recommandation)
 \end{frame}
 
-\begin{frame}
-  \frametitle{user-based}
-  On a donc besoin :
-  \begin{itemize}
-  \item d'une mesure de similarité entre les utilisateur
-  \item de trouver un K optimal
-  \item d'une fonction d'agrégation
-  \end{itemize}
+\begin{frame}{Prédiction}
+  Pour prédire, on va supposer que les utilisateurs et les éléments sont résumables sur un ensemble de caractéristiques contenu dans un \alert{vecteur d'embeddings}.
 \end{frame}
 
 \begin{frame}
