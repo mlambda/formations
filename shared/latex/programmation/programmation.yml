@@ -1,6 +1,7 @@
 title: Programmation
 default_titles:
-  intro: Introduction
+  intro: Histoire
+  theory: La Théorie
   hardware: Le matériel
   program: Le Programme
   algorithm: L'Algorithme
@@ -8,10 +9,11 @@ default_titles:
   language: Les langages de programmation
 flavors:
   tho:
-    - intro
+    - history
+    - theory
+    - algorithm
     - hardware
     - program
-    - algorithm
-    - compiler
     - language
+    - compiler
 version: 3

@@ -1,6 +1,9 @@
 \begin{frame}{Mémoire}
-    Composant capable de stocker de l'information dans des \textbf{variables}
+    Composant capable de stocker de l'information. \\
+    \newline
+    Différentes \textbf{bandes de mémoire} :
     \begin{description}
+        \item[Cache] Mémoire interne du processeur
         \item[RAM] Mémoire vive qui sera utilisée par les programmes
         \item[Disque] Mémoire de stockage
         \item[autres supports] disquette, clé usb, etc ...
@@ -10,13 +13,13 @@
 \begin{frame}{Processeur}
     Composant capable d'effectuer des opérations arithmétiques et logiques :
     \begin{itemize}
-        \item Gestion de \textbf{variables}
+        \item Gestion de \textbf{la bande de mémoire}
         \begin{itemize}
             \item déplacer la tête de lecture
             \item lire/écrire
             \item ...
         \end{itemize}
-        \item Opération sur des \textbf{variables}
+        \item Opération sur des \textbf{variables} stockées en \textbf{Cache} :
         \begin{itemize}
             \item ET
             \item OU
@@ -27,3 +30,6 @@
     Ces opérations sont utilisées dans un ordre précis, décrit par un programme.
 \end{frame}
 
+\begin{frame}{Synthèse des différentes mémoires}
+    \V{["img/memory-hierarchy", "th", 0.7] | image}
+\end{frame}
