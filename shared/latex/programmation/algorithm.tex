@@ -13,18 +13,44 @@
     On peut alors en déduire son rendement
 \end{frame}
 
+\begin{frame}{Quelques instructions en français}
+    
+    \begin{description}[<+->]
+        \item [\blue{ACCES}] $X[5]\;\;\;\;\;$ \green{"On accède au 5ème élément de la liste $X$"}
+        \item []
+        \item [\blue{AFFECTATION}] $Y \leftarrow X\;$  \green{"On affecte à $Y$ la valeur contenue dans $X$"}
+        \item []
+        \item [\blue{TEST}] 
+        \begin{description}
+            \item [SI] $X == Y$
+            \item [ALORS] $X \leftarrow X + 10$
+            \item [SINON] $Y \leftarrow X - 12$
+        \end{description}
+        \item []
+        \item [\blue{BOUCLE}] 
+        \begin{description}
+            \item [TANT QUE] $X > Y$
+            \item [ALORS] $X \leftarrow X - 1$
+        \end{description}
+    \end{description}
+
+    
+\end{frame}
+
 \begin{frame}{Example d'algorithme en français}
     \begin{description}
-        \item [Entrée] X : Une liste de nombres
+        \item [Entrée] X : Une liste de 10 nombres
         \item [Sorties] Y : Le nombre maximum dans la liste 
         \item [instructions]
         \begin{itemize}
-            \item Index = 0
+            \item $\text{IndexMax} \leftarrow 9$
             \item $Y \leftarrow X[0]$ 
-            \item  Comparez le nombre maximum supposé avec le nombre suivant de la liste.
-            \item  Si le nombre suivant est supérieur au nombre maximum supposé, remplacez le nombre maximum supposé par le nombre suivant.
-            \item  Répétez les étapes 2 et 3 jusqu'à ce que tous les nombres de la liste aient été comparés.
-            \item  Renvoyez le nombre maximum supposé final comme le nombre maximum dans la liste.
+            \item TANT QUE $\text{Index}$ < $\text{IndexMax}$
+            \begin{itemize}
+                \item SI $Y < X[\text{Index}]$ ALORS $Y \leftarrow X[\text{Index}]$ 
+                \item $\text{Index} \leftarrow \text{Index} + 1$
+            \end{itemize}
+            \item RENVOYER Y
         \end{itemize}
     \end{description}
 \end{frame}
