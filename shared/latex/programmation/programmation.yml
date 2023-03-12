@@ -7,6 +7,7 @@ default_titles:
   algorithm: L'Algorithme
   compiler: Les compilateurs
   language: Les langages de programmation
+  library: Les librairies
 flavors:
   tho:
     - history
@@ -16,4 +17,5 @@ flavors:
     - program
     - language
     - compiler
+    - library
 version: 3
