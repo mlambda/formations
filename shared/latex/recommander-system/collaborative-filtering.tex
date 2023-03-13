@@ -275,3 +275,29 @@
   $${\color{NavyBlue!50}\sum_{(i,j) \in obs}(M_{ij} - U_i\cdot V_j)^2} + {\color{Auburn!50}\sum_{(i,j) \notin obs}(0 - U_i\cdot V_j)^2} $$
 \end{frame}
 
+\begin{frame}{Avantages et Inconvénients}
+  \begin{minipage}[t]{0.49\linewidth}
+    \textbf{\alert{Avantages}}
+    \begin{itemize}
+      \item Pas de connaissance du domaine nécessaire
+      \item Pas de connaissances contextuelles nécessaires
+      \item Sérendipité : Permet à des utilisateurs de découvrir des nouveaux centres d'intérêts
+    \end{itemize}
+  \end{minipage}
+  \begin{minipage}[t]{0.49\linewidth}
+    \textbf{\alert{Inconvénients}}
+    \begin{itemize}
+      \item Cold start : difficile de faire des recommandations pour des nouveaux utilisateurs
+      \item Difficile d'intégrer des caractéristiques secondaires
+    \end{itemize}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}{Approche deep learning}
+  Une approche simple est d'utiliser un réseau de neurones profond capables de prédire la satisfaction d'un objet par un utilisateur.
+
+  Le réseau peut intégrer des caractéristiques secondaires, mais le coût devient calculatoire (Temps de convergence du modèle).
+  
+
+\end{frame}
+  
