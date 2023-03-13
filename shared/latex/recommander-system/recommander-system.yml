@@ -10,8 +10,6 @@ flavors:
     - intro
     - content-based-filtering
     - collaborative-filtering
-    - collaborative-filtering-extend
-    - collaborative-filtering-conclusion
     - /questions
     - tp-recommander-system
 title: Système de Recommendation

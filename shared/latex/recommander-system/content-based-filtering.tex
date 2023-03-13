@@ -23,12 +23,13 @@
 \end{frame}
 
 \begin{frame}{Métriques de Similarité}
+  \label{contentbasedf:metrics}
   Pour deux  vecteurs $q$ et $x$
   \begin{itemize}
-    \item Cosinus : 
-     $$sim(q,x) = \cos(q,x)$$
     \item Produit vectoriel :
-     $$sim(q,x) = \langle q,x\rangle = \sum^d_{i=1}q_i x_i$$
+    $$sim(q,x) = \langle q,x\rangle = \sum^d_{i=1}q_i x_i$$
+    \item Cosinus : 
+     $$sim(q,x) = \frac{q\cdot x}{||q||\ ||x||}$$
     \item Distance euclidienne :
      $$sim(q,x) = ||q,x|| = \sqrt{\sum^d_{i=1}(q_i-x_i)^2}$$
   \end{itemize}

@@ -34,8 +34,58 @@
   \V{["img/logos/amazon", "tw", 0.6] | image}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Principe}
+\begin{frame}{Score par similarité}
+  Anne veut voir un film :
+  \begin{enumerate}
+    \item On peut trouver les utilisateurs qui ont les mêmes préférences qu'Anne (Voir p.\ref{collabf:sim_user})
+    \item On regarde les films préféres de ces utilisateurs (Voir p.\ref{collabf:select_users}) 
+    \item On conseille le \og \textit{meilleur}\fg{} film pour ce groupe (Voir p.\ref{collabf:rating_sim})  
+  \end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Score par similarité -- Similarite}
+  \label{collabf:sim_user}
+  On définie une métrique de similarité $sim(u,u')$ entre les utilisateurs comme pour le content-based filtering (p.\ref{contentbasedf:metrics}) 
+
+  \alert{Similarité de corrélation (Pearson)}:\\
+    $$cor(a,b)=\frac{ \sum_{i \in I} (a_i - \bar{a})((b_i - \bar{b})}{\sqrt{\sum_{i \in I} (a_i - \bar{a})^2*\sum_{i \in I} (b_i - \bar{b})^2}}$$ \\
+  \alert{Similarité cosinus} :\\
+    $$cos(a,b)=\frac{a\cdot b^T}{||a||*||b||}$$
+  
+\end{frame}
+
+\begin{frame}{Score par similarité -- Sélection des utilisateurs}
+  \label{collabf:select_users}
+  On choisit un groupe $U$ de $N$ utilisateurs avec la similarité la plus grande avec notre utilisateur cible $u$.
+\end{frame}
+
+\newcommand{\colorline}[1]{%
+  \tikz
+    \draw[#1 ,very thick] (0,0) -- (0.2,0) ;%
+}
+\begin{frame}{Score par similarité -- Ratings}
+  \label{collabf:rating_sim}
+  On estime le rating $r_{uj}$ d'un film $j$ non vu par l'utilisateur $u$ en fonction des autres utilisateurs $U$ :
+  $$
+    r_{uj} = {\color{red}\bar{r}_u} + \frac{\sum_{u' \in U} {\color{orange} sim(u,u')} {\color{blue}(r_{u'j} - \bar{r}_{u'})}}{\sum_{u' \in U} sim(u,u')}
+  $$
+  \begin{minipage}[t]{0.49\linewidth}
+    \begin{itemize}
+      \item[\colorline{red}] Moyenne des notes données par $u$
+      \item[\colorline{orange}] Similarité entre $u$ et les autres utilisateurs utilisée comme pondération
+    \end{itemize}
+  \end{minipage}
+  \begin{minipage}[t]{0.49\linewidth}
+    \begin{itemize}
+      \item[\colorline{blue}] Écart sur tous les films à la note moyenne donnée par $u'$. Certains utilisateurs notent plus sévèrement que d'autres
+    \end{itemize}
+  \end{minipage}
+  
+\end{frame}
+
+\begin{frame}{Score par factorisation de matrice}
+  On repart des données avec une approche différente
   \begin{center}
     \begin{tabular}{|l|c|c|c|c|}
       \hline
@@ -51,40 +101,177 @@
     \hline
     \end{tabular}\\
     \end{center}
-  Comment prédire les notes manquantes ? (et donc faire une recommandation)
 \end{frame}
 
-\begin{frame}{Prédiction}
-  Pour prédire, on va supposer que les utilisateurs et les éléments sont résumables sur un ensemble de caractéristiques contenu dans un \alert{vecteur d'embeddings}.
+\begin{frame}{Factorisation de matrice -- Concept}
+  Pour prédire, on va supposer que les utilisateurs et les éléments sont résumables sur un \alert{ensemble de caractéristiques} et que chaque film possède ou non ces caractéristiques.
+  \vfill
+  \textbf{SAUF} qu'il s'agira de caractéristique purement mathématiques contenues dans des \alert{vecteur d'embeddings}.
 \end{frame}
 
-\begin{frame}
-  \frametitle{user-based}
-  Similarité de corrélation (Pearson):\\
-  \begin{center}
-    $cor(a,b)=\frac{ \sum_{i \in I} (a_i - \bar{a})((b_i - \bar{b})}{\sqrt{\sum_{i \in I} (a_i - \bar{a})^2*\sum_{i \in I} (b_i - \bar{b})^2}}$ \\
-  \end{center}
-  Similarité cosinus :\\
-  \begin{center}
-    $cos(a,b)=\frac{a*b^t}{|a|*|b|}$
-  \end{center}
-  Et plein d'autres dans la littérature...
+\begin{frame}{Factorisation de matrice -- Concept}
+  \V{["img/collab-filt-matrix-factorization", "tw", 0.9]| image}
 \end{frame}
 
-\begin{frame}
-  \frametitle{user-based}
-  Agrégation des notes des K utilisateurs retenus:
+\begin{frame}{Factorisation de matrice -- Méthodes}
+  Trois différentes approches pour trouver les vecteurs d'embeddings~:
   \begin{itemize}
-  \item Moyenne
-  \item Moyenne pondéré par la similarité
-  \item ...
+    \item SVD 
+    \item Moindre carrés
+    \item Regression par descente de gradient
   \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{user-based}
-  \begin{itemize}[<+->]
-  \item Des calculs simples mais il faut parcourir toute la base dès qu'on a une nouvelle entrée ou modification, heureusement des heuristiques existent (\href{https://en.wikipedia.org/wiki/Locality-sensitive_hashing}{Locality-sensitive hashing})
-  \item ``Cold start problem''
-  \end{itemize}
+  \frametitle{SVD}
+  Utiilisation de SVD pour réduire le nombre de dimensions du problème.
+  $M = U^p*V^p*I^p$,  où : \\
+  $M$ est la matrice user/item de $\mathbf{R}^{n*m}$ \\
+  $U^p$ la matrice des vecteurs de base orthonormée de $\mathbf{R}^{n}$ (input) \\
+  $V^p$ la matrice diagonale des valeurs singulières de $U$ \\
+  $I^p$ la matrice des vecteurs de base orthonormée de $\mathbf{R}^{m}$ (output) \\
+  M = 
+  \begin{tabular}{|c|c|c|}
+    \hline
+    2 & 5 & ? \\
+    \hline
+    1 & 4 & 3 \\
+    \hline
+    ? & 1 & 5 \\
+    \hline
+    3 & ? & 4 \\
+    \hline
+  \end{tabular}
+  =
+  \begin{center}
+  \begin{tabular}{|c|c|}
+    \hline
+    $U^p_{(1,1)}$ & $U^p_{(1,2)}$  \\
+    \hline
+    $U^p_{(2,1)}$ & $U^p_{(2,2)}$  \\
+    \hline
+    $U^p_{(3,1)}$ & $U^p_{(3,2)}$  \\
+    \hline
+    $U^p_{(4,1)}$ & $U^p_{(4,2)}$  \\
+    \hline
+  \end{tabular}
+  *
+  \begin{tabular}{|c|c|}
+    \hline
+    $V^p_{(1)}$ & 0  \\
+    \hline
+    0 & $V^p_{(2)}$  \\
+    \hline
+  \end{tabular}
+  *
+  \begin{tabular}{|c|c|c|}
+    \hline
+    $I^p_{(1,1)}$ & $I^p_{(1,2)}$ & $I^p_{(1,3)}$  \\
+    \hline
+    $I^p_{(2,1)}$ & $I^p_{(2,2)}$ & $I^p_{(2,3)}$  \\
+    \hline
+  \end{tabular}
+  \end{center}
 \end{frame}
+
+\begin{frame}
+  \frametitle{SVD}
+  Avantages : \\
+  On choisit le nombre de valeurs singulières de notre transformation (PCA). \\
+  Filtrage collaboratif user-based $\Rightarrow U^p$\\
+  Filtrage collaboratif item-based $\Rightarrow I^p$
+\end{frame}
+
+\begin{frame}
+  \frametitle{SVD}
+  La SVD est extrèmement coûteuse sur des grandes matrices :
+  \begin{center}
+    $O(min(m*n^2,m^2*n))$
+  \end{center}
+  Heureusement des algorithmes approchés existent. Ces approches tirent parti du fait que les matrices sont généralement sparses et que l'on ne s'intéresse qu'a un nombre limité de valeurs singulières. \\
+  Par exemple, on peut calculer les 20 premières valeurs singulières d'une matrice 100k x 100k avec 1M valeurs non-nulles en moins d'une seconde (redsvd).
+\end{frame}
+
+\begin{frame}{Recherche des embeddings par regression}
+  Utilisation d'Embeddings sur les utilisateurs et les items afin de pouvoir exprimer la matrice des ratings ainsi : \\
+  $M_{i,j} \approx U^{embed}*I^{embed}$   
+\end{frame}
+
+\begin{frame}{Recherche des embeddings par regression}
+  Trois fonctions objectif possibles :
+  \begin{itemize}
+    \item Ignorer les valeurs non observées
+    \item Considérer les valeurs non observées comme valeurs nulles
+    \item Considérer les valeurs non observées comme un constant
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}{Recherche des embeddings par regression}
+  Ignorer les valeurs non observées :
+  \begin{center}
+    \begin{tabular}{|l|c|c|c|c|}
+      \hline
+      & film1 & film2 & film3 & film4 \\
+      \hline
+      u1 & ? & \cellcolor{NavyBlue!30}2 & \cellcolor{NavyBlue!30}5 & ? \\
+      \hline
+      u2 & \cellcolor{NavyBlue!30}5 & \cellcolor{NavyBlue!30}1 & \cellcolor{NavyBlue!30}4 & \cellcolor{NavyBlue!30}3 \\
+      \hline
+      u3 & ? & ? & \cellcolor{NavyBlue!30}1 & \cellcolor{NavyBlue!30}5 \\
+      \hline
+      u4 & \cellcolor{NavyBlue!30}3 & \cellcolor{NavyBlue!30}3 & ? & \cellcolor{NavyBlue!30}4 \\
+      \hline
+    \end{tabular}\\
+  \end{center}
+
+  \alert{Fonction de coût}:
+
+  $$\sum_{(i,j) \in obs}(M_{ij} - U_i\cdot V_j)^2$$
+\end{frame}
+
+\begin{frame}{Recherche des embeddings par regression}
+  Remplacer les valeurs non observées par des valeurs nulles:
+  \begin{center}
+    \begin{tabular}{|l|c|c|c|c|}
+      \hline
+      & film1 & film2 & film3 & film4 \\
+      \hline
+      u1 & \cellcolor{NavyBlue!30}? & \cellcolor{NavyBlue!30}2 & \cellcolor{NavyBlue!30}5 & \cellcolor{NavyBlue!30}? \\
+      \hline
+      u2 & \cellcolor{NavyBlue!30}5 & \cellcolor{NavyBlue!30}1 & \cellcolor{NavyBlue!30}4 & \cellcolor{NavyBlue!30}3 \\
+      \hline
+      u3 & \cellcolor{NavyBlue!30}? & \cellcolor{NavyBlue!30}? & \cellcolor{NavyBlue!30}1 & \cellcolor{NavyBlue!30}5 \\
+      \hline
+      u4 & \cellcolor{NavyBlue!30}3 & \cellcolor{NavyBlue!30}3 & \cellcolor{NavyBlue!30}? & \cellcolor{NavyBlue!30}4 \\
+    \hline
+    \end{tabular}\\
+    \end{center}
+
+  \alert{Fonction de coût}:
+
+  $$\sum_{(i,j)}(M_{ij} - U_i\cdot V_j)^2$$
+\end{frame}
+
+\begin{frame}{Recherche des embeddings par regression}
+  Remplacer les valeurs non observées par des constantes:
+  \begin{center}
+    \begin{tabular}{|l|c|c|c|c|}
+      \hline
+      & film1 & film2 & film3 & film4 \\
+      \hline
+      u1 & \cellcolor{Auburn!30}? & \cellcolor{NavyBlue!30}2 & \cellcolor{NavyBlue!30}5 & \cellcolor{Auburn!30}? \\
+      \hline
+      u2 & \cellcolor{NavyBlue!30}5 & \cellcolor{NavyBlue!30}1 & \cellcolor{NavyBlue!30}4 & \cellcolor{NavyBlue!30}3 \\
+      \hline
+      u3 & \cellcolor{Auburn!30}? & \cellcolor{Auburn!30}? & \cellcolor{NavyBlue!30}1 & \cellcolor{NavyBlue!30}5 \\
+      \hline
+      u4 & \cellcolor{NavyBlue!30}3 & \cellcolor{NavyBlue!30}3 & \cellcolor{Auburn!30}? & \cellcolor{NavyBlue!30}4 \\
+    \hline
+    \end{tabular}\\
+    \end{center}
+
+  \alert{Fonction de coût}:
+
+  $${\color{NavyBlue!50}\sum_{(i,j) \in obs}(M_{ij} - U_i\cdot V_j)^2} + {\color{Auburn!50}\sum_{(i,j) \notin obs}(0 - U_i\cdot V_j)^2} $$
+\end{frame}
+
