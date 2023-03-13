@@ -1,8 +1,8 @@
 >>> class Point:
-...     coeff = 5  # Attribut de classe accessible à tous les objets
+...     coeff = 5  # Class attribute, accessible to all instances
 ...     def __init__(self, x, y):
-...         self.x = x  # Attribut d'instance/objet
-...         self.y = y  # Attribut d'instance/objet
+...         self.x = x  # Instance attribute
+...         self.y = y  # Instance attribute
 ... 
 >>> point1 = Point(1, 2)
 >>> point2 = Point(3, 4)
