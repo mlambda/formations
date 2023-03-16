@@ -28,7 +28,7 @@ flavors:
   intra-microst:
     - introduction
     - $dimensionality-reduction: mlb
-    - $clustering: intra-l-oreal
+    - $clustering: intra-microst
     - $anomaly-detection: full-no-tree
 
 title: Apprentissage non-supervisé

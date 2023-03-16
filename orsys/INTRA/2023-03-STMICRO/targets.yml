@@ -21,7 +21,7 @@
   title: Algorithmes Non-supervisés
   sections:
     - path: unsupervised
-      flavor: mlb
+      flavor: intra-microst
     - path: recommander-system
       flavor: full
 
