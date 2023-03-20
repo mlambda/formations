@@ -134,6 +134,19 @@ flavors:
     - $ae: dpl
     - $gan: full
     - help-pointers
+  mlboule:
+    - intro
+    - /supervised/classification
+    - playground
+    - gradient-descent
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - /questions
+    - $/tf-keras: dpl
+    - $cnn: dpl
+    - $ae: dpl
   dpl:
     - intro
     - /supervised/classification

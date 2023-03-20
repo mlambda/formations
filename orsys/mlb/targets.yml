@@ -33,22 +33,22 @@
 - name: j4
   title: Jour 4 --- Ingénierie
   sections:
-    - path: actors
-      flavor: gafa
-
-    - path: tools
-      flavor: devops
-
     - path: engineering
       flavor: mlcraftmyass
 
     - path: big-questions
       flavor: full
 
-    - path: sectors
-      flavor: full
+    - path: actors
+      flavor: gafa
+
+    - path: tools
+      flavor: devops
 
     - path: tools
       flavor: demo-spark
+
+    - path: sectors
+      flavor: full
 
     - contact
