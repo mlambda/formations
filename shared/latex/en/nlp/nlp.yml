@@ -19,6 +19,7 @@ flavors:
   bda:
     - ml-nlp
     - usages-nlp
+    - $/en/python/regexes: full
     - preprocessing
     - tf-idf
     - /en/questions
