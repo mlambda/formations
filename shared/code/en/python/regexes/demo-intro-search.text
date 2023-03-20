@@ -1,0 +1,6 @@
+a.*s       matched
+^b         matched
+s$         matched
+a+b        matched
+a{4,5}b    did not match
+y*b        matched
