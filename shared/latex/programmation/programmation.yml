@@ -8,7 +8,18 @@ default_titles:
   compiler: Les compilateurs
   language: Les langages de programmation
   library: Les librairies
+
 flavors:
+  full:
+    - history
+    - theory
+    - codage
+    - algorithm
+    - hardware
+    - program
+    - language
+    - compiler
+    - library
   tho:
     - history
     - theory

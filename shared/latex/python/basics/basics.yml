@@ -13,6 +13,26 @@ default_titles:
   variables: Types de base et variables
   /python/regexes/regexes: Expressions régulières
 flavors:
+  tho:
+    - support
+    - variables
+    - /questions
+    - tp-variables
+    - display
+    - /questions
+    - tp-display
+    - lists: null
+    - dictionaries: null
+    - /questions
+    - tp-collections
+    - control-structures
+    - /questions
+    - tp-control-structures
+    - functions
+    - /questions
+    - tp-functions
+    - native-functions
+    - /questions
   lpy:
     - support
     - variables

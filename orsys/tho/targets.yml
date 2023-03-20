@@ -11,6 +11,6 @@
       flavor: full
 
     - path: python/basics
-      flavor: lpy
+      flavor: tho
 
     - contact
