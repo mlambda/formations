@@ -2,7 +2,7 @@
   title: Introduction au Machine Learning
   sections:
     - path: about
-      title: Machine Learning, Méthodes et Solutions
+      title: Machine learning avec python
       flavor: orsys-4j
 
     - path: tools
