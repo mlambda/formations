@@ -17,6 +17,11 @@ flavors:
     - svm
     - demo-sklearn-svm
     - tp-svm-text
+  iao:
+    - trees
+    - trees-details
+    - random-forest
+    - /questions
   bda:
     - /prerequisites/proba-rappel
     - /bayesian/naive-bayes

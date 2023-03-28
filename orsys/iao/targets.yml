@@ -11,6 +11,9 @@
     - path: ml
       flavor: intro
 
+    - path: supervised
+      flavor: iao
+
     - path: unsupervised
       flavor: iao
 
