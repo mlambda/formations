@@ -9,7 +9,7 @@
 \end{frame}
 
 \begin{frame}{Model}
-  \V{["tikz/neural-networks/rnn/simple-unfold", "th", 0.3, "en"] | image}
+  \V{"tikz/neural-networks/rnn/simple-unfold" | image("th", 0.3, "en")}
   \vspace{-2ex}
   \begin{align*}
     \vect{h_t} &= \sigma_h(\vect{U} \vect{x_t} + \vect{V} \vect{h_{t-1}} + \vect{b_h}) \\
@@ -39,18 +39,18 @@
 
   \begin{figure}
     \centering
-    \V{["tikz/neural-networks/rnn/lastoutput-en", "th", 0.7] | image}
+    \V{"tikz/neural-networks/rnn/lastoutput-en" | image("th", 0.7)}
   \end{figure}
 \end{frame}
 
 \begin{frame}{Prediction of one output per input}
-  \V{["tikz/neural-networks/rnn/alloutputs-en", "tw", 0.5] | image}
+  \V{"tikz/neural-networks/rnn/alloutputs-en" | image("tw", 0.5)}
 \end{frame}
 
 \begin{frame}{Prediction of an arbitrary number of outputs}
-  \V{["tikz/neural-networks/rnn/seq2seq", "tw", 1] | image}
+  \V{"tikz/neural-networks/rnn/seq2seq" | image("tw", 1)}
 \end{frame}
 
 \begin{frame}{Vanishing gradient problem: recurrence edition}
-  \V{["tikz/optimization/vanishing-gradients-rnn-en", "tw", 0.65, "en"] | image}
+  \V{"tikz/optimization/vanishing-gradients-rnn-en" | image("tw", 0.65, "en")}
 \end{frame}

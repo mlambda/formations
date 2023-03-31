@@ -8,11 +8,11 @@
 \end{frame}
 
 \begin{frame}{Solved vanishing gradient problem (almost)}
-  \V{["tikz/optimization/vanishing-gradients-lstm-en", "tw", 0.7] | image}
+  \V{"tikz/optimization/vanishing-gradients-lstm-en" | image("tw", 0.7)}
 \end{frame}
 
 \begin{frame}{Theoretical details}
-  \V{["tikz/neural-networks/rnn/lstm", "th", 0.37] | image} 
+  \V{"tikz/neural-networks/rnn/lstm" | image("th", 0.37)} 
   \begin{tabular}{ lrll } 
     Forget gate & $F_t=$ & $\sigma(W_F \times x_t + U_F \times h_{t - 1} + b_F)$ & $\in[0;1]$ \\
     Input gate & $I_t=$ &  $\sigma(W_I \times x_t + U_I \times h_{t - 1} + b_I)$ & $\in[0;1]$ \\

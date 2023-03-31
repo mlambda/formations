@@ -15,7 +15,7 @@
 
   Elle incorpore la \textbf{localité} et l'\textbf{invariance à la translation}.
 
-  \V{["img/d2l/correlation", "tw", 0.8] | image}
+  \V{"img/d2l/correlation" | image("tw", 0.8)}
 \end{frame}
 
 \begin{frame}{Convolution sur plusieurs canaux}
@@ -23,7 +23,7 @@
 
   Un noyau de convolution a plusieurs canaux. Un par canal d'entrée:
 
-  \V{["img/d2l/conv-multi-in", "th", 0.3] | image}
+  \V{"img/d2l/conv-multi-in" | image("th", 0.3)}
 
   Habituellement la dimension de profondeur est omise quand on décrit une convolution (convolution $2 \times 2$ au lieu de $2 \times 2 \times 2$).
 \end{frame}
@@ -31,13 +31,13 @@
 \begin{frame}{Remplissage}
   Le remplissage (\textit{padding} en anglais) contrôle le changement de taille dû à l'opérateur de corrélation croisée en ajoutant des $0$s:
 
-  \V{["img/d2l/conv-pad", "th", 0.4] | image}
+  \V{"img/d2l/conv-pad" | image("th", 0.4)}
 \end{frame}
 
 \begin{frame}{Pas de convolution}
   Les pas de convolution (\textit{strides} en anglais) permettent de réduire les dimensions spatiales dans un CNN~:
 
-  \V{["img/d2l/conv-stride", "th", 0.4] | image}
+  \V{"img/d2l/conv-stride" | image("th", 0.4)}
 
   Ici, on est passé de $5 \times 5$ à $2 \times 2$ grâce aux pas de convolution $(3, 2)$.
 \end{frame}
@@ -45,7 +45,7 @@
 \begin{frame}{Agrégation}
   \textit{Pooling} en anglais. L'autre mécanisme pour réduire les dimensions spatiales~:
 
-  \V{["tikz/neural-networks/cnn/maxpool", "tw", 0.8] | image}
+  \V{"tikz/neural-networks/cnn/maxpool" | image("tw", 0.8)}
 
   Une agrégation $n \times m$ est souvent utilisée avec des pas $(n, m)$.
 \end{frame}
@@ -53,11 +53,11 @@
 \begin{frame}{Combinaison des blocs de base en un réseau convolutif}
   Yann LeCun ---~maintenant lauréat du prix Turing~--- a proposé la première combinaison de ces blocs simples en un réseau complet, LeNet~:
 
-  \V{["img/d2l/lenet", "tw", 1] | image}
+  \V{"img/d2l/lenet" | image("tw", 1)}
 \end{frame}
 
 \begin{frame}{Schéma de LeNet}
-  \V{["img/d2l/lenet-vert", "th", 0.7] | image}
+  \V{"img/d2l/lenet-vert" | image("th", 0.7)}
 \end{frame}
 
 \begin{frame}{Entraînement}
@@ -65,12 +65,12 @@
 
   Moins de paramètres, plus d'opérations~: cible parfaite pour les GPUs.
 
-  \V{["img/gpus", "th", 0.4] | image}
+  \V{"img/gpus" | image("th", 0.4)}
 \end{frame}
 
 \begin{frame}{Lien avec le cortex visuel}
   \begin{minipage}[l]{0.50\linewidth}
-    \V{["img/visual-cortex", "tw", 1.0] | image}
+    \V{"img/visual-cortex" | image("tw", 1.0)}
   \end{minipage}\hfill
   \begin{minipage}[l]{0.49\linewidth}
     Couches successives:

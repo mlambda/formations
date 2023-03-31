@@ -11,7 +11,7 @@
 \begin{frame}{Fit scenarios}
   Several possibilities for a fit:
 
-  \V{["plt/overfit-polynomial-en", "tw", 1] | image}
+  \V{"plt/overfit-polynomial-en" | image("tw", 1)}
 
   \onslide<+(1)->{
     \begin{alertblock}{Warning}
@@ -32,14 +32,14 @@
 
 \begin{frame}{Best fit}
 
-  \V{["plt/learning-curve-en", "th", 0.6] | image}
+  \V{"plt/learning-curve-en" | image("th", 0.6)}
 
   → Minimize error on the \textbf{validation} split
 \end{frame}
 
 \begin{frame}{Cross-validation}
   Improvement over simple data split. With a high enough $k$, good estimation of generalization.
-  \V{["img/k-fold-cross-validation-en", "tw", 0.9] | image}
+  \V{"img/k-fold-cross-validation-en" | image("tw", 0.9)}
 \end{frame}
 
 \begin{frame}{Regularization}
@@ -51,7 +51,7 @@
     \end{center}
   \end{minipage}\hfill
   \begin{minipage}[l]{0.49\linewidth}
-    \V{["plt/overfitting-train-en", "th", 0.3, "en"] | image}
+    \V{"plt/overfitting-train-en" | image("th", 0.3, "en")}
   \end{minipage}\hfill
   Many techniques depending on the model:
   \begin{itemize}

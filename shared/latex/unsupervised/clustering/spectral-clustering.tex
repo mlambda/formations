@@ -10,7 +10,7 @@
         \alert{\textbf{Comment séparer ce graphe ?}}
     \end{minipage}
     \begin{minipage}{0.49\linewidth}
-        \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
+        \V{"tikz/graph/spectral-clustering-1" | image("tw", 1)}
     \end{minipage}
 \end{frame}
 \begin{frame}{Présentation du problème}
@@ -23,7 +23,7 @@
         
     \end{minipage}
     \begin{minipage}{0.49\linewidth}
-        \V{["tikz/graph/spectral-clustering-2", "tw", 1] | image}
+        \V{"tikz/graph/spectral-clustering-2" | image("tw", 1)}
     \end{minipage}
 \end{frame}
 
@@ -55,7 +55,7 @@
         \end{itemize}
     \end{minipage}
     \begin{minipage}{0.49\linewidth}
-        \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
+        \V{"tikz/graph/spectral-clustering-1" | image("tw", 1)}
     \end{minipage}
 \end{frame}
 
@@ -77,7 +77,7 @@
         \end{itemize}
     \end{minipage}
     \begin{minipage}{0.49\linewidth}
-        \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
+        \V{"tikz/graph/spectral-clustering-1" | image("tw", 1)}
     \end{minipage}
 \end{frame}
 
@@ -95,7 +95,7 @@
         \end{itemize}
     \end{minipage}
     \begin{minipage}{0.49\linewidth}
-        \V{["tikz/graph/spectral-clustering-3", "tw", 1] | image}
+        \V{"tikz/graph/spectral-clustering-3" | image("tw", 1)}
     \end{minipage}
 \end{frame}
 
@@ -122,7 +122,7 @@
         $$}
     \end{minipage}
     \begin{minipage}{0.49\linewidth}
-        \V{["tikz/graph/spectral-clustering-3", "tw", 1] | image}
+        \V{"tikz/graph/spectral-clustering-3" | image("tw", 1)}
     \end{minipage}
 \end{frame}
 
@@ -145,7 +145,7 @@
         $$}
     \end{minipage}
     \begin{minipage}{0.49\linewidth}
-        \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
+        \V{"tikz/graph/spectral-clustering-1" | image("tw", 1)}
     \end{minipage}
 \end{frame}
 
@@ -159,10 +159,10 @@
     \end{minipage}
     \begin{minipage}{0.49\linewidth}
         \only<1>{
-            \V{["tikz/graph/spectral-clustering-1", "tw", 1] | image}
+            \V{"tikz/graph/spectral-clustering-1" | image("tw", 1)}
         }
         \only<2>{
-            \V{["tikz/graph/spectral-clustering-4", "tw", 1] | image}
+            \V{"tikz/graph/spectral-clustering-4" | image("tw", 1)}
         }
 
     \end{minipage}
@@ -178,7 +178,7 @@
 \begin{frame}{Spécification du problème}
     Exemple pour la séparation suivante:
 
-    \V{["tikz/graph/spectral-clustering-2", "tw", 0.3] | image}
+    \V{"tikz/graph/spectral-clustering-2" | image("tw", 0.3)}
 
     $$
         L.x_1 + L.x_2 = 2
@@ -259,7 +259,7 @@
     $$}
     Le vecteur de Fiedler est indiqué en \alert{orange}.
 
-    \V{["tikz/graph/spectral-clustering-1", "th", 0.35] | image}
+    \V{"tikz/graph/spectral-clustering-1" | image("th", 0.35)}
 \end{frame}
 
 \begin{frame}{Décomposition en cluster}
@@ -271,7 +271,7 @@
         $x_F = ({\color{IndianYellow}-0.26, -0.46, -0.46}, {\color{NavyBlue}{0.26, 0.46, 0.46}})$
     \end{minipage}
     \begin{minipage}{0.34\linewidth}
-        \V{["tikz/graph/spectral-clustering-2", "tw", 1] | image}
+        \V{"tikz/graph/spectral-clustering-2" | image("tw", 1)}
     \end{minipage}
 \end{frame}
 
@@ -290,7 +290,7 @@
         \item Le nombre de valeurs propres nulles indique le nombre de clusters naturels (c-à-d les composantes connexes du graphe)
         \item Il n'est pas obligatoire de séparer au niveau de zéro. Il est possible d'utiliser une autre valeur de séparation comme par exemple celle qui maximise l'écart de rang entre les nœuds.
     \end{itemize}
-    \V{["plt/clustering/spectral-clustering-fiedler-rank", "th", 0.5] | image}
+    \V{"plt/clustering/spectral-clustering-fiedler-rank" | image("th", 0.5)}
 \end{frame}
 
 \begin{frame}{Cas non-binaire}

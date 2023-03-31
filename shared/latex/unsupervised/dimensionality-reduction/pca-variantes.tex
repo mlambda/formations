@@ -13,7 +13,7 @@
   \end{center}
   
   \begin{minipage}{0.45\linewidth}
-    \V{["tikz/dimensionality-reduction/afc", "tw", 1.0] | image}
+    \V{"tikz/dimensionality-reduction/afc" | image("tw", 1.0)}
   \end{minipage}
   \hfill
   \begin{minipage}{0.49\linewidth}
@@ -50,7 +50,7 @@
 
 \begin{frame}{AFC --- Probabilités}
   \begin{minipage}{0.45\linewidth}
-    \V{["tikz/dimensionality-reduction/afc-proba", "tw", 1.0] | image}
+    \V{"tikz/dimensionality-reduction/afc-proba" | image("tw", 1.0)}
   \end{minipage}
   \hfill
   \begin{minipage}{0.49\linewidth}
@@ -64,11 +64,11 @@
 
 \begin{frame}{AFC --- Profils ligne et colonne}
   \begin{minipage}{0.45\linewidth}
-    \V{["tikz/dimensionality-reduction/afc-profil-ligne", "tw", 1.0] | image}
+    \V{"tikz/dimensionality-reduction/afc-profil-ligne" | image("tw", 1.0)}
   \end{minipage}
   \hfill
   \begin{minipage}{0.45\linewidth}
-    \V{["tikz/dimensionality-reduction/afc-profil-colonne", "tw", 1.0] | image}
+    \V{"tikz/dimensionality-reduction/afc-profil-colonne" | image("tw", 1.0)}
   \end{minipage}
 
   À partir de la table de probabilité, on calcule les profils ligne et colonne, c'est à dire les probabilités conditionnelles par ligne et par colonne.
@@ -88,7 +88,7 @@
 
 \begin{frame}{AFC --- Visualisation}
   \begin{minipage}{0.59\linewidth}
-    \V{["img/afc-nobels", "tw", 1] | image}
+    \V{"img/afc-nobels" | image("tw", 1)}
   \end{minipage}
   \begin{minipage}{0.4\linewidth}
     En projetant et en centrant les barycentres sur un graphe, il est possible d'observer graphiquement les co-dépendances entre caractéristiques.
@@ -98,7 +98,7 @@
 \begin{frame}{Analyse des Correspondances Multiples (ACM)}
   Pour l'ACM, contrairement à l'AFC, les lignes sont des individus et les colonnes des caractéristiques type questions à choix multiples.
   \begin{center}
-    \V{["tikz/dimensionality-reduction/acm", "th", 0.5] | image}
+    \V{"tikz/dimensionality-reduction/acm" | image("th", 0.5)}
   \end{center}
   Le tableau est ensuite transformé en tableau disjonctif complet (TDC, ou encodage one hot).
 \end{frame}

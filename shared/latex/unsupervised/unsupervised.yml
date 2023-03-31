@@ -14,7 +14,7 @@ flavors:
     - introduction
     - $dimensionality-reduction: mle
     - $clustering: mle
-    - $anomaly-detection: full    
+    - $anomaly-detection: full
   ml3:
     - $dimensionality-reduction: mlb
     - $anomaly-detection: full
@@ -28,7 +28,7 @@ flavors:
   intra-microst:
     - introduction
     - $dimensionality-reduction: mlb
-    - $clustering: intra-microst
+    - $clustering: intra-stmicro
     - $anomaly-detection: full-no-tree
 
 title: Apprentissage non-supervisé
