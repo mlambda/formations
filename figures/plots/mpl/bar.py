@@ -2,7 +2,7 @@ from deckz.standalones import register_plot
 
 
 @register_plot()
-def bar():
+def bar() -> None:
     import matplotlib.pyplot as plt
     import numpy as np
 

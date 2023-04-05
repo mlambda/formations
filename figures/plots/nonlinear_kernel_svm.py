@@ -16,8 +16,8 @@ class NonLinearKernelSVM(metaclass=Singleton):
         self.xx, self.yy = meshgrid(linspace(-1, 1, 100), linspace(-1, 1, 100))
         self.R = 0.5
         bruit = 0
-        self.classes = self.x ** 2 + self.y ** 2 < self.R ** 2 + bruit * randn(N)
-        self.z = self.x ** 2 + self.y ** 2 + 1
+        self.classes = self.x**2 + self.y**2 < self.R**2 + bruit * randn(N)
+        self.z = self.x**2 + self.y**2 + 1
         self.zz = 1.25 * ones(self.xx.shape)
 
         self.alpha = 0.6

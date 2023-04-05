@@ -1,7 +1,7 @@
 from deckz.standalones import register_plot
 
 
-def main(
+def _work(
     original_label: str,
     rotation_label: str,
     translation_label: str,
@@ -30,7 +30,7 @@ def main(
     def whitegrid() -> ndarray:
         return zeros((80, 80))
 
-    def whitegrid2(x):
+    def whitegrid2(x: ndarray) -> ndarray:
         m = whitegrid()
         m[1::7, :] = 0.1
         m[:, 1::7] = 0.1
@@ -56,7 +56,7 @@ def main(
     image[image < 0.1] = 0
     showball(ax[3], whitegrid2(image), homothety_label)
 
-    def circus(x, k):
+    def circus(x: ndarray, k: int) -> ndarray:
         decalage = int(14 * ((k - 14) / 14) ** 2)
         return concatenate((x[decalage:], x[:decalage]), axis=None)
 
@@ -70,7 +70,7 @@ def main(
 
 @register_plot()
 def data_augmentation() -> None:
-    main(
+    _work(
         original_label="Originale",
         rotation_label="Rotation",
         translation_label="Translation",
@@ -81,7 +81,7 @@ def data_augmentation() -> None:
 
 @register_plot()
 def data_augmentation_en() -> None:
-    main(
+    _work(
         original_label="Original",
         rotation_label="Rotation",
         translation_label="Translation",

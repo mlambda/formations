@@ -28,6 +28,9 @@ flake8 = "^6"
 isort = "^5"
 mypy = "^1"
 
+[tool.isort]
+profile = "black"
+
 [build-system]
 build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core"]

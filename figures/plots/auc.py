@@ -1,7 +1,7 @@
 from deckz.standalones import register_plot
 
 
-def main(
+def _work(
     roc_curve_label: str,
     fpr_label: str,
     tpr_label: str,
@@ -67,7 +67,7 @@ def main(
 
 @register_plot()
 def auc() -> None:
-    main(
+    _work(
         roc_curve_label="Courbe ROC",
         fpr_label="Taux de faux positifs",
         tpr_label="Taux de vrais positifs",
@@ -78,7 +78,7 @@ def auc() -> None:
 
 @register_plot()
 def auc_en() -> None:
-    main(
+    _work(
         roc_curve_label="ROC curve",
         fpr_label="False positive rate",
         tpr_label="True positive rate",

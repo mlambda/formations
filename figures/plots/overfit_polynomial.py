@@ -20,10 +20,10 @@ def main(hidden_label: str, data_label: str, degree_label: str) -> None:
     # Génération de 100000 nombres aléatoires
     x = linspace(xmin, xmax, n)
     # Génération de nos cibles
-    y = -50 * x ** 3 + 10 * x ** 2 + 500 * x + normal(0, 150, len(x))
+    y = -50 * x**3 + 10 * x**2 + 500 * x + normal(0, 150, len(x))
 
     preds_x = linspace(xmin, xmax, n * 1000)
-    y_real = -50 * preds_x ** 3 + 10 * preds_x ** 2 + 500 * preds_x
+    y_real = -50 * preds_x**3 + 10 * preds_x**2 + 500 * preds_x
 
     legend_size = 15
     title_font_size = 17

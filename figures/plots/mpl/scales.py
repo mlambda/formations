@@ -2,7 +2,7 @@ from deckz.standalones import register_plot
 
 
 @register_plot()
-def scales():
+def scales() -> None:
     import matplotlib.pyplot as plt
     import numpy as np
     from matplotlib.ticker import MultipleLocator
@@ -20,7 +20,7 @@ def scales():
     # X-linear Y-linear
     # -----------------------------------------------------------------------------
     ax1 = plt.subplot(2, 2, 1, xlim=(0.0, 10), ylim=(0.0, 10))
-    ax1.plot(X, 10 ** X, color="C0")
+    ax1.plot(X, 10**X, color="C0")
     ax1.plot(X, X, color="C1")
     ax1.plot(X, np.log10(X), color="C2")
     ax1.set_ylabel("Linear")
@@ -43,7 +43,7 @@ def scales():
     ax2.set_xscale("log")
     ax2.tick_params(which="both", labelbottom=False, bottom=False)
     ax2.tick_params(which="both", labelleft=False, left=False)
-    ax2.plot(X, 10 ** X, color="C0")
+    ax2.plot(X, 10**X, color="C0")
     ax2.plot(X, X, color="C1")
     ax2.plot(X, np.log10(X), color="C2")
     ax2.grid(True, "minor", color="0.85", linewidth=0.50, zorder=-20)
@@ -54,7 +54,7 @@ def scales():
     # -----------------------------------------------------------------------------
     ax3 = plt.subplot(2, 2, 3, xlim=(0.0, 10), ylim=(0.001, 100), sharex=ax1)
     ax3.set_yscale("log")
-    ax3.plot(X, 10 ** X, color="C0")
+    ax3.plot(X, 10**X, color="C0")
     ax3.plot(X, X, color="C1")
     ax3.plot(X, np.log10(X), color="C2")
     ax3.set_ylabel("Logarithmic")
@@ -71,7 +71,7 @@ def scales():
     ax4.set_xscale("log")
     ax4.set_yscale("log")
     ax4.tick_params(which="both", labelleft=False, left=False)
-    ax4.plot(X, 10 ** X, color="C0")
+    ax4.plot(X, 10**X, color="C0")
     ax4.plot(X, X, color="C1")
     ax4.plot(X, np.log10(X), color="C2")
     ax4.set_xlabel("Logarithmic")

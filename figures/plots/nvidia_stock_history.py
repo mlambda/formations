@@ -1,7 +1,7 @@
 from deckz.standalones import register_plot
 
 
-def main(drivers_label: str, cnns_label: str) -> None:
+def _work(drivers_label: str, cnns_label: str) -> None:
     from datetime import datetime
     from pathlib import Path
 
@@ -37,9 +37,9 @@ def main(drivers_label: str, cnns_label: str) -> None:
 
 @register_plot()
 def nvidia_stock_history() -> None:
-    main(drivers_label="Drivers CUDA", cnns_label="CNNs performants")
+    _work(drivers_label="Drivers CUDA", cnns_label="CNNs performants")
 
 
 @register_plot()
 def nvidia_stock_history_en() -> None:
-    main(drivers_label="CUDA drivers", cnns_label="Efficient CNNs")
+    _work(drivers_label="CUDA drivers", cnns_label="Efficient CNNs")

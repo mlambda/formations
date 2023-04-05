@@ -1,7 +1,8 @@
 from deckz.standalones import register_plot
 
 
-def main() -> None:
+@register_plot()
+def regression_hyperplan() -> None:
     import matplotlib.pyplot as plt
     from numpy import linspace, meshgrid, ones, ones_like
     from numpy.random import permutation, randn
@@ -38,8 +39,3 @@ def main() -> None:
 
     ax.plot3D(XX[pos], YY[pos], ZZ2[pos], "r^", zorder=3, markersize=2)
     ax.plot3D(XX[neg], YY[neg], ZZ2[neg], "r^", zorder=1, markersize=2)
-
-
-@register_plot()
-def regression_hyperplan() -> None:
-    main()

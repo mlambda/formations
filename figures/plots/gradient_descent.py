@@ -10,7 +10,7 @@ class GradientDescent:
             linspace(-1, 1, 100), linspace(-2 * pi, 2 * pi, 100)
         )
         self.zz = (
-            415 * sin(self.xx ** 2) + 3 * self.xx + 25 * self.yy + 50 * cos(self.yy)
+            415 * sin(self.xx**2) + 3 * self.xx + 25 * self.yy + 50 * cos(self.yy)
         )
 
         fig, self.ax = plt.subplots(subplot_kw=dict(projection="3d"))

@@ -3,10 +3,10 @@ from deckz.standalones import register_plot
 
 def main(data_label: str) -> None:
     import matplotlib.pyplot as plt
-    from numpy import exp, linspace, pi, sqrt
+    from numpy import exp, linspace, ndarray, pi, sqrt
     from numpy.random import permutation
 
-    def gaussian(x, mu, sigma):
+    def gaussian(x: ndarray, mu: float, sigma: float) -> ndarray:
         return exp(-0.5 * ((x - mu) / sigma) ** 2) / (sigma * sqrt(2 * pi))
 
     fig, ax = plt.subplots(figsize=(15, 15))

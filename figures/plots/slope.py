@@ -1,14 +1,14 @@
 from deckz.standalones import register_plot
 
 
-def main(positive: bool, slope_label: str):
+def _work(positive: bool, slope_label: str) -> None:
     import matplotlib.pyplot as plt
     from numpy import linspace
 
     _, ax = plt.subplots(figsize=(6, 6))
 
     x = linspace(-1.3, 1.3, 100)
-    y = x ** 2
+    y = x**2
 
     ax.plot(x, y, label="$f(x) = x^2$", linewidth=2)
 
@@ -27,20 +27,20 @@ def main(positive: bool, slope_label: str):
 
 
 @register_plot()
-def slope_positive():
-    main(positive=True, slope_label="Pente / dérivée")
+def slope_positive() -> None:
+    _work(positive=True, slope_label="Pente / dérivée")
 
 
 @register_plot()
-def slope_positive_en():
-    main(positive=True, slope_label="Slope / derivative")
+def slope_positive_en() -> None:
+    _work(positive=True, slope_label="Slope / derivative")
 
 
 @register_plot()
-def slope_negative():
-    main(positive=False, slope_label="Pente / dérivée")
+def slope_negative() -> None:
+    _work(positive=False, slope_label="Pente / dérivée")
 
 
 @register_plot()
-def slope_negative_en():
-    main(positive=False, slope_label="Slope / derivative")
+def slope_negative_en() -> None:
+    _work(positive=False, slope_label="Slope / derivative")

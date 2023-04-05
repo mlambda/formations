@@ -6,13 +6,11 @@ from deckz.standalones import register_plot
 from matplotlib.artist import Artist
 from matplotlib.axes import Axes
 from matplotlib.figure import Figure
-
 from plots.utils import Singleton
 
 
 class Overfitting(metaclass=Singleton):
     def __init__(self) -> None:
-
         from numpy import c_, linspace, meshgrid
         from numpy.random import randn, seed, uniform
         from sklearn.model_selection import train_test_split
@@ -29,7 +27,7 @@ class Overfitting(metaclass=Singleton):
         self.X = uniform(low=-1.0, high=1.0, size=(N, 2))
 
         X0, X1 = self.X[:, 0], self.X[:, 1]
-        self.y = X1 > X0 ** 2 - 0.4 + 0.5 * randn(N)
+        self.y = X1 > X0**2 - 0.4 + 0.5 * randn(N)
 
         self.X_train, _, self.y_train, _ = train_test_split(
             self.X, self.y, test_size=0.4, random_state=42

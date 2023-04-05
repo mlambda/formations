@@ -1,8 +1,9 @@
+from typing import Any
+
 from deckz.standalones import register_plot
 
 
-@register_plot()
-def anatomy():
+def _work(title: str) -> None:
     # ----------------------------------------------------------------------------
     # Title:   Scientific Visualisation - Python & Matplotlib
     # Author:  Nicolas P. Rougier
@@ -22,10 +23,8 @@ def anatomy():
     fig = plt.figure(figsize=(8, 8))
     ax = fig.add_subplot(1, 1, 1, aspect=1)
 
-    def minor_tick(x, pos):
-        if not x % 1.0:
-            return ""
-        return "%.2f" % x
+    def minor_tick(x: float, pos: Any) -> str:
+        return "%.2f" % x if x % 1.0 else ""
 
     ax.xaxis.set_major_locator(MultipleLocator(1.000))
     ax.xaxis.set_minor_locator(AutoMinorLocator(4))
@@ -47,13 +46,13 @@ def anatomy():
     ax.plot(X, Y2, c=(1.00, 0.25, 0.25), lw=2, label="Red signal")
     ax.plot(X, Y3, linewidth=0, marker="o", markerfacecolor="w", markeredgecolor="k")
 
-    ax.set_title("Anatomie d'une figure", fontsize=20, verticalalignment="bottom")
+    ax.set_title(title, fontsize=20, verticalalignment="bottom")
     ax.set_xlabel("X axis label")
     ax.set_ylabel("Y axis label")
 
     ax.legend(loc="upper right")
 
-    def circle(x, y, radius=0.15):
+    def circle(x: float, y: float, radius: float = 0.15) -> None:
         from matplotlib.patches import Circle
         from matplotlib.patheffects import withStroke
 
@@ -69,7 +68,7 @@ def anatomy():
         )
         ax.add_artist(circle)
 
-    def text(x, y, text):
+    def text(x: float, y: float, text: str) -> None:
         ax.text(
             x,
             y,
@@ -156,3 +155,13 @@ def anatomy():
         weight="regular",  # fontsize="large", fontname="Yanone Kaffeesatz",
         arrowprops=dict(arrowstyle="->", connectionstyle="arc3", color=color),
     )
+
+
+@register_plot()
+def anatomy() -> None:
+    _work("Anatomie d'une figure")
+
+
+@register_plot()
+def anatomy_en() -> None:
+    _work("Anatomy of a figure")

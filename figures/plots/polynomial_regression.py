@@ -1,9 +1,7 @@
 from deckz.standalones import register_plot
 
 
-def main(
-    degree_label: str,
-):
+def _work(degree_label: str) -> None:
     import matplotlib.pyplot as plt
     from numpy import linspace, multiply, poly1d, polyfit
 
@@ -83,10 +81,10 @@ def main(
 
 
 @register_plot()
-def polynomial_regression():
-    main("Degré")
+def polynomial_regression() -> None:
+    _work("Degré")
 
 
 @register_plot()
-def polynomial_regression_en():
-    main("Degree")
+def polynomial_regression_en() -> None:
+    _work("Degree")

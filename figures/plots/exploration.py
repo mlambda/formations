@@ -150,7 +150,7 @@ class Exploration(metaclass=Singleton):
         ax = barplot(x=self.train_X["OverallQual"], y=self.train_y)
         ax.set(xlabel=quality_label, ylabel=saleprice_label)
 
-    def plot_reg(self, area_label: str, saleprice_label: str):
+    def plot_reg(self, area_label: str, saleprice_label: str) -> None:
         from seaborn import regplot
 
         ax = regplot(

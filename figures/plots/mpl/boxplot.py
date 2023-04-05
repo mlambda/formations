@@ -2,7 +2,7 @@ from deckz.standalones import register_plot
 
 
 @register_plot()
-def boxplot():
+def boxplot() -> None:
     import matplotlib.pyplot as plt
     import numpy as np
 

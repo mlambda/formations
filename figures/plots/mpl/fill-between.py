@@ -2,7 +2,7 @@ from deckz.standalones import register_plot
 
 
 @register_plot()
-def fill_between():
+def fill_between() -> None:
     import matplotlib.pyplot as plt
     import numpy as np
 

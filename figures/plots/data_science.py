@@ -5,7 +5,7 @@ from deckz.standalones import register_plot
 from .utils import load_resource
 
 
-def main(lang: str, pages: Iterable[str]) -> None:
+def _work(lang: str, pages: Iterable[str]) -> None:
     from re import sub
 
     import matplotlib.pyplot as plt
@@ -18,7 +18,7 @@ def main(lang: str, pages: Iterable[str]) -> None:
         load_resource(f"stopwords/{lang}").decode("utf8").splitlines()
     )
 
-    def wikip(query):
+    def wikip(query: str) -> str:
         wiki = page(query)
         text = wiki.content.lower()
         text = sub(r"==+.*?==+", "", text)
@@ -48,7 +48,7 @@ def main(lang: str, pages: Iterable[str]) -> None:
 
 @register_plot()
 def data_science() -> None:
-    main(
+    _work(
         lang="fr",
         pages=[
             "Science_des_données",
@@ -66,7 +66,7 @@ def data_science() -> None:
 
 @register_plot()
 def data_science_en() -> None:
-    main(
+    _work(
         lang="en",
         pages=[
             "Data science",

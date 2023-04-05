@@ -1,13 +1,13 @@
 from deckz.standalones import register_plot
 
 
-def main(
+def _work(
     complexity_label: str,
     error_label: str,
     optimum_label: str,
     train_label: str,
     validation_label: str,
-):
+) -> None:
     import matplotlib.pyplot as plt
     from numpy import linspace
 
@@ -49,8 +49,8 @@ def main(
 
 
 @register_plot()
-def learning_curve():
-    main(
+def learning_curve() -> None:
+    _work(
         complexity_label="Complexité",
         error_label="Erreur",
         optimum_label="Optimum",
@@ -60,8 +60,8 @@ def learning_curve():
 
 
 @register_plot()
-def learning_curve_en():
-    main(
+def learning_curve_en() -> None:
+    _work(
         complexity_label="Complexity",
         error_label="Error",
         optimum_label="Optimum",
@@ -71,8 +71,8 @@ def learning_curve_en():
 
 
 @register_plot()
-def early_stopping():
-    main(
+def early_stopping() -> None:
+    _work(
         complexity_label="Nombre d'itérations",
         error_label="Erreur",
         optimum_label="Optimum",
@@ -82,8 +82,8 @@ def early_stopping():
 
 
 @register_plot()
-def early_stopping_en():
-    main(
+def early_stopping_en() -> None:
+    _work(
         complexity_label="Number of iterations",
         error_label="Error",
         optimum_label="Optimum",
