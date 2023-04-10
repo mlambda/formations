@@ -1,27 +1,23 @@
-# Deep Learning et réseaux de neurones, les fondamentaux
+# Big Data Analytics avec Python
 
 ## Durée
 
-3 jours.
-
-## Prix 2021
-
-2750 € H.T.
+4 jours.
 
 ## Participants
 
-Ingénieurs, Data Scientists désirant s'initier aux réseaux de neurones et au Deep Learning.
+Ingénieurs, Data Analyst, Programmeurs désirant s'initier au machine learning.
 
 ## Prérequis
 
-Avoir des bases en programmation. Avoir une bonne maîtrise des outils informatiques et des statistiques.
+Connaissances de base en Python. Connaissances de base en statistiques ou avoir suivi le stage "Statistiques, maîtriser les fondamentaux" (Réf. STA). 
 
 ## Objectifs pédagogiques
-
-- Comprendre les clés fondamentales d'une approche Machine ou Deep Learning
-- Maîtriser les bases théoriques et pratiques d'architecture et de convergence de réseaux de neurones
-- Connaître les différentes architectures fondamentales existantes et maîtriser leurs implémentations fondamentales
-- Maîtriser les méthodologies de mise en place de réseaux de neurones, les points forts et les limites de ces outils
+ 
+ - Comprendre le principe de la modélisation statistique
+ - Choisir entre la régression et la classification en fonction du type de données
+ - Évaluer les performances prédictives d'un algorithme
+ - Créer des sélections et des classements dans de grands volumes de données pour dégager des tendances
 
 ## Méthodes pédagogiques
 
@@ -29,100 +25,87 @@ Ce séminaire se base sur des présentations, des échanges et des études de ca
 
 ## Description
 
-L'Intelligence Artificielle a bouleversé de nombreux domaines scientifiques et révolutionné un grand nombre de secteurs économiques. Néanmoins, sa présentation dans les grands médias relève souvent du fantasme, très éloignée de ce que sont réellement les domaines du Machine Learning ou du Deep Learning. Ce séminaire vous permettra de maîtriser les concepts clé du Deep Learning et de ses différents domaines de spécialisation. Vous découvrirez également les principales architectures de réseau existant aujourd'hui.
+Data Analytics est un terme pour exprimer les démarches d'analyse de données, afin d'être en mesure de prendre des décisions. Le langage Python dispose d'un écosystème permettant les traitements statistiques : de la construction de modèles d'analyse, à leur évaluation jusqu'à leur représentation. 
 
 ## Programme
 
-### Introduction IA, Machine Learning et Deep Learning
+### Introduction à la modélisation
 
-- Historique, concepts de base et applications de l'intelligence artificielle loin des fantasmes portés par ce domaine.
-- Intelligence collective : agréger une connaissance partagée par de nombreux agents virtuels.
-- Algorithmes génétiques : faire évoluer une population d'agents virtuels par sélection.
-- Machine Learning usuel : définition.
-- Types de tâches : Supervised Learning, Unsupervised Learning, Reinforcement Learning.
-- Types d'actions : classification, régression, clustering, estimation de densité, réduction de dimensionalité.
-- Exemples d'algorithmes Machine Learning : régression linéaire, Naive Bayes, Random Tree.
-- Machine Learning versus Deep Learning : pourquoi le ML reste aujourd'hui l'état de l'art (Random Forests & XGBoosts) ?
+ - Introduction au langage Python.
+ - Introduction au logiciel Jupiter Notebook.
+ - Les étapes de construction d'un modèle.
+ - Les algorithmes supervisés et non supervisés.
+ - Le choix entre la régression et la classification.
 
-### Concepts fondamentaux d'un réseau de neurones
+#### Travaux pratiques
+Réflexion sur des problématiques des stagiaires. Quel type de données sont à disposition ? Quelle est la tâche à réaliser ? Quels modèles devront être utilisés ?
 
-- Rappel de bases mathématiques.
-- Le réseau de neurones : architecture, fonctions d'activation et de pondération des activations précédentes...
-- L'apprentissage d'un réseau de neurones : fonctions de coût, back-propagation, stochastic gradient descent...
-- Modélisation d'un réseau de neurones : modélisation des données d'entrée et de sortie selon le type de problème.
-- Approximer une fonction par un réseau de neurones. Approximer une distribution par un réseau de neurones.
-- Data Augmentation : comment équilibrer un dataset ?
-- Généralisation des résultats d'un réseau de neurones.
-- Initialisations et régularisations d'un réseau de neurones : L1/L2 Regularization, Batch Normalization.
-- Optimisations et algorithmes de convergence.
+### Gestion des données & Pré-traitement
 
-#### Démonstration
+ - Utiliser PySpark pour la gestion des données.
+ - Utiliser des expressions régulières pour restructurer rapidement des données textuelles.
 
-Approximation d'une fonction et d'une distribution par un réseau de neurones.
+#### Travaux pratiques
+Récupérer un jeu de données et le modifier avec PySpark
 
-### Outils usuels Machine Learning et Deep Learning
+### Pré-traitementProcédures d'évaluation de modèles
 
-- Outils de gestion de donnée : Apache Spark, Apache Hadoop.
-- Outils Machine Learning usuel : Numpy, Scipy, Sci-kit.
-- Frameworks DL haut niveau : PyTorch, Keras, Lasagne.
-- Frameworks DL bas niveau : Theano, Torch, Caffe, Tensorflow.
+ - Les techniques de ré-échantillonnage en jeu d'apprentissage, de validation et de test.
+ - Test de représentativité des données d'apprentissage.
+ - Mesures de performance des modèles prédictifs.
+ - Matrice de confusion, de coût, la courbe ROC/AUC et courbe de lift.
+ - Utiliser PySpark pour le nettoyage et la préparation de données.
+ - Utiliser des expressions régulières pour restructurer rapidement des données textuelles.
 
-#### Démonstration
+#### Travaux pratiques
+Mise en place d'échantillonnage de jeux de donnes. Effectuer des tests d'évaluations sur plusieurs modèles fournis.
 
-Applications et limites des outils présentés.
+### Les algorithmes supervisés : La régression
 
-### Convolutional Neural Networks (CNN)
+ - Le principe de régression linéaire univariée.
+ - La régression multivariée.
+ - La régression polynomiale.
+ - La régression régularisée.
 
-- Présentation des CNNs : principes fondamentaux et applications.
-- Fonctionnement fondamental d'un CNN : couche convolutionnelle, utilisation d'un kernel, padding et stride...
-- Architectures CNN ayant porté l'état de l'art en classification d'images : LeNet, VGG Networks, Network in Network...
-- Utilisation d'un modèle d'attention.
-- Application à un cas de figure de classification usuel (texte ou image).
-- CNNs pour la génération : super-résolution, segmentation pixel à pixel.
-- Principales stratégies d'augmentation des Feature Maps pour la génération d'une image.
+#### Travaux pratiques
+Mise en œuvre des régressions et des classifications sur plusieurs types de données en utilisant sklearn et XGBoost
 
-#### Étude de cas
+### Les algorithmes supervisés : La classification
 
-Innovations apportées par chaque architecture CNN et leurs applications plus globales (convolution 1x1 ou connexions résiduelles).
+ - Régression logistique
+ - SVM
+ - Forêts aléatoires
+ - Techniques boostés
 
-### Recurrent Neural Networks (RNN)
+#### Travaux pratiques
+Mise en œuvre des régressions et des classifications sur plusieurs types de données en utilisant sklearn et XGBoost
 
-- Présentation des RNNs : principes fondamentaux et applications.
-- Fonctionnement fondamental du RNN : hidden activation, back propagation through time, unfolded version.
-- Évolutions vers les GRU (Gated Recurrent Units) et LSTM (Long Short Term Memory).
-- Problèmes de convergence et vanising gradient.
-- Types d'architectures classiques : prédiction d'une série temporelle, classification...
-- Architecture de type RNN Encoder Decoder. Utilisation d'un modèle d'attention.
-- Applications NLP : word/character encoding, traduction.
-- Applications vidéo : prédiction de la prochaine image générée d'une séquence vidéo.
+### Les algorithmes non supervisés : le clustering
 
-#### Démonstration
+ - Cas d'utilisations du clustering.
+ - Le clustering K-means et dérivés.
+ - Le clustering hiérarchique.
+ - Les approches mixtes.
 
-Différents états et évolutions apportées par les architectures Gated Recurrent Units et Long Short Term Memory.
+#### Travaux pratiques
+Traitements de clustering non supervisés sur plusieurs jeux de données.
 
-### Modèles générationnels : VAE et GAN
+### Les algorithmes non supervisés : Réduction de dimensions
 
-- Présentation des modèles générationnels Variational AutoEncoder (VAE) et Generative Adversarial Networks (GAN).
-- Auto-encoder : réduction de dimensionnalité et génération limitée.
-- Variational AutoEncoder : modèle générationnel et approximation de la distribution d'une donnée.
-- Définition et utilisation de l'espace latent. Reparameterization trick.
-- Fondamentaux du Generative Adversarial Networks.
-- Convergence d'un GAN et difficultés rencontrées.
-- Convergence améliorée : Wasserstein GAN, BeGAN. Earth Moving Distance.
-- Applications de génération d'images ou de photographies, génération de texte, super résolution.
+ - Cas d'utilisations de la réduction de dimensions.
+ - Analyse en composantes principales.
+ - Classification hiérarchique sur composantes principales.
+ - Réductions non linéaires
 
-#### Démonstration
+#### Travaux pratiques
+Mise en œuvre de la diminution du nombre des variables et identification des facteurs sous-jacents des dimensions associées à une variabilité importante.
 
-Applications des modèles générationnels et utilisation de l'espace latent.
+### Les algorithmes non supervisés : Détection d'anomalies
 
-### Deep Reinforcement Learning
+ - Cas d'utilisations de la détection d'anomalies.
+ - Détection d'anomalies en variance
+ - Technique basée sur les arbres : isolation forest
+ - Technique basée sur le voisinage : Local outlier factor
 
-- Reinforcement Learning.
-- Utilisation d'un réseau de neurones pour approximer la fonction d'état.
-- Deep Q Learning : experience replay et application au contrôle d'un jeu vidéo.
-- Optimisations de la politique d'apprentissage. On-policy et off-policy. Actor critic architecture. A3C.
-- Applications : contrôle d'un jeu vidéo simple ou d'un système numérique.
-
-#### Démonstration
-
-Contrôle d'un agent dans un environnement défini par un état et des actions possibles.
+#### Travaux pratiques
+Mise en œuvre de la détection d'anomalies pour nettoyer un jeu de données.
