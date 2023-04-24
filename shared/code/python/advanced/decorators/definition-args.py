@@ -12,5 +12,5 @@ def multiple(n):
 
 
 @multiple(10)
-def randint(a, b):
-    return random.randint(1, 6)
+def randint(a=1, b=6):
+    return random.randint(a, b)
