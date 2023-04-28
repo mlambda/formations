@@ -25,7 +25,7 @@ flavors:
     - $dimensionality-reduction: mlb
     - $clustering: intra-l-oreal
     - $anomaly-detection: full-no-tree
-  intra-microst:
+  intra-stmicro:
     - introduction
     - $dimensionality-reduction: mlb
     - $clustering: intra-stmicro

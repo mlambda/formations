@@ -40,7 +40,7 @@ flavors:
     - tuto
     - /questions
     - tp
-  intra-microst:
+  intra-stmicro:
     - intro
     - kmeans-gaussian
     - dbscan
