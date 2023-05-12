@@ -1,5 +1,5 @@
 
-# Programme de la formation
+# Programme de la formation MLE pour Fiducre
 ## Histoire du Machine Learning et contexte du Big Data
 
 * Replacer à leur échelle les concepts d'Intelligence Artificielle, apprentissage automatique (machine learning)...
