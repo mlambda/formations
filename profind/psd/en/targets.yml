@@ -1,0 +1,14 @@
+- name: j1
+  title: Python Course for software development
+  sections:
+    - path: en/about
+      flavor: profind-4j
+
+    - path: en/python/data-science
+      flavor: full
+
+    - path: en/python/production
+      flavor: light
+
+    - path: en/ml
+      flavor: mle
