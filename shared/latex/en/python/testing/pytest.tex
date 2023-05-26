@@ -1,0 +1,57 @@
+\begin{frame}{Introduction}
+  Goals:
+  \begin{itemize}[<+->]
+  \item Simplify the writing of tests compared to \texttt{unittest}
+  \item Provide a modular mechanism for setup and cleanup
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Usage}
+  \texttt{pytest} uses simple \texttt{assert}s to create tests.
+  
+  \mintedpycode{python/testing/pytest/simple_usage}
+  \end{frame}
+  
+  \begin{frame}{Fixture}
+  A fixture defines a test environment:
+  
+  \begin{itemize}[<+->]
+  \item Connection to a test database
+  \item Creating a directory with files to be tested
+  \item ...
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Using a Fixture}
+  \mintedpycode{python/testing/pytest/simple_fixture}
+  \end{frame}
+  
+  \begin{frame}{Modularity of Fixtures}
+  A fixture can use multiple other fixtures.
+  
+  A function can use multiple fixtures.
+  \end{frame}
+  
+  \begin{frame}{Fixture Memoization}
+  \texttt{pytest} defines several levels of fixture calculation:
+  
+  \begin{itemize}[<+->]
+  \item Each function (by default)
+  \item Each class
+  \item Each module
+  \item Each package
+  \item For the entire test session
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Fixtures Used by Multiple Modules}
+  Fixtures defined in the \texttt{conftest.py} file can be used by all modules in the directory.
+  \end{frame}
+  
+  \begin{frame}{Compatibility}
+  \texttt{pytest} can run test suites defined with \texttt{unittest} or \texttt{nose}.
+  \end{frame}
+  
+  \begin{frame}{Extensions}
+  \bluelink{https://docs.pytest.org/en/latest/reference/plugin_list.html}{Many plugins available.}
+  \end{frame}

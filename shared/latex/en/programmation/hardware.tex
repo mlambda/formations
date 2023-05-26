@@ -1,0 +1,36 @@
+\begin{frame}{Memory}
+    Component capable of storing information. \\
+    \newline
+    Different \textbf{memory tiers}:
+    \begin{description}
+        \item[Cache] Internal memory of the processor
+        \item[RAM] Random Access Memory used by programs
+        \item[Disk] Storage memory
+        \item[Other media] floppy disk, USB drive, etc.
+    \end{description}
+\end{frame}
+
+\begin{frame}{Processor}
+    Component capable of performing arithmetic and logical operations:
+    \begin{itemize}
+        \item Management of \textbf{memory tiers}
+        \begin{itemize}
+            \item Moving the read head
+            \item Read/write operations
+            \item ...
+        \end{itemize}
+        \item Operations on \textbf{variables} stored in \textbf{Cache}:
+        \begin{itemize}
+            \item AND
+            \item OR
+            \item XOR
+            \item ...
+        \end{itemize}
+    \end{itemize}
+    These operations are performed in a specific order, as defined by a program.
+\end{frame}
+
+\begin{frame}{Summary of Different Memory Tiers}
+    \V{"img/memory-hierarchy" | image("th", 0.5)}
+    Useful to keep in mind when optimizing a program!
+\end{frame}

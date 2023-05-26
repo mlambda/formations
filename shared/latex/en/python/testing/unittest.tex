@@ -1,0 +1,57 @@
+\begin{frame}{Introduction}
+  Goals:
+  \begin{itemize}[<+->]
+  \item Have a testing framework similar to JUnit in Java in the standard library
+  \item Manage the 4-phase lifecycle of a test
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Principles}
+  \begin{itemize}[<+->]
+  \item Define test scenarios by creating classes that inherit from \texttt{unittest.TestCase}
+  \item Each scenario consists of multiple tests
+  \item Each test is defined with specific \texttt{assert...} methods
+  \item Preparation and cleanup at the function level using \texttt{setUp} and \texttt{tearDown} methods
+  \item Preparation and cleanup at the class level using \texttt{setUpClass} and \texttt{tearDownClass} methods
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Test Methods}
+  \bluelink{https://docs.python.org/3/library/unittest.html\#test-cases}{A large number of test methods are available.}
+  \end{frame}
+  
+  \begin{frame}{Execution Order}
+  
+  \begin{enumerate}[<+->]
+  \item \texttt{setUpClass}
+  \item \texttt{setUp}
+  \item The test function
+  \item \texttt{tearDown}
+  \item \texttt{tearDownClass}
+  \end{enumerate}
+  
+  \onslide<+->{Steps 2--4 are repeated for each test before step 5 is executed.}
+  \end{frame}
+  
+  \begin{frame}{Example Usage}
+  \mintedpycode{python/testing/unittest/simple_usage}
+  \end{frame}
+  
+  \begin{frame}{Running the Test Suite}
+  To run the test suite, the most common method is:
+  
+  \mintedcustomcode{python/testing/unittest/run}{console}
+  
+  It is also possible to specify a file, a class, or a function to execute.
+  \end{frame}
+  
+  \begin{frame}{Mocking Module}
+  \texttt{unittest} has a very interesting mocking module: \texttt{unittest.mock}.
+  
+  Two important points:
+  \begin{itemize}[<+->]
+  \item The \texttt{patch} decorator / context manager, which allows temporary replacement of an object
+  \item The \texttt{Mock} class, which allows replacement of untestable objects
+  \end{itemize}
+  \onslide<+->{It is possible to test which methods have been called and how on a \texttt{Mock} object.}
+  \end{frame}

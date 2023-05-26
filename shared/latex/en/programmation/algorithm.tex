@@ -1,0 +1,54 @@
+\begin{frame}{Definition}
+    An algorithm is a finite and unambiguous sequence of instructions and operations used to solve a class of problems.
+    \V{"img/al-khwarizmi-timbre" | image("th", 0.4)}
+    \end{frame}
+    
+    \begin{frame}{Characteristics}
+    An algorithm is defined by:
+    \begin{itemize}
+    \item Its \textbf{inputs} (in the form of \textbf{variables})
+    \item Its \textbf{outputs} (in the form of \textbf{variables})
+    \item The necessary steps to transform the inputs into the outputs
+    \end{itemize}
+    We can then deduce its efficiency.
+    \end{frame}
+    
+    \begin{frame}{Some Instructions in English}
+    \begin{description}[<+->]
+        \item [\blue{ACCESS}] $X[5]\;\;\;\;\;$ \green{"Access the 5th element of the list $X$"}
+        \item []
+        \item [\blue{ASSIGNMENT}] $Y \leftarrow X\;$  \green{"Assign the value contained in $X$ to $Y$"}
+        \item []
+        \item [\blue{CONDITION}] 
+        \begin{description}
+            \item [IF] $X == Y$
+            \item [THEN] $X \leftarrow X + 10$
+            \item [ELSE] $Y \leftarrow X - 12$
+        \end{description}
+        \item []
+        \item [\blue{LOOP}] 
+        \begin{description}
+            \item [WHILE] $X > Y$
+            \item [THEN] $X \leftarrow X - 1$
+        \end{description}
+    \end{description}
+    
+    \end{frame}
+    
+    \begin{frame}{Example of Algorithm in English}
+    \begin{description}
+    \item [Input] X: A list of 10 numbers
+    \item [Output] Y: The maximum number in the list
+    \item [Instructions]
+    \begin{itemize}
+    \item $\text{MaxIndex} \leftarrow 9$
+    \item $Y \leftarrow X[0]$
+    \item WHILE $\text{Index}$ < $\text{MaxIndex}$
+    \begin{itemize}
+    \item IF $Y < X[\text{Index}]$ THEN $Y \leftarrow X[\text{Index}]$
+    \item $\text{Index} \leftarrow \text{Index} + 1$
+    \end{itemize}
+    \item RETURN Y
+    \end{itemize}
+    \end{description}
+    \end{frame} 

@@ -1,0 +1,6 @@
+flavors:
+  full:
+    - linting
+    - /questions
+    - tp
+title: Python Linting

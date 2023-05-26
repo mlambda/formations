@@ -1,0 +1,142 @@
+\begin{frame}{Introduction}
+  Goals:
+  \begin{itemize}
+    \item Ensuring standards within a team
+    \item Minimizing time spent on code review
+    \item Producing more maintainable software
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Possibilities}
+  Major points usually checked include:
+  
+  \begin{itemize}
+    \item Types
+    \item Unused code elements
+    \item Missing or incomplete documentation
+    \item Common bug patterns
+    \item Code style
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tools}
+  The PyCQA organization maintains several linting tools, including:
+  
+  \begin{itemize}
+    \item \texttt{flake8}
+    \item \texttt{pylint}
+    \item \texttt{RedBaron}
+  \end{itemize}
+  
+  \texttt{mypy} is commonly used for type checking, and \texttt{black} for code formatting.
+\end{frame}
+
+\begin{frame}{Type Checking}
+  Type checking is arguably the most important aspect to verify:
+  
+  \begin{itemize}
+    \item Allows aggressive code modifications
+    \item Resolves a significant number of bugs before integration
+    \item Documents the code
+    \item Enables automatic code generation (e.g., CLI with Typer)
+  \end{itemize}
+  
+  The transition to a typed codebase can be done gradually.
+\end{frame}
+
+\begin{frame}{Type Notations}
+  An expression is typed by preceding the type annotation with a \texttt{:}.
+  
+  For function returns, \texttt{->} is used.
+  
+  \mintedpycode{python/linting/mypy}
+  
+  Additional types are available in the \texttt{typing} module.
+\end{frame}
+
+\begin{frame}{General Checks}
+  The essential tool is \texttt{flake8}. Depending on the installed extensions, it checks for:
+  
+  \begin{itemize}
+    \item Syntax
+    \item Unused elements
+    \item Imports
+    \item Code complexity
+    \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\texttt{flake8} Extensions}
+  Some useful extensions include:
+  
+  \begin{itemize}
+    \item \texttt{flake8-bugbear}
+    \item \texttt{flake8-docstrings}
+    \item \texttt{flake8-import-order}
+    \item \texttt{flake8-black}
+    \item \texttt{flakehell}
+  \end{itemize}
+  
+  You can find a more comprehensive list in this \bluelink{https://github.com/DmytroLitvinov/awesome-flake8-extensions}{\texttt{git} repository}.
+\end{frame}
+
+\begin{frame}{\texttt{flake8} Configuration}
+  \texttt{flake8} can be configured in the \texttt{.flake8} file at the root of your project.
+  
+  \mintedcustomcode{python/linting/flake8}{ini}
+\end{frame}
+
+\begin{frame}{Style Checking}
+  For code style, I highly recommend using \texttt{black}:
+  
+  \begin{itemize}
+    \item Automatic formatting (source code transformed into syntax tree and back $\Rightarrow$ original formatting unused)
+    \item Ability to check codebase compliance
+    \item Consistent style
+    \item No more style issues in code reviews!
+ 
+
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Documentation Checking}
+  Use \texttt{pylint} with these options:
+  
+  \begin{itemize}
+    \item \texttt{missing-param-doc}
+    \item \texttt{differing-param-doc}
+    \item \texttt{differing-type-doc}
+    \item \texttt{missing-return-doc}
+  \end{itemize}
+  
+  Also, consider using \texttt{flake8-docstrings} for docstring style.
+\end{frame}
+
+\begin{frame}{Recommendations}
+  Recommended approach: group the checks into a single command (e.g., using a Makefile).
+  
+  \begin{itemize}
+    \item Run these checks before each pull request (Git hooks can be used)
+    \item Integrate them into the CI pipeline
+    \item \alert{A pull request should not be reviewed until these issues are addressed}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Configuration}
+  \begin{itemize}
+    \item Define the points to check as a team
+    \item Regularly analyze the cost and benefits of each check
+    \item Add or remove checks based on these analyses
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Reproducibility}
+  Manage the linting tools as dependencies:
+  
+  \begin{itemize}
+    \item Each team member should have consistent results given the same codebase
+    \item The tools should be easy to install, including on the CI system
+  \end{itemize}
+  
+  However, be careful not to install these dependencies in production.
+\end{frame}

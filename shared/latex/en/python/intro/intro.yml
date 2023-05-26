@@ -1,0 +1,5 @@
+flavors:
+  full:
+    - intro
+    - /questions
+title: Introduction au langage Python

@@ -4,11 +4,20 @@
     - path: en/about
       flavor: profind-3j
 
-    - path: en/python/data-science
+    - path: en/programmation
+      flavor: tho
+
+    - path: en/python/intro
       flavor: full
 
-    - path: en/python/production
-      flavor: light
+    - path: en/python/basics
+      flavor: full
 
-    - path: en/ml
-      flavor: mle
+    - path: en/python/testing
+      flavor: full
+
+    - path: en/python/linting
+      flavor: full
+
+    - path: en/python/data-science
+      flavor: full

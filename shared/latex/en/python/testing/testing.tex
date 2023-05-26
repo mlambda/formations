@@ -1,0 +1,154 @@
+\begin{frame}{Introduction}
+  Goals:
+  \begin{itemize}[<+->]
+  \item Ensure software quality
+  \item Measure regressions with each update
+  \item Refactor with confidence
+  \item Document code with usage examples for each part of the codebase
+  \item Document assumptions made about the code
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Test-Driven Development (TDD)}
+  Interesting development approach based on a cycle:
+  
+  \begin{enumerate}[<+->]
+  \item Add a unit test that aims to ensure functional requirements are met
+  \item Verify that the test fails
+  \item Create the minimal code that solves the test
+  \item Verify that all tests pass
+  \end{enumerate}
+  \end{frame}
+  
+  \begin{frame}{Different Types of Tests}
+  Functional Tests:
+  
+  \begin{description}[<+->]
+  \item[Unit] Verify a small unit of code (function or class)
+  \item[Integration] Test the combination of medium-sized code units
+  \item[Regression] Ensure that the level of quality does not decrease
+  \item[Smoke] Verify critical (and basic) functionality
+  \end{description}
+  
+  \onslide<+->{Non-functional Tests:}
+  
+  \begin{description}[<+->]
+  \item[Stress] Measure the system's resistance under high load
+  \item[Recovery] Measure the system's ability to recover
+  \item[Security] Check for vulnerabilities
+  \item[…]
+  \end{description}
+  \end{frame}
+  
+  \begin{frame}{Unit Tests}
+  The core of testing: they verify that the basic building blocks work.
+  
+  \begin{itemize}[<+->]
+  \item Usually multiple tests per \alert{public API function}
+  \item Each test ensures that preconditions, postconditions, and invariants are met
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Integration Tests}
+  \begin{itemize}[<+->]
+  \item Verify that multiple subsystems of the system work correctly together
+  \item Very important for making changes to the system with confidence
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{End-to-End Tests}
+  \begin{itemize}[<+->]
+  \item Tests the entire system chain
+  \item Replicates real-world use cases as closely as possible
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Regression Tests}
+  \begin{itemize}[<+->]
+  \item Combination of unit and integration tests
+  \item Also include tests for known bugs (1 bug fixed = 1 test)
+  \item Verify that software quality is maintained after a modification
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Some Testing Techniques}
+  \begin{description}[<+->]
+  \item[Mocking] Replace modules or functions with mocks
+  \item[Generation] Provide many random inputs to a test to detect bugs
+  \item[Mutation] Mutate the program, and the test suite should fail after the mutation
+  \item[Contracts] Often based on generation, they specify invariants and pre/post conditions
+  \end{description}
+  \end{frame}
+  
+  \begin{frame}{Testing Techniques --- Mocking}
+  \begin{itemize}[<+->]
+  \item Replace a class, a method, or a module attribute with a fake object
+  \item Allows testing of systems that are not accessible during tests
+  \item Implemented by \texttt{unittest.mock} or \texttt{pytest.monkeypatching}
+  \end{itemize}
+  
+  \onslide<+->{\mintedpycode{python/testing/testing/mocking}}
+  \end{frame}
+  
+  \begin{frame}{Testing Techniques --- Generation}
+  \begin{itemize}[<+->]
+  \item Often coupled with property-based testing
+  \item Focuses on discovering pre/post conditions and invariants
+  \item Test case generation is automatic
+  \item Reduces error cases to simple cases
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Testing Techniques --- Mutation}
+  \begin{itemize}[<+->]
+  \item Assumption that a good test suite fails on different code
+  \item Performs subtle mutations
+  \item Counts failed and unfinished tests
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Testing Techniques --- Contracts}
+  \begin{itemize}[<+->]
+  \item Extension of property-based testing
+  \item Explicitly specifies expectations on functions and classes
+  \end{itemize}
+  
+  \mintedpycode{python/testing/testing/contracts}
+  \end{frame}
+  
+  \begin{frame}{Best Practices}
+  \begin{itemize}[<+->]
+  \item Follow the four-step structure: setup, execution, validation, cleanup
+  \item Create independent tests
+  \item Test only the public API, never implementation details
+  \item Keep tests fast
+  \item Use mutation testing or fuzzing
+  \item Practice inversion of control
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Inversion of Control --- Coupling}
+  \mintedpycode{python/testing/testing/coupling}
+  \end{frame}
+  
+  \begin{frame}{Inversion of Control --- Cohesion}
+  Best practice: each part is testable and easily replaceable.
+  
+  The instantiation logic varies depending on the context of use.
+  
+  Allows dependency injection.
+  
+  \mintedpycode{python/testing/testing/cohesion}
+  \end{frame}
+  
+  \begin{frame}{Setting Up in Python}
+  \begin{description}[<+->]
+  \item[\texttt{unittest}] Testing framework from the standard library
+  \item[\texttt{pytest}] Most popular testing framework
+  \item[\texttt{hypothesis}] Fuzzing, generation strategies
+  \item[\texttt{mutmut}] Mutation testing
+  \item[\texttt{deal}] Contracts
+  \end{description}
+  
+  \onslide<+->{The first three libraries have many extensions.}
+  \end{frame}
