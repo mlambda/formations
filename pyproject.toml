@@ -20,7 +20,7 @@ seaborn = "^0.12"
 tensorflow = "^2.12"
 wikipedia = "^1"
 wordcloud = "^1"
-deckz = "^20.0.0"
+deckz = "^20.2.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23"
