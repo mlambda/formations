@@ -1,6 +1,6 @@
 flavors:
   full:
     - linting
-    - /questions
+    - /en/questions
     - tp
 title: Python Linting

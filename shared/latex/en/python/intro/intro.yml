@@ -1,5 +1,5 @@
 flavors:
   full:
     - intro
-    - /questions
-title: Introduction au langage Python
+    - /en/questions
+title: Python Language
