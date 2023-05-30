@@ -1,0 +1,63 @@
+\begin{frame}{Introduction}
+  Goals:
+  \begin{itemize}[<+->]
+    \item Introduce a safe context mechanism for a block of instructions
+    \item Avoid common resource management errors
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Syntax}
+  Instructions placed within a \texttt{with} block. It introduces one or multiple active contexts.
+\end{frame}
+
+\begin{frame}{Example --- File Management}
+  \mintedpycode{python/advanced/context-managers/file}
+\end{frame}
+
+\begin{frame}{Example --- Multiple Contexts}
+  \mintedpycode{python/advanced/context-managers/multiple}
+\end{frame}
+
+\begin{frame}{Creating a Context Manager}
+  Implementation of a class with \texttt{\_\_enter\_\_} and \texttt{\_\_exit\_\_} methods.
+
+  \mintedpycode{python/advanced/context-managers/creation-manual}
+\end{frame}
+
+\begin{frame}{Recommended: Using \texttt{contextlib}}
+  Much more natural way to define a context:
+
+  \mintedpycode{python/advanced/context-managers/creation-contextlib}
+\end{frame}
+
+\begin{frame}{Context Returning a Value}
+  To return a value:
+
+  \mintedpycode{python/advanced/context-managers/value}
+\end{frame}
+
+\begin{frame}{Pre-implemented Contexts}
+  Many objects have methods that allow them to be used as contexts:
+  \begin{itemize}[<+->]
+    \item Files
+    \item HTTP sessions
+    \item Database connections
+    \item \dots
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Contexts Provided by \texttt{contextlib}}
+  \texttt{contextlib} also provides some very useful contexts:
+  \begin{description}[<+->]
+    \item[\texttt{closing}] Closes the given argument at the end of the block
+    \item[\texttt{suppress}] Suppresses exceptions within the block
+    \item[\texttt{redirect\_stdout}] Redirects standard output
+  \end{description}
+\end{frame}
+
+\begin{frame}{Using a Context as a Decorator}
+  By inheriting from \texttt{contextlib.ContextDecorator} when defining a context, it can also be used as a decorator.
+
+  Contexts defined with \texttt{contextlib.contextmanager} also have this
+  property.
+\end{frame}

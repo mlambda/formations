@@ -1,14 +1,32 @@
-- name: j1
-  title: Python Course for software development
+- name: basics
+  title: Basics
   sections:
     - path: en/about
       flavor: profind-4j
 
-    - path: en/python/data-science
+    - path: en/python/basics
       flavor: full
 
-    - path: en/python/production
-      flavor: light
+- name: advanced
+  title: Advanced Concepts
+  sections:
+    - path: en/python/advanced
+      flavor: psd
 
-    - path: en/ml
-      flavor: mle
+- name: testing
+  title: Testing
+  sections:
+    - path: en/python/testing
+      flavor: full
+  
+- name: linting
+  title: Linting
+  sections:
+    - path: en/python/linting
+      flavor: full
+
+- name: production
+  title: Production tools
+  sections:
+    - path: en/python/production
+      flavor: psd

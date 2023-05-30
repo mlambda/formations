@@ -1,0 +1,70 @@
+\begin{frame}{Introduction}
+  Goals:
+  \begin{itemize}[<+->]
+    \item Execute code during the definition of a function
+    \item Have a high flexibility for extending functions
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Example}
+  \mintedpycode{python/advanced/decorators/example}
+
+  The \texttt{command} decorator is executed during the definition of
+  \texttt{my\_command}.
+\end{frame}
+
+\begin{frame}{Concept}
+  \begin{itemize}[<+->]
+    \item Decorator = function
+    \item Takes a function as input
+    \item Usually returns a function as output
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Rephrased Example}
+  \begin{center}
+    \mintedpycode{python/advanced/decorators/example}
+    {\Huge =}
+    \mintedpycode{python/advanced/decorators/example-reformulated}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Possibilities}
+  \begin{itemize}[<+->]
+    \item Modification of function arguments or result
+    \item Side effects (logging, performance measurement, etc.)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Definition of a Decorator}
+  \mintedpycode{python/advanced/decorators/definition}
+\end{frame}
+
+\begin{frame}{Definition of a Decorator with Arguments}
+  \mintedpycode{python/advanced/decorators/definition-args}
+\end{frame}
+
+\begin{frame}{Using Multiple Decorators}
+  \begin{center}
+    \mintedpycode{python/advanced/decorators/multiple}
+    {\Huge =}
+    \mintedpycode{python/advanced/decorators/multiple-equivalent}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Some Useful Decorators}
+  \begin{description}[<+->]
+    \item[\texttt{classmethod}] Declares a method as a class method
+    \item[\texttt{staticmethod}] Declares a method as a static method
+    \item[\texttt{property}] Defines one or more methods that behave like an attribute
+    \item[\texttt{functools.cache}] Allows storing the result of a function call to avoid recomputation
+  \end{description}
+\end{frame}
+
+\begin{frame}{An Essential Tool}
+  When creating decorators, the use of \texttt{functools.wraps} is \alert{highly} recommended.
+\end{frame}
+
+\begin{frame}{Class Decorators}
+  Just like functions, classes can be decorated in the exact same way.
+\end{frame}

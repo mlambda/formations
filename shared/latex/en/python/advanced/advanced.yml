@@ -1,0 +1,25 @@
+default_titles:
+  comprehensions: Comprehensions
+  context-managers: Context Managers
+  closures: Closures
+  decorators: Decorators
+  design-patterns: Design Patterns
+  generators: Generators
+  interfaces: Interfaces
+  metaclasses: Meta-classes
+  tp: Exercises
+flavors:
+  psd:
+    - generators
+    - /en/questions
+    - tp-generators
+    - decorators
+    - /en/questions
+    - tp-decorators
+    - context-managers
+    - /en/questions
+    - tp-context-managers
+    - design-patterns
+    - /en/questions
+    - tp-design-patterns
+title: Advanced Python Concepts

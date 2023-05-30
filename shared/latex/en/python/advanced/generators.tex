@@ -1,0 +1,96 @@
+\begin{frame}{Introduction}
+  Goals:
+  
+  \begin{itemize}[<+->]
+  \item Transform data without storing the result in memory
+  \item Easily process large volumes of data
+  \item Provide advantageous replacements for lists in certain use cases
+  \item Simpler to create than a traditional iterator (generator's supertype)
+  \item Offer advanced communication possibilities
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Intuition}
+  Generators \alert{store an algorithm} for producing data.
+  
+  This algorithm is \alert{only used when the value is requested}, not before (lazy evaluation).
+  \end{frame}
+  
+  \begin{frame}{Python Iteration Hierarchy}
+  
+  From the most general to the most specific:
+  
+  \begin{description}[<+->]
+  \item[Iterable] Method \texttt{\_\_iter\_\_}
+  \item[Iterator] Methods \texttt{\_\_iter\_\_} and \texttt{\_\_next\_\_}
+  \item[Generator] Methods \texttt{send}, \texttt{throw}, \texttt{close}, \texttt{\_\_iter\_\_}, and \texttt{\_\_next\_\_}
+  \end{description}
+  
+  \onslide<+->{These methods must implement the following contracts:}
+  
+  \begin{description}[<+->]
+  \item[\texttt{\_\_iter\_\_}] Returns an iterator
+  \item[\texttt{\_\_next\_\_}] Requests the next object from an iterator
+  \end{description}
+  
+  \onslide<+->{We will see later what \texttt{send}, \texttt{throw}, and \texttt{close} do.}
+  \end{frame}
+  
+  \begin{frame}{Creating a Generator}
+  Two options:
+  
+  \begin{itemize}[<+->]
+  \item Using comprehension
+  \item With a function and the \texttt{yield} and \texttt{yield from} keywords
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Example --- Using Comprehension}
+  \mintedpycode{python/advanced/generators/comprehension}
+  \end{frame}
+  
+  \begin{frame}{Example --- Using a Function with yield}
+  \mintedpycode{python/advanced/generators/function}
+  \end{frame}
+  
+  \begin{frame}{Functions that Accept Generators}
+  Many functions accept generators. When it's the only argument, no need for parentheses:
+  
+  \mintedpycode{python/advanced/generators/builtins}
+  \end{frame}
+  
+  \begin{frame}{Using a Generator}
+  
+  Similar to an iterator:
+  
+  \begin{itemize}[<+->]
+  \item Iteration using a \texttt{for} loop \mintedpycode{python/advanced/generators/for}
+  \item Manually with the \texttt{next} method \mintedpycode{python/advanced/generators/manual}
+  \item \alert{Single-use}, once exhausted, the iterator needs to be recreated to iterate again
+  \end{itemize}
+  \end{frame}
+  
+  \begin{frame}{Chaining Generators}
+  \mintedpycode{python/advanced/generators/chain}
+  
+  Or using a comprehension:
+  
+  \mintedpycode{python/advanced/generators/chain-short}
+  \end{frame}
+  
+  \begin{frame}{Advanced Functions}
+  
+  \texttt{yield} returns values that are sent to it using \texttt{send}:
+  
+  \mintedpycode{python/advanced/generators/send}
+  
+  \texttt{next(generator)} is equivalent to \texttt{generator.send(None)}.
+  
+  Similarly, the \texttt{throw} and \texttt{close} methods send exceptions to the pause point.
+  \end{frame}
+  
+  \begin{frame}{\texttt{yield from} Keyword}
+  The \texttt{yield from} keyword allows \texttt{yielding} from another generator:
+  
+  \mintedpycode{python/advanced/generators/yieldfrom}
+  \end{frame}

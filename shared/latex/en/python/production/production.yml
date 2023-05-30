@@ -14,4 +14,12 @@ flavors:
     - cli
     - /en/questions
     - tp-cli-stegano
+  psd:
+    - environment
+    - /en/questions
+    - demo-environment
+    - packaging
+    - /en/questions
+    - tp-packaging
+    - tp-cli-stegano
 title: Python software engineering

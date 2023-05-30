@@ -4,6 +4,11 @@ flavors:
     - description
     - horaires-3j-profind
     - tour2table
+  profind-4j:
+    - formateur
+    - description
+    - horaires-4j-profind
+    - tour2table
   orsys-3j:
     - formateur
     - description
