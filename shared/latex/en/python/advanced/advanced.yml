@@ -10,6 +10,9 @@ default_titles:
   tp: Exercises
 flavors:
   psd:
+    - comprehensions
+    - tp-comprehensions
+    - /en/questions
     - generators
     - /en/questions
     - tp-generators
