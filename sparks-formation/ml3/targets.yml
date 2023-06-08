@@ -23,8 +23,8 @@
 - name: j3
   title: Jour 3 --- Réseaux de neurones
   sections:
-    - path: big-questions
-      flavor: full
-
     - path: nn
       flavor: bda
+
+    - path: big-questions
+      flavor: full
