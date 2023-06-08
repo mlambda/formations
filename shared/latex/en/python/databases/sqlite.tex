@@ -1,0 +1,59 @@
+\begin{frame}{Introduction to DB API}
+  \alert{DB API} is a specification of an API to access databases.
+
+  This API (\textit{Python Database API Specification v2.0}) is defined by the \bluelink{https://peps.python.org/pep-0249/}{PEP 249}.
+  
+  Modules that want to conform to this specification should implement the interface provided.
+\end{frame}
+
+\begin{frame}{DB API implementation}
+  Despite being a so called \textit{standard}, all modules do not necessarily conform to the DB API specification, but most of them do:
+  \begin{itemize}
+    \item \textit{sqlite}
+    \item \textit{psycopg}
+    \item \textit{mysql-python}
+    \item \dots
+  \end{itemize}
+
+  As a counter example, SQLAlchemy, in his first version, was not compliant to the DB API interface (fixed in 2.0).
+\end{frame}
+
+\begin{frame}{The DB API interface}
+    Briefly, DB API requires the implementation of two specific objects:
+    \begin{description}
+      \item[\texttt{Connection}] Manage the connection to the database
+      \item[\texttt{Cursor}] Manage the context of a fetch operation, allowing to get information and execute queries 
+    \end{description}
+    Each object should implement dedicated methods (see p.\ref{dbapi:connection} and p.\ref{dbapi:cursor})
+
+\end{frame}
+
+\begin{frame}{\texttt{Connection} Objects}
+  \texttt{Connection} objects are created with the method \texttt{connect}
+
+  \mintedpycode{python/databases/sqlite-connect}
+
+\end{frame}
+
+\begin{frame}{\texttt{Connection} Objects}\label{dbapi:connection}
+  Main methods of \texttt{Connection} Object are:
+  \begin{description}
+    \item[\texttt{close}] Close the connection immediately (called when object is deleted \texttt{\_\_del\_\_()})
+    \item[\texttt{commit}] Commit pending transactions (not auto-commit by default)
+    \item[\texttt{cursor}] Provide a \texttt{Cursor} object on the database
+  \end{description}
+  
+\end{frame}
+
+\begin{frame}{\texttt{Cursor} Objects}\label{dbapi:cursor}
+  Main methods of \texttt{Cursor} Object are:
+  \begin{description}
+    \item[\texttt{execute}] Execute a given query on the dataset (\texttt{executemany} for multiple insertions)
+    \item[\texttt{fetchone}] Fetch the next row of a query result (also \texttt{fetchmany}, \texttt{fetchall})
+  \end{description} 
+
+\end{frame}
+
+\begin{frame}{Demo SQLite}
+  \bluelink{https://codespaces.new/NyxAether/python_sqlite_formation}{Demo}
+\end{frame}

@@ -1,0 +1,6 @@
+
+flavors:
+  full:
+    - sqlite
+
+title: Databases

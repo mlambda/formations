@@ -25,6 +25,12 @@
     - path: en/python/linting
       flavor: full
 
+- name: databases
+  title: Introduction to DB API with SQLite
+  sections:
+    - path: en/python/databases
+      flavor: full
+
 - name: production
   title: Production tools
   sections:
