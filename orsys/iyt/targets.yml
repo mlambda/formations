@@ -1,0 +1,23 @@
+- name: j1234
+  title: Python Data Science, manipuler et visualiser les données
+  sections:
+    - path: about
+      flavor: orsys-4j
+
+    - path: python/basics
+      flavor: full
+
+    - path: python/linting
+      flavor: full
+
+    - path: python/production
+      flavor: full
+
+    - path: python/data-science
+      flavor: full
+
+    - path: python/dataviz
+      flavor: full
+
+    - path: python/bigdata
+      flavor: full

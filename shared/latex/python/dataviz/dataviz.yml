@@ -1,0 +1,6 @@
+flavors:
+  full:
+    - intro
+    - /questions
+
+title: Visualisation de données

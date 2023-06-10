@@ -1,0 +1,6 @@
+flavors:
+  full:
+    - intro
+    - /questions
+
+title: Traitement de gros volumes de données
