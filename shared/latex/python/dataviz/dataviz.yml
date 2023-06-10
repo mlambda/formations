@@ -1,6 +1,23 @@
+default_titles:
+  intro: Introduction
+  /python/data-science/matplotlib: Matplotlib
+  seaborn: Seaborn
+  folium: Folium
+  integrated-solutions: Solutions intégrées
+
 flavors:
   full:
     - intro
+    - /python/data-science/matplotlib
+    - /questions
+    - /python/data-science/tp-matplotlib
+    - seaborn
+    - /questions
+    - tp-seaborn
+    - folium
+    - /questions
+    - tp-folium
+    - integrated-solutions
     - /questions
 
 title: Visualisation de données

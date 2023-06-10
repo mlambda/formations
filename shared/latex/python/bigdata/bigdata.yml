@@ -1,6 +1,14 @@
+default_titles:
+  intro: Introduction
+  spark: Spark
+  formats: Formats
+
 flavors:
   full:
     - intro
+    - spark
+    - formats
     - /questions
+    - tp
 
-title: Traitement de gros volumes de données
+title: Traitement de données volumineuses

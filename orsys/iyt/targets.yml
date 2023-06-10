@@ -14,7 +14,7 @@
       flavor: full
 
     - path: python/data-science
-      flavor: full
+      flavor: iyt
 
     - path: python/dataviz
       flavor: full

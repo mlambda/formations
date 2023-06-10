@@ -17,4 +17,13 @@ flavors:
     - /questions
     - tp-pandas
 
+  iyt:
+    - intro
+    - numpy
+    - /questions
+    - tp-numpy
+    - pandas
+    - /questions
+    - tp-pandas
+
 title: Modules de science des données
