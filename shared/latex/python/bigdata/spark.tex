@@ -1,27 +1,75 @@
 \begin{frame}{Concepts principaux}
-  
+  \begin{itemize}
+    \item Exécution d'un programme sur un ensemble de serveurs
+    \item Programmation paresseuse
+    \item Plusieurs paradigmes disponibles
+    \item Résilience
+  \end{itemize}
 \end{frame}
 
-\begin{frame}{SparkSQL}
-  
+\begin{frame}{SparkSQL \& DataFrame}
+  Manière recommandée par défaut d'utiliser Spark depuis la version 3 car la plus optimisée
+
+  \begin{itemize}
+    \item Données représentées sous forme de feuilles de calcul (DataFrame)
+    \item Opérations de type SQL sur les colonnes de ces feuilles (join, select, groupby, …)
+    \item Définitions paresseuses par défaut~: phase d'optimisation avant l'exécution
+    \item Possibilité de définir des colonnes complexes (séquences, associations clef–valeur, …)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{API Pandas}
+  Inspirée par Dask, elle-même inspirée par Pandas. Essaye de reproduire une expérience Pandas sur Spark
+
+  \begin{itemize}
+    \item Style proche de pandas (indexation booléenne, select implicite, classes et méthodes de Pandas, …)
+    \item Très adapté pour migrer de Pandas à Spark
+    \item Toutes les fonctionnalités de Pandas ne sont pas disponibles
+    \item Certaines opérations sont très coûteuses dans un contexte distribué (tri, mélange, jointure, …)
+    \item Nécessité de typer certaines opérations pour garantir de bonnes performances
+  \end{itemize}
+
+  \bluelink{https://spark.apache.org/docs/latest/api/python/user_guide/pandas_on_spark/supported_pandas_api.html}{Liste des fonctionnalités disponibles.}
 \end{frame}
 
 \begin{frame}{RDD}
-  
+  Forme la plus libre de représentation de données. Utile quand les autres paradigmes sont inopérants
+
+  \begin{itemize}
+    \item Pas de schéma, pas de colonnes~: un même dataset peut contenir des objets très différents
+    \item Plus bas niveau (primitives comme map, filter et reduce)
+    \item Moins optimisée, moins de vérifications faites par Spark
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{MLLib}
-  
+  Bibliothèque pour appliquer des algorithmes d'apprentissage automatique aux DFs ou RDDs
+
+  \begin{itemize}
+    \item Similaire à scikit-learn, avec beaucoup moins de modèles disponibles
+    \item Entraînement, évaluation, inférence distribuées
+    \item Support des RDDs en mode maintenance seulement
+    \item Pas optimal pour l'apprentissage automatique profond
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Déploiement}
-  
+  Plusieurs options
+
+  \begin{itemize}
+    \item Cloud avec ou sans Databricks
+    \item Cluster privé
+    \item Local pendant le développement
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Alternatives --- Dask}
-  
-\end{frame}
+  Similaire à l'API Pandas de Spark
 
-\begin{frame}{Alternatives --- Ray}
-  
+  \begin{itemize}
+    \item Contrairement à Spark, limité à Python
+    \item Propose des DataFrames et des NDArray adaptés au calcul distribué
+    \item Essaye de proposer au maximum une API compatible à celle de Pandas
+    \item Emploie comme Spark la programmation paresseuse
+  \end{itemize}
 \end{frame}

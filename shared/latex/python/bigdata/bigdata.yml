@@ -1,5 +1,4 @@
 default_titles:
-  intro: Introduction
   spark: Spark
   formats: Formats
 
@@ -7,6 +6,8 @@ flavors:
   full:
     - intro
     - spark
+    - /questions
+    - demo
     - formats
     - /questions
     - tp
