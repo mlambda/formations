@@ -19,5 +19,6 @@ flavors:
     - tp-folium
     - integrated-solutions
     - /questions
+    - demo-holoviz
 
 title: Visualisation de données
