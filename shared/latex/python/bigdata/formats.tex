@@ -1,19 +1,56 @@
+\begin{frame}{CSV}
+  \begin{itemize}
+    \item Enregistrements séparés par des sauts de ligne
+    \item Valeurs séparées par des virgules
+    \item Plusieurs variantes possibles pour autoriser les virgules et sauts de ligne dans les valeurs
+    \item Lisible par l'humain
+    \item Pratique pour une petite expérience
+    \item Mieux vaut utiliser d'autres formats en production
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{JSON}
+  \begin{itemize}
+    \item Format très utilisé sur le web car excellent support en javascript
+    \item Support de colonnes complexes
+    \item Pas de schéma (disponible avec des extensions)
+    \item Combinaison d'objets simples~: dictionnaires, listes, valeurs de base
+    \item Variante JSONL adaptée aux données volumineuses
+    \item Lisible par l'humain
+    \item Mieux vaut utiliser un autre format pour maximiser les performances
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Parquet}
-  Avantages
-
   \begin{itemize}
-    \item 
+    \item Format orienté colonne généraliste très utilisé en production
+    \item Support de colonnes complexes
+    \item Évolutif
+    \item Séparable
+    \item Compressé
+    \item Pas lisible par l'humain
   \end{itemize}
 
-  Inconvénients
+  $\Rightarrow$ Format à utiliser par défaut en PySpark
+\end{frame}
 
+\begin{frame}{HDF5}
   \begin{itemize}
-    \item 
+    \item Format de type archive (conteneur de fichiers)
+    \item Deux types d'éléments~: tableaux multidimensionnels et groupes
+    \item Base de nombreuses surcouches (NetCDF, CGNS, …)
   \end{itemize}
+\end{frame}
 
-  Bibliothèques
+\begin{frame}{Et d'autres…}
+  Chaque domaine a ses formats spécifiques. Entre deux formats, on peut choisir en se basant sur quelques critères
 
   \begin{itemize}
-    \item 
+    \item Orientation colonne (plus rapide pour de nombreuses utilisations)
+    \item Évolutivité
+    \item Compressibilité
+    \item Séparabilité
+    \item Lisibilité par l'humain
+    \item Qualité des bibliothèques de manipulation
   \end{itemize}
 \end{frame}
