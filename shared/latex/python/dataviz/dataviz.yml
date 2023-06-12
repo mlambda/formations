@@ -1,5 +1,4 @@
 default_titles:
-  intro: Introduction
   /python/data-science/matplotlib: Matplotlib
   seaborn: Seaborn
   folium: Folium
