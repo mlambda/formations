@@ -21,3 +21,5 @@
 
     - path: python/bigdata
       flavor: full
+
+    - contact
