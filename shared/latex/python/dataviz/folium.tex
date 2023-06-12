@@ -1,11 +1,47 @@
+\begin{frame}{Introduction}
+  Bibliothèque Python pour générer une carte leaflet.js.
+
+  \begin{itemize}
+    \item Définition du centrage de départ et du niveau de zoom
+    \item Personnalisation de la carte
+      \begin{itemize}
+        \item Fond de carte
+        \item Marqueurs (avec tooltips et popups)
+        \item Lignes
+        \item Couches GeoJSON ou TopoJSON
+        \item Cartes choroplèthes
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Fonds de carte}
-  
+  On peut utiliser
+  \begin{itemize}
+    \item Quelques fonds de carte par défaut
+    \item Fonds de carte Cloudmade et Mapbox
+    \item N'importe quel fond de carte supporté par leaflet.js
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Marqueurs}
-  
+  \begin{itemize}
+    \item Circulaires ou du style standard leaflet
+    \item Affichage possible d'un texte ou d'HTML arbitraire sur un clic
+    \item Ajout de tooltips possible
+  \end{itemize}
 \end{frame}
 
-\begin{frame}{Alternatives}
-  
+\begin{frame}{Couches GeoJSON ou TopoJSON}
+  Ajout possible de points, lignes, polygones et textes définis par GeoJSON ou TopoJSON.
+\end{frame}
+
+\begin{frame}{Outils connexes}
+  Pour la manipulation de données géoréférencées, de très bons outils existent
+
+  \begin{itemize}
+    \item GeoPandas
+    \item Shapely
+    \item QGIS (manipulation possible par Python en plus de l'interface)
+    \item …
+  \end{itemize}
 \end{frame}
