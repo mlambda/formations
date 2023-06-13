@@ -21,3 +21,8 @@
 
     - path: en/python/data-science
       flavor: full
+
+    - path: en/ml
+      flavor: bait
+
+    - en/contact

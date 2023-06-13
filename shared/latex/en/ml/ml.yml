@@ -11,7 +11,10 @@ flavors:
     - learning
     - evaluation
     - /en/questions
-
+  bait:
+    - intro
+    - learning
+    - /en/questions
   mle:
     - intro
     - data-preparation
