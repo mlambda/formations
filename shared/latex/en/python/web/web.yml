@@ -1,0 +1,6 @@
+
+flavors:
+  full:
+    - flask
+
+title: Web Development with Python

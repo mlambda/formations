@@ -1,0 +1,1 @@
+self.master.bind("<Return>", self.calculate)

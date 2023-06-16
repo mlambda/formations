@@ -1,0 +1,7 @@
+
+flavors:
+  full:
+    - ctypes
+    - cython
+
+title: Interoperability with C

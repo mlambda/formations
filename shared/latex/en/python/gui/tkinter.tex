@@ -1,0 +1,84 @@
+\begin{frame}{What is Tkinter?}
+    \alert{Tkinter} is a standard library providing interface to the \alert{Tcl/Tk} GUI toolkit (see \bluelink{https://www.tcl.tk/software/tcltk/}{Tcl/Tk})
+
+    \vfill
+
+    Tcl/Tk has its own \bluelink{https://www.tcl.tk/about/language.html}{language},
+    but python provides an interface to use it directly.
+\end{frame}
+
+\begin{frame}{Import}
+    Two different main imports exists:
+    \mintedpycode{python/gui/tkinter-import}
+
+    \begin{itemize}
+        \item \textbf{tkinter} module (\texttt{tk}) imbed all the class to construct any graphic interface. But with a specific appearance designed by Tcl/Tk
+        \item \textbf{ttk} (\textit{themed tk}) module implements most of the classes present in the main module, but uses the general appearance of the OS
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Root element}
+    Any graphic interface with tkinter should start with a root object instance of \texttt{tk.Tk()}.
+
+    \mintedpycode{python/gui/tkinter-root}
+
+    This object will lauch the main loop with \texttt{root.mainloop()} and will be
+    the ancestor (direct or not) for any future component of the interface.
+
+\end{frame}
+
+\begin{frame}{Frame}
+    In most cases, it will be necessary to create a \texttt{Frame} element which will be your main window.
+
+    \mintedpycode{python/gui/tkinter-frame}
+
+    The parent of the frame is the root.
+\end{frame}
+
+\begin{frame}{Graphic Widgets}
+    Usual graphic widgets are implemented:
+    \begin{itemize}
+        \item Button
+        \item Label
+        \item Radiobutton
+        \item Scrollbar
+        \item etc.
+    \end{itemize}
+    Most widget exits in a themed version in \texttt{ttk}.
+    \vfill
+
+    Each widget is created by specifing its parent and should specified how to place it with the \alert{Geometry Manager}.
+
+\end{frame}
+
+\begin{frame}{Geometry Manager}
+    When an object/widget is created is should call a method to specify how to place it in the frame. Three different methods co-exists:
+    \begin{itemize}
+        \item \texttt{pack} place element one after the other (packing). Options can be set to pack in different direction
+        \item \texttt{grid} place elements on a grid by specifing row and column numbers
+        \item \texttt{place} place elements by specifing the pixel coordinates
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Variables}
+    Variables can be define to get or display values :
+    \begin{itemize}
+        \item \texttt{StringVar}
+        \item \texttt{IntVar}
+        \item \texttt{FloatVar}
+        \item etc.
+    \end{itemize}
+
+    They can be used to capture a value in an \texttt{Entry} field or display in a \texttt{Label}.
+
+\end{frame}
+
+\begin{frame}{Binding mechanism}
+    Tkinter provides a binding mechanism to user action (key pressed, mouse actions, etc.)
+
+    \mintedpycode{python/gui/tkinter-bind}
+    
+    The brief summary of event codes can be find on this \bluelink{python/gui/tkinter-frame}{stackoverflow exchange}.
+
+\end{frame}

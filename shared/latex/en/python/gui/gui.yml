@@ -1,0 +1,9 @@
+default_titles:
+  tkinter: Tkinter
+  qt: Qt
+flavors:
+  full:
+    - tkinter
+    - qt
+
+title: Graphic User Interfaces

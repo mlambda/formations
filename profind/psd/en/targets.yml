@@ -31,6 +31,24 @@
     - path: en/python/databases
       flavor: full
 
+- name: gui
+  title: Introduction to GUI
+  sections:
+    - path: en/python/gui
+      flavor: full
+
+- name: web
+  title: Web Development
+  sections:
+    - path: en/python/web
+      flavor: full
+
+- name: c-interoperability
+  title: Interoperability with C
+  sections:
+    - path: en/python/c-interoperability
+      flavor: full
+
 - name: production
   title: Production tools
   sections:
