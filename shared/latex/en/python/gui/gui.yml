@@ -4,6 +4,10 @@ default_titles:
 flavors:
   full:
     - tkinter
+    - /en/questions
+    - demo-tkinter
     - qt
+    - /en/questions
+    - demo-qt
 
 title: Graphic User Interfaces

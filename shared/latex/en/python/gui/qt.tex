@@ -1,0 +1,80 @@
+\begin{frame}{Qt}
+    \vfill
+    \alert{Qt} is an cross-platform open-sourced library for GUI.
+    \vfill
+    It is developed in C++, but the Qt Company proposes langage bindings for Python, Javascript, C\# and Rust.
+    \vfill
+    \V{"img/logos/qt-black" | image("tw", 0.3, "en")}
+    \vfill
+\end{frame}
+
+\begin{frame}{Structure}
+    In most cases,  the objects used in the original C++ framework are the same in Python.
+\end{frame}
+\begin{frame}{Minimal application}
+    A Qt interface requires one and only one \texttt{QApplication}. This object is responsible for the main loop.\\\\
+    The minimal application will require to create a window with \texttt{QMainWindow}
+\end{frame}
+
+\begin{frame}{Minimal application : an example}
+    \mintedpycode{python/gui/qt-main}
+\end{frame}
+
+\begin{frame}{QMainWindow}
+    In most cases, \texttt{QMainWindow} is used by subclassing it to create an new class which will be your application's main window.
+    \mintedpycode{python/gui/qt-main-bis}
+\end{frame}
+
+\begin{frame}{Widgets}
+    Qt offers the usual widgets to build any user interface:
+    \begin{itemize}
+        \item \texttt{QLabel}
+        \item \texttt{QPushButton}
+        \item \texttt{QRadioButton}
+        \item \texttt{QCheckBox}
+        \item etc.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Widgets}
+    Each widget offers numerous methods to control their appearance, behaviours or binding
+    
+    \mintedpycode{python/gui/qt-checkbox}
+    
+    Most settings for widget are specified using already defined keys like~\texttt{Qt.Checked}.
+\end{frame}
+
+\begin{frame}{Signals \& Events}
+    Action on the interface are mostly captured using methods provided by the widgets themselves. For instance:
+    \begin{itemize}
+        \item \texttt{QButton} has an event attribut \texttt{clicked}
+        \item \texttt{QLabel} has an event attribut \texttt{textChanged}
+    \end{itemize} 
+    
+    These signals implement a \texttt{connect} method to bind them to a specific action that you implemented.
+    
+\end{frame}
+
+\begin{frame}{Signals \& Events: an example}
+
+    \mintedpycode{python/gui/qt-event}
+    
+\end{frame}
+
+\begin{frame}{Layout}
+    Qt proposes different layouts to control widgets' position.
+    \begin{itemize}
+        \item \texttt{QHBoxLayout} Each element is added horizontally from left to right
+        \item \texttt{QVBoxLayout} Each element is element is added vertically from top to bottom
+        \item \texttt{QGridLayout} Each element is added in a grid by specifying row and column numbers
+        \item \texttt{QStackLayout} Each element is stack on the z axis. Can be used to implement an interface with tabs
+    \end{itemize}
+    \centering\alert{\textbf{Layouts can be nested}}
+    
+\end{frame}
+
+\begin{frame}{Layout: an example}
+    
+    \mintedpycode{python/gui/qt-layout}   
+    
+\end{frame}
