@@ -1,6 +1,9 @@
-
+default_titles:
+  flask: Flask
 flavors:
   full:
     - flask
+    - /en/questions
+    - demo-flask
 
 title: Web Development with Python

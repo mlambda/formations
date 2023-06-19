@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+  {% block base %}
+    <section id="login">
+      {% block identification %}
+      <h2>Log in</h2>
+      <form method="POST">
+        <label for='username'>User Name :</label>
+        <input type='text' name='username' id='username' required>
+        <label for='password'>Password :</label>
+        <input type='text' name='password' id='password' required>
+        <input type='submit' value='Ok'>
+      </form>
+      {% endblock %}
+    </section>
+{% endblock %}
+

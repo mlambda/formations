@@ -1,0 +1,96 @@
+\begin{frame}{Introduction}
+    \alert{\textbf{Flask}} is a micro web framework written in Python.\\
+    
+    \V{"img/logos/flask" | image("tw", 0.5, "en")}
+
+    It has been used by \textit{Pinterest} and \textit{Linkedin}.
+
+\end{frame}
+
+\begin{frame}{Hello world app}
+
+    \mintedpycode{python/web/flask-hello-world}
+    \begin{itemize}
+        \item \texttt{Flask(\_\_name\_\_)} creates the main application that will manages your website or API.
+        \item \texttt{\@app.route("/")} defines an endpoint. The "/" indicates the root on your server.
+    \end{itemize}
+    
+
+\end{frame}
+
+\begin{frame}{Run your Flask application}
+When your code of your application is done, you can launch it with the following command:
+
+\texttt{\$ flask --app hello run}
+\\
+In this code, \texttt{hello} is the name of your python file or your python package.
+\end{frame}
+
+\begin{frame}{Flask project layout}
+    \begin{minipage}{0.49\linewidth}
+        \dirtree{%
+        .1 project-name/.
+        .2 package-name/.
+        .3 \alert{\_\_init\_\_.py}.
+        .3 blog.py.
+        .3 \alert{templates/}.
+        .4 index.html.
+        .3 \alert{static/}.
+        .4 style.css.
+        .4 script.js.
+        .2 tests/.
+        .3 contest.py.
+        .2 .venv/.
+        .2 pyproject.toml.
+        .2 MANIFEST.in.
+        }
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        The classic layout should follow a specific structure, in particular, in the package folder.
+        \begin{itemize}
+            \item \alert{Python files} in the package contains endpoints and logic of your app
+            \item \alert{\texttt{templates/}} is a folder containing html files which are used to generated custom pages using jinja2 templates
+            \item \alert{\texttt{static/}} folder contains files that will not be modified
+        \end{itemize}
+    \end{minipage}
+
+\end{frame}
+
+\begin{frame}{Template and static files access and rendering}
+    \begin{itemize}
+        \item \texttt{url\_for} method gives access to any file stored in the static folder as an URL. See p.\ref{flask:jinja-template}
+        \item \texttt{render\_template} method generates an html file from a jinja template. Data can be provided to customize the HTML. See p.\ref{flask:endpoint}
+    \end{itemize}
+    
+
+\end{frame}
+
+\begin{frame}{Jinja Template}\label{flask:jinja-template}
+
+    \mintedcustomcode{html/flask/flask-base}{html}
+    
+\end{frame}
+
+\begin{frame}{Jinja Template}
+    A jinja template can be extended 
+    \mintedcustomcode{html/flask/flask-login}{html}
+\end{frame}
+
+
+\begin{frame}{Endpoint}\label{flask:endpoint}
+
+    \mintedpycode{python/web/flask-endpoint}
+
+\end{frame}
+
+\begin{frame}{Requests}
+    Flask provided an object \texttt{Request} which captures and parse any kind of request passed to the server (\texttt{GET}, \texttt{POST}, etc.)
+
+    \mintedpycode{python/web/flask-request}
+
+    It provides different methods to access data in the request depending of the data type (\texttt{file}, \texttt{form}, \texttt{args}, etc.)
+
+    For more details, see \bluelink{https://flask.palletsprojects.com/en/2.3.x/api/\#flask.Request}{\texttt{Request}} documentation 
+    
+
+\end{frame}

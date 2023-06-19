@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FlaskMusic</title>
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>FlaskMusic</h1>
+        </header>
+        {% block base %}
+        {% endblock %}
+        <footer>
+            <p>Copyright SuchAnAmazingWebSite</p>
+        </footer>
+    </div>
+</body>
+</html>
