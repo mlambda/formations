@@ -1,0 +1,28 @@
+\begin{frame}{What is cython?}
+
+    Cython approaches interoperability differently than ctypes.
+
+    While \alert{ctypes} allows a Python program to access C functions, \alert{cython} is a translator Python to C.
+
+    Cython will allow to generated C code and compile it without writting C code. In theory, it requires only knowledge on Python.
+
+\end{frame}
+
+\begin{frame}{Types}
+    Defining a library with cython requires to specify variable types.
+    \mintedpycode{python/c-interoperability/short-cython}
+    
+    Note: it is possible to type functions too.
+    
+\end{frame}
+
+\begin{frame}{Building}
+    Compiling code requires to be written in a \texttt{.pyx} file, then it is necessary to write a setup script :
+    \mintedpycode{python/c-interoperability/setup-cython}\\
+
+    Assuming the script is written in the file \texttt{setup.py}, following command will transform the python code and compile the resulting C code:
+
+    \texttt{python setup.py build\_ext --inplace}
+    
+
+\end{frame}

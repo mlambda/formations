@@ -1,7 +1,12 @@
-
+default_titles:
+  ctypes: \texttt{ctypes} module
+  cython: \texttt{cython} module
 flavors:
   full:
     - ctypes
     - cython
+    - /en/questions
+    - c-interoperability-demo
+    
 
 title: Interoperability with C

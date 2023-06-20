@@ -1,0 +1,26 @@
+\begin{frame}{What is \texttt{ctypes}?}
+    \bluelink{https://docs.python.org/3/library/ctypes.html}{\texttt{ctypes}} is a standard library providing binding to foreign libraries with compatible data types.
+    
+    It allows calling functions from dynamic or shared libraries.\\
+
+    Obviously, it requires knowledge in both C and Python.
+
+\end{frame}
+
+\begin{frame}{Loading libraries}
+    Loading libraries depends of the OS, so \texttt{ctypes} provides differents tools
+    \begin{itemize}
+        \item \texttt{CDLL} if it uses the standard calling convention
+        \item \texttt{WinDLL} is limited to Windows. Functions in such libraries use the \texttt{stdcall} convention and return \texttt{int} by default.
+        \item Other tools exists for specific cases (\texttt{OleDLL}, \texttt{PyDLL})
+        \item \texttt{numpy} library proposes a similar sub library which is convenient to use it togehter with numpy structures
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Binding types}
+
+    After loading a library, each function provided should be linked with its input types and output type.
+
+    \mintedpycode{python/c-interoperability/short-ctypes}
+\end{frame}
