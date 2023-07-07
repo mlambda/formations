@@ -12,4 +12,11 @@ flavors:
     - /questions
     - tp
 
+  mlb:
+    - intro
+    - spark
+    - /questions
+    - demo
+    - tp
+
 title: Traitement de données volumineuses
