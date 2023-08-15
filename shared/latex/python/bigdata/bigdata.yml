@@ -19,4 +19,9 @@ flavors:
     - demo
     - tp
 
+  pnd:
+    - intro
+    - formats
+
+
 title: Traitement de données volumineuses

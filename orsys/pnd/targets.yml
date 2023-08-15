@@ -1,0 +1,16 @@
+- name: j1
+  title: Pandas Avancé
+  sections:
+    - path: about
+      flavor: orsys-2j
+
+    - path: python/bigdata
+      flavor: pnd
+
+    - path: python/data-science
+      flavor: iyt
+
+    - path: python/dataviz
+      flavor: full
+
+    - contact
