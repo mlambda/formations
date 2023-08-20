@@ -1,0 +1,34 @@
+default_titles:
+  pandas: \texttt{pandas}
+  groupby: \texttt{groupbys}
+  pivot-table: \texttt{Tables pivot et croisées}
+  join: \texttt{Jointure de tables}
+  optimization: \texttt{Optimisation}
+
+flavors:
+  full:
+    - pandas
+    - tp-pandas
+    - groupby
+    - tp-groupby
+    - join
+    - tp-join
+    - pivot-table
+    - tp-pivot
+    - optimization
+    - tp-optimization
+  pnd:
+    - pandas
+    - groupby
+    - tp-groupby
+    - join
+    - tp-join
+    - pivot-table
+    - tp-pivot
+    - optimization
+    - tp-optimization
+  light:
+    - pandas
+    - /questions
+    - tp-pandas
+title: pandas

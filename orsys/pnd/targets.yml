@@ -8,9 +8,10 @@
       flavor: pnd
 
     - path: python/data-science
-      flavor: iyt
+      title: Calcul scientifique
+      flavor: pnd
 
-    - path: python/dataviz
-      flavor: full
+    - path: python/data-science/pd
+      flavor: pnd
 
     - contact
