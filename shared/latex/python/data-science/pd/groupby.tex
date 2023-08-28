@@ -1,10 +1,10 @@
 \begin{frame}{indiçage simple}
-  Il est possible de travailler sur des sous-ensembles des données complètes avec la fonction \texttt{df.groupby}~:
+  Il est possible de regrouper les données en sous-ensembles suivant une variable catégorielle avec \texttt{df.groupby}~:
   \mintedcustomcode{python/data-science/pandas/groupby}{pycon}
 \end{frame}
 
 \begin{frame}{Personnalisation}
-  Perso
+  no splitting occurs until it’s needed. Creating the GroupBy object only verifies that you’ve passed a valid mapping.
 \end{frame}
 
 \begin{frame}{Indices Multiples}
@@ -12,9 +12,18 @@
 \end{frame}
 
 \begin{frame}{apply et transform}
-  apply transform
+ 
+  Input:
+  apply implicitly passes all the columns for each group as a DataFrame to the custom function.
+  while transform passes each column for each group individually as a Series to the custom function.
+Output:
+  The custom function passed to apply can return a scalar, or a Series or DataFrame (or numpy array or even list).
+  The custom function passed to transform must return a sequence (a one dimensional Series, array or list) the same length as the group.
+
+  transform works on just one Series at a time and apply works on the entire DataFrame at once.
+
 \end{frame}
 
 \begin{frame}{fonctions anonymes}
-  fonction anonymes
+  lambda function
 \end{frame}
