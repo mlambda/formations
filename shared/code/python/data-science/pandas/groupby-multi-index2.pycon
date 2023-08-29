@@ -1,0 +1,12 @@
+>>> df2 = df[["age","height"]].set_index(
+...       pd.MultiIndex.from_frame(df[["sex","city"]])
+...     );df2
+ 	        	age 	height
+sex 	city 		
+M   	Paris 	11  	1.50
+F   	Paris 	18  	1.70
+M   	Nantes 	6   	1.23
+F   	Paris 	87  	1.83
+M   	Lille 	35  	1.68
+F   	Lille 	15  	1.55
+

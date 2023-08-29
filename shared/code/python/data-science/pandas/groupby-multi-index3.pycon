@@ -1,0 +1,11 @@
+>>> df2.groupby(level="sex").mean()
+ 	age 	    height
+sex 		
+F 	40.000000 	1.693333
+M 	17.333333 	1.470000
+>>> df2.groupby(level="city").mean().style.format(precision=2)
+  	    age 	height
+city 	  	 
+Lille 	25.00 	1.61
+Nantes 	6.00 	1.23
+Paris 	38.67 	1.68

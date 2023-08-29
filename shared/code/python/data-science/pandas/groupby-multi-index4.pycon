@@ -1,0 +1,8 @@
+>>> df2.groupby(level=["sex", "city"]).mean()
+             age     height
+sex  city 		
+F    Lille   15.0    1.550
+     Paris   52.5    1.765
+M    Lille   35.0    1.680
+     Nantes   6.0    1.230
+     Paris   11.0    1.500

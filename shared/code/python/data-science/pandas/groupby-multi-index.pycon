@@ -1,0 +1,14 @@
+>>> df = pd.DataFrame({
+...         "age": [11, 18, 6, 87, 35, 15], 
+...         "sex": ["M", "F", "M", "F", "M", "F"], 
+...         "city": ["Paris", "Paris", "Nantes", "Paris", "Lille", "Lille"], 
+...         "height": [1.50, 1.70, 1.23, 1.83, 1.68, 1.55]});df
+ 	age 	sex 	city 	height
+0 	11 	    M    	Paris 	1.50
+1 	18 	    F    	Paris 	1.70
+2 	6 	    M    	Nantes 	1.23
+3 	87 	    F    	Paris 	1.83
+4 	35 	    M    	Lille 	1.68
+5 	15 	    F    	Lille 	1.55
+
+

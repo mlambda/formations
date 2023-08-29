@@ -1,0 +1,12 @@
+>>> index = pd.MultiIndex.from_tuples(tuples, names=["first", "second"])
+>>> pd.Series(np.random.randn(8), index=index)
+first  second
+bar    one       0.469112
+       two      -0.282863
+baz    one      -1.509059
+       two      -1.135632
+foo    one       1.212112
+       two      -0.173215
+qux    one       0.119209
+       two      -1.044236
+dtype: float64

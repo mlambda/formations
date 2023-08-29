@@ -1,0 +1,14 @@
+>>> arrays = [
+...    ["bar", "bar", "baz", "baz", "foo", "foo", "qux", "qux"],
+...    ["one", "two", "one", "two", "one", "two", "one", "two"],
+...]
+>>> pd.Series(np.random.randn(8), index=arrays)
+bar  one   -0.861849
+     two   -2.104569
+baz  one   -0.494929
+     two    1.071804
+foo  one    0.721555
+     two   -0.706771
+qux  one   -1.039575
+     two    0.271860
+dtype: float64

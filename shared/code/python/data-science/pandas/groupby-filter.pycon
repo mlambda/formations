@@ -1,0 +1,8 @@
+>>> df.groupby(["city"]).filter(lambda x : x.height.sum() >= 3)
+   age  sex  city   height
+0  11   M    Paris  1.50
+1  18   F    Paris  1.70
+3  87   F    Paris  1.83
+4  35   M    Lille  1.68
+5  15   F    Lille  1.55
+

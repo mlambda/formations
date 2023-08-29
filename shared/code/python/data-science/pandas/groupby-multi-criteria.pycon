@@ -1,0 +1,18 @@
+>>> df = pd.DataFrame({"age": [11, 18, 6, 87, 35, 15], 
+...                    "sex": ["M", "F", "M", "F", "M", "F"], 
+...                    "height": [1.50, 1.70, 1.23, 1.83, 1.68, 1.55]});df
+ 	age 	sex 	height
+0 	11 	    M    	1.50
+1 	18 	    F    	1.70
+2 	6 	    M    	1.23
+3 	87 	    F    	1.83
+4 	35 	    M    	1.68
+5 	15 	    F    	1.55
+>>> df.groupby(["sex",df.age >= 18]).height.mean()
+sex  age  
+F    False    1.550
+     True     1.765
+M    False    1.365
+     True     1.680
+Name: height, dtype: float64
+

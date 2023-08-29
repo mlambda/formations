@@ -1,0 +1,7 @@
+>>> df2.groupby(level="city").agg(["min","mean","max"])
+                     age              height
+        min   mean   max  min   mean  max
+city                    
+Lille   15    25.00  35   1.55  1.61  1.68
+Nantes  6     6.00    6   1.23  1.23  1.23
+Paris   11    38.67  87   1.50  1.68  1.83

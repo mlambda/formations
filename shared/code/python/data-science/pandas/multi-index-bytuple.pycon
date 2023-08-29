@@ -1,0 +1,9 @@
+>>> pd.Series(np.random.randn(8), index=tuples)
+(bar, one)   -1.236269
+(bar, two)    0.896171
+(baz, one)   -0.487602
+(baz, two)   -0.082240
+(foo, one)   -2.182937
+(foo, two)    0.380396
+(qux, one)    0.084844
+(qux, two)    0.432390

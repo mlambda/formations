@@ -1,29 +1,107 @@
-\begin{frame}{indiçage simple}
-  Il est possible de regrouper les données en sous-ensembles suivant une variable catégorielle avec \texttt{df.groupby}~:
+\begin{frame}{Split-Apply-Combine}
+  \begin{description}
+    \item[Séparer]   en groupes suivant un ou des critères
+    \item[Appliquer] une fonction à chaque groupe
+    \item[Combiner]  les résultats dans un \texttt{pd.Series} ou \texttt{pd.DataFrame}
+  \end{description}
+\end{frame}
+
+\begin{frame}{Design}
+  La création du groupby vérifie uniquement la validité du mapping. \\
+  Le traitement de l'opération n'a lieu que lorsque c'est nécessaire. \\
+  \mintedcustomcode{python/data-science/pandas/groupby-type}{pycon}
+\end{frame}
+
+\begin{frame}{Indiçage simple}
   \mintedcustomcode{python/data-science/pandas/groupby}{pycon}
 \end{frame}
 
-\begin{frame}{Personnalisation}
-  no splitting occurs until it’s needed. Creating the GroupBy object only verifies that you’ve passed a valid mapping.
+\begin{frame}{Indiçage simple avec une fonction}
+  Utilisation d'une fonction prenant un \texttt{index} du \texttt{DataFrame} en entrée et qui renvoie un booléen~:
+  \mintedcustomcode{python/data-science/pandas/groupby-function}{pycon}
 \end{frame}
 
-\begin{frame}{Indices Multiples}
-  Multi
+\begin{frame}{Indiçage simple sur plusieurs critères}
+  \mintedcustomcode{python/data-science/pandas/groupby-multi-criteria}{pycon}
+\end{frame}
+
+\begin{frame}{Indiçage Hiérarchique}
+  \mintedcustomcode{python/data-science/pandas/groupby-multi-index}{pycon}
+\end{frame}
+
+\begin{frame}{Indiçage Hiérarchique}
+  \mintedcustomcode{python/data-science/pandas/groupby-multi-index2}{pycon}
+\end{frame}
+
+\begin{frame}{Indiçage Hiérarchique}
+  \mintedcustomcode{python/data-science/pandas/groupby-multi-index3}{pycon}
+\end{frame}
+
+\begin{frame}{Indiçage Hiérarchique}
+  \mintedcustomcode{python/data-science/pandas/groupby-multi-index4}{pycon}
+\end{frame}
+
+\begin{frame}{Split-\texttt{Apply}-Combine}
+  \begin{description}
+    \item[Séparer]   en groupes suivant un ou des critères
+    \item[\texttt{Appliquer}] une fonction à chaque groupe
+    \item[Combiner]  les résultats dans un \texttt{pd.Series} ou \texttt{pd.DataFrame}
+  \end{description}
+\end{frame}
+
+\begin{frame}{Split-\texttt{Apply}-Combine}
+  On considère 3 types de fonctions pour l'étape \texttt{Apply}
+  \begin{description}[r,labelwidth=\widthof{\bfseries Transformation :}]
+    \item[Agrégation :]   somme, moyenne, décomptes, ... 
+    \item[Transformation :] valeurs manquantes, normalisation, ... 
+    \item[Filtrage :]  groupes trop petits ou avec une mauvaise moyenne ... ()
+  \end{description}
+\end{frame}
+
+\begin{frame}{Aggrégation}
+  \mintedcustomcode{python/data-science/pandas/groupby-aggregate}{pycon}
+\end{frame}
+
+\begin{frame}{Aggrégation}
+  \mintedcustomcode{python/data-science/pandas/groupby-aggregate2}{pycon}
+\end{frame}
+
+\begin{frame}{Aggrégation}
+  \bluelink{https://pandas.pydata.org/docs/user_guide/groupby.html\#built-in-aggregation-methods}{built-in-aggregation-methods}
+\end{frame}
+
+\begin{frame}{Transformation}
+  Une transformation est un GroupBy dont le résultat à le même index que celui sur lequel on effectue l'opération GroupBy. \\
+  Généralement utilisé pour ajouter une nouvelle colonne.
+  \mintedcustomcode{python/data-science/pandas/groupby-transform}{pycon}
+\end{frame}
+
+\begin{frame}{Transformation}
+  La fonction transform() est l'équivalent de aggregate() et peut utiliser   \bluelink{https://pandas.pydata.org/docs/user_guide/groupby.html\#built-in-transformation-methods}{les methodes de transformation fournies par l'API}. \\
+  On peut aussi utiliser les fonction d'aggrégation de l'API, auquel cas la fonction sera broadcastée à travers le groupe.
+  \mintedcustomcode{python/data-science/pandas/groupby-transform2}{pycon}
+\end{frame}
+
+\begin{frame}{Apply}
+  Le \bluelink{https://pandas.pydata.org/docs/user_guide/groupby.html\#flexible-apply}{flexible-apply} :
+  \mintedcustomcode{python/data-science/pandas/groupby-apply}{pycon}
 \end{frame}
 
 \begin{frame}{apply et transform}
- 
-  Input:
-  apply implicitly passes all the columns for each group as a DataFrame to the custom function.
-  while transform passes each column for each group individually as a Series to the custom function.
-Output:
-  The custom function passed to apply can return a scalar, or a Series or DataFrame (or numpy array or even list).
-  The custom function passed to transform must return a sequence (a one dimensional Series, array or list) the same length as the group.
-
-  transform works on just one Series at a time and apply works on the entire DataFrame at once.
-
+  La fonction en argument :
+  \begin{description}
+    \item[input]  \begin{itemize}
+                    \item apply() passe toutes les colonnes de chaque groupes dans un DataFrame.
+                    \item transform() passe chaque colonne de chaque groupe dans une Serie.
+                  \end{itemize}
+    \item[output]  \begin{itemize}
+                    \item peut renvoyer un scalaire, Series, DataFrame, numpy array ou même une liste python.
+                    \item doit renvoyer une Serie (ou au moins une Array 1D) de la même taille que le groupe.
+                  \end{itemize}
+  \end{description}
 \end{frame}
 
-\begin{frame}{fonctions anonymes}
-  lambda function
+\begin{frame}{Filtrage}
+  \mintedcustomcode{python/data-science/pandas/groupby-filter}{pycon}
+  \bluelink{https://pandas.pydata.org/docs/user_guide/groupby.html\#built-in-filtrations}{built-in-filtrations}
 \end{frame}

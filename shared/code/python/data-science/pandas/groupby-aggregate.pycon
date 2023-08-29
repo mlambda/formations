@@ -1,0 +1,10 @@
+>>> df2.groupby(level="sex").min()
+ 	age     height
+sex 		
+F 	15      1.55
+M 	6       1.23
+>>> df2.groupby(level="sex").agg("min")
+ 	age     height
+sex 	  	 
+F 	15      1.55
+M 	6       1.23

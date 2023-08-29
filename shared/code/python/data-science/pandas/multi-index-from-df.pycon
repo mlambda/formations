@@ -1,0 +1,10 @@
+>>> df = pd.DataFrame(
+    [["bar", "one"], ["bar", "two"], ["foo", "one"], ["foo", "two"]],
+    columns=["first", "second"],
+)
+>>> index = pd.MultiIndex.from_frame(df);index
+MultiIndex([('bar', 'one'),
+            ('bar', 'two'),
+            ('foo', 'one'),
+            ('foo', 'two')],
+           names=['first', 'second'])

@@ -4,6 +4,7 @@ default_titles:
   pivot-table: \texttt{Tables pivot et croisées}
   join: \texttt{Jointure de tables}
   optimization: \texttt{Optimisation}
+  multi-index: \texttt{Indicage Hiérarchique/Multiple}
 
 flavors:
   full:
@@ -19,6 +20,7 @@ flavors:
     - tp-optimization
   pnd:
     - pandas
+    - multi-index
     - groupby
     - tp-groupby
     - join

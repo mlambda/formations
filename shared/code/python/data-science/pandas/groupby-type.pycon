@@ -1,0 +1,2 @@
+>>> type(df.groupby(df.age >= 18))
+pandas.core.groupby.generic.DataFrameGroupBy

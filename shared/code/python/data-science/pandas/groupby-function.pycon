@@ -1,0 +1,17 @@
+>>> def mytest(x):
+...     return df.iloc[x].age >=18 and df.iloc[x].height <= 1.70
+>>> for name,group in df.groupby(mytest):
+...     print(name)
+...     print(group)
+...     print("-"*20)
+False
+   age  height
+0   11    1.50
+1   57    1.78
+3    6    1.23
+4   87    1.83
+--------------------
+True
+   age  height
+2   18     1.7
+--------------------
