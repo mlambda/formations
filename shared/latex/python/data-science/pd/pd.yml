@@ -23,10 +23,10 @@ flavors:
     - multi-index
     - groupby
     - tp-groupby
-    - join
-    - tp-join
     - pivot-table
     - tp-pivot
+    - join
+    - tp-join
     - optimization
     - tp-optimization
   light:

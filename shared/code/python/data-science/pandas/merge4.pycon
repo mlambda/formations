@@ -1,0 +1,18 @@
+>>> df1.merge(df2, how="cross")
+     name  value_x    nom  value_y
+0   alain       10  alain       50
+1   alain       10   hugo       60
+2   alain       10  marie       50
+3   alain       10  alain       80
+4    hugo       20  alain       50
+5    hugo       20   hugo       60
+6    hugo       20  marie       50
+7    hugo       20  alain       80
+8   marie       30  alain       50
+9   marie       30   hugo       60
+10  marie       30  marie       50
+11  marie       30  alain       80
+12  alain       50  alain       50
+13  alain       50   hugo       60
+14  alain       50  marie       50
+15  alain       50  alain       80

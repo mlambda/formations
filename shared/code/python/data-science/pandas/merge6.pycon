@@ -1,0 +1,6 @@
+>>> print(df1.merge(df2, left_index=True, right_index=True))
+    name  value_x    nom  value_y
+0  alain       10  alain       50
+1   hugo       20   hugo       60
+2  marie       30  marie       50
+3  alain       50  alain       80

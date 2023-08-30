@@ -1,0 +1,6 @@
+>>> df4 = pd.DataFrame([['bird', 'polly'], ['monkey', 'george']],
+...                    columns=['animal', 'name'])
+>>> pd.concat([df1, df4], axis=1)
+  letter  number  animal    name
+0      a       1    bird   polly
+1      b       2  monkey  george

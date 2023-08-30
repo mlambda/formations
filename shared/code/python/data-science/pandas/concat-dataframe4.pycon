@@ -1,0 +1,14 @@
+>>> df5 = pd.DataFrame([1], index=['a'])
+>>> df5
+   0
+a  1
+>>> df6 = pd.DataFrame([2], index=['a'])
+>>> df6
+   0
+a  2
+>>> pd.concat([df5, df6], verify_integrity=True)
+Traceback (most recent call last):
+    ...
+ValueError: Indexes have overlapping values: ['a']
+
+

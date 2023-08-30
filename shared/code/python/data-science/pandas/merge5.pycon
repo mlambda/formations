@@ -1,0 +1,21 @@
+>>> df1.merge(df2, on=['value'])
+    name  value    nom
+0  alain     50  alain
+1  alain     50  marie
+>>> df1.merge(df2, left_on=["name"], right_on=["nom"])
+    name  value_x    nom  value_y
+0  alain       10  alain       50
+1  alain       10  alain       80
+2  alain       50  alain       50
+3  alain       50  alain       80
+4   hugo       20   hugo       60
+5  marie       30  marie       50
+>>> df1.merge(df2, left_on=["name"], right_on=["nom"],
+...    suffixes=['_en','_fr'])
+    name  value_en    nom  value_fr
+0  alain        10  alain        50
+1  alain        10  alain        80
+2  alain        50  alain        50
+3  alain        50  alain        80
+4   hugo        20   hugo        60
+5  marie        30  marie        50

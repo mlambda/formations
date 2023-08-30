@@ -1,0 +1,14 @@
+>>> s1 = pd.Series(['a', 'b'])
+>>> s2 = pd.Series(['c', 'd'])
+>>> pd.concat([s1, s2])
+0    a
+1    b
+0    c
+1    d
+
+>>> pd.concat([s1, s2], ignore_index=True)
+0    a
+1    b
+2    c
+3    d
+

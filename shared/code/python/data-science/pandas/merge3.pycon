@@ -1,0 +1,13 @@
+>>> df1.merge(df2, how="left")
+    name  value    nom
+0  alain     10    NaN
+1   hugo     20    NaN
+2  marie     30    NaN
+3  alain     50  alain
+4  alain     50  marie
+>>> df1.merge(df2, how="right")
+    name  value    nom
+0  alain     50  alain
+1    NaN     60   hugo
+2  alain     50  marie
+3    NaN     80  alain

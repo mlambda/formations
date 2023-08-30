@@ -17,7 +17,7 @@
 \end{frame}
 
 \begin{frame}{Indiçage simple avec une fonction}
-  Utilisation d'une fonction prenant un \texttt{index} du \texttt{DataFrame} en entrée et qui renvoie un booléen~:
+  Utilisation d'une fonction prenant un \texttt{index} du \texttt{pd.DataFrame} en entrée et qui renvoie un booléen~:
   \mintedcustomcode{python/data-science/pandas/groupby-function}{pycon}
 \end{frame}
 
@@ -53,7 +53,7 @@
 
 \begin{frame}{Split-\texttt{Apply}-Combine}
   On considère 3 types de fonctions pour l'étape \texttt{Apply}
-  \begin{description}[r,labelwidth=\widthof{\bfseries Transformation :}]
+  \begin{description}[r,labelwidth=\widthof{   Transformation :}]
     \item[Agrégation :]   somme, moyenne, décomptes, ... 
     \item[Transformation :] valeurs manquantes, normalisation, ... 
     \item[Filtrage :]  groupes trop petits ou avec une mauvaise moyenne ... 
@@ -103,12 +103,12 @@
   La fonction en argument :
   \begin{description}
     \item[input]  \begin{itemize}
-                    \item apply() passe toutes les colonnes de chaque groupes dans un DataFrame.
-                    \item transform() passe chaque colonne de chaque groupe dans une Serie.
+                    \item apply() passe toutes les colonnes de chaque groupes dans un \texttt{pd.DataFrame}.
+                    \item transform() passe chaque colonne de chaque groupe dans une \texttt{pd.Series}.
                   \end{itemize}
     \item[output]  \begin{itemize}
-                    \item apply() peut renvoyer un scalaire, Series, DataFrame, numpy array ou même une liste python.
-                    \item transform() doit renvoyer une Serie (ou au moins une Array 1D) de la même taille que le groupe.
+                    \item apply() peut renvoyer un scalaire, \texttt{pd.Series}, \texttt{pd.DataFrame}, numpy array ou même une liste python.
+                    \item transform() doit renvoyer une \texttt{pd.Series} (ou au moins une Array 1D) de la même taille que le groupe.
                   \end{itemize}
   \end{description}
 \end{frame}
