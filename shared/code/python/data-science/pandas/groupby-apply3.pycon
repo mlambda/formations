@@ -1,0 +1,10 @@
+>>> def myfunct(x): 
+...   return x - x.mean() * x["height"].sum() / x["age"].max()
+>>> groups[["height","age"]].apply(myfunct).style.format(precision=2)
+              height  age
+city   sex         
+Lille  M   3  1.62    84.74
+           4  1.49    32.74
+Paris  F   0  1.22    8.42
+           1  1.42    15.42
+       M   2  1.73    32.17

@@ -30,10 +30,12 @@
 \end{frame}
 
 \begin{frame}{Indiçage Hiérarchique}
+  Utilisation des deux variables catégolrielles comme index de nos échantillons.\\
   \mintedcustomcode{python/data-science/pandas/groupby-multi-index2}{pycon}
 \end{frame}
 
 \begin{frame}{Indiçage Hiérarchique}
+  Utilisation du mot clé \texttt{level} à la place de \texttt{by} (mot clé correspondant au premier argument).\\
   \mintedcustomcode{python/data-science/pandas/groupby-multi-index3}{pycon}
 \end{frame}
 
@@ -41,10 +43,10 @@
   \mintedcustomcode{python/data-science/pandas/groupby-multi-index4}{pycon}
 \end{frame}
 
-\begin{frame}{Split-\texttt{Apply}-Combine}
+\begin{frame}{Split-Apply-Combine}
   \begin{description}
     \item[Séparer]   en groupes suivant un ou des critères
-    \item[\texttt{Appliquer}] une fonction à chaque groupe
+    \item[\underline{Appliquer}] une fonction à chaque groupe
     \item[Combiner]  les résultats dans un \texttt{pd.Series} ou \texttt{pd.DataFrame}
   \end{description}
 \end{frame}
@@ -54,7 +56,7 @@
   \begin{description}[r,labelwidth=\widthof{\bfseries Transformation :}]
     \item[Agrégation :]   somme, moyenne, décomptes, ... 
     \item[Transformation :] valeurs manquantes, normalisation, ... 
-    \item[Filtrage :]  groupes trop petits ou avec une mauvaise moyenne ... ()
+    \item[Filtrage :]  groupes trop petits ou avec une mauvaise moyenne ... 
   \end{description}
 \end{frame}
 
@@ -78,16 +80,26 @@
 
 \begin{frame}{Transformation}
   La fonction transform() est l'équivalent de aggregate() et peut utiliser   \bluelink{https://pandas.pydata.org/docs/user_guide/groupby.html\#built-in-transformation-methods}{les methodes de transformation fournies par l'API}. \\
-  On peut aussi utiliser les fonction d'aggrégation de l'API, auquel cas la fonction sera broadcastée à travers le groupe.
+  On peut aussi utiliser les fonctions d'aggrégation de l'API, auquel cas la fonction sera broadcastée à travers le groupe.
   \mintedcustomcode{python/data-science/pandas/groupby-transform2}{pycon}
 \end{frame}
 
 \begin{frame}{Apply}
-  Le \bluelink{https://pandas.pydata.org/docs/user_guide/groupby.html\#flexible-apply}{flexible-apply} :
   \mintedcustomcode{python/data-science/pandas/groupby-apply}{pycon}
+  Moins efficace que groups.agg("mean") !
 \end{frame}
 
-\begin{frame}{apply et transform}
+\begin{frame}{Apply}
+  \mintedcustomcode{python/data-science/pandas/groupby-apply2}{pycon}
+  Plus rapide avec transform() !
+\end{frame}
+
+\begin{frame}{Apply}
+  On peut souvent optimiser ce calcul en passant par les built-in-methods mais c'est souvent plus compliqué à formuler \\
+  \mintedcustomcode{python/data-science/pandas/groupby-apply3}{pycon}
+\end{frame}
+
+\begin{frame}{apply() et transform()}
   La fonction en argument :
   \begin{description}
     \item[input]  \begin{itemize}
@@ -95,8 +107,8 @@
                     \item transform() passe chaque colonne de chaque groupe dans une Serie.
                   \end{itemize}
     \item[output]  \begin{itemize}
-                    \item peut renvoyer un scalaire, Series, DataFrame, numpy array ou même une liste python.
-                    \item doit renvoyer une Serie (ou au moins une Array 1D) de la même taille que le groupe.
+                    \item apply() peut renvoyer un scalaire, Series, DataFrame, numpy array ou même une liste python.
+                    \item transform() doit renvoyer une Serie (ou au moins une Array 1D) de la même taille que le groupe.
                   \end{itemize}
   \end{description}
 \end{frame}

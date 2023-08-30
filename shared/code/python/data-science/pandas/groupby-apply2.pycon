@@ -1,0 +1,10 @@
+>>> def myfunct(x):
+...  return x - x.mean()
+>>> groups[["height","age"]].apply(myfunct)
+             height  age
+city   sex    
+Lille  M  3   0.065   26.0
+          4  -0.065  -26.0
+Paris  F  0  -0.100  -3.5
+          1   0.100   3.5
+       M  2   0.000   0.0

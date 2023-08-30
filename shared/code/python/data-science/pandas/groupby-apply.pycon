@@ -1,1 +1,16 @@
->>> 
+>>> df = pd.DataFrame({"age": [11, 18, 34, 87, 35],
+...                 "sex": ["F", "F", "M", "M", "M"],
+...                 "city": ["Paris", "Paris", "Paris", "Lille", "Lille"],
+...                 "height": [1.50, 1.70, 1.83, 1.68, 1.55]});df
+   age  sex  city   height
+0  11   F    Paris  1.50
+1  18   F    Paris  1.70
+2  34   M    Paris  1.83
+3  87   M    Lille  1.68
+4  35   M    Lille  1.55
+>>> groups[["height","age"]].apply(lambda x : x.mean())
+            height  age
+city   sex     
+Lille  M    1.615   61.0
+Paris  F    1.600   14.5
+       M    1.830   34.0
