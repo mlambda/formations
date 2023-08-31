@@ -1,8 +1,9 @@
->>> df = pd.DataFrame(
-    [["bar", "one"], ["bar", "two"], ["foo", "one"], ["foo", "two"]],
-    columns=["first", "second"],
-)
->>> index = pd.MultiIndex.from_frame(df);index
+>>> df = pd.DataFrame([["bar", "one"],
+...                    ["bar", "two"],
+...                    ["foo", "one"],
+...                    ["foo", "two"]],
+...                   columns=["first", "second"])
+>>> pd.MultiIndex.from_frame(df)
 MultiIndex([('bar', 'one'),
             ('bar', 'two'),
             ('foo', 'one'),

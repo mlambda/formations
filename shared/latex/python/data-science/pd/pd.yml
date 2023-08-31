@@ -1,33 +1,42 @@
 default_titles:
   pandas: \texttt{pandas}
-  groupby: \texttt{groupbys}
-  pivot-table: \texttt{Tables pivot et croisées}
-  join: \texttt{Jointure de tables}
-  optimization: \texttt{Optimisation}
-  multi-index: \texttt{Indicage Hiérarchique/Multiple}
+  groupby: Regroupements (\texttt{groupby})
+  pivot-table: Tables pivots et croisées
+  join: Jointures de tables
+  optimization: Optimisations
+  multi-index: Indiçage hiérarchique / multiple
 
 flavors:
   full:
     - pandas
+    - /questions
     - tp-pandas
     - groupby
+    - /questions
     - tp-groupby
     - join
+    - /questions
     - tp-join
     - pivot-table
+    - /questions
     - tp-pivot
     - optimization
+    - /questions
     - tp-optimization
   pnd:
-    - pandas
+    - pandas: Introduction
     - multi-index
     - groupby
+    - /questions
     - tp-groupby
     - pivot-table
+    - /questions
     - tp-pivot
     - join
+    - /questions
     - tp-join
     - optimization
+    - /questions
     - tp-optimization
   light:
     - pandas

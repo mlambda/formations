@@ -1,7 +1,5 @@
->>> iterables = [
-...    ["bar", "baz", "foo", "qux"], 
-...    ["one", "two"]
-...    ]
+>>> iterables = [["bar", "baz", "foo", "qux"], 
+...              ["one", "two"]]
 >>> pd.MultiIndex.from_product(iterables, names=["first", "second"])
 MultiIndex([('bar', 'one'),
             ('bar', 'two'),

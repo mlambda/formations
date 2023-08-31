@@ -1,0 +1,8 @@
+>>> tuples = [("bar", "one"),
+...           ("bar", "two"),
+...           ("baz", "one"),
+...           ("baz", "two"),
+...           ("foo", "one"),
+...           ("foo", "two"),
+...           ("qux", "one"),
+...           ("qux", "two")]
