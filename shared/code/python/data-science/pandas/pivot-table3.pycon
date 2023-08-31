@@ -1,0 +1,19 @@
+>>> pd.pivot_table(df, index=["sex", "status"], 
+...                 values=["age", "height"], 
+...                 aggfunc={"age": "mean", "height": "mean"})
+             age  height
+sex status              
+F   adult   58.5   167.0
+    child   10.5   138.5
+M   adult   25.0   174.5
+    child    7.0   110.0
+>>> pd.pivot_table(df, index=["sex", "status"], 
+...                 values=["age", "height"], 
+...                 aggfunc={"age": "mean","height": ["min", "max", "mean"]})
+             age height            
+            mean    max   mean  min
+sex status                         
+F   adult   58.5    176  167.0  158
+    child   10.5    159  138.5  118
+M   adult   25.0    184  174.5  165
+    child    7.0    125  110.0   95

@@ -1,0 +1,2 @@
+>>> df.pivot(index='city', columns='status')['height']
+ValueError: Index contains duplicate entries, cannot reshape

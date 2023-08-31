@@ -1,0 +1,12 @@
+>>> df.pivot(index='name', columns='status', values=['height', 'age'])
+       height          age      
+status  adult  child adult child
+name                            
+Alain     NaN  125.0   NaN  11.0
+Alice     NaN  159.0   NaN  16.0
+Céline    NaN  118.0   NaN   5.0
+Jean    165.0    NaN  27.0   NaN
+Marie   184.0    NaN  23.0   NaN
+Nadine  158.0    NaN  72.0   NaN
+Paul      NaN  110.0   NaN   7.0
+Pierre  176.0    NaN  45.0   NaN

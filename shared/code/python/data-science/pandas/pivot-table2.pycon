@@ -1,0 +1,18 @@
+>>> pd.pivot_table(df, 
+...                index=["sex", "city"],columns=["status"],
+...                values="age",  aggfunc="mean")
+status      adult  child
+sex city                
+F   Nantes   72.0   16.0
+    Paris    45.0    5.0
+M   Nantes    NaN    5.0
+    Paris    25.0   11.0
+>>> pd.pivot_table(df,
+...                index=["sex", "city"],columns=["status"], 
+...                values="age",aggfunc="mean", fill_value=0)
+status      adult  child
+sex city                
+F   Nantes     72     16
+    Paris      45      5
+M   Nantes      0      5
+    Paris      25     11

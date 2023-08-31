@@ -1,0 +1,12 @@
+>>> a = np.array(['alain', 'alain', 'alain', 'alain', 'marie', 
+...               'marie','marie', 'marie', 'alain', 'alain', 'alain'])
+>>> b = np.array(['Paris', 'Paris', 'Paris', 'Nantes', 'Paris', 
+...               'Paris','Paris', 'Nantes', 'Nantes', 'Nantes', 'Paris'])
+>>> c = np.array(['child', 'child', 'adult', 'child', 'child', 
+...               'adult','adult', 'child', 'adult', 'adult', 'adult'])
+>>> pd.crosstab(a, [b, c], rownames=['name'], colnames=['city', 'status'])
+city    Nantes        Paris
+status  adult  child  adult  child
+name     
+alain   2      1      2      2
+marie   0      1      2      1

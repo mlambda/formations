@@ -1,0 +1,18 @@
+>>> df = pd.DataFrame({"name": ["Alain", "Marie", "Jean", "Paul", "Léa",
+...                             "Pierre", "Céline", "Alice", "Nadine"],
+...                    "city": ["Paris", "Paris", "Paris", "Nantes", 
+...                             "Nantes","Paris", "Paris", "Nantes", "Nantes"],
+...                    "status": ["child", "adult", "adult", "child","child", 
+...                               "adult", "child", "child","adult"],
+...                    'age': [11, 23, 27, 3, 7, 45, 5, 16, 72],
+...                    'height': [125, 184, 165, 95, 110, 176, 118, 159, 158]})
+     name    city status  age  height
+0   Alain   Paris  child   11     125
+1   Marie   Paris  adult   23     184
+2    Jean   Paris  adult   27     165
+3    Paul  Nantes  child    7     110
+4  Pierre   Paris  adult   45     176
+5  Céline   Paris  child    5     118
+6   Alice  Nantes  child   16     159
+7  Nadine  Nantes  adult   72     158
+

@@ -1,0 +1,23 @@
+>>> df.pivot(index='name', columns=['city', 'status'], values='height')
+city    Paris        Nantes       
+status  child  adult  child  adult
+name                              
+Alain   125.0    NaN    NaN    NaN
+Alice     NaN    NaN  159.0    NaN
+Céline  118.0    NaN    NaN    NaN
+Jean      NaN  165.0    NaN    NaN
+Marie     NaN  184.0    NaN    NaN
+Nadine    NaN    NaN    NaN  158.0
+Paul      NaN    NaN  110.0    NaN
+Pierre    NaN  176.0    NaN    NaN
+>>> df.pivot(index=['name', 'city'], columns=['status'], values='height')
+status         adult  child
+name   city                
+Alain  Paris     NaN  125.0
+Alice  Nantes    NaN  159.0
+Céline Paris     NaN  118.0
+Jean   Paris   165.0    NaN
+Marie  Paris   184.0    NaN
+Nadine Nantes  158.0    NaN
+Paul   Nantes    NaN  110.0
+Pierre Paris   176.0    NaN
