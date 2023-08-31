@@ -1,0 +1,14 @@
+>>> df = pandas.read_parquet("dataset-dvf/dvf-linearized-2014-2022.parquet")
+>>> print(df.shape)
+(10839063, 32)
+>>> def forloopsum():
+...   out = 0
+...   for v in df["valeur_fonciere"]:
+...     out += v
+...   return out
+>>> %timeit -n 10 forloopsum()
+835 ms ± 157 ms 
+>>> %timeit -n 10 df["valeur_fonciere"].sum()
+12.1 ms ± 412 µs
+>>> %timeit -n 10 df["valeur_fonciere"].values.sum()
+5.7 ms ± 490 µs

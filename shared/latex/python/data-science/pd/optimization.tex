@@ -1,15 +1,29 @@
 \begin{frame}{Le problème}
-  \mintedcustomcode{python/data-science/pandas/groupby}{pycon}
+  \mintedcustomcode{python/data-science/pandas/optimization-forloop}{pycon}
 \end{frame}
 
 \begin{frame}{Numpy}
-  
+  \mintedcustomcode{python/data-science/pandas/optimization-vectorize}{pycon}
 \end{frame}
 
-\begin{frame}{Modin}
-  
+\begin{frame}{Du bon sens}
+  Bien gérer sa mémoire :
+  \begin{itemize}
+    \item préférer l'utilisation de fonction pour garantir le rafraichissement mémoire des variables temporaires.
+    \item Utiliser des types adaptés (uint8 ou int64 ?)
+    \item Utilisation de \texttt{pd.Categorical} plutôt que \texttt{String}
+  \end{itemize}
+  \mintedcustomcode{python/data-science/pandas/categorical}{pycon}
 \end{frame}
 
 \begin{frame}{Numba}
-  
+  Compilateur "just-in-time" pour python. \\
+  Décorateurs de fonction pour "prévenir" l'interpréteur. \\
+  Un cas d'usage très restreint. \\
+  \bluelink{https://numba.readthedocs.io/en/stable/user/5minguide.html}{5mn guide}
+\end{frame}
+
+\begin{frame}{Dask}
+  \bluelink{https://docs.dask.org/en/stable/}{dask} est une librairie pour passer à de grandes échelles de données et de puissance de calcul. \\
+  On aurait pu citer Sparks, Tensorflow, ...
 \end{frame}

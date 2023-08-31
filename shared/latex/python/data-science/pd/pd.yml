@@ -25,6 +25,7 @@ flavors:
     - tp-optimization
   pnd:
     - pandas: Introduction
+    - tp-pandas: Les bases connues
     - multi-index
     - groupby
     - /questions

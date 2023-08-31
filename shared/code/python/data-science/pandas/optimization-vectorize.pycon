@@ -1,0 +1,13 @@
+>>> %timeit -n 10 df['valeur_fonciere'].apply(lambda x: x**2)
+2.3 s ± 126 ms
+>>> vect_funct = np.vectorize(lambda x: x**2)
+>>> %timeit -n 10 vect_funct(df['valeur_fonciere'])
+1.82 s ± 75.7 ms
+>>> import geohash
+>>> %timeit -n 10 df[['latitude','longitude']].apply(
+...     lambda x: geohash.encode(x['latitude'],x['longitude']),
+...     axis=1)
+1min 15s ± 369 ms
+>>> vect_funct = np.vectorize(lambda x,y: geohash.encode(x,y))
+>>> %timeit -n 1 vect_funct(df['latitude'],df['longitude'])
+8.21 s ± 61.9 ms
