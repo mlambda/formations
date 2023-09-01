@@ -81,8 +81,9 @@
 \end{frame}
 
 \begin{frame}{Transformation}
-  La fonction transform() est l'équivalent de aggregate() et peut utiliser   \bluelink{https://pandas.pydata.org/docs/user_guide/groupby.html\#built-in-transformation-methods}{les methodes de transformation fournies par l'API}. \\
-  On peut aussi utiliser les fonctions d'aggrégation de l'API, auquel cas la fonction sera broadcastée à travers le groupe.
+  La fonction \texttt{transform} est l'équivalent de \texttt{aggregate} et peut utiliser
+  \bluelink{https://pandas.pydata.org/docs/user_guide/groupby.html\#built-in-transformation-methods}{les methodes de transformation fournies par l'API}. \\
+  On peut aussi utiliser les fonctions d'aggrégation de l'API, auquel cas la fonction sera broadcastée à travers le groupe. 
   \mintedcustomcode{python/data-science/pandas/groupby-transform2}{pycon}
 \end{frame}
 
@@ -93,7 +94,7 @@
 
 \begin{frame}{Apply}
   \mintedcustomcode{python/data-science/pandas/groupby-apply2}{pycon}
-  Plus rapide avec transform() !
+  Plus rapide avec \texttt{transform} !
 \end{frame}
 
 \begin{frame}{Apply}
@@ -101,16 +102,16 @@
   \mintedcustomcode{python/data-science/pandas/groupby-apply3}{pycon}
 \end{frame}
 
-\begin{frame}{apply() et transform()}
+\begin{frame}{\texttt{apply} et \texttt{transform}}
   La fonction en argument :
   \begin{description}
     \item[input]  \begin{itemize}
-                    \item apply() passe toutes les colonnes de chaque groupes dans un \texttt{pd.DataFrame}.
-                    \item transform() passe chaque colonne de chaque groupe dans une \texttt{pd.Series}.
+                    \item \texttt{apply} passe toutes les colonnes de chaque groupes dans un \texttt{pd.DataFrame}.
+                    \item \texttt{transform} passe chaque colonne de chaque groupe dans une \texttt{pd.Series}.
                   \end{itemize}
     \item[output]  \begin{itemize}
-                    \item apply() peut renvoyer un scalaire, \texttt{pd.Series}, \texttt{pd.DataFrame}, numpy array ou même une liste python.
-                    \item transform() doit renvoyer une \texttt{pd.Series} (ou au moins une Array 1D) de la même taille que le groupe.
+                    \item \texttt{apply} peut renvoyer un scalaire, \texttt{pd.Series}, \texttt{pd.DataFrame}, numpy array ou même une liste python.
+                    \item \texttt{transform} doit renvoyer une \texttt{pd.Series} (ou au moins une Array 1D) de la même taille que le groupe.
                   \end{itemize}
   \end{description}
 \end{frame}
