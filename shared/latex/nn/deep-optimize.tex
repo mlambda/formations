@@ -33,7 +33,8 @@
     \item Adaptative Gradient Algorithm (AdaGrad)
     \item Root Mean Square Propagation (RMSProp)
     \item Adaptative Moment Estimation (Adam)    $\Leftarrow$
-    \item ... AdaBound (2019) ?
+    \notnyx{\item ... AdaBound (2019) ?}
+    \item Evo\textbf{L}ved S\textbf{i}gn M\textbf{o}me\textbf{n}tum (Lion)
   \end{itemize}
 \end{frame}
 
@@ -73,4 +74,14 @@
   \end{align*}
 
   $\beta_1$ et $\beta_2$ sont des facteurs d'oubli, $\epsilon$ est une petite valeur
+\end{frame}
+
+\begin{frame}{Lion}
+  Decouvert en utilisant des techniques de recherches symboliques, \alert{Lion} est un algorithme récent (2023) qui semble améliorer la convergence et la consommation mémoire de l'apprentissage des réseaux neurones notamment sur les modèles transformeurs.
+
+  \begin{align*}
+    c_{\theta_{+1}} &\leftarrow \beta_1 m_{\theta_t} + (1 - \beta_1)\nabla_\theta L_{t} \\
+    \theta_{t+1} &\leftarrow \theta_{t+1} - \eta(\text{sign}(c_{\theta_{+1}}) + \lambda\theta_{t}) \\
+    m_{\theta_{t+1}} &\leftarrow \beta_2 m_{\theta_{t}} + (1 - \beta_2)\nabla_\theta L_{t} \\
+  \end{align*}
 \end{frame}
