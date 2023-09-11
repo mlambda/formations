@@ -1,19 +1,20 @@
 title: Programmation
+
 default_titles:
   intro: Histoire
-  theory: La Théorie
-  hardware: Le matériel
-  program: Le Programme
-  algorithm: L'Algorithme
-  compiler: Les compilateurs
-  language: Les langages de programmation
-  library: Les librairies
+  theory: Théorie
+  hardware: Matériel
+  program: Programmes
+  algorithm: Algorithmes
+  compiler: Compilateurs
+  language: Langages de programmation
+  library: Librairies
 
 flavors:
   full:
     - history
     - theory
-    - codage
+    - encoding
     - algorithm
     - hardware
     - program
@@ -29,4 +30,3 @@ flavors:
     - language
     - compiler
     - library
-version: 3
