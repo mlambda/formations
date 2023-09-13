@@ -13,13 +13,12 @@ flavors:
     - tp-pandas
     - groupby
     - /questions
+    - pivot-table
+    - /questions
     - tp-groupby
     - join
     - /questions
     - tp-join
-    - pivot-table
-    - /questions
-    - tp-pivot
     - optimization
     - /questions
     - tp-optimization
@@ -29,10 +28,9 @@ flavors:
     - multi-index
     - groupby
     - /questions
-    - tp-groupby
     - pivot-table
     - /questions
-    - tp-pivot
+    - tp-groupby
     - join
     - /questions
     - tp-join
