@@ -24,9 +24,9 @@
   \]
 
   \begin{itemize}[<+(1)->]
-    \item Pour un vrai exemple ($y=1$), le terme à maximiser est $\green{\log D(\vect{x})}$
-
-    $\Rightarrow$ $D(\vect{x})$ doit tendre vers $1$
+    \item Pour un vrai exemple ($y=1$), 
+          le terme à maximiser est $\green{\log D(\vect{x})}$
+          $\Rightarrow$ $D(\vect{x})$ doit tendre vers $1$
     \item Pour un faux exemple ($y=0$), le terme à maximiser est $\red{\log (1 - D(\vect{x}))}$
 
     $\Rightarrow$ $D(\vect{x})$ doit tendre vers $0$
@@ -48,7 +48,8 @@
 \end{frame}
 
 \begin{frame}{Fonction d'entraînement complète}
-  Les deux équations précédentes, combinées sur tous les exemples (vrais et faux)~:
+  Les deux équations précédentes, 
+  combinées sur tous les exemples (vrais et faux)~:
 
   \[
     \max_D \min_G \left\{
@@ -66,13 +67,15 @@
   \begin{enumerate}[<+(1)->]
     \item Échantillonner le vecteur de bruit $\vect{Z}$
     \item Échantillonner un batch de vrais exemples $\vect{X}$
-    \item Mettre à jour les paramètres de $D$ ($\theta_D$) par montée de gradient~:
+    \item Mettre à jour les paramètres de $D$ ($\theta_D$) 
+          par montée de gradient~:
     \[
       \theta_D \leftarrow \theta_D + \alpha \nabla_{\theta_D} \frac{1}{m} \sum_{i=1}^m \left[
         \log D\left(\vect{X}_i\right) + \log\left(1 - D\left(G\left(\vect{Z}_i\right)\right)\right)
       \right]
     \]
-    \item Mettre à jour les paramètres de $G$ ($\theta_G$) par descente de gradient~:
+    \item Mettre à jour les paramètres de $G$ ($\theta_G$) 
+          par descente de gradient~:
     \[
       \theta_G \leftarrow \theta_G - \alpha \nabla_{\theta_G} \frac{1}{m} \sum_{i=1}^m \left[
         \log\left(1 - D\left(G\left(\vect{Z}_i\right)\right)\right)
@@ -84,7 +87,6 @@
 
 \begin{frame}{Stabilité de l'apprentissage}
   Entraîner un GAN est difficile~:
-
   \begin{itemize}[<+(1)->]
     \item Le discriminateur peut dominer
     \item Le générateur peut boucler sur certaines générations (mode collapse)

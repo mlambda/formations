@@ -1,0 +1,46 @@
+- name: j1
+  title: Jour 1
+  sections:
+    - path: about
+      flavor: orsys-2j
+
+    - path: ai
+      flavor: full
+
+    - title: Sources de données
+      path: engineering/data-sources
+
+    - path: ml
+      flavor: mle
+
+    - path: supervised
+      flavor: drn
+
+    - path: unsupervised
+      flavor: mle
+
+    - path: nn
+      flavor: mle
+
+- name: j2
+  title: Jour 2
+  sections:
+    - path: nlp
+      flavor: mle
+    
+    - path: nn
+      flavor: intra-fiducre
+     
+    - path: rl
+      flavor: mle
+
+    - path: tools
+      flavor: devops
+
+    - path: big-questions
+      flavor: full
+
+    - path: sectors
+      flavor: full
+
+    - contact

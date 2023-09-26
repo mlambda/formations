@@ -7,21 +7,6 @@ default_titles:
   multi-index: Indiçage hiérarchique / multiple
 
 flavors:
-  full:
-    - pandas
-    - /questions
-    - tp-pandas
-    - groupby
-    - /questions
-    - pivot-table
-    - /questions
-    - tp-groupby
-    - join
-    - /questions
-    - tp-join
-    - optimization
-    - /questions
-    - tp-optimization
   pnd:
     - pandas: Introduction
     - tp-pandas: Les bases connues

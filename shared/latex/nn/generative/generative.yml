@@ -1,0 +1,20 @@
+default_titles:
+  intro: Introduction
+  gan: Réseaux génératifs antagonistes
+  stable-diffusion: Stable diffusion
+  gan-variants: Variantes de GAN
+  gan-demo: GAN démo
+flavors:
+  gan:
+    - intro
+    - gan
+    - gan-variants
+    - /questions
+    - gan-demo
+    - stable-diffusion
+  mle:
+    - intro
+    - gan
+    - stable-diffusion
+    - /questions
+title: Réseaux génératifs

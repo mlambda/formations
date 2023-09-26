@@ -11,16 +11,24 @@
 \begin{frame}{ChatGPT}
   Fonctionnement : 
   \begin{itemize}
-    \item GPT 3.5
+    \item GPT 3.5 - 4.0
     \item Reinforcement Learning from Human Feedback
   \end{itemize}
 \end{frame}
 
 \begin{frame}{GPT 3.5}
   \begin{itemize}
-    \item Modèle de langage multi-tâches
+    \item Contexte de 16k tokens
     \item $\approx$500 Milliards de mots
     \item 175 Milliards de paramètres ($\approx$ 1To de mémoire RAM)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{GPT 4.0}
+  \begin{itemize}
+    \item Contexte de 32k tokens
+    \item $\approx$1000 Milliards de mots
+    \item Combinaison de 8 modèles de 220 Milliards de paramètres
   \end{itemize}
 \end{frame}
 
@@ -117,4 +125,25 @@
 \begin{frame}{Limites}
   Les mots ne sont pas attachés à des sons.
   \V{"img/chattejaipete-ducul" | image("tw", 0.85)}
+\end{frame}
+
+\begin{frame}{Hallucinations}
+  Des avocats ont reçu une amende de 5000\$ pour avoir cité des jurisprudence inexistantes...\\
+  \\
+  De plus en plus de publications scientifiques contiennent 
+  "as a language model", "regenerate response", ...
+\end{frame}
+
+\begin{frame}{Doit d'auteur}
+  OpenAi n'est pas le propriétaire des productions des utilisateurs \\
+  \\
+  Une \bluelink{https://www.nbcnews.com/pop-culture/pop-culture-news/dozen-authors-john-grisham-george-rr-martin-sue-chatgpt-rcna111310}{douzaine d'auteurs poursuit OpenAi} sur le droit à la propriété du modèle GPT
+\end{frame}
+
+\begin{frame}{A finir}
+  \begin{itemize}[<+->]
+    \item plugin vscode pour générer du code avec 1 LLM (1500000000 sur hugging face)
+    \item jetbrains
+    \item autogpt
+  \end{itemize}
 \end{frame}

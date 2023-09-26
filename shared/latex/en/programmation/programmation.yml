@@ -2,6 +2,7 @@ title: Programmation
 default_titles:
   intro: History
   theory: Theory
+  codage: Codage
   hardware: Hardware
   program: Program
   algorithm: Algorithm
@@ -10,16 +11,6 @@ default_titles:
   library: Libraries
 
 flavors:
-  full:
-    - history
-    - theory
-    - codage
-    - algorithm
-    - hardware
-    - program
-    - language
-    - compiler
-    - library
   tho:
     - history
     - theory

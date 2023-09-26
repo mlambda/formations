@@ -16,8 +16,8 @@
     - path: nn/ae
       flavor: dpl
 
-    - path: nn/gan
-      flavor: full
+    - path: nn/generative
+      flavor: gan
 
     - path: nn/rnn
       flavor: dpl

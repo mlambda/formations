@@ -36,7 +36,7 @@ flavors:
     - $/tf-keras: drn
     - $cnn: mle
     - $rnn: iao
-    - $gan: full
+    - $generative: gan
     - /questions
     - help-pointers
   drn:
@@ -53,7 +53,7 @@ flavors:
     - $rnn: drn
     - $transformer: drn
     - $ae: drn
-    - $gan: full
+    - $generative: gan
     - help-pointers
   vision-expert:
     - intro
@@ -68,7 +68,7 @@ flavors:
     - $cnn: dpl
     - $transformer: image
     - $ae: drn
-    - $gan: full
+    - $generative: gan
     - $rnn: vision-expert
     - help-pointers
   vision-expert-tp:
@@ -84,7 +84,7 @@ flavors:
     - $cnn: vision-expert-tp
     - $transformer: image
     - $ae: dpl
-    - $gan: full
+    - $generative: gan
     - $rnn: dpl
     - help-pointers
   bda:
@@ -132,21 +132,8 @@ flavors:
     - $cnn: ml5
     - $rnn: dpl
     - $ae: dpl
-    - $gan: full
+    - $generative: gan
     - help-pointers
-  mlboule:
-    - intro
-    - /supervised/classification
-    - playground
-    - gradient-descent
-    - optimize
-    - deep-optimize
-    - regularisation
-    - playground
-    - /questions
-    - $/tf-keras: dpl
-    - $cnn: dpl
-    - $ae: dpl
   dpl:
     - intro
     - /supervised/classification
@@ -217,6 +204,13 @@ flavors:
     - $/nlp: dpl
     - $/sequential-data: dpl
     - $rnn: dpl
+    - help-pointers
+
+  intra-fiducre:
+    - $generative: mle
+    - $transformer: chatgpt
+    - chatgpt
+    - /questions
     - help-pointers
 
 title: Réseaux de neurones

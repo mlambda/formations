@@ -3,6 +3,7 @@ title: Programmation
 default_titles:
   intro: Histoire
   theory: Théorie
+  encoding: Codage
   hardware: Matériel
   program: Programmes
   algorithm: Algorithmes
@@ -11,16 +12,6 @@ default_titles:
   library: Librairies
 
 flavors:
-  full:
-    - history
-    - theory
-    - encoding
-    - algorithm
-    - hardware
-    - program
-    - language
-    - compiler
-    - library
   tho:
     - history
     - theory
