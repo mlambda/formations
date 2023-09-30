@@ -20,6 +20,10 @@ flavors:
     - $anomaly-detection: full
   mlb:
     - $dimensionality-reduction: mlb
+  pyi:
+    - introduction
+    - $dimensionality-reduction: mlb
+    - $clustering: pyi
   intra-l-oreal:
     - introduction
     - $dimensionality-reduction: mlb

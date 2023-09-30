@@ -168,7 +168,11 @@ flavors:
     - $/sequential-data: dpl
     - $rnn: dpl
     - help-pointers
-
+  pyi:
+    - intro
+    - playground
+    - $cnn: mle
+    - help-pointers
   intra-l-oreal:
     - intro
     - playground

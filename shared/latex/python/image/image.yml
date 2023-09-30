@@ -1,0 +1,18 @@
+default_titles:
+  pillow: Pillow
+  opencv-image: Opencv pour le traitement de l'image
+  scikit-image: Scikit image
+
+flavors:
+  full:
+    - intro
+    - pillow
+    - /questions
+    - tp-pillow
+    - opencv-image
+    - /questions
+    - scikit-image
+    - /questions
+    - tp-scikit-image
+
+title: Manipulation et analyse d'image

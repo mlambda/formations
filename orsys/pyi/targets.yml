@@ -1,43 +1,33 @@
 - name: j1
-  title: Jour 1 --- Introduction à Python
+  title: Jour 1 --- Traitement de l'image
   sections:
     - path: about
-      flavor: orsys-4j
-
-    - path: python/basics
-      flavor: full
+      flavor: orsys-3j
 
     - path: python/data-science
+      flavor: pyi
+      title: Manipulation de données numériques
+
+    - path: python/image
       flavor: full
-      title: Outils data-science (Optionnel)
+      title: Traitement de l'image
 
 - name: j2
-  title: Jour 2 --- Apprentissage non-supervisé
+  title: Jour 2 --- Apprentissage automatisé
   sections:
     - path: ml
       flavor: bda
 
+    - path: supervised
+      flavor: pyi
+
     - path: unsupervised
-      flavor: bda
+      flavor: pyi
 
 - name: j3
-  title: Jour 3 --- Apprentissage supervisé
+  title: Jour 2 --- Apprentissage pour l'image
   sections:
-
-    - path: supervised
-      flavor: bda
-
-- name: j4
-  title: Jour 4 --- Traitement du langage naturel
-  sections:
-    - path: nlp
-      flavor: bda
-
-    - path: supervised
-      flavor: svm-text
-    
     - path: nn
-      flavor: bda
-
+      flavor: pyi
 
     - contact

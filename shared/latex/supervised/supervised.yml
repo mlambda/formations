@@ -83,6 +83,20 @@ flavors:
     - trees-details
     - random-forest
     - /questions
+  pyi:
+    - regression-lineaire
+    - cost-error-function
+    - /nn/gradient-descent
+    - classification
+    - regression-logistique
+    - /questions
+    - tp-reg-lin-poly
+    - trees
+    - trees-details
+    - random-forest
+    - /questions
+    - demo-sklearn-random-forest
+    - tp-random-forest
   intra-l-oreal:
     - regression-lineaire
     - cost-error-function

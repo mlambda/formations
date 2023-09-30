@@ -27,5 +27,14 @@ flavors:
     - /questions
     - tp-numpy
 
+  pyi:
+    - intro
+    - numpy
+    - /questions
+    - tp-numpy
+    - matplotlib
+    - /questions
+    - tp-matplotlib
+
 
 title: Modules de science des données

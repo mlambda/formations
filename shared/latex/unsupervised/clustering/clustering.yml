@@ -29,6 +29,16 @@ flavors:
     - dbscan
     - conclusion
     - demo
+  pyi:
+    - intro
+    - kmeans-gaussian
+    - hierarchical-clustering
+    - pca-classification-hierarchique-composantes-principales
+    - metrics
+    - conclusion
+    - tuto
+    - /questions
+    - tp
   intra-l-oreal:
     - intro
     - kmeans-gaussian

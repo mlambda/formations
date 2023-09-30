@@ -54,5 +54,13 @@ flavors:
     - learning
     - /questions
     - help-pointers
+  pyi:
+    - intro
+    - $/prerequisites: full
+    - evaluation
+    - /questions
+    - learning
+    - /questions
+    - help-pointers
 title: Machine Learning
 version: 3
