@@ -1,0 +1,6 @@
+>>> from PIL import Image
+>>> with Image.open("mon_image.jpg") as im:
+>>>   pass
+>>> plt.imshow(im)
+
+TypeError: Image data of dtype object cannot be converted to float

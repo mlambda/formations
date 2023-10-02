@@ -1,0 +1,6 @@
+>>> from PIL import Image
+>>> with Image.open("mon_image.jpg") as im:
+>>>   print(f"L'image est de dimension {im.size}.")
+>>>   print(f"L'image est encodée en {im.mode}.")
+L'image est de dimension (250, 250).
+L'image est encodée en RGB.
