@@ -1,0 +1,1 @@
+>>> image_from_array = Image.fromarray(img_array, "RGB")

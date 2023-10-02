@@ -1,0 +1,2 @@
+>>> from PIL import ImageFilter
+>>> blurred_im = im.filter(ImageFilter.BLUR)

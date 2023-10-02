@@ -1,0 +1,107 @@
+\begin{frame}
+    \frametitle{Introduction à scikit-image}
+    \begin{itemize}
+      \item Bibliothèque Python pour le traitement d'images.
+      \item Basée sur NumPy et SciPy.
+      \item Comprend de nombreuses fonctionnalités pour le traitement et l'analyse d'images.
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Fonctionnalités principales}
+    \begin{enumerate}
+      \item Chargement et affichage d'images.
+      \item Filtres d'image (flou, détection de contours, etc.).
+      \item Segmentation d'image.
+      \item Mesures de forme et d'intensité.
+      \item Transformation géométrique.
+      \item Analyse des régions.
+    \end{enumerate}
+  \end{frame}
+  
+  \begin{frame}[fragile] % Utilisation de l'environnement [fragile] pour minted
+    \frametitle{1. Chargement et affichage d'images}
+    \begin{block}{Exemple de code :}
+      \begin{minted}{python}
+  from skimage import io
+  
+  image = io.imread('image.jpg')
+  io.imshow(image)
+      \end{minted}
+    \end{block}
+  \end{frame}
+  
+  \begin{frame}[fragile]
+    \frametitle{2. Filtres d'image}
+    \begin{block}{Exemple de code :}
+      \begin{minted}{python}
+  from skimage import io, filters
+  
+  image = io.imread('image.jpg')
+  edges = filters.sobel(image)
+  io.imshow(edges)
+      \end{minted}
+    \end{block}
+  \end{frame}
+  
+  \begin{frame}[fragile]
+    \frametitle{3. Segmentation d'image}
+    \begin{block}{Exemple de code :}
+      \begin{minted}{python}
+  from skimage import io, segmentation
+  
+  image = io.imread('image.jpg')
+  labels = segmentation.slic(image, compactness=10)
+  io.imshow(segmentation.mark_boundaries(image, labels))
+      \end{minted}
+    \end{block}
+  \end{frame}
+  
+  \begin{frame}[fragile]
+    \frametitle{4. Mesures de forme et d'intensité}
+    \begin{block}{Exemple de code :}
+      \begin{minted}{python}
+  from skimage import io, color, measure
+  
+  image = io.imread('image.jpg')
+  image_gray = color.rgb2gray(image)
+  label_image = measure.label(image_gray)
+  props = measure.regionprops(label_image)
+      \end{minted}
+    \end{block}
+  \end{frame}
+  
+  \begin{frame}[fragile]
+    \frametitle{5. Transformation géométrique}
+    \begin{block}{Exemple de code :}
+      \begin{minted}{python}
+  from skimage import io, transform
+  
+  image = io.imread('image.jpg')
+  rotated_image = transform.rotate(image, angle=45)
+  io.imshow(rotated_image)
+      \end{minted}
+    \end{block}
+  \end{frame}
+  
+  \begin{frame}[fragile]
+    \frametitle{6. Analyse des régions}
+    \begin{block}{Exemple de code :}
+      \begin{minted}{python}
+  from skimage import io, segmentation, measure
+  
+  image = io.imread('image.jpg')
+  labels = segmentation.slic(image, compactness=10)
+  regions = measure.regionprops(labels)
+      \end{minted}
+    \end{block}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Conclusion}
+    \begin{itemize}
+      \item Scikit-image est une bibliothèque puissante pour le traitement d'images en Python.
+      \item Elle offre de nombreuses fonctionnalités pour répondre à vos besoins en traitement d'images.
+      \item Documentation complète et communauté active.
+    \end{itemize}
+  \end{frame}

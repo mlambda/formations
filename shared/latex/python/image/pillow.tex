@@ -1,18 +1,15 @@
 \begin{frame}{Introduction}
     \begin{itemize}
         \item \alert{Pillow} (PIL) est une bibliothèque Python populaire pour le traitement d'images.
-        \item Elle offre une large gamme de fonctionnalités pour manipuler et éditer des
-              images.
+        \item Elle offre une large gamme de fonctionnalités pour manipuler et éditer des images.
         \item Compatibilité avec de nombreux formats de fichiers image.
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Fonctionnalités principales}
     \begin{enumerate}
-        \item Ouverture et enregistrement d'images dans divers formats (JPEG, PNG, GIF,
-              etc.).
-        \item Manipulation d'images, y compris le redimensionnement, la rotation et la
-              recadrage.
+        \item Ouverture et enregistrement d'images dans divers formats (JPEG, PNG, GIF, etc.).
+        \item Manipulation d'images, y compris le redimensionnement, la rotation et le recadrage.
         \item Filtrage d'images avec des filtres prédéfinis ou personnalisés.
         \item Ajout de texte et de dessins sur les images.
         \item Traitement avancé des couleurs, y compris la conversion de modes de couleurs.
@@ -29,66 +26,71 @@
     
 \end{frame}
 
-\begin{frame}{Ouvrir une image -- Précision gestionnaire de contexte}
+\begin{frame}{Ouvrir une image -- Précision sur le gestionnaire de contexte}
     \begin{center}
         \alert{ATTENTION}
     \end{center}
     
-    Le gestionnaire de contexte de pillow ne charge pas l'image en mémoire tant que la fonction \texttt{Image.load} n'a pas été appelée. 
+    Le gestionnaire de contexte de Pillow ne charge pas l'image en mémoire tant que la fonction \texttt{Image.load} n'a pas été appelée. 
     
     Celle-ci est automatiquement appelée dès lors qu'une méthode nécessite d'accéder à la valeur d'un pixel.
     
     \mintedcustomcode{python/image/pillow-open-context-error}{pycon}
 \end{frame}
 
-\begin{frame}{Exemple d'utilisation}
+\begin{frame}{Redimensionner une image}
+    Il est possible de redimensionner une image à la volée
+    \mintedcustomcode{python/image/pillow-resize}{pycon}
 
-    \begin{block}{Redimensionner une image}
-        \texttt{new\_size = (800, 600) \\
-            resized\_image = image.resize(new\_size)}
-    \end{block}
-
-    \begin{block}{Enregistrer une image}
-        \texttt{resized\_image.save('nouvelle\_image.jpg')}
-    \end{block}
+    Le second paramètre permet de définir la technique d'interpolation qui sera utilisée~:
+    \begin{itemize}
+        \item \texttt{NEAREST}
+        \item \texttt{BILINEAR}
+        \item \texttt{BICUBIC}
+        \item etc.
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{Exemple d'utilisation (suite)}
-    \begin{block}{Appliquer un filtre}
-        \texttt{from PIL import ImageFilter \\
-            blurred\_image = image.filter(ImageFilter.BLUR)}
-    \end{block}
+\begin{frame}{Sauvegarder une image}
+    L'enregistrement d'une image avec Pillow s'effectue avec la commande \texttt{save}~:
+    \mintedcustomcode{python/image/pillow-save}{pycon}
+    
+    Il peut être nécessaire de spécifier le format pour certaines extensions de fichier (\texttt{jpeg} au lieu de \texttt{jpg}, par exemple).
+\end{frame}
 
-    \begin{block}{Ajouter du texte}
-        \texttt{from PIL import ImageDraw \\
-            draw = ImageDraw.Draw(image) \\
-            draw.text((10, 10), "Hello, Pillow!", fill=(255, 255, 255))}
-    \end{block}
+\begin{frame}{Appliquer un filtre}
+    \mintedcustomcode{python/image/pillow-filter}{pycon}
+    \V{"img/kremlin" | image("tw", 1)}
+    
+\end{frame}
+\begin{frame}{Appliquer un filtre}
+    \V{"img/kremlin-2" | image("tw", 1)}
 \end{frame}
 
 \begin{frame}{Changement de Mode de Couleurs}
     \begin{itemize}
         \item Pillow permet de changer le mode de couleurs d'une image.
-        \item Les modes courants incluent RGB, CMYK, L (niveaux de gris), etc.
-        \item Exemple : \texttt{image = image.convert('CMYK')}
+        \item Les modes courants incluent RGB, CMYK, L (niveaux de gris), HSV, etc.
     \end{itemize}
+    \mintedcustomcode{python/image/pillow-convert}{pycon}
+
 \end{frame}
 
-\begin{frame}{Récupération des Layers}
+\begin{frame}{Récupération des canaux}
     \begin{itemize}
-        \item Certaines images peuvent contenir plusieurs layers ou canaux (par exemple, une
-              image RGBA).
-        \item Vous pouvez extraire et manipuler ces layers individuellement.
-        \item Exemple : \texttt{r, g, b, a = image.split()}
+        \item Certaines images peuvent contenir plusieurs canaux (par exemple une image RGB).
+        \item Vous pouvez extraire et manipuler ces couches individuellement.
     \end{itemize}
+    \mintedcustomcode{python/image/pillow-canaux-rgb}{pycon}
+    \V{"img/kremlin-rgb" | image("tw", 1)}
 \end{frame}
 
-\begin{frame}{Conclusion}
-    \begin{itemize}
-        \item Pillow est une bibliothèque puissante et polyvalente pour le traitement
-              d'images en Python.
-        \item Elle facilite la manipulation, la création et la modification d'images.
-        \item Compatible avec de nombreux formats de fichiers image.
-        \item Documentation complète et communauté active.
-    \end{itemize}
+\begin{frame}{Interopérabilité avec NumPy}
+    Convertir une image Pillow en un tableau NumPy :
+
+    \mintedcustomcode{python/image/pillow-to-numpy}{pycon}
+
+    Convertir un tableau NumPy en une image Pillow :
+
+    \mintedcustomcode{python/image/pillow-from-numpy}{pycon}
 \end{frame}

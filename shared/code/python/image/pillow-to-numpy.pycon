@@ -1,0 +1,4 @@
+>>> import numpy as np
+>>> img_array = np.array(im)
+>>> img_array.shape
+(250,250,3)
