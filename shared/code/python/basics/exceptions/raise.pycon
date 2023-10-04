@@ -1,0 +1,7 @@
+>>> wind_speed = -9999
+>>> if wind_speed < 0:
+...     raise ValueError("Speed cannot be negative")
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ValueError: Speed cannot be negative
