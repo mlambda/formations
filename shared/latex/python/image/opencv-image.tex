@@ -1,0 +1,85 @@
+\begin{frame}[fragile]{Exemple de chargement et d'affichage d'une image en utilisant OpenCV}
+    \begin{minted}{python}
+    import cv2
+
+    # Charger une image depuis un fichier
+    image = cv2.imread('image.jpg')
+
+    # Afficher l'image
+    cv2.imshow('Mon image', image)
+
+    # Attendre une touche pour fermer la fenêtre
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Exemple de filtrage d'une image en utilisant OpenCV}
+    \begin{minted}{python}
+    import cv2
+    import numpy as np
+
+    # Charger une image depuis un fichier
+    image = cv2.imread('image.jpg')
+
+    # Appliquer un filtre de flou à l'image
+    image_floue = cv2.GaussianBlur(image, (5, 5), 0)
+
+    # Afficher l'image originale et l'image filtrée
+    cv2.imshow('Image originale', image)
+    cv2.imshow('Image filtrée', image_floue)
+
+    # Attendre une touche pour fermer les fenêtres
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Exemple de détection de contours d'une image en utilisant OpenCV}
+    \begin{minted}{python}
+    import cv2
+
+    # Charger une image depuis un fichier en niveaux de gris
+    image = cv2.imread('image.jpg', cv2.IMREAD_GRAYSCALE)
+
+    # Détecter les contours de l'image
+    contours, _ = cv2.findContours(image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    # Dessiner les contours sur l'image originale
+    contours_image = cv2.drawContours(image, contours, -1, (0, 255, 0), 2)
+
+    # Afficher l'image originale avec les contours
+    cv2.imshow('Image avec contours', contours_image)
+
+    # Attendre une touche pour fermer la fenêtre
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Exemple de détection d'objets en temps réel en utilisant OpenCV}
+    \begin{minted}{python}
+    import cv2
+
+    # Utiliser la webcam (0 pour la caméra par défaut)
+    cap = cv2.VideoCapture(0)
+
+    while True:
+        # Lire une image depuis la webcam
+        ret, frame = cap.read()
+
+        # Réaliser un traitement d'objet en temps réel ici
+        # Par exemple, la détection d'objets
+
+        # Afficher l'image en temps réel
+        cv2.imshow('Webcam', frame)
+
+        # Quitter la boucle si la touche 'q' est enfoncée
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    # Libérer la webcam et fermer la fenêtre
+    cap.release()
+    cv2.destroyAllWindows()
+    \end{minted}
+\end{frame}
