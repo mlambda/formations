@@ -1,0 +1,8 @@
+>>> from skimage import metrics
+>>> 
+>>> print(metrics.structural_similarity(image,
+>>>                                     image_rotate,
+>>>                                     channel_axis=2))
+>>> print(metrics.normalized_root_mse(image, image_rotate))
+0.30936156758224564
+0.9050725440203237

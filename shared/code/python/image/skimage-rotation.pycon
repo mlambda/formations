@@ -1,0 +1,4 @@
+>>> from skimage import transform
+>>>   
+>>> rotated_image = transform.rotate(image, angle=180)
+>>> io.imshow(rotated_image)

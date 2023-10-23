@@ -1,0 +1,5 @@
+>>> from skimage.color import rgb2gray
+>>>   
+>>> image_bw = rgb2gray(image)
+>>> io.imshow(image_bw)
+>>> io.show()

@@ -1,0 +1,3 @@
+>>> from skimage import filters
+>>>   
+>>> image_hessian = filters.hessian(image_bw)

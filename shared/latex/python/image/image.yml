@@ -9,10 +9,10 @@ flavors:
     - pillow
     - /questions
     - tp-pillow
+    - scikit-image
+    - tp-scikit-image
+    - /questions
     - opencv-image
     - /questions
-    - scikit-image
-    - /questions
-    - tp-scikit-image
 
 title: Manipulation et analyse d'image

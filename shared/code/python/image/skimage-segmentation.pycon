@@ -1,0 +1,4 @@
+>>> from skimage import segmentation
+>>> 
+>>> labels = segmentation.slic(image, compactness=10)
+>>> io.imshow(segmentation.mark_boundaries(image, labels))
