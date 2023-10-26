@@ -1,0 +1,4 @@
+>>> # Convertir l'image en niveaux de gris
+>>> image_gris = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+>>> image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+>>> image_hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)

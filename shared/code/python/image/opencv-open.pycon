@@ -1,0 +1,7 @@
+>>> import cv2
+>>> 
+>>> # Charger une image depuis un fichier
+>>> image = cv2.imread('image.jpg')
+>>> 
+>>> # Afficher l'image
+>>> cv2.imshow('image', image)

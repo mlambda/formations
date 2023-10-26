@@ -1,85 +1,72 @@
-\begin{frame}[fragile]{Exemple de chargement et d'affichage d'une image en utilisant OpenCV}
-    \begin{minted}{python}
-    import cv2
 
-    # Charger une image depuis un fichier
-    image = cv2.imread('image.jpg')
-
-    # Afficher l'image
-    cv2.imshow('Mon image', image)
-
-    # Attendre une touche pour fermer la fenêtre
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-    \end{minted}
+\begin{frame}{OpenCV}
+    \begin{itemize}
+        \item OpenCV est une bibliotheque de gestion des images codée en C++ avec une version python qui offrent tant des méthodes de chargement, transformation, manipulation et analyses d'images.
+        \item Les images sont traités avec des tableaux numpy.
+        \item La documentation est principalement orientée pour les programmeurs C++
+        \item OpenCV propose également de nombreuses méthodes pour le traitement de la vidéo.
+    \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Exemple de filtrage d'une image en utilisant OpenCV}
-    \begin{minted}{python}
-    import cv2
-    import numpy as np
+\begin{frame}{Particularité de OpenCV}
+    Pour des raisons historiques, OpenCV traite et encode les images au format \alert{BGR}.
 
-    # Charger une image depuis un fichier
-    image = cv2.imread('image.jpg')
+    La plupart des méthodes capable de traiter les images avec plusieurs canaux doivent donc généralement fournies dans ce format.
 
-    # Appliquer un filtre de flou à l'image
-    image_floue = cv2.GaussianBlur(image, (5, 5), 0)
+    \begin{center}
+        \textit{Soyez vigilant, si vous travaillez avec d'autres libraires de manipulation d'images, pensez à vérifier le format de données utilisé}
+    \end{center}
 
-    # Afficher l'image originale et l'image filtrée
-    cv2.imshow('Image originale', image)
-    cv2.imshow('Image filtrée', image_floue)
-
-    # Attendre une touche pour fermer les fenêtres
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-    \end{minted}
 \end{frame}
 
-\begin{frame}[fragile]{Exemple de détection de contours d'une image en utilisant OpenCV}
-    \begin{minted}{python}
-    import cv2
-
-    # Charger une image depuis un fichier en niveaux de gris
-    image = cv2.imread('image.jpg', cv2.IMREAD_GRAYSCALE)
-
-    # Détecter les contours de l'image
-    contours, _ = cv2.findContours(image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-    # Dessiner les contours sur l'image originale
-    contours_image = cv2.drawContours(image, contours, -1, (0, 255, 0), 2)
-
-    # Afficher l'image originale avec les contours
-    cv2.imshow('Image avec contours', contours_image)
-
-    # Attendre une touche pour fermer la fenêtre
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-    \end{minted}
+\begin{frame}{Exemple de chargement et d'affichage d'une image en utilisant OpenCV}
+    \mintedcustomcode{python/image/opencv-open}{pycon}
+    \vfill
+    \alert{Note pour les TPs} : \texttt{cv2.imshow} ne fonctionne pas dans google colab.
 \end{frame}
 
-\begin{frame}[fragile]{Exemple de détection d'objets en temps réel en utilisant OpenCV}
-    \begin{minted}{python}
-    import cv2
+\begin{frame}{Exemple de sauvegarde}
+    \mintedcustomcode{python/image/opencv-save}{pycon}
+\end{frame}
 
-    # Utiliser la webcam (0 pour la caméra par défaut)
-    cap = cv2.VideoCapture(0)
+\begin{frame}{Conversion d'une image d'un format de couleur à un autre}
+    \mintedcustomcode{python/image/opencv-color}{pycon}
+    
+    Il existe évidemment une attribut pour chaque convertion de couleur.
+\end{frame}
 
-    while True:
-        # Lire une image depuis la webcam
-        ret, frame = cap.read()
+\begin{frame}{Exemple de filtrage d'une image en utilisant OpenCV}
+    OpenCV laisse définir la taille de la fenêtre de convolution pour appliquer un filtre donné
+    \mintedcustomcode{python/image/opencv-gaussianblur}{pycon}
 
-        # Réaliser un traitement d'objet en temps réel ici
-        # Par exemple, la détection d'objets
+    \V{"img/ravens-gaussian" | image("tw", 0.35)}
+\end{frame}
 
-        # Afficher l'image en temps réel
-        cv2.imshow('Webcam', frame)
+\begin{frame}{Transformation}
+    Les transformations du type décalage et rotations sont toutes effectuées avec la même fonction \texttt{cv2.warpAffine}.
+    
+    La difficulté principale est de savoir définir la matrice de transformation liée à la fonction désirée.
+    
+\end{frame}
 
-        # Quitter la boucle si la touche 'q' est enfoncée
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
+\begin{frame}{Transformation}
+    \mintedcustomcode{python/image/opencv-rotate}{pycon}
+    
+    \V{"img/ravens-rotate" | image("tw", 0.3)}
+    
+    Les deux premières colonnes correspondent au vecteur de rotation et la dernière colonne représente la translation.
+\end{frame}
 
-    # Libérer la webcam et fermer la fenêtre
-    cap.release()
-    cv2.destroyAllWindows()
-    \end{minted}
+\begin{frame}{Transformation}
+    
+    Il est sans doute plus simple d'utiliser la fonction \texttt{cv2.getRotationMatrix2D}.
+    \mintedcustomcode{python/image/opencv-matrice-rotation}{pycon}
+    
+    \V{"img/ravens-45-degree" | image("tw", 0.25)}
+    
+\end{frame}
+
+
+\begin{frame}{Exemple de traitement vidéo}
+    \mintedcustomcode{python/image/opencv-video}{pycon}
 \end{frame}

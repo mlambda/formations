@@ -1,0 +1,11 @@
+>>> # Récupérer un fichier vidéo
+>>> cap = cv2.VideoCapture("video.mp4")
+>>> ret = True
+>>> while ret:
+>>>     # Lire image par image 
+>>>     ret, frame = cap.read()
+>>>     # Afficher l'image en temps réel
+>>>     cv2.imshow('Frame', frame)
+>>> # Libérer le flux et fermer la fenêtre
+>>> cap.release()
+>>> cv2.destroyAllWindows()

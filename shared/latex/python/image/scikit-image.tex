@@ -12,6 +12,8 @@
 
   De fait, la plupart des méthodes retournent les images avec des valeurs dans
   l'intervalle $[0,1]$.
+
+  Contrairement à Pillow qui manipule son propre type d'objet, scikit-image utilise directement en tableau numpy
 \end{frame}
 
 \begin{frame}{Chargement d'images}
@@ -40,10 +42,9 @@
 \end{frame}
 
 \begin{frame}{Filtres d'image : Gaussian}
-  \mintedcustomcode{python/image/skimage-Gaussian}{pycon}
-  \V{"img/ravens-gaussian" | image("tw", 0.4)}
-
   Notez que le filtrage gaussien peut s'appliquer sur une image RGB.
+  \mintedcustomcode{python/image/skimage-Gaussian}{pycon}
+  \V{"img/ravens-gaussian" | image("tw", 0.35)}
 \end{frame}
 \begin{frame}{Filtres d'image : Hessienne}
   \mintedcustomcode{python/image/skimage-hessian}{pycon}

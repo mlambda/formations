@@ -1,0 +1,2 @@
+>>> # Sauvegarder une image dans un fichier
+>>> cv2.imwrite('image.jpg')

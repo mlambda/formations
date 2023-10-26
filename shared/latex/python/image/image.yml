@@ -13,6 +13,7 @@ flavors:
     - tp-scikit-image
     - /questions
     - opencv-image
+    - tp-opencv
     - /questions
 
 title: Manipulation et analyse d'image

@@ -1,0 +1,4 @@
+>>> M = np.float32([[0,1,0],[1,0,0]])
+>>> image_rotation = cv2.warpAffine(image,
+>>>                                 M,
+>>>                                 (im.shape[1],im.shape[0]))

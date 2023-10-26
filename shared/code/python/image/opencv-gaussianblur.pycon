@@ -1,0 +1,2 @@
+>>> # Appliquer un filtre de flou à l'image
+>>> image_floue = cv2.GaussianBlur(image, (5, 5), 0)
