@@ -7,7 +7,11 @@
 \end{frame}
 
 \begin{frame}{Évaluation de modèles de régression}
-  erreur absolue moyenne ou erreur au carré moyenne.
+  \begin{itemize}
+    \item Racine carré de l'erreur quadratique moyenne $$RMSE(\hat{Y}, Y) = \sqrt{\frac{1}{n} \sum_{i=1}^n (\hat{Y_i} - Y_i)^2}$$
+    \item Erreur absolue moyenne $$MAE(\hat{Y}, Y) = \frac{1}{n} \sum_{i=1}^n |Y_i - \hat{Y_i}|$$
+    \item R2 score $$R^2(\hat{Y}, Y) = 1 - \frac{\sum_{i=1}^n (Y_i - \hat{Y_i})^2}{\sum_{i=1}^n (Y_i - \bar{Y})^2}$$
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Évaluation de modèles de classification}
