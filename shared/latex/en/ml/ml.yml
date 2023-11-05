@@ -15,6 +15,9 @@ flavors:
     - intro
     - learning
     - /en/questions
+    - data-preparation
+    - /en/questions
+    - tp-data
   mle:
     - intro
     - data-preparation

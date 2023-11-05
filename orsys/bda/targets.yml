@@ -39,5 +39,16 @@
     - path: nn
       flavor: bda
 
+    - path: nn/ae
+      title: Auto-encodeurs (Bonus)
+      flavor: dpl
+
+    - path: engineering
+      title: Ingénierie du Machine Learning (Bonus)
+      flavor: mlcraftmyass
+
+    - path: big-questions
+      title: Problèmes liés au Machine Learning (Bonus)
+      flavor: full
 
     - contact
