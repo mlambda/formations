@@ -41,16 +41,16 @@
   \onslide<+->{La \bluelink{https://docs.python.org/fr/3/library/argparse.html\#the-add-argument-method}{documentation officielle} est très complète.}
 \end{frame}
 
-\begin{frame}{Commandes multiples}
-  Possibilité de définir plusieurs commandes : création des sous-parsers que l'on traite ensuite comme le parser principal~:
-
-  \mintedpycode{python/cli/subparsers}
-\end{frame}
-
 \begin{frame}{Utilisation}
   Appel de la méthode \texttt{parse\_args} puis traitement des arguments recupérés.
 
   \mintedpycode{python/cli/usage}
+\end{frame}
+
+\begin{frame}{Commandes multiples}
+  Possibilité de définir plusieurs commandes : création des sous-parsers que l'on traite ensuite comme le parser principal~:
+
+  \mintedpycode{python/cli/subparsers}
 \end{frame}
 
 \begin{frame}{Utilisation avancée qui couple la CLI à la fonction appelée}
