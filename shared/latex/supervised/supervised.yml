@@ -86,11 +86,9 @@ flavors:
   pyi:
     - regression-lineaire
     - cost-error-function
-    - /nn/gradient-descent
     - classification
     - regression-logistique
     - /questions
-    - tp-reg-lin-poly
     - trees
     - trees-details
     - random-forest

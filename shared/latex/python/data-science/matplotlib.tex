@@ -48,10 +48,28 @@
 \begin{frame}{Différents types de plot : \texttt{imshow(Z)}}
     \begin{minipage}[t]{0.49\linewidth}
         \mintedcustomcode{python/data-science/matplotlib/imshow}{py}
+
     \end{minipage}
     \begin{minipage}[t]{0.49\linewidth}
         \vfill
         \V{"plt/mpl/imshow" | image("tw", 1)} 
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Différents types de plot : \texttt{imshow(im)}}
+    \alert{\texttt{imshow}} est aussi souvent utilisé pour afficher des images au format \texttt{RGB} ou en noir et blanc. 
+    
+    Dans le cas du noir et blanc, il faut ajouter \texttt{cmap='gray'} ou \texttt{cmap='gray\_r'}.
+\end{frame}
+
+\begin{frame}{Différents types de plot : \texttt{imshow(im)}}
+    \begin{minipage}[t]{0.49\linewidth}
+        \mintedcustomcode{python/data-science/matplotlib/imshow2}{py}
+
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        \vfill
+        \V{"plt/mpl/imshow2" | image("tw", 1)} 
     \end{minipage}
 \end{frame}
 

@@ -32,5 +32,12 @@ flavors:
     - tuto
     - tp
     - help-pointers
+  pyi:
+    - intro
+    - pca-lda
+    - tsne-umap
+    - /questions
+    - tuto
+    - help-pointers
 
 title: Réduction de la dimensionnalité

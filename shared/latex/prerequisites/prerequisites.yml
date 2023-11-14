@@ -16,4 +16,11 @@ flavors:
     - conclusion
     - /questions
     - help-pointers
+  pyi:
+    - goals
+    - linear-algebra
+    - probabilities
+    - statistics
+    - /questions
+    - help-pointers
 title: Prérequis

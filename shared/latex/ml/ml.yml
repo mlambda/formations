@@ -56,7 +56,7 @@ flavors:
     - help-pointers
   pyi:
     - intro
-    - $/prerequisites: full
+    - $/prerequisites: pyi
     - evaluation
     - /questions
     - learning

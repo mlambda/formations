@@ -16,7 +16,7 @@
   title: Jour 2 --- Apprentissage automatisé
   sections:
     - path: ml
-      flavor: bda
+      flavor: pyi
 
     - path: supervised
       flavor: pyi

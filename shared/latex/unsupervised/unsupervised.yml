@@ -22,7 +22,7 @@ flavors:
     - $dimensionality-reduction: mlb
   pyi:
     - introduction
-    - $dimensionality-reduction: mlb
+    - $dimensionality-reduction: pyi
     - $clustering: pyi
   intra-l-oreal:
     - introduction
