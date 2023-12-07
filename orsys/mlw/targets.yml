@@ -1,0 +1,7 @@
+- name: j123
+  title: MLOps, déploiement de Machine Learning en production
+  sections:
+    - path: about
+      flavor: orsys-3j
+
+    - contact
