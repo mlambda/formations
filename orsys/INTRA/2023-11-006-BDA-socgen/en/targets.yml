@@ -1,0 +1,40 @@
+- name: j1
+  title: Jour 1 --- Introduction à Python
+  sections:
+    - path: en/about
+      flavor: orsys-4j
+
+    - path: en/python/basics
+      flavor: full
+
+    - path: en/python/data-science
+      flavor: full
+
+- name: j2
+  title: Jour 2 --- Apprentissage non-supervisé
+  sections:
+    - path: en/ml
+      flavor: bda
+
+    - path: en/unsupervised
+      flavor: bda
+
+- name: j3
+  title: Jour 3 --- Apprentissage supervisé
+  sections:
+    - path: en/supervised
+      flavor: bda
+
+- name: j4
+  title: Jour 4 --- Traitement du langage naturel
+  sections:
+    - path: en/nlp
+      flavor: bda
+
+    - path: en/supervised
+      flavor: svm-text
+
+    - path: en/nn
+      flavor: bda
+
+    - contact

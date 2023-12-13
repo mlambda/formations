@@ -42,6 +42,18 @@ flavors:
     - learning
     - /questions
     - help-pointers
+  bda-spark:
+    - intro
+    - $/prerequisites: full
+    - data-preparation
+    - evaluation
+    - /questions
+    - /tp-help
+    - tp-data-spark
+    - tp-data
+    - learning
+    - /questions
+    - help-pointers
   mlb:
     - intro
     - $/prerequisites: full
