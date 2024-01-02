@@ -1,0 +1,16 @@
+default_titles:
+  intro: Introduction
+  lime: Lime
+  shap: SHAP
+
+flavors:
+  mlw:
+    - intro
+    - /questions
+    - lime
+    - /questions
+    - shap
+    - /questions
+    - tp
+
+title: Explicabilité des modèles

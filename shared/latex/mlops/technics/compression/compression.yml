@@ -1,0 +1,22 @@
+default_titles:
+  intro: Introduction
+  lora: LoRA
+  pruning: Élagage
+  quantization: Quantification
+  winograd: Winograd
+
+flavors:
+  mlw:
+    - intro
+    - /questions
+    - pruning
+    - /questions
+    - quantization
+    - /questions
+    - lora
+    - /questions
+    - winograd
+    - /questions
+    - tp
+
+title: Compression de modèles

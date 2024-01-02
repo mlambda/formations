@@ -1,0 +1,17 @@
+default_titles:
+  intro: Introduction
+  lime: Lime
+  lora: LoRA
+  pruning: Élagage
+  quantization: Quantification
+  shap: SHAP
+  winograd: Winograd
+  xai-intro: Explicabilité
+
+flavors:
+  mlw:
+    - intro
+    - $xai: mlw
+    - $compression: mlw
+
+title: Techniques MLOps

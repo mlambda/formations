@@ -1,0 +1,29 @@
+default_titles:
+  architectures: Architectures big data
+  best-practices: Bonnes pratiques
+  docker: Docker
+  fastapi: FastAPI
+  intro: Introduction
+  kubernetes: Kubernetes
+  kubeflow: KubeFlow
+
+flavors:
+  mlw:
+    - intro
+    - /questions
+    - docker
+    - /questions
+    - fastapi
+    - /questions
+    - tp-simple
+    - kubernetes
+    - /questions
+    - kubeflow
+    - /questions
+    - tp-complex
+    - architectures
+    - /questions
+    - best-practices
+    - /questions
+
+title: Déploiement

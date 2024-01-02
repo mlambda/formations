@@ -1,0 +1,9 @@
+default_titles:
+  intro: Introduction
+
+flavors:
+  mlw:
+    - intro
+    - /questions
+
+title: Cycle de vie d'un projet ML

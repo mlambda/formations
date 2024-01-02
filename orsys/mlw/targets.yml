@@ -4,4 +4,13 @@
     - path: about
       flavor: orsys-3j
 
+    - path: mlops/ml-lifecycle
+      flavor: mlw
+
+    - path: mlops/technics
+      flavor: mlw
+
+    - path: mlops/deployment
+      flavor: mlw
+
     - contact
