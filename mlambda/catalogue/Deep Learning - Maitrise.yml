@@ -1,0 +1,99 @@
+competences:
+- Créer et entraîner un modèle de réseaux de neurones avec Keraset Tensorflow
+- Utiliser le deep learning pour tout type d’apprentissage(Classification, prédiction,
+  non supervisé, etc.)
+- Traiter automatiquement des données tabulaires
+- Traiter automatiquement des données images
+- Traiter automatiquement des données textuelles ou séquentielles
+- Proposer une structure de modèle moderne à un problème particulier
+nb_jours: '> 3 jours'
+plan:
+  partie-1:
+    contenu:
+    - Lien avec la régression linéaire
+    - Structure générale des réseaux de neurones
+    - 'Rupture de la linéarité : les fonctions d’activations'
+    - Convergence des modèles et choix des optimiseurs du taux d’apprentissage
+    - Problèmes liés à la disparition ou l’explosion de gradient
+    - Impact et choix d’un batch
+    - Recherche des hyperparamètres
+    - Problèmes d’interprétabilité
+    - La librairie Keras pour implémenter des réseaux de neuronesprofonds en python
+    - Implémentation avancée avec le GradientTape
+    duree: 1,5 journée
+    nom: Réseaux de neurones
+    objectifs:
+    - Concevoir et implémenter des modèles de réseaux de neuronessur des données tabulaires
+      en Keras pour la régression et laclassification
+    - Évaluer la performance de leurs modèles et adapter les hyperparamètrespour améliorer
+      l’apprentissage
+    - Identifier les problèmes d’apprentissage tels que le surapprentissageou le manque
+      de données et trouver les moyens de les résoudre
+    - Reproduire un modèle état de l’art non implémenté dans la librairieKeras
+    pratique: '* Mise en place d’un réseau de neurones sans code sur des données   simples.
+      Les stagiaires doivent choisir le meilleur ensemble   d’hyperparamètres pour
+      apprendre au mieux un jeu de données   sans surapprentissage et en optimisant
+      le temps de convergence   du modèle. * Implémentation d’un réseau de neurones
+      via Keras sur un problème   de classification multiclasse. Les stagiaires devront
+      utiliser   les concepts de séparation de jeux de données et d’évaluation   introduits
+      en partie 2 et déployer un protocole de recherche   d’hyperparamètres * Implémentation
+      de couches et de modèles personnalisés en   utilisant le GradientTape'
+  partie-2:
+    contenu:
+    - 'Traitement de l’image avec de réseau de neurones : les réseauxde neurones à
+      convolutions'
+    - Principe des convolutions
+    - 'Autres mécanismes des réseaux à convolutions : pooling, paddinget strides'
+    - 'Architectures modernes de réseaux à convolutions : VGG, EfficientNet,DenseNet,
+      etc.'
+    - Implémentation des réseaux à convolutions dans Keras
+    duree: 1 demi-journée
+    nom: Réseaux de neurones à convolutions
+    objectifs:
+    - Implémenter un modèle de réseaux de neurones pour le traitementautomatique d’images
+    - Définir les modèles pertinents à utiliser en fonction deslimitations techniques
+      et des objectifs à réaliser
+    - Utiliser le transfert d’apprentissage pour améliorer lesmodèles de traitement
+      automatique d’images
+    pratique: '* Implémentation d’un réseau de neurones à convolutions pour   la classification
+      d’un jeu de données de paysage'
+  partie-3:
+    contenu:
+    - La réduction de dimensions par les réseaux de neurones
+    - La structure encodeur-décodeur des auto-encodeurs
+    - Concept d’embedding
+    - Notions d’espace latent
+    - Les utilisations pour d’autres méthodes non supervisées
+    duree: 1 demi-journée
+    nom: Auto-encodeurs
+    objectifs:
+    - Identifier les modèles avancés basés sur des structures encodeur-décodeur
+    - Concevoir et implémenter des algorithmes des auto-encodeurssur des tâches d’apprentissage
+      non supervisés
+    - Intégrer des modèles auto-encodeurs à des modèles existantsde traitements supervisés
+      {text:soft-page-break} pourréduire la dimensionnalité d’un jeu de données
+    pratique: '* Implémentation d’un auto-encodeur en keras et visualisation   de
+      l’espace latent'
+  partie-4:
+    contenu:
+    - Réseaux de neurones récurrents
+    - LSTM
+    - GRU
+    - Traitement automatique du texte et de la langue
+    - Limitations des réseaux récurrents
+    duree: 1 demi-journée
+    nom: Réseaux Récurrents
+    objectifs:
+    - Traiter automatiquement des données séquentielles
+    - Classifier des données séquentielles
+    - Générer des prédictions ou des séquences futures
+    - Traiter des données vidéos
+    pratique: '* Création d’un modèle de reconnaissance d’auteurs automatique * Création
+      d’un modèle de solveur arithmétique sur données   textuelles (Traducteur texte
+      → maths) * Génération automatique de texte'
+prerequis: Une connaissance de base à Python est requise, ainsi qu’une connaissance  des
+  concepts clefs du machine learning (Différence supervisé/non  supervisé, séparation
+  jeux de données entrainement/validation/test,  évaluations et métriques...).
+public: Ingénieurs, chefs de projets ou développeurs disposant de connaissances  en
+  machine learing souhaitant approfondir l’aspect deep learning.
+titre: Deep Learning – Maitrise

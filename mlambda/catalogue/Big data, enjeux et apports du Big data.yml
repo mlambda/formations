@@ -1,0 +1,69 @@
+competences:
+- Identifier les opportunités offertes par le big data et lemachine learning
+- Identifier les aspects clefs des différents outils de traitementBig data
+- Anticiper les problèmes et limites du machine learning
+nb_jours: '> 2 jours'
+plan:
+  partie-1:
+    contenu:
+    - Définition de ce qu'est le Big Data
+    - '{text:soft-page-break} Présentation des enjeux liés à lagestion de données
+      volumineuses (stockage, traitement,analyse)'
+    - Discussion des opportunités offertes par le Big Data (parexemple, amélioration
+      des prises de décisions, découvertede nouvelles tendances, etc.)
+    duree: 1 demi-journée
+    nom: 'Introduction au Big Data : définitions, enjeux et opportunités'
+    objectifs:
+    - Reconnaître les défis liés à la gestion de grandes quantitésde données
+    - Identifier les opportunités potentielles que peut offrirl'analyse de ces données
+    pratique: '> À partir de leur milieu professionnel, les stagiaires devront > identifier
+      les données pertinentes dont ils disposent dans > leur entreprise et comment
+      ils pourraient les utiliser.'
+  partie-2:
+    contenu:
+    - Présentation des différents types de données (structurées,semi-structurées,
+      non structurées) et des défis liés à leurgestion
+    - Discussion des différents systèmes de stockage de données(bases de données relationnelles,
+      systèmes NoSQL, etc.)
+    - Présentation des différentes techniques de traitement dedonnées volumineuses
+      (batch, en temps réel, etc.)
+    - Discussion des différentes méthodes d'analyse de données(statistiques descriptives,
+      analyse en composantes principales,etc.)
+    - Présentation des principaux frameworks open source pourla gestion de données
+      volumineuses (Hadoop, Spark, etc.)
+    - Discussion des fonctionnalités clés de ces outils (par exemple,MapReduce, RDD,
+      etc.)
+    - Présentation de quelques outils de visualisation de donnéespopulaires (par exemple,
+      Tableau, Power BI, etc.)
+    duree: 1 demi-journée
+    nom: Principes de base de la gestion de données volumineuses
+    objectifs:
+    - Anticiper les besoins pour mettre en place des techniquesBig data
+    - Identifier les techniques de traitement pertinentes pourleurs données
+    - Identifier les aspects clefs des différents outils de traitementBig data
+    pratique: En se reposant, sur les données potentielles qu’ils auront identifiées
+      dans la pratique précédente, les stagiaires devront déterminer les types de
+      données dont ils disposent et les techniques qui semblent pertinentes pour les
+      traiter
+  partie-3:
+    contenu:
+    - Présentation des différents types d'apprentissage automatique(supervisé, non
+      supervisé, renforcement)
+    - Discussion des différents types de modèles de machine learning(régression, classification,
+      clustering, etc.)
+    - Présentation des principales librairies de machine learning(scikit-learn, TensorFlow,
+      etc.)
+    duree: 1 journée
+    nom: Introduction aux concepts de machine learning et de
+    objectifs:
+    - Identifier des utilisations pertinentes du machine learningsur un projet Bag
+      data
+    - Choisir les modèles adaptés pour un problème et un jeu de donnéesspécifiques
+    - Anticiper les problèmes et limites du machine learning
+    pratique: '* À partir de données déjà identifiées, les stagiaires devront   trouver
+      des applications potentielles utilisant le machine   learning en détaillant
+      l’approche et le type d’apprentissage'
+prerequis: Pas de prérequis
+public: Chef d’entreprise, chef de projet, ingénieurs souhaitant avoir  un premier
+  contact avec les concepts du Big data et ses moyens  d’analyses
+titre: Big data, enjeux et apports du Big data

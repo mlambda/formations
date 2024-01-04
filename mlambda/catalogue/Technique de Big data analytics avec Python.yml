@@ -1,0 +1,106 @@
+competences:
+- Récupérer rapidement des données sur une base de données oudans des fichiers
+- Traiter de large volume de données pour les agréger et en extrairerapidement de
+  l’information avec Pandas
+- Identifier des cas rares et anomalies dans un jeu de données
+- Produire des analyses statistiques grâce à numpy et scipy
+- Produire des visualisations efficaces et pertinentes enfonctions des données et
+  de l’information recherchée à l’aidede matplotlib, seaborn ou ploty express
+- Percevoir et anticiper des biais dans les données (sélection,attrition, autosélection,
+  etc.)
+nb_jours: '> 3 jours'
+plan:
+  partie-1:
+    contenu:
+    - L’environnement python
+    - Pourquoi utiliser python ?
+    - Structures conditionnelles, boucles,
+    - Fonctions
+    - Programmation objet
+    - La librairie standard python
+    - Lecture/écriture de fichiers
+    - Expressions régulières
+    duree: 1 demi-journée
+    nom: Python en accéléré
+    objectifs:
+    - Rédiger un script ou programme python
+    - Manipuler des fichiers
+    - Parcourir des fichiers ou données pour extraire une informationrecherchée grâce
+      aux outils de base de python
+    pratique: '* Une suite d’exercice simple permettant aux néophytes du langage   de
+      prendre en main rapidement les concepts présentés en python. * Traiter un ensemble
+      d’emails contenu dans un fichier pour   en récupérer les informations demandées
+      (adresses email   de tous les émetteurs, date d’envoi, etc.) en utilisant l’ensemble   des
+      concepts présentés'
+  partie-2:
+    contenu:
+    - 'Création de tableaux : array, zeros, ones, zeros_like, etc.'
+    - 'Manipulation de tableau : accès indicé, rang d’accès, filtre'
+    - Opération arithmétique :add, substract, dot, etc.
+    - 'Agrégation : sum, mean, etc.'
+    - 'Broadcasting : Opérations sur des tableaux de taille différente'
+    - '{text:soft-page-break} Algèbre linéaire avec scipy.linalg: norm, eig, det,
+      solve, svd, lu'
+    duree: 1 demi-journée
+    nom: Calcul scientifique avec Numpy et Scipy
+    objectifs:
+    - Implémenter des méthodes de calculs sur de grands volumesde données
+    - Manipuler, restructurer ou filtrer des données numériquesdans une optique de
+      calcul scientifique efficace
+    - Obtenir des informations statiques rapidement
+    - Optimiser un code python pour le vectoriser et améliorer sesperformances
+    pratique: Ensemble d’exercice de base permettant de prendre en main les différents
+      outils de numpy ou scipy
+  partie-3:
+    contenu:
+    - Chargement et sauvegarde de données
+    - Filtrage et réagencement de données
+    - Résumé et agrégation de données pour l’analyse
+    - Gestion des données manquantes
+    - Traitement des données séquentielles
+    duree: 1 journée
+    nom: Traitement des données avec Pandas
+    objectifs:
+    - Utiliser la librairie _pandas_ pour charger et modifier desdonnées.
+    - Agréger et filtrer rapidement des données afin d’identifierles spécificités
+      du jeu de {text:soft-page-break} données
+    - Identifier les corrélations linéaires entre les caractéristiquesde leurs données
+    - Choisir et mettre en place les techniques les plus pertinentespour la gestion
+      des données manquantes
+    - Structurer et utiliser efficacement des données dépendantesdu temps en utilisant
+      différents niveaux de granularité temporelle
+    pratique: '* Utilisation de la librairie pandas sur les données des naufragés   du
+      Titanic pour manipuler les concepts de base de Pandas * Gestion des données
+      manquantes et prise de décision sur un   jeu de données réel contenant des informations
+      immobilières.   Les stagiaires devront discuter et implémenter les stratégies   le
+      plus pertinentes pour gérer les valeurs manquantes en utilisant   les informations
+      dont ils disposent sur le jeu de données et   évaluer les hypothèses qu’ils
+      émettent. * Manipulation et interrogation de bases de données séquentielles'
+  partie-4:
+    contenu:
+    - 'Les différents types de données : numériques, ordinales,nominales'
+    - 'Les différents types de graphes : nuages de points, diagrammeen bar, carte
+      de chaleur, diagramme polaire, etc.'
+    - 'Briques essentielles de matplotlib : Figure, Axes, ticks,labels, markers et
+      colormap'
+    - 'Les types de graphiques matplotlib : plot, scatter, bar, boxplot,hist, violinplot,
+      etc.'
+    - 'Subplots : Organiser ses visualisations et les configurer'
+    - 'Librairies haut niveau : seaborn, ploty express, pyviz'
+    duree: 1 journée
+    nom: Visualisations
+    objectifs:
+    - Produire une visualisation graphique des données pour faireressortir des informations
+      clefs des données.
+    - Choisir un graphique ou ensemble de graphiques en fonctiondu type de données
+      et de leurs caractéristiques (numériquesou catégorielles)
+    - Produire rapidement un graphique pour guider un processusd’analyse en cours
+    - Produire des graphiques élégants et clairs pour être utilisédans un support
+      de communication
+    pratique: '*'
+prerequis: Une connaissance de base en programmation. Une connaissance  sommaire de
+  python est recommandée.
+public: Ingénieurs, chefs de projets ou développeurs disposant d’une  connaissance
+  en programmation souhaitant découvrir les méthodes  de traitement de grands volumes
+  de données en python.
+titre: Technique de Big data analytics avec Python
