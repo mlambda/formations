@@ -1,69 +1,85 @@
 competences:
-- Identifier les opportunités offertes par le big data et lemachine learning
-- Identifier les aspects clefs des différents outils de traitementBig data
+- Identifier les opportunités offertes par le big data et le machine learning
+- Identifier les aspects clefs des différents outils de traitement Big data
 - Anticiper les problèmes et limites du machine learning
-nb_jours: '> 2 jours'
+intitule: Le Big Data désigne les volumes importants de données, structurés ou non,
+  qui permettent d'identifier les tendances, les opportunités et les menaces à travers
+  l'analyse de données. Il permet aux entreprises de prendre des décisions plus judicieuses,
+  d'optimiser leurs opérations et d'améliorer leur relation client en utilisant les
+  données pour un meilleur ciblage de leurs publics et une meilleure compréhension
+  de leurs comportements. La formation est conçue pour permettre aux participants
+  de comprendre les concepts fondamentaux et les technologies liées au Big data, ainsi
+  que les enjeux et les opportunités liés à cette technologie, notamment autour du
+  machine learing. Elle vous offrira une base solide sur le sujet vous permettra de
+  comprendre les principaux enjeux et opportunités liés au big data pour les entreprises,
+  ainsi qu'à les utiliser pour améliorer les pratiques de votre entreprise.
+nb_jours: 2 jours
 plan:
   partie-1:
     contenu:
     - Définition de ce qu'est le Big Data
-    - '{text:soft-page-break} Présentation des enjeux liés à lagestion de données
-      volumineuses (stockage, traitement,analyse)'
-    - Discussion des opportunités offertes par le Big Data (parexemple, amélioration
-      des prises de décisions, découvertede nouvelles tendances, etc.)
+    - Présentation des enjeux liés à la gestion de données volumineuses (stockage,
+      traitement, analyse)
+    - Discussion des opportunités offertes par le Big Data (par exemple, amélioration
+      des prises de décisions, découverte de nouvelles tendances, etc.)
     duree: 1 demi-journée
-    nom: 'Introduction au Big Data : définitions, enjeux et opportunités'
+    nom: 'Introduction au Big Data : définitions, enjeux et opportunités '
     objectifs:
-    - Reconnaître les défis liés à la gestion de grandes quantitésde données
-    - Identifier les opportunités potentielles que peut offrirl'analyse de ces données
-    pratique: '> À partir de leur milieu professionnel, les stagiaires devront > identifier
-      les données pertinentes dont ils disposent dans > leur entreprise et comment
-      ils pourraient les utiliser.'
+    - Reconnaître les défis liés à la gestion de grandes quantités de données
+    - Identifier les opportunités potentielles que peut offrir l'analyse de ces données
+    pratique: À partir de leur milieu professionnel, les stagiaires devront identifierles
+      données pertinentes dont ils disposent dans leur entreprise etcomment ils pourraient
+      les utiliser.
   partie-2:
     contenu:
-    - Présentation des différents types de données (structurées,semi-structurées,
-      non structurées) et des défis liés à leurgestion
-    - Discussion des différents systèmes de stockage de données(bases de données relationnelles,
-      systèmes NoSQL, etc.)
-    - Présentation des différentes techniques de traitement dedonnées volumineuses
+    - Présentation des différents types de données (structurées, semi-structurées,
+      non structurées) et des défis liés à leur gestion
+    - Discussion des différents systèmes de stockage de données (bases de données
+      relationnelles, systèmes NoSQL, etc.)
+    - Présentation des différentes techniques de traitement de données volumineuses
       (batch, en temps réel, etc.)
-    - Discussion des différentes méthodes d'analyse de données(statistiques descriptives,
-      analyse en composantes principales,etc.)
-    - Présentation des principaux frameworks open source pourla gestion de données
+    - Discussion des différentes méthodes d'analyse de données (statistiques descriptives,
+      analyse en composantes principales, etc.)
+    - Présentation des principaux frameworks open source pour la gestion de données
       volumineuses (Hadoop, Spark, etc.)
-    - Discussion des fonctionnalités clés de ces outils (par exemple,MapReduce, RDD,
+    - Discussion des fonctionnalités clés de ces outils (par exemple, MapReduce, RDD,
       etc.)
-    - Présentation de quelques outils de visualisation de donnéespopulaires (par exemple,
-      Tableau, Power BI, etc.)
+    - Présentation de quelques outils de visualisation de données populaires (par
+      exemple, Tableau, Power BI, etc.)
     duree: 1 demi-journée
-    nom: Principes de base de la gestion de données volumineuses
+    nom: Principes de base de la gestion de données volumineuses 
     objectifs:
-    - Anticiper les besoins pour mettre en place des techniquesBig data
-    - Identifier les techniques de traitement pertinentes pourleurs données
-    - Identifier les aspects clefs des différents outils de traitementBig data
-    pratique: En se reposant, sur les données potentielles qu’ils auront identifiées
-      dans la pratique précédente, les stagiaires devront déterminer les types de
-      données dont ils disposent et les techniques qui semblent pertinentes pour les
-      traiter
+    - Anticiper les besoins pour mettre en place des techniques Big data
+    - Identifier les techniques de traitement pertinentes pour leurs données
+    - Identifier les aspects clefs des différents outils de traitement Big data
+    pratique: En se reposant, sur les données potentielles qu’ils auront identifiéesdans
+      la pratique précédente, les stagiaires devront déterminer les typesde données
+      dont ils disposent et les techniques qui semblent pertinentespour les traiter
   partie-3:
     contenu:
-    - Présentation des différents types d'apprentissage automatique(supervisé, non
+    - Présentation des différents types d'apprentissage automatique (supervisé, non
       supervisé, renforcement)
-    - Discussion des différents types de modèles de machine learning(régression, classification,
-      clustering, etc.)
-    - Présentation des principales librairies de machine learning(scikit-learn, TensorFlow,
+    - Discussion des différents types de modèles de machine learning (régression,
+      classification, clustering, etc.)
+    - Présentation des principales librairies de machine learning (scikit-learn, TensorFlow,
       etc.)
+    - Mise en pratique des concepts de machine learning pour l'analyse de données
+      volumineuses à l'aide d'exemples concrets
+    - Utilisation des outils et des librairies de machine learning pour construire
+      des modèles de prédiction et de clustering sur des jeux de données réels
+    - Discussion des limites et des défis liés à l'utilisation de ces techniques pour
+      des données volumineuses
     duree: 1 journée
-    nom: Introduction aux concepts de machine learning et de
+    nom: Introduction aux concepts de machine learning et de l'apprentissage automatique 
     objectifs:
-    - Identifier des utilisations pertinentes du machine learningsur un projet Bag
+    - Identifier des utilisations pertinentes du machine learning sur un projet Bag
       data
-    - Choisir les modèles adaptés pour un problème et un jeu de donnéesspécifiques
+    - Choisir les modèles adaptés pour un problème et un jeu de données spécifiques
     - Anticiper les problèmes et limites du machine learning
-    pratique: '* À partir de données déjà identifiées, les stagiaires devront   trouver
-      des applications potentielles utilisant le machine   learning en détaillant
-      l’approche et le type d’apprentissage'
+    pratique: '-   À partir de données déjà identifiées, les stagiaires devront trouver    des
+      applications potentielles utilisant le machine learning en    détaillant l’approche
+      et le type d’apprentissage'
 prerequis: Pas de prérequis
-public: Chef d’entreprise, chef de projet, ingénieurs souhaitant avoir  un premier
-  contact avec les concepts du Big data et ses moyens  d’analyses
+public: Chef d’entreprise, chef de projet, ingénieurs souhaitant avoir un    premier
+  contact avec les concepts du Big data et ses moyens d’analyses
 titre: Big data, enjeux et apports du Big data

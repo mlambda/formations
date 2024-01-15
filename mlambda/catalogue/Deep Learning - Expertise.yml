@@ -1,14 +1,23 @@
 competences:
-- Créer et entraîner un modèle de réseaux de neurones avec Keraset Tensorflow
-- Utiliser le deep learning pour tout type d’apprentissage(Classification, prédiction,
+- Créer et entraîner un modèle de réseaux de neurones avec Keras et Tensorflow
+- Utiliser le deep learning pour tout type d’apprentissage (Classification, prédiction,
   non supervisé, renforcement)
 - Traiter automatiquement des données tabulaires
 - Traiter automatiquement des données images
 - Traiter automatiquement des données textuelles ou séquentielles
 - Proposer une structure de modèle moderne à un problème particulier
-- Implémenter les méthodes les plus récentes pour tout typede problème d’apprentissage
+- Implémenter les méthodes les plus récentes pour tout type de problème d’apprentissage
   automatique
-nb_jours: '> 4 jours'
+intitule: Le deep learning repose sur un ensemble d’algorithmes, de méthodes et de
+  modèles basés sur les réseaux de neurones. Produisant d’impressionnants résultats,
+  ils sont utilisés dans de nombreux secteurs industriels et économiques. Cette formation
+  présente l’ensemble des techniques du deep learning sur un vaste ensemble de types
+  de données. Les stagiaires seront amenés à approfondir leurs connaissances et leurs
+  techniques sur les modèles les plus récents des réseaux de neurones en traitant
+  aussi bien des données tabulaires, que de l’image ou du texte. Les travaux pratiques
+  en python recouvrent 50 % de la formation afin que les stagiaires puissent appréhender
+  les outils et les modèles et les réutiliser aisément.
+nb_jours: 4 jours
 plan:
   partie-1:
     contenu:
@@ -18,51 +27,53 @@ plan:
     - Convergence des modèles et choix des optimiseurs du taux d’apprentissage
     - Problèmes liés à la disparition ou l’explosion de gradient
     - Impact et choix d’un batch
-    - 'Techniques de régularisation : Régularisation L1/L2, bruitage,dropout'
+    - 'Techniques de régularisation : Régularisation L1/L2, bruitage, dropout'
     - Recherche des hyperparamètres
     - Problèmes d’interprétabilité
-    - La librairie Keras pour implémenter des réseaux de neuronesprofonds en python
+    - La librairie Keras pour implémenter des réseaux de neurones profonds en python
     - Implémentation avancée avec le GradientTape
-    duree: 1 journée {text:soft-page-break}
-    nom: Concepts fondamentaux des réseaux de neurones
+    duree: 1 journée
+    nom: Concepts fondamentaux des réseaux de neurones 
     objectifs:
-    - Concevoir et implémenter des modèles de réseaux de neuronessur des données tabulaires
-      en Keras pour la régression et laclassification
-    - Évaluer la performance de leurs modèles et adapter les hyperparamètrespour améliorer
-      l’apprentissage
-    - Identifier les problèmes d’apprentissage tels que le surapprentissageou le manque
-      de données et trouver les moyens de les résoudre
-    - Reproduire un modèle état de l’art non implémenté dans la librairieKeras
-    pratique: '* Mise en place d’un réseau de neurones sans code sur des données   simples.
-      Les stagiaires doivent choisir le meilleur ensemble   d’hyperparamètres pour
-      apprendre au mieux un jeu de données   sans surapprentissage et en optimisant
-      le temps de convergence   du modèle. * Implémentation d’un réseau de neurones
-      via Keras sur un problème   de classification multiclasse. Les stagiaires devront
-      utiliser   les concepts de séparation de jeux de données et d’évaluation   introduits
-      en partie 2 et déployer un protocole de recherche   d’hyperparamètres * Implémentation
-      de couches et de modèles personnalisés en   utilisant le GradientTape'
+    - Concevoir et implémenter des modèles de réseaux de neurones sur des données
+      tabulaires en Keras pour la régression et la classification
+    - Évaluer la performance de leurs modèles et adapter les hyperparamètres pour
+      améliorer l’apprentissage
+    - Identifier les problèmes d’apprentissage tels que le surapprentissage ou le
+      manque de données et trouver les moyens de les résoudre
+    - Reproduire un modèle état de l’art non implémenté dans la librairie Keras
+    pratique: '-   Mise en place d’un réseau de neurones sans code sur des données    simples.
+      Les stagiaires doivent choisir le meilleur ensemble    d’hyperparamètres pour
+      apprendre au mieux un jeu de données sans    surapprentissage et en optimisant
+      le temps de convergence du modèle.-   Implémentation d’un réseau de neurones
+      via Keras sur un problème de    classification multiclasse. Les stagiaires devront
+      utiliser les    concepts de séparation de jeux de données et d’évaluation introduits    en
+      partie 2 et déployer un protocole de recherche d’hyperparamètres-   Implémentation
+      de couches et de modèles personnalisés en utilisant    le GradientTape'
   partie-2:
     contenu:
-    - 'Traitement de l’image avec de réseau de neurones : les réseauxde neurones à
-      convolutions'
+    - 'Traitement de l’image avec de réseau de neurones : les réseaux de neurones
+      à convolutions'
     - Principe des convolutions
-    - 'Autres mécanismes des réseaux à convolutions : pooling, paddinget strides'
-    - 'Architectures modernes de réseaux à convolutions : VGG, EfficientNet,DenseNet,
+    - 'Autres mécanismes des réseaux à convolutions : pooling, padding et strides'
+    - 'Architectures modernes de réseaux à convolutions : VGG, EfficientNet, DenseNet,
       etc.'
-    - 'Techniques avancées utilisant réseaux à convolutions : segmentation,détection
+    - 'Techniques avancées utilisant réseaux à convolutions : segmentation, détection
       d’objet, super-échantillonnage, détection d’anomalies'
     - Implémentation des réseaux à convolutions dans Keras
     duree: 1 journée
-    nom: Réseaux de neurones à convolutions
+    nom: Réseaux de neurones à convolutions 
     objectifs:
-    - Implémenter un modèle de réseaux de neurones pour le traitementautomatique d’images
-    - Définir les modèles pertinents à utiliser en fonction deslimitations techniques
+    - Implémenter un modèle de réseaux de neurones pour le traitement automatique
+      d’images
+    - Définir les modèles pertinents à utiliser en fonction des limitations techniques
       et des objectifs à réaliser
-    - Utiliser le transfert d’apprentissage pour améliorer lesmodèles de traitement
+    - Utiliser le transfert d’apprentissage pour améliorer les modèles de traitement
       automatique d’images
-    - Implémenter des modèles complexes de réseaux à convolutionspour des taches spécifiques
-    pratique: '* Implémentation d’un réseau de neurones à convolutions pour   la classification
-      d’un jeu de données de paysage * Implémentation d’un modèle de détections d’anomalies
+    - Implémenter des modèles complexes de réseaux à convolutions pour des taches
+      spécifiques
+    pratique: '-   Implémentation d’un réseau de neurones à convolutions pour la    classification
+      d’un jeu de données de paysage-   Implémentation d’un modèle de détections d’anomalies
       semi-supervisé'
   partie-3:
     contenu:
@@ -70,18 +81,18 @@ plan:
     - 'LSTM : Long Short Term Memory'
     - 'GRU : Gated Recurrent Units'
     - Traitement automatique du texte et de la langue
-    - 'Traitement des flux vidéos : association avec les réseauxconvolutionnels'
+    - 'Traitement des flux vidéos : association avec les réseaux convolutionnels'
     - Limitations des réseaux récurrents et problèmes de convergence
     duree: 1 journée
-    nom: Réseaux Récurrents
+    nom: Réseaux Récurrents 
     objectifs:
     - Traiter automatiquement des données séquentielles
     - Classifier des données séquentielles
     - Générer des prédictions ou des séquences futures
     - Traiter des données vidéos
-    pratique: '* Création d’un modèle de reconnaissance d’auteurs automatique * Création
-      d’un modèle de solveur arithmétique sur données   textuelles (Traducteur texte
-      → maths) * Génération automatique de texte'
+    pratique: '-   Création d’un modèle de reconnaissance d’auteurs automatique-   Création
+      d’un modèle de solveur arithmétique sur données textuelles    (Traducteur texte
+      → maths)-   Génération automatique de texte'
   partie-4:
     contenu:
     - La réduction de dimensions par les réseaux de neurones
@@ -89,18 +100,18 @@ plan:
     - Concept d’embedding
     - Notions d’espace latent
     - 'Réseaux adversaire : Generative Adversarial Networks'
-    - Problème de convergence et modèles avancés ; WassersteinGAN
+    - Problème de convergence et modèles avancés ; Wasserstein GAN
     duree: 1 demi-journée
-    nom: 'Génération automatique : Auto-encodeurs et GAN'
+    nom: 'Génération automatique : Auto-encodeurs et GAN '
     objectifs:
     - Identifier les modèles avancés basés sur des structures encodeur-décodeur
-    - Concevoir et implémenter des algorithmes des auto-encodeurssur des tâches d’apprentissage
+    - Concevoir et implémenter des algorithmes des auto-encodeurs sur des tâches d’apprentissage
       non supervisés
-    - Intégrer des modèles auto-encodeurs à des modèles existantsde traitements supervisés
-      pour réduire la dimensionnalitéd’un jeu de données
+    - Intégrer des modèles auto-encodeurs à des modèles existants de traitements supervisés
+      pour réduire la dimensionnalité d’un jeu de données
     - Produire des modèles génératifs de données
-    pratique: '* Implémentation d’un auto-encodeur en keras et visualisation   de
-      l’espace latent'
+    pratique: '-   Implémentation d’un auto-encodeur en keras et visualisation de    l’espace
+      latent'
   partie-5:
     contenu:
     - Concepts du reinforcement learning
@@ -108,15 +119,15 @@ plan:
     - Deep Q Learning
     - Applications
     duree: 1 demi-journée
-    nom: Apprentissage par renforcement
+    nom: Apprentissage par renforcement 
     objectifs:
     - Développer un modèle de renforcement
-    - Estimer le temps, le volume de données et les ressources nécessairespour entrainer
+    - Estimer le temps, le volume de données et les ressources nécessaires pour entrainer
       un modèle d’apprentissage par renforcement.
-    pratique: '* Utilisation d’un modèle de renforcement simple pour apprendre   une
-      table de Q-learning'
-prerequis: Une connaissance de base à Python est requise, ainsi qu’une connaissance  des
+    pratique: '-   Utilisation d’un modèle de renforcement simple pour apprendre une    table
+      de Q-learning'
+prerequis: Une connaissance de base à Python est requise, ainsi qu’une connaissance    des
   concepts clefs du machine learning et des réseaux de neurones.
-public: Ingénieurs et data scientists souhaitant une vision complète  du domaine du
+public: Ingénieurs et data scientists souhaitant une vision complète du domaine    du
   deep learning et des méthodes état de l’art.
 titre: Deep Learning – Expertise

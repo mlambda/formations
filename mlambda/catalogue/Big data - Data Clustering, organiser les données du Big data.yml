@@ -1,6 +1,11 @@
 competences:
+- Choisir les algorithmes clustering pertinents sur des jeux de données variés.
 - Choisir une mesure de qualité adaptée à un problème.
 - Exploiter les clusters obtenus dans un objectif métier.
+intitule: Le clustering de données vise à regrouper, au sein de "données massives",
+  des données similaires afin d'identifier des connaissances pertinentes et permettre
+  une prise de décision adaptée. Ce cours vous permettra de comprendre les fondamentaux
+  du clustering de données et de les mettre en pratique sur des cas concrets.
 nb_jours: 3 jours
 plan:
   partie-1:
@@ -9,10 +14,10 @@ plan:
     - La découverte d’informations « cachées » dans les données
     - La complexité algorithmique et ses implications
     duree: 1 demi-journée
-    nom: Introduction au clustering de données
+    nom: Introduction au clustering de données 
   partie-2:
     contenu:
-    - 'Les différentes approches pour spécifier un cluster : centroïde,densité, groupe,
+    - 'Les différentes approches pour spécifier un cluster : centroïde, densité, groupe,
       graphes, ...'
     - 'Les différents algorithmes : Clustering simple ou hiérarchique'
     - Les algorithmes K-means
@@ -20,12 +25,11 @@ plan:
     - Les approches agglomérantes ou divisantes
     - Les marches aléatoires
     duree: 1 demi-journée
-    nom: Techniques de clustering
+    nom: Techniques de clustering 
     objectifs:
-    - Identifier les avantages et inconvénients des différentsalgorithmes.
+    - Identifier les avantages et inconvénients des différents algorithmes.
     - Choisir un ou plusieurs algorithmes adaptés à leurs données
-    pratique: Mise en situation d’évaluation comparée de différents algorithmes de
-      clustering.
+    pratique: Mise en situation d’évaluation comparée de différents algorithmes declustering.
   partie-3:
     contenu:
     - K-means simple, Graclus, Cluto.
@@ -35,36 +39,36 @@ plan:
     - NCut, approche Girvan Newman...
     - Extraction d'arbres couvrants et composition.
     duree: 1 demi-journée
-    nom: Outils pour le clustering
+    nom: Outils pour le clustering 
     objectifs:
     - Utiliser les différentes bibliothèques utiles pour le clustering
-    pratique: Utilisation des bibliothèques implémentant les algorithmes choisis dans
-      la partie précédente
+    pratique: Utilisation des bibliothèques implémentant les algorithmes choisis dansla
+      partie précédente
   partie-4:
     contenu:
     - 'Les différents critères : Silouhette, Ward, Dunn, ...'
     - Les contraintes
     duree: 1 demi-journée
-    nom: Mesures de qualité de clustering
+    nom: Mesures de qualité de clustering 
     objectifs:
-    - Identifier les avantages et inconvénients des différentesmesures de qualité
+    - Identifier les avantages et inconvénients des différentes mesures de qualité
     - Choisir une ou plusieurs mesures adaptés à leur problématique.
-    pratique: Sélection et utilisation de mesures de qualité pour les clusters obtenus
-      dans la partie précédente.
+    pratique: Sélection et utilisation de mesures de qualité pour les clusters obtenusdans
+      la partie précédente.
   partie-5:
     contenu:
-    - Les prétraitements spécifiques aux données textuelles :Bag of words, TF-IDF,
-      Embeddings, ...
+    - 'Les prétraitements spécifiques aux données textuelles : Bag of words, TF-IDF,
+      Embeddings, ...'
     - Les mesures de similarités
     duree: 1 journée
-    nom: Clustering de documents textuels
+    nom: Clustering de documents textuels 
     objectifs:
-    - Identifier les avantages et inconvénients des différentsprétraitements spécifiques
+    - Identifier les avantages et inconvénients des différents prétraitements spécifiques
       au texte.
-    - Exploiter le résultat des clusters obtenus.{text:soft-page-break}
-    pratique: Mise en œuvre de différents algorithmes de clustering sur une base de
-      documents textuels avec différents prétraitements.
+    - Exploiter le résultat des clusters obtenus.
+    pratique: Mise en œuvre de différents algorithmes de clustering sur une base dedocuments
+      textuels avec différents prétraitements.
 prerequis: Une connaissance de base à Python et pandas est requise.
-public: Ingénieurs, chefs de projets, développeurs et data analyste  souhaitant une
-  expertise sur les techniques d’analyse de données  dans le Big data.
+public: Ingénieurs, chefs de projets, développeurs et data analyste souhaitant    une
+  expertise sur les techniques d’analyse de données dans le Big data.
 titre: Big data - Data Clustering, organiser les données du Big data

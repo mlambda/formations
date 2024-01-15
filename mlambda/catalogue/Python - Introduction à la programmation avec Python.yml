@@ -1,0 +1,136 @@
+competences:
+- Écrire un algorithme pour résoudre un problème spécifique
+- Automatiser une tâche jusque là faite « à la main »
+- Interagir avec le système d'exploitation pour manipuler et modifier des fichiers
+intitule: Que vous soyez un débutant enthousiaste cherchant à percer les mystères
+  du code ou un professionnel souhaitant développer des compétences en programmation,
+  ce cours vous offre une porte d'entrée accessible et complète grâce à Python. Python
+  est un langage de programmation simple à apprendre et qui vous permettra d'appréhender
+  facilement les concepts fondamentaux de la programmation et du développement logiciel.
+nb_jours: 3 jours
+plan:
+  partie-1:
+    contenu:
+    - Du programme à l'algorithme, de l'algorithme au langage
+    - 'L''architecture de Von Neumann : le programme et la machine'
+    - Langage compilé ou interprété
+    duree: 1 h
+    nom: Concepts fondamentaux de la programmation 
+    objectifs:
+    - Distinguer l'algorithme du programme
+    - Identifier les composants d'un ordinateur et leurs rôles dans l'exécution d'un
+      programme
+  partie-2:
+    contenu:
+    - Définition d'une variable
+    - 'Les différents types de base et leur représentation machine : booléen, entier,
+      flottant'
+    - Lecture, affectation et affichage
+    - Transformation de types
+    - Spécificités du typage en python
+    duree: 1 h
+    nom: Variables et types 
+    objectifs:
+    - Lire et afficher des variables
+    - Modifier des variables, tant le contenu que leur type
+    pratique: Manipulations simples de variables et des différents types avec Python
+  partie-3:
+    contenu:
+    - 'Opérateurs arithmétiques : +, -, *, etc.'
+    - 'Logique booléenne et opérateurs : ou, et, ou exclusif, etc.'
+    - Priorités des opérateurs
+    - Conversions implicites de types
+    duree: 2 heures
+    nom: Opérateurs 
+    objectifs:
+    - Utiliser les opérateurs pour construire une expression complexe de calcul
+    - Formuler un expression booléenne et la construire avec les opérateurs à disposition
+    pratique: Réalisations de calculs numériques simples avec Python
+  partie-4:
+    contenu:
+    - Les listes, files et tuples
+    - Les dictionnaires
+    - Les ensembles
+    - Création des structures, méthodes d'accès, modification
+    - 'Notion de complexité : comparer les avantages et inconvénients de chaque structure'
+    duree: 3 h
+    nom: Structures de données 
+    objectifs:
+    - Manipuler des structures de données
+    - Identifier la structure de données la plus pertinente en fonction du besoin
+    pratique: Manipulation de différentes structures de données en Python
+  partie-5:
+    contenu:
+    - Représentation du texte en informatique et encodage (norme UTF-8)
+    - Le type « string »
+    - 'Opérations sur les chaînes de caractères : +, recherche de texte, séparation,
+      rassemblement...'
+    - Formatage de texte en Python
+    duree: 1 heures
+    nom: Les chaînes de caractères
+    objectifs:
+    - Identifier et isoler des fragments de code facilement réutilisable pour le séparer
+      dans une fonctions
+    - Structurer son code pour le rendre facilement compréhensible à l'aide de fonctions
+    - Adapter les paramètres d'une fonction pour la rendre plus généralisable et réutilisable
+    pratique: Manipulation de chaînes de caractères en Python
+  partie-6:
+    contenu:
+    - 'Structures conditionnelles : si, sinon, sélecteurs, etc.'
+    - 'Structures répétitives : boucles tant que (while), boucle pour (for)'
+    - Spécificité de la boucle « for » en python
+    - 'Compréhension de liste : création de structure de données avec des boucles'
+    duree: 3 heures
+    nom: Structures de contrôles
+    objectifs:
+    - Choisir la structure de contrôles adaptée pour réaliser une tâche simple
+    - Écrire un programme complexe en utilisant les structures de contrôles
+    - Créer des listes et dictionnaires avec la compréhension de listes
+    pratique: Réalisation d'exercices en Python utilisant les structures de contrôleset
+      manipulant des structures de données et des chaînes de caractères
+  partie-7:
+    contenu:
+    - 'L''intérêt des fonctions : pourquoi isoler du code ?'
+    - Paramètres:passage par liste, passage par dictionnaire, valeurs par défaut
+    - Retour de valeurs d'une fonction
+    - Principe de récursivité
+    - Particularités des fonctions en Python
+    duree: 2 heures
+    nom: Fonctions
+    objectifs:
+    - Identifier et isoler des fragments de code facilement réutilisable pour le séparer
+      dans une fonctions
+    - Structurer son code pour le rendre facilement compréhensible à l'aide de fonctions
+    - Adapter les paramètres d'une fonction pour la rendre plus généralisable et réutilisable
+    pratique: Mise en pratique python autour des fonctions
+  partie-8:
+    contenu:
+    - 'Les fonctions natives : sum, zip, type, etc.'
+    - Qu'est ce qu'une librairie ?
+    - 'Survol des librairies les plus utilisées : os, sys, pathlib, re, shutil, etc.'
+    duree: 1 heures
+    nom: La librairie standard de Python
+    objectifs:
+    - Utiliser la librairie standard pour simplifier son code et éviter d'implémenter
+      des algorithmes classiques de la littérature
+    - Rechercher dans la documentation des fonctionnalités de la librairie standard
+    pratique: Utilisation des fonctions natives dans des exercices python
+  partie-9:
+    contenu:
+    - Lire et écrire dans des fichiers avec `pathlib` et `open`
+    - Les types d'ouvertures de fichiers
+    - Introduction au gestionnaire de contexte pour gérer l'ouverture et fermeture
+      de fichiers
+    - Rechercher des fichiers avec `glob`
+    - Créer, déplacer et supprimer des fichiers ou des dossiers avec `os` et `shutils`
+    duree: 4 heures
+    nom: Manipulations de fichiers
+    objectifs:
+    - Mettre en place un projet de développement en Python
+    - Maintenir et mettre à jour les librairies utilisées dans un projet
+    - Structurer un projet de développement et l'historiser
+    pratique: Projet final de développement sur une après midi avec développementd'une
+      application utilisant l'ensemble des compétences acquises dans laformation
+prerequis: Pas de prérequis
+public: Toute personne souhaitant développer des compétences en programmations
+titre: Python – Introduction à la programmation avec Python

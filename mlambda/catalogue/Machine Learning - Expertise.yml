@@ -1,86 +1,108 @@
 competences:
-- Choisir les algorithmes les plus pertinents pour un problèmeet un jeu de données
+- Choisir les algorithmes les plus pertinents pour un problème et un jeu de données
   définis
-- Concevoir et améliorer un modèle non supervisé pour l’analyse,le prétraitement d’une
-  tâche de prédiction et la réductionde dimension
-- Concevoir et améliorer un modèle supervisé pour la prédictionou la classification
+- Concevoir et améliorer un modèle non supervisé pour l’analyse, le prétraitement
+  d’une tâche de prédiction et la réduction de dimension
+- Concevoir et améliorer un modèle supervisé pour la prédiction ou la classification
   à partir d’un jeu de données spécifiques
-- Utiliser des modèles deep learning aussi bien en superviséque non supervisé
-- Analyser les modèles produits via un ensemble varié de métriqueset de techniques
-  d’évaluation pour guider le développementde modèles efficaces
+- Utiliser des modèles deep learning aussi bien en supervisé que non supervisé
+- Analyser les modèles produits via un ensemble varié de métriques et de techniques
+  d’évaluation pour guider le développement de modèles efficaces
 - Structurer un projet de machine learning
-nb_jours: '> 4 jours'
+intitule: Le machine learning regroupe l’ensemble des méthodes et techniques qui permettent
+  d’analyser, de modéliser et d’extraire automatiquement de l’information depuis un
+  ensemble de données. Cette formation revient sur l’ensemble du machine learning
+  pour approfondir les grandes méthodes du domaine, des méthodes linéaires aux deep
+  learning, en détaillant les forces et faiblesses des différentes classes d’algorithme.
+  Les stagiaires sont formés aux librairies modernes python du machine learning (sklearn,
+  XGBoost, keras) ainsi qu’aux bonnes pratiques du domaine pour interpréter et améliorer
+  les performances de leurs modèles. La formation est divisée pour moitié de sections
+  de cours théoriques et pour l’autre moitié de mise en pratique en python.
+nb_jours: 4 jours
 plan:
+  partie-1:
+    contenu:
+    - Qu’est-ce que le machine learning ? Extraire l’information contenue dans de
+      grands volumes de données
+    - Les types de problème et leur classe d’algorithme (supervisé, non supervisé,
+      renforcement…)
+    - Les grandes étapes de construction d’un modèle d’apprentissage automatique de
+      la collecte de données à l’amélioration de modèles
+    - Besoins et limitations sur un projet en fonction de l’objectif fixé d’un problème
+      de machine learning
+    - Biais d’analyse et risque d’erreur d’interprétation
+    duree: 1 heure
+    nom: Rappel sur le Machine Learning 
   partie-2:
     contenu:
-    - Mesurer la qualité d’un modèle de machine learning en vue d’améliorationet de
-      suivi de la qualité.
+    - Mesurer la qualité d’un modèle de machine learning en vue d’amélioration et
+      de suivi de la qualité.
     - Les concepts de surapprentissage et sous-apprentissage
-    - La structuration des jeux de données en jeux d’entraînement,de validation et
+    - La structuration des jeux de données en jeux d’entraînement, de validation et
       de tests
     - La validation croisée
-    - Les mesures de qualité d’un modèle adaptées à un problème particulierde prédiction
-      (MSE, MAE, r² score…), de classification (Rappel,F-mesure, AUC…), de clustering
-      (silhouette, elbow…) ou liéesà des données spécifiques (BLUE score, ranking…)
+    - Les mesures de qualité d’un modèle adaptées à un problème particulier de prédiction
+      (MSE, MAE, r² score…), de classification (Rappel, F-mesure, AUC…), de clustering
+      (silhouette, elbow…) ou liées à des données spécifiques (BLUE score, ranking…)
     - Recherche des hyperparamètres
-    - Les mesures extrinsèques pour le suivi de qualité et la non-régressiondes modèles
+    - Les mesures extrinsèques pour le suivi de qualité et la non-régression des modèles
       (A/B testsing, Multi-armed bandit)
     duree: 1 demi-journée
-    nom: Évaluations de modèles
+    nom: Évaluations de modèles 
     objectifs:
-    - Structurer leurs données pour détecter des problèmes de surapprentissagedes
+    - Structurer leurs données pour détecter des problèmes de surapprentissage des
       modèles.
-    - Évaluer des modèles tout au long de la mise en place d’une solutionde machine
-      learning {text:soft-page-break} pour guideret améliorer la conception des modèles
+    - Évaluer des modèles tout au long de la mise en place d’une solution de machine
+      learning pour guider et améliorer la conception des modèles
     - Choisir et adapter les mesures pertinentes pour leur tache
-    - Suivre la qualité des modèles après leur déploiement en employantdes métriques
-      adaptées orientées sur les utilisateurs finauxdes modèles
+    - Suivre la qualité des modèles après leur déploiement en employant des métriques
+      adaptées orientées sur les utilisateurs finaux des modèles
     pratique: Mise en situation d’évaluation comparée de modèles de prédiction sur
-      des données immobilières en utilisant de l’A/B testing
+      desdonnées immobilières en utilisant de l’A/B testing
   partie-3:
     contenu:
-    - 'Les deux grands champs de l’apprentissage supervisé : régressionet classification'
+    - 'Les deux grands champs de l’apprentissage supervisé : régression et classification'
     - Régression linéaire et logistique
     - Hypothèse de variété (Manifold hypothesis)
     - Machine à vecteurs de supports (SVM)
     - Arbres de décision et forêts aléatoires
     - Méthodes boostées
     duree: 1 journée
-    nom: Modèles supervisés
+    nom: Modèles supervisés 
     objectifs:
-    - Concevoir et améliorer des algorithmes de machine learningsupervisés pour la
+    - Concevoir et améliorer des algorithmes de machine learning supervisés pour la
       régression et la classification
-    - Choisir les modèles supervisés adaptés pour un problème etun jeu de données
+    - Choisir les modèles supervisés adaptés pour un problème et un jeu de données
       spécifiques
     - Comparer efficacement des modèles entre eux
-    - Interpréter les mesures pour se prémunir des problèmes desurapprentissage
-    pratique: '* Développement de solutions de régression utilisant différents   modèles
-      de la librairie scikit-learn et mettant en pratique   les méthodes de séparation
-      de données, d’évaluation de validation   introduites dans la partie 2 * Utilisation
-      de méthodes boostées avec XGBoost pour améliorer   l’apprentissage'
+    - Interpréter les mesures pour se prémunir des problèmes de surapprentissage
+    pratique: '-   Développement de solutions de régression utilisant différents    modèles
+      de la librairie scikit-learn et mettant en pratique les    méthodes de séparation
+      de données, d’évaluation de validation    introduites dans la partie 2-   Utilisation
+      de méthodes boostées avec XGBoost pour améliorer    l’apprentissage'
   partie-4:
     contenu:
-    - 'La réduction de dimensions : Sélection de dimension, PCA,LDA, UMAP...'
-    - 'Le clustering pour la découverte de groupe : clustering hiérarchique,méthodes
-      kNN, {text:soft-page-break} mixtures de gaussiennes…'
+    - 'La réduction de dimensions : Sélection de dimension, PCA, LDA, UMAP...'
+    - 'Le clustering pour la découverte de groupe : clustering hiérarchique, méthodes
+      kNN, mixtures de gaussiennes…'
     - 'Approches mixtes : réduction de dimension +clustering'
-    - 'Détection d’anomalies : PCA, Local outlier factor, IsolationForest'
+    - 'Détection d’anomalies : PCA, Local outlier factor, Isolation Forest'
     - Approches semi-supervisées et combinaison de méthodes
     duree: 1 journée
-    nom: Modèles non supervisés
+    nom: Modèles non supervisés 
     objectifs:
-    - Concevoir et implémenter des algorithmes de machine learningnon supervisés pour
-      le clustering, la réduction de dimensionset la détection d’anomalies
-    - Choisir les modèles non supervisés adaptés pour un problèmeet un jeu de données
-      en fonction des limites de chaque modèleet des objectifs recherchés
-    - Choisir les mesures les plus pertinentes pour interpréterles résultats d’un
+    - Concevoir et implémenter des algorithmes de machine learning non supervisés
+      pour le clustering, la réduction de dimensions et la détection d’anomalies
+    - Choisir les modèles non supervisés adaptés pour un problème et un jeu de données
+      en fonction des limites de chaque modèle et des objectifs recherchés
+    - Choisir les mesures les plus pertinentes pour interpréter les résultats d’un
       modèle
-    - Utiliser les méthodes non supervisées pour améliorer desméthodes supervisées
+    - Utiliser les méthodes non supervisées pour améliorer des méthodes supervisées
       ou pour initier un modèle semi-supervisé
-    pratique: '* Utilisation de la réduction de données pour la mise en place   d’une
-      analyse de données et pour le prétraitement d’un jeu   de données * Utilisation
-      combinée du clustering et de la réduction de données   pour identifier des groupes
-      dans un jeu de données contenant   un nombre élevé de caractéristiques'
+    pratique: '-   Utilisation de la réduction de données pour la mise en place d’une    analyse
+      de données et pour le prétraitement d’un jeu de données-   Utilisation combinée
+      du clustering et de la réduction de données    pour identifier des groupes dans
+      un jeu de données contenant un    nombre élevé de caractéristiques'
   partie-5:
     contenu:
     - Lien avec la régression linéaire
@@ -91,42 +113,43 @@ plan:
     - Impact et choix d’un batch
     - Recherche des hyperparamètres
     - Problèmes d’interprétabilité
-    - La librairie Keras pour implémenter des réseaux de neuronesprofonds en python
+    - La librairie Keras pour implémenter des réseaux de neurones profonds en python
     duree: 1 journée
-    nom: Introduction aux réseaux de neurones :Perceptron
+    nom: Introduction aux réseaux de neurones :Perceptron multicouche 
     objectifs:
-    - Concevoir et implémenter des modèles de réseaux de neuronessur des données tabulaires
-      en Keras pour la régression et laclassification
-    - Évaluer la performance de leurs modèles et adapter les hyperparamètrespour améliorer
-      l’apprentissage
-    - Identifier les problèmes d’apprentissage tels que le surapprentissageou le manque
-      de données et trouver les moyens de les résoudre
-    - Reproduire un modèle état de l’art non implémenté dans la librairieKeras
-    pratique: '* Mise en place d’un réseau de neurones sans code sur des données   simples.
-      Les stagiaires doivent choisir le meilleur ensemble   d’hyperparamètres pour
-      apprendre au mieux un jeu de données   sans surapprentissage et en optimisant
-      le temps de convergence   du modèle. * Implémentation d’un réseau de neurones
-      via Keras sur un problème   de classification multiclasses. Les stagiaires devront   utiliser
-      les concepts de séparation de jeux de données et d’évaluation   introduits en
-      partie 2 et déployer un protocole de recherche   d’hyperparamètres'
+    - Concevoir et implémenter des modèles de réseaux de neurones sur des données
+      tabulaires en Keras pour la régression et la classification
+    - Évaluer la performance de leurs modèles et adapter les hyperparamètres pour
+      améliorer l’apprentissage
+    - Identifier les problèmes d’apprentissage tels que le surapprentissage ou le
+      manque de données et trouver les moyens de les résoudre
+    - Reproduire un modèle état de l’art non implémenté dans la librairie Keras
+    pratique: '-   Mise en place d’un réseau de neurones sans code sur des données    simples.
+      Les stagiaires doivent choisir le meilleur ensemble    d’hyperparamètres pour
+      apprendre au mieux un jeu de données sans    surapprentissage et en optimisant
+      le temps de convergence du modèle.-   Implémentation d’un réseau de neurones
+      via Keras sur un problème de    classification multiclasses. Les stagiaires
+      devront utiliser les    concepts de séparation de jeux de données et d’évaluation
+      introduits    en partie 2 et déployer un protocole de recherche d’hyperparamètres'
   partie-6:
     contenu:
-    - 'Traitement de l’image avec de réseau de neurones : les réseauxde neurones à
-      convolutions'
+    - 'Traitement de l’image avec de réseau de neurones : les réseaux de neurones
+      à convolutions'
     - Principe des convolutions
-    - 'Autres mécanismes des réseaux à convolutions : pooling, paddinget strides'
+    - 'Autres mécanismes des réseaux à convolutions : pooling, padding et strides'
     - Implémentation des réseaux à convolutions dans Keras
-    duree: 1 demi-journée {text:soft-page-break}
-    nom: Réseaux de neurones à convolutions
+    duree: 1 demi-journée
+    nom: Réseaux de neurones à convolutions 
     objectifs:
-    - Implémenter un modèle de réseaux de neurones pour le traitementautomatique d’images
-    - Utiliser le transfert d’apprentissage pour améliorer lesmodèles de traitement
+    - Implémenter un modèle de réseaux de neurones pour le traitement automatique
+      d’images
+    - Utiliser le transfert d’apprentissage pour améliorer les modèles de traitement
       automatique d’images
-    pratique: '* Implémentation d’un réseau de neurones à convolutions pour   la classification
+    pratique: '-   Implémentation d’un réseau de neurones à convolutions pour la    classification
       d’un jeu de données de paysage'
-prerequis: Une bonne connaissance de Python et pandas est requise ainsi  qu’une connaissance
+prerequis: Une bonne connaissance de Python et pandas est requise ainsi qu’une    connaissance
   en algèbre et statistique.
-public: Ingénieurs, chefs de projets, développeurs et data analyste  souhaitant une
-  vision globale sur les méthodes du machine learning  et du deep learning en révisant
+public: Ingénieurs, chefs de projets, développeurs et data analyste souhaitant    une
+  vision globale sur les méthodes du machine learning et du deep    learning en révisant
   les bonnes pratiques du domaine.
 titre: Machine Learning – Expertise

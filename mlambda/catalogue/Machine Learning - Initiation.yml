@@ -1,66 +1,73 @@
 competences:
-- Structurer et nettoyer des données en amont de la créationd’un modèle de traitement
-  automatique en utilisant la librairiepandas
-- Choisir les algorithmes les plus pertinents pour un problèmeet un jeu de données
+- Structurer et nettoyer des données en amont de la création d’un modèle de traitement
+  automatique en utilisant la librairie pandas
+- Choisir les algorithmes les plus pertinents pour un problème et un jeu de données
   définis
-- Concevoir et développer un modèle non supervisé pour la détectionde groupe en utilisant
+- Concevoir et développer un modèle non supervisé pour la détection de groupe en utilisant
   le clustering
-- Concevoir et développer un modèle supervisé pour la prédictionou la classification
+- Concevoir et développer un modèle supervisé pour la prédiction ou la classification
   à partir d’un jeu de données spécifiques
-- Analyser les modèles produits via un ensemble varié de métriqueset de techniques
-  d’évaluation pour guider le développementde modèles efficaces
-- Anticiper les problèmes techniques, légaux et éthiques liésà la mise en place de
+- Analyser les modèles produits via un ensemble varié de métriques et de techniques
+  d’évaluation pour guider le développement de modèles efficaces
+- Anticiper les problèmes techniques, légaux et éthiques liés à la mise en place de
   modèles de machine learning
-nb_jours: '> 4 jours'
+intitule: Le machine learning regroupe l’ensemble des méthodes et techniques qui permettent
+  d’analyser, de modéliser et d’extraire automatiquement de l’information depuis un
+  ensemble de données. Durant cette formation, les stagiaires découvriront et mettront
+  en pratique les méthodes et algorithmes essentiels du domaine. Les stagiaires seront
+  formés aux librairies modernes python du traitement de données (numpy, pandas...)
+  et du machine learning (sklearn) afin de pouvoir développer par eux-mêmes un modèle
+  d’apprentissage automatique en respectant les bonnes pratiques du domaine.
+nb_jours: 4 jours
 plan:
   partie-1:
     contenu:
-    - Qu’est-ce que le machine learning ? Extraire l’informationcontenue dans de grands
-      volumes de données
-    - Les types de problème et leur classe d’algorithme (supervisé,non supervisé,
+    - Qu’est-ce que le machine learning ? Extraire l’information contenue dans de
+      grands volumes de données
+    - Les types de problème et leur classe d’algorithme (supervisé, non supervisé,
       renforcement…)
-    - Les grandes étapes de construction d’un modèle d’apprentissageautomatique de
-      la collecte de données à l’amélioration demodèles
-    - Besoins et limitations sur un projet en fonction de l’objectiffixé d’un problème
+    - Les grandes étapes de construction d’un modèle d’apprentissage automatique de
+      la collecte de données à l’amélioration de modèles
+    - Besoins et limitations sur un projet en fonction de l’objectif fixé d’un problème
       de machine learning
     - Biais d’analyse et risque d’erreur d’interprétation
     duree: 1 demi-journée
-    nom: Introduction au Machine Learning
+    nom: Introduction au Machine Learning 
     objectifs:
-    - Structurer un projet de machine learning pour un besoin etdes données spécifiques
-      en choisissant les classes des algorithmesles plus pertinentes
-    - Anticiper les besoins et limitations qui liés à la réalisationde leur tâche
+    - Structurer un projet de machine learning pour un besoin et des données spécifiques
+      en choisissant les classes des algorithmes les plus pertinentes
+    - Anticiper les besoins et limitations qui liés à la réalisation de leur tâche
       de machine learning
-    pratique: '> À partir des besoins des stagiaires sur leur projet, les stagiaires
-      > devront analyser les classes d’algorithmes à utiliser pour > répondre à leur
-      objectif et mesurer les limitations qui s’appliquent > à leur tache (financières,
-      techniques et temporelles)'
+    pratique: À partir des besoins des stagiaires sur leur projet, les stagiairesdevront
+      analyser les classes d’algorithmes à utiliser pour répondre àleur objectif et
+      mesurer les limitations qui s’appliquent à leur tache(financières, techniques
+      et temporelles)
   partie-2:
     contenu:
-    - Mesurer la qualité d’un modèle de machine learning en vue d’améliorationet de
-      suivi de la qualité.
+    - Mesurer la qualité d’un modèle de machine learning en vue d’amélioration et
+      de suivi de la qualité.
     - Les concepts de surapprentissage et sous-apprentissage
-    - La structuration des jeux de données en jeux d’entraînement,de validation et
+    - La structuration des jeux de données en jeux d’entraînement, de validation et
       de tests
     - La validation croisée
-    - Les mesures de qualité d’un modèle adaptées à un problème particulierde prédiction
-      (MSE, MAE, r² score…), de classification (Rappel,F-mesure, AUC…), de clustering
-      (silhouette, elbow…) ou liéesà des données spécifiques (BLUE score, ranking…)
-    - '{text:soft-page-break} Recherche des hyperparamètres'
-    - Les mesures extrinsèques pour le suivi de qualité et la non-régressiondes modèles
+    - Les mesures de qualité d’un modèle adaptées à un problème particulier de prédiction
+      (MSE, MAE, r² score…), de classification (Rappel, F-mesure, AUC…), de clustering
+      (silhouette, elbow…) ou liées à des données spécifiques (BLUE score, ranking…)
+    - Recherche des hyperparamètres
+    - Les mesures extrinsèques pour le suivi de qualité et la non-régression des modèles
       (A/B testsing, Multi-armed bandit)
     duree: 1 demi-journée
-    nom: Évaluations de modèles
+    nom: Évaluations de modèles 
     objectifs:
-    - Structurer leurs données pour détecter des problèmes de surapprentissagedes
+    - Structurer leurs données pour détecter des problèmes de surapprentissage des
       modèles.
-    - Évaluer des modèles tout au long de la mise en place d’une solutionde machine
-      learning pour guider et améliorer la conceptiondes modèles
+    - Évaluer des modèles tout au long de la mise en place d’une solution de machine
+      learning pour guider et améliorer la conception des modèles
     - Choisir et adapter les mesures pertinentes pour leur tache
-    - Suivre la qualité des modèles après leur déploiement en employantdes métriques
-      adaptées orientées sur les utilisateurs finauxdes modèles
+    - Suivre la qualité des modèles après leur déploiement en employant des métriques
+      adaptées orientées sur les utilisateurs finaux des modèles
     pratique: Mise en situation d’évaluation comparée de modèles de prédiction sur
-      des données immobilières en utilisant de l’A/B testing
+      desdonnées immobilières en utilisant de l’A/B testing
   partie-3:
     contenu:
     - Chargement et sauvegarde de données
@@ -68,57 +75,57 @@ plan:
     - Résumé et agrégation de données pour l’analyse
     - Gestion des données manquantes
     duree: 1 journée
-    nom: Traitement des données avec Pandas
+    nom: Traitement des données avec Pandas 
     objectifs:
-    - Utiliser la librairie _pandas_ pour charger et modifier desdonnées.
-    - '{text:soft-page-break} Agréger et filtrer rapidement desdonnées afin d’identifier
-      les spécificités du jeu de données'
-    - Identifier les corrélations linéaires entre les caractéristiquesde leurs données
-    - Choisir et mettre en place les techniques les plus pertinentespour la gestion
+    - Utiliser la librairie pandas pour charger et modifier des données.
+    - Agréger et filtrer rapidement des données afin d’identifier les spécificités
+      du jeu de données
+    - Identifier les corrélations linéaires entre les caractéristiques de leurs données
+    - Choisir et mettre en place les techniques les plus pertinentes pour la gestion
       des données manquantes
-    pratique: '* Utilisation de la librairie pandas sur les données des naufragés   du
-      Titanic pour manipuler les concepts de base de Pandas * Gestion des données
-      manquantes et prise de décision sur un   jeu de données réel contenant des informations
-      immobilières.   Les stagiaires devront discuter et implémenter les stratégies   le
-      plus pertinentes pour gérer les valeurs manquantes en utilisant   les informations
-      dont ils disposent sur le jeu de données et   évaluer les hypothèses qu’ils
-      émettent.'
+    pratique: '-   Utilisation de la librairie pandas sur les données des naufragés
+      du    Titanic pour manipuler les concepts de base de Pandas-   Gestion des données
+      manquantes et prise de décision sur un jeu de    données réel contenant des
+      informations immobilières. Les stagiaires    devront discuter et implémenter
+      les stratégies le plus pertinentes    pour gérer les valeurs manquantes en utilisant
+      les informations dont    ils disposent sur le jeu de données et évaluer les
+      hypothèses qu’ils    émettent.'
   partie-4:
     contenu:
-    - 'Les deux grands champs de l’apprentissage supervisé : régressionet classification'
+    - 'Les deux grands champs de l’apprentissage supervisé : régression et classification'
     - Régression linéaire et logistique
     - Arbres de décision pour la régression et la classification
     duree: 1 demiejournée
-    nom: Modèles supervisés
+    nom: Modèles supervisés 
     objectifs:
-    - Concevoir et implémenter des algorithmes de machine learningsupervisés pour
+    - Concevoir et implémenter des algorithmes de machine learning supervisés pour
       la régression et la classification
-    - Choisir les modèles supervisés adaptés pour un problème etun jeu de données
+    - Choisir les modèles supervisés adaptés pour un problème et un jeu de données
       spécifiques
-    - Interpréter les mesures pour se prémunir des problèmes desurapprentissage
-    pratique: '* Développement d’un algorithme de régression _« from scratch   »_
-      afin de démystifier l’utilisation des méthodes de machine   learning * Développement
-      de solutions de régression utilisant différents   modèles de la librairie scikit-learn
-      et mettant en pratique   les méthodes de séparation de données, d’évaluation
-      de validation   introduites dans la partie 2'
+    - Interpréter les mesures pour se prémunir des problèmes de surapprentissage
+    pratique: '-   Développement d’un algorithme de régression « from scratch » afin
+      de    démystifier l’utilisation des méthodes de machine learning-   Développement
+      de solutions de régression utilisant différents    modèles de la librairie scikit-learn
+      et mettant en pratique les    méthodes de séparation de données, d’évaluation
+      de validation    introduites dans la partie 2'
   partie-5:
     contenu:
-    - 'Le clustering pour la découverte de groupe : clustering hiérarchique,méthodes
+    - 'Le clustering pour la découverte de groupe : clustering hiérarchique, méthodes
       kMeans, mixtures de gaussiennes...'
     duree: 1 demie journée
-    nom: Modèles non supervisés
+    nom: Modèles non supervisés 
     objectifs:
-    - Concevoir et implémenter des algorithmes de machine learningnon supervisés pour
-      le clustering
-    - Choisir les modèles non supervisés adaptés pour un problèmeet un jeu de données
-      en fonction des limites de chaque modèleet des objectifs recherchés
-    - Choisir les mesures les plus pertinentes pour interpréterles résultats d’un
+    - Concevoir et implémenter des algorithmes de machine learning non supervisés
+      pour le clustering
+    - Choisir les modèles non supervisés adaptés pour un problème et un jeu de données
+      en fonction des limites de chaque modèle et des objectifs recherchés
+    - Choisir les mesures les plus pertinentes pour interpréter les résultats d’un
       modèle
-    pratique: '* Utilisation combinée du clustering pour identifier des groupes   dans
-      un jeu de données'
-prerequis: Une connaissance de base à Python est requise, ainsi qu’une connaissance  raisonnable
-  en statistique (connaître les concepts de moyenne,  variance, écart-type).
-public: Ingénieurs, chefs de projets ou développeurs souhaitant être  en mesure d’utiliser
-  des données pour intégrer des modèles du  machine learning pour la réalisation de
-  tâches automatisées  dans leurs projets.
+    pratique: '-   Utilisation combinée du clustering pour identifier des groupes
+      dans    un jeu de données'
+prerequis: Une connaissance de base à Python est requise, ainsi qu’une connaissance    raisonnable
+  en statistique (connaître les concepts de moyenne, variance,    écart-type).
+public: Ingénieurs, chefs de projets ou développeurs souhaitant être en mesure    d’utiliser
+  des données pour intégrer des modèles du machine learning    pour la réalisation
+  de tâches automatisées dans leurs projets.
 titre: Machine Learning – Initiation

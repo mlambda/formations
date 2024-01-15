@@ -1,34 +1,40 @@
 competences:
 - Identifier les avantages et limitations du Deep Learning
 - Avoir une vision à date de l'état de l'art du domaine et ses applications
-- Maîtriser les méthodologies et connaître les outils propresaux projets d'Intelligence
+- Maîtriser les méthodologies et connaître les outils propres aux projets d'Intelligence
   Artificielle
 - Appréhender les enjeux juridiques et éthiques de l’IA
-- Identifier les apports potentiels par métier, activité ousecteurs dans l’entreprise
-nb_jours: '> 2 jours'
+- Identifier les apports potentiels par métier, activité ou secteurs dans l’entreprise
+intitule: Le deep learning repose sur un ensemble d’algorithmes, de méthodes et de
+  modèles basés sur les réseaux de neurones. Produisant d’impressionnants résultats,
+  ils sont utilisés dans de nombreux secteurs industriels et économiques. Durant cette
+  formation, les stagiaires découvrent les méthodes du domaine et utilisent les outils
+  les plus répandus pour développer et entraîner des modèles du deep learning sur
+  un vaste spectre de données.
+nb_jours: 2 jours
 plan:
   partie-1:
     contenu:
     - 'Les fondements du deep learning : Héritier du machine learning'
-    - Les types de problème et leur classe d’algorithme (supervisé,non supervisé,
-      {text:soft-page-break} renforcement…)
-    - Les grandes étapes de construction d’un modèle d’apprentissageautomatique de
-      la collecte de données à l’amélioration demodèles
-    - Besoins et limitations sur un projet en fonction de l’objectiffixé d’un problème
+    - Les types de problème et leur classe d’algorithme (supervisé, non supervisé,
+      renforcement…)
+    - Les grandes étapes de construction d’un modèle d’apprentissage automatique de
+      la collecte de données à l’amélioration de modèles
+    - Besoins et limitations sur un projet en fonction de l’objectif fixé d’un problème
       d’apprentissage automatique
     - Les mécanismes d’évaluation des modèles
     - Biais d’analyse et risque d’erreur d’interprétation
     duree: 1 demi-journée
-    nom: Introduction au Deep learning
+    nom: Introduction au Deep learning 
     objectifs:
-    - Structurer un projet de machine learning pour un besoin etdes données spécifiques
-      en choisissant les classes des algorithmesles plus pertinentes
-    - Anticiper les besoins et limitations qui liés à la réalisationde leur tâche
+    - Structurer un projet de machine learning pour un besoin et des données spécifiques
+      en choisissant les classes des algorithmes les plus pertinentes
+    - Anticiper les besoins et limitations qui liés à la réalisation de leur tâche
       de deep learning
-    pratique: '> À partir des besoins des stagiaires sur leur projet, les stagiaires
-      > devront analyser les classes d’algorithmes à utiliser pour > répondre à leur
-      objectif et mesurer les limitations qui s’appliquent > à leur tache (financières,
-      techniques et temporelles)'
+    pratique: À partir des besoins des stagiaires sur leur projet, les stagiairesdevront
+      analyser les classes d’algorithmes à utiliser pour répondre àleur objectif et
+      mesurer les limitations qui s’appliquent à leur tache(financières, techniques
+      et temporelles)
   partie-2:
     contenu:
     - Lien avec la régression linéaire
@@ -39,67 +45,66 @@ plan:
     - Impact et choix d’un batch
     - Recherche des hyperparamètres
     - Problèmes d’interprétabilité
-    - La librairie Keras pour implémenter des réseaux de neuronesprofonds en python
+    - La librairie Keras pour implémenter des réseaux de neurones profonds en python
     duree: 1 demi-journée
-    nom: Réseaux de neurones
+    nom: Réseaux de neurones 
     objectifs:
-    - Concevoir et implémenter des modèles de réseaux de neuronessur des données tabulaires
-      en Keras pour la régression et laclassification
-    - Évaluer la performance de leurs modèles et adapter les hyperparamètrespour améliorer
-      l’apprentissage
-    - Identifier les problèmes d’apprentissage tels que le surapprentissageou le manque
-      de données et trouver les moyens de les résoudre
-    pratique: '* Mise en place d’un réseau de neurones sans code sur des données   simples.
-      Les stagiaires doivent choisir le meilleur ensemble   d’hyperparamètres pour
-      apprendre au mieux un jeu de données   sans surapprentissage et en optimisant
-      le temps de convergence   du modèle * {text:soft-page-break} Implémentation
-      d’un réseau de neurones   via Keras sur un problème de classification multiclasse.   Les
-      stagiaires devront utiliser les concepts de séparation   de jeux de données
-      et d’évaluation introduits en partie 2 et   déployer un protocole de recherche
-      d’hyperparamètres.'
+    - Concevoir et implémenter des modèles de réseaux de neurones sur des données
+      tabulaires en Keras pour la régression et la classification
+    - Évaluer la performance de leurs modèles et adapter les hyperparamètres pour
+      améliorer l’apprentissage
+    - Identifier les problèmes d’apprentissage tels que le surapprentissage ou le
+      manque de données et trouver les moyens de les résoudre
+    pratique: '-   Mise en place d’un réseau de neurones sans code sur des données    simples.
+      Les stagiaires doivent choisir le meilleur ensemble    d’hyperparamètres pour
+      apprendre au mieux un jeu de données sans    surapprentissage et en optimisant
+      le temps de convergence du modèle-   Implémentation d’un réseau de neurones
+      via Keras sur un problème de    classification multiclasse. Les stagiaires devront
+      utiliser les    concepts de séparation de jeux de données et d’évaluation introduits    en
+      partie 2 et déployer un protocole de recherche d’hyperparamètres.'
   partie-3:
     contenu:
-    - 'Classification de données. Les différents scénarios : donnéebrute, image, son,
-      texte, etc.'
-    - Les enjeux d'une classification de données et les choix impliquéspar un modèle
+    - 'Classification de données. Les différents scénarios : donnée brute, image,
+      son, texte, etc.'
+    - Les enjeux d'une classification de données et les choix impliqués par un modèle
       de classification.
-    - 'Outils de classification : des réseaux de type MultilayerPerceptron ou Convolutional
+    - 'Outils de classification : des réseaux de type Multilayer Perceptron ou Convolutional
       Neural Network.'
-    - Prédiction d'information et donnée séquentielle/temporelle.Enjeux et limites
+    - Prédiction d'information et donnée séquentielle/temporelle. Enjeux et limites
       d'une prédiction d'information.
-    - 'Transformation/génération de données. Opération de réinterprétationd''une donnée
-      : débruitage, segmentation d''image...'
-    - 'Opération de transformation sur un même format : traductionde texte d''une
+    - 'Transformation/génération de données. Opération de réinterprétation d''une
+      donnée : débruitage, segmentation d''image...'
+    - 'Opération de transformation sur un même format : traduction de texte d''une
       langue à une autre...'
-    - 'Opération de génération de donnée "originale" : Midjourney,génération d''images
+    - 'Opération de génération de donnée "originale" : Midjourney, génération d''images
       à partir de présentations textuelles.'
     - 'Reinforcement Learning : contrôle d''un environnement.'
     duree: 1 demi-journée
-    nom: Applications du Deep Learning
+    nom: Applications du Deep Learning 
     objectifs:
-    - Apréhender les possibilités offertes par les réseaux de neuronesmodernes
-    - '{text:soft-page-break} Utiliser des solutions existantespour améliorer les
-      performances d’une application spécifiquemétier.'
-    pratique: '* Utilisation d’outils disponibles tels que Midjourney, ChatGPT,   mise
-      en place de transfert learning, ...'
+    - Apréhender les possibilités offertes par les réseaux de neurones modernes
+    - Utiliser des solutions existantes pour améliorer les performances d’une application
+      spécifique métier.
+    pratique: '-   Utilisation d’outils disponibles tels que Midjourney, ChatGPT,
+      mise    en place de transfert learning, ...'
   partie-4:
     contenu:
-    - Utilisation de machine learning/deep learning dans un projetde développement
+    - Utilisation de machine learning/deep learning dans un projet de développement
       informatique
     - Problèmes théoriques et techniques
     - Problèmes juridiques
     - Problèmes éthiques
     duree: 1 demi-journée
-    nom: Ingénérie et problématiques
+    nom: Ingénérie et problématiques 
     objectifs:
-    - Envisager l’utilisation du deep learning dans des projetsen prenant en compte
+    - Envisager l’utilisation du deep learning dans des projets en prenant en compte
       tous les aspects critiques de cette technologie.
-    - Identifier les avantages, inconvénients et prérequis pourintégrer du deep learning
+    - Identifier les avantages, inconvénients et prérequis pour intégrer du deep learning
       dans un projet
-    pratique: '* Discussions autour de projets existants et documentés'
-prerequis: 'Bonnes connaissances en gestion de projet numérique.   Quelques notions
-  mathématiques : produit scalaire, dérivé,  moyenne, variance'
-public: 'Ingénieurs, chefs de projets ou développeurs souhaitant comprendre  les domaines
-  d’application et les bénéfices de l’Intelligence  Artificielle : dirigeants, DSI,
-  chefs de projets, développeurs,  architectes…'
+    pratique: '-   Discussions autour de projets existants et documentés'
+prerequis: 'Bonnes connaissances en gestion de projet numérique.        Quelques notions
+  mathématiques : produit scalaire, dérivé, moyenne,    variance'
+public: 'Ingénieurs, chefs de projets ou développeurs souhaitant comprendre les    domaines
+  d’application et les bénéfices de l’Intelligence Artificielle :    dirigeants, DSI,
+  chefs de projets, développeurs, architectes…'
 titre: Deep Learning – Initiation
