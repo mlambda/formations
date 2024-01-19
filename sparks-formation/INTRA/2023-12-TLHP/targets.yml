@@ -1,0 +1,30 @@
+- name: 3j
+  title: Machine Learning
+  sections:
+    - path: about
+      title: Python pour la Data Science
+      flavor: sparks-formation-3j
+    
+    - path: python/data-science
+      flavor: full
+
+    - path: ml
+      flavor: mlb
+
+    - path: supervised
+      flavor: bda
+
+    - path: unsupervised
+      flavor: bda
+
+    - path: nn
+      flavor: bda
+
+- name: bonus
+  title: Pour aller plus loin
+  sections:
+    - path: nn
+      flavor: intra-l-oreal-bonus
+      title: Pour aller plus loin
+
+
