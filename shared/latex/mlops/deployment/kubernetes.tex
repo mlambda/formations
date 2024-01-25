@@ -1,0 +1,77 @@
+\begin{frame}{Qu'est-ce que Kubernetes~?}
+  Kubernetes (abrégé k8s), est~:
+  \begin{itemize}
+    \item Un gestionnaire de clusteur
+    \item Un moyen d'orchestrer des conteneurs
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Concepts clefs}
+  La compréhension de quelques concepts clefs suffit pour aborder k8s dans un premier temps~:
+  \begin{itemize}
+    \item Réconciliation
+    \item Pods
+    \item Services
+    \item Déploiements
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Réconciliation}
+  k8s fonctionne en confrontant deux états~:
+
+  \begin{itemize}
+    \item État déclaré dans la configuration du cluster
+    \item État constaté dans le cluster
+  \end{itemize}
+
+  Le but de k8s est de faire en sorte que l'état constaté soit l'état déclaré.
+\end{frame}
+
+\begin{frame}{Réconciliation — Exemple}
+  Si votre configuration déclare qu'un certain conteneur est présent 3 fois, k8s va~:
+
+  \begin{itemize}
+    \item Regarder dans le cluster combien de fois le conteneur est exécuté
+    \item Si ce nombre est plus petit que 3, il va lancer le nombre nécessaire de conteneurs
+    \item Si ce nombre est plus grand que 3, il va arrêter le nombre nécessaire de conteneurs
+    \item Si ce nombre est 3, il ne va rien faire
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Pods}
+  Les Pods sont une surcouche des conteneurs. Ils ajoutent aux conteneurs des~:
+  \begin{itemize}
+    \item étiquettes et annotations
+    \item politiques de redémarrage
+    \item sondes (de démarrage, de préparation, de santé, …)
+    \item politiques d'affinité et d'anti-affinité
+    \item politiques d'arrêt
+    \item politiques de sécurité
+    \item politiques de gestion des ressources
+    \item possibilités de couplage (regrouper plusieurs conteneurs liés dans un seul Pod)
+  \end{itemize}
+
+  → C'est à dire tout le nécessaire pour la bonne orchestration d'un grand nombre de conteneurs.
+\end{frame}
+
+\begin{frame}{Services}
+  \begin{itemize}
+    \item Les services sont des points d'interaction
+    \item Ils permettent de s'abstraire de l'adresse de pods individuels
+    \item Ils répartissent le travail à des pods
+    \item Ils fournissent une adresse stable
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Déploiements}
+  Les Deployments k8s permettent de décrire les conditions de déploiement d'un type de conteneur.
+
+  Ils peuvent être écrits directement ou abstraits par une surcouche (comme KubeFlow ou autre).
+\end{frame}
+
+\begin{frame}{Aller plus loin}
+  \begin{itemize}
+    \item \bluelink{https://kubernetes.io/docs/home/}{Documentation officielle de k8s}
+    \item \bluelink{https://www.amazon.com/Kubernetes-Book-Version-November-2018-ebook/dp/B072TS9ZQZ/ref=tmm\_kin\_swatch\_0?\_encoding=UTF8&qid=1688546329&sr=8-1}{Ma recommandation personnelle de livre sur k8s}
+  \end{itemize}
+\end{frame}
