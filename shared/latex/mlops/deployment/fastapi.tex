@@ -1,0 +1,66 @@
+\begin{frame}{Qu'est-ce que FastAPI~?}
+  FastAPI permet d'exposer un modèle de ML comme API REST.
+
+  C'est un des grands moyens d'exposer un modèle. On pourrait sinon envisager~:
+
+  \begin{itemize}
+    \item Un serveur GRPC
+    \item Un déploiement local
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Concepts}
+  \begin{itemize}
+    \item Définition de points d'interaction avec le modèle à certaines adresses
+    \item Les entrées du modèle sont transmises dans la requête au serveur FastAPI
+    \item Les sorties du modèle sont transmises dans la réponse de FastAPI au client
+  \end{itemize}
+  → Entre les deux, il faut que la pipeline complète s'exécute.
+\end{frame}
+
+\begin{frame}{Définition d'un point d'interaction simple}
+  \mintedcustomcode{mlops/deployment/fastapi/basic}{py}
+\end{frame}
+
+\begin{frame}{Définition d'un point d'interaction avec paramètres simples}
+  Utilisation de GET et de paramètres de requête~:
+  \mintedcustomcode{mlops/deployment/fastapi/query-params}{py}
+\end{frame}
+
+\begin{frame}{Définition d'un point d'interaction avec paramètres complexes}
+  Utilisation de POST et d'une classe de données Pydantic~:
+  \mintedcustomcode{mlops/deployment/fastapi/body-params}{py}
+\end{frame}
+
+\begin{frame}{Exécution d'une application FastAPI}
+  Utilisation d'un serveur HTTP comme uvicorn ou starlette.
+
+  Par exemple, pour lancer l'application \texttt{app} du fichier \texttt{api.py}~:
+
+  \mintedcustomcode{mlops/deployment/fastapi/launch}{console}
+\end{frame}
+
+\begin{frame}{Documentation automatique}
+  FastAPI fournit une documentation de grande qualité automatiquement. Si vous avez lancé votre serveur à l'adresse
+
+  \url{http://127.0.0.1:8000/}
+
+  La documentation est accesible à l'adresse
+
+  \url{http://127.0.0.1:8000/docs}
+\end{frame}
+
+\begin{frame}{Intégration dans une image Docker}
+  \begin{itemize}
+    \item Lancer le serveur dans la commande \texttt{ENTRYPOINT} de l'image
+    \item Bien rediriger le port au lancement du conteneur
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Aller plus loin}
+  \begin{itemize}
+    \item \bluelink{https://docs.pydantic.dev/latest/}{Documentation de Pydantic}
+    \item \bluelink{https://fastapi.tiangolo.com/}{Documentation de FastAPI}
+  \end{itemize}
+  
+\end{frame}
