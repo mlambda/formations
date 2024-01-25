@@ -1,0 +1,70 @@
+\begin{frame}{Qu'est-ce que KubeFlow~?}
+  \begin{itemize}
+    \item KubeFlow est une surcouche de Kubernetes
+    \item Son but est de faciliter la conduite de projets MLs sur une architecture k8s
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Principaux concepts}
+  \begin{itemize}
+    \item Pipelines
+    \item Notebooks
+    \item KFServe
+    \item Opérateurs d'entraînement
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Pipelines}
+  À la manière de DVC ou MLFlow~:
+  \begin{itemize}
+    \item Définition de pipelines de traitement en Python ou YAML
+    \item Moteur d'exécution sur clusteur k8s
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Notebooks}
+  \begin{itemize}
+    \item Environnement de notebooks dans un clusteur k8s
+    \item Permet l'utilisation et la répartition des ressources du clusteur
+    \item Permet le contrôle d'accès aux données
+    \item Permet la gestion de dépendances par images Docker
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{KFServe}
+  Plugin externe mais faisant quasiement partie de la distribution officielle. Anciennement KFServing~:
+  \begin{itemize}
+    \item Registre de modèles
+    \item Déploiements avec répartition de charge et mise à jour transparente
+    \item Permet de déployer des modèles de toutes les librairies de ML
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Opérateurs d'entraînement}
+  KubeFlow \bluelink{https://www.kubeflow.org/docs/components/training/}{met à disposition} plusieurs opérateurs pour conduire des entraînements de modèle dans la plupart des grandes librairies.
+
+  → Facilite grandement l'entraînement de modèles sur un clusteur k8s.
+\end{frame}
+
+\begin{frame}{Problèmes notables}
+  \begin{itemize}
+    \item Difficile à installer localement, demande une bonne expérience en k8s
+    \item Documentation peu à jour
+    \item Les distributions des vendeurs cloud sont privilégiées 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Principaux déploiements}
+  \begin{itemize}
+    \item \bluelink{https://cloud.google.com/vertex-ai/docs/pipelines/build-pipeline?hl=fr}{Google}
+    \item \bluelink{https://aws.amazon.com/fr/eks/}{Amazon}
+    \item \bluelink{https://learn.microsoft.com/fr-fr/azure/architecture/ai-ml/idea/machine-learning-model-deployment-aks}{Microsoft}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Aller plus loin}
+  \begin{itemize}
+    \item \bluelink{https://www.kubeflow.org/docs/}{Documentation officielle}
+    \item \bluelink{https://www.oreilly.com/library/view/kubeflow-operations-guide/9781492053262/}{Ma recommandation de livre sur KubeFlow}
+  \end{itemize}
+\end{frame}
