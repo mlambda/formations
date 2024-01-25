@@ -1,0 +1,112 @@
+\begin{frame}{Qu'est-ce que Docker ?}
+  \begin{itemize}
+    \item Docker est une plateforme de conteneurisation
+    \item Elle permet de regrouper et distribuer des applications et leurs dépendances dans des conteneurs légers
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Pourquoi Docker ?}
+  \begin{description}
+    \item[Isolation] Les conteneurs fournissent des environnements isolés pour les applications
+    \item[Portabilité] Les conteneurs s'exécutent de manière cohérente dans différents environnements
+    \item[Efficacité] Les conteneurs sont légers et démarrent rapidement. Surcoût limité par rapport à une exécution native
+  \end{description}
+\end{frame}
+
+\begin{frame}{Concepts importants de Docker}
+  \begin{itemize}
+    \item Image
+    \item Conteneur
+    \item Registre
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Image}
+  Deux manières de comprendre une image docker~:
+  \begin{itemize}
+    \item « Recette » pour produire un conteneur, comme une classe l'est pour un objet en programmation orientée objet
+    \item État d'un conteneur à son lancement
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Conteneur}
+  \begin{itemize}
+    \item Proche d'une machine virtuelle (mais ne réimplémente pas le système d'exploitation)
+    \item C'est qui est exécuté pour lancer une application dockerisée
+    \item Instance d'une image.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Registre}
+  \begin{itemize}
+    \item Dépôt d'images
+    \item Public ou privé
+    \item Par défaut~: \bluelink{https://hub.docker.com/}{Docker Hub}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exécution avec docker}
+  Quand on demande à lancer un conteneur docker~:
+  \begin{enumerate}
+    \item Docker vérifie si l'image du conteneur est déjà téléchargée localement. Sinon il la télécharge depuis Docker Hub par défaut
+    \item Un conteneur est produit depuis l'image
+    \item Ce conteneur est exécuté
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Options d'exécution avec docker}
+  \begin{enumerate}
+    \item Redirection de ports
+    \item Montage de volumes de fichiers (pour rendre accessibles des fichiers de la machine hôte au conteneur)
+    \item Suppression ou non du conteneur à la fin de l'exécution
+    \item …
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Dockerfile}
+  \begin{itemize}
+    \item Un Dockerfile est un script qui permet de créer une image Docker personnalisée
+    \item Il définit les étapes nécessaires pour configurer l'environnement de votre application
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Structure d'un Dockerfile}
+  \begin{itemize}
+    \item Un Dockerfile commence généralement par une image de base
+    \item Ensuite, il spécifie les étapes pour copier des fichiers, installer des dépendances, etc
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple de Dockerfile}
+  \mintedcustomcode{mlops/deployment/docker/Dockerfile}{docker}
+\end{frame}
+
+\begin{frame}{Docker compose — Exécution complexe}
+  \begin{itemize}
+    \item Un outil pour définir et exécuter des applications Docker multi-conteneurs.
+    \item Utilise un fichier YAML pour définir les services, les réseaux et les volumes.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple Docker Compose}
+  \mintedcustomcode{mlops/deployment/docker/docker-compose}{yaml}
+\end{frame}
+
+\begin{frame}{Commandes utiles}
+  \begin{description}
+    \item[\texttt{docker build}] Construit une image
+    \item[\texttt{docker run}] Exécute un conteneur
+    \item[\texttt{docker images}] Liste les images présentes localement
+    \item[\texttt{docker ps}] Liste les conteneurs actifs
+    \item[\texttt{docker rm/rmi}] Supprime un conteneur / une image
+    \item[\texttt{docker attach/detach}] Permet de simuler screen / tmux
+  \end{description}
+\end{frame}
+
+\begin{frame}{Conclusion}
+  \begin{itemize}
+    \item Docker est un outil puissant de conteneurisation
+    \item Les Dockerfiles vous permettent de personnaliser vos images Docker
+    \item Vous pouvez ensuite exécuter des conteneurs à partir de ces images pour déployer vos applications
+  \end{itemize}
+\end{frame}
