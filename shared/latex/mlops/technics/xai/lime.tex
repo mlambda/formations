@@ -1,0 +1,56 @@
+\begin{frame}{Qu'est-ce que LIME~?}
+  \begin{itemize}
+    \item Méthode d'explication locale d'un modèle
+    \item L'explication est un modèle interprétable
+    \item Peut être utilisée sur n'importe quelle famille de modèles
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Méthode}
+  \begin{itemize}
+    \item Transformation des données pour qu'elles soient interprétables, par exemple~:
+      \begin{itemize}
+        \item Superpixels pour des images
+        \item Sac de mots pour du texte
+        \item …
+      \end{itemize}
+    \item Entraînement d'un modèle simple qui approxime le modèle complexe autour du point à expliquer. Minimisation de la distance au modèle complexe
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Illustration des modèles}
+  \V{"img/mlops/technics/xai/local-model" | image("th", 0.5)}
+\end{frame}
+
+\begin{frame}{Illustration des explications}
+  \V{"img/mlops/technics/xai/explain-dog-guitar" | image("tw", 1)}
+\end{frame}
+
+\begin{frame}{Méthode — Quelques détails}
+  \begin{itemize}
+    \item Des données perturbées sont générées pour peupler l'espace autour du point à expliquer~:
+      \begin{itemize}
+        \item Pour les données structurées, par échantillonnage d'une distribution apprise sur les données d'entrée
+        \item Pour du texte, en enlevant au hasard des mots
+        \item Pour des images, en segmentant en super-pixels et en en sélectionnant au hasard
+      \end{itemize}
+    \item Les données générées sont pondérées par leur distance au point
+    \item Le modèle simple est souvent k-LASSO dans LIME → k caractéristiques sont non nulles après entraînement
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Implémentation}
+  En Python, le paquet \bluelink{https://github.com/marcotcr/lime/tree/master}{\texttt{lime}} contient tout le nécessaire.
+\end{frame}
+
+\begin{frame}{Limitations}
+  \begin{itemize}
+    \item Les données perturbées peuvent être invalides
+    \item Le voisinnage d'un point peut être mal modélisé → explication incorrecte
+    \item Globalement, insuffisant pour un besoin réglementaire d'explicabilité
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Pour aller plus loin}
+  \bluelink{https://youtu.be/CYl172IwqKs}{Vidéo explicative qui expose plus de détails}
+\end{frame}
