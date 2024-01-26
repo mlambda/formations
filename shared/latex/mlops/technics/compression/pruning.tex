@@ -1,0 +1,48 @@
+\begin{frame}{Qu'est-ce que l'élagage (\textit{pruning})~?}
+  \begin{itemize}
+    \item Suppression de parties du modèle pour le rendre plus léger \& rapide
+    \item Technique complémentaire de la quantization
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Buts}
+  \begin{itemize}
+    \item Simplifier le modèle appris jusqu'à une complexité prédéfinie
+    \item Accélérer l'exécution du modèle
+    \item Réduire sa taille pour faciliter le stockage
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Techniques}
+  Comme pour la quantization, les techniques diffèrent en fonction des familles de modèles.
+
+  Ici nous parlerons des réseaux de neurones car ce sont les modèles
+qui ont le plus besoin d’être élagués.
+\end{frame}
+
+\begin{frame}{Méthode}
+  \begin{itemize}
+    \item À chaque itération on fixe à 0 une partie des poids les plus faibles
+    \item La proportion passée à 0 est décidée par un plan d'élagage
+    \item Le plan d'élagage fixe la densité de 0 à atteindre et la cadence à suivre
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Implémentation}
+  De manière très similaire à la quantization~:
+  \begin{itemize}
+    \item Utilisation du paquet \texttt{tensorflow-model-optimization}, en particulier~:
+      \begin{itemize}
+        \item La fonction \texttt{tfmot.sparsity.keras.prune\_low\_magnitude} pour l'entraînement
+        \item Le callback \texttt{tfmot.sparsity.keras.UpdatePruningStep} pour l'entraînement
+        \item La fonction \texttt{tfmot.sparsity.keras.strip\_pruning} pour l'export
+      \end{itemize}
+    \item Passage d'un modèle Keras à cette fonction et entraînement Keras normal (ne pas oublier le callback)
+    \item Appel à \texttt{strip\_pruning}
+    \item Conversion en modèle TFLite
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Pour aller plus loin}
+  \bluelink{https://www.tensorflow.org/model\_optimization/guide/pruning}{Guide sur l'élagage en TensorFlow}
+\end{frame}
