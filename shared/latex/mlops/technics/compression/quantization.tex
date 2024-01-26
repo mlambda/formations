@@ -1,0 +1,69 @@
+\begin{frame}{Qu'est-ce que la quantization~?}
+  \begin{itemize}
+    \item Modification des ensembles utilisés pour définir les poids et opérations
+    \item Projection d'un grand espace vers un espace plus petit
+    \item Souvent float32 → int8 ou float32 → float16
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Buts}
+  \begin{itemize}
+    \item Gain de temps d'exécution
+    \item Réduction de l'utilisation mémoire
+  \end{itemize}
+
+  → Particulièrement important pour le déploiement vers des terminaux légers
+\end{frame}
+
+\begin{frame}{Techniques}
+  Les techniques de quantization diffèrent en fonction des familles de modèles.
+
+  Ici nous parlerons des réseaux de neurones car ce sont les modèles qui ont le plus besoin d'être quantizés.
+\end{frame}
+
+\begin{frame}{Deux écoles}
+  \begin{itemize}
+    \item Quantization après l'entraînement
+    \item Entraînement adapté à la quantization
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Quantization après l'entraînement}
+  \begin{itemize}
+    \item Entraînement normal du modèle
+    \item Étape de post-traitement qui transforme les float32 en float16 ou int8
+    \item Approche la plus facile à mettre en œuvre
+    \item Entraîne souvent une détérioration des performances prédictives
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Implémentation}
+  Utilisation de \texttt{tf.lite.TFLiteConverter} avec option de quantization.
+\end{frame}
+
+\begin{frame}{Entraînement adapté à la quantization}
+  \begin{itemize}
+    \item Le graphe du réseau de neurone est augmenté avec des nœuds de quantization pendant l'entraînement
+    \item Demande de modifier légèrement le code d'entraînement
+    \item Détériore souvent beaucoup moins, voire ne détériore pas les performances prédictives
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Implémentation}
+  \begin{itemize}
+    \item Utilisation du paquet \texttt{tensorflow-model-optimization}, en particulier~:
+
+    \texttt{tfmot.quantization.keras.quantize\_model}
+    \item Passage d'un modèle Keras à cette fonction et entraînement Keras normal
+    \item Conversion en modèle TFLite
+  \end{itemize}
+  → Modèle 4x plus petit en taille
+\end{frame}
+
+\begin{frame}{Pour aller plus loin}
+  \begin{itemize}
+    \item \bluelink{https://www.tensorflow.org/model\_optimization/guide/quantization/post\_training}{Guide sur la quantization post-entraînement}
+    \item \bluelink{https://www.tensorflow.org/model\_optimization/guide/quantization/training}{Guide sur l'entraînement adapté à la quantization}
+    \item \bluelink{https://www.tensorflow.org/lite/performance/model\_optimization}{Guide TF Lite d'optimisation}
+  \end{itemize}
+\end{frame}
