@@ -1,0 +1,62 @@
+\begin{frame}{Qu'est-ce que SHAP~?}
+  \begin{itemize}
+    \item Méthode d'explications locale \& globale d'un modèle
+    \item L'explication est donnée sous forme de contribution marginale de chaque caractéristique
+    \item Peut être utilisée sur n'importe quelle famille de modèles
+    \item Généralisation et extension de LIME
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Méthode}
+  \begin{itemize}
+    \item Comme pour LIME, transformation des données pour qu'elles soient interprétables, par exemple~:
+      \begin{itemize}
+        \item Superpixels pour des images
+        \item Sac de mots pour du texte
+        \item …
+      \end{itemize}
+    \item Entraînement de plusieurs modèles simples pour mesurer la contribution marginale de chaque caractéristique
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Méthode — Quelques détails}
+  \begin{itemize}
+    \item Mesure des performances d'un modèle simple avec et sans chacune des caractéristiques en entrée → Étude de toutes les combinaisons de caractéristiques
+    \item Échantillonage si l'étude complète est trop coûteuse
+    \item Pondération en fonction du nombre de possibilités de former un ensemble de caractéristiques donné
+    \item La contribution marginale moyenne est retournée
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Illustration d'explications d'images}
+  \V{"img/mlops/technics/xai/shap-image" | image("tw", 1)}
+\end{frame}
+
+\begin{frame}{Illustration d'explications de données structurées}
+  \V{"img/mlops/technics/xai/shap-structured" | image("th", 0.7)}
+\end{frame}
+
+\begin{frame}{Explication globale}
+  Recherche d'un nombre minimal d'exemples pour qui les caractéristiques importantes couvrent au mieux l'ensemble des caractéristiques.
+
+  L'étude de ces exemples et des valeurs SHAP associées constitue l'explication globale.
+\end{frame}
+
+\begin{frame}{Implémentation}
+  En Python, le paquet \bluelink{https://github.com/shap/shap/}{\texttt{shap}} contient tout le nécessaire.
+\end{frame}
+
+\begin{frame}{Limitations}
+  Ce sont globalement les mêmes que pour LIME~:
+  \begin{itemize}
+    \item Les données perturbées peuvent être invalides
+    \item Le voisinnage d'un point peut être mal modélisé → explication incorrecte
+    \item Globalement, insuffisant pour un besoin réglementaire d'explicabilité
+  \end{itemize}
+
+  Il arrive en plus que SHAP soit trop coûteux pour des résolutions exactes.
+\end{frame}
+
+\begin{frame}{Pour aller plus loin}
+  \bluelink{https://youtu.be/UJeu29wq7d0}{Excellente vidéo explicative sur les mathématiques de SHAP}
+\end{frame}
