@@ -1,0 +1,43 @@
+\begin{frame}{Qu'est-ce que LoRA~?}
+  \begin{itemize}
+    \item Méthode de finetuning de réseaux de neurones
+    \item Permet de réduire la taille des modèles finetunés
+    \item Réduit le potentiel théorique du finetuning
+    \item Très adaptée quand un gros modèle original doit être finetuné de nombreuses fois
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Méthode}
+  \begin{itemize}
+    \item Finetuning additif (ajout du résultat du finetuning aux poids de base)
+    \item Factorisation des matrices de poids ($W$ est finetunée en $A \times B$)
+    \item Si l'on part d'une $W$ de taille $1000 \times 1000$, on peut prendre $A$ \& $B$ de tailles $1000 \times 5$ et $5 \times 1000$ par exemple
+    \item $W$ a $1\,000\,000$ de paramètres, $A$ \& $B$, $10\,000$
+    \item Le résultat est $W' = W + A \times B$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Illustration de la méthode}
+  \V{"img/mlops/technics/compression/lora" | image("th", 0.6)}
+\end{frame}
+
+\begin{frame}{Intérêt}
+  Si on finetune beaucoup de fois le modèle original~:
+  \begin{itemize}
+    \item Le modèle original n'est stocké qu'une fois
+    \item Chaque finetuning nécessite seulement de stocker les petites matrices ($A$ \& $B$)
+    \item Pas de surcoût d'exécution à l'inférence~: on peut calculer $W' = W + A \times B$ à l'initialisation du modèle
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Gains}
+  \begin{itemize}
+    \item Le gain d'espace dépend fortement de la taille du modèle initial
+    \item On atteint facilement des facteurs de compression de 100
+    \item Pour GPT3-3 175B, le facteur de compression est 10$\,$000 avec r fixé à 4
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Pour aller plus loin}
+  \bluelink{https://keras.io/examples/nlp/parameter\_efficient\_finetuning\_of\_gpt2_with\_lora/}{Codelab de mise en place de LoRA avec Keras 3}
+\end{frame}

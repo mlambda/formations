@@ -1,0 +1,5 @@
+author: Edward Hu, Yelong Shen et al.
+license: "reproduction depuis LoRA: Low-Rank Adaptation of Large Language Models"
+license_en: "reproduction from LoRA: Low-Rank Adaptation of Large Language Models"
+title: "Méthode LoRA~: seules les matrices A \\& B sont apprises"
+title_en: "LoRA method: only the A \\& B matrices are learned"
