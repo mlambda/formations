@@ -1,0 +1,48 @@
+\begin{frame}{Qu'est-ce que le MLOps~?}
+  Plusieurs définitions~:
+
+  \begin{itemize}
+    \item DevOps adapté au ML
+    \item Outils et pratiques d'ingénierie autour du ML
+    \item Ce qui comble le fossé entre le prototype et la production (\textit{PoC to production gap}) en ML
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Fossé entre le prototype et la production}
+  \V{"tikz/mlops/intro/technical-debt" | image("tw", 1)}
+\end{frame}
+
+\begin{frame}{Fossé entre le prototype et la production — Exemple}
+  Quelques problématiques pour une appli de traduction vocale sur téléphone~:
+
+  \begin{itemize}
+    \item Exécution du modèle sur téléphone ou en ligne
+    \item Traitement pour homogénéiser les signaux d'entrée de différents micros
+    \item Méthode de transmission des cas d'erreur pour améliorer l'application
+    \item Niveaux de performance pour les différents accents
+    \item Consommation des ressources du téléphone
+    \item …
+  \end{itemize}
+
+  Ces problèmes ne sont pas des problèmes de ML pur.
+\end{frame}
+
+\begin{frame}{Deux grandes familles de problématiques}
+  Par rapport au prototypage, la mise en production soulève~:
+
+  \begin{itemize}
+    \item Des problèmes techniques supplémentaires
+    \item Des problèmes de réglementation et d'éthique supplémentaires
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{État du domaine MLOps}
+  \begin{itemize}
+    \item Évolution rapide, beaucoup de bibliothèques concurrentes
+    \item Beaucoup moins stable que le domaine DevOps
+    \item Adoption beaucoup moins homogène que le DevOps
+    \item Évolution conjointe à la législation et réglementation
+  \end{itemize}
+
+  Étant donné l'instabilité du domaine, les grands principes sont plus importants que les techniques spéficiques.
+\end{frame}

@@ -1,0 +1,79 @@
+\begin{frame}{Introduction}
+  En passant du prototype à la production, des questions éthiques se posent~:
+
+  \begin{itemize}
+    \item Notre système est-il équitable~?
+    \item Respecte-t-il la vie privée~?
+    \item Respecte-t-il plus largement la réglementation~?
+  \end{itemize}
+
+  Ces questions doivent être traitées pendant tout le cycle de vie d'un projet de ML.
+\end{frame}
+
+\begin{frame}{Système équitable — Lutte contre les biais}
+  Quelques exemples de biais qui entraînent des traitements non équitables~:
+
+  \begin{itemize}
+    \item Biais d'échantillonnage
+    \item Traitement différencié en fonction de la race perçue, du genre, etc
+    \item Biais systémique (entraîne souvent un traitement différencié)
+    \item Tyrannie de la majorité
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Modèle équitable — Définition}
+  Deux définitions concurrentes~:
+
+  \begin{description}
+    \item[Calibration de groupe] Même niveau de performance pour chaque groupe défini par des attributs protégés ou moralement importants (race perçue, genre, niveau économique, etc)
+    \item[Calibration individuelle] Même niveau de performance pour tous les individus
+  \end{description}
+\end{frame}
+
+\begin{frame}{Critère de choix}
+  On préfère~:
+
+  \begin{description}
+    \item[Calibration de groupe] Quand la correction d'un biais entre groupes est nécessaire (souvent en accord avec la loi, mais pas seulement)
+    \item[Calibration de individuelle] Le reste du temps
+  \end{description}
+\end{frame}
+
+\begin{frame}{Calibration de groupe — Exemples}
+  \begin{itemize}
+    \item Imposer qu'un système de recrutement valide dans les mêmes proportions des profils d'hommes et de femmes
+    \item S'assurer qu'un système de détection de manque d'oxygène ne soit pas \bluelink{https://www.nejm.org/doi/10.1056/NEJMc2029240}{biaisé en fonction de la couleur de peau}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Calibration individuelle — Exemple}
+  \begin{itemize}
+    \item Prédiction de récidive (système COMPAS aux États-Unis)
+    \item Prédiction de médicaments à préscrire
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Calibration dans la pratique}
+  \begin{itemize}
+    \item Calibrations individuelle et de groupe sont en tension
+    \item L'une ou l'autre fera déjà mieux que 95\% des modèles en production, qui ne sont pas calibrés
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Réglementation}
+  Surtout par la RGPD et la CNIL en France (et l'IA Act à partir de 2025).
+
+  Ajoute des contraintes fortes supplémentaires, dont~:
+
+  \begin{itemize}
+    \item Droit à l'effacement
+    \item Recueil du consentement
+    \item Protection très forte des données personnelles
+  \end{itemize}
+
+  L'approche \textit{Privacy by Design} permet de considérer ces aspects dès les tous premiers stades de conception.
+\end{frame}
+
+\begin{frame}{Solutionnisme}
+  Parfois, le seul moyen d'avoir un système éthique, c'est de \alert{ne pas} faire de ML.
+\end{frame}

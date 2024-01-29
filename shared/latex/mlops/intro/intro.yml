@@ -1,6 +1,14 @@
+default_titles:
+  intro: Survol
+  ml-lifecycle: Cycle de vie d'un projet ML
+  ethics: ML \& éthique
 flavors:
   mlw:
+    - intro
+    - /questions
     - ml-lifecycle
     - /questions
+    - ethics
+    - /questions
 
-title: Cycle de vie d'un projet ML
+title: Introduction au MLOps
