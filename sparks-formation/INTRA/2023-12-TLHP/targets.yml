@@ -5,6 +5,9 @@
       title: Python pour la Data Science
       flavor: sparks-formation-3j
     
+    - path: python/basics
+      flavor: tho
+    
     - path: python/data-science
       flavor: full
 
