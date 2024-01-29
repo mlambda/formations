@@ -1,0 +1,7 @@
+flavors:
+  mlw:
+    - definition
+    - /questions
+    - tp
+
+title: Définition des données

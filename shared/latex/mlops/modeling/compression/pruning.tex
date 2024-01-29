@@ -1,7 +1,7 @@
 \begin{frame}{Qu'est-ce que l'élagage (\textit{pruning})~?}
   \begin{itemize}
     \item Suppression de parties du modèle pour le rendre plus léger \& rapide
-    \item Technique complémentaire de la quantization
+    \item Technique complémentaire de la quantification
   \end{itemize}
 \end{frame}
 
@@ -14,10 +14,9 @@
 \end{frame}
 
 \begin{frame}{Techniques}
-  Comme pour la quantization, les techniques diffèrent en fonction des familles de modèles.
+  Comme pour la quantification, les techniques diffèrent en fonction des familles de modèles.
 
-  Ici nous parlerons des réseaux de neurones car ce sont les modèles
-qui ont le plus besoin d’être élagués.
+  Ici nous parlerons des réseaux de neurones car ce sont les modèles qui ont le plus besoin d’être élagués.
 \end{frame}
 
 \begin{frame}{Méthode}
@@ -29,15 +28,15 @@ qui ont le plus besoin d’être élagués.
 \end{frame}
 
 \begin{frame}{Implémentation}
-  De manière très similaire à la quantization~:
+  De manière très similaire à la quantification~:
   \begin{itemize}
     \item Utilisation du paquet \texttt{tensorflow-model-optimization}, en particulier~:
       \begin{itemize}
         \item La fonction \texttt{tfmot.sparsity.keras.prune\_low\_magnitude} pour l'entraînement
-        \item Le callback \texttt{tfmot.sparsity.keras.UpdatePruningStep} pour l'entraînement
+        \item La fonction de rappel (\textit{callback}) \texttt{tfmot.sparsity.keras.UpdatePruningStep} pour l'entraînement
         \item La fonction \texttt{tfmot.sparsity.keras.strip\_pruning} pour l'export
       \end{itemize}
-    \item Passage d'un modèle Keras à cette fonction et entraînement Keras normal (ne pas oublier le callback)
+    \item Passage d'un modèle Keras à cette fonction et entraînement Keras normal (ne pas oublier la fonction de rappel)
     \item Appel à \texttt{strip\_pruning}
     \item Conversion en modèle TFLite
   \end{itemize}

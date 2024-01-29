@@ -1,0 +1,7 @@
+flavors:
+  mlw:
+    - monitoring
+    - /questions
+    - tp
+
+title: Monitoring

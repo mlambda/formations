@@ -1,29 +1,31 @@
 default_titles:
-  architectures: Architectures big data
+  /python/production/environment: Environnement Python
+  architectures: Architectures Big Data
   best-practices: Bonnes pratiques
   docker: Docker
   fastapi: FastAPI
   intro: Introduction
-  kubernetes: Kubernetes
   kubeflow: KubeFlow
+  kubernetes: Kubernetes
 
 flavors:
   mlw:
     - intro
     - /questions
-    - docker
+    - /python/production/environment
     - /questions
     - fastapi
     - /questions
-    - tp-simple
+    - docker
+    - /questions
     - kubernetes
     - /questions
     - kubeflow
     - /questions
-    - tp-complex
-    - architectures
-    - /questions
     - best-practices
     - /questions
+    - architectures
+    - /questions
+    - tp
 
 title: Déploiement

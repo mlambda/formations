@@ -3,7 +3,6 @@ default_titles:
   lora: LoRA
   pruning: Élagage
   quantization: Quantification
-  winograd: Winograd
 
 flavors:
   mlw:
@@ -15,7 +14,6 @@ flavors:
     - /questions
     - lora
     - /questions
-    - winograd
     - /questions
     - tp
 

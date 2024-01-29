@@ -5,5 +5,7 @@ flavors:
   mlw:
     - intro
     - /questions
+    - $deployment: mlw
+    - $monitoring: mlw
 
-title: Cycle de vie d'un projet ML
+title: Mise en production

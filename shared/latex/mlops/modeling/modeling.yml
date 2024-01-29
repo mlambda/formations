@@ -1,0 +1,10 @@
+default_titles:
+  intro: Introduction
+
+flavors:
+  mlw:
+    - intro
+    - $compression: mlw
+    - $error-analysis: mlw
+
+title: Modélisation

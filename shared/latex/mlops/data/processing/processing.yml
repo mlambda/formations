@@ -1,0 +1,7 @@
+flavors:
+  mlw:
+    - processing
+    - /questions
+    - tp
+
+title: Traitement des données

@@ -1,0 +1,46 @@
+\begin{frame}{Stratégies de déploiement}
+  Plusieurs critères permettent de choisir une stratégie de déploiement~:
+  \begin{itemize}
+    \item Volume d'utilisation du service
+    \item Public (tout public, interne, autres services, …)
+    \item Fréquence de déploiement
+    \item …
+  \end{itemize}
+
+  Concepts clefs~:
+  \begin{itemize}
+    \item Déploiement progressif
+    \item Rollback (capacité de revenir à l'état antérieur du système)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Déploiement shadow}
+  \begin{itemize}
+    \item Déploiement du modèle en double du système en place
+    \item Les sorties du modèle ne sont pas utilisées par l'application
+    \item Analyse des sorties du modèle et décision de poursuivre le déploiement ou non
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Déploiement bleu/vert}
+  \begin{itemize}
+    \item Déploiement du nouveau modèle (vert) en parallèle du système en place (bleu)
+    \item Quand les tests sont concluants sur le système vert, on y redirige traffic
+    \item Permet un rollback si des problèmes remontent
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Déploiement canari}
+  \begin{itemize}
+    \item Similaire à bleu/vert, deux systèmes parallèles
+    \item Montée en puissance progressive du système vert
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Mise en place}
+  Les deux options les plus populaires~:
+  \begin{itemize}
+    \item Kubernetes + Istio
+    \item Outillage interne
+  \end{itemize}
+\end{frame}
