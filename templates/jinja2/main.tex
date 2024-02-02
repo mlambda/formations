@@ -58,7 +58,9 @@
 %% endif
 %% for section in part.sections:
 %% if section.title is string:
+%% if section.level < 3:
 \\V{"sub" * section.level}section{\V{section.title}}
+%% endif
 %% else:
 \input{\V{section}}
 %% endif

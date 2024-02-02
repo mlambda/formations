@@ -8,12 +8,12 @@ flavors:
   mlw:
     - intro
     - /questions
+    - $/unsupervised/dimensionality-reduction: mlb
     - pruning
     - /questions
     - quantization
     - /questions
     - lora
-    - /questions
     - /questions
     - tp
 
