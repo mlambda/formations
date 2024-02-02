@@ -1,0 +1,50 @@
+\begin{frame}{Obtention des données}
+  \begin{itemize}
+    \item Viser une première itération courte pour avoir des retours des phases ultérieures
+    \item Lister les sources potentielles et leur budget temps / argent
+    \item Potentiellement faire faire une première annotation par la team ML
+    \item Définir les profils compétents
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Itérations sur les données}
+  \begin{itemize}
+    \item Ordre de grandeur~: pas plus de x10 d'un coup
+    \item Travailler conjointement la qualité de la source, des processus, le volume
+    \item Très différent en phase de prototypage et de production~:
+      \begin{description}
+        \item[Prototypage] Réunion d'assez de données pour décider go~/~nogo
+        \item[Production] Travail de fond comme principal vecteur pour atteindre le plafond de performance
+      \end{description}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Méta-données}
+  Parce que les données sont le cœur d'un système de ML~:
+  \begin{itemize}
+    \item Conservation de leur provenance
+    \item Traçage de leurs transformations
+    \item Notion proche, la reproductibilité de l'obtention des données et des transformations~:
+      \begin{itemize}
+        \item De plus en plus importante pour la réglementation
+        \item Primordiale pour le débogage
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Méta-données — Conséquences}
+  La conservation de méta-données requiert~:
+
+  \begin{itemize}
+    \item Une définition stricte des processus d'obtention des données
+    \item Une définition stricte des transformations
+    \item La mise en place de systèmes dédiés
+  \end{itemize}
+
+  → Contraint beaucoup de décisions d'architecture
+\end{frame}
+
+% DAG
+% Chaînes de traitement
+% Parité apprentissage/prod batch/realtime
+% MLFlow / KubeFlow / TFX

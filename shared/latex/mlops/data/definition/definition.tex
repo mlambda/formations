@@ -1,9 +1,20 @@
 \begin{frame}{Buts}
-  On cherche à répondre à deux questions~:
+  On cherche à répondre à principalement deux questions~:
   \begin{itemize}
-    \item Quelles seront les entrées et les sorties~?
+    \item Quelles sont les entrées et les sorties pertinentes~?
     \item Quel niveau de performance peut-on attendre~?
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Principe \textit{trash in trash out}}
+  Principe fondamental du Machine Learning~: la définition des données est le point \alert{central} d'un système de Machine Learning.
+\end{frame}
+
+\begin{frame}{Recherche vs Industrie}
+  \begin{description}
+    \item[Recherche] $\text{Système} = \text{Données} + \overbrace{\text{Paramètres} + \text{Modèle}}^{\text{Travail}}$
+    \item[Industrie] $\text{Système} = \overbrace{\text{Données} + \text{Paramètres}}^{\text{Travail}} + \text{Modèle}$
+  \end{description}
 \end{frame}
 
 \begin{frame}{Exemple de définition – Traduction}
@@ -34,4 +45,94 @@
 
 \begin{frame}{Enjeu}
   Toutes ces décisions changent la fonction que le modèle va approximer.
+\end{frame}
+
+\begin{frame}{Types de données}
+  Deux critères primordiaux~:
+
+  \begin{itemize}
+    \item Taille du jeu de données
+    \item Données structurées ou non-structurées
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Taille du jeu de données}
+  \begin{description}
+    \item[Petit] Qualité des annotations primordiale
+    \item[Grand] Qualité des processus de traitement des données primordiale
+  \end{description}
+
+  \begin{block}{Attention}
+    Un sous-ensemble d'un grand jeu de données peut se comporter comme un petit jeu de données (en particulier une tranche critique).
+  \end{block}
+\end{frame}
+
+\begin{frame}{Données structurées~/~non-structurées}
+  \begin{description}
+    \item[Structurées] Dures à annoter pour des humains. Dures à augmenter
+    \item[Grand] Probablement faciles à annoter pour des humains. Souvent augmentables
+  \end{description}
+\end{frame}
+
+\begin{frame}{Guide d'annotation}
+  À destination des annotateurs~:
+  \begin{itemize}
+    \item Doit être le plus robuste possible
+    \item Idéalement, écrit par un mélange d'experts métier / ML
+    \item Écrit itérativement~:
+      \begin{itemize}
+        \item Écriture d'une version
+        \item Annotation
+        \item Détection des points ambigus
+        \item Écriture d'une nouvelle version
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Couverture des données d'entrée}
+  \begin{itemize}
+    \item Tous les cas que l'on traitera doivent être représentés dans les données
+    \item Dans des quantités suffisantes
+    \item Particulièrement important pour éviter les discriminations sur les attributs protégés
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Calibrage}
+  Estimation des performances attendues~:
+
+  \begin{itemize}
+    \item Recherche bibliographique sur des approches existantes
+    \item Estimation des performances humaines
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Performances humaines}
+  Aussi appelées HLP (\textit{Human Level Performance})~:
+
+  \begin{itemize}
+    \item Servent à estimer l'erreur de Bayes (l'aléa intrinsèque des données)
+    \item En particulier quand l'annotation n'est pas définie par un autre humain mais par un processus externe
+    \item Particulièrement intéressantes pour les données non-structurées
+    \item Donnent une idée du niveau de performances atteignable
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Amélioration des performances humaines}
+  \begin{itemize}
+    \item Tendance parfois à miniser les HLP pour les battre facilement
+    \item De mauvaises HLP empêchent pourtant de bien orienter le travail à effectuer
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Amélioration des performances humaines — Exemple}
+  Supposons que quand une hésitation est formulée dans un audio, deux transcriptions soient possibles~:
+  \begin{enumerate}
+    \item Hum… J'arrive dans 5 minutes
+    \item J'arrive dans 5 minutes
+  \end{enumerate}
+  Si 1. est préférée par $80\%$ des annotateurs et 2. par $20\%$~: deux annotateurs aléatoires ont $0,8^2 + 0,2^2 = 68\%$ d'être d'accord.
+
+  Un algorithme trivial a $80\%$ d'accord.
+
+  → Des erreurs plus graves sont « cachées » par ces gains sur les HLPs.
 \end{frame}
