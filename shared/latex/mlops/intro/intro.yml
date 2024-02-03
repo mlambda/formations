@@ -1,7 +1,9 @@
 default_titles:
+  ethics: ML \& éthique
   intro: Survol
   ml-lifecycle: Cycle de vie d'un projet ML
-  ethics: ML \& éthique
+  tp: Travaux pratiques
+
 flavors:
   mlw:
     - intro

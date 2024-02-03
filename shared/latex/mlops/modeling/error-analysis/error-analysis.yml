@@ -2,6 +2,7 @@ default_titles:
   intro: Introduction
   lime: Lime
   shap: SHAP
+  tp: Travaux pratiques
 
 flavors:
   mlw:

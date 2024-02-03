@@ -3,6 +3,7 @@ default_titles:
   lora: LoRA
   pruning: Élagage
   quantization: Quantification
+  tp: Travaux pratiques
 
 flavors:
   mlw:
