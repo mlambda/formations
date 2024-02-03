@@ -1,3 +1,118 @@
+\begin{frame}{Introduction}
+  L'analyse d'erreur est cruciale pendant le développement~:
+
+  \begin{itemize}
+    \item Oriente le travail futur
+    \item Détermine le progrès potentiel
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Lien entre analyse d'erreurs \& interprétabilité}
+  \begin{itemize}
+    \item L'interprétabilité permet l'analyse d'erreurs
+    \item Parfois une obligation réglementaire ou fonctionnelle en production → transparence
+    \item Continuum interprétabilité → performance~:
+      \begin{itemize}
+        \item Les modèles interprétables ne suffisent souvent pas à approximer les fonctions recherchées
+        \item Les modèles performants modernes sont des boîtes noires
+      \end{itemize}
+  \end{itemize}
+
+  Souvent un dilemme pour choisir un modèle.
+\end{frame}
+
+\begin{frame}{Approche conseillée}
+  \begin{itemize}
+    \item Déterminer des tranches des données pertinentes
+    \item Estimer les performances du modèle et les performances atteignables sur chacune des tranches
+    \item Prioriser le travail sur les tranches qui offriront le plus d'impact
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Approche conseillée — Exemple}
+  Imaginons travailler sur un système de classification d'images.
+
+  Supposons qu'on distingue les tranches suivantes dans nos données d'images~:
+
+  \begin{itemize}
+    \item Présence de montagnes
+    \item Présence d'humain
+    \item Présence de voiture
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Approche conseillée — Exemple, suite}
+  On estime les performances suivantes~:
+
+  \begin{tabular}{rcc}
+    \toprule
+    Tranche   & HLP  & Modèle \\
+    \midrule
+    Montagnes & 65\% & 60\%   \\
+    Humains   & 96\% & 90\%   \\
+    Voitures  & 80\% & 40\%   \\
+    \bottomrule
+  \end{tabular}
+
+  Quelle est la tranche la plus importante pour les améliorations de la prochaine itération~?
+\end{frame}
+
+\begin{frame}{Approche conseillée — Exemple, fin}
+  Utilisation des proportions dans le jeu de données pour quantifier l'impact~:
+
+  \begin{tabular}{rcccc}
+    \toprule
+    Tranche   & HLP  & Modèle & Proportion & Impact potentiel \\
+    \midrule
+    Montagnes & 65\% & 60\%   & 10\%       & 0.5\% \\
+    Humains   & 96\% & 90\%   & 85\%       & 5.1\% \\
+    Voitures  & 80\% & 40\%   & 1\%        & 0.4\% \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Analyse d'erreurs}
+  Une fois les tranches pertinentes détectées~:
+
+  \begin{itemize}
+    \item Trouver des exemples explicatifs du modèle
+    \item Utiliser un modèle plus simple qui explique globalement le modèle
+    \item Ou localement
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemples explicatifs}
+  Trouver des~:
+  \begin{description}
+    \item[Prototypes] Exemples représentatifs du comportement du modèle
+    \item[Exemples contrefactuels] Modification d'instances existantes pour voir comment évolue la prédiction
+    \item[Exemples adversariaux] Exemples contrefactuels qui ont un grand impact sur la prédiction
+    \item[Exemples influents] Exemples qui ont le plus eu d'impact sur le modèle
+  \end{description}
+\end{frame}
+
+\begin{frame}{Modèles explicatifs}
+  Entraînement de modèles~:
+  \begin{itemize}
+    \item Simples
+    \item Interprétables (régression linéaire, arbres simples, etc)
+    \item Approximant le modèle complexe
+    \item Permettant de comprendre les caractéristiques importantes
+    \item Globalement (plusieurs exemples, grande couverture)
+    \item Ou localement (un exemple)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Mesures}
+  Une fois l'analyse faite~:
+
+  \begin{itemize}
+    \item Augmentation des données
+    \item Ingénierie de caractéristiques
+    \item Exploration de nouveaux paramètres
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Pour aller plus loin}
   \bluelink{https://christophm.github.io/interpretable-ml-book/}{Livre «~Interpretable Machine Learning~»}
 \end{frame}

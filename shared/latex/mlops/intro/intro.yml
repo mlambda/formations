@@ -10,5 +10,6 @@ flavors:
     - /questions
     - ethics
     - /questions
+    - tp
 
 title: Introduction au MLOps
