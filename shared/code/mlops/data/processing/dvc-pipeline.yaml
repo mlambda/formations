@@ -1,0 +1,8 @@
+stages:
+  prepare:
+    cmd: source src/cleanup.sh
+    deps:
+      - src/cleanup.sh
+      - data/raw
+    outs:
+      - data/clean.csv

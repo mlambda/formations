@@ -1,0 +1,96 @@
+\begin{frame}{Introduction}
+  \bluelink{https://dvc.org/}{\texttt{dvc}} (\textit{Data Version Control}) est né d'un constat~:
+
+  \begin{itemize}
+    \item \texttt{git} est très répandu
+    \item Toutes les équipes de développement versionnent leur code
+    \item L'équivalent en ML~/~data science n'est pas vrai~:
+    \begin{itemize}
+      \item Pas de \texttt{git} pour les données \& modèles
+      \item Quasiment aucune équipe de ML~/~data science ne versionne ses données et ses modèles
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Concepts clefs}
+  \begin{itemize}
+    \item Construit sur \texttt{git}
+    \item Seuls le hash md5 d'un fichier de données est géré par \texttt{git}
+    \item Le fichier lui-même est stocké sur un serveur dédié
+    \item \texttt{dvc} fait le lien entre le hash md5 et le fichier stocké
+    \item Reproductibilité et mise en cache par les md5 des données et résultats intermédiaires
+    \item Registre de modèles utilisant les tags \texttt{git}
+    \item Traçage de métriques par \texttt{dvclive}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Serveurs de stockage}
+  \begin{description}
+    \item[Cloud]
+      \begin{itemize}
+        \item Amazon S3 (AWS) et outils compatibles (MinIO par exemple)
+        \item Microsoft Azure Blob Storage
+        \item Google Cloud Storage (GCP)
+        \item Google Drive
+        \item Aliyun OSS
+      \end{itemize}
+    \item[À héberger]
+      \begin{itemize}
+        \item SSH \& SFTP
+        \item HDFS \& WebHDFS
+        \item HTTP
+        \item WebDAV
+      \end{itemize}
+  \end{description}
+
+  Pendant le développement, on utilise souvent un «~serveur de stockage~» local~: un simple dossier.
+\end{frame}
+
+\begin{frame}{Commandes utiles}
+  Parmi \bluelink{https://dvc.org/doc/command-reference}{toutes les commandes} \texttt{dvc}, les principales sont~:
+  \begin{description}
+    \item[\texttt{dvc add}] Gérer un fichier dans \texttt{dvc}~:
+      \begin{itemize}
+        \item L'ajoute à \texttt{.gitignore}
+        \item Crée un fichier de méta-données \texttt{.dvc}
+        \item Ajoute le fichier au cache \texttt{dvc}
+      \end{itemize}
+    \item[\texttt{dvc checkout}] Récupère dans le cache le fichier qui correspond à un fichier de méta-données \texttt{.dvc}
+    \item[\texttt{dvc pull}] Récupère les fichiers de données depuis un serveur de stockage
+    \item[\texttt{dvc push}] Envoie les fichiers de données vers un serveur de stockage
+  \end{description}
+\end{frame}
+
+\begin{frame}{Chaînes de traitements}
+  Définition par étapes avec~:
+  \begin{itemize}
+    \item Dépendances
+    \item Paramètres
+    \item Sorties
+    \item Commande à exécuter
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Définition d'une pipeline}
+  Dans le terminal~:
+
+  \mintedcustomcode{mlops/data/processing/dvc-pipeline}{console}
+
+  En yaml~:
+
+  \mintedcustomcode{mlops/data/processing/dvc-pipeline}{yaml}
+\end{frame}
+
+\begin{frame}{Exécution}
+  \begin{itemize}
+    \item Lancement d'une pipeline par \texttt{dvc repro} ou \texttt{dvc exp run}
+    \item Crée un fichier \texttt{dvc.lock} qui contient les md5 de toutes les entrées \& sorties
+    \item \texttt{dvc exp run} crée un commit hors de l'arbre de commits
+    \item Transformation de ce commit en vraie branche si l'expérimentation était intéressante
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Site avec intégration DVC}
+  \bluelink{https://dagshub.com/}{DagsHub} permet de disposer d'une remote \texttt{dvc} gratuite pour se familiariser avec l'outil (et aussi d'une remote MLFlow).
+\end{frame}

@@ -1,0 +1,5 @@
+$ dvc stage add --name train \
+                --deps src/model.py \
+                --deps data/clean.csv \
+                --outs data/predict.dat \
+                python src/model.py data/clean.csv

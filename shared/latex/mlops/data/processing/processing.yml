@@ -1,4 +1,6 @@
 default_titles:
+  dvc: \texttt{dvc}~—~\textit{Data Version Control}
+  processing: Obtention, traçage \& transformation des données
   tp: Travaux pratiques
 
 flavors:
