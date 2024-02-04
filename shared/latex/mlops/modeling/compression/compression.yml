@@ -1,5 +1,4 @@
 default_titles:
-  intro: Introduction
   lora: LoRA
   pruning: Élagage
   quantization: Quantification
@@ -8,7 +7,6 @@ default_titles:
 flavors:
   mlw:
     - intro
-    - /questions
     - $/unsupervised/dimensionality-reduction: mlb
     - pruning
     - /questions
@@ -18,4 +16,4 @@ flavors:
     - /questions
     - tp
 
-title: Compression de modèles
+title: Performance des modèles

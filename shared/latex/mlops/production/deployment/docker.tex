@@ -103,6 +103,20 @@
   \end{description}
 \end{frame}
 
+\begin{frame}{Image de base}
+  Pour la mise en production de modèles de deep learning, bien choisir son image de base~:
+
+  \begin{itemize}
+    \item L'installation de TensorFlow~/~PyTorch~/~autre doit être optimisée pour la production
+    \item Maîtriser la taille de l'image et les performances est délicat
+    \item Préférable d'avoir le support GPU si il est nécessaire dès l'image de base
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Images dédiées}
+  Certaines images sont utilisables en l'état pour la mise en production~: \bluelink{https://www.tensorflow.org/tfx/serving/docker}{\texttt{tensorflow/serving}} pour TensorFlow par exemple.
+\end{frame}
+
 \begin{frame}{Conclusion}
   \begin{itemize}
     \item Docker est un outil puissant de conteneurisation

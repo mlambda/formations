@@ -7,7 +7,6 @@ default_titles:
 flavors:
   mlw:
     - intro
-    - /questions
     - ml-lifecycle
     - /questions
     - ethics

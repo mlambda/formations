@@ -1,7 +1,6 @@
 flavors:
   mlw:
     - intro
-    - /questions
     - $definition: mlw
     - $processing: mlw
 
