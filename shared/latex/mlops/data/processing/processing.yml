@@ -5,6 +5,8 @@ flavors:
   mlw:
     - processing
     - /questions
+    - dvc
+    - /questions
     - tp
 
 title: Traitement des données

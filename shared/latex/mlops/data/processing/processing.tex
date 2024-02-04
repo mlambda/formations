@@ -44,7 +44,34 @@
   → Contraint beaucoup de décisions d'architecture
 \end{frame}
 
-% DAG
-% Chaînes de traitement
-% Parité apprentissage/prod batch/realtime
-% MLFlow / KubeFlow / TFX
+\begin{frame}{Chaînes de traitements}
+  \begin{itemize}
+    \item Réponse aux problématiques de reproductibilité \& d'automatisation de processus
+    \item Comme souvent en informatique~: graphes dirigés acycliques d'opérations
+    \item Plusieurs solutions existent en fonction des besoins
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Caractéristiques souhaitables}
+  Points forts d'une chaîne de traitements
+  \begin{itemize}
+    \item Adaptation au batch (développement) comme au temps réel (production)
+    \item Fidélité des traitements développement~/~production
+    \item Passage à l'échelle
+    \item Déploiement sur des cibles diverses
+    \item Facilité de développement
+    \item Intégration à l'écosystème
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Principales solutions de chaînes de traitements}
+  Point fort de chaque solution~:
+
+  \begin{description}
+    \item[\bluelink{https://www.tensorflow.org/tfx}{TFX}] Options de déploiement \& parité dev~/~prod
+    \item[\bluelink{https://www.kubeflow.org/}{KubeFlow}] Intégration Kubernetes
+    \item[\bluelink{https://dvc.org/}{DVC}] Reproductibilité \& solution «~low tech~»
+    \item[\bluelink{https://mlflow.org/}{MLFlow}] Flexible, facile à adopter, supporté par les clouds
+    \item[\bluelink{https://www.pachyderm.com/}{Pachyderm}] Intégration Kubernetes
+  \end{description}
+\end{frame}
