@@ -1,3 +1,83 @@
+\begin{frame}{Organisation des données}
+  Plusieurs options de~:
+  \begin{itemize}
+    \item Structuration (schéma, description, …)
+    \item Passage à l'échelle (SQL, NOSQL, Système de fichier distribué, …)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Lac de données (\textit{data lake})}
+
+  Caractéristiques
+
+  \begin{itemize}
+    \item Espace de stockage global pour les informations de l'entreprise
+    \item Pas de schéma de données
+    \item Pas de format imposé
+    \item Pas de transactions
+    \item Potentiellement volatile
+  \end{itemize}
+
+  Utilité
+
+  \begin{itemize}
+    \item[\textcolor{green}{+}] Facilité \& faible coût de stockage, scalable
+    \item[\textcolor{red}{-}] Pas de gouvernance, de vérification d'intégrité
+    \item[\textcolor{red}{-}] Pas de transactionnalité
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Entrepôt de données (\textit{data warehouse})}
+  Caractéristiques
+
+  \begin{itemize}
+    \item Espace de stockage global pour les informations de l'entreprise
+    \item Schéma de données
+    \item Base de données relationnelle
+    \item Transactions
+    \item Non volatile
+  \end{itemize}
+
+  Utilité
+
+  \begin{itemize}
+    \item[\textcolor{green}{+}] Gouvernance \& vérifications d'intégrité
+    \item[\textcolor{red}{-}] Peu scalable
+    \item[\textcolor{red}{-}] Travail important de normalisation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\textit{Lakehouse}}
+  Combinaison de data lake \& data warehouse~: utilisation des normes de la warehouse sur du stockage big data
+  \begin{itemize}
+    \item Espace de stockage global pour les informations de l'entreprise
+    \item Schéma de données
+    \item Format imposé (par exemple Parquet)
+    \item Transactions
+    \item Non volatile
+  \end{itemize}
+
+  Utilité
+
+  \begin{itemize}
+    \item[\textcolor{green}{+}] Gouvernance \& vérifications d'intégrité
+    \item[\textcolor{green}{+}] Scalable
+    \item[\textcolor{red}{-}] Travail important de normalisation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\textit{Feature store}}
+  Dans un contexte MLOps, souvent une étape intermédiaire entre la source originale et le traitement~:
+
+  \begin{itemize}
+    \item Permet le stockage sous forme optimisée pour le ML
+    \item Évite de recalculer les mêmes caractéristiques
+    \item Permet la découvrabilité
+  \end{itemize}
+
+  Voir \bluelink{https://docs.feast.dev/}{Feast} par exemple.
+\end{frame}
+
 \begin{frame}{Obtention des données}
   \begin{itemize}
     \item Viser une première itération courte pour avoir des retours des phases ultérieures
