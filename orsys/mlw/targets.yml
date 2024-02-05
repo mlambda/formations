@@ -1,4 +1,4 @@
-- name: j123
+- name: j1
   title: MLOps, déploiement de Machine Learning en production
   sections:
     - path: about
@@ -10,9 +10,15 @@
     - path: mlops/data
       flavor: mlw
 
+- name: j2
+  title: MLOps, déploiement de Machine Learning en production
+  sections:
     - path: mlops/modeling
       flavor: mlw
 
+- name: j3
+  title: MLOps, déploiement de Machine Learning en production
+  sections:
     - path: mlops/production
       flavor: mlw
 
