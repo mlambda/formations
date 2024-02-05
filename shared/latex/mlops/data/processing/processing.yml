@@ -1,4 +1,5 @@
 default_titles:
+  /tools/git: \texttt{git}
   dvc: \texttt{dvc}~—~\textit{Data Version Control}
   processing: Obtention, traçage \& transformation des données
   tp: Travaux pratiques
@@ -6,6 +7,8 @@ default_titles:
 flavors:
   mlw:
     - processing
+    - /questions
+    - /tools/git
     - /questions
     - dvc
     - /questions
