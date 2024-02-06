@@ -7,7 +7,7 @@ default_titles:
 flavors:
   mlw:
     - intro
-    - $/unsupervised/dimensionality-reduction: mlb
+    - $/unsupervised/dimensionality-reduction: mlw
     - pruning
     - /questions
     - quantization

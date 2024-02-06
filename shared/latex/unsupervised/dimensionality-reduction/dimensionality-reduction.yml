@@ -39,5 +39,11 @@ flavors:
     - /questions
     - tuto
     - help-pointers
+  mlw:
+    - intro
+    - pca-lda
+    - tsne-umap
+    - /questions
+    - tp-mlw
 
 title: Réduction de la dimensionnalité
