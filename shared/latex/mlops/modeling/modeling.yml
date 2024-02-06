@@ -1,6 +1,3 @@
-default_titles:
-  intro: Introduction
-
 flavors:
   mlw:
     - intro
