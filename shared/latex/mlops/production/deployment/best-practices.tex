@@ -44,3 +44,26 @@
     \item Outillage interne
   \end{itemize}
 \end{frame}
+
+\begin{frame}{CI/CD}
+  Le lancement de ces déploiements peuvent se faire par tags git et opérations en CI/CD.
+
+  C'est l'esprit GitOps, avec le projet \bluelink{https://dvc.org/doc/gto}{GTO} de DVC par exemple.
+\end{frame}
+
+\begin{frame}{Architecture adaptée au big data}
+  Doit gérer principalement~:
+
+  \begin{itemize}
+    \item Le traitement en batch
+    \item Le traitement en temps réel
+    \item L'application d'algorithmes d'analyse et d'apprentissage
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Architectures répandues}
+  \begin{description}
+    \item[Lambda] Ingère les données en deux modes~: batch \& temps réel, pour des besoins différents
+    \item[Kappa] Gestion par événements (Kafka, etc), traitements temps réel \& batch homogénéisés
+  \end{description}
+\end{frame}

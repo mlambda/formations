@@ -1,6 +1,5 @@
 default_titles:
   /python/production/environment: Environnement Python
-  architectures: Architectures Big Data
   best-practices: Bonnes pratiques
   docker: Docker
   fastapi: FastAPI
@@ -24,8 +23,6 @@ flavors:
     - kubeflow
     - /questions
     - best-practices
-    - /questions
-    - architectures
     - /questions
     - tp
 
