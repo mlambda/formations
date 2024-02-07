@@ -3,27 +3,24 @@ default_titles:
   best-practices: Bonnes pratiques
   docker: Docker
   fastapi: FastAPI
-  intro: Introduction
   kubeflow: KubeFlow
   kubernetes: Kubernetes
   tp: Travaux pratiques
 
 flavors:
   mlw:
-    - intro
-    - /questions
     - /python/production/environment
     - /questions
     - fastapi
     - /questions
     - docker
     - /questions
+    - tp
     - kubernetes
     - /questions
     - kubeflow
     - /questions
     - best-practices
     - /questions
-    - tp
 
 title: Déploiement
