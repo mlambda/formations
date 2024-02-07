@@ -1,0 +1,68 @@
+\begin{frame}{Enjeux}
+  \begin{itemize}
+    \item S'assurer du bon comportement d'un modèle
+    \item Savoir quand réentraîner un modèle
+    \item Comprendre les données d'un modèle
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Problèmes courants — Dérive des données}
+  Nom donné à l'évolution de la distribution des données d'entrées.
+
+  Rend peu à peu les modèles obsolètes → Nécessité de réentraîner.
+\end{frame}
+
+\begin{frame}{Problèmes courants — Dérive des concepts}
+  Nom donné à l'évolution de la correspondance entre les sorties et les entrées.
+
+  Comme pour la dérive des données, rend peu à peu les modèles obsolètes → Nécessité de réentraîner.
+\end{frame}
+
+\begin{frame}{Rapidité d'évolution des données}
+  \begin{description}
+    \item[Données utilisateurs] Changements souvent lents et de fond
+    \item[Données d'entreprise] Souvent plus marqués et brusques
+  \end{description}
+\end{frame}
+
+\begin{frame}{Problèmes courants — Qualité des données}
+  \begin{itemize}
+    \item Valeurs manquantes
+    \item Valeurs aberrantes
+    \item Changement de schéma
+    \item …
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Outils — Suites de tests}
+  Exécution automatisée de détection de~:
+  \begin{itemize}
+    \item Dérive des données
+    \item Dérive des concepts
+    \item Mauvaise qualité des données
+    \item Chute de performance de prédiction
+  \end{itemize}
+  La bibliothèque la plus utilisée pour cela est \texttt{evidently}.
+\end{frame}
+
+\begin{frame}{Outils — Tableau de bord}
+  Le pendant destiné aux humains des suites de tests~:
+
+  \begin{itemize}
+    \item Pour alimenter la discussion sur les données en équipe ML
+    \item Pour compléter des tableaux d'indicateurs plus généraux
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Monitoring classique}
+  En plus de ces problèmes spécifiques au ML, un système de ML en production a besoin de monitoring classique.
+
+  Par exemple, les quatre «~signaux d'or~» en SRE (\textit{Site Reliability Engineering})~:
+
+  \begin{itemize}
+    \item La latence
+    \item Le trafic
+    \item Les erreurs
+    \item La saturation
+  \end{itemize}
+\end{frame}
