@@ -4,7 +4,6 @@ default_titles:
 flavors:
   mlw:
     - intro
-    - /questions
     - $deployment: mlw
     - $monitoring: mlw
 
