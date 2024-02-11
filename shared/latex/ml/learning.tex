@@ -13,6 +13,12 @@
   → Minimiser la perte sur un ensemble de validation
 \end{frame}
 
+\begin{frame}{Cross-validation}
+  La technique de réference pour évaluer des modèles prédictifs :
+  \V{"img/k-fold-cross-validation" | image("tw", 0.9)}
+  Ici, 4-fold cross-validation.
+\end{frame}
+
 \begin{frame}{Séparation des données}
   \begin{itemize}
   \item ensemble d'entrainement
@@ -20,13 +26,6 @@
   \item ensemble de test (pour éviter le biais statistique)
   \end{itemize}
   → Split 60/20/20 habituel.
-\end{frame}
-
-\begin{frame}{Cross-validation}
-  Pour \og perdre\fg{} moins de données et mieux tester la
-  généralisation :
-  \V{"img/k-fold-cross-validation" | image("tw", 0.9)}
-  Ici, 4-fold cross-validation.
 \end{frame}
 
 \begin{frame}{Régularisation}
@@ -52,11 +51,12 @@
 \begin{frame}{Optimisation des méta-paramètres}
   Méta-paramètres : paramètres \alert{non appris} par le modèle.
   \begin{exampleblock}{Exemples}
-  \begin{description}
-  \item[Forme] Nombre de couches ? De quelles tailles ? …
-  \item [Optimisation] SGD, AdaBoost, Adam, …
-  \item [Régularisation] Pénalisation de la Norme des paramètres dans la loss, bruitage, dropout, …
-  \end{description}
+    \begin{description}
+    \item[Forme] Nombre de couches ? De quelles tailles ? …
+    \item [Optimisation] SGD, Adam, Lion ?
+    \item [Régularisation] Pénalisation de la Norme des paramètres dans la loss, bruitage, dropout, …
+    \item [Prétraitements] Feature engineering, Méthode de normalisation, …
+    \end{description}
   \end{exampleblock}
   Optimisation par recherche aléatoire ou processus gaussien.
 \end{frame}

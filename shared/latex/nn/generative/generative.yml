@@ -17,4 +17,6 @@ flavors:
     - gan
     - stable-diffusion
     - /questions
+  iao:
+    - stable-diffusion
 title: Réseaux génératifs

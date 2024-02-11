@@ -3,6 +3,7 @@ default_titles:
   alphago: Alphago
   deep: Deep Learning
   intro: Introduction
+  intro-light: Introduction
   q-learning: Q-apprentissage
 flavors:
   mle:
@@ -16,6 +17,11 @@ flavors:
     - demo
     - deep: null
     - actor-critic
+    - alphago
+    - /questions
+  iao:
+    - intro-light
+    - deep: null
     - alphago
     - /questions
 title: Apprentissage par renforcement

@@ -21,7 +21,7 @@
       flavor: iao
 
     - path: rl
-      flavor: drn
+      flavor: iao
 
 - name: j2
   title: Jour 2 --- Applications et ingénierie du Machine Learning
@@ -29,13 +29,13 @@
     - path: engineering
       flavor: mlcraftmyass
 
-    - path: sectors
-      flavor: full
+    - path: tools
+      flavor: devops
 
     - path: big-questions
       flavor: full
 
-    - path: tools
-      flavor: devops
+    - path: sectors
+      flavor: full
 
     - contact

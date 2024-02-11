@@ -1,9 +1,13 @@
 default_titles:
   deep-optimize: Optimisation de réseaux profonds
   gradient-descent: Descente de gradient
+  gradient-descent-light: Descente de gradient
   intro: Introduction
+  intro-light: Introduction
   optimize: Optimisation des hyper-paramètres
+  optimize-light: Optimisation des hyper-paramètres
   regularisation: Régularisation
+  regularisation-light: Régularisation
 flavors:
   ml1:
     - intro
@@ -25,24 +29,22 @@ flavors:
     - /questions
     - help-pointers
   iao:
-    - intro
-    - /supervised/classification
+    - intro-light
+    - gradient-descent-light
     - playground
-    - gradient-descent
-    - optimize
-    - deep-optimize
-    - regularisation
+    - optimize-light
+    - regularisation-light
     - playground
     - $/tf-keras: drn
     - $cnn: mle
     - $rnn: iao
-    - $generative: gan
+    - $generative: iao
     - /questions
     - help-pointers
   drn:
     - intro
-    - playground
     - gradient-descent
+    - playground
     - optimize
     - deep-optimize
     - regularisation
