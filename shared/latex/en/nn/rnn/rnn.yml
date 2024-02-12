@@ -20,4 +20,8 @@ flavors:
     - keras
     - /en/questions
     - demo
+  iao:
+    - model-light
+    - /en/questions
+    - demo
 title: Recurrent neural networks

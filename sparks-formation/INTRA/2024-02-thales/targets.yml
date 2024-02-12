@@ -1,0 +1,12 @@
+- name: j1
+  title: Big Data \& Machine Learning Fundamentals
+  sections:
+    - path: en/about
+      flavor: thales
+
+    - path: en/big-data
+      flavor: full
+
+    - path: en/ml
+      flavor: bdm
+      title: Machine Learning Fundamentals

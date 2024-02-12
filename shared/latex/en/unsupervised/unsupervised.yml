@@ -9,5 +9,7 @@ flavors:
     - $dimensionality-reduction: mlb
     - $clustering: intra-l-oreal
     - $anomaly-detection: full-no-tree
+  iao:
+    - introduction
 
 title: Unsupervised Learning

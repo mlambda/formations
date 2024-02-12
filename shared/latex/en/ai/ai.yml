@@ -5,6 +5,6 @@ flavors:
   full:
     - intro
     - history
-    - /questions
+    - /en/questions
 title: Artificial Intelligence
 version: 3

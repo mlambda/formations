@@ -1,0 +1,63 @@
+\begin{frame}{Neural Networks for Images}
+  Say you want to detect objects in an image. A good model should:
+  \begin{itemize}
+    \item Find the object regardless of its location
+    \item Use local data around the object to produce a decision, not the opposite side of the image
+  \end{itemize}
+
+  Standard dense neural networks don't meet those criteria.
+
+  $\Rightarrow$ Convolutional neural networks do.
+\end{frame}
+
+\begin{frame}{Convolution}
+  Key building block: the cross-correlation operation (misnamed convolution).
+
+  It embodies both \textbf{locality} and \textbf{translation invariance}.
+
+  \V{"img/d2l/correlation" | image("tw", 0.8, "en")}
+\end{frame}
+
+\begin{frame}{Pooling}
+  Pooling is the other standard mechanism to reduce dimension:
+
+  \V{"tikz/neural-networks/cnn/maxpool" | image("tw", 0.8, "en")}
+\end{frame}
+
+\begin{frame}{Combination into a convolutional neural network}
+  Yann LeCun ---~now Turing Award recipient~--- first combined those blocks into a successful network with LeNet:
+
+  \V{"img/d2l/lenet" | image("tw", 1, "en")}
+\end{frame}
+
+\begin{frame}{Schematic view of LeNet}
+  \V{"img/d2l/lenet-vert" | image("th", 0.7, "en")}
+\end{frame}
+
+\begin{frame}{Training}
+  Done by gradient descent, just like standard dense neural networks.
+
+  Less parameters but more operations: greatly benefits from GPUs.
+
+  \V{"img/gpus" | image("th", 0.4, "en")}
+\end{frame}
+
+\begin{frame}{Visual cortex architecture}
+  \begin{minipage}[l]{0.50\linewidth}
+    \V{"img/visual-cortex" | image("tw", 1.0, "en")}
+  \end{minipage}\hfill
+  \begin{minipage}[l]{0.49\linewidth}
+    Layered connections:
+    \begin{description}
+    \item[V1] lines orientation
+    \item[V2] shapes, sizes, colors
+    \item[V3] motricity
+    \item[V4] object recognition
+    \item[V5] object tracking
+    \end{description}
+  \end{minipage}\hfill
+\end{frame}
+
+\begin{frame}{Demonstration}
+  \bluelink{https://adamharley.com/nn_vis/cnn/3d.html}{Convolutional neural networks}
+\end{frame}

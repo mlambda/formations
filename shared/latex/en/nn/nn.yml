@@ -2,10 +2,30 @@ default_titles:
   deep-optimize: Deep Neural Networks Optimization
   gradient-descent: Gradient Descent
   intro: Introduction
+  intro-light: Introduction
   optimize: Hyperparameters Optimization
   regularization: Regularization
 
 flavors:
+  bdm:
+    - intro-light
+    - gradient-descent-light: null
+    - /en/questions
+    - playground
+    - $cnn: mle
+    - $rnn: iao
+    - $generative: iao
+  iao:
+    - intro-light
+    - gradient-descent-light
+    - playground
+    - optimize-light
+    - regularisation-light
+    - playground
+    - $/en/tf-keras: drn
+    - $cnn: mle
+    - $rnn: iao
+    - $generative: iao
   bda:
     - intro
     - playground
@@ -52,6 +72,5 @@ flavors:
     - $/en/nlp: dpl
     - $/en/sequential-data: dpl
     - $rnn: dpl
-
 
 title: Neural Networks

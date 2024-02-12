@@ -41,7 +41,11 @@
 \maketitle
 
 %% if toc is defined and toc:
+%% if "toc_en" in config:
+\begin{frame}{Table of Contents}
+  %% else:
 \begin{frame}{Table des matières}
+%%endif
 %% if "toc_size" in config:
   \\V{config["toc_size"]}{\tableofcontents[subsectionstyle=hide]}
 %% else:

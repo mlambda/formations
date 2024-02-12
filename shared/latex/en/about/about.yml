@@ -25,4 +25,9 @@ flavors:
     - formateur
     - horaires-5j-sparks
     - tour2table
+  thales:
+    - formateur
+    - description
+    - schedule
+    - tour2table
 title: About the seminar

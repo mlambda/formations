@@ -8,6 +8,11 @@ default_titles:
   modern-architectures: Modern CNN architectures
   demo-task: Demonstrations
 flavors:
+  mle:
+    - data: null
+    - model-light
+    - /en/questions
+    - demo
   drn:
     - data
     - model

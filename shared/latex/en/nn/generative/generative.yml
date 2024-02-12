@@ -1,0 +1,6 @@
+default_titles:
+flavors:
+  iao:
+    - stable-diffusion
+    - /en/questions
+title: Generative Neural Networks

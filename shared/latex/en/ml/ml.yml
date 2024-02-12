@@ -1,9 +1,26 @@
 default_titles:
   learning: Learning
+  learning-light: Learning
   data-preparation: Data preparation
   evaluation: Evaluation
+  evaluation-light: Evaluation
   intro: Introduction
+  intro-light: Introduction
 flavors:
+  bdm:
+    - intro-light
+    - evaluation-light
+    - learning-light
+    - /en/questions
+    - $/en/supervised: iao
+    - $/en/unsupervised: iao
+    - $/en/rl: bdm
+    - $/en/nn: bdm
+  intro:
+    - intro
+    - evaluation
+    - learning
+    - /en/questions
   drn:
     - intro
     - $prerequisites: full

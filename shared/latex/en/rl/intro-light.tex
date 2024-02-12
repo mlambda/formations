@@ -1,0 +1,46 @@
+\begin{frame}{Paradigm}
+  \V{"img/rl" | image("tw", 0.5)}
+  Where
+
+  \begin{description}
+    \item[$S_t$] State of the environment at timestep $t$
+    \item[$A_t$] Action chosen by the agent at timestep $t$
+    \item[$R_t$] Reward received by the agent at timestep $t$
+  \end{description}
+\end{frame}
+
+\begin{frame}{Types of task}
+  \begin{description}
+    \item[Episodic] Clear start and end (\textit{e.g.} until Game Over in a video game)
+    \item[Continuous] Unclear start, no end (\textit{e.g.} stock market)
+  \end{description}
+\end{frame}
+
+\begin{frame}{Technical \& theoretical constraints}
+  \begin{itemize}
+    \item The environnement often cannot be simulated perfectly 
+    \item The reward might not be immediate
+    \item The space to explore might be big
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Technical \& theoretical constraints --- Stock market}
+  \V{"img/stock-market" | image("th", 0.7, "en")}
+\end{frame}
+
+\begin{frame}{Technical \& theoretical constraints --- Chess}
+  \V{"img/chess" | image("th", 0.5, "en")}
+  \pause
+  \begin{center}
+    $\approx 10^{120}$ possible games $\ggg 6 x 10^{85}$
+    \newline
+    (number of atoms in the observable universe)
+  \end{center}
+\end{frame}
+
+\begin{frame}{Technical \& theoretical constraints --- Go}
+  \V{"img/goban" | image("th", 0.5, "en")}
+  \begin{center}
+    \huge{$\approx 10^{600}$}
+  \end{center}
+\end{frame}

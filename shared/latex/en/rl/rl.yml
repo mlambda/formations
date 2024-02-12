@@ -1,17 +1,26 @@
 default_titles:
   actor-critic: Actor-critic methods
   alphago: AlphaGo
+  deep: Deep Reinforcement Learning
   intro: Introduction
   q-learning: Q-learning
 flavors:
+  bdm:
+    - intro-light
+    - /en/questions
+  iao:
+    - intro-light
+    - deep
+    - alphago
+    - /en/questions
   drn:
     - intro
-    - /questions
+    - /en/questions
     - q-learning
-    - /questions
+    - /en/questions
     - actor-critic
-    - /questions
+    - /en/questions
     - alphago
-    - /questions
+    - /en/questions
     - demo
 title: Reinforcement Learning

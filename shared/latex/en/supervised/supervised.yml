@@ -16,6 +16,11 @@ default_titles:
   svm: Support vector machine
 
 flavors:
+  iao:
+    - intro
+    - trees-light
+    - random-forest-light
+    - /en/questions
   svm-text:
     - svm
     - tp-svm-text

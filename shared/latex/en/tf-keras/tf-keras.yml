@@ -7,9 +7,9 @@ flavors:
     - /en/questions
     - tp-keras
   drn:
-    - tf
-    - keras
+    - keras: null
     - /en/questions
+    - demo-keras
   dpl:
     - tf
     - /en/questions
