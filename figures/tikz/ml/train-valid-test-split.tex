@@ -1,0 +1,22 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \node [data,minimum height=5cm] (X)     at (0,0) {\LARGE \textbf{X}};
+    \node [data, minimum height=3cm, fill=applegreen, draw=applegreen!50] (Train) at (4,2) {\LARGE \textbf{Train}};
+    \node [data, minimum height=1cm, fill=Aureolin, draw=Aureolin!50]     (Valid) at (4,-1){\LARGE \textbf{Valid}};
+    \node [data, minimum height=1cm, fill=Gamboge, draw=Gamboge!50]       (Test)  at (4,-3){\LARGE \textbf{Test}};
+    %Invisible node
+    \node (i1) at (1.8,0) {};
+    
+    \draw [->, ArrowC1] (X) -- (Train.west);
+    \draw[->,ArrowC1] (X) -- (Valid.west);
+    \draw[->,ArrowC1] (X) -- (Test.west);
+    \node at (9.5,2) {\LARGE pour entraîner des modèles};
+    \node at (9.7,-1){\LARGE pour sélectionner UN modèle};
+    \node at (11,-3){\LARGE pour valider LE modèle statistiquement};
+
+\end{tikzpicture}
+\end{document}
