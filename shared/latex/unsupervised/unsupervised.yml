@@ -12,9 +12,6 @@ flavors:
     - $clustering: mle
   iao:
     - introduction
-    - $dimensionality-reduction: mle
-    - $clustering: mle
-    - $anomaly-detection: full
   ml3:
     - $dimensionality-reduction: mlb
     - $anomaly-detection: full

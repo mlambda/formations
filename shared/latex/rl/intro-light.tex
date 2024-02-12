@@ -1,0 +1,47 @@
+\begin{frame}{Paradigme}
+  \V{"img/rl" | image("tw", 0.5)}
+
+  Où
+
+  \begin{description}
+    \item[$S_t$] État de l'environnement au temps $t$
+    \item[$A_t$] Action choisie par l'agent au temps $t$
+    \item[$R_t$] Récompense reçue par l'agent au temps $t$
+  \end{description}
+\end{frame}
+
+\begin{frame}{Types de tâches}
+  \begin{description}[<+->]
+    \item[Épisodique] Début et fin clairs (\textit{i.e.} jusqu'au Game Over d'un jeu)
+    \item[Continue] Début non clair, pas de fin (\textit{i.e.} bourse)
+  \end{description}
+\end{frame}
+
+\begin{frame}{Contraintes techniques \& théoriques}
+  \begin{itemize}[<+->]
+    \item L'environnement ne peut souvent pas être simulé parfaitement
+    \item La récompense peut être lointaine
+    \item L'espace à explorer peut être très grand
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Contraintes techniques \& théoriques --- Bourse}
+  \V{"img/stock-market" | image("th", 0.7)}
+\end{frame}
+
+\begin{frame}{Contraintes techniques \& théoriques --- Échecs}
+  \V{"img/chess" | image("th", 0.5)}
+  \pause
+  \begin{center}
+    $\approx 10^{120}$ parties possibles $\ggg 6 x 10^{85}$
+    \newline
+    (nombre d'atomes dans l'univers observable)
+  \end{center}
+\end{frame}
+
+\begin{frame}{Contraintes techniques \& théoriques --- Go}
+  \V{"img/goban" | image("th", 0.5)}
+  \begin{center}
+    \huge{$\approx 10^{600}$}
+  \end{center}
+\end{frame}

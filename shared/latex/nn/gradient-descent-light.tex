@@ -1,0 +1,33 @@
+\begin{frame}{Principe}
+  \begin{columns}
+    \begin{column}{0.5\tw}
+      Calcul du gradient de l'erreur par rapport aux paramètres:
+      \[
+        \frac{\partial{E}}{\partial{\theta_i}}
+      \]
+      Mise à jour :
+      \[
+        \theta_i \leftarrow \theta_i - \gamma\frac{\partial{E}}{\partial{\theta_i}}
+      \]
+      où $0 < \gamma < 1$ (pas d'apprentissage)
+    \end{column}
+    \begin{column}{0.5\tw}
+      \V{"plt/linear-regression-error-surface" | image("tw", 1)}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Algorithme}
+  \begin{enumerate}
+    \item Initialisation aléatoire des paramètres du modèle
+    \item Pour chaque donnée ~:
+    \begin{itemize}
+        \item \textbf{Forward}~: Calcul des prédictions 
+        \item Calcul des erreurs
+        \item \textbf{Backward}~: Mise à jour du modèle
+        
+
+        \item Vérification des critères d'arrêt
+    \end{itemize}
+  \end{enumerate}
+\end{frame}

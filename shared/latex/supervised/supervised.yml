@@ -7,20 +7,22 @@ default_titles:
   regression-polynomiale: Régression polynômiale
 
   trees: Arbre de décision
+  trees-light: Arbre de décision
   random-forest: Forêt aléatoire
+  random-forest-light: Forêt aléatoire
 
   gradient-boosting: Arbre de décision amplifié par le gradient
 
   svm: Séparateur à vaste marge
+
 flavors:
   svm-text:
     - svm
     - demo-sklearn-svm
     - tp-svm-text
   iao:
-    - trees
-    - trees-details
-    - random-forest
+    - trees-light
+    - random-forest-light
     - /questions
   bda:
     - /prerequisites/proba-rappel

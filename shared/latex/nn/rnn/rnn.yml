@@ -1,6 +1,7 @@
 default_titles:
   lstm: Réseaux à longue mémoire de court terme
   model: Modèle
+  model-light: Modèle
   keras: Implémentation avec Keras
   variants: Variantes
   /nlp/wordembeddings: Représentation de variables catégorielles
@@ -20,7 +21,7 @@ flavors:
     - keras
     - /questions
   iao:
-    - model
+    - model-light
     - /questions
     - demo
   mle:

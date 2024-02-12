@@ -2,22 +2,6 @@
   \V{"plt/overfitting-train" | image("th", 0.7)}
 \end{frame}
 
-\begin{frame}{Par la pénalisation de l'utilisation des paramètres}
-  Coût supplémentaire pour l'utilisation des paramètres dans la fonction de perte~:
-  \begin{description}
-    \item[L1] Produit beaucoup de poids à 0, s'appelle aussi Lasso~:
-      \[
-        Loss = Err + \lambda ||\vect{\theta}||_1
-      \]
-    \item[L2] Pénalise les très gros poids, s'appelle aussi Ridge~:
-      \[
-        Loss = Err + \lambda ||\vect{\theta}||_2^2
-      \]
-  \end{description}
-
-  où $\lambda$ est un hyperparamètre
-\end{frame}
-
 \begin{frame}{Par early stopping}
   \V{"plt/early-stopping" | image("th", 0.7)}
 \end{frame}

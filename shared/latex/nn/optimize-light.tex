@@ -1,0 +1,21 @@
+\begin{frame}{Qu'est-ce qu'un hyper-paramètre~?}
+  \begin{columns}
+    \begin{column}[c]{0.5\textwidth}
+      \V{"tikz/neural-networks/deep-ff-notext" | image("tw", 1)}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item Learning rate
+        \item Taille de batch
+        \item Nombre de couches
+        \item Taille des couches
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Multiplication des modèles à tester !}
+  Entraîner des modèles coûte cher.
+  Une bonne navigation de l'espace des hyper-paramètres est importante.
+  $\Rightarrow$ Faire appel à une librairie dédiée comme Keras Tuner, Hyperopt, Nevergrad, Optuna ou Ray pour utiliser des processus gaussiens ou d'autres méthodes état de l'art.
+\end{frame}
