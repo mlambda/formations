@@ -1,0 +1,80 @@
+\begin{frame}{How to organize data?}
+  Several options, depending on:
+  \begin{itemize}
+    \item Is the data strictly structured?
+    \item Is the data representable in an agreed upon format?
+    \item Is the data volatile?
+    \item Do we need transations?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Data Lake}
+
+  Characteristics
+
+  \begin{itemize}
+    \item Global storage space for company information
+    \item No data schema
+    \item No imposed format
+    \item No transactions
+    \item Potentially volatile
+  \end{itemize}
+
+  Utility
+
+  \begin{itemize}
+    \item[\textcolor{green}{+}] Easy \& low-cost storage, scalable
+    \item[\textcolor{red}{-}] No governance, integrity verification
+    \item[\textcolor{red}{-}] No transactionality
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Data Warehouse}
+  Characteristics
+
+  \begin{itemize}
+    \item Global storage space for company information
+    \item Data schema
+    \item Relational database
+    \item Transactions
+    \item Non-volatile
+  \end{itemize}
+
+  Utility
+
+  \begin{itemize}
+    \item[\textcolor{green}{+}] Governance \& integrity checks
+    \item[\textcolor{red}{-}] Not very scalable
+    \item[\textcolor{red}{-}] Significant normalization work
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Lakehouse}
+  Combination of data lake \& data warehouse: using warehouse standards on big data storage
+  \begin{itemize}
+    \item Global storage space for company information
+    \item Data schema
+    \item Imposed format (e.g., Parquet)
+    \item Transactions
+    \item Non-volatile
+  \end{itemize}
+
+  Utility
+
+  \begin{itemize}
+    \item[\textcolor{green}{+}] Governance \& integrity checks
+    \item[\textcolor{green}{+}] Scalable
+    \item[\textcolor{red}{-}] Significant normalization work
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{How to choose?}
+  \begin{itemize}
+    \item Increasing number of people having to use the data → Increasing structure required
+    \item If a single team derives insight from the data, a basic data lake can be fine
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Continuum}
+  Most solutions will end up in-between a data lake and a data warehouse.
+\end{frame}

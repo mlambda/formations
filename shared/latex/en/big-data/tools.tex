@@ -1,0 +1,40 @@
+\begin{frame}{Technical challenges}
+  Everything is hard when operating on big data~:
+
+  \begin{itemize}
+    \item Storing
+    \item Searching
+    \item Transferring
+    \item Processing
+  \end{itemize}
+
+  → Specific tools are required
+\end{frame}
+
+\begin{frame}{Technical enablers}
+  \begin{description}
+    \item[Storing] HDFS, Object stores, NOSQL…
+    \item[Searching] ElasticSearch, Hive, BigTable, …
+    \item[Transferring] HDFS, efficient formats (parquet, protobuf, …)
+    \item[Processing] Hadoop, Flint, Spark, Storm, …
+  \end{description}
+\end{frame}
+
+\begin{frame}{Data Format}
+  \begin{itemize}
+    \item Files (Parquet, HDF5, text, CSV, XML, JSON, …)
+    \item Relational databases: SQL
+    \item "Not just" relational databases: NoSQL (non-tabular data representation)
+    \item Event queues
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Architectural tools}
+  Some tools are architecture-defining:
+
+  \begin{itemize}
+    \item Kafka turns all the data handling into event queues
+    \item Hive allows for all data to be queried as if it were in a usual database
+    \item …
+  \end{itemize}
+\end{frame}

@@ -1,4 +1,16 @@
+default_titles:
+  intro: Introduction
+  data-organization: Data Organization
+  governance: Governance
+  tools: Tools
+  conclusion: Conclusion
+
 flavors:
   full:
     - intro
+    - data-organization
+    - governance
+    - tools
+    - conclusion
+
 title: Big Data Fundamentals
