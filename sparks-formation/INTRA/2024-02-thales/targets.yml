@@ -7,6 +7,9 @@
     - path: en/big-data
       flavor: full
 
+    - path: en/data-science
+      flavor: full
+
     - path: en/ml
       flavor: bdm
       title: Machine Learning Fundamentals

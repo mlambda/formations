@@ -1,0 +1,6 @@
+flavors:
+  full:
+    - data-science
+    - /en/questions
+
+title: Data Science
