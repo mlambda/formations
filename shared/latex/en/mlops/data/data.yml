@@ -1,0 +1,7 @@
+flavors:
+  bdm:
+    - intro
+    - $definition: bdm
+    - $processing: bdm
+
+title: Data Management

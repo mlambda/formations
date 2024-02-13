@@ -10,3 +10,8 @@
     - path: en/ml
       flavor: bdm
       title: Machine Learning Fundamentals
+
+    - path: en/mlops
+      flavor: bdm
+
+    - contact

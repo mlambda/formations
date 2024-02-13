@@ -1,0 +1,53 @@
+\begin{frame}{Deployment Strategies}
+  Several criteria allow for choosing a deployment strategy:
+
+  \begin{itemize}
+    \item Service traffic
+    \item Audience (public, internal, other services, ...)
+    \item Deployment frequency
+    \item ...
+  \end{itemize}
+
+  Key concepts:
+  \begin{itemize}
+    \item Progressive deployment
+    \item Rollback (ability to return to the previous state of the system)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Shadow Deployment}
+  \begin{itemize}
+    \item Deployment of the model alongside the existing system
+    \item Model outputs are not used by the application
+    \item Analysis of model outputs and decision to continue deployment or not
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Blue/Green Deployment}
+  \begin{itemize}
+    \item Deployment of the new model (green) alongside the existing system (blue)
+    \item When tests are successful on the green system, traffic is redirected there
+    \item Allows for rollback if issues arise
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Canary Deployment}
+  \begin{itemize}
+    \item Similar to blue/green, two parallel systems
+    \item Gradual ramp-up of the green system
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Implementation}
+  The two most popular options:
+  \begin{itemize}
+    \item Kubernetes + Istio
+    \item Internal tooling
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{CI/CD}
+  The launch of these deployments can be done via git tags and operations in CI/CD.
+
+  This is the \bluelink{https://www.atlassian.com/git/tutorials/gitops}{GitOps} approach, with the \bluelink{https://dvc.org/doc/gto}{GTO} project from DVC, for example.
+\end{frame}

@@ -1,0 +1,42 @@
+\begin{frame}{Model Engineering}
+  Several key aspects to consider:
+
+  \begin{itemize}
+  \item Performance in production
+  \item Various deployments with very distinct characteristics
+  \item Interpretability
+  \item Maintainability
+  \item Compliance with regulations (non-discrimination, ...)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Best Practices}
+  In an industrial context, the focus is on the data, not the model~:
+
+  \begin{itemize}
+    \item Start simple (heuristic, simple model)
+    \item Use the industry standard for the task given your performance and deployment requirements
+    \item Improve data first, model second
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Model Card}
+  Introduced in \bluelink{https://arxiv.org/abs/1810.03993}{\textit{Model Cards for Model Reporting}}~:
+
+  \begin{itemize}
+    \item Specifies ethical and regulatory decisions related to the model
+    \item Provides transparency
+    \item Aims at informing both the public and internal teams
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Model Registry}
+  Centralized place to store and retrieve models and associated meta-data~:
+
+  \begin{itemize}
+    \item Eases deployment
+    \item Solidifies reproducibility
+  \end{itemize}
+
+  \bluelink{https://mlflow.org/docs/latest/model-registry.html}{MLFlow Model Registry}
+\end{frame}

@@ -1,0 +1,6 @@
+flavors:
+  bdm:
+    - intro-management
+    - /en/questions
+
+title: Data Science Project Management

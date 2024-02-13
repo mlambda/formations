@@ -1,0 +1,18 @@
+\documentclass[beamer,crop,tikz]{standalone}
+
+\usepackage{formation}
+
+\begin{document}
+  \begin{tikzpicture}
+    \draw[align=center] (0.2, 0) rectangle (3.8, 10) node[midway] {Configuration};
+    \draw[align=center] (4.2, 4.2) rectangle (7.8, 10) node[midway] {Data\\Gathering};
+    \draw[align=center] (4.2, 0) rectangle (9.8, 3.8) node[midway] {Feature\\Engineering};
+    \draw[align=center, color=red] (8.2, 4.2) rectangle (9.8, 5.8) node[midway] {ML\\Code};
+    \draw[align=center] (8.2, 6.2) rectangle (11.8, 10) node[midway] {Data\\Verification};
+    \draw[align=center] (12.2, 6.2) rectangle (15.8, 10) node[midway] {Resource\\Management};
+    \draw[align=center] (10.2, 4.2) rectangle (15.8, 5.8) node[midway] {Analysis Tools};
+    \draw[align=center] (10.2, 0) rectangle (15.8, 3.8) node[midway] {Process Management Tools};
+    \draw[align=center] (16.2, 0) rectangle (19.8, 10) node[midway] {Inference\\Infrastructure};
+    \draw[align=center] (20.2, 0) rectangle (23.8, 10) node[midway] {Observability};
+  \end{tikzpicture}
+\end{document}

@@ -1,0 +1,93 @@
+\begin{frame}{Data Science Project Management}
+  Tentative definition: iterative process to harness business value from data.
+\end{frame}
+
+\begin{frame}{CRISP-DM}
+  The Cross-Industry Standard Process for Data Mining divides a project into phases~:
+
+  \begin{itemize}
+    \item Business Understanding
+    \item Data Understanding
+    \item Data Preparation
+    \item Modeling
+    \item Evaluation
+    \item Deployment
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{CRISP-DM Phases Diagram}
+  \V{"img/crisp-dm-en" | image("th", 0.7)}
+\end{frame}
+
+\begin{frame}{Andrew Ng Methodology — Lifecycle of an ML Project}
+  Also several phases, all requiring specific interventions:
+  \begin{enumerate}
+    \item Project scope definition
+    \item Data management
+    \item Modeling
+    \item Deployment
+  \end{enumerate}
+  Each phase has its own particular challenges.
+\end{frame}
+
+\begin{frame}{1. Project Scope Definition}
+  Keypoints:
+  \begin{itemize}
+    \item Delimitation of the task to be accomplished
+    \item Definition of success indicators
+    \item Budget in terms of time, personnel, etc.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{2. Data Management}
+  Keypoints:
+  \begin{itemize}
+    \item Unbiased data collection method
+    \item Clear definition of inputs and outputs
+    \item Robust data processing pipeline without training/production disparities
+    \item Reproducibility and experiment management
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{3. Modeling}
+  Keypoints:
+  \begin{itemize}
+    \item Training that takes into account production needs (model size, speed, etc.)
+    \item Error analysis, often by significant data slices
+    \item Reproducibility and experiment management
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{4. Deployment}
+  Keypoints:
+  \begin{itemize}
+    \item Scaling
+    \item Detection of data and concept drifts
+    \item Monitoring
+    \item Retraining process
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Gap Between Prototype and Production}
+  \V{"tikz/mlops/intro/technical-debt-en" | image("tw", 1)}
+\end{frame}
+
+\begin{frame}{Technical standpoint — MLOps}
+  From a technical standpoint, Data Science projects management is called MLOps~:
+
+  \begin{itemize}
+    \item Tools bridging the gap from proof of concept to production
+    \item Technics to comply to regulatory obligations
+    \item Methods to mitigate ethical issues
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{State of the MLOps Domain}
+  \begin{itemize}
+    \item Rapid evolution, many competing libraries
+    \item Much less stable than the DevOps domain
+    \item Adoption much less homogeneous than DevOps
+    \item Co-evolution with legislation and regulation
+  \end{itemize}
+  Given the instability of the domain, broad principles are more important than specific techniques.
+\end{frame}

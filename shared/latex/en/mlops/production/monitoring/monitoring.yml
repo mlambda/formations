@@ -1,0 +1,7 @@
+flavors:
+  mlw:
+    - monitoring
+    - /en/questions
+    - demo
+
+title: Monitoring

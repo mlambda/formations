@@ -1,0 +1,6 @@
+flavors:
+  bdm:
+    - $model: bdm
+    - $error-analysis: bdm
+
+title: Modeling

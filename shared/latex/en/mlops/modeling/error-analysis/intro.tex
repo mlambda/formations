@@ -1,0 +1,123 @@
+\begin{frame}{Introduction}
+  Error analysis is crucial during development:
+  
+  \begin{itemize}
+    \item Guides future work
+    \item Determines potential progress
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Link between error analysis \& interpretability}
+  \begin{itemize}
+    \item Interpretability enables error analysis
+    \item Sometimes a regulatory or functional requirement in production → transparency
+    \item Interpretability-performance continuum:
+      \begin{itemize}
+        \item Interpretable models often insufficient to approximate desired functions
+        \item Modern performant models are black boxes
+      \end{itemize}
+  \end{itemize}
+  
+  Often a dilemma in choosing a model.
+\end{frame}
+
+\begin{frame}{Recommended Approach}
+  \begin{itemize}
+    \item Determine relevant data slices
+    \item Estimate model performance and achievable performance on each slice
+    \item Prioritize work on slices offering the most impact
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Data Slices}
+  Idea popularized by Apple in their paper \textit{Overton: A Data System for Monitoring and Improving Machine-Learned Products} and \bluelink{https://www.snorkel.org/}{Snorkel}:
+  
+  \bluelink{https://www.snorkel.org/blog/slicing}{Excellent Snorkel blog} on the subject.
+\end{frame}
+
+\begin{frame}{Recommended Approach — Example}
+  Let's consider working on an image classification system.
+  
+  Suppose we distinguish the following slices in our image data:
+  
+  \begin{itemize}
+    \item Presence of mountains
+    \item Presence of humans
+    \item Presence of cars
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Recommended Approach — Example, Continued}
+  We estimate the following performances:
+  
+  \begin{tabular}{rcc}
+    \toprule
+    Slice      & HLP  & Model \\
+    \midrule
+    Mountains  & 65\% & 60\%  \\
+    Humans     & 96\% & 90\%  \\
+    Cars       & 80\% & 40\%  \\
+    \bottomrule
+  \end{tabular}
+  
+  Which slice is most important for improvements in the next iteration?
+\end{frame}
+
+\begin{frame}{Recommended Approach — Example, Conclusion}
+  Using proportions in the dataset to quantify impact:
+  
+  \begin{tabular}{rcccc}
+    \toprule
+    Slice      & HLP  & Model & Proportion & Potential Impact \\
+    \midrule
+    Mountains  & 65\% & 60\%  & 10\%       & 0.5\% \\
+    Humans     & 96\% & 90\%  & 85\%       & 5.1\% \\
+    Cars       & 80\% & 40\%  & 1\%        & 0.4\% \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Error Analysis}
+  Once relevant slices are identified:
+  
+  \begin{itemize}
+    \item Find explanatory examples of the model
+    \item Use a simpler model that globally or locally explains the complex model
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Explanatory Examples}
+  Find:
+  \begin{description}
+    \item[Prototypes] Representative examples of model behavior
+    \item[Counterfactual examples] Modification of existing instances to see how prediction evolves
+    \item[Adversarial examples] Counterfactual examples with a significant impact on prediction
+    \item[Influential examples] Examples that have had the most impact on the model
+  \end{description}
+\end{frame}
+
+\begin{frame}{Explanatory Models}
+  Training models:
+  \begin{itemize}
+    \item Simple
+    \item Interpretable (linear regression, simple trees, etc.)
+    \item Approximating the complex model
+    \item Helping to understand important features
+    \item Globally (multiple examples, broad coverage)
+    \item Or locally (one example)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Measures}
+  Once the analysis is done:
+  
+  \begin{itemize}
+    \item Data augmentation
+    \item Feature engineering
+    \item Exploration of new parameters
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Further Reading}
+  \bluelink{https://christophm.github.io/interpretable-ml-book/}{\textit{Interpretable Machine Learning} book}
+\end{frame}

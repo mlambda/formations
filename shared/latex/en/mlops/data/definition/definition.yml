@@ -1,0 +1,14 @@
+default_titles:
+  tp: Travaux pratiques
+
+flavors:
+  mlw:
+    - definition
+    - /en/questions
+    - tp
+  bdm:
+    - definition
+    - /en/questions
+    - demo
+
+title: Data Definition

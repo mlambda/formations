@@ -1,0 +1,97 @@
+\begin{frame}{Data Organization}
+  Several options for:
+  \begin{itemize}
+    \item Structuring (schema, description, ...)
+    \item Scaling (SQL, NoSQL, Distributed file system, ...)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\textit{Feature Store}}
+  In an MLOps context, often an intermediate step between the original source and processing:
+  
+  \begin{itemize}
+    \item Allows storage optimized for ML
+    \item Avoids recomputing the same features
+    \item Enables discoverability
+  \end{itemize}
+  
+  See \bluelink{https://docs.feast.dev/}{Feast} for example.
+\end{frame}
+
+\begin{frame}{Data Acquisition}
+  \begin{itemize}
+    \item Aim for a short first iteration to get feedback for subsequent phases
+    \item List potential sources and their time/money budget
+    \item Potentially have the ML team do initial annotation
+    \item Define competent profiles
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Iterations on Data}
+  \begin{itemize}
+    \item Order of magnitude: not more than x10 at once
+    \item Work jointly on source quality, processes, volume
+    \item Very different in prototyping and production phases:
+      \begin{description}
+        \item[Prototyping] Gathering enough data to decide go/no-go
+        \item[Production] Deep work as the main vector to reach performance ceiling
+      \end{description}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Metadata}
+  Because data is the heart of an ML system:
+  \begin{itemize}
+    \item Preservation of their provenance
+    \item Tracing of their transformations
+    \item Close notion, reproducibility of data acquisition and transformations:
+      \begin{itemize}
+        \item Increasingly important for regulation
+        \item Essential for debugging
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Metadata — Consequences}
+  Metadata preservation requires:
+  
+  \begin{itemize}
+    \item Strict definition of data acquisition processes
+    \item Strict definition of transformations
+    \item Implementation of dedicated systems
+  \end{itemize}
+  
+  → Forces many architecture decisions
+\end{frame}
+
+\begin{frame}{Processing Pipelines}
+  \begin{itemize}
+    \item Responding to reproducibility and process automation issues
+    \item As often in computing: directed acyclic graphs of operations
+    \item Several solutions exist depending on needs
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Desirable Characteristics}
+  Strengths of a processing pipeline
+  \begin{itemize}
+    \item Adaptation to batch (development) as well as real-time (production)
+    \item Faithfulness of development/production processing
+    \item Scalability
+    \item Deployment on various targets
+    \item Ease of development
+    \item Integration with the ecosystem
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Main Processing Pipeline Solutions}
+  Strong points of each solution:
+  
+  \begin{description}
+    \item[\bluelink{https://www.tensorflow.org/tfx}{TFX}] Deployment options, dev/prod parity, performance
+    \item[\bluelink{https://www.kubeflow.org/}{KubeFlow}] Kubernetes integration
+    \item[\bluelink{https://dvc.org/}{DVC}] Reproducibility \& “low tech” solution
+    \item[\bluelink{https://mlflow.org/}{MLFlow}] Flexible, easy to adopt, supported by clouds
+    \item[\bluelink{https://www.pachyderm.com/}{Pachyderm}] Kubernetes integration
+  \end{description}
+\end{frame}

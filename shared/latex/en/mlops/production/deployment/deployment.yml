@@ -1,0 +1,8 @@
+flavors:
+  bdm:
+    - intro
+    - best-practices
+    - /en/questions
+    - demo
+
+title: Deployment

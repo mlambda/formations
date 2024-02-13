@@ -1,0 +1,8 @@
+flavors:
+  bdm:
+    - $intro: bdm
+    - $data: bdm
+    - $modeling: bdm
+    - $production: bdm
+
+title: Managing a Data Science Project

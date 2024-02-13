@@ -1,0 +1,6 @@
+flavors:
+  bdm:
+    - $deployment: bdm
+    - $monitoring: mlw
+
+title: Production

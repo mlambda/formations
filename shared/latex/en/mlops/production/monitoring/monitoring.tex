@@ -1,0 +1,79 @@
+\begin{frame}{Challenges}
+  \begin{itemize}
+    \item Ensuring proper behavior of a model
+    \item Knowing when to retrain a model
+    \item Understanding the data of a model
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Common Issues — Data Drift}
+  Term used to denote the evolution of the input data distribution.
+
+  Gradually makes models obsolete → Necessity to retrain.
+\end{frame}
+
+\begin{frame}{Common Issues — Concept Drift}
+  Term used to denote the evolution of the correspondence between outputs and inputs.
+
+  Similar to data drift, gradually makes models obsolete → Necessity to retrain.
+\end{frame}
+
+\begin{frame}{Speed of Data Evolution}
+  \begin{description}
+    \item[User Data] Changes are often slow and fundamental
+    \item[Enterprise Data] Often more pronounced and abrupt
+  \end{description}
+\end{frame}
+
+\begin{frame}{Common Issues — Data Quality}
+  \begin{itemize}
+    \item Missing values
+    \item Outliers
+    \item Schema changes
+    \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tools — Test Suites}
+  Automated execution for detection of:
+  \begin{itemize}
+    \item Data drift
+    \item Concept drift
+    \item Poor data quality
+    \item Drop in prediction performance
+  \end{itemize}
+  The most widely used library for this is \texttt{evidently}.
+\end{frame}
+
+\begin{frame}{Tools — Dashboard}
+  The human-facing counterpart of test suites:
+  
+  \begin{itemize}
+    \item To fuel discussion on data within the Machine Learning team
+    \item To complement more general dashboards
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Classic Monitoring}
+  In addition to these Machine Learning-specific issues, a production system needs usual monitoring.
+
+  \textit{E.g.}, the four "golden signals" in Site Reliability Engineering:
+  
+  \begin{itemize}
+    \item Latency
+    \item Traffic
+    \item Errors
+    \item Saturation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Implementation}
+  Several solutions are common:
+  
+  \begin{itemize}
+    \item \bluelink{https://www.evidentlyai.com/}{Evidently}
+    \item \bluelink{https://www.seldon.io/solutions/core-plus}{Seldon Core}
+    \item \bluelink{https://www.tensorflow.org/tfx/guide/exampleval}{TFX ExampleValidator}
+    \item \bluelink{https://docs.greatexpectations.io/docs/home/}{Great Expectations}
+  \end{itemize}
+\end{frame}

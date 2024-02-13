@@ -12,7 +12,7 @@ flavors:
     - evaluation-light
     - learning-light
     - /en/questions
-    - $/en/supervised: iao
+    - $/en/supervised: bdm
     - $/en/unsupervised: iao
     - $/en/rl: bdm
     - $/en/nn: bdm

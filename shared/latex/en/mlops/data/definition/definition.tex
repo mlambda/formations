@@ -1,0 +1,146 @@
+\begin{frame}{Objectives}
+  We aim to primarily address two questions:
+  \begin{itemize}
+    \item What are the relevant inputs and outputs?
+    \item What level of performance can we expect?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\textit{Trash in Trash out} Principle}
+  Fundamental principle of Machine Learning: data definition is the \alert{central} point of a Machine Learning system.
+\end{frame}
+
+\begin{frame}{Research vs Industry}
+  \begin{description}
+    \item[Research] $\text{System} = \text{Data} + \overbrace{\text{Parameters} + \text{Model}}^{\text{Work}}$
+    \item[Industry] $\text{System} = \overbrace{\text{Data} + \text{Parameters}}^{\text{Work}} + \text{Model}$
+  \end{description}
+\end{frame}
+
+\begin{frame}{Definition Example – Translation}
+  How to define the output?
+  \begin{enumerate}
+    \item I was overwhelmed with joy. → J'ai été submergé par la joie.
+    \item I was overwhelmed with joy. → Je fus submergé de joie.
+    \item I was overwhelmed with joy. → Je fus terrassé par la joie.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Definition Example – Audio}
+  How to define the input?
+  \begin{enumerate}
+    \item Um… I'll be there in 5 minutes
+    \item Um, I'll be there in 5 minutes
+    \item I'll be there in 5 minutes
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Definition Example – Identity Fusion}
+  How to define the output?
+  \begin{itemize}
+    \item Martin Durant, 44000, …, <martin@durant.fr>
+    \item Martin Durant, 44000, …, <martin.durant@gmail.com>
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{What is at stake?}
+  All these decisions change the function that the model will approximate.
+\end{frame}
+
+\begin{frame}{Types of Data}
+  Two primary criteria:
+  \begin{itemize}
+    \item Size of the dataset
+    \item Structured or unstructured data
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Size of the Dataset}
+  \begin{description}
+    \item[Small] Quality of annotations is crucial
+    \item[Large] Quality of data processing processes is crucial
+  \end{description}
+
+  \begin{block}{Attention}
+    A subset of a large dataset can behave like a small dataset (especially a critical slice).
+  \end{block}
+\end{frame}
+
+\begin{frame}{Structured~/~Unstructured Data}
+  \begin{description}
+    \item[Structured] Hard to annotate for humans. Hard to augment.
+    \item[Unstructured] Likely easy to annotate for humans. Often augmentable.
+  \end{description}
+\end{frame}
+
+\begin{frame}{Annotation Guide}
+  For annotators:
+  \begin{itemize}
+    \item Should be as robust as possible
+    \item Ideally written by a mix of domain experts / ML
+    \item Written iteratively:
+      \begin{itemize}
+        \item Writing a version
+        \item Annotation
+        \item Detection of ambiguous points
+        \item Writing a new version
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Coverage of Input Data}
+  \begin{itemize}
+    \item All cases to be handled must be represented in the data
+    \item In sufficient quantities
+    \item Particularly important to avoid discrimination on protected attributes
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Calibration}
+  Estimation of expected performance:
+  \begin{itemize}
+    \item Bibliographic research on existing approaches
+    \item Estimation of human performance
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Human Performance}
+  Also called HLP (\textit{Human Level Performance}):
+  \begin{itemize}
+    \item Used to estimate Bayes' error (intrinsic randomness of the data)
+    \item Especially when annotation is not defined by another human but by an external process
+    \item Particularly interesting for unstructured data
+    \item Give an idea of the achievable performance level
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Improving Human Performance}
+  \begin{itemize}
+    \item Sometimes tend to underestimate HLP to beat them easily
+    \item However, poor HLP prevent proper orientation of the work to be done
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Improving Human Performance — Example}
+  Suppose that when hesitation is expressed in an audio, two transcriptions are possible:
+  \begin{enumerate}
+    \item Um… I'll be there in 5 minutes
+    \item I'll be there in 5 minutes
+  \end{enumerate}
+  If 1. is preferred by $80\%$ of annotators and 2. by $20\%$: two random annotators have $0.8^2 + 0.2^2 = 68\%$ agreement.
+
+  A trivial algorithm has $80\%$ agreement.
+
+  → More serious errors are “hidden” by these easy gains for the model on HLPs.
+\end{frame}
+
+\begin{frame}{Documentation}
+  During the definition \& calibration process, keep track of:
+  \begin{itemize}
+    \item Potential biases in the data that you suspect
+    \item Real data coverage issues
+    \item Regulatory issues related to the data
+  \end{itemize}
+
+  This information is crucial for properly documenting the model in the long run.
+\end{frame}
