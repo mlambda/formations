@@ -1,0 +1,35 @@
+dates : 3 Avril -- 2 Aout
+
+données :
+    - type de stockage : filesystem
+    - schéma de donnée, avoir un exemple ?
+    - description output : application de lois décrivant les critères déterminant un age de non communication
+    - quantités : 0% prettes, pas eu d'ordre de grandeur, j'imagine a cause du NDA manquant
+    - Description de la chaine de traitement documentaire ? 
+        - un OCR encore inconnu est appliqué afin de permettre la recherche plain-text
+        - pas clair qu'il y ait plus...
+        
+
+stagiaire : 
+    - quel profil : archiviste + informatique, fait du python.
+    - plein temps
+
+Workshop : 
+    - Orientation des recherches du stagiaire 
+
+Temps :
+    - une réunion tous les 15 jours
+    - des livrables : non
+    - de la préparation: oui
+    - du suivi par mail entre les workshop : oui
+
+Devis :
+    - Forfait
+
+
+
+
+
+
+
+
