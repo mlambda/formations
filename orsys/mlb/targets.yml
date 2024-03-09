@@ -20,6 +20,10 @@
     - path: unsupervised
       flavor: mlb
 
+    - path: unsupervised/anomaly-detection
+      title: Détection d'anomalie (Bonus)
+      flavor: full-no-tree
+
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
   sections:
@@ -28,6 +32,15 @@
 
     - path: nn
       flavor: bda
+
+    - path: nn/cnn
+      title: Convolutional Neural Network (Bonus)
+      flavor: dpl
+
+    - path: nn/ae
+      title: Auto-encodeurs (Bonus)
+      flavor: dpl
+
 
 - name: j4
   title: Jour 4 --- Ingénierie

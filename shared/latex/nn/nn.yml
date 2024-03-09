@@ -37,8 +37,9 @@ flavors:
     - playground
     - $/tf-keras: drn
     - $cnn: mle
-    - $rnn: iao
+    - $ae: drn
     - $generative: iao
+    - $rnn: iao
     - /questions
     - help-pointers
   drn:
