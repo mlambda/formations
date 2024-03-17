@@ -1,0 +1,55 @@
+\begin{frame}{Définition}
+    Soit un algorithme que l'on veut executer sur N éléments, \\
+    on appelle \textbf{complexité algorithmique} l'ordre de grandeur du nombre d'instructions qu'il faut executer pour terminer l'algorithme.
+\end{frame}
+
+\begin{frame}{Exercice 1}
+    \begin{tabular}{|r|r|r|r|r|r|r|r|}
+        \hline
+            15 & 22 & 56 & 17 & 19 & 34 & 12 & 11 \\
+        \hline
+    \end{tabular} \\
+    \newline
+    Combien d'opérations (ici, des comparaisons) faut-il effectuer 
+    pour retrouver la valeur minimum dans un tableau de N éléments ?
+\end{frame}
+
+\begin{frame}{Solution}
+    Notre algorithme qui prend un tableau de N éléments comparables et 
+    renvoi la valeur minimum du tableau à une complexité de N, notée \textbf{$O(N)$}. \\
+\end{frame}
+
+\begin{frame}{Exercice 2}
+    \begin{tabular}{|r|r|r|r|r|r|r|r|}
+        \hline
+            15 & 22 & 56 & 17 & 19 & 34 & 12 & 11 \\
+        \hline
+    \end{tabular} \\
+    \newline
+    Pour trier les éléments dans un tableau, on peut utiliser l'algorithme précédent.\\
+    Pour un tableau de taille N, combien de fois devrais-je appeller l'algorithme précédent ?\\
+    Quelle serait alors la complexité de notre algorithme de tri ?
+\end{frame}
+
+\begin{frame}{Solution}
+    Notre algorithme qui prend un tableau de N éléments comparables et 
+    renvoi un tableau trié nécéssite N appels à l'algorithme de récupération du minimum pour un total de \\
+    \newline
+    $(1+2+...+N)=\frac{N(N+1)}{2}$ opérations, notée \textbf{$O(N^2)$}. \\
+\end{frame}
+
+\begin{frame}{Complexité complexe}
+    En réalité, il faut prendre en compte différentes complexités :
+    \begin{description}
+        \item[\textbf{Cas Optimal :}]         Dans le meilleur des cas
+        \item[\textbf{Cas moyen :}]           Nombre moyen d'opérations
+        \item[\textbf{Pire des cas :}]        Ce que l'on ne peut pas éviter d'arriver
+        \item[\textbf{Stabilité :}]           des résultats souvent moyens ou pas ?
+        \item[\textbf{Spatiale :}]            La taille en mémoire nécessaire pour executer l'algorithme
+    \end{description}
+    \bluelink{https://fr.wikipedia.org/wiki/Algorithme_de_tri\#Comparaison_des_algorithmes}{wikipédia Algorithme de tri Comparaison des algorithmes}
+\end{frame}
+
+\begin{frame}{}
+    Tous l'art de faire des programmes efficaces repose sur le choix des \textbf{structures de données adaptées} et d'un respect de la \textbf{complexité algorithmique} dans les procédures que l'on met en place.
+\end{frame}

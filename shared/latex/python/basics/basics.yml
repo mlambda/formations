@@ -1,6 +1,7 @@
 default_titles:
   control-structures: Structures de contrôle
   dictionaries: Dictionnaires
+  operators: Opérateurs sur les variables
   display: Affichage
   exceptions: Traitement des erreurs
   files: Lecture et écriture de fichiers
@@ -12,11 +13,13 @@ default_titles:
   tuples: N-uplets
   variables: Types de base et variables
   /python/regexes/regexes: Expressions régulières
+  tp-variables: Variables
 flavors:
   tho:
     - support
     - variables
     - /questions
+    - operators
     - tp-variables
     - display
     - /questions
@@ -33,10 +36,32 @@ flavors:
     - tp-functions
     - native-functions
     - /questions
+  low:
+    - support
+    - variables
+    - operators
+    - native-functions
+    - tp-variables
+    - intro-collections: Collections
+    - lists: null
+    - dictionaries: null
+    - tuples: null
+    - sets: null
+    - tp-collections
+    - control-structures
+    - tp-control-structures
+    - functions
+    - /questions
+    - tp-functions
+    - oop
+    - /questions
+    - tp-oop
+
   lpy:
     - support
     - variables
     - /questions
+    - operators
     - tp-variables
     - display
     - /questions
@@ -68,6 +93,7 @@ flavors:
     - support
     - variables
     - /questions
+    - operators
     - tp-variables
     - display
     - /questions
@@ -99,6 +125,7 @@ flavors:
   no-tp:
     - support
     - variables
+    - operators
     - /questions
     - display
     - /questions

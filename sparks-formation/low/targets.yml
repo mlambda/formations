@@ -1,0 +1,13 @@
+- name: j1
+  title: "Algorithmique : initiation"
+  sections:
+    - path: about
+      flavor: sparks-formation-2j
+
+    - path: programming
+      flavor: low
+
+    - path: python/basics
+      flavor: low
+
+    - contact

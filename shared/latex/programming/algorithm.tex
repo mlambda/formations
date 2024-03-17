@@ -8,7 +8,23 @@
     \begin{itemize}
         \item Ses \textbf{entrées} (sous formes de \textbf{variables})
         \item Ses \textbf{sorties} (sous formes de \textbf{variables})
-        \item Les étapes nécéssaires pour transformer les entrées en sorties
+        \item Les étapes (\textbf{instructions}) nécéssaires pour transformer les entrées en sorties
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple}
+    Une recette de gâteau :
+    \begin{itemize}
+        \item Ses \textbf{entrées} une liste d'ingrédients et d'outils
+        \item Ses \textbf{sorties} un gâteau
+        \item Les \textbf{instructions} :
+        \begin{itemize}
+            \item prendre un récipient
+            \item mélanger les ingrédients
+            \item ...
+            \item cuire la pâte
+            \item ...
+        \end{itemize}    
     \end{itemize}
 \end{frame}
 
@@ -34,20 +50,4 @@
     \end{description}
 
     
-\end{frame}
-
-\begin{frame}{Example d'algorithme en français}
-  \begin{description}
-    \item [Entrées] \texttt{tableau} : Un tableau de nombres non vide
-    \item [Sorties] Le nombre maximum du tableau
-    \item [Instructions]
-      \texttt{index} $\leftarrow$ 1\\
-      \texttt{index\_max} $\leftarrow$ \texttt{Taille}(\texttt{tableau})\\
-      \texttt{maximum} $\leftarrow$ \texttt{tableau}[1]\\
-      \textbf{TANT QUE} \texttt{index} $\leq$ \texttt{index\_max}\\
-      $\;\;$\textbf{SI} \texttt{maximum} $<$ \texttt{tableau}[\texttt{index}]\\
-      $\;\;$\textbf{ALORS} \texttt{maximum} $\leftarrow$ \texttt{tableau}[\texttt{index}]\\
-      $\;\;$\texttt{index} $\leftarrow$ \texttt{index} + 1\\
-      \textbf{RENVOYER} \texttt{maximum}
-  \end{description}
 \end{frame}

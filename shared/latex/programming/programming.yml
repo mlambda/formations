@@ -1,15 +1,16 @@
 title: Programmation
 
 default_titles:
-  intro: Histoire
+  history: Histoire
   theory: Théorie
-  encoding: Codage
-  hardware: Matériel
-  program: Programmes
   algorithm: Algorithmes
-  compiler: Compilateurs
+  hardware: Matériel
+  encoding: Codage
+  program: Programmes
   language: Langages de programmation
+  compiler: Compilateurs
   library: Librairies
+  complexity: Complexité algorithmique
 
 flavors:
   tho:
@@ -21,3 +22,16 @@ flavors:
     - language
     - compiler
     - library
+    - complexity
+flavors:
+  low:
+    - history
+    - theory
+    - encoding
+    - algorithm
+    - hardware
+    - program
+    - language
+    - compiler
+    - complexity
+

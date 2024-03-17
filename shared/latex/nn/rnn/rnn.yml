@@ -14,6 +14,14 @@ flavors:
     - keras
     - /questions
     - tp
+  mlbonus:
+    - /nlp/wordembeddings
+    - model
+    - lstm
+    - variants
+    - keras
+    - /questions
+    - tp
   intra-ign:
     - model
     - lstm
