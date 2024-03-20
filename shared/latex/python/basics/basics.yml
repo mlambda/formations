@@ -56,6 +56,10 @@ flavors:
     - oop
     - /questions
     - tp-oop
+    - exceptions
+    - files
+    - /questions
+    - tp-files
 
   lpy:
     - support

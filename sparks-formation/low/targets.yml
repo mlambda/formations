@@ -10,4 +10,12 @@
     - path: python/basics
       flavor: low
 
+    - path: python/data-science
+      title: Modules de science des données (Bonus)
+      flavor: full
+
+    - path: unsupervised
+      title: Apprentissage non-supervisé (Bonus)
+      flavor: bda
+
     - contact
