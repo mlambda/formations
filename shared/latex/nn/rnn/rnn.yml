@@ -29,6 +29,7 @@ flavors:
     - keras
     - /questions
   iao:
+    - /nlp/wordembeddings
     - model-light
     - /questions
     - demo

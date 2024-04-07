@@ -30,16 +30,17 @@ flavors:
     - help-pointers
   iao:
     - intro-light
-    - gradient-descent-light
+    - gradient-descent
     - playground
-    - optimize-light
-    - regularisation-light
+    - optimize
+    - regularisation
     - playground
     - $/tf-keras: drn
     - $cnn: mle
     - $ae: drn
     - $generative: iao
     - $rnn: iao
+    - $transformer: drn
     - /questions
     - help-pointers
   drn:

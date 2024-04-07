@@ -18,7 +18,7 @@
       flavor: iao
 
     - path: nn
-      flavor: iao
+      flavor: vision-expert
 
     - path: rl
       flavor: iao
