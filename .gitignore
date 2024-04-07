@@ -15,6 +15,7 @@ _minted*
 /notebook
 .build/
 pdf/
+chd-LUX/
 session-config.yml
 .vscode/
 __pycache__

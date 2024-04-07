@@ -54,5 +54,10 @@ flavors:
     - ml-nlp
     - wordembeddings
     - /questions
+  chd:
+    - ml-nlp
+    - tf-idf
+    - wordembeddings
+
 title: Traitement automatique des langues
 version: 3

@@ -22,7 +22,11 @@
 \pgfpagesuselayout{2 on 1}[a4paper]
 %% endif
 
-\setbeamertemplate{frame footer}{\CompanyName{} ⋅ \DeckTitle{} ⋅ CC BY-SA 4.0}
+%% if config.deck_copyright is defined 
+\setbeamertemplate{frame footer}{\DeckTitle{} - \CompanyName{} - \DeckCopyright{} }
+%% else
+\setbeamertemplate{frame footer}{\CompanyName{} ⋅ \DeckTitle{} ⋅ CC BY-SA 4.0 }
+%% endif
 
 \author{\vfill\TrainerName}
 \institute{%
@@ -55,20 +59,20 @@
 %% endif
 
 %% for part in target.parts:
-%% if part.title != None and parts | length > 1:
-\begin{frame}[standout]
-  \V{part.title}
-\end{frame}
-%% endif
-%% for section in part.sections:
-%% if section.title is string:
-%% if section.level < 3:
-\\V{"sub" * section.level}section{\V{section.title}}
-%% endif
-%% else:
-\input{\V{section}}
-%% endif
-%% endfor
+  %% if part.title != None and parts | length > 1:
+  \begin{frame}[standout]
+    \V{part.title}
+  \end{frame}
+  %% endif
+  %% for section in part.sections:
+    %% if section.title is string:
+      %% if section.level < 3:
+      \\V{"sub" * section.level}section{\V{section.title}}
+      %% endif
+    %% else:
+    \input{\V{section}}
+    %% endif
+  %% endfor
 %% endfor
 
 \end{document}

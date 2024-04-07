@@ -5,6 +5,10 @@
       path: about
       flavor: orsys-3j
 
+    - title: (Rappel sur le machine learning)
+      path: ml
+      flavor: dpl
+
     - path: nn
       flavor: dpl
 

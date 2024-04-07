@@ -1,20 +1,24 @@
 default_titles:
-  bonnes-pratiques: Bonnes Pratiques
-  data-preparation: Modélisation et préparation des données
-  evaluation: Évaluation
   intro: Introduction
+  evaluation: Évaluation
+  evaluation-light: Évaluation
   learning: Apprentissage
+  learning-light: Apprentissage
   tp-data: Travaux Pratiques
   /tp-help: Ressources pour les travaux pratiques
+  bonnes-pratiques: Bonnes Pratiques
+  data-preparation: Modélisation et préparation des données
 
 flavors:
   chatgpt:
     - intro
+  chd:
+    - intro-light
+    - learning-light
   intro:
     - intro
     - evaluation
     - learning
-    - /questions
     - help-pointers
   mle:
     - intro
@@ -66,6 +70,9 @@ flavors:
     - learning
     - /questions
     - help-pointers
+  dpl:
+    - evaluation
+    - learning
   pyi:
     - intro
     - $/prerequisites: pyi

@@ -121,6 +121,17 @@ flavors:
     - $rnn: dpl
     - $transformer: text
     - help-pointers
+  chd:
+    - intro
+    - playground
+    - gradient-descent-light
+    - optimize
+    - deep-optimize
+    - regularisation
+    - playground
+    - $/tf-keras: bda
+    - $rnn: dpl
+    - $transformer: text
   ml5:
     - intro
     - /supervised/classification
@@ -139,9 +150,9 @@ flavors:
     - help-pointers
   dpl:
     - intro
+    - gradient-descent
     - /supervised/classification
     - playground
-    - gradient-descent
     - optimize
     - deep-optimize
     - regularisation

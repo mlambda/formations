@@ -1,0 +1,37 @@
+\begin{frame}{Qualité de l'apprentissage}
+  Entrainement supervisé d'un modèle — overfit
+
+  \V{"plt/overfit-polynomial" | image("tw", 1)}
+
+  \red{Problème : trop minimiser la perte n'est pas bon !}
+\end{frame}
+
+\begin{frame}{Qualité de l'apprentissage}
+
+  \V{"plt/learning-curve" | image("th", 0.6)}
+
+  → Minimiser la perte sur un ensemble de validation
+\end{frame}
+
+\begin{frame}{Cross-validation}
+  La technique de réference pour évaluer des modèles prédictifs :
+  \V{"img/k-fold-cross-validation" | image("tw", 0.9)}
+  Ici, 4-fold cross-validation.
+\end{frame}
+
+\begin{frame}{Séparation des données}
+  \V{"tikz/ml/train-valid-test-split" | image("tw", 0.9)}
+\end{frame}
+
+\begin{frame}{Optimisation des méta-paramètres}
+  Méta-paramètres : paramètres \alert{non appris} par le modèle.
+  \begin{exampleblock}{Exemples}
+    \begin{description}
+    \item [Structure] Nombre de couches ? De quelles tailles ? …
+    \item [Optimisation] SGD, Adam, Lion ?
+    \item [Régularisation] Pénalisation de la Norme des paramètres dans la loss, bruitage, dropout, …
+    \item [Prétraitements] Feature engineering, Méthode de normalisation, …
+    \end{description}
+  \end{exampleblock}
+  Optimisation par recherche aléatoire ou processus gaussien.
+\end{frame}
