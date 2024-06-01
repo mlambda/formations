@@ -26,7 +26,6 @@ flavors:
     - notebooks
     - anaconda
     - /questions
-    - tp
   devops:
     - intro
     - ml-dl

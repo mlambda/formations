@@ -1,0 +1,21 @@
+- name: j123
+  title: Jour 1 --- Deep Learning avec TensorFlow
+  sections:
+    - title: Deep Learning avec TensorFlow
+      path: about
+      flavor: sparks-formation-3j
+
+    - title: (Rappel sur le machine learning)
+      path: ml
+      flavor: dpl
+
+    - path: nn
+      flavor: dpl
+
+    - path: rl
+      flavor: drn
+
+    - path: tools
+      flavor: devops
+
+    - contact

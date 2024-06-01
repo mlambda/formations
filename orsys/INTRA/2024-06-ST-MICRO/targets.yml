@@ -1,0 +1,64 @@
+- name: j1
+  title: Jour 1 --- Introduction au Machine Learning
+  sections:
+    - path: about
+      title: Machine Learning, Méthodes et Solutions
+      flavor: orsys-4j
+
+    - path: tools
+      flavor: init-python
+
+    - path: python/basics
+      flavor: tho
+
+    - path: ml
+      flavor: mlb
+
+- name: j2
+  title: Jour 2 --- Algorithmes 1/2
+  sections:
+    - path: supervised
+      flavor: mlb
+
+    - path: unsupervised
+      flavor: mlb
+
+    - path: unsupervised/anomaly-detection
+      title: Détection d'anomalie 
+      flavor: full-no-tree
+
+- name: j3
+  title: Jour 3 --- Algorithmes 2/2
+  sections:
+    - path: nn
+      flavor: bda
+
+    - path: nn/cnn
+      title: Convolutional Neural Network 
+      flavor: dpl
+
+    - path: nn/ae
+      title: Auto-encodeurs 
+      flavor: dpl
+
+    - path: nn/rnn
+      title: Reccurent Neural Network 
+      flavor: mlbonus
+
+    - path: nn/transformer
+      title: Transformer Network 
+      flavor: drn
+
+- name: j4
+  title: Jour 4 --- Ingénierie
+  sections:
+    - path: engineering
+      flavor: mlcraftmyass
+
+    - path: big-questions
+      flavor: full
+
+    - path: tools
+      flavor: devops
+
+    - contact

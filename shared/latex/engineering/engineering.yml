@@ -10,6 +10,8 @@ flavors:
     - data-sources
     - data-engineering
     - /questions
+  chd:
+    - engineering-practices
   deploying:
     - engineering-practices
     - data-engineering

@@ -10,19 +10,22 @@
     - path: python/basics
       flavor: lpy
 
+    - path: python/regexes
+      flavor: full
+
     - path: python/linting
       flavor: full
 
     - path: python/production
       flavor: light
 
+    - path: python/performance
+      flavor: light
+
     - path: python/sys-admin
       flavor: full
 
     - path: python/data-science
-      flavor: full
-
-    - path: python/testing
       flavor: full
 
     - contact

@@ -16,6 +16,7 @@ _minted*
 .build/
 pdf/
 chd-LUX/
+shared/latex/chd/
 session-config.yml
 .vscode/
 __pycache__

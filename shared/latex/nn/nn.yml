@@ -165,7 +165,7 @@ flavors:
     - $/nlp: dpl
     - $/sequential-data: dpl
     - $rnn: dpl
-    - $transformer: text
+    - $transformer: drn
     - help-pointers
   testia:
     - intro
