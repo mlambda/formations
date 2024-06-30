@@ -54,9 +54,9 @@ flavors:
     - /questions
     - $/tf-keras: drn
     - $cnn: drn
+    - $ae: drn
     - $rnn: drn
     - $transformer: drn
-    - $ae: drn
     - $generative: gan
     - help-pointers
   vision-expert:
@@ -70,8 +70,8 @@ flavors:
     - /questions
     - $/tf-keras: drn
     - $cnn: dpl
-    - $transformer: image
     - $ae: drn
+    - $transformer: image
     - $generative: gan
     - $rnn: vision-expert
     - help-pointers

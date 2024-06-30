@@ -17,7 +17,7 @@
       flavor: mlb
 
     - path: unsupervised
-      flavor: mlb
+      flavor: bda
 
     - path: big-questions
       flavor: full

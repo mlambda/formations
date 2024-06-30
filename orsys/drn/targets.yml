@@ -13,6 +13,10 @@
     - path: supervised
       flavor: drn
 
+    - path: unsupervised
+      title: Apprentissage non-supervisé (Bonus)
+      flavor: intra-stmicro
+
     - path: nn
       flavor: drn
 
