@@ -21,11 +21,7 @@
       flavor: mlb
 
     - path: unsupervised
-      flavor: mlb
-
-    - path: unsupervised/anomaly-detection
-      title: Détection d'anomalie 
-      flavor: full-no-tree
+      flavor: intra-stmicro
 
 - name: j3
   title: Jour 3 --- Algorithmes 2/2
