@@ -14,6 +14,8 @@ default_titles:
   variables: Types de base et variables
   /python/regexes/regexes: Expressions régulières
   tp-variables: Variables
+  uml: Unified Modeling Language (UML)
+
 flavors:
   tho:
     - support

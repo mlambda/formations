@@ -23,7 +23,6 @@ flavors:
     - compiler
     - library
     - complexity
-flavors:
   low:
     - history
     - theory
