@@ -122,6 +122,8 @@ flavors:
     - oop
     - tp-oop
     - /questions
+    - uml
+    - /questions
     - exceptions
     - /questions
     - native-functions

@@ -1,0 +1,81 @@
+\begin{frame}{Introduction}
+
+    L'\stronghl{UML} (Unified Modeling Language) ou Langage de Modélisation Unifié est un langage de modélisation permettant la réalisation de spécifications graphiques pour le développement logiciel.
+
+    Il est principalement utilisé pour la création de diagrammes de classe et de diagrammes de sequence dans le cadre de la programmation orientée objet.    
+
+\end{frame}
+
+\begin{frame}{Avant-propos sur l'UML}
+    Bien que très populaire dans le début des années 2000, l'usage de l'UML a fortement décliné. Notamment suite au déclin du développement en V au profit des méthodes agiles.\\
+
+    Si l'UML a été utilisé pour préparer en amont la structure et l'ensemble des spécifications d'un programme, aujourd'hui, il est surtout utilisé en aval pour la communication entre développeurs et pour la documentation d'un programme.\\
+
+    \textit{La dernière norme UML date de 2017.}
+
+\end{frame}
+
+\begin{frame}{Une galaxie de diagrammes}
+
+    \begin{minipage}{0.49\linewidth}  
+        \begin{itemize}
+            \item \stronghl{Diagramme de classe}
+            \item \textbf{Diagramme de séquence}
+            \item Diagramme de états-transition
+            \item Diagramme d'activité
+            \item Diagramme de cas d'utilisation
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \begin{itemize}
+            \item Diagramme de composants
+            \item Diagramme de profils
+            \item Diagramme de déploiement
+            \item Diagramme global d'intéraction
+            \item \dots
+        \end{itemize}
+    \end{minipage}\\
+
+    \textit{Sémantique du code couleur} :
+    \begin{itemize}
+        \item \stronghl{Utile pour la POO}
+        \item \textbf{Parfois utile pour clarifier une exécution}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Diagramme de classe : Relations}
+
+    \V{"img/uml/uml-relations" | image("th", 0.7)}
+
+\end{frame}
+
+
+\begin{frame}{Diagramme de classe : Visibilité}
+    Peut être mis sur des attributs ou des méthodes
+    \begin{table}
+        \begin{tabular}{c|l|l} 
+            \toprule
+            \textbf{Caractère} & \textbf{Rôle} & \textbf{Mot clé}  \\
+            \midrule
+            \stronghl{+} &	accès public &	public \\
+            \stronghl{\#} &	accès protégé &	protected \\
+            \stronghl{\textasciitilde{}} &	accès package &	package \\
+            \stronghl{-} &	accès privé &	private \\
+            \bottomrule
+        \end{tabular}
+        \caption{Modificateurs d'accès}
+    \end{table}
+    
+    
+\end{frame}
+\begin{frame}{Diagramme de classe : exemple}
+
+    \V{"tikz/uml/large-uml"| image("tw", 0.9)}
+
+\end{frame}
+
+\begin{frame}{Diagramme de séquence}
+
+    \V{"img/uml/diagram-sequence" | image("th", 0.7)}
+
+\end{frame}
