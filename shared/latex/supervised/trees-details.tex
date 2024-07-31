@@ -19,7 +19,7 @@
 \begin{frame}{Exemple — Démarrage}
   \begin{columns}
     \begin{column}{.5\textwidth}
-      ID, jardinage, jeux vidéos, chapeaux, âge
+      ID, jardinage, jeux vidéo, chapeaux, âge
       \[
         \begin{bmatrix}
           1 & 0 & 1 & 1 & 13  \\
@@ -47,7 +47,7 @@
 \begin{frame}{Exemple — Test du split jardinage}
   \begin{columns}
     \begin{column}{.5\textwidth}
-      ID, jardinage, jeux vidéos, chapeaux, âge
+      ID, jardinage, jeux vidéo, chapeaux, âge
       \[
         \begin{bmatrix}
           1 & 0 & 1 & 1 & 13  \\
@@ -81,10 +81,10 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Exemple — Test du split jeux vidéos}
+\begin{frame}{Exemple — Test du split jeux vidéo}
   \begin{columns}
     \begin{column}{.5\textwidth}
-      ID, jardinage, jeux vidéos, chapeaux, âge
+      ID, jardinage, jeux vidéo, chapeaux, âge
       \[
         \begin{bmatrix}
           1 & 0 & 1 & 1 & 13  \\
@@ -101,15 +101,15 @@
     \end{column}
     \begin{column}{.5\textwidth}
       Split du premier nœud. Il faut tester 3 splits. Split sur
-      jeux vidéos~:
+      jeux vidéo~:
       \\[1cm]
       \begin{forest}
         [{1, 2, 3, 4, 5, 6, 7, 8, 9}
           [{1, 2, 3, 4, 5, 7},%
-          edge label={node[midway,left,font=\scriptsize]{jeux vidéos}}
+          edge label={node[midway,left,font=\scriptsize]{jeux vidéo}}
             [{$\overline{y} = 28,3$} [{$E = 92,6$}]]]
           [{6, 8, 9},
-          edge label={node[midway,right,font=\scriptsize]{$\neg$ jeux vidéos}}
+          edge label={node[midway,right,font=\scriptsize]{$\neg$ jeux vidéo}}
             [{$\overline{y} = 64,3$} [{$E = 30,7$}]]]
         ]
       \end{forest}\\
@@ -121,7 +121,7 @@
 \begin{frame}{Exemple — Test du split chapeaux}
   \begin{columns}
     \begin{column}{.5\textwidth}
-      ID, jardinage, jeux vidéos, chapeaux, âge
+      ID, jardinage, jeux vidéo, chapeaux, âge
       \[
         \begin{bmatrix}
           1 & 0 & 1 & 1 & 13  \\
@@ -158,7 +158,7 @@
 \begin{frame}{Exemple — Sélection du meilleur split}
   \begin{columns}
     \begin{column}{.5\textwidth}
-      ID, jardinage, jeux vidéos, chapeaux, âge
+      ID, jardinage, jeux vidéo, chapeaux, âge
       \[
         \begin{bmatrix}
           1 & 0 & 1 & 1 & 13  \\
@@ -176,7 +176,7 @@
     \begin{column}{.5\textwidth}
       \begin{description}
         \item[112,3] jardinage
-        \item[123,3] jeux vidéos
+        \item[123,3] jeux vidéo
         \item[201,8] chapeaux
       \end{description}
       → On split donc sur jardinage
@@ -187,7 +187,7 @@
 \begin{frame}{Exemple — split}
   \begin{columns}
     \begin{column}{.5\textwidth}
-      ID, jardinage, jeux vidéos, chapeaux, âge
+      ID, jardinage, jeux vidéo, chapeaux, âge
       \[
         \begin{bmatrix}
           1 & 0 & 1 & 1 & 13  \\
